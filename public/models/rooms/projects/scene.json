@@ -4,7 +4,7 @@
   "label": "Projects hallway",
   "geometry": "geometry.bin",
   "animation": "animation.bin",
-  "assetHash": "7971f9ba1f2e",
+  "assetHash": "f3147a9c8b73",
   "frameStart": 1,
   "frameEnd": 1200,
   "fps": 30,
@@ -187,8 +187,8 @@
       "actor": 0,
       "kind": "lines",
       "byteOffset": 55776,
-      "floatCount": 20512,
-      "vertexCount": 5128,
+      "floatCount": 20496,
+      "vertexCount": 5124,
       "stride": 4,
       "role": null,
       "id": null,
@@ -197,7 +197,7 @@
     {
       "actor": 0,
       "kind": "lines",
-      "byteOffset": 137824,
+      "byteOffset": 137760,
       "floatCount": 1008,
       "vertexCount": 252,
       "stride": 4,
@@ -208,12 +208,23 @@
     {
       "actor": 0,
       "kind": "lines",
-      "byteOffset": 141856,
+      "byteOffset": 141792,
       "floatCount": 1008,
       "vertexCount": 252,
       "stride": 4,
       "role": "categoryCurtain",
       "id": "personal",
+      "opacity": 1.0
+    },
+    {
+      "actor": 0,
+      "kind": "lines",
+      "byteOffset": 145824,
+      "floatCount": 16,
+      "vertexCount": 4,
+      "stride": 4,
+      "role": "categoryDoorLabel",
+      "id": "academic",
       "opacity": 1.0
     },
     {
@@ -224,24 +235,13 @@
       "vertexCount": 4,
       "stride": 4,
       "role": "categoryDoorLabel",
-      "id": "academic",
-      "opacity": 1.0
-    },
-    {
-      "actor": 0,
-      "kind": "lines",
-      "byteOffset": 145952,
-      "floatCount": 16,
-      "vertexCount": 4,
-      "stride": 4,
-      "role": "categoryDoorLabel",
       "id": "personal",
       "opacity": 1.0
     },
     {
       "actor": 0,
       "kind": "lines",
-      "byteOffset": 146016,
+      "byteOffset": 145952,
       "floatCount": 144,
       "vertexCount": 36,
       "stride": 4,
@@ -252,7 +252,7 @@
     {
       "actor": 0,
       "kind": "lines",
-      "byteOffset": 146592,
+      "byteOffset": 146528,
       "floatCount": 144,
       "vertexCount": 36,
       "stride": 4,
@@ -263,7 +263,7 @@
     {
       "actor": 0,
       "kind": "points",
-      "byteOffset": 147168,
+      "byteOffset": 147104,
       "floatCount": 565180,
       "vertexCount": 113036,
       "stride": 5,
@@ -274,7 +274,7 @@
     {
       "actor": 0,
       "kind": "points",
-      "byteOffset": 2407888,
+      "byteOffset": 2407824,
       "floatCount": 11680,
       "vertexCount": 2336,
       "stride": 5,
@@ -285,7 +285,7 @@
     {
       "actor": 0,
       "kind": "points",
-      "byteOffset": 2454608,
+      "byteOffset": 2454544,
       "floatCount": 11640,
       "vertexCount": 2328,
       "stride": 5,
@@ -296,7 +296,7 @@
     {
       "actor": 0,
       "kind": "solid",
-      "byteOffset": 2501168,
+      "byteOffset": 2501104,
       "floatCount": 816,
       "vertexCount": 204,
       "stride": 4,
@@ -307,9 +307,9 @@
     {
       "actor": 0,
       "kind": "solid",
-      "byteOffset": 2504432,
-      "floatCount": 2059656,
-      "vertexCount": 514914,
+      "byteOffset": 2504368,
+      "floatCount": 1923672,
+      "vertexCount": 480918,
       "stride": 4,
       "role": null,
       "id": null,
@@ -318,7 +318,7 @@
     {
       "actor": 0,
       "kind": "solid",
-      "byteOffset": 10743056,
+      "byteOffset": 10199056,
       "floatCount": 144,
       "vertexCount": 36,
       "stride": 4,
@@ -329,7 +329,7 @@
     {
       "actor": 0,
       "kind": "solid",
-      "byteOffset": 10743632,
+      "byteOffset": 10199632,
       "floatCount": 24,
       "vertexCount": 6,
       "stride": 4,
@@ -340,7 +340,7 @@
     {
       "actor": 0,
       "kind": "solid",
-      "byteOffset": 10743728,
+      "byteOffset": 10199728,
       "floatCount": 144,
       "vertexCount": 36,
       "stride": 4,
@@ -351,7 +351,7 @@
     {
       "actor": 0,
       "kind": "solid",
-      "byteOffset": 10744304,
+      "byteOffset": 10200304,
       "floatCount": 24,
       "vertexCount": 6,
       "stride": 4,
@@ -362,7 +362,7 @@
     {
       "actor": 0,
       "kind": "solid",
-      "byteOffset": 10744400,
+      "byteOffset": 10200400,
       "floatCount": 24456,
       "vertexCount": 6114,
       "stride": 4,
@@ -373,7 +373,7 @@
     {
       "actor": 0,
       "kind": "solid",
-      "byteOffset": 10842224,
+      "byteOffset": 10298224,
       "floatCount": 21648,
       "vertexCount": 5412,
       "stride": 4,
@@ -384,7 +384,7 @@
     {
       "actor": 0,
       "kind": "solid",
-      "byteOffset": 10928816,
+      "byteOffset": 10384816,
       "floatCount": 1008,
       "vertexCount": 252,
       "stride": 4,
@@ -395,7 +395,7 @@
     {
       "actor": 0,
       "kind": "solid",
-      "byteOffset": 10932848,
+      "byteOffset": 10388848,
       "floatCount": 1008,
       "vertexCount": 252,
       "stride": 4,
@@ -406,7 +406,7 @@
     {
       "actor": 0,
       "kind": "solid",
-      "byteOffset": 10936880,
+      "byteOffset": 10392880,
       "floatCount": 1698384,
       "vertexCount": 424596,
       "stride": 4,
@@ -417,7 +417,7 @@
     {
       "actor": 0,
       "kind": "solid",
-      "byteOffset": 17730416,
+      "byteOffset": 17186416,
       "floatCount": 144,
       "vertexCount": 36,
       "stride": 4,
@@ -428,7 +428,7 @@
     {
       "actor": 0,
       "kind": "solid",
-      "byteOffset": 17730992,
+      "byteOffset": 17186992,
       "floatCount": 144,
       "vertexCount": 36,
       "stride": 4,
@@ -439,7 +439,7 @@
     {
       "actor": 0,
       "kind": "solid",
-      "byteOffset": 17731568,
+      "byteOffset": 17187568,
       "floatCount": 144,
       "vertexCount": 36,
       "stride": 4,
@@ -450,7 +450,7 @@
     {
       "actor": 0,
       "kind": "solid",
-      "byteOffset": 17732144,
+      "byteOffset": 17188144,
       "floatCount": 144,
       "vertexCount": 36,
       "stride": 4,
@@ -461,7 +461,7 @@
     {
       "actor": 0,
       "kind": "solid",
-      "byteOffset": 17732720,
+      "byteOffset": 17188720,
       "floatCount": 144,
       "vertexCount": 36,
       "stride": 4,
@@ -472,7 +472,7 @@
     {
       "actor": 0,
       "kind": "solid",
-      "byteOffset": 17733296,
+      "byteOffset": 17189296,
       "floatCount": 144,
       "vertexCount": 36,
       "stride": 4,
@@ -483,7 +483,7 @@
     {
       "actor": 0,
       "kind": "solid",
-      "byteOffset": 17733872,
+      "byteOffset": 17189872,
       "floatCount": 144,
       "vertexCount": 36,
       "stride": 4,
@@ -494,7 +494,7 @@
     {
       "actor": 0,
       "kind": "solid",
-      "byteOffset": 17734448,
+      "byteOffset": 17190448,
       "floatCount": 144,
       "vertexCount": 36,
       "stride": 4,
@@ -505,7 +505,7 @@
     {
       "actor": 0,
       "kind": "solid",
-      "byteOffset": 17735024,
+      "byteOffset": 17191024,
       "floatCount": 144,
       "vertexCount": 36,
       "stride": 4,
@@ -516,7 +516,7 @@
     {
       "actor": 0,
       "kind": "solid",
-      "byteOffset": 17735600,
+      "byteOffset": 17191600,
       "floatCount": 144,
       "vertexCount": 36,
       "stride": 4,
@@ -527,7 +527,7 @@
     {
       "actor": 0,
       "kind": "solid",
-      "byteOffset": 17736176,
+      "byteOffset": 17192176,
       "floatCount": 144,
       "vertexCount": 36,
       "stride": 4,
@@ -538,7 +538,7 @@
     {
       "actor": 0,
       "kind": "solid",
-      "byteOffset": 17736752,
+      "byteOffset": 17192752,
       "floatCount": 144,
       "vertexCount": 36,
       "stride": 4,
@@ -549,7 +549,7 @@
     {
       "actor": 0,
       "kind": "solid",
-      "byteOffset": 17737328,
+      "byteOffset": 17193328,
       "floatCount": 144,
       "vertexCount": 36,
       "stride": 4,
@@ -560,7 +560,7 @@
     {
       "actor": 0,
       "kind": "solid",
-      "byteOffset": 17737904,
+      "byteOffset": 17193904,
       "floatCount": 144,
       "vertexCount": 36,
       "stride": 4,
@@ -571,7 +571,7 @@
     {
       "actor": 0,
       "kind": "solid",
-      "byteOffset": 17738480,
+      "byteOffset": 17194480,
       "floatCount": 144,
       "vertexCount": 36,
       "stride": 4,
@@ -582,7 +582,7 @@
     {
       "actor": 0,
       "kind": "solid",
-      "byteOffset": 17739056,
+      "byteOffset": 17195056,
       "floatCount": 144,
       "vertexCount": 36,
       "stride": 4,
@@ -593,7 +593,7 @@
     {
       "actor": 0,
       "kind": "solid",
-      "byteOffset": 17739632,
+      "byteOffset": 17195632,
       "floatCount": 144,
       "vertexCount": 36,
       "stride": 4,
@@ -604,7 +604,7 @@
     {
       "actor": 1,
       "kind": "points",
-      "byteOffset": 17740208,
+      "byteOffset": 17196208,
       "floatCount": 6000,
       "vertexCount": 1200,
       "stride": 5,
@@ -613,19 +613,19 @@
       "opacity": 1.0,
       "morphs": [
         {
-          "byteOffset": 17764208,
+          "byteOffset": 17220208,
           "floatCount": 3600
         },
         {
-          "byteOffset": 17778608,
+          "byteOffset": 17234608,
           "floatCount": 3600
         },
         {
-          "byteOffset": 17793008,
+          "byteOffset": 17249008,
           "floatCount": 3600
         },
         {
-          "byteOffset": 17807408,
+          "byteOffset": 17263408,
           "floatCount": 3600
         }
       ]
@@ -633,7 +633,7 @@
     {
       "actor": 2,
       "kind": "points",
-      "byteOffset": 17821808,
+      "byteOffset": 17277808,
       "floatCount": 5525,
       "vertexCount": 1105,
       "stride": 5,
@@ -642,19 +642,19 @@
       "opacity": 1.0,
       "morphs": [
         {
-          "byteOffset": 17843908,
+          "byteOffset": 17299908,
           "floatCount": 3315
         },
         {
-          "byteOffset": 17857168,
+          "byteOffset": 17313168,
           "floatCount": 3315
         },
         {
-          "byteOffset": 17870428,
+          "byteOffset": 17326428,
           "floatCount": 3315
         },
         {
-          "byteOffset": 17883688,
+          "byteOffset": 17339688,
           "floatCount": 3315
         }
       ]
@@ -662,7 +662,7 @@
     {
       "actor": 3,
       "kind": "points",
-      "byteOffset": 17896948,
+      "byteOffset": 17352948,
       "floatCount": 6000,
       "vertexCount": 1200,
       "stride": 5,
@@ -671,19 +671,19 @@
       "opacity": 1.0,
       "morphs": [
         {
-          "byteOffset": 17920948,
+          "byteOffset": 17376948,
           "floatCount": 3600
         },
         {
-          "byteOffset": 17935348,
+          "byteOffset": 17391348,
           "floatCount": 3600
         },
         {
-          "byteOffset": 17949748,
+          "byteOffset": 17405748,
           "floatCount": 3600
         },
         {
-          "byteOffset": 17964148,
+          "byteOffset": 17420148,
           "floatCount": 3600
         }
       ]
@@ -691,7 +691,7 @@
     {
       "actor": 4,
       "kind": "points",
-      "byteOffset": 17978548,
+      "byteOffset": 17434548,
       "floatCount": 5525,
       "vertexCount": 1105,
       "stride": 5,
@@ -700,19 +700,19 @@
       "opacity": 1.0,
       "morphs": [
         {
-          "byteOffset": 18000648,
+          "byteOffset": 17456648,
           "floatCount": 3315
         },
         {
-          "byteOffset": 18013908,
+          "byteOffset": 17469908,
           "floatCount": 3315
         },
         {
-          "byteOffset": 18027168,
+          "byteOffset": 17483168,
           "floatCount": 3315
         },
         {
-          "byteOffset": 18040428,
+          "byteOffset": 17496428,
           "floatCount": 3315
         }
       ]
@@ -720,7 +720,7 @@
     {
       "actor": 5,
       "kind": "points",
-      "byteOffset": 18053688,
+      "byteOffset": 17509688,
       "floatCount": 5760,
       "vertexCount": 1152,
       "stride": 5,
@@ -729,15 +729,15 @@
       "opacity": 1.0,
       "morphs": [
         {
-          "byteOffset": 18076728,
+          "byteOffset": 17532728,
           "floatCount": 3456
         },
         {
-          "byteOffset": 18090552,
+          "byteOffset": 17546552,
           "floatCount": 3456
         },
         {
-          "byteOffset": 18104376,
+          "byteOffset": 17560376,
           "floatCount": 3456
         }
       ]
@@ -745,7 +745,7 @@
     {
       "actor": 6,
       "kind": "points",
-      "byteOffset": 18118200,
+      "byteOffset": 17574200,
       "floatCount": 5525,
       "vertexCount": 1105,
       "stride": 5,
@@ -754,19 +754,19 @@
       "opacity": 1.0,
       "morphs": [
         {
-          "byteOffset": 18140300,
+          "byteOffset": 17596300,
           "floatCount": 3315
         },
         {
-          "byteOffset": 18153560,
+          "byteOffset": 17609560,
           "floatCount": 3315
         },
         {
-          "byteOffset": 18166820,
+          "byteOffset": 17622820,
           "floatCount": 3315
         },
         {
-          "byteOffset": 18180080,
+          "byteOffset": 17636080,
           "floatCount": 3315
         }
       ]
@@ -774,7 +774,7 @@
     {
       "actor": 7,
       "kind": "points",
-      "byteOffset": 18193340,
+      "byteOffset": 17649340,
       "floatCount": 5760,
       "vertexCount": 1152,
       "stride": 5,
@@ -783,15 +783,15 @@
       "opacity": 1.0,
       "morphs": [
         {
-          "byteOffset": 18216380,
+          "byteOffset": 17672380,
           "floatCount": 3456
         },
         {
-          "byteOffset": 18230204,
+          "byteOffset": 17686204,
           "floatCount": 3456
         },
         {
-          "byteOffset": 18244028,
+          "byteOffset": 17700028,
           "floatCount": 3456
         }
       ]
@@ -799,7 +799,7 @@
     {
       "actor": 8,
       "kind": "points",
-      "byteOffset": 18257852,
+      "byteOffset": 17713852,
       "floatCount": 5525,
       "vertexCount": 1105,
       "stride": 5,
@@ -808,19 +808,19 @@
       "opacity": 1.0,
       "morphs": [
         {
-          "byteOffset": 18279952,
+          "byteOffset": 17735952,
           "floatCount": 3315
         },
         {
-          "byteOffset": 18293212,
+          "byteOffset": 17749212,
           "floatCount": 3315
         },
         {
-          "byteOffset": 18306472,
+          "byteOffset": 17762472,
           "floatCount": 3315
         },
         {
-          "byteOffset": 18319732,
+          "byteOffset": 17775732,
           "floatCount": 3315
         }
       ]
@@ -828,7 +828,7 @@
     {
       "actor": 9,
       "kind": "points",
-      "byteOffset": 18332992,
+      "byteOffset": 17788992,
       "floatCount": 5760,
       "vertexCount": 1152,
       "stride": 5,
@@ -837,15 +837,15 @@
       "opacity": 1.0,
       "morphs": [
         {
-          "byteOffset": 18356032,
+          "byteOffset": 17812032,
           "floatCount": 3456
         },
         {
-          "byteOffset": 18369856,
+          "byteOffset": 17825856,
           "floatCount": 3456
         },
         {
-          "byteOffset": 18383680,
+          "byteOffset": 17839680,
           "floatCount": 3456
         }
       ]
@@ -853,7 +853,7 @@
     {
       "actor": 10,
       "kind": "points",
-      "byteOffset": 18397504,
+      "byteOffset": 17853504,
       "floatCount": 5525,
       "vertexCount": 1105,
       "stride": 5,
@@ -862,19 +862,19 @@
       "opacity": 1.0,
       "morphs": [
         {
-          "byteOffset": 18419604,
+          "byteOffset": 17875604,
           "floatCount": 3315
         },
         {
-          "byteOffset": 18432864,
+          "byteOffset": 17888864,
           "floatCount": 3315
         },
         {
-          "byteOffset": 18446124,
+          "byteOffset": 17902124,
           "floatCount": 3315
         },
         {
-          "byteOffset": 18459384,
+          "byteOffset": 17915384,
           "floatCount": 3315
         }
       ]
@@ -882,7 +882,7 @@
     {
       "actor": 11,
       "kind": "points",
-      "byteOffset": 18472644,
+      "byteOffset": 17928644,
       "floatCount": 5880,
       "vertexCount": 1176,
       "stride": 5,
@@ -891,15 +891,15 @@
       "opacity": 1.0,
       "morphs": [
         {
-          "byteOffset": 18496164,
+          "byteOffset": 17952164,
           "floatCount": 3528
         },
         {
-          "byteOffset": 18510276,
+          "byteOffset": 17966276,
           "floatCount": 3528
         },
         {
-          "byteOffset": 18524388,
+          "byteOffset": 17980388,
           "floatCount": 3528
         }
       ]
@@ -907,7 +907,7 @@
     {
       "actor": 11,
       "kind": "solid",
-      "byteOffset": 18538500,
+      "byteOffset": 17994500,
       "floatCount": 144,
       "vertexCount": 36,
       "stride": 4,
@@ -918,7 +918,7 @@
     {
       "actor": 12,
       "kind": "points",
-      "byteOffset": 18539076,
+      "byteOffset": 17995076,
       "floatCount": 5760,
       "vertexCount": 1152,
       "stride": 5,
@@ -927,19 +927,19 @@
       "opacity": 1.0,
       "morphs": [
         {
-          "byteOffset": 18562116,
+          "byteOffset": 18018116,
           "floatCount": 3456
         },
         {
-          "byteOffset": 18575940,
+          "byteOffset": 18031940,
           "floatCount": 3456
         },
         {
-          "byteOffset": 18589764,
+          "byteOffset": 18045764,
           "floatCount": 3456
         },
         {
-          "byteOffset": 18603588,
+          "byteOffset": 18059588,
           "floatCount": 3456
         }
       ]
@@ -947,7 +947,7 @@
     {
       "actor": 12,
       "kind": "solid",
-      "byteOffset": 18617412,
+      "byteOffset": 18073412,
       "floatCount": 144,
       "vertexCount": 36,
       "stride": 4,
@@ -958,7 +958,7 @@
     {
       "actor": 13,
       "kind": "points",
-      "byteOffset": 18617988,
+      "byteOffset": 18073988,
       "floatCount": 6365,
       "vertexCount": 1273,
       "stride": 5,
@@ -967,19 +967,19 @@
       "opacity": 1.0,
       "morphs": [
         {
-          "byteOffset": 18643448,
+          "byteOffset": 18099448,
           "floatCount": 3819
         },
         {
-          "byteOffset": 18658724,
+          "byteOffset": 18114724,
           "floatCount": 3819
         },
         {
-          "byteOffset": 18674000,
+          "byteOffset": 18130000,
           "floatCount": 3819
         },
         {
-          "byteOffset": 18689276,
+          "byteOffset": 18145276,
           "floatCount": 3819
         }
       ]
@@ -987,7 +987,7 @@
     {
       "actor": 14,
       "kind": "points",
-      "byteOffset": 18704552,
+      "byteOffset": 18160552,
       "floatCount": 5525,
       "vertexCount": 1105,
       "stride": 5,
@@ -996,19 +996,19 @@
       "opacity": 1.0,
       "morphs": [
         {
-          "byteOffset": 18726652,
+          "byteOffset": 18182652,
           "floatCount": 3315
         },
         {
-          "byteOffset": 18739912,
+          "byteOffset": 18195912,
           "floatCount": 3315
         },
         {
-          "byteOffset": 18753172,
+          "byteOffset": 18209172,
           "floatCount": 3315
         },
         {
-          "byteOffset": 18766432,
+          "byteOffset": 18222432,
           "floatCount": 3315
         }
       ]
@@ -1016,7 +1016,7 @@
     {
       "actor": 15,
       "kind": "points",
-      "byteOffset": 18779692,
+      "byteOffset": 18235692,
       "floatCount": 5880,
       "vertexCount": 1176,
       "stride": 5,
@@ -1025,19 +1025,19 @@
       "opacity": 1.0,
       "morphs": [
         {
-          "byteOffset": 18803212,
+          "byteOffset": 18259212,
           "floatCount": 3528
         },
         {
-          "byteOffset": 18817324,
+          "byteOffset": 18273324,
           "floatCount": 3528
         },
         {
-          "byteOffset": 18831436,
+          "byteOffset": 18287436,
           "floatCount": 3528
         },
         {
-          "byteOffset": 18845548,
+          "byteOffset": 18301548,
           "floatCount": 3528
         }
       ]
@@ -1045,9 +1045,9 @@
   ],
   "statistics": {
     "points": 134963,
-    "lineSegments": 2856,
+    "lineSegments": 2854,
     "glowSegments": 1743,
-    "solidTriangles": 317504
+    "solidTriangles": 306172
   },
   "projects": [
     {
@@ -2351,6 +2351,15 @@
       "id": "fedora-dotfiles",
       "title": "Fedora Dotfiles\nWayland Desktop",
       "summary": "Customized Fedora desktop,\nshell and sharing tools.",
+      "video": {
+        "preview": "videos/fedora-dotfiles.mp4",
+        "full": "videos/fedora-dotfiles.mp4",
+        "previewFallback": "videos/fedora-dotfiles-h264.mp4",
+        "fullFallback": "videos/fedora-dotfiles-h264.mp4",
+        "poster": "videos/fedora-dotfiles-poster.jpg",
+        "width": 4.6,
+        "height": 2.5875
+      },
       "tags": [
         "Fedora / Hyprland",
         "Quickshell / QML",
@@ -2424,8 +2433,8 @@
           0.7071068286895752,
           0.0
         ],
-        "width": 2.0499998301267652,
-        "height": 3.1500000953674316,
+        "width": 4.600000393681398,
+        "height": 2.5874999710491693,
         "frontDepth": 0.034999998062849036
       },
       "repositoryLinksRestricted": true

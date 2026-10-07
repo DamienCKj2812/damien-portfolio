@@ -978,6 +978,15 @@
       "id": "fedora-dotfiles",
       "title": "Fedora Dotfiles\nWayland Desktop",
       "summary": "Customized Fedora desktop,\nshell and sharing tools.",
+      "video": {
+        "preview": "videos/fedora-dotfiles.mp4",
+        "full": "videos/fedora-dotfiles.mp4",
+        "previewFallback": "videos/fedora-dotfiles-h264.mp4",
+        "fullFallback": "videos/fedora-dotfiles-h264.mp4",
+        "poster": "videos/fedora-dotfiles-poster.jpg",
+        "width": 4.6,
+        "height": 2.5875
+      },
       "tags": [
         "Fedora / Hyprland",
         "Quickshell / QML",

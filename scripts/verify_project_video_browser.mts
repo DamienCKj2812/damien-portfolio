@@ -154,10 +154,13 @@ try {
     await visit.page.getByRole('button',{name:/Back to hallway/}).click();await visit.page.close()
   }
   assert.deepEqual(errors,[])
-  for(const [id,y,direction,name,duration] of [['report-automation',approachY('report-automation'),'Look right','MyReport',40],['Aria',approachY('Aria'),'Look left','DWMLight',55]] as const) {
-    const visit=await enter({width:1440,height:900})
-    const target=visit.page.locator(`[data-project-video="${id}"]`)
-    assert.ok(!visit.requests.some(url=>url.includes(`${id==='Aria'?'dwmlight':'myreport'}-full`)))
+   for(const [id,y,direction,name,duration] of [['report-automation',approachY('report-automation'),'Look right','MyReport',40],['Aria',approachY('Aria'),'Look left','DWMLight',55],['fedora-dotfiles',approachY('fedora-dotfiles'),'Look left','Fedora Dotfiles',27]] as const) {
+     const visit=await enter({width:1440,height:900})
+     const target=visit.page.locator(`[data-project-video="${id}"]`)
+     const project=videoProjects.find(project=>project.id===id)
+     assert.ok(project?.video)
+     const fullClip=project.video.full
+     assert.ok(!visit.requests.some(url=>url.includes(fullClip)))
     await visit.page.locator('#room-progress').evaluate((input,y)=>{Object.getOwnPropertyDescriptor(HTMLInputElement.prototype,'value')!.set!.call(input,String(y));input.dispatchEvent(new Event('input',{bubbles:true}));input.dispatchEvent(new Event('change',{bubbles:true}))},y)
     await visit.page.waitForFunction(y=>Math.abs(Number(document.querySelector<HTMLElement>('.city-stage')!.dataset.roomY)-y)<.02,y)
     await visit.page.locator('.room-more-controls summary').click()
@@ -167,17 +170,38 @@ try {
     await target.evaluate((node: HTMLElement)=>{window.__testedVideoDock=node})
     await visit.page.waitForFunction(()=>window.__testedVideoDock.dataset.videoPaused==='false')
     assert.ok((await visit.page.locator('[data-project-video]').evaluateAll((nodes: HTMLElement[])=>nodes.filter(node=>node.dataset.videoPaused==='false').length))<=1,'Only the camera-facing preview should be playing')
-    await outside(target);await visiblePixels(visit.page,target)
-    await target.getByRole('button',{name:new RegExp(`Watch ${name}`)}).click()
+     await outside(target);await visiblePixels(visit.page,target)
+     if(id==='fedora-dotfiles') {
+       assert.equal(project.video.preview,project.video.full)
+       assert.equal(project.video.previewFallback,project.video.fullFallback)
+       assert.equal(await target.getAttribute('data-video-mode'),'preview')
+       assert.ok((await target.getAttribute('data-video-source'))?.endsWith(project.video.previewFallback || project.video.preview))
+       const center=await target.evaluate((node: HTMLElement)=>({x:(Number(node.dataset.boardLeft)+Number(node.dataset.boardRight))/2,y:(Number(node.dataset.boardTop)+Number(node.dataset.boardBottom))/2}))
+       await visit.page.mouse.click(center.x,center.y)
+     } else await target.getByRole('button',{name:new RegExp(`Watch ${name}`)}).click()
     await visit.page.locator('.city-stage[data-room-view="project"][data-card-focus-framed="true"]').waitFor({timeout:30000})
     await visit.page.waitForFunction(duration=>Number(window.__testedVideoDock.dataset.videoDuration)>duration,duration)
-    await target.getByRole('button',{name:'Pause video',exact:true}).waitFor({state:'visible'})
+     await target.getByRole('button',{name:'Pause video',exact:true}).waitFor({state:'visible'})
+     if(id==='fedora-dotfiles') {
+       assert.equal(await target.getAttribute('data-video-mode'),'full')
+       assert.ok(Math.abs(Number(await target.getAttribute('data-video-duration'))-28.033333)<.1)
+       assert.ok((await target.getAttribute('data-video-source'))?.match(/\/fedora-dotfiles(?:-h264)?\.mp4$/))
+     }
     await outside(target);await visiblePixels(visit.page,target)
     const others=await visit.page.locator(`[data-project-video]:not([data-project-video="${id}"])`).evaluateAll((nodes: HTMLElement[])=>nodes.map(node=>node.dataset.videoPaused))
     assert.ok(others.every(paused=>paused!=='false'),'Other previews must pause while a walkthrough is focused')
     await visit.page.getByRole('button',{name:/Back to hallway/}).click();await visit.page.close()
     console.log(`PASS ${name}: correct preview/full files, visible pixels, outside prompt and other-player suspension`)
-  }
+   }
+   const fedoraMobile=await enter({width:390,height:844},'reduce')
+   await fedoraMobile.page.locator('#room-progress').evaluate((input,y)=>{Object.getOwnPropertyDescriptor(HTMLInputElement.prototype,'value')!.set!.call(input,String(y));input.dispatchEvent(new Event('input',{bubbles:true}));input.dispatchEvent(new Event('change',{bubbles:true}))},approachY('fedora-dotfiles'))
+   await fedoraMobile.page.locator('.room-index-button').filter({hasText:'Fedora Dotfiles'}).click()
+   const fedoraDock=fedoraMobile.page.locator('[data-project-video="fedora-dotfiles"]')
+   await fedoraMobile.page.locator('.city-stage[data-card-focus-framed="true"]').waitFor({timeout:30000})
+   await fedoraDock.getByRole('button',{name:'Pause video',exact:true}).waitFor({state:'visible',timeout:20000})
+   await outside(fedoraDock);await visiblePixels(fedoraMobile.page,fedoraDock)
+   await fedoraMobile.page.getByRole('button',{name:/Back to hallway/}).click()
+   await fedoraMobile.page.close()
   assert.deepEqual(errors,[])
   console.log('PASS mobile/reduced-motion full playback and non-persistent video/background-music audio focus')
 } finally {await browser.close();if('listen' in server)await server.close();else await new Promise<void>(resolve=>server.httpServer.close(()=>resolve()))}
