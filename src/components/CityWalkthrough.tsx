@@ -6,7 +6,10 @@ import { portfolio } from '../data/portfolio'
 import CityScene from './city/CityScene'
 import type { CitySceneProps } from './city/CityScene'
 import NegativeCursor from './city/NegativeCursor'
-import { CITY_ASSET_BASE, loadCityAssets, loadElevatorAssets, loadJourneyConfig, loadLobbyAssets, loadRoomAssets } from './city/cityAssets'
+import { loadCityAssets, loadElevatorAssets, loadJourneyConfig, loadLobbyAssets, loadRoomAssets } from './city/cityAssets'
+import StartupFrameReady from './city/StartupFrameReady'
+import type { ReportStartup } from './startupLoading'
+import { preloadImages } from './preloadImages'
 import ElevatorControls from './city/ElevatorControls'
 import RoomControls from './city/RoomControls'
 import RoomProgressBar from './city/RoomProgressBar'
@@ -35,10 +38,10 @@ function loadError(error: unknown): Error {
   return error instanceof Error ? error : new Error(String(error))
 }
 
-class CityErrorBoundary extends Component<{ children: ReactNode }, { error: Error | null }> {
+class CityErrorBoundary extends Component<{ children: ReactNode; onError: (message: string) => void }, { error: Error | null }> {
   state: { error: Error | null } = { error: null }
   static getDerivedStateFromError(error: unknown) { return { error: loadError(error) } }
-  componentDidCatch(error: Error) { console.error('City viewer failed:', error) }
+  componentDidCatch(error: Error) { console.error('City viewer failed:', error);this.props.onError(error.message) }
   render() {
     if (this.state.error) return <div className="city-error" role="alert"><p>The interactive view couldn’t start.</p><p>{this.state.error.message}</p><button onClick={() => window.location.reload()}>Reload viewer</button></div>
     return this.props.children
@@ -60,15 +63,22 @@ const phases: { end: keyof JourneyConfig['bookmarks']; label: string; title: str
 
 const initialRoomState = (): RoomState => ({ view: 'main', project: null, projectExploring:false, projectSection:'Overview', projectFocusReady:false, exhibit: null, paused: false, walkPaused: true, profileOpen: false, returnPrompt: false, openedCategories: ['client'] })
 
-export default function CityWalkthrough() {
+export default function CityWalkthrough({ startupReady, onStartup, onStartupError }: { startupReady: boolean; onStartup: ReportStartup; onStartupError: (message: string) => void }) {
   const { environmentClick: playClick, click: playSystemClick, doorSound, cancelDoorSounds, preferencesOpen, openPreferences, closePreferences } = useSoundEffects()
   const sectionRef = useRef<HTMLElement>(null)
   const stageRef = useRef<HTMLDivElement>(null)
   const roomProgressRef = useRef<HTMLInputElement>(null)
   const categoryLabelRef = useRef<HTMLSpanElement>(null)
   const doorTiming = useRef(createDoorSoundTiming())
+  const ownedAssets = useRef<LoadedSceneAssets[]>([])
+  const retainAssets = useCallback(<T extends LoadedSceneAssets,>(assets: T, signal: AbortSignal): T => {
+    if(signal.aborted) for(const texture of Object.values(assets.textures)) texture.dispose()
+    else ownedAssets.current.push(assets)
+    return assets
+  },[])
   const playDoorEvents = useCallback((events: DoorSoundEvent[]) => { for (const event of events) doorSound(event.id, event.delay) }, [doorSound])
   const reducedMotion = useReducedMotion()
+  const sceneReducedMotion = reducedMotion || !startupReady
   const [load, setLoad] = useState<CityLoadState>({ assets: null, journey: null, error: null })
   const [lobby, setLobby] = useState<AssetLoadState<LoadedSceneAssets<LobbyManifest>>>({ assets: null, error: null })
   const [cabin, setCabin] = useState<AssetLoadState<LoadedSceneAssets<ElevatorManifest>>>({ assets: null, error: null })
@@ -95,7 +105,7 @@ export default function CityWalkthrough() {
   const roomError = roomId ? rooms[roomId]?.error : undefined
   const elevatorEntryProgress = ((load.journey?.lobbyGlobalEnd ?? 1403) - 1) / Math.max(1, (load.journey?.frameEnd ?? 1521) - 1)
   const interfaceOpen = guideOpen || preferencesOpen
-  const { progress, seek } = useScrollTimeline(sectionRef, elevatorState.status === 'idle' && !interfaceOpen, elevatorEntryProgress)
+  const { progress, seek } = useScrollTimeline(sectionRef, startupReady && elevatorState.status === 'idle' && !interfaceOpen, elevatorEntryProgress)
   const sceneRoomState = interfaceOpen ? { ...roomState, paused: true, walkPaused: true, profileOpen: true } : roomState
   const closeGuide = useCallback(() => setGuideOpen(false), [])
   const openGuide = () => {
@@ -121,37 +131,90 @@ export default function CityWalkthrough() {
 
   useEffect(() => {
     const controller = new AbortController()
-    Promise.all([loadCityAssets(controller.signal), loadJourneyConfig(controller.signal)])
-      .then(([assets, journey]) => { if (!controller.signal.aborted) setLoad({ assets, journey, error: null }) })
-      .catch((error: unknown) => { if (!controller.signal.aborted) setLoad({ assets: null, journey: null, error: loadError(error) }) })
-    return () => controller.abort()
-  }, [])
+    const signal = controller.signal
+    const prepared: LoadedSceneAssets[] = []
+    onStartup('runtime','ready');onStartup('journey','loading')
+    const owned = ownedAssets.current
+    const remember = <T extends LoadedSceneAssets,>(assets: T): T => {prepared.push(assets);return retainAssets(assets,signal)}
+    const preload = async () => {
+      const [assets,journey] = await Promise.all([
+        loadCityAssets(signal,(stage,status)=>onStartup(stage==='manifest'?'cityManifest':stage,status)).then(remember),
+        loadJourneyConfig(signal).then(config=>{if(!signal.aborted) onStartup('journey','ready');return config}),
+      ])
+      if(signal.aborted) return
+      setLoad({assets,journey,error:null})
+      onStartup('renderer','loading')
+      onStartup('lobby','loading');onStartup('elevator','loading')
+      await Promise.all([
+        loadLobbyAssets(signal).then(remember).then(value=>{if(!signal.aborted){setLobby({assets:value,error:null});onStartup('lobby','ready')}}).catch((error: unknown)=>{if(!signal.aborted){setLobby({assets:null,error:loadError(error)});onStartup('lobby','unavailable')}}),
+        loadElevatorAssets(signal).then(remember).then(value=>{if(!signal.aborted){setCabin({assets:value,error:null});onStartup('elevator','ready')}}).catch((error: unknown)=>{if(!signal.aborted){setCabin({assets:null,error:loadError(error)});onStartup('elevator','unavailable')}}),
+      ])
+      // Two workers bound parallel downloads/texture decodes and prepare every
+      // floor before handing off from the startup screen.
+      const queue: LevelId[] = ['about','skills','projects','experience']
+      const worker = async () => {
+        while(!signal.aborted && queue.length) {
+          const id=queue.shift()
+          if(!id) return
+          const destination=journey.rooms[id]
+          if(!destination) {onStartup(id,'unavailable');continue}
+          onStartup(id,'loading')
+          try {
+            const value=remember(await loadRoomAssets(destination,signal))
+            if(signal.aborted) return
+            setRooms(current=>({...current,[id]:{assets:value,error:null}}));onStartup(id,'ready')
+          } catch(error: unknown) {
+            if(signal.aborted) return
+            setRooms(current=>({...current,[id]:{assets:null,error:loadError(error)}}));onStartup(id,'unavailable')
+          }
+        }
+      }
+      await Promise.all([worker(),worker()])
+      if(signal.aborted) return
+      const imageUrl=(src: string)=>/^https?:\/\//.test(src)?src:`${import.meta.env.BASE_URL}${src.replace(/^\/+/, '')}`
+      const portrait=portfolio.about.profile.portrait
+      const portraitUrls=[portrait?.src,portrait?.originalSrc].filter((src): src is string=>Boolean(src)).map(imageUrl)
+      const projectAssets=prepared.find(value=>value.manifest.level==='projects')
+      const posters=projectAssets?.manifest.level==='projects'?projectAssets.manifest.projects.flatMap(project=>project.video?[imageUrl(project.video.poster)]:[]):[]
+      await Promise.all((['portraits','posters'] as const).map(async (stage)=>{
+        if(stage==='posters'&&!projectAssets) {onStartup(stage,'unavailable');return}
+        onStartup(stage,'loading')
+        try {await preloadImages(stage==='portraits'?portraitUrls:posters,signal);if(!signal.aborted)onStartup(stage,'ready')}
+        catch {if(!signal.aborted)onStartup(stage,'unavailable')}
+      }))
+    }
+    void preload().catch((error: unknown)=>{if(!signal.aborted){const failure=loadError(error);setLoad({assets:null,journey:null,error:failure});onStartupError(failure.message)}})
+    return () => {controller.abort();for(const assets of owned) for(const texture of Object.values(assets.textures)) texture.dispose();owned.length=0}
+  }, [onStartup,onStartupError,retainAssets])
   const preloadLobby = Boolean(load.assets) && frame >= (load.journey?.preloadFrame ?? 100)
   useEffect(() => {
-    if (!preloadLobby || lobby.assets) return
+    if (!startupReady || !preloadLobby || lobby.assets || lobby.error) return
     const controller = new AbortController()
     loadLobbyAssets(controller.signal)
+      .then(assets=>retainAssets(assets,controller.signal))
       .then((assets) => { if (!controller.signal.aborted) setLobby({ assets, error: null }) })
       .catch((error: unknown) => { if (!controller.signal.aborted) setLobby({ assets: null, error: loadError(error) }) })
     return () => controller.abort()
-  }, [preloadLobby, lobby.assets, retry])
+  }, [startupReady, preloadLobby, lobby.assets, lobby.error, retry,retainAssets])
   const preloadCabin = Boolean(load.assets) && frame >= (load.journey?.elevatorPreloadFrame ?? 893)
   useEffect(() => {
-    if (!preloadCabin || cabin.assets) return
+    if (!startupReady || !preloadCabin || cabin.assets || cabin.error) return
     const controller = new AbortController()
     loadElevatorAssets(controller.signal)
+      .then(assets=>retainAssets(assets,controller.signal))
       .then((assets) => { if (!controller.signal.aborted) setCabin({ assets, error: null }) })
       .catch((error: unknown) => { if (!controller.signal.aborted) setCabin({ assets: null, error: loadError(error) }) })
     return () => controller.abort()
-  }, [preloadCabin, cabin.assets, cabinRetry])
+  }, [startupReady, preloadCabin, cabin.assets, cabin.error, cabinRetry,retainAssets])
   useEffect(() => {
-    if (!roomId || !roomConfig || roomAssets) return
+    if (!startupReady || !roomId || !roomConfig || roomAssets || roomError) return
     const controller = new AbortController()
     loadRoomAssets(roomConfig, controller.signal)
+      .then(assets=>retainAssets(assets,controller.signal))
       .then((assets) => { if (!controller.signal.aborted) setRooms((current) => ({ ...current, [roomId]: { assets, error: null } })) })
       .catch((error: unknown) => { if (!controller.signal.aborted) setRooms((current) => ({ ...current, [roomId]: { assets: null, error: loadError(error) } })) })
     return () => controller.abort()
-  }, [roomId, roomConfig, roomAssets, roomRetry])
+  }, [startupReady, roomId, roomConfig, roomAssets, roomError, roomRetry,retainAssets])
   const reportFrame = useCallback<CitySceneProps['onFrame']>((value) => {
     if (load.journey) playDoorEvents(doorTiming.current.journey(value, load.journey))
     if (stageRef.current) {
@@ -407,7 +470,7 @@ export default function CityWalkthrough() {
     <section className="city-story" ref={sectionRef} id="city" aria-label="Interactive portfolio walkthrough" tabIndex={0}>
       <div className="city-stage" ref={stageRef} data-frame={frame} data-rendered-frame="1" data-loaded={Boolean(load.assets)} data-lobby-loaded={Boolean(lobby.assets)} data-elevator-loaded={Boolean(cabin.assets)} data-interactive={chooseReady && ['idle', 'arrived'].includes(elevatorState.status) && !roomState.returnPrompt && !interfaceOpen} data-elevator-status={elevatorState.status} data-room={inRoom ? roomId : ''} data-room-loaded={Boolean(roomAssets)} data-room-view={roomState.view} data-profile-open={roomState.profileOpen} data-return-prompt={roomState.returnPrompt} data-guide-open={guideOpen} data-preferences-open={preferencesOpen} data-project-exploring={roomState.projectExploring} data-focus-project={roomState.view==='project'?roomState.project:''} data-focus-skill={roomState.view==='skill'?roomState.exhibit:''}>
         {load.assets ? (
-          <CityErrorBoundary>
+          <CityErrorBoundary onError={onStartupError}>
             <Canvas
               className="city-canvas"
               aria-label={focusedDirectory ? 'Projects directory. Zoom-only view of the raised board and overhead projector. Back to hallway or Escape returns to your saved walking view.' : focusedSkill ? `Skill card: ${focusedSkill.title}. ${focusedSkill.summary}. Scroll or use arrow keys to explore toolkit, project evidence and learning scope. Escape returns to the gallery.` : focusedTimeline ? `Timeline entry: ${focusedTimeline.title}. ${focusedTimeline.summary}. Scroll or use arrow keys to change sections. Escape returns to the observatory.` : focusedProject ? `Full project card: ${focusedProject.title.replaceAll('\n',' ')}. ${focusedProject.summary.replaceAll('\n',' ')}. Scroll or use arrow keys to change sections. Escape returns to the hallway.` : inRoom && roomConfig ? `${roomConfig.label}. ${roomId === 'projects' ? 'Use W/S or arrow keys to walk, drag to look, or use the room controls.' : roomId === 'about' ? `Drag to turn around. Arrow keys look; R resets to the computer. Click ${portfolio.name} or use Meet ${portfolio.name} to read the profile. Click the desk card for contact details.` : 'Drag to look freely. Use the guided-tour and exhibit controls to navigate.'} Scroll up past the entrance to return to the elevator. Keyboard: Home, then Page Up. On touch screens swipe down to move back.` : 'Monochrome city, lobby, and elevator journey controlled by scrolling or the timeline below'}
@@ -416,17 +479,13 @@ export default function CityWalkthrough() {
               camera={{ position: [12, 1.7, 35], fov: 50, near: 0.05, far: 250 }}
               onCreated={({ raycaster, gl }) => { raycaster.params.Points.threshold = .12;gl.localClippingEnabled = true }}
               gl={{ antialias: true, alpha: false, toneMapping: NoToneMapping, powerPreference: 'high-performance' }}
-              fallback={<span>WebGL is unavailable. Reload this page in a browser with 3D graphics support.</span>}
+               fallback={<span>WebGL is unavailable. Use a browser with 3D graphics support.</span>}
             >
-               <CityScene assets={load.assets} lobbyAssets={lobby.assets} elevatorAssets={cabin.assets} elevatorState={elevatorState} focusedLevel={focusedLevel} pressedLevel={pressedLevel} roomAssets={roomAssets} roomState={sceneRoomState} navigationRef={navigationRef} journey={load.journey} progress={progress} reducedMotion={reducedMotion} onFrame={reportFrame} onSelectLevel={selectLevel} onElevatorFrame={reportElevatorFrame} onRoomFrame={reportRoomFrame} onRoomInteract={interactWithRoom} onRoomView={changeRoomView} onToggleWalk={toggleRoomWalk} onSeekTour={seekRoomTour} onStation={stepRoomStation} onTourEnd={finishRoomTour} onRequestReturn={requestRoomReturn} onEnterElevator={enterElevator} onReturnProgress={reportRoomReturn} onReturnComplete={finishRoomReturn} onArrival={arrive} onCancel={replaySelection} />
-            </Canvas>
+                <CityScene assets={load.assets} lobbyAssets={lobby.assets} elevatorAssets={cabin.assets} elevatorState={elevatorState} focusedLevel={focusedLevel} pressedLevel={pressedLevel} roomAssets={roomAssets} roomState={sceneRoomState} navigationRef={navigationRef} journey={load.journey} progress={progress} reducedMotion={sceneReducedMotion} onFrame={reportFrame} onSelectLevel={selectLevel} onElevatorFrame={reportElevatorFrame} onRoomFrame={reportRoomFrame} onRoomInteract={interactWithRoom} onRoomView={changeRoomView} onToggleWalk={toggleRoomWalk} onSeekTour={seekRoomTour} onStation={stepRoomStation} onTourEnd={finishRoomTour} onRequestReturn={requestRoomReturn} onEnterElevator={enterElevator} onReturnProgress={reportRoomReturn} onReturnComplete={finishRoomReturn} onArrival={arrive} onCancel={replaySelection} />
+               <StartupFrameReady onReady={()=>onStartup('renderer','ready')}/>
+             </Canvas>
           </CityErrorBoundary>
-        ) : (
-          <>
-            <img className="city-poster" src={`${CITY_ASSET_BASE}preview.png`} alt="Monochrome particle city with an elevated train and a crowd of tall figures" />
-            <p className="city-loading" role={load.error ? 'alert' : 'status'}>{load.error ? load.error.message : 'Loading the city…'}</p>
-          </>
-        )}
+        ) : null}
         <div className="mobile-hud-scrim mobile-hud-scrim-top" aria-hidden="true" />
         <div className="mobile-hud-scrim mobile-hud-scrim-bottom" aria-hidden="true" />
         {preloadLobby && !lobby.assets && frame >= (load.journey?.lobbyHoldFrame ?? bookmarks.doors) && <div className="city-chapter-loading" role={lobby.error ? 'alert' : 'status'}>

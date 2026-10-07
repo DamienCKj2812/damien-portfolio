@@ -99,7 +99,9 @@ try {
   if(!await page.locator('.room-more-controls').evaluate((element: HTMLDetailsElement)=>element.open))await page.locator('.room-more-controls summary').click()
   for(let i=0;i<2;i++)await page.locator('.room-more-controls').getByRole('button',{name:'Look right',exact:true}).click()
   await page.waitForFunction(()=>document.querySelector<HTMLElement>('[data-project-video="report-automation"]')!.dataset.videoPaused==='false'&&document.querySelector<HTMLElement>('[data-project-video="agent-property"]')!.dataset.videoPaused==='true')
-  assert.equal(await page.locator('canvas').getAttribute('data-room-fov'),walkingFov,'Walking past videos must keep the lens fixed')
+   // The arrival camera spring can leave sub-millidegree numerical residuals;
+   // this still rejects any perceptible/automatic walking zoom.
+   assert.ok(Math.abs(Number(await page.locator('canvas').getAttribute('data-room-fov'))-Number(walkingFov))<.001,'Walking past videos must keep the lens fixed')
   await page.locator('#room-progress').evaluate((input,y)=>{Object.getOwnPropertyDescriptor(HTMLInputElement.prototype,'value')!.set!.call(input,String(y));input.dispatchEvent(new Event('input',{bubbles:true}));input.dispatchEvent(new Event('change',{bubbles:true}))},approachY('agent-property'))
   await page.waitForFunction(y=>Math.abs(Number(document.querySelector<HTMLElement>('.city-stage')!.dataset.roomY)-y)<.02,approachY('agent-property'))
   for(let i=0;i<2;i++)await page.locator('.room-more-controls').getByRole('button',{name:'Look left',exact:true}).click()

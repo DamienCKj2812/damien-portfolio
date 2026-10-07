@@ -54,7 +54,11 @@ function createEngine<Buffer, Destination, Gain extends InteractionAudioGain<Des
     files.set(kind, pending)
     return pending
   }
-  function preload() { if (!disposed) for (const kind of ['system', 'environment', 'portal', 'door'] as const) if (urls[kind]) void load(kind) }
+  async function preload() {
+    if (disposed) return false
+    const loaded = await Promise.all((['system','environment','portal','door'] as const).filter(kind=>urls[kind]).map(load))
+    return !disposed && loaded.every(data=>data!==null)
+  }
   function stop(voice: Voice) {
     voices.delete(voice)
     voice.source.onended = null

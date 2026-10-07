@@ -8,6 +8,7 @@ interface PlayRecord { active: boolean; src: string; failure?: string }
 declare global { interface Window {
   audioChecks: { plays: PlayRecord[]; contexts: { active: boolean }[]; resumes: { active: boolean }[] }
   testHidden: boolean
+  reportConsentMusicAttempt: (record: PlayRecord) => Promise<void>
 } }
 
 const root = resolve(fileURLToPath(new URL('..', import.meta.url)))
@@ -31,7 +32,7 @@ try {
     HTMLMediaElement.prototype.play = function () {
       const record: PlayRecord = { active: navigator.userActivation.isActive, src: this.src }
       window.audioChecks.plays.push(record)
-      return play.call(this).catch(error => { record.failure = error.name;throw error })
+      return play.call(this).then(()=>{void window.reportConsentMusicAttempt(record)},error=>{record.failure=error.name;void window.reportConsentMusicAttempt(record);throw error})
     }
     const NativeContext = window.AudioContext
     window.AudioContext = new Proxy(NativeContext, {
@@ -45,6 +46,8 @@ try {
     })
   })
   const page = await context.newPage()
+  let reportAutomaticAttempt: ((record: PlayRecord) => void) | null = null
+  await page.exposeFunction('reportConsentMusicAttempt',(record: PlayRecord)=>reportAutomaticAttempt?.(record))
   page.on('pageerror', error => errors.push(error.message))
   page.on('console', message => {
     if (/autoplay|AudioContext.*(prevented|allowed)|could not start/i.test(message.text())) errors.push(message.text())
@@ -52,7 +55,16 @@ try {
   const audioRequests: string[] = []
   page.on('request', request => { if (/\/audio\/.*\.mp3/.test(request.url())) audioRequests.push(request.url()) })
   const visit = async (prompt = true) => {
+    const automatic = !prompt && await page.evaluate(()=>(JSON.parse(localStorage.getItem('damien-portfolio:background-music')!) as {enabled:boolean}).enabled)
+    const firstAttempt = new Promise<PlayRecord>(resolve=>{reportAutomaticAttempt=resolve})
     await page.goto('http://127.0.0.1:5196/damien-portfolio/')
+    if(automatic) {
+      const attempt=await firstAttempt
+      assert.equal(attempt.failure,'NotAllowedError','Remembered sound gets one policy-controlled automatic attempt')
+      assert.equal(attempt.active,false)
+    }
+    reportAutomaticAttempt=null
+    await page.locator('.experience[data-startup-ready="true"]').waitFor({timeout:120000})
     await page.locator('.background-music').waitFor()
     if (prompt) await page.getByRole('dialog', { name: 'Enter with sound?' }).waitFor()
     else assert.equal(await page.locator('.audio-consent').count(), 0, 'A remembered choice must skip the prompt')
@@ -68,7 +80,7 @@ try {
     assert.equal(await page.locator('.background-music').getAttribute('data-music-state'), await page.evaluate(() => (JSON.parse(localStorage.getItem('damien-portfolio:background-music')!) as { enabled: boolean }).enabled) ? 'ready' : 'off')
   }
   await visit()
-  assert.equal(audioRequests.length, 0, 'Declined/unresolved sound should not fetch audio')
+  assert.equal(new Set(audioRequests).size, 5, 'Startup silently prepares music and four effects before the sound choice')
   assert.equal(await page.locator('.audio-consent-bars span').count(), 5)
   assert.equal(await page.locator('.audio-consent-bars span').first().evaluate(bar => getComputedStyle(bar).animationName), 'none', 'Reduced motion stops the sound bars')
   await page.screenshot({ path: screenshotPath('sound-prompt-desktop.png') })

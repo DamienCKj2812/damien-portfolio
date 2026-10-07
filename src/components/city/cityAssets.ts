@@ -24,14 +24,19 @@ async function fetchAsset(url: string, signal: AbortSignal, type: 'json' | 'bina
   return type === 'json' ? response.json() : response.arrayBuffer()
 }
 
-export async function loadSceneAssets(base: string, signal: AbortSignal): Promise<LoadedSceneAssets> {
+export type SceneAssetProgress = (stage: 'manifest' | 'geometry' | 'animation' | 'textures', status: 'loading' | 'ready') => void
+
+export async function loadSceneAssets(base: string, signal: AbortSignal, onProgress?: SceneAssetProgress): Promise<LoadedSceneAssets> {
+  const report: SceneAssetProgress = (stage,status) => { if (!signal.aborted) onProgress?.(stage,status) }
+  report('manifest','loading')
   const manifest = parseSceneManifest(await fetchAsset(`${base}scene.json`, signal, 'json'))
   if (![1, 2, 3].includes(manifest.version)) throw new Error('Unsupported city asset version.')
   const version = manifest.assetHash ? `?v=${manifest.assetHash}` : ''
   const route = manifest.level === 'skills' || manifest.level === 'experience' ? manifest.navigation.route : undefined
+  report('manifest','ready');report('geometry','loading');report('animation','loading')
   const [geometryBuffer, animationBuffer, routeBuffer] = await Promise.all([
-    fetchAsset(`${base}${manifest.geometry}${version}`, signal, 'binary'),
-    fetchAsset(`${base}${manifest.animation}${version}`, signal, 'binary'),
+    fetchAsset(`${base}${manifest.geometry}${version}`, signal, 'binary').then(buffer=>{report('geometry','ready');return buffer}),
+    fetchAsset(`${base}${manifest.animation}${version}`, signal, 'binary').then(buffer=>{report('animation','ready');return buffer}),
     route ? fetchAsset(`${base}${route.file}${version}`, signal, 'binary') : Promise.resolve(null),
   ])
   const frameCount = manifest.frameEnd - manifest.frameStart + 1
@@ -49,6 +54,7 @@ export async function loadSceneAssets(base: string, signal: AbortSignal): Promis
     }
   }
   const textures: Record<string, Texture> = {}
+  report('textures','loading')
   const loader = new TextureLoader()
   const images = await Promise.allSettled((manifest.textures || []).map(async (file) => {
     const texture = await loader.loadAsync(`${base}${file}${version}`)
@@ -65,6 +71,7 @@ export async function loadSceneAssets(base: string, signal: AbortSignal): Promis
     if (signal.aborted) throw new DOMException('City loading aborted.', 'AbortError')
     throw new Error('A city billboard could not load. Refresh to try again.')
   }
+  report('textures','ready')
   return prepareLinearRoomRoute({ manifest, geometryBuffer, animation: new Float32Array(animationBuffer), route: routeBuffer ? new Float32Array(routeBuffer) : null, textures })
 }
 
@@ -73,8 +80,8 @@ function rejectScenePackage(assets: LoadedSceneAssets, message: string): never {
   throw new Error(message)
 }
 
-export async function loadCityAssets(signal: AbortSignal): Promise<LoadedSceneAssets<CityManifest>> {
-  const assets = await loadSceneAssets(CITY_ASSET_BASE, signal)
+export async function loadCityAssets(signal: AbortSignal, onProgress?: SceneAssetProgress): Promise<LoadedSceneAssets<CityManifest>> {
+  const assets = await loadSceneAssets(CITY_ASSET_BASE, signal, onProgress)
   const manifest = assets.manifest
   if (!isCityManifest(manifest)) return rejectScenePackage(assets, 'Expected a city scene package.')
   return { ...assets, manifest }

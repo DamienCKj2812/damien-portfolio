@@ -13,8 +13,8 @@ Use Three.js **`VideoTexture`** on separate named, UV-mapped lobby screen meshes
 
 **Status:** planned. The current runtime uses static image textures; banner video selection/preparation and playback are not implemented.
 
-## Complete startup preloading
+## Startup preloading and further warmup
 
-Before enabling **Enter**, show branded loading progress, load/decode the city/lobby/cabin and essential textures, upload GPU resources, and warm shaders. Retain the areas while drawing only visible geometry. Buffer video separately rather than waiting for entire clips.
+The branded loading screen prepares city/journey, lobby/cabin, all four destination packages and their textures, both portrait layers, project posters and silent audio buffers. It stays mounted through the lazy runtime import and first city draw, then hands off to the sound choice or the remembered playback settings. Scene data is reused on floor selection; video recordings retain their visibility/selection-driven loading.
 
-**Status:** planned. Current loading is staged, and destination rooms load on floor selection. Extending the startup preload to room packages needs a measured memory/network budget. Preloading avoids later download waits but does not guarantee frame rate or a fixed few-second startup on every device.
+**Status:** package/image/audio preparation and first-city-frame handoff are implemented. Additional GPU/shader warmup for every offscreen destination remains a profiling task; those rooms' geometry/materials are mounted when selected. Measure memory/network budgets before extending warmup further. Prepared packages remove later download waits but do not guarantee a fixed startup time or frame rate on every device.

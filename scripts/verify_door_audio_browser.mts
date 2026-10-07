@@ -33,6 +33,7 @@ try {
   }, bytes)
   await page.goto('http://127.0.0.1:5201/damien-portfolio/')
   await page.waitForSelector('.city-stage[data-loaded=true]', { timeout: 90000 })
+  await page.waitForSelector('.experience[data-startup-ready=true]', { timeout: 120000 })
   await page.mouse.click(20, 400)
   const seek = async (frame: number) => {
     await page.locator('#city-timeline').evaluate((input, value) => {

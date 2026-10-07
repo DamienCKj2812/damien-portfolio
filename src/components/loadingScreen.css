@@ -1,0 +1,44 @@
+.startup-loader { position: fixed; inset: 0; z-index: 80; display: grid; grid-template-rows: auto minmax(0,1fr); gap: 12px; padding: clamp(16px,4vh,28px) clamp(20px,4vw,32px); background: #000; color: #f2f0ea; font-family: 'JetBrains Mono',ui-monospace,monospace; overflow: hidden; color-scheme: dark; }
+.startup-loader > header { position: relative; z-index: 1; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px 24px; color: #8d8b85; font-size: 10px; letter-spacing: .14em; text-transform: uppercase; }
+.startup-loader strong { font-weight: 400; color: #f2f0ea; }
+.startup-body { position: relative; z-index: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: clamp(12px,2.2vh,22px); min-height: 0; }
+.startup-grid { position: absolute; left: -50%; right: -50%; bottom: -10%; height: 55%; transform: perspective(420px) rotateX(62deg); transform-origin: 50% 100%; background-image: linear-gradient(#f2f0ea19 1px,transparent 1px),linear-gradient(90deg,#f2f0ea19 1px,transparent 1px); background-size: 64px 64px; mask-image: linear-gradient(180deg,transparent,#000 60%); pointer-events: none; }
+.startup-stars { position: absolute; inset: 0; pointer-events: none; }
+.startup-stars span { position: absolute; width: 2px; height: 2px; background: #f2f0ea; border-radius: 50%; }
+.startup-moon { position: absolute; right: 14%; top: 13%; width: clamp(44px,7vw,84px); aspect-ratio: 1; border-radius: 50%; background: radial-gradient(circle at 38% 36%,#fff,#e4e2dc 45%,#9a9892); opacity: .7; box-shadow: 0 0 40px #f2f0ea20; pointer-events: none; }
+.startup-corner { position: absolute; width: 18px; height: 18px; border-color: #5a5953; border-style: solid; pointer-events: none; }
+.startup-corner-0 { left: 16px; top: 16px; border-width: 1px 0 0 1px; }
+.startup-corner-1 { right: 16px; top: 16px; border-width: 1px 1px 0 0; }
+.startup-corner-2 { left: 16px; bottom: 16px; border-width: 0 0 1px 1px; }
+.startup-corner-3 { right: 16px; bottom: 16px; border-width: 0 1px 1px 0; }
+.startup-skyline { position: relative; flex: none; width: min(600px,90vw); height: clamp(110px,24vh,240px); }
+.startup-building { position: absolute; bottom: 0; border: 1px solid #4a4944; border-bottom: 0; background: repeating-linear-gradient(0deg,transparent 0 9px,#f2f0ea12 9px 10px); transition: opacity .3s ease; }
+.startup-building[data-antenna="true"]::before { content: ''; position: absolute; left: 30%; bottom: 100%; height: 18px; width: 1px; background: #4a4944; }
+.startup-tower { position: absolute; bottom: 0; left: 44%; width: 12%; height: 84%; border: 1px solid #f2f0ea; border-bottom: 0; background: #000; overflow: hidden; }
+.startup-tower-fill { position: absolute; inset: auto 0 0; height: var(--startup-progress); background: repeating-linear-gradient(0deg,#f2f0ea 0 8px,#b9b7b0 8px 9px); transition: height .35s ease; }
+.startup-scan { position: absolute; left: 0; right: 0; bottom: var(--startup-progress); height: 1px; background: #fff; box-shadow: 0 0 10px 2px #ffffffb3; transition: bottom .35s ease; }
+.startup-crown { position: absolute; bottom: 84%; left: 47%; width: 6%; height: 6%; border: 1px solid #f2f0ea; border-bottom: 0; background: #000; }
+.startup-loader[data-starting="true"] .startup-crown { background: #f2f0ea; }
+.startup-spire { position: absolute; bottom: 90%; left: 50%; width: 1px; height: 9%; background: #f2f0ea; }
+.startup-beacon { position: absolute; bottom: 99%; left: 50%; width: 5px; height: 5px; margin-left: -2px; border-radius: 50%; background: #f2f0ea; box-shadow: 0 0 8px 2px #ffffff80; }
+.startup-hologram { position: absolute; left: 58%; bottom: 48%; display: flex; flex-direction: column; gap: 4px; padding: 5px 7px; border: 1px solid #f2f0ea99; background: #f2f0ea0a; font-size: 8px; letter-spacing: .18em; }
+.startup-hologram > span { width: 34px; height: 1px; background: #3a3a36; }
+.startup-hologram i { display: block; width: var(--startup-progress); height: 1px; background: #f2f0ea; }
+.startup-horizon { position: absolute; left: -4%; right: -4%; bottom: 0; height: 1px; background: #5a5953; }
+.startup-summary { text-align: center; }
+.startup-percentage { font-size: clamp(48px,min(13vw,11vh),104px); font-weight: 300; line-height: .95; letter-spacing: -.02em; font-variant-numeric: tabular-nums; }
+.startup-percentage > span { color: #8d8b85; font-size: .35em; }
+.startup-summary p { max-width: 54ch; margin: 12px 0 0; color: #b9b7b0; font-size: 11px; line-height: 1.6; letter-spacing: .1em; text-transform: uppercase; }
+.startup-summary button { min-height: 44px; margin-top: 12px; padding: 0 18px; border: 1px solid #5a5953; background: transparent; color: #f2f0ea; font: inherit; font-size: 11px; cursor: pointer; }
+.startup-summary button:focus-visible { outline: 2px solid #f2f0ea; outline-offset: 3px; }
+.startup-log { width: min(100%,440px); min-height: 0; max-height: 32vh; margin: 0; padding: 0 4px; overflow-y: auto; overscroll-behavior: contain; scrollbar-width: thin; scrollbar-color: #565656 transparent; list-style: none; font-size: 10px; line-height: 1.7; letter-spacing: .04em; }
+.startup-log li { display: grid; grid-template-columns: minmax(0,1fr) auto; gap: 12px; color: #5a5953; }
+.startup-log li > span:first-child { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.startup-log li > span:last-child { text-transform: uppercase; }
+.startup-log li[data-state="ready"] { color: #b9b7b0; }
+.startup-log li[data-state="loading"] { color: #f2f0ea; }
+.startup-log li[data-state="unavailable"] { color: #b9a58b; }
+.experience:has(.startup-loader) .background-music { visibility: hidden; }
+@media (max-width: 600px) { .startup-loader { padding: 28px 24px; } .startup-loader > header { font-size: 9px; letter-spacing: .08em; } .startup-log { font-size: 9px; } }
+@media (max-height: 600px) { .startup-skyline { height: 100px; } .startup-body { gap: 10px; } .startup-log { max-height: 22vh; } .startup-percentage { font-size: 48px; } .startup-moon { top: 16%; width: 40px; } }
+@media (prefers-reduced-motion: reduce) { .startup-building, .startup-tower-fill, .startup-scan { transition: none; } }

@@ -30,11 +30,11 @@ function soundTarget(target: EventTarget | null) {
   return element
 }
 
-export default function SoundEffectsProvider({ children }: { children: ReactNode }) {
+export default function SoundEffectsProvider({ children, onPrepared, startupReady = true }: { children: ReactNode; onPrepared?: (available: boolean) => void; startupReady?: boolean }) {
   const [settings, setSettings] = useState(readSettings)
   const [consent, setConsent] = useState(readConsent)
   const [preferencesOpen, setPreferencesOpen] = useState(false)
-  const openPreferences = useCallback(() => { if (consent !== null) setPreferencesOpen(true) }, [consent])
+  const openPreferences = useCallback(() => { if (startupReady && consent !== null) setPreferencesOpen(true) }, [consent,startupReady])
   const closePreferences = useCallback(() => setPreferencesOpen(false), [])
   const [error, setError] = useState(false)
   const engine = useRef<InteractionAudioEngine | null>(null)
@@ -45,6 +45,7 @@ export default function SoundEffectsProvider({ children }: { children: ReactNode
   const doorSound = useCallback((id: string, delay?: number) => { if (activated.current) engine.current?.doorSound(id, delay) }, [])
   const cancelDoorSounds = useCallback(() => engine.current?.cancelDoorSounds(), [])
   const chooseSound = useCallback((enabled: boolean) => {
+    if(!startupReady) return
     // This is called directly by the startup dialog's real click/keypress so
     // Web Audio is created/resumed inside the browser's activation window.
     activated.current = true
@@ -60,21 +61,24 @@ export default function SoundEffectsProvider({ children }: { children: ReactNode
       localStorage.setItem(STORAGE_KEY, JSON.stringify(next))
       localStorage.setItem(CONSENT_KEY, choice)
     } catch { /* The current visit still works without persistent storage. */ }
-  }, [settings])
+  }, [settings,startupReady])
   const toggle = useCallback<SoundEffectsValue['toggle']>(event => {
-    if (consent === null || event && !event.isTrusted) return
+    if (!startupReady || consent === null || event && !event.isTrusted) return
     activated.current = true
     const enabled = !settings.enabled
     engine.current?.setEnabled(enabled)
     // Delegation is silent while muted, so enabling supplies its own system click.
     if (enabled) engine.current?.click()
     setError(false);setSettings(current => ({ ...current, enabled }))
-  }, [settings.enabled, consent])
+  }, [settings.enabled, consent,startupReady])
 
   useEffect(() => {
     const audio = createInteractionAudio({ urls: { system: mediaUrls.systemClick, environment: mediaUrls.environmentClick, portal: mediaUrls.portal, door: mediaUrls.door }, onError: () => setError(true) })
     engine.current = audio
     audio.setEnabled(false)
+    let cancelled = false
+    // Fetch bytes without creating/resuming Web Audio or playing any sound.
+    void audio.preload().then(available=>{if(!cancelled) onPrepared?.(available)})
     const gesture = (event: PointerEvent | KeyboardEvent) => {
       if (!event.isTrusted) return
       if (event instanceof KeyboardEvent && (event.ctrlKey || event.metaKey || event.altKey)) return
@@ -96,18 +100,19 @@ export default function SoundEffectsProvider({ children }: { children: ReactNode
     document.addEventListener('click', activate, true)
     document.addEventListener('visibilitychange', visibility)
     return () => {
+      cancelled = true
       document.removeEventListener('pointerdown', gesture, true)
       document.removeEventListener('keydown', gesture, true)
       document.removeEventListener('click', activate, true)
       document.removeEventListener('visibilitychange', visibility)
       audio.dispose();engine.current = null
     }
-  }, [])
+  }, [onPrepared])
   useEffect(() => {
-    engine.current?.setEnabled(consent !== null && settings.enabled);engine.current?.setVolume(settings.volume)
+    engine.current?.setEnabled(startupReady && consent !== null && settings.enabled);engine.current?.setVolume(settings.volume)
     try { localStorage.setItem(STORAGE_KEY, JSON.stringify(settings)) }
     catch { /* Effects remain usable when storage is unavailable. */ }
-  }, [settings, consent])
-  const value = useMemo(() => ({ ...settings, enabled: consent !== null && settings.enabled, consent, chooseSound, preferencesOpen, openPreferences, closePreferences, click, environmentClick, portalCrossing, doorSound, cancelDoorSounds, toggle, error }), [settings, consent, chooseSound, preferencesOpen, openPreferences, closePreferences, click, environmentClick, portalCrossing, doorSound, cancelDoorSounds, toggle, error])
+  }, [settings, consent,startupReady])
+  const value = useMemo(() => ({ ...settings, enabled: startupReady && consent !== null && settings.enabled, consent, chooseSound, preferencesOpen, openPreferences, closePreferences, click, environmentClick, portalCrossing, doorSound, cancelDoorSounds, toggle, error }), [settings, consent, startupReady,chooseSound, preferencesOpen, openPreferences, closePreferences, click, environmentClick, portalCrossing, doorSound, cancelDoorSounds, toggle, error])
   return <SoundEffectsContext.Provider value={value}>{children}</SoundEffectsContext.Provider>
 }

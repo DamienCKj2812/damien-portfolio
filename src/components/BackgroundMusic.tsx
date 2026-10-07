@@ -17,7 +17,7 @@ function readSettings(defaultVolume: number): AudioSettings {
   } catch { return { enabled: true, volume: defaultVolume } }
 }
 
-export default function BackgroundMusic({ track }: { track: BackgroundMusicTrack }) {
+export default function BackgroundMusic({ track, startupReady = true, onPrepared }: { track: BackgroundMusicTrack; startupReady?: boolean; onPrepared?: (available: boolean) => void }) {
   const effects = useSoundEffects()
   const [settings, setSettings] = useState(() => readSettings(track.volume))
   const [playing, setPlaying] = useState(false)
@@ -79,7 +79,7 @@ export default function BackgroundMusic({ track }: { track: BackgroundMusicTrack
   useEffect(() => {
     const audio = audioRef.current
     if (!audio) return
-    wanted.current = effects.consent !== null && settings.enabled
+    wanted.current = startupReady && effects.consent !== null && settings.enabled
     if (!wanted.current) { cancelAttempt();setStarting(false);audio.pause();return }
     let cancelled = false
     // Defer only the automatic attempt so StrictMode's effect replay can clean
@@ -108,7 +108,7 @@ export default function BackgroundMusic({ track }: { track: BackgroundMusicTrack
       document.removeEventListener('keydown', resumeOnGesture, true)
       document.removeEventListener('visibilitychange', visibility)
     }
-  }, [settings.enabled, effects.consent, tryPlay, tryAutomatic, cancelAttempt])
+  }, [settings.enabled, effects.consent, startupReady, tryPlay, tryAutomatic, cancelAttempt])
   useEffect(() => {
     const audio = audioRef.current
     return () => { cancelAttempt();audio?.pause() }
@@ -153,16 +153,17 @@ export default function BackgroundMusic({ track }: { track: BackgroundMusicTrack
   const musicState = error ? 'error' : playing ? 'playing' : starting ? 'starting' : settings.enabled ? 'ready' : 'off'
   const musicLabel = { error: 'Music unavailable', playing: 'Music on', starting: 'Starting…', ready: 'Music ready', off: 'Music off' }[musicState]
   return <>
-    {(effects.consent === null || effects.preferencesOpen) && <AudioConsentDialog onEnable={() => chooseSound(true)} onMute={() => chooseSound(false)} onDismiss={effects.preferencesOpen ? effects.closePreferences : undefined}
+    {startupReady && (effects.consent === null || effects.preferencesOpen) && <AudioConsentDialog onEnable={() => chooseSound(true)} onMute={() => chooseSound(false)} onDismiss={effects.preferencesOpen ? effects.closePreferences : undefined}
       preferences={{ musicEnabled: settings.enabled, effectsEnabled: effects.enabled, track, onToggleMusic: togglePreference, onToggleEffects: effects.toggle }} />}
     <aside className="background-music" data-background-music data-music-enabled={settings.enabled} data-music-state={musicState} data-autoplay-policy={automaticPolicy} data-autoplay-blocked={autoplayBlocked} aria-label="Audio controls">
-    <audio id="background-music-audio" ref={audioRef} src={`${import.meta.env.BASE_URL}${track.src}`} preload="none" loop
+    <audio id="background-music-audio" ref={audioRef} src={`${import.meta.env.BASE_URL}${track.src}`} preload="auto" loop
+      onCanPlay={()=>onPrepared?.(true)}
       onPlaying={event => {
         if (!wanted.current || document.hidden || hasVideoAudioFocus()) { event.currentTarget.pause();return }
         activated.current = true;setPlaying(true);setStarting(false);setAutoplayBlocked(false);setError('')
       }} onPause={() => { setPlaying(false);setStarting(false) }}
       onWaiting={event => { setPlaying(false);setStarting(wanted.current && !event.currentTarget.paused) }}
-      onError={() => { setPlaying(false);setStarting(false);setError('Music could not load. Tap the sound button to retry.') }} />
+      onError={() => { onPrepared?.(false);setPlaying(false);setStarting(false);setError('Music could not load. Tap the sound button to retry.') }} />
     <div className="background-music-controls">
       <button type="button" className="background-music-toggle" data-enabled={playing} onClick={toggle} aria-pressed={playing} aria-busy={starting}
         aria-label={playing || starting ? 'Pause background music' : 'Play background music'}

@@ -14,6 +14,8 @@ Use Node.js **22.13+ in Node 22 LTS**, matching the CI major version. Both npm a
 | Serve the production build | `npm run preview` |
 | Validate room packages/alignment | `node --import tsx assets/journey/verify_rooms.mts` |
 | Validate sound-effect lifecycle/races | `node --import tsx scripts/verify_interaction_audio.mts` |
+| Check persistent startup/preload/reload behavior after build | `node --import tsx scripts/verify_startup_loading_browser.mts` |
+| Check startup in Vite development/StrictMode | `STARTUP_TEST_DEV=1 node --import tsx scripts/verify_startup_loading_browser.mts` |
 
 There is no configured unit-test runner or formatter. Blender/source validators are model-specific; see [integration workflow](../assets/journey/WORKFLOW.md) and the relevant model guide. Some Blender preview validators use synthetic events in background mode rather than a native GUI event loop.
 
@@ -43,6 +45,8 @@ The video browser check needs `python3` with Pillow for rendered-pixel scoring a
 Project video uploads are organized in `assets/project-hallway/videos/originals/<project>/` and remain local/Git-ignored. Browser-ready recordings, compatibility copies and posters are tracked in `public/videos/` and copied into `dist/videos/` by Vite. See [project video ownership](../assets/project-hallway/videos/README.md); builds do not require the original uploads or video transcoding.
 
 `scripts/browser_tools.mts` centralizes SDK/Chrome/output selection and browser instrumentation. Use `installBrowserHelpers` when serializing instrumented callbacks: it installs the `__name` helper introduced by `tsx` in the same init script, avoiding missing module scope and unordered init-script execution.
+
+Startup checks deliberately delay the lazy runtime and a destination package to verify uninterrupted loader ownership, real completion states and input blocking. They also check silent audio preparation, all four cached floor visits, responsive layouts, critical Retry, optional room/audio failures and reload. Autoplay checks capture the first media attempt through a browser binding before DOM evaluations: Playwright evaluation calls can grant transient user activation and otherwise contaminate a deferred startup autoplay test.
 
 ## Deployment
 

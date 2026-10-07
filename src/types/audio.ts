@@ -88,7 +88,7 @@ export type InteractionAudioEnvironment<Buffer = AudioBuffer, Destination = Audi
 )
 
 export interface InteractionAudioEngine {
-  preload(): void
+  preload(): Promise<boolean>
   unlock(): Promise<boolean>
   click(): void
   environmentClick(): void

@@ -16,8 +16,8 @@
 .city-topline-actions .city-floor-shortcut { min-height: 36px; padding-inline: 12px; }
 .portfolio-guide { position: fixed; inset: 0; width: 100%; max-width: none; height: 100dvh; max-height: none; box-sizing: border-box; margin: 0; border: 0; padding: 80px 32px 96px; color: #e8e8e4; background: radial-gradient(ellipse at 50% 45%, #04040470 0%, #040404d1 70%); font-family: 'JetBrains Mono', ui-monospace, 'SFMono-Regular', Consolas, monospace; overflow: auto; overscroll-behavior: contain; }
 .portfolio-guide::backdrop { background: #04040455; backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); }
-.city-stage[data-guide-open="true"] .city-canvas, .city-stage[data-guide-open="true"] .city-poster { filter: blur(16px); transform: scale(1.04); }
-.city-stage[data-guide-open="true"] > :not(.city-canvas):not(.city-poster) { visibility: hidden; }
+.city-stage[data-guide-open="true"] .city-canvas { filter: blur(16px); transform: scale(1.04); }
+.city-stage[data-guide-open="true"] > :not(.city-canvas) { visibility: hidden; }
 body:has(.portfolio-guide[open]) .background-music { visibility: hidden; }
 body:has(.portfolio-guide[open]) .city-negative-cursor { display: none !important; }
 .portfolio-guide, .portfolio-guide * { cursor: auto !important; }

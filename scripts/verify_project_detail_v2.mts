@@ -68,7 +68,8 @@ try {
     assert.ok(box.x>=0&&box.y>=0&&box.x+box.width<=viewport.width+1&&box.y+box.height<=viewport.height+1)
     if (viewport.height<680) assert.equal(await description.locator('.project-case-meta').isVisible(),false)
     if (viewport.width<=600) {
-      await page.getByRole('combobox',{name:'Project case-file section'}).selectOption('My role and contribution')
+      await page.locator('.project-mobile-dock button').nth(1).click()
+      await page.getByRole('dialog',{name:'Chapters',exact:true}).getByRole('button',{name:/Your role/}).click()
       await description.locator('h3').filter({hasText:'Your role'}).waitFor()
       await page.screenshot({path:screenshotPath('project-detail-v2-mobile.png')})
     }

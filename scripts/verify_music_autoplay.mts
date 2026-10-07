@@ -4,7 +4,7 @@ import { fileURLToPath } from 'node:url'
 import { preview } from 'vite'
 import { chromium, chromeExecutable, installBrowserHelpers } from './browser_tools.mts'
 interface MusicPlayRecord { active: boolean; failure?: string }
-declare global { interface Window { musicChecks: { plays: MusicPlayRecord[]; contexts: number } } }
+declare global { interface Window { musicChecks: { plays: MusicPlayRecord[]; contexts: number }; reportMusicAttempt: (record: MusicPlayRecord) => Promise<void> } }
 import { musicAutoplayPolicy } from '../src/audio/autoplayPolicy.ts'
 
 for (const policy of ['allowed', 'allowed-muted', 'disallowed']) assert.equal(musicAutoplayPolicy({}, { getAutoplayPolicy: () => policy }), policy)
@@ -18,8 +18,11 @@ try {
       args: ['--no-sandbox', '--use-gl=angle', '--use-angle=swiftshader', '--enable-unsafe-swiftshader', `--autoplay-policy=${mode === 'allowed' ? 'no-user-gesture-required' : 'document-user-activation-required'}`] })
     try {
       const page = await browser.newPage({ reducedMotion: 'reduce' })
-      const errors: string[] = []
-      page.on('pageerror', error => errors.push(error.message))
+       const errors: string[] = []
+       page.on('pageerror', error => errors.push(error.message))
+       let reportAttempt!: (record: MusicPlayRecord) => void
+       const firstAttempt=new Promise<MusicPlayRecord>(resolve=>{reportAttempt=resolve})
+       await page.exposeFunction('reportMusicAttempt',(record: MusicPlayRecord)=>reportAttempt(record))
       await installBrowserHelpers(page,mode => {
         const enabled = mode !== 'muted'
         localStorage.setItem('damien-portfolio:audio-consent', enabled ? 'enabled' : 'muted')
@@ -32,12 +35,19 @@ try {
         HTMLMediaElement.prototype.play = function () {
           const record: MusicPlayRecord = { active: navigator.userActivation.isActive }
           window.musicChecks.plays.push(record)
-          return play.call(this).catch(error => { record.failure = error.name;throw error })
+           return play.call(this).then(()=>{void window.reportMusicAttempt(record)},error=>{record.failure=error.name;void window.reportMusicAttempt(record);throw error})
         }
         const NativeContext = window.AudioContext
         window.AudioContext = new Proxy(NativeContext, { construct(target, args) { window.musicChecks.contexts++;return Reflect.construct(target, args) } })
       }, mode)
-      await page.goto('http://127.0.0.1:5197/damien-portfolio/')
+       await page.goto('http://127.0.0.1:5197/damien-portfolio/')
+       // Await instrumentation without DOM evaluations during preparation:
+       // Playwright evaluate calls can grant transient browser user activation.
+       if(mode!=='muted') {
+         const attempt=await firstAttempt
+         assert.equal(attempt.active,false,'Startup autoplay occurs without a new user gesture')
+       }
+       await page.locator('.experience[data-startup-ready="true"]').waitFor({timeout:120000})
       await page.locator('.background-music').waitFor()
       assert.equal(await page.locator('.audio-consent').count(), 0)
       if (mode === 'allowed') {
