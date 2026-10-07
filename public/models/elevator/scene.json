@@ -1,0 +1,610 @@
+{
+  "version": 3,
+  "geometry": "geometry.bin",
+  "animation": "animation.bin",
+  "assetHash": "b81c0fe16915",
+  "frameStart": 1,
+  "frameEnd": 510,
+  "fps": 30,
+  "channelStride": 12,
+  "channelCount": 3,
+  "channels": [
+    "Elevator / Full journey camera",
+    "Elevator / Left sliding door",
+    "Elevator / Right sliding door"
+  ],
+  "actors": [
+    {
+      "index": 1,
+      "name": "Elevator / Left sliding door",
+      "style": "elevator"
+    },
+    {
+      "index": 2,
+      "name": "Elevator / Right sliding door",
+      "style": "elevator"
+    }
+  ],
+  "camera": {
+    "verticalFov": 56.14,
+    "sourceAspect": 1.6,
+    "near": 0.025,
+    "far": 250,
+    "fovOffset": 10
+  },
+  "textures": [],
+  "groups": [
+    {
+      "actor": 0,
+      "kind": "glow",
+      "byteOffset": 0,
+      "floatCount": 720,
+      "vertexCount": 180,
+      "stride": 4,
+      "level": null,
+      "role": null,
+      "stage": "all",
+      "available": true
+    },
+    {
+      "actor": 0,
+      "kind": "glow",
+      "byteOffset": 2880,
+      "floatCount": 48,
+      "vertexCount": 12,
+      "stride": 4,
+      "level": null,
+      "role": null,
+      "stage": "exit",
+      "available": true
+    },
+    {
+      "actor": 0,
+      "kind": "lines",
+      "byteOffset": 3072,
+      "floatCount": 1152,
+      "vertexCount": 288,
+      "stride": 4,
+      "level": null,
+      "role": null,
+      "stage": "all",
+      "available": true
+    },
+    {
+      "actor": 0,
+      "kind": "lines",
+      "byteOffset": 7680,
+      "floatCount": 288,
+      "vertexCount": 72,
+      "stride": 4,
+      "level": null,
+      "role": null,
+      "stage": "exit",
+      "available": true
+    },
+    {
+      "actor": 0,
+      "kind": "lines",
+      "byteOffset": 8832,
+      "floatCount": 88,
+      "vertexCount": 22,
+      "stride": 4,
+      "level": "about",
+      "role": "buttonDetail",
+      "stage": "all",
+      "available": true
+    },
+    {
+      "actor": 0,
+      "kind": "lines",
+      "byteOffset": 9184,
+      "floatCount": 88,
+      "vertexCount": 22,
+      "stride": 4,
+      "level": "experience",
+      "role": "buttonDetail",
+      "stage": "all",
+      "available": true
+    },
+    {
+      "actor": 0,
+      "kind": "lines",
+      "byteOffset": 9536,
+      "floatCount": 88,
+      "vertexCount": 22,
+      "stride": 4,
+      "level": "projects",
+      "role": "buttonDetail",
+      "stage": "all",
+      "available": true
+    },
+    {
+      "actor": 0,
+      "kind": "lines",
+      "byteOffset": 9888,
+      "floatCount": 88,
+      "vertexCount": 22,
+      "stride": 4,
+      "level": "skills",
+      "role": "buttonDetail",
+      "stage": "all",
+      "available": true
+    },
+    {
+      "actor": 0,
+      "kind": "points",
+      "byteOffset": 10240,
+      "floatCount": 37045,
+      "vertexCount": 7409,
+      "stride": 5,
+      "level": null,
+      "role": null,
+      "stage": "all",
+      "available": true
+    },
+    {
+      "actor": 0,
+      "kind": "solid",
+      "byteOffset": 158420,
+      "floatCount": 283488,
+      "vertexCount": 70872,
+      "stride": 4,
+      "level": null,
+      "role": null,
+      "stage": "all",
+      "available": true
+    },
+    {
+      "actor": 0,
+      "kind": "solid",
+      "byteOffset": 1292372,
+      "floatCount": 8076,
+      "vertexCount": 2019,
+      "stride": 4,
+      "level": null,
+      "role": null,
+      "stage": "exit",
+      "available": true
+    },
+    {
+      "actor": 0,
+      "kind": "solid",
+      "byteOffset": 1324676,
+      "floatCount": 288,
+      "vertexCount": 72,
+      "stride": 4,
+      "level": null,
+      "role": "displayDefault",
+      "stage": "all",
+      "available": true
+    },
+    {
+      "actor": 0,
+      "kind": "solid",
+      "byteOffset": 1325828,
+      "floatCount": 336,
+      "vertexCount": 84,
+      "stride": 4,
+      "level": "about",
+      "role": "button",
+      "stage": "all",
+      "available": true
+    },
+    {
+      "actor": 0,
+      "kind": "solid",
+      "byteOffset": 1327172,
+      "floatCount": 14496,
+      "vertexCount": 3624,
+      "stride": 4,
+      "level": "about",
+      "role": "buttonDetail",
+      "stage": "all",
+      "available": true
+    },
+    {
+      "actor": 0,
+      "kind": "solid",
+      "byteOffset": 1385156,
+      "floatCount": 17040,
+      "vertexCount": 4260,
+      "stride": 4,
+      "level": "about",
+      "role": "destination",
+      "stage": "all",
+      "available": true
+    },
+    {
+      "actor": 0,
+      "kind": "solid",
+      "byteOffset": 1453316,
+      "floatCount": 3216,
+      "vertexCount": 804,
+      "stride": 4,
+      "level": "about",
+      "role": "display",
+      "stage": "all",
+      "available": true
+    },
+    {
+      "actor": 0,
+      "kind": "solid",
+      "byteOffset": 1466180,
+      "floatCount": 336,
+      "vertexCount": 84,
+      "stride": 4,
+      "level": "experience",
+      "role": "button",
+      "stage": "all",
+      "available": true
+    },
+    {
+      "actor": 0,
+      "kind": "solid",
+      "byteOffset": 1467524,
+      "floatCount": 34224,
+      "vertexCount": 8556,
+      "stride": 4,
+      "level": "experience",
+      "role": "buttonDetail",
+      "stage": "all",
+      "available": true
+    },
+    {
+      "actor": 0,
+      "kind": "solid",
+      "byteOffset": 1604420,
+      "floatCount": 23736,
+      "vertexCount": 5934,
+      "stride": 4,
+      "level": "experience",
+      "role": "destination",
+      "stage": "all",
+      "available": true
+    },
+    {
+      "actor": 0,
+      "kind": "solid",
+      "byteOffset": 1699364,
+      "floatCount": 3792,
+      "vertexCount": 948,
+      "stride": 4,
+      "level": "experience",
+      "role": "display",
+      "stage": "all",
+      "available": true
+    },
+    {
+      "actor": 0,
+      "kind": "solid",
+      "byteOffset": 1714532,
+      "floatCount": 336,
+      "vertexCount": 84,
+      "stride": 4,
+      "level": "projects",
+      "role": "button",
+      "stage": "all",
+      "available": true
+    },
+    {
+      "actor": 0,
+      "kind": "solid",
+      "byteOffset": 1715876,
+      "floatCount": 25152,
+      "vertexCount": 6288,
+      "stride": 4,
+      "level": "projects",
+      "role": "buttonDetail",
+      "stage": "all",
+      "available": true
+    },
+    {
+      "actor": 0,
+      "kind": "solid",
+      "byteOffset": 1816484,
+      "floatCount": 21120,
+      "vertexCount": 5280,
+      "stride": 4,
+      "level": "projects",
+      "role": "destination",
+      "stage": "all",
+      "available": true
+    },
+    {
+      "actor": 0,
+      "kind": "solid",
+      "byteOffset": 1900964,
+      "floatCount": 7776,
+      "vertexCount": 1944,
+      "stride": 4,
+      "level": "projects",
+      "role": "display",
+      "stage": "all",
+      "available": true
+    },
+    {
+      "actor": 0,
+      "kind": "solid",
+      "byteOffset": 1932068,
+      "floatCount": 336,
+      "vertexCount": 84,
+      "stride": 4,
+      "level": "skills",
+      "role": "button",
+      "stage": "all",
+      "available": true
+    },
+    {
+      "actor": 0,
+      "kind": "solid",
+      "byteOffset": 1933412,
+      "floatCount": 14832,
+      "vertexCount": 3708,
+      "stride": 4,
+      "level": "skills",
+      "role": "buttonDetail",
+      "stage": "all",
+      "available": true
+    },
+    {
+      "actor": 0,
+      "kind": "solid",
+      "byteOffset": 1992740,
+      "floatCount": 17328,
+      "vertexCount": 4332,
+      "stride": 4,
+      "level": "skills",
+      "role": "destination",
+      "stage": "all",
+      "available": true
+    },
+    {
+      "actor": 0,
+      "kind": "solid",
+      "byteOffset": 2062052,
+      "floatCount": 5952,
+      "vertexCount": 1488,
+      "stride": 4,
+      "level": "skills",
+      "role": "display",
+      "stage": "all",
+      "available": true
+    },
+    {
+      "actor": 1,
+      "kind": "lines",
+      "byteOffset": 2085860,
+      "floatCount": 8,
+      "vertexCount": 2,
+      "stride": 4,
+      "level": null,
+      "role": null,
+      "stage": "all",
+      "available": true
+    },
+    {
+      "actor": 1,
+      "kind": "solid",
+      "byteOffset": 2085892,
+      "floatCount": 2256,
+      "vertexCount": 564,
+      "stride": 4,
+      "level": null,
+      "role": null,
+      "stage": "all",
+      "available": true
+    },
+    {
+      "actor": 2,
+      "kind": "lines",
+      "byteOffset": 2094916,
+      "floatCount": 8,
+      "vertexCount": 2,
+      "stride": 4,
+      "level": null,
+      "role": null,
+      "stage": "all",
+      "available": true
+    },
+    {
+      "actor": 2,
+      "kind": "solid",
+      "byteOffset": 2094948,
+      "floatCount": 2256,
+      "vertexCount": 564,
+      "stride": 4,
+      "level": null,
+      "role": null,
+      "stage": "all",
+      "available": true
+    }
+  ],
+  "levels": [
+    {
+      "id": "about",
+      "number": 1,
+      "title": "ABOUT ME",
+      "description": "Meet Damien: my interests, my approach to building software, and the ideas behind my work.",
+      "button": "Elevator / Level button about",
+      "dialog_collection": "Elevator / Dialog / about",
+      "available": true,
+      "room": {
+        "label": "About office",
+        "source": "assets/about-office/about-office.blend",
+        "assetBase": "models/rooms/about/",
+        "entranceAnchor": [
+          0,
+          -6.8,
+          0
+        ],
+        "mainCamera": "Office \u2022 About office presentation camera",
+        "entryCamera": "Office \u2022 Office arrival camera",
+        "focusCamera": "Office \u2022 Contact card focus camera",
+        "width": 12,
+        "height": 4.6
+      }
+    },
+    {
+      "id": "skills",
+      "number": 2,
+      "title": "SKILLS",
+      "description": "Explore the languages, frameworks, and development tools in my toolkit.",
+      "button": "Elevator / Level button skills",
+      "dialog_collection": "Elevator / Dialog / skills",
+      "available": true,
+      "room": {
+        "label": "Skills gallery",
+        "source": "assets/skills-gallery/skills-gallery.blend",
+        "assetBase": "models/rooms/skills/",
+        "entranceAnchor": [
+          0,
+          -7,
+          0
+        ],
+        "mainCamera": "Gallery \u2022 Guided walk / free-look camera",
+        "detailCameras": {
+          "atat": "Gallery \u2022 AT-AT walker detail camera"
+        },
+        "animationFrames": 959,
+        "guidedFrames": 2940,
+        "guidedLoop": false,
+        "width": 12,
+        "height": 5.4
+      }
+    },
+    {
+      "id": "projects",
+      "number": 3,
+      "title": "PROJECTS",
+      "description": "Discover what I am building, the problems each project explores, and the technologies behind it.",
+      "button": "Elevator / Level button projects",
+      "dialog_collection": "Elevator / Dialog / projects",
+      "available": true,
+      "room": {
+        "label": "Projects hallway",
+        "source": "assets/project-hallway/project-hallway.blend",
+        "assetBase": "models/rooms/projects/",
+        "entranceAnchor": [
+          0,
+          -10,
+          0
+        ],
+        "mainCamera": "Project Hallway / free-look camera",
+        "width": 14.2,
+        "height": 6.2
+      }
+    },
+    {
+      "id": "experience",
+      "number": 4,
+      "title": "EXPERIENCE & EDUCATION",
+      "description": "Follow my learning and professional journey through education, hands-on experience, and key milestones.",
+      "button": "Elevator / Level button experience",
+      "dialog_collection": "Elevator / Dialog / experience",
+      "available": true,
+      "room": {
+        "label": "Timeline observatory",
+        "source": "assets/timeline-observatory/timeline-observatory.blend",
+        "assetBase": "models/rooms/experience/",
+        "entranceAnchor": [
+          0,
+          -12.5,
+          0
+        ],
+        "mainCamera": "Timeline Observatory / guided free-look camera",
+        "detailCameras": {
+          "globe": "Timeline Observatory / Globe detail",
+          "oculus": "Timeline Observatory / Star oculus",
+          "window": "Timeline Observatory / Space window"
+        },
+        "animationFrames": 2400,
+        "guidedFrames": 2400,
+        "guidedLoop": true,
+        "width": 25,
+        "height": 8.3
+      }
+    }
+  ],
+  "interactions": [
+    {
+      "id": "about",
+      "button": "Elevator / Level button about",
+      "position": [
+        1.253000020980835,
+        1.4199999570846558,
+        1.600000023841858
+      ],
+      "dimensions": [
+        0.012000000104308128,
+        0.5649999976158142,
+        0.125
+      ]
+    },
+    {
+      "id": "skills",
+      "button": "Elevator / Level button skills",
+      "position": [
+        1.253000020980835,
+        1.4199999570846558,
+        1.75
+      ],
+      "dimensions": [
+        0.012000000104308128,
+        0.5649999976158142,
+        0.125
+      ]
+    },
+    {
+      "id": "projects",
+      "button": "Elevator / Level button projects",
+      "position": [
+        1.253000020980835,
+        1.4199999570846558,
+        1.899999976158142
+      ],
+      "dimensions": [
+        0.012000000104308128,
+        0.5649999976158142,
+        0.125
+      ]
+    },
+    {
+      "id": "experience",
+      "button": "Elevator / Level button experience",
+      "position": [
+        1.253000020980835,
+        1.4199999570846558,
+        2.049999952316284
+      ],
+      "dimensions": [
+        0.012000000104308128,
+        0.5649999976158142,
+        0.125
+      ]
+    }
+  ],
+  "statistics": {
+    "points": 7409,
+    "lineSegments": 226,
+    "glowSegments": 96,
+    "solidTriangles": 38803
+  },
+  "flow": {
+    "entryStart": 62,
+    "selectionFrame": 180,
+    "departureStart": 181,
+    "arrivalFrame": 510,
+    "doorsClose": [
+      181,
+      220
+    ],
+    "doorsOpen": [
+      300,
+      350
+    ],
+    "walkout": [
+      370,
+      510
+    ]
+  }
+}

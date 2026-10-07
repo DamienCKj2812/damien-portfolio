@@ -1,0 +1,1390 @@
+{
+  "version": 3,
+  "coordinateSystem": "Blender Z-up",
+  "geometry": "geometry.bin",
+  "animation": "animation.bin",
+  "preview": "preview.png",
+  "assetHash": "1286f99a9287",
+  "frameStart": 1,
+  "frameEnd": 450,
+  "fps": 30,
+  "channelStride": 10,
+  "channelCount": 20,
+  "channels": [
+    "Mono \u2022 Walkthrough \u2022 camera",
+    "Background transit \u2022 maglev train",
+    "City NPC \u2022 Walker 00",
+    "City NPC \u2022 Walker 01",
+    "City NPC \u2022 Walker 02",
+    "City NPC \u2022 Walker 03",
+    "City NPC \u2022 Walker 04",
+    "City NPC \u2022 Walker 05",
+    "City NPC \u2022 Walker 06",
+    "City NPC \u2022 Walker 07",
+    "City NPC \u2022 Walker 08",
+    "City NPC \u2022 Walker 09",
+    "Mono \u2022 Aircar 01 \u2022 foreground commuter",
+    "Mono \u2022 Aircar 02 \u2022 right approaching",
+    "Mono \u2022 Aircar 03 \u2022 upper transit",
+    "Mono \u2022 Aircar 04 \u2022 distant",
+    "Mono \u2022 Entrance \u2022 left sliding door",
+    "Mono \u2022 Entrance \u2022 right sliding door",
+    "Mono \u2022 Skyway vehicle",
+    "Mono \u2022 Transit \u2022 maglev train"
+  ],
+  "actors": [
+    {
+      "index": 1,
+      "name": "Background transit \u2022 maglev train",
+      "style": "outlined_vehicle",
+      "autonomous": true,
+      "motion": {
+        "startFrame": 1,
+        "endFrame": 450,
+        "mode": "one-way",
+        "passFrames": 2000,
+        "resetFrames": 60,
+        "phase": 1020
+      }
+    },
+    {
+      "index": 2,
+      "name": "City NPC \u2022 Walker 00",
+      "style": "walking_npc",
+      "walk": {
+        "startFrame": 110,
+        "endFrame": 300,
+        "distance": 11.0,
+        "stride": 1.3,
+        "phase": 0.0
+      }
+    },
+    {
+      "index": 3,
+      "name": "City NPC \u2022 Walker 01",
+      "style": "walking_npc",
+      "walk": {
+        "startFrame": 90,
+        "endFrame": 290,
+        "distance": 11.0,
+        "stride": 1.3,
+        "phase": 0.67
+      }
+    },
+    {
+      "index": 4,
+      "name": "City NPC \u2022 Walker 02",
+      "style": "walking_npc",
+      "walk": {
+        "startFrame": 130,
+        "endFrame": 340,
+        "distance": 12.0,
+        "stride": 1.3,
+        "phase": 1.34
+      }
+    },
+    {
+      "index": 5,
+      "name": "City NPC \u2022 Walker 03",
+      "style": "walking_npc",
+      "walk": {
+        "startFrame": 200,
+        "endFrame": 410,
+        "distance": 12.0,
+        "stride": 1.3,
+        "phase": 2.0100000000000002
+      }
+    },
+    {
+      "index": 6,
+      "name": "City NPC \u2022 Walker 04",
+      "style": "walking_npc",
+      "walk": {
+        "startFrame": 150,
+        "endFrame": 350,
+        "distance": 12.0,
+        "stride": 1.3,
+        "phase": 2.68
+      }
+    },
+    {
+      "index": 7,
+      "name": "City NPC \u2022 Walker 05",
+      "style": "walking_npc",
+      "walk": {
+        "startFrame": 130,
+        "endFrame": 340,
+        "distance": 11.0,
+        "stride": 1.3,
+        "phase": 3.35
+      }
+    },
+    {
+      "index": 8,
+      "name": "City NPC \u2022 Walker 06",
+      "style": "walking_npc",
+      "walk": {
+        "startFrame": 95,
+        "endFrame": 315,
+        "distance": 11.0,
+        "stride": 1.3,
+        "phase": 4.0200000000000005
+      }
+    },
+    {
+      "index": 9,
+      "name": "City NPC \u2022 Walker 07",
+      "style": "walking_npc",
+      "walk": {
+        "startFrame": 120,
+        "endFrame": 340,
+        "distance": 12.0,
+        "stride": 1.3,
+        "phase": 4.69
+      }
+    },
+    {
+      "index": 10,
+      "name": "City NPC \u2022 Walker 08",
+      "style": "walking_npc",
+      "walk": {
+        "startFrame": 170,
+        "endFrame": 370,
+        "distance": 12.0,
+        "stride": 1.3,
+        "phase": 5.36
+      }
+    },
+    {
+      "index": 11,
+      "name": "City NPC \u2022 Walker 09",
+      "style": "walking_npc",
+      "walk": {
+        "startFrame": 150,
+        "endFrame": 390,
+        "distance": 12.0,
+        "stride": 1.3,
+        "phase": 6.03
+      }
+    },
+    {
+      "index": 12,
+      "name": "Mono \u2022 Aircar 01 \u2022 foreground commuter",
+      "style": "outlined_vehicle"
+    },
+    {
+      "index": 13,
+      "name": "Mono \u2022 Aircar 02 \u2022 right approaching",
+      "style": "outlined_vehicle"
+    },
+    {
+      "index": 14,
+      "name": "Mono \u2022 Aircar 03 \u2022 upper transit",
+      "style": "outlined_vehicle"
+    },
+    {
+      "index": 15,
+      "name": "Mono \u2022 Aircar 04 \u2022 distant",
+      "style": "outlined_vehicle"
+    },
+    {
+      "index": 16,
+      "name": "Mono \u2022 Entrance \u2022 left sliding door",
+      "style": "particle"
+    },
+    {
+      "index": 17,
+      "name": "Mono \u2022 Entrance \u2022 right sliding door",
+      "style": "particle"
+    },
+    {
+      "index": 18,
+      "name": "Mono \u2022 Skyway vehicle",
+      "style": "outlined_vehicle"
+    },
+    {
+      "index": 19,
+      "name": "Mono \u2022 Transit \u2022 maglev train",
+      "style": "outlined_vehicle"
+    }
+  ],
+  "camera": {
+    "verticalFov": 50.22966977228912,
+    "sourceAspect": 1.6,
+    "near": 0.05000000074505806,
+    "far": 250.0
+  },
+  "bookmarks": {
+    "start": 1,
+    "lookDown": 90,
+    "doors": 245,
+    "train": 145,
+    "entrance": 383,
+    "lobby": 450
+  },
+  "textures": [
+    "ads/reference-earth.jpg",
+    "ads/reference-eclipse.jpg",
+    "ads/reference-logo.jpg",
+    "ads/reference-orbital.jpg",
+    "ads/reference-order.jpg",
+    "ads/reference-portrait.jpg"
+  ],
+  "groups": [
+    {
+      "actor": 0,
+      "kind": "glow",
+      "byteOffset": 0,
+      "floatCount": 3232,
+      "vertexCount": 808,
+      "stride": 4
+    },
+    {
+      "actor": 0,
+      "kind": "lines",
+      "byteOffset": 12928,
+      "floatCount": 71920,
+      "vertexCount": 17980,
+      "stride": 4
+    },
+    {
+      "actor": 0,
+      "kind": "mask",
+      "byteOffset": 300608,
+      "floatCount": 3888,
+      "vertexCount": 1296,
+      "stride": 3
+    },
+    {
+      "actor": 0,
+      "kind": "points",
+      "byteOffset": 316160,
+      "floatCount": 194465,
+      "vertexCount": 38893,
+      "stride": 5
+    },
+    {
+      "actor": 0,
+      "kind": "screen",
+      "byteOffset": 1094020,
+      "floatCount": 552960,
+      "vertexCount": 110592,
+      "stride": 5,
+      "texture": "ads/reference-earth.jpg"
+    },
+    {
+      "actor": 0,
+      "kind": "screen",
+      "byteOffset": 3305860,
+      "floatCount": 2880,
+      "vertexCount": 576,
+      "stride": 5,
+      "texture": "ads/reference-eclipse.jpg"
+    },
+    {
+      "actor": 0,
+      "kind": "screen",
+      "byteOffset": 3317380,
+      "floatCount": 2880,
+      "vertexCount": 576,
+      "stride": 5,
+      "texture": "ads/reference-logo.jpg"
+    },
+    {
+      "actor": 0,
+      "kind": "screen",
+      "byteOffset": 3328900,
+      "floatCount": 2880,
+      "vertexCount": 576,
+      "stride": 5,
+      "texture": "ads/reference-orbital.jpg"
+    },
+    {
+      "actor": 0,
+      "kind": "screen",
+      "byteOffset": 3340420,
+      "floatCount": 2880,
+      "vertexCount": 576,
+      "stride": 5,
+      "texture": "ads/reference-order.jpg"
+    },
+    {
+      "actor": 0,
+      "kind": "screen",
+      "byteOffset": 3351940,
+      "floatCount": 2880,
+      "vertexCount": 576,
+      "stride": 5,
+      "texture": "ads/reference-portrait.jpg"
+    },
+    {
+      "actor": 0,
+      "kind": "points",
+      "byteOffset": 3363460,
+      "floatCount": 18220,
+      "vertexCount": 3644,
+      "stride": 5,
+      "role": "sky"
+    },
+    {
+      "actor": 0,
+      "kind": "points",
+      "byteOffset": 3436340,
+      "floatCount": 45,
+      "vertexCount": 9,
+      "stride": 5,
+      "role": "sky-shine"
+    },
+    {
+      "actor": 0,
+      "kind": "lines",
+      "byteOffset": 3436520,
+      "floatCount": 9480,
+      "vertexCount": 2370,
+      "stride": 4,
+      "role": "skyline"
+    },
+    {
+      "actor": 0,
+      "kind": "points",
+      "byteOffset": 3474440,
+      "floatCount": 1845,
+      "vertexCount": 369,
+      "stride": 5,
+      "role": "skyline"
+    },
+    {
+      "actor": 0,
+      "kind": "solid",
+      "byteOffset": 3481820,
+      "floatCount": 549144,
+      "vertexCount": 137286,
+      "stride": 4
+    },
+    {
+      "actor": 1,
+      "kind": "outline",
+      "byteOffset": 5678396,
+      "floatCount": 4296,
+      "vertexCount": 1074,
+      "stride": 4
+    },
+    {
+      "actor": 1,
+      "kind": "solid",
+      "byteOffset": 5695580,
+      "floatCount": 6168,
+      "vertexCount": 1542,
+      "stride": 4
+    },
+    {
+      "actor": 2,
+      "kind": "points",
+      "byteOffset": 5720252,
+      "floatCount": 6000,
+      "vertexCount": 1200,
+      "stride": 5
+    },
+    {
+      "actor": 3,
+      "kind": "points",
+      "byteOffset": 5744252,
+      "floatCount": 5760,
+      "vertexCount": 1152,
+      "stride": 5
+    },
+    {
+      "actor": 4,
+      "kind": "points",
+      "byteOffset": 5767292,
+      "floatCount": 6365,
+      "vertexCount": 1273,
+      "stride": 5
+    },
+    {
+      "actor": 5,
+      "kind": "points",
+      "byteOffset": 5792752,
+      "floatCount": 5525,
+      "vertexCount": 1105,
+      "stride": 5
+    },
+    {
+      "actor": 6,
+      "kind": "points",
+      "byteOffset": 5814852,
+      "floatCount": 6120,
+      "vertexCount": 1224,
+      "stride": 5
+    },
+    {
+      "actor": 7,
+      "kind": "points",
+      "byteOffset": 5839332,
+      "floatCount": 6240,
+      "vertexCount": 1248,
+      "stride": 5
+    },
+    {
+      "actor": 8,
+      "kind": "points",
+      "byteOffset": 5864292,
+      "floatCount": 5645,
+      "vertexCount": 1129,
+      "stride": 5
+    },
+    {
+      "actor": 9,
+      "kind": "points",
+      "byteOffset": 5886872,
+      "floatCount": 6485,
+      "vertexCount": 1297,
+      "stride": 5
+    },
+    {
+      "actor": 10,
+      "kind": "points",
+      "byteOffset": 5912812,
+      "floatCount": 5880,
+      "vertexCount": 1176,
+      "stride": 5
+    },
+    {
+      "actor": 11,
+      "kind": "points",
+      "byteOffset": 5936332,
+      "floatCount": 6000,
+      "vertexCount": 1200,
+      "stride": 5
+    },
+    {
+      "actor": 12,
+      "kind": "outline",
+      "byteOffset": 5960332,
+      "floatCount": 2736,
+      "vertexCount": 684,
+      "stride": 4
+    },
+    {
+      "actor": 12,
+      "kind": "solid",
+      "byteOffset": 5971276,
+      "floatCount": 5856,
+      "vertexCount": 1464,
+      "stride": 4
+    },
+    {
+      "actor": 13,
+      "kind": "outline",
+      "byteOffset": 5994700,
+      "floatCount": 2736,
+      "vertexCount": 684,
+      "stride": 4
+    },
+    {
+      "actor": 13,
+      "kind": "solid",
+      "byteOffset": 6005644,
+      "floatCount": 5856,
+      "vertexCount": 1464,
+      "stride": 4
+    },
+    {
+      "actor": 14,
+      "kind": "outline",
+      "byteOffset": 6029068,
+      "floatCount": 2736,
+      "vertexCount": 684,
+      "stride": 4
+    },
+    {
+      "actor": 14,
+      "kind": "solid",
+      "byteOffset": 6040012,
+      "floatCount": 5856,
+      "vertexCount": 1464,
+      "stride": 4
+    },
+    {
+      "actor": 15,
+      "kind": "outline",
+      "byteOffset": 6063436,
+      "floatCount": 2736,
+      "vertexCount": 684,
+      "stride": 4
+    },
+    {
+      "actor": 15,
+      "kind": "solid",
+      "byteOffset": 6074380,
+      "floatCount": 5856,
+      "vertexCount": 1464,
+      "stride": 4
+    },
+    {
+      "actor": 16,
+      "kind": "glow",
+      "byteOffset": 6097804,
+      "floatCount": 48,
+      "vertexCount": 12,
+      "stride": 4
+    },
+    {
+      "actor": 16,
+      "kind": "solid",
+      "byteOffset": 6097996,
+      "floatCount": 1008,
+      "vertexCount": 252,
+      "stride": 4
+    },
+    {
+      "actor": 17,
+      "kind": "glow",
+      "byteOffset": 6102028,
+      "floatCount": 48,
+      "vertexCount": 12,
+      "stride": 4
+    },
+    {
+      "actor": 17,
+      "kind": "solid",
+      "byteOffset": 6102220,
+      "floatCount": 1008,
+      "vertexCount": 252,
+      "stride": 4
+    },
+    {
+      "actor": 18,
+      "kind": "outline",
+      "byteOffset": 6106252,
+      "floatCount": 2736,
+      "vertexCount": 684,
+      "stride": 4
+    },
+    {
+      "actor": 18,
+      "kind": "solid",
+      "byteOffset": 6117196,
+      "floatCount": 5856,
+      "vertexCount": 1464,
+      "stride": 4
+    },
+    {
+      "actor": 19,
+      "kind": "outline",
+      "byteOffset": 6140620,
+      "floatCount": 4296,
+      "vertexCount": 1074,
+      "stride": 4
+    },
+    {
+      "actor": 19,
+      "kind": "solid",
+      "byteOffset": 6157804,
+      "floatCount": 6168,
+      "vertexCount": 1542,
+      "stride": 4
+    }
+  ],
+  "statistics": {
+    "points": 54919,
+    "lineSegments": 10175,
+    "vehicleOutlineSegments": 2784,
+    "glowSegments": 416,
+    "solidTriangles": 49398,
+    "screenTriangles": 37824,
+    "maskTriangles": 432
+  },
+  "orbitalSky": {
+    "reference_aspect": 2.318032786885246,
+    "opening_frame": 1,
+    "distance_m": 150,
+    "line_segments": 894,
+    "sky_points": 2453,
+    "planets": 2,
+    "labels": 3,
+    "showAnnotations": false,
+    "visibleLabels": 0,
+    "brightStars": 9
+  },
+  "streetPlaza": {
+    "line_segments": 1154,
+    "fixtures": 37,
+    "labels": 9,
+    "reflection": {
+      "width": 100,
+      "depth": 70,
+      "position": [
+        0,
+        -30,
+        -0.012
+      ],
+      "strength": 0.22,
+      "paving": true
+    }
+  },
+  "referenceTower": {
+    "version": 2,
+    "siteScale": 0.43,
+    "coreCenter": [
+      0.9484281666698458,
+      3.5876583166945855
+    ],
+    "coreRadius": 9.459999999999999,
+    "coreHeight": 40.44,
+    "screens": {
+      "logo": {
+        "azimuth": [
+          -40,
+          9
+        ],
+        "z": [
+          28.919999999999998,
+          39.36
+        ],
+        "radius": 9.76,
+        "arcLength": 8.346862614737681,
+        "aspect": 0.7995079132890498
+      },
+      "portrait": {
+        "azimuth": [
+          -40,
+          9
+        ],
+        "z": [
+          8.399999999999999,
+          28.2
+        ],
+        "radius": 9.76,
+        "arcLength": 8.346862614737681,
+        "aspect": 0.4215587179160445
+      },
+      "order": {
+        "azimuth": [
+          15,
+          58
+        ],
+        "z": [
+          21.2,
+          29.479999999999997
+        ],
+        "radius": 9.504999999999999,
+        "arcLength": 7.133422452288624,
+        "aspect": 0.8615244507594959
+      },
+      "orbital": {
+        "azimuth": [
+          15,
+          58
+        ],
+        "z": [
+          14.0,
+          20.839999999999996
+        ],
+        "radius": 9.504999999999999,
+        "arcLength": 7.133422452288624,
+        "aspect": 1.0428980193404425
+      },
+      "eclipse": {
+        "azimuth": [
+          15,
+          58
+        ],
+        "z": [
+          2.8399999999999994,
+          13.28
+        ],
+        "radius": 9.504999999999999,
+        "arcLength": 7.133422452288624,
+        "aspect": 0.6832780126713242
+      }
+    },
+    "previewCamera": {
+      "position": [
+        0.9484281666698458,
+        -42.412341683305414,
+        0.86
+      ],
+      "target": [
+        0.9484281666698458,
+        3.5876583166945855,
+        25.318633856428022
+      ],
+      "verticalFov": 23,
+      "sourceAspect": 1.6,
+      "resolution": [
+        1428,
+        2439
+      ]
+    },
+    "antennaTips": [
+      61.546875,
+      59.0953125,
+      63.9984375,
+      66.45
+    ],
+    "balconies": {
+      "L1": [
+        31.08,
+        31.799999999999997
+      ],
+      "L2": [
+        36.12,
+        36.839999999999996
+      ]
+    },
+    "stats": {
+      "lineSegments": 7890,
+      "points": 1365,
+      "solidObjects": 230,
+      "screens": 5
+    },
+    "cameraAndExistingPosesPreserved": true
+  },
+  "trainRoute": {
+    "corridor": "left flank",
+    "deckCenterX": -14,
+    "railCenterX": -14.65,
+    "timing": "original follow-path action",
+    "modifiedNetworks": {
+      "Clean outlines \u2022 Highway edges": 24,
+      "Clean outlines \u2022 Highway supports": 72,
+      "Clean outlines \u2022 Secondary guide rails": 4,
+      "Mono \u2022 05 Elevated highways \u2022 particles 0": 2,
+      "Mono \u2022 05 Elevated highways \u2022 particles 1": 338
+    },
+    "removedUpperInterchange": {
+      "Clean outlines \u2022 Highway edges": 48,
+      "Clean outlines \u2022 Highway supports": 72,
+      "Clean outlines \u2022 Secondary guide rails": 0,
+      "Mono \u2022 05 Elevated highways \u2022 particles 0": 0,
+      "Mono \u2022 05 Elevated highways \u2022 particles 1": 235
+    },
+    "routeFramesChecked": 450,
+    "minimumTowerLateralClearanceMeters": 2.673954963684082,
+    "samples": [
+      {
+        "frame": 1,
+        "trainPosition": [
+          -14.650016784667969,
+          -93.14777374267578,
+          1.900002121925354
+        ]
+      },
+      {
+        "frame": 90,
+        "trainPosition": [
+          -14.650007247924805,
+          -42.882240295410156,
+          4.377729415893555
+        ]
+      },
+      {
+        "frame": 145,
+        "trainPosition": [
+          -14.65000057220459,
+          -11.819256782531738,
+          5.908911228179932
+        ]
+      },
+      {
+        "frame": 245,
+        "trainPosition": [
+          -14.649991989135742,
+          44.65888214111328,
+          8.692877769470215
+        ]
+      },
+      {
+        "frame": 383,
+        "trainPosition": [
+          -14.649971008300781,
+          122.59868621826172,
+          12.534748077392578
+        ]
+      },
+      {
+        "frame": 450,
+        "trainPosition": [
+          -14.649967193603516,
+          160.4390106201172,
+          14.400003433227539
+        ]
+      }
+    ]
+  },
+  "backgroundTrain": {
+    "actor": "Background transit \u2022 maglev train",
+    "route": [
+      [
+        -1000,
+        7,
+        7.6
+      ],
+      [
+        1000,
+        7,
+        7.6
+      ]
+    ],
+    "motion": {
+      "startFrame": 1,
+      "endFrame": 450,
+      "mode": "one-way",
+      "passFrames": 2000,
+      "resetFrames": 60,
+      "phase": 1020
+    },
+    "autonomous": true,
+    "carriages": 3,
+    "clonedNativeParts": 154,
+    "guideRailSegments": 2,
+    "offscreenEndpointChecks": {
+      "cameraFrames": 450,
+      "viewportAspects": [
+        0.5,
+        1.6,
+        4.5,
+        8.0
+      ]
+    }
+  },
+  "wireframeSkyline": {
+    "version": 1,
+    "source": "cyber-city-walkthrough.blend",
+    "buildingCount": 35,
+    "silhouetteSegments": 936,
+    "floorBandSegments": 250,
+    "windowPoints": 369,
+    "denseFacadeCloud": false,
+    "palette": "black / dim white",
+    "replacedOpaqueBackgroundBlocks": 2,
+    "buildings": [
+      {
+        "name": "Skyline 33 \u2022 tower",
+        "bounds": [
+          [
+            -15.159794807434082,
+            45.462825775146484,
+            1.9073486328125e-06
+          ],
+          [
+            -12.946520805358887,
+            49.25542068481445,
+            29.433935165405273
+          ]
+        ]
+      },
+      {
+        "name": "Skyline 32 \u2022 tower",
+        "bounds": [
+          [
+            -4.558259010314941,
+            36.303627014160156,
+            0.0
+          ],
+          [
+            -2.4523744583129883,
+            39.52587127685547,
+            33.3443603515625
+          ]
+        ]
+      },
+      {
+        "name": "Skyline 31 \u2022 tower",
+        "bounds": [
+          [
+            39.78730010986328,
+            44.12187957763672,
+            1.9073486328125e-06
+          ],
+          [
+            44.67638397216797,
+            49.10236358642578,
+            29.854001998901367
+          ]
+        ]
+      },
+      {
+        "name": "Skyline 30 \u2022 tower",
+        "bounds": [
+          [
+            -36.14442443847656,
+            27.47270393371582,
+            2.86102294921875e-06
+          ],
+          [
+            -33.29676818847656,
+            32.21812438964844,
+            24.05984878540039
+          ]
+        ]
+      },
+      {
+        "name": "Skyline 29 \u2022 tower",
+        "bounds": [
+          [
+            -45.41447830200195,
+            10.40401554107666,
+            2.86102294921875e-06
+          ],
+          [
+            -41.51484298706055,
+            13.986212730407715,
+            23.13525390625
+          ]
+        ]
+      },
+      {
+        "name": "Skyline 28 \u2022 tower",
+        "bounds": [
+          [
+            -15.186458587646484,
+            31.98700523376465,
+            2.86102294921875e-06
+          ],
+          [
+            -10.843231201171875,
+            36.903499603271484,
+            24.023578643798828
+          ]
+        ]
+      },
+      {
+        "name": "Skyline 27 \u2022 tower",
+        "bounds": [
+          [
+            -26.866464614868164,
+            25.926532745361328,
+            3.814697265625e-06
+          ],
+          [
+            -22.52777671813965,
+            30.90074920654297,
+            25.63101577758789
+          ]
+        ]
+      },
+      {
+        "name": "Skyline 26 \u2022 tower",
+        "bounds": [
+          [
+            7.135251045227051,
+            25.549644470214844,
+            3.814697265625e-06
+          ],
+          [
+            11.320694923400879,
+            29.266338348388672,
+            19.051565170288086
+          ]
+        ]
+      },
+      {
+        "name": "Skyline 25 \u2022 tower",
+        "bounds": [
+          [
+            23.39541244506836,
+            33.905189514160156,
+            2.86102294921875e-06
+          ],
+          [
+            25.98680877685547,
+            38.814903259277344,
+            16.072002410888672
+          ]
+        ]
+      },
+      {
+        "name": "Skyline 24 \u2022 tower",
+        "bounds": [
+          [
+            -31.10916519165039,
+            29.367719650268555,
+            3.337860107421875e-06
+          ],
+          [
+            -28.782455444335938,
+            34.047943115234375,
+            9.432296752929688
+          ]
+        ]
+      },
+      {
+        "name": "Skyline 23 \u2022 tower",
+        "bounds": [
+          [
+            -9.784477233886719,
+            69.1456298828125,
+            3.814697265625e-06
+          ],
+          [
+            -7.416811466217041,
+            73.15652465820312,
+            12.151918411254883
+          ]
+        ]
+      },
+      {
+        "name": "Skyline 22 \u2022 tower",
+        "bounds": [
+          [
+            -40.17381286621094,
+            20.42543601989746,
+            1.9073486328125e-06
+          ],
+          [
+            -35.35368347167969,
+            23.655378341674805,
+            34.303985595703125
+          ]
+        ]
+      },
+      {
+        "name": "Skyline 20 \u2022 tower",
+        "bounds": [
+          [
+            -26.83637046813965,
+            25.70431900024414,
+            2.86102294921875e-06
+          ],
+          [
+            -22.795244216918945,
+            30.433578491210938,
+            12.8877534866333
+          ]
+        ]
+      },
+      {
+        "name": "Skyline 19 \u2022 tower",
+        "bounds": [
+          [
+            -38.07085418701172,
+            18.582300186157227,
+            3.814697265625e-06
+          ],
+          [
+            -35.161964416503906,
+            21.911035537719727,
+            22.13848304748535
+          ]
+        ]
+      },
+      {
+        "name": "Skyline 18 \u2022 tower",
+        "bounds": [
+          [
+            -43.26326370239258,
+            18.59027671813965,
+            3.337860107421875e-06
+          ],
+          [
+            -39.14426803588867,
+            22.540494918823242,
+            12.96851921081543
+          ]
+        ]
+      },
+      {
+        "name": "Skyline 17 \u2022 tower",
+        "bounds": [
+          [
+            -9.760444641113281,
+            54.721107482910156,
+            3.814697265625e-06
+          ],
+          [
+            -5.744141101837158,
+            58.97118377685547,
+            21.17095947265625
+          ]
+        ]
+      },
+      {
+        "name": "Skyline 16 \u2022 tower",
+        "bounds": [
+          [
+            -45.12637710571289,
+            48.36552810668945,
+            2.86102294921875e-06
+          ],
+          [
+            -40.59041976928711,
+            51.249568939208984,
+            14.822300910949707
+          ]
+        ]
+      },
+      {
+        "name": "Skyline 15 \u2022 tower",
+        "bounds": [
+          [
+            14.861311912536621,
+            39.388526916503906,
+            2.86102294921875e-06
+          ],
+          [
+            17.73626708984375,
+            43.04967498779297,
+            23.200824737548828
+          ]
+        ]
+      },
+      {
+        "name": "Skyline 14 \u2022 tower",
+        "bounds": [
+          [
+            40.82233428955078,
+            28.642898559570312,
+            3.814697265625e-06
+          ],
+          [
+            45.257530212402344,
+            31.23434066772461,
+            22.37270736694336
+          ]
+        ]
+      },
+      {
+        "name": "Skyline 13 \u2022 tower",
+        "bounds": [
+          [
+            29.820161819458008,
+            31.429153442382812,
+            3.814697265625e-06
+          ],
+          [
+            32.867862701416016,
+            34.414306640625,
+            29.478519439697266
+          ]
+        ]
+      },
+      {
+        "name": "Skyline 12 \u2022 tower",
+        "bounds": [
+          [
+            36.88908004760742,
+            23.121910095214844,
+            1.9073486328125e-06
+          ],
+          [
+            40.64285659790039,
+            26.118022918701172,
+            32.230140686035156
+          ]
+        ]
+      },
+      {
+        "name": "Skyline 11 \u2022 tower",
+        "bounds": [
+          [
+            -5.3572187423706055,
+            53.703556060791016,
+            1.9073486328125e-06
+          ],
+          [
+            -0.36205410957336426,
+            58.4637565612793,
+            24.694639205932617
+          ]
+        ]
+      },
+      {
+        "name": "Skyline 10 \u2022 tower",
+        "bounds": [
+          [
+            5.768980979919434,
+            65.76072692871094,
+            4.76837158203125e-06
+          ],
+          [
+            8.559971809387207,
+            69.2017822265625,
+            26.234691619873047
+          ]
+        ]
+      },
+      {
+        "name": "Skyline 09 \u2022 tower",
+        "bounds": [
+          [
+            21.977798461914062,
+            11.694753646850586,
+            9.5367431640625e-07
+          ],
+          [
+            25.6728515625,
+            14.959482192993164,
+            29.13805389404297
+          ]
+        ]
+      },
+      {
+        "name": "Skyline 08 \u2022 tower",
+        "bounds": [
+          [
+            -44.87754440307617,
+            42.45012283325195,
+            2.86102294921875e-06
+          ],
+          [
+            -42.67677688598633,
+            45.31608200073242,
+            23.70034408569336
+          ]
+        ]
+      },
+      {
+        "name": "Skyline 07 \u2022 tower",
+        "bounds": [
+          [
+            24.029199600219727,
+            45.1771240234375,
+            3.814697265625e-06
+          ],
+          [
+            26.663442611694336,
+            48.56944274902344,
+            21.65121078491211
+          ]
+        ]
+      },
+      {
+        "name": "Skyline 06 \u2022 tower",
+        "bounds": [
+          [
+            22.422260284423828,
+            20.78828239440918,
+            3.814697265625e-06
+          ],
+          [
+            24.967662811279297,
+            24.035337448120117,
+            10.891586303710938
+          ]
+        ]
+      },
+      {
+        "name": "Skyline 05 \u2022 tower",
+        "bounds": [
+          [
+            9.634964942932129,
+            44.16458511352539,
+            3.337860107421875e-06
+          ],
+          [
+            13.632948875427246,
+            48.3569450378418,
+            14.058952331542969
+          ]
+        ]
+      },
+      {
+        "name": "Skyline 04 \u2022 tower",
+        "bounds": [
+          [
+            7.570425510406494,
+            33.70331573486328,
+            4.76837158203125e-06
+          ],
+          [
+            11.090347290039062,
+            37.23387908935547,
+            27.25247573852539
+          ]
+        ]
+      },
+      {
+        "name": "Skyline 03 \u2022 tower",
+        "bounds": [
+          [
+            24.109764099121094,
+            21.815732955932617,
+            3.814697265625e-06
+          ],
+          [
+            28.007606506347656,
+            24.678701400756836,
+            18.20768165588379
+          ]
+        ]
+      },
+      {
+        "name": "Skyline 02 \u2022 tower",
+        "bounds": [
+          [
+            -19.9958553314209,
+            43.373634338378906,
+            3.814697265625e-06
+          ],
+          [
+            -17.817594528198242,
+            45.74376678466797,
+            16.274263381958008
+          ]
+        ]
+      },
+      {
+        "name": "Skyline 01 \u2022 tower",
+        "bounds": [
+          [
+            -8.606260299682617,
+            47.833595275878906,
+            1.9073486328125e-06
+          ],
+          [
+            -3.9028570652008057,
+            50.529075622558594,
+            32.89167785644531
+          ]
+        ]
+      },
+      {
+        "name": "Skyline 00 \u2022 tower",
+        "bounds": [
+          [
+            26.397441864013672,
+            21.7447452545166,
+            1.9073486328125e-06
+          ],
+          [
+            29.36105728149414,
+            26.576723098754883,
+            29.577810287475586
+          ]
+        ]
+      },
+      {
+        "name": "Flanking skyline \u2022 stepped shaft.001",
+        "bounds": [
+          [
+            22.499998092651367,
+            8.5,
+            0.0
+          ],
+          [
+            27.499998092651367,
+            13.5,
+            36.0
+          ]
+        ]
+      },
+      {
+        "name": "Flanking skyline \u2022 stepped shaft",
+        "bounds": [
+          [
+            -24.500001907348633,
+            6.499998092651367,
+            3.814697265625e-06
+          ],
+          [
+            -19.500001907348633,
+            11.499998092651367,
+            28.000003814697266
+          ]
+        ]
+      }
+    ]
+  }
+}

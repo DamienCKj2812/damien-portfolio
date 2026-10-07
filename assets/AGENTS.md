@@ -1,0 +1,11 @@
+# Asset authoring rules
+
+- Each model directory owns its authored master and local `AGENTS.md`; `journey/` owns integration copies and browser exporters. The routing/authoring boundary is `journey/room-destinations.json`.
+- Use background Blender processes; full generators replace manual edits. Use the model's rebuild entrypoint rather than replaying historical patch scripts on a finished animated scene.
+- Run Blender with `--python-exit-code 1` so Python exceptions fail the command. `--factory-startup` is required by the lobby/office/gallery fresh-scene generators.
+- Preserve authored masters. Integration and browser exporters operate on in-memory copies; explicit authoring updates are the scripts allowed to save a master. Numbered `.blend1` files are local recovery copies, ignored by Git.
+- Geometry is in meters, Blender Z-up. Browser groups and camera poses must use the same Three.js basis conversion; no independent floor/doorway translations.
+- Point-source meshes and curve centerlines export natively; do not realize thousands of sphere instances or substitute a standard GLB for the browser packages.
+- Re-export manifest, geometry, animation, route/textures together. `assetHash`, offsets, group strides, and frame counts must agree; see [integration workflow](journey/WORKFLOW.md).
+- Embedded Blender controllers run only after explicit Text Editor execution. Website picking/dialogs belong to React/Three.js, not automatic `.blend` Python execution.
+- Some city/journey scripts hardcode this checkout's absolute `ROOT`; check it before running in another checkout. Blender 5.2 scripts use layered-action channel bags and `scene.compositing_node_group`; don't assume older API properties exist.

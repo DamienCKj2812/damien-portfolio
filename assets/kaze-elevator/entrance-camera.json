@@ -1,0 +1,135 @@
+{
+  "source": "kaze-elevator-journey.blend",
+  "model": "kaze-elevator-entrance.glb",
+  "camera": "Elevator / Entering elevator camera",
+  "fps": 30,
+  "frames": [
+    1,
+    150
+  ],
+  "duration_seconds": 5,
+  "door_state": "open throughout",
+  "eye_height_m": 1.65,
+  "keyframes": [
+    {
+      "frame": 1,
+      "position_blender": [
+        -0.16,
+        -4.3,
+        1.65
+      ],
+      "position_gltf": [
+        -0.16,
+        1.65,
+        4.3
+      ],
+      "target_blender": [
+        0,
+        2.3,
+        1.55
+      ],
+      "lens_mm": 22
+    },
+    {
+      "frame": 25,
+      "position_blender": [
+        -0.14,
+        -3.85,
+        1.65
+      ],
+      "position_gltf": [
+        -0.14,
+        1.65,
+        3.85
+      ],
+      "target_blender": [
+        0,
+        2.3,
+        1.55
+      ],
+      "lens_mm": 22
+    },
+    {
+      "frame": 70,
+      "position_blender": [
+        -0.07,
+        -1.7,
+        1.658
+      ],
+      "position_gltf": [
+        -0.07,
+        1.658,
+        1.7
+      ],
+      "target_blender": [
+        0,
+        2.4,
+        1.57
+      ],
+      "lens_mm": 21
+    },
+    {
+      "frame": 110,
+      "position_blender": [
+        0,
+        -0.12,
+        1.65
+      ],
+      "position_gltf": [
+        0,
+        1.65,
+        0.12
+      ],
+      "target_blender": [
+        0.03,
+        2.6,
+        1.6
+      ],
+      "lens_mm": 20
+    },
+    {
+      "frame": 135,
+      "position_blender": [
+        0.04,
+        0.57,
+        1.65
+      ],
+      "position_gltf": [
+        0.04,
+        1.65,
+        -0.57
+      ],
+      "target_blender": [
+        0.04,
+        2.8,
+        1.62
+      ],
+      "lens_mm": 19
+    },
+    {
+      "frame": 150,
+      "position_blender": [
+        0.04,
+        0.62,
+        1.65
+      ],
+      "position_gltf": [
+        0.04,
+        1.65,
+        -0.62
+      ],
+      "target_blender": [
+        0.04,
+        2.8,
+        1.62
+      ],
+      "lens_mm": 19
+    }
+  ],
+  "notes": [
+    "Camera transforms are baked into the GLB animation.",
+    "glTF camera FOV is static; animate focal length from this manifest to reproduce the subtle Blender lens change.",
+    "The landing is a self-contained entrance surround for later lobby placement."
+  ],
+  "rebuild": "rebuild_elevator.py"
+}

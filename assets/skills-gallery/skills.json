@@ -1,0 +1,1037 @@
+{
+  "version": 1,
+  "source": [
+    "src/data/portfolio.js",
+    "docs/project-catalogue.md"
+  ],
+  "profileSourceHash": "fc70a0553aaa9efffbbd5e288979a4aeacbc0cd94b842c6d87ba5b2d67519c90",
+  "projectSourceHash": "84d83c442ff4f3ec654dbaf6fa2d13ba43394b1b65db02ce3a6d4b70d2fc2e64",
+  "description": "My development toolkit spans web applications, backend APIs, databases, deployment, and Linux servers.",
+  "learning": [
+    "3D modeling",
+    "Machine learning",
+    "Artificial intelligence"
+  ],
+  "entries": [
+    {
+      "id": "skill-01",
+      "kind": "skill",
+      "number": 1,
+      "catalogueNumber": 1,
+      "title": "Languages",
+      "section": "skills",
+      "category": "APPLIED SKILLS / LANGUAGES",
+      "summary": "Typed web development, data tooling and academic programming.",
+      "focus": "Backend development",
+      "items": [
+        "JavaScript",
+        "TypeScript",
+        "Java",
+        "Python",
+        "PHP",
+        "C++",
+        "C",
+        "HTML / CSS",
+        "SQL",
+        "Go",
+        "R",
+        "Rust"
+      ],
+      "displayItems": [
+        "TypeScript / JavaScript",
+        "Python / Go / R / SQL",
+        "Java / C++ / Rust",
+        "HTML / CSS",
+        "C / PHP"
+      ],
+      "profileOnly": [
+        "C",
+        "PHP"
+      ],
+      "evidenceProjectIds": [
+        "agent-property",
+        "report-automation",
+        "fyp",
+        "DTMAssignment",
+        "PFDAGroupAssignment",
+        "ConcurrentProgrammingAssignment",
+        "DSTRAssignment",
+        "rust-gcs-ocs-assignment"
+      ],
+      "url": "https://github.com/DamienCKj2812/agent-limenghar-property",
+      "repositories": [
+        {
+          "id": "agent-property",
+          "title": "Repository",
+          "url": "https://github.com/DamienCKj2812/agent-limenghar-property"
+        },
+        {
+          "id": "report-automation",
+          "title": "Repository",
+          "url": "https://github.com/DamienCKj2812/report-automation"
+        },
+        {
+          "id": "logging-loading",
+          "title": "Load and chaos tooling",
+          "url": "https://github.com/DamienCKj2812/logging-loading"
+        },
+        {
+          "id": "logging-microservice",
+          "title": "Backend and ML",
+          "url": "https://github.com/DamienCKj2812/logging-microservice"
+        },
+        {
+          "id": "logging-microservice-ui",
+          "title": "Observability dashboard",
+          "url": "https://github.com/DamienCKj2812/logging-microservice-ui"
+        },
+        {
+          "id": "DTMAssignment",
+          "title": "Repository",
+          "url": "https://github.com/DamienCKj2812/DTMAssignment"
+        },
+        {
+          "id": "PFDAGroupAssignment",
+          "title": "Repository",
+          "url": "https://github.com/DamienCKj2812/PFDAGroupAssignment"
+        },
+        {
+          "id": "ConcurrentProgrammingAssignment",
+          "title": "Repository",
+          "url": "https://github.com/DamienCKj2812/ConcurrentProgrammingAssignment"
+        },
+        {
+          "id": "DSTRAssignment",
+          "title": "Part 1 / Analytics",
+          "url": "https://github.com/DamienCKj2812/DSTRAssignment"
+        },
+        {
+          "id": "DSTRAssignmentPart2",
+          "title": "Part 2 / Tournaments",
+          "url": "https://github.com/DamienCKj2812/DSTRAssignmentPart2"
+        },
+        {
+          "id": "rust-gcs-ocs-assignment",
+          "title": "Repository",
+          "url": "https://github.com/BaconCoding74/rust-gcs-ocs-assignment"
+        },
+        {
+          "id": "gcs-branch",
+          "title": "GCS branch",
+          "url": "https://github.com/BaconCoding74/rust-gcs-ocs-assignment/tree/gcs-branch"
+        },
+        {
+          "id": "ocs-branch",
+          "title": "OCS branch / context",
+          "url": "https://github.com/BaconCoding74/rust-gcs-ocs-assignment/tree/ocs-branch"
+        }
+      ],
+      "siteLinks": [
+        {
+          "url": "https://myrumawip.com/",
+          "label": "MyRumawip website"
+        }
+      ],
+      "catalogueSections": [
+        {
+          "heading": "Overview",
+          "markdown": "Typed web development, data tooling and academic programming.\n\nBackend development is my main focus, but I learn the technologies each project requires rather than limiting myself to a single stack."
+        },
+        {
+          "heading": "Core toolkit",
+          "markdown": "- JavaScript\n- TypeScript\n- Java\n- Python\n- PHP\n- C++\n- C\n- HTML / CSS\n- SQL\n- Go\n- R\n- Rust"
+        },
+        {
+          "heading": "Applied in projects",
+          "markdown": "TypeScript and JavaScript connect public websites, dashboards and APIs. Python supports automation and data/ML tooling, Go appears in the FYP telemetry/API backend, and R supports academic analysis. Java, C++ and Rust appear in simulations and data-structure/control work.\n\n- **Agent Property — Bilingual Property Website and CMS:** A bilingual property-discovery website that combines CMS-managed listings, housing-scheme information and educational content with direct WhatsApp enquiries.\n\nPublic website: [MyRumawip](https://myrumawip.com/).\n- **MyReport — WhatsApp Customer Follow-up and Reporting Workspace:** A customer-management workspace that organizes WhatsApp conversations, confirmed customer requirements, eligibility records and follow-up actions, with human-reviewed AI assistance.\n\n**Access:** Hosted privately via Tailscale; not publicly accessible.\n- **FYP — Hybrid Anomaly Detection for Microservice Observability:** A telemetry-based anomaly-detection system that combines OpenTelemetry ingestion, Redis streaming, machine-learning inference and a live observability dashboard, evaluated using telemetry from an instrumented CMS application.\n- **DTM — Coupon Data Preparation and Exploratory Analysis:** An R data-preparation study that introduces controlled data-quality problems into an in-vehicle coupon dataset, cleans it and compares exploratory views before and after preprocessing.\n- **PFDA — Credit-Risk Data Analysis:** An R-based group study of credit-risk data, combining cleaning, exploratory analysis, statistical tests and predictive experiments.\n- **Concurrent Programming — Airport Simulation:** A Java airport simulation modeling aircraft activity and access to shared runway, gate and refueling resources.\n- **Data Structures — E-commerce Analytics and Tournament Management:** A two-part C++ assignment applying custom data structures to transaction/review analysis and tournament, spectator and result-management simulations.\n- **RTS — Ground and Onboard Control Simulation:** A Rust real-time-systems assignment modeling communication between a Ground Control Station (GCS) and an Onboard Control System (OCS), with timed commands, telemetry and fault handling."
+        },
+        {
+          "heading": "Engineering workflow",
+          "markdown": "Start from the data model and interface contract. Use typed records for application boundaries, keep parsing/validation explicit, and choose concurrency or data structures according to the problem."
+        },
+        {
+          "heading": "Technical decisions",
+          "markdown": "TypeScript adds useful checks around API and UI data. SQL describes relational operations. Academic Java/C++ projects expose synchronization, ownership and algorithm mechanics rather than hiding them behind framework code."
+        },
+        {
+          "heading": "Collaboration and delivery",
+          "markdown": "The completed About profile identifies **User empathy and Adaptability** as strengths. Frontend work at LYJ Events & Marketing includes stakeholder collaboration, QA feedback and evolving requirements. DWMLight's confirmed contribution focuses on CMS/backend and deployment."
+        },
+        {
+          "heading": "Learning and scope",
+          "markdown": "C and PHP are listed in the completed About toolkit. The current 16-project catalogue does not present a dedicated C or PHP exhibit; they are profile-backed rather than attached to invented project evidence."
+        },
+        {
+          "heading": "Links and sources",
+          "markdown": "Project evidence comes from the completed project catalogue; broader toolkit claims come from the completed About profile.\n\n- [Repository / agent-property](https://github.com/DamienCKj2812/agent-limenghar-property)\n- [Repository / report-automation](https://github.com/DamienCKj2812/report-automation)\n- [Load and chaos tooling / logging-loading](https://github.com/DamienCKj2812/logging-loading)\n- [Backend and ML / logging-microservice](https://github.com/DamienCKj2812/logging-microservice)\n- [Observability dashboard / logging-microservice-ui](https://github.com/DamienCKj2812/logging-microservice-ui)\n- [Repository / DTMAssignment](https://github.com/DamienCKj2812/DTMAssignment)\n- [Repository / PFDAGroupAssignment](https://github.com/DamienCKj2812/PFDAGroupAssignment)\n- [Repository / ConcurrentProgrammingAssignment](https://github.com/DamienCKj2812/ConcurrentProgrammingAssignment)\n- [Part 1 / Analytics / DSTRAssignment](https://github.com/DamienCKj2812/DSTRAssignment)\n- [Part 2 / Tournaments / DSTRAssignmentPart2](https://github.com/DamienCKj2812/DSTRAssignmentPart2)\n- [Repository / rust-gcs-ocs-assignment](https://github.com/BaconCoding74/rust-gcs-ocs-assignment)\n- [GCS branch / gcs-branch](https://github.com/BaconCoding74/rust-gcs-ocs-assignment/tree/gcs-branch)\n- [OCS branch / context / ocs-branch](https://github.com/BaconCoding74/rust-gcs-ocs-assignment/tree/ocs-branch)\n\nWebsites and previews\n\n- [MyRumawip website](https://myrumawip.com/)\n\nMyReport: Hosted privately via Tailscale; not publicly accessible."
+        }
+      ],
+      "contentStatus": "Approved About toolkit and project-catalogue evidence; profile-only/learning scope stated explicitly"
+    },
+    {
+      "id": "skill-02",
+      "kind": "skill",
+      "number": 2,
+      "catalogueNumber": 2,
+      "title": "Frameworks",
+      "section": "skills",
+      "category": "APPLIED SKILLS / FRAMEWORKS",
+      "summary": "Responsive interfaces, server-rendered websites and reusable UI.",
+      "focus": "Backend development",
+      "items": [
+        "React",
+        "Next.js",
+        "Node.js",
+        "Spring Boot",
+        "Tailwind CSS",
+        "Radix UI",
+        "Vite",
+        "Three.js / React Three Fiber / Drei",
+        "Blender asset integration"
+      ],
+      "displayItems": [
+        "React / Next.js",
+        "Tailwind CSS / Radix UI",
+        "Vite / routing",
+        "Responsive UI / SEO",
+        "Spring Boot"
+      ],
+      "profileOnly": [
+        "Spring Boot"
+      ],
+      "evidenceProjectIds": [
+        "agent-property",
+        "report-automation",
+        "SDMGroupAssignment",
+        "damien-portfolio"
+      ],
+      "url": "https://github.com/DamienCKj2812/agent-limenghar-property",
+      "repositories": [
+        {
+          "id": "agent-property",
+          "title": "Repository",
+          "url": "https://github.com/DamienCKj2812/agent-limenghar-property"
+        },
+        {
+          "id": "report-automation",
+          "title": "Repository",
+          "url": "https://github.com/DamienCKj2812/report-automation"
+        },
+        {
+          "id": "SDMGroupAssignment",
+          "title": "Repository",
+          "url": "https://github.com/DamienCKj2812/SDMGroupAssignment"
+        },
+        {
+          "id": "damien-portfolio",
+          "title": "GitHub / currently empty",
+          "url": "https://github.com/DamienCKj2812/damien-portfolio"
+        }
+      ],
+      "siteLinks": [
+        {
+          "url": "https://myrumawip.com/",
+          "label": "MyRumawip website"
+        }
+      ],
+      "catalogueSections": [
+        {
+          "heading": "Overview",
+          "markdown": "Responsive interfaces, server-rendered websites and reusable UI.\n\nBackend development is my main focus, but I learn the technologies each project requires rather than limiting myself to a single stack."
+        },
+        {
+          "heading": "Core toolkit",
+          "markdown": "- React\n- Next.js\n- Node.js\n- Spring Boot\n- Tailwind CSS\n- Radix UI\n- Vite\n- Three.js / React Three Fiber / Drei\n- Blender asset integration"
+        },
+        {
+          "heading": "Applied in projects",
+          "markdown": "Agent Property and MyReport use Next.js. This portfolio uses React/Vite. The property catalogue documents CMS-managed SEO fields and structured-data support; the About profile confirms practical SEO knowledge.\n\n- **Agent Property — Bilingual Property Website and CMS:** A bilingual property-discovery website that combines CMS-managed listings, housing-scheme information and educational content with direct WhatsApp enquiries.\n\nPublic website: [MyRumawip](https://myrumawip.com/).\n- **MyReport — WhatsApp Customer Follow-up and Reporting Workspace:** A customer-management workspace that organizes WhatsApp conversations, confirmed customer requirements, eligibility records and follow-up actions, with human-reviewed AI assistance.\n\n**Access:** Hosted privately via Tailscale; not publicly accessible.\n- **SDM — Recruitment and Employment Workflow Prototype:** A multi-role React frontend prototype for recruitment and employment workflows, including applicant, employer, staff and manager experiences.\n- **Damien Portfolio — Immersive 3D Portfolio:** A monochrome interactive portfolio that takes visitors through a city, lobby and elevator into dedicated rooms for identity, skills, projects and experience/education."
+        },
+        {
+          "heading": "Engineering workflow",
+          "markdown": "Separate presentation, application state and data fetching. Build reusable components and responsive controls, then verify keyboard, touch, loading and failure states."
+        },
+        {
+          "heading": "Technical decisions",
+          "markdown": "Next.js suits server-side CMS fetching and content revalidation. Vite supports interactive React applications. The portfolio uses a single demand-rendered Canvas, capped DPR and native Blender point/line exports to control ongoing work."
+        },
+        {
+          "heading": "Collaboration and delivery",
+          "markdown": "The completed About profile identifies **User empathy and Adaptability** as strengths. Frontend work at LYJ Events & Marketing includes stakeholder collaboration, QA feedback and evolving requirements. DWMLight's confirmed contribution focuses on CMS/backend and deployment."
+        },
+        {
+          "heading": "Learning and scope",
+          "markdown": "Spring Boot is self-reported in About, not demonstrated by a current catalogue entry. DWMLight frontend technology is system context; the confirmed contribution is CMS/backend and deployment, not sole frontend authorship."
+        },
+        {
+          "heading": "Links and sources",
+          "markdown": "Project evidence comes from the completed project catalogue; broader toolkit claims come from the completed About profile.\n\n- [Repository / agent-property](https://github.com/DamienCKj2812/agent-limenghar-property)\n- [Repository / report-automation](https://github.com/DamienCKj2812/report-automation)\n- [Repository / SDMGroupAssignment](https://github.com/DamienCKj2812/SDMGroupAssignment)\n- [GitHub / currently empty / damien-portfolio](https://github.com/DamienCKj2812/damien-portfolio)\n\nWebsites and previews\n\n- [MyRumawip website](https://myrumawip.com/)\n\nMyReport: Hosted privately via Tailscale; not publicly accessible."
+        }
+      ],
+      "contentStatus": "Approved About toolkit and project-catalogue evidence; profile-only/learning scope stated explicitly"
+    },
+    {
+      "id": "skill-03",
+      "kind": "skill",
+      "number": 3,
+      "catalogueNumber": 3,
+      "title": "Backend & APIs",
+      "section": "skills",
+      "category": "APPLIED SKILLS / BACKEND & APIS",
+      "summary": "Backend-focused application development and integration.",
+      "focus": "Backend development",
+      "items": [
+        "REST APIs",
+        "Express",
+        "FastAPI",
+        "WebSockets",
+        "Authentication",
+        "Go / chi / OTLP gRPC"
+      ],
+      "displayItems": [
+        "Express / REST APIs",
+        "WebSockets / integration",
+        "FastAPI / Python",
+        "Authentication",
+        "Validation / workflows"
+      ],
+      "profileOnly": [
+        "FastAPI"
+      ],
+      "evidenceProjectIds": [
+        "Aria",
+        "report-automation",
+        "fyp"
+      ],
+      "url": "https://github.com/maxscale-io/Aria",
+      "repositories": [
+        {
+          "id": "Aria",
+          "title": "DWMLight website",
+          "url": "https://github.com/maxscale-io/Aria"
+        },
+        {
+          "id": "anva-cms",
+          "title": "ANVA CMS backend",
+          "url": "https://github.com/maxscale-io/anva-cms"
+        },
+        {
+          "id": "report-automation",
+          "title": "Repository",
+          "url": "https://github.com/DamienCKj2812/report-automation"
+        },
+        {
+          "id": "logging-loading",
+          "title": "Load and chaos tooling",
+          "url": "https://github.com/DamienCKj2812/logging-loading"
+        },
+        {
+          "id": "logging-microservice",
+          "title": "Backend and ML",
+          "url": "https://github.com/DamienCKj2812/logging-microservice"
+        },
+        {
+          "id": "logging-microservice-ui",
+          "title": "Observability dashboard",
+          "url": "https://github.com/DamienCKj2812/logging-microservice-ui"
+        }
+      ],
+      "siteLinks": [
+        {
+          "url": "https://dwmlight.com/en",
+          "label": "DWMLight / ANVA CMS website"
+        }
+      ],
+      "catalogueSections": [
+        {
+          "heading": "Overview",
+          "markdown": "Backend-focused application development and integration.\n\nBackend development is my main focus, but I learn the technologies each project requires rather than limiting myself to a single stack."
+        },
+        {
+          "heading": "Core toolkit",
+          "markdown": "- REST APIs\n- Express\n- FastAPI\n- WebSockets\n- Authentication\n- Go / chi / OTLP gRPC"
+        },
+        {
+          "heading": "Applied in projects",
+          "markdown": "DWMLight/ANVA CMS uses Express services and structured content APIs. MyReport coordinates ingestion, reviewed extraction and customer workflows. FYP serves REST/WebSocket telemetry and anomaly data.\n\n- **DWMLight / ANVA CMS — Multilingual Product Website and Custom CMS:** A multilingual product and company website backed by a custom content-management API, including localized content, product media and downloadable catalogues.\n\nPublic website: [DWMLight](https://dwmlight.com/en).\n- **MyReport — WhatsApp Customer Follow-up and Reporting Workspace:** A customer-management workspace that organizes WhatsApp conversations, confirmed customer requirements, eligibility records and follow-up actions, with human-reviewed AI assistance.\n\n**Access:** Hosted privately via Tailscale; not publicly accessible.\n- **FYP — Hybrid Anomaly Detection for Microservice Observability:** A telemetry-based anomaly-detection system that combines OpenTelemetry ingestion, Redis streaming, machine-learning inference and a live observability dashboard, evaluated using telemetry from an instrumented CMS application."
+        },
+        {
+          "heading": "Engineering workflow",
+          "markdown": "Define input/output contracts, validate requests, separate routes from domain services and persistence, and preserve job or workflow state across client reconnects."
+        },
+        {
+          "heading": "Technical decisions",
+          "markdown": "Schema-driven validation supports configurable CMS content. Idempotent ingestion protects message history. Durable run state is preferable to request-lifetime ownership for long searches."
+        },
+        {
+          "heading": "Collaboration and delivery",
+          "markdown": "The completed About profile identifies **User empathy and Adaptability** as strengths. Frontend work at LYJ Events & Marketing includes stakeholder collaboration, QA feedback and evolving requirements. DWMLight's confirmed contribution focuses on CMS/backend and deployment."
+        },
+        {
+          "heading": "Learning and scope",
+          "markdown": "Backend development is the main focus stated in About. FastAPI is listed in the toolkit as a profile-backed skill."
+        },
+        {
+          "heading": "Links and sources",
+          "markdown": "Project evidence comes from the completed project catalogue; broader toolkit claims come from the completed About profile.\n\n- [DWMLight website](https://github.com/maxscale-io/Aria)\n- [ANVA CMS backend / anva-cms](https://github.com/maxscale-io/anva-cms)\n- [Repository / report-automation](https://github.com/DamienCKj2812/report-automation)\n- [Load and chaos tooling / logging-loading](https://github.com/DamienCKj2812/logging-loading)\n- [Backend and ML / logging-microservice](https://github.com/DamienCKj2812/logging-microservice)\n- [Observability dashboard / logging-microservice-ui](https://github.com/DamienCKj2812/logging-microservice-ui)\n\nWebsites and previews\n\n- [DWMLight / ANVA CMS website](https://dwmlight.com/en)\n\nMyReport: Hosted privately via Tailscale; not publicly accessible."
+        }
+      ],
+      "contentStatus": "Approved About toolkit and project-catalogue evidence; profile-only/learning scope stated explicitly"
+    },
+    {
+      "id": "skill-04",
+      "kind": "skill",
+      "number": 4,
+      "catalogueNumber": 4,
+      "title": "Databases",
+      "section": "skills",
+      "category": "APPLIED SKILLS / DATABASES",
+      "summary": "Relational, document, stream and retrieval-oriented data.",
+      "focus": "Backend development",
+      "items": [
+        "PostgreSQL",
+        "MySQL",
+        "MongoDB",
+        "Redis",
+        "Pinecone",
+        "Data modeling",
+        "Supabase / database RPCs",
+        "Redis Streams"
+      ],
+      "displayItems": [
+        "PostgreSQL / Supabase",
+        "MongoDB / Redis",
+        "Pinecone / RAG",
+        "SQL / data modeling",
+        "MySQL"
+      ],
+      "profileOnly": [
+        "MySQL"
+      ],
+      "evidenceProjectIds": [
+        "agent-property",
+        "report-automation",
+        "Aria",
+        "fyp"
+      ],
+      "url": "https://github.com/DamienCKj2812/agent-limenghar-property",
+      "repositories": [
+        {
+          "id": "agent-property",
+          "title": "Repository",
+          "url": "https://github.com/DamienCKj2812/agent-limenghar-property"
+        },
+        {
+          "id": "report-automation",
+          "title": "Repository",
+          "url": "https://github.com/DamienCKj2812/report-automation"
+        },
+        {
+          "id": "Aria",
+          "title": "DWMLight website",
+          "url": "https://github.com/maxscale-io/Aria"
+        },
+        {
+          "id": "anva-cms",
+          "title": "ANVA CMS backend",
+          "url": "https://github.com/maxscale-io/anva-cms"
+        },
+        {
+          "id": "logging-loading",
+          "title": "Load and chaos tooling",
+          "url": "https://github.com/DamienCKj2812/logging-loading"
+        },
+        {
+          "id": "logging-microservice",
+          "title": "Backend and ML",
+          "url": "https://github.com/DamienCKj2812/logging-microservice"
+        },
+        {
+          "id": "logging-microservice-ui",
+          "title": "Observability dashboard",
+          "url": "https://github.com/DamienCKj2812/logging-microservice-ui"
+        }
+      ],
+      "siteLinks": [
+        {
+          "url": "https://myrumawip.com/",
+          "label": "MyRumawip website"
+        },
+        {
+          "url": "https://dwmlight.com/en",
+          "label": "DWMLight / ANVA CMS website"
+        }
+      ],
+      "catalogueSections": [
+        {
+          "heading": "Overview",
+          "markdown": "Relational, document, stream and retrieval-oriented data.\n\nBackend development is my main focus, but I learn the technologies each project requires rather than limiting myself to a single stack."
+        },
+        {
+          "heading": "Core toolkit",
+          "markdown": "- PostgreSQL\n- MySQL\n- MongoDB\n- Redis\n- Pinecone\n- Data modeling\n- Supabase / database RPCs\n- Redis Streams"
+        },
+        {
+          "heading": "Applied in projects",
+          "markdown": "Client projects use PostgreSQL/Supabase and MongoDB. FYP uses Redis Streams with PostgreSQL persistence when configured. The completed About experience at COS Great Trading confirms Pinecone-based RAG for departmental AI knowledge bases.\n\n- **Agent Property — Bilingual Property Website and CMS:** A bilingual property-discovery website that combines CMS-managed listings, housing-scheme information and educational content with direct WhatsApp enquiries.\n\nPublic website: [MyRumawip](https://myrumawip.com/).\n- **MyReport — WhatsApp Customer Follow-up and Reporting Workspace:** A customer-management workspace that organizes WhatsApp conversations, confirmed customer requirements, eligibility records and follow-up actions, with human-reviewed AI assistance.\n\n**Access:** Hosted privately via Tailscale; not publicly accessible.\n- **DWMLight / ANVA CMS — Multilingual Product Website and Custom CMS:** A multilingual product and company website backed by a custom content-management API, including localized content, product media and downloadable catalogues.\n\nPublic website: [DWMLight](https://dwmlight.com/en).\n- **FYP — Hybrid Anomaly Detection for Microservice Observability:** A telemetry-based anomaly-detection system that combines OpenTelemetry ingestion, Redis streaming, machine-learning inference and a live observability dashboard, evaluated using telemetry from an instrumented CMS application."
+        },
+        {
+          "heading": "Engineering workflow",
+          "markdown": "Model domain records and ownership first. Use relational constraints/RPCs for coordinated writes, schema validation for flexible documents, stream consumers for background work and retrieval stores for knowledge context."
+        },
+        {
+          "heading": "Technical decisions",
+          "markdown": "Supabase is MyReport’s canonical store; Sheets is not its primary database. Redis decouples telemetry processing. Vector retrieval supplies relevant knowledge context rather than replacing transactional records."
+        },
+        {
+          "heading": "Collaboration and delivery",
+          "markdown": "The completed About profile identifies **User empathy and Adaptability** as strengths. Frontend work at LYJ Events & Marketing includes stakeholder collaboration, QA feedback and evolving requirements. DWMLight's confirmed contribution focuses on CMS/backend and deployment."
+        },
+        {
+          "heading": "Learning and scope",
+          "markdown": "MySQL is profile-backed. FYP metric/trace database insertion is configuration-dependent; a database connection does not imply every live telemetry sample is persisted."
+        },
+        {
+          "heading": "Links and sources",
+          "markdown": "Project evidence comes from the completed project catalogue; broader toolkit claims come from the completed About profile.\n\n- [Repository / agent-property](https://github.com/DamienCKj2812/agent-limenghar-property)\n- [Repository / report-automation](https://github.com/DamienCKj2812/report-automation)\n- [DWMLight website](https://github.com/maxscale-io/Aria)\n- [ANVA CMS backend / anva-cms](https://github.com/maxscale-io/anva-cms)\n- [Load and chaos tooling / logging-loading](https://github.com/DamienCKj2812/logging-loading)\n- [Backend and ML / logging-microservice](https://github.com/DamienCKj2812/logging-microservice)\n- [Observability dashboard / logging-microservice-ui](https://github.com/DamienCKj2812/logging-microservice-ui)\n\nWebsites and previews\n\n- [MyRumawip website](https://myrumawip.com/)\n- [DWMLight / ANVA CMS website](https://dwmlight.com/en)\n\nMyReport: Hosted privately via Tailscale; not publicly accessible."
+        }
+      ],
+      "contentStatus": "Approved About toolkit and project-catalogue evidence; profile-only/learning scope stated explicitly"
+    },
+    {
+      "id": "skill-05",
+      "kind": "skill",
+      "number": 5,
+      "catalogueNumber": 5,
+      "title": "Data & AI",
+      "section": "skills",
+      "category": "APPLIED SKILLS / DATA & AI",
+      "summary": "Data preparation, AI-assisted workflows and ongoing ML learning.",
+      "focus": "Backend development",
+      "items": [
+        "Python",
+        "Pandas / NumPy",
+        "AI SDKs",
+        "Retrieval-augmented generation (RAG)",
+        "AI knowledge bases",
+        "Automation",
+        "R / exploratory analysis",
+        "XGBoost / LOF",
+        "Locust / Toxiproxy",
+        "NLTK / TextBlob"
+      ],
+      "displayItems": [
+        "Python / Pandas / NumPy",
+        "AI SDKs / RAG",
+        "ML / attribution",
+        "Locust / automation",
+        "AI / ML (learning)"
+      ],
+      "profileOnly": [
+        "Pandas / NumPy"
+      ],
+      "evidenceProjectIds": [
+        "report-automation",
+        "fyp",
+        "DTMAssignment",
+        "PFDAGroupAssignment",
+        "txsa-group-assignment"
+      ],
+      "url": "https://github.com/DamienCKj2812/report-automation",
+      "repositories": [
+        {
+          "id": "report-automation",
+          "title": "Repository",
+          "url": "https://github.com/DamienCKj2812/report-automation"
+        },
+        {
+          "id": "logging-loading",
+          "title": "Load and chaos tooling",
+          "url": "https://github.com/DamienCKj2812/logging-loading"
+        },
+        {
+          "id": "logging-microservice",
+          "title": "Backend and ML",
+          "url": "https://github.com/DamienCKj2812/logging-microservice"
+        },
+        {
+          "id": "logging-microservice-ui",
+          "title": "Observability dashboard",
+          "url": "https://github.com/DamienCKj2812/logging-microservice-ui"
+        },
+        {
+          "id": "DTMAssignment",
+          "title": "Repository",
+          "url": "https://github.com/DamienCKj2812/DTMAssignment"
+        },
+        {
+          "id": "PFDAGroupAssignment",
+          "title": "Repository",
+          "url": "https://github.com/DamienCKj2812/PFDAGroupAssignment"
+        },
+        {
+          "id": "txsa-group-assignment",
+          "title": "Repository",
+          "url": "https://github.com/DamienCKj2812/txsa-group-assignment"
+        }
+      ],
+      "siteLinks": [],
+      "catalogueSections": [
+        {
+          "heading": "Overview",
+          "markdown": "Data preparation, AI-assisted workflows and ongoing ML learning.\n\nBackend development is my main focus, but I learn the technologies each project requires rather than limiting myself to a single stack."
+        },
+        {
+          "heading": "Core toolkit",
+          "markdown": "- Python\n- Pandas / NumPy\n- AI SDKs\n- Retrieval-augmented generation (RAG)\n- AI knowledge bases\n- Automation\n- R / exploratory analysis\n- XGBoost / LOF\n- Locust / Toxiproxy\n- NLTK / TextBlob"
+        },
+        {
+          "heading": "Applied in projects",
+          "markdown": "MyReport separates proposed AI updates from confirmed customer facts. FYP compares hybrid anomaly detectors. DTM/PFDA/TXSA cover preprocessing, statistical/model experiments and tokenization. About confirms RAG and AI knowledge-base work at COS Great Trading.\n\n- **MyReport — WhatsApp Customer Follow-up and Reporting Workspace:** A customer-management workspace that organizes WhatsApp conversations, confirmed customer requirements, eligibility records and follow-up actions, with human-reviewed AI assistance.\n\n**Access:** Hosted privately via Tailscale; not publicly accessible.\n- **FYP — Hybrid Anomaly Detection for Microservice Observability:** A telemetry-based anomaly-detection system that combines OpenTelemetry ingestion, Redis streaming, machine-learning inference and a live observability dashboard, evaluated using telemetry from an instrumented CMS application.\n- **DTM — Coupon Data Preparation and Exploratory Analysis:** An R data-preparation study that introduces controlled data-quality problems into an in-vehicle coupon dataset, cleans it and compares exploratory views before and after preprocessing.\n- **PFDA — Credit-Risk Data Analysis:** An R-based group study of credit-risk data, combining cleaning, exploratory analysis, statistical tests and predictive experiments.\n- **TXSA — Comparative Text Preprocessing:** A notebook-based text-analytics assignment comparing tokenization approaches and demonstrating stop-word/punctuation filtering on a supplied text corpus."
+        },
+        {
+          "heading": "Engineering workflow",
+          "markdown": "Preserve original data, validate structured outputs, prepare reproducible datasets and keep recorded offline evaluation separate from live operation. Use human review when model proposals change business records."
+        },
+        {
+          "heading": "Technical decisions",
+          "markdown": "The catalogue identifies XGBoost + LOF as the current FYP model. Attribution explains baseline deviations, not proven causal root causes."
+        },
+        {
+          "heading": "Collaboration and delivery",
+          "markdown": "The completed About profile identifies **User empathy and Adaptability** as strengths. Frontend work at LYJ Events & Marketing includes stakeholder collaboration, QA feedback and evolving requirements. DWMLight's confirmed contribution focuses on CMS/backend and deployment."
+        },
+        {
+          "heading": "Learning and scope",
+          "markdown": "About explicitly lists machine learning, artificial intelligence and 3D modeling as ongoing learning areas. The FYP notebook results are recorded offline evidence with injected anomaly labels, not a reproduced production benchmark."
+        },
+        {
+          "heading": "Links and sources",
+          "markdown": "Project evidence comes from the completed project catalogue; broader toolkit claims come from the completed About profile.\n\n- [Repository / report-automation](https://github.com/DamienCKj2812/report-automation)\n- [Load and chaos tooling / logging-loading](https://github.com/DamienCKj2812/logging-loading)\n- [Backend and ML / logging-microservice](https://github.com/DamienCKj2812/logging-microservice)\n- [Observability dashboard / logging-microservice-ui](https://github.com/DamienCKj2812/logging-microservice-ui)\n- [Repository / DTMAssignment](https://github.com/DamienCKj2812/DTMAssignment)\n- [Repository / PFDAGroupAssignment](https://github.com/DamienCKj2812/PFDAGroupAssignment)\n- [Repository / txsa-group-assignment](https://github.com/DamienCKj2812/txsa-group-assignment)\n\nMyReport: Hosted privately via Tailscale; not publicly accessible."
+        }
+      ],
+      "contentStatus": "Approved About toolkit and project-catalogue evidence; profile-only/learning scope stated explicitly"
+    },
+    {
+      "id": "skill-06",
+      "kind": "skill",
+      "number": 6,
+      "catalogueNumber": 6,
+      "title": "Security",
+      "section": "skills",
+      "category": "APPLIED SKILLS / SECURITY",
+      "summary": "Validation, ownership and permission boundaries in applications.",
+      "focus": "Backend development",
+      "items": [
+        "JWT",
+        "OAuth",
+        "Access control",
+        "Validation",
+        "Encryption",
+        "Secure APIs"
+      ],
+      "displayItems": [
+        "JWT / OAuth",
+        "Access control / permissions",
+        "RLS / validation",
+        "Reviewed data / audit history",
+        "Encryption / secure APIs"
+      ],
+      "profileOnly": [
+        "Encryption"
+      ],
+      "evidenceProjectIds": [
+        "Aria",
+        "report-automation"
+      ],
+      "url": "https://github.com/maxscale-io/Aria",
+      "repositories": [
+        {
+          "id": "Aria",
+          "title": "DWMLight website",
+          "url": "https://github.com/maxscale-io/Aria"
+        },
+        {
+          "id": "anva-cms",
+          "title": "ANVA CMS backend",
+          "url": "https://github.com/maxscale-io/anva-cms"
+        },
+        {
+          "id": "report-automation",
+          "title": "Repository",
+          "url": "https://github.com/DamienCKj2812/report-automation"
+        }
+      ],
+      "siteLinks": [
+        {
+          "url": "https://dwmlight.com/en",
+          "label": "DWMLight / ANVA CMS website"
+        }
+      ],
+      "catalogueSections": [
+        {
+          "heading": "Overview",
+          "markdown": "Validation, ownership and permission boundaries in applications.\n\nBackend development is my main focus, but I learn the technologies each project requires rather than limiting myself to a single stack."
+        },
+        {
+          "heading": "Core toolkit",
+          "markdown": "- JWT\n- OAuth\n- Access control\n- Validation\n- Encryption\n- Secure APIs"
+        },
+        {
+          "heading": "Applied in projects",
+          "markdown": "ANVA CMS checks authenticated content-operation permissions. MyReport uses owner-scoped database contracts, structured AI validation and calendar OAuth.\n\n- **DWMLight / ANVA CMS — Multilingual Product Website and Custom CMS:** A multilingual product and company website backed by a custom content-management API, including localized content, product media and downloadable catalogues.\n\nPublic website: [DWMLight](https://dwmlight.com/en).\n- **MyReport — WhatsApp Customer Follow-up and Reporting Workspace:** A customer-management workspace that organizes WhatsApp conversations, confirmed customer requirements, eligibility records and follow-up actions, with human-reviewed AI assistance.\n\n**Access:** Hosted privately via Tailscale; not publicly accessible."
+        },
+        {
+          "heading": "Engineering workflow",
+          "markdown": "Validate input at boundaries, enforce ownership in server/database operations and preserve audit history when updating customer or eligibility records."
+        },
+        {
+          "heading": "Technical decisions",
+          "markdown": "Keep privileged CMS tokens server-side. Separate immutable messages, proposed AI values and confirmed records. Treat client-side route selection as UI behavior rather than a complete authorization boundary."
+        },
+        {
+          "heading": "Collaboration and delivery",
+          "markdown": "The completed About profile identifies **User empathy and Adaptability** as strengths. Frontend work at LYJ Events & Marketing includes stakeholder collaboration, QA feedback and evolving requirements. DWMLight's confirmed contribution focuses on CMS/backend and deployment."
+        },
+        {
+          "heading": "Learning and scope",
+          "markdown": "Encryption and secure APIs are profile-listed skills. These project examples demonstrate implemented controls; the catalogue does not claim an independent security audit or guarantees of complete system security."
+        },
+        {
+          "heading": "Links and sources",
+          "markdown": "Project evidence comes from the completed project catalogue; broader toolkit claims come from the completed About profile.\n\n- [DWMLight website](https://github.com/maxscale-io/Aria)\n- [ANVA CMS backend / anva-cms](https://github.com/maxscale-io/anva-cms)\n- [Repository / report-automation](https://github.com/DamienCKj2812/report-automation)\n\nWebsites and previews\n\n- [DWMLight / ANVA CMS website](https://dwmlight.com/en)\n\nMyReport: Hosted privately via Tailscale; not publicly accessible."
+        }
+      ],
+      "contentStatus": "Approved About toolkit and project-catalogue evidence; profile-only/learning scope stated explicitly"
+    },
+    {
+      "id": "skill-07",
+      "kind": "skill",
+      "number": 7,
+      "catalogueNumber": 7,
+      "title": "DevOps & CI/CD",
+      "section": "skills",
+      "category": "APPLIED SKILLS / DEVOPS & CI/CD",
+      "summary": "Deployment, server operations and repeatable application delivery.",
+      "focus": "Backend development",
+      "items": [
+        "Git",
+        "GitHub",
+        "Bitbucket",
+        "Docker",
+        "GitHub Actions",
+        "Deployment",
+        "Observability"
+      ],
+      "displayItems": [
+        "Docker / PM2",
+        "Git / GitHub Actions",
+        "Ansible / deployment",
+        "Observability",
+        "Bitbucket"
+      ],
+      "profileOnly": [
+        "Bitbucket"
+      ],
+      "evidenceProjectIds": [
+        "agent-property",
+        "Aria",
+        "fyp",
+        "damien-portfolio"
+      ],
+      "url": "https://github.com/DamienCKj2812/agent-limenghar-property",
+      "repositories": [
+        {
+          "id": "agent-property",
+          "title": "Repository",
+          "url": "https://github.com/DamienCKj2812/agent-limenghar-property"
+        },
+        {
+          "id": "Aria",
+          "title": "DWMLight website",
+          "url": "https://github.com/maxscale-io/Aria"
+        },
+        {
+          "id": "anva-cms",
+          "title": "ANVA CMS backend",
+          "url": "https://github.com/maxscale-io/anva-cms"
+        },
+        {
+          "id": "logging-loading",
+          "title": "Load and chaos tooling",
+          "url": "https://github.com/DamienCKj2812/logging-loading"
+        },
+        {
+          "id": "logging-microservice",
+          "title": "Backend and ML",
+          "url": "https://github.com/DamienCKj2812/logging-microservice"
+        },
+        {
+          "id": "logging-microservice-ui",
+          "title": "Observability dashboard",
+          "url": "https://github.com/DamienCKj2812/logging-microservice-ui"
+        },
+        {
+          "id": "damien-portfolio",
+          "title": "GitHub / currently empty",
+          "url": "https://github.com/DamienCKj2812/damien-portfolio"
+        }
+      ],
+      "siteLinks": [
+        {
+          "url": "https://myrumawip.com/",
+          "label": "MyRumawip website"
+        },
+        {
+          "url": "https://dwmlight.com/en",
+          "label": "DWMLight / ANVA CMS website"
+        }
+      ],
+      "catalogueSections": [
+        {
+          "heading": "Overview",
+          "markdown": "Deployment, server operations and repeatable application delivery.\n\nBackend development is my main focus, but I learn the technologies each project requires rather than limiting myself to a single stack."
+        },
+        {
+          "heading": "Core toolkit",
+          "markdown": "- Git\n- GitHub\n- Bitbucket\n- Docker\n- GitHub Actions\n- Deployment\n- Observability"
+        },
+        {
+          "heading": "Applied in projects",
+          "markdown": "Agent Property includes deployment/sync tooling, Docker, PM2 and Ansible. DWMLight’s confirmed work includes deployment/server operations. FYP uses a multi-service Compose topology.\n\n- **Agent Property — Bilingual Property Website and CMS:** A bilingual property-discovery website that combines CMS-managed listings, housing-scheme information and educational content with direct WhatsApp enquiries.\n\nPublic website: [MyRumawip](https://myrumawip.com/).\n- **DWMLight / ANVA CMS — Multilingual Product Website and Custom CMS:** A multilingual product and company website backed by a custom content-management API, including localized content, product media and downloadable catalogues.\n\nPublic website: [DWMLight](https://dwmlight.com/en).\n- **FYP — Hybrid Anomaly Detection for Microservice Observability:** A telemetry-based anomaly-detection system that combines OpenTelemetry ingestion, Redis streaming, machine-learning inference and a live observability dashboard, evaluated using telemetry from an instrumented CMS application.\n- **Damien Portfolio — Immersive 3D Portfolio:** A monochrome interactive portfolio that takes visitors through a city, lobby and elevator into dedicated rooms for identity, skills, projects and experience/education."
+        },
+        {
+          "heading": "Engineering workflow",
+          "markdown": "Separate application and environment configuration, use repeatable builds/deployments, define process boundaries and validate generated artifacts before consuming them."
+        },
+        {
+          "heading": "Technical decisions",
+          "markdown": "The portfolio checks native/browser geometry, routes and hashes before a Vite deployment. Operational configuration demonstrates a deployment design; it is not by itself evidence of live uptime or measured business outcomes."
+        },
+        {
+          "heading": "Collaboration and delivery",
+          "markdown": "The completed About profile identifies **User empathy and Adaptability** as strengths. Frontend work at LYJ Events & Marketing includes stakeholder collaboration, QA feedback and evolving requirements. DWMLight's confirmed contribution focuses on CMS/backend and deployment."
+        },
+        {
+          "heading": "Learning and scope",
+          "markdown": "Bitbucket is profile-backed. The catalogue distinguishes delivered code/configuration from unconfirmed production status and does not invent availability or performance measurements."
+        },
+        {
+          "heading": "Links and sources",
+          "markdown": "Project evidence comes from the completed project catalogue; broader toolkit claims come from the completed About profile.\n\n- [Repository / agent-property](https://github.com/DamienCKj2812/agent-limenghar-property)\n- [DWMLight website](https://github.com/maxscale-io/Aria)\n- [ANVA CMS backend / anva-cms](https://github.com/maxscale-io/anva-cms)\n- [Load and chaos tooling / logging-loading](https://github.com/DamienCKj2812/logging-loading)\n- [Backend and ML / logging-microservice](https://github.com/DamienCKj2812/logging-microservice)\n- [Observability dashboard / logging-microservice-ui](https://github.com/DamienCKj2812/logging-microservice-ui)\n- [GitHub / currently empty / damien-portfolio](https://github.com/DamienCKj2812/damien-portfolio)\n\nWebsites and previews\n\n- [MyRumawip website](https://myrumawip.com/)\n- [DWMLight / ANVA CMS website](https://dwmlight.com/en)"
+        }
+      ],
+      "contentStatus": "Approved About toolkit and project-catalogue evidence; profile-only/learning scope stated explicitly"
+    },
+    {
+      "id": "skill-08",
+      "kind": "skill",
+      "number": 8,
+      "catalogueNumber": 8,
+      "title": "Microservices",
+      "section": "skills",
+      "category": "APPLIED SKILLS / MICROSERVICES",
+      "summary": "Service boundaries, asynchronous processing and observability.",
+      "focus": "Backend development",
+      "items": [
+        "Service design",
+        "Message queues",
+        "Tracing",
+        "Resilience"
+      ],
+      "displayItems": [
+        "Redis Streams / OTLP",
+        "REST / WebSockets",
+        "Metrics / traces",
+        "Queues / resilience"
+      ],
+      "profileOnly": [],
+      "evidenceProjectIds": [
+        "fyp",
+        "report-automation"
+      ],
+      "url": "https://github.com/DamienCKj2812/logging-loading",
+      "repositories": [
+        {
+          "id": "logging-loading",
+          "title": "Load and chaos tooling",
+          "url": "https://github.com/DamienCKj2812/logging-loading"
+        },
+        {
+          "id": "logging-microservice",
+          "title": "Backend and ML",
+          "url": "https://github.com/DamienCKj2812/logging-microservice"
+        },
+        {
+          "id": "logging-microservice-ui",
+          "title": "Observability dashboard",
+          "url": "https://github.com/DamienCKj2812/logging-microservice-ui"
+        },
+        {
+          "id": "report-automation",
+          "title": "Repository",
+          "url": "https://github.com/DamienCKj2812/report-automation"
+        }
+      ],
+      "siteLinks": [],
+      "catalogueSections": [
+        {
+          "heading": "Overview",
+          "markdown": "Service boundaries, asynchronous processing and observability.\n\nBackend development is my main focus, but I learn the technologies each project requires rather than limiting myself to a single stack."
+        },
+        {
+          "heading": "Core toolkit",
+          "markdown": "- Service design\n- Message queues\n- Tracing\n- Resilience"
+        },
+        {
+          "heading": "Applied in projects",
+          "markdown": "FYP separates the Go telemetry receiver, stream consumers, Python inference and REST/WebSocket API. MyReport normalizes provider messages into an owner-scoped workflow.\n\n- **FYP — Hybrid Anomaly Detection for Microservice Observability:** A telemetry-based anomaly-detection system that combines OpenTelemetry ingestion, Redis streaming, machine-learning inference and a live observability dashboard, evaluated using telemetry from an instrumented CMS application.\n- **MyReport — WhatsApp Customer Follow-up and Reporting Workspace:** A customer-management workspace that organizes WhatsApp conversations, confirmed customer requirements, eligibility records and follow-up actions, with human-reviewed AI assistance.\n\n**Access:** Hosted privately via Tailscale; not publicly accessible."
+        },
+        {
+          "heading": "Engineering workflow",
+          "markdown": "Define transport contracts, decouple ingestion from expensive processing, keep durable state for recoverable work and make operational events observable."
+        },
+        {
+          "heading": "Technical decisions",
+          "markdown": "FYP supports OTLP metrics and traces, not a complete implemented logs receiver. Redis Streams is its evidenced messaging path."
+        },
+        {
+          "heading": "Collaboration and delivery",
+          "markdown": "The completed About profile identifies **User empathy and Adaptability** as strengths. Frontend work at LYJ Events & Marketing includes stakeholder collaboration, QA feedback and evolving requirements. DWMLight's confirmed contribution focuses on CMS/backend and deployment."
+        },
+        {
+          "heading": "Learning and scope",
+          "markdown": "Resilience is listed in About. The current catalogue demonstrates Redis Streams and service integration, without claiming a proven fault-tolerance guarantee."
+        },
+        {
+          "heading": "Links and sources",
+          "markdown": "Project evidence comes from the completed project catalogue; broader toolkit claims come from the completed About profile.\n\n- [Load and chaos tooling / logging-loading](https://github.com/DamienCKj2812/logging-loading)\n- [Backend and ML / logging-microservice](https://github.com/DamienCKj2812/logging-microservice)\n- [Observability dashboard / logging-microservice-ui](https://github.com/DamienCKj2812/logging-microservice-ui)\n- [Repository / report-automation](https://github.com/DamienCKj2812/report-automation)\n\nMyReport: Hosted privately via Tailscale; not publicly accessible."
+        }
+      ],
+      "contentStatus": "Approved About toolkit and project-catalogue evidence; profile-only/learning scope stated explicitly"
+    },
+    {
+      "id": "skill-09",
+      "kind": "skill",
+      "number": 9,
+      "catalogueNumber": 9,
+      "title": "Linux",
+      "section": "skills",
+      "category": "APPLIED SKILLS / LINUX",
+      "summary": "Linux workstations, custom desktop tools and application servers.",
+      "focus": "Backend development",
+      "items": [
+        "Linux fundamentals",
+        "Fedora",
+        "Ubuntu",
+        "Debian",
+        "Arch",
+        "Mint",
+        "Shell tools",
+        "Servers"
+      ],
+      "displayItems": [
+        "Fedora / Linux",
+        "KDE / Hyprland",
+        "Shell / servers",
+        "Ubuntu / Debian",
+        "Arch / Mint"
+      ],
+      "profileOnly": [
+        "Ubuntu",
+        "Debian",
+        "Arch",
+        "Mint"
+      ],
+      "evidenceProjectIds": [
+        "fedora-dotfiles",
+        "agent-property",
+        "Aria",
+        "fyp"
+      ],
+      "url": "https://github.com/DamienCKj2812/fedora-dotfiles",
+      "repositories": [
+        {
+          "id": "fedora-dotfiles",
+          "title": "Repository",
+          "url": "https://github.com/DamienCKj2812/fedora-dotfiles"
+        },
+        {
+          "id": "agent-property",
+          "title": "Repository",
+          "url": "https://github.com/DamienCKj2812/agent-limenghar-property"
+        },
+        {
+          "id": "Aria",
+          "title": "DWMLight website",
+          "url": "https://github.com/maxscale-io/Aria"
+        },
+        {
+          "id": "anva-cms",
+          "title": "ANVA CMS backend",
+          "url": "https://github.com/maxscale-io/anva-cms"
+        },
+        {
+          "id": "logging-loading",
+          "title": "Load and chaos tooling",
+          "url": "https://github.com/DamienCKj2812/logging-loading"
+        },
+        {
+          "id": "logging-microservice",
+          "title": "Backend and ML",
+          "url": "https://github.com/DamienCKj2812/logging-microservice"
+        },
+        {
+          "id": "logging-microservice-ui",
+          "title": "Observability dashboard",
+          "url": "https://github.com/DamienCKj2812/logging-microservice-ui"
+        }
+      ],
+      "siteLinks": [
+        {
+          "url": "https://myrumawip.com/",
+          "label": "MyRumawip website"
+        },
+        {
+          "url": "https://dwmlight.com/en",
+          "label": "DWMLight / ANVA CMS website"
+        }
+      ],
+      "catalogueSections": [
+        {
+          "heading": "Overview",
+          "markdown": "Linux workstations, custom desktop tools and application servers.\n\nBackend development is my main focus, but I learn the technologies each project requires rather than limiting myself to a single stack."
+        },
+        {
+          "heading": "Core toolkit",
+          "markdown": "- Linux fundamentals\n- Fedora\n- Ubuntu\n- Debian\n- Arch\n- Mint\n- Shell tools\n- Servers"
+        },
+        {
+          "heading": "Applied in projects",
+          "markdown": "Fedora Dotfiles combines Stow, KDE/Hyprland, Quickshell/QML and a native PyQt6 sharing chooser. Client work includes server/deployment responsibilities, and FYP provides shell-driven load/chaos tooling.\n\n- **Fedora Dotfiles — Customized Wayland Desktop Environment:** A personalized Fedora desktop/development environment combining KDE Plasma and Hyprland sessions with a custom shell, login appearance, sharing picker and reusable configuration management.\n- **Agent Property — Bilingual Property Website and CMS:** A bilingual property-discovery website that combines CMS-managed listings, housing-scheme information and educational content with direct WhatsApp enquiries.\n\nPublic website: [MyRumawip](https://myrumawip.com/).\n- **DWMLight / ANVA CMS — Multilingual Product Website and Custom CMS:** A multilingual product and company website backed by a custom content-management API, including localized content, product media and downloadable catalogues.\n\nPublic website: [DWMLight](https://dwmlight.com/en).\n- **FYP — Hybrid Anomaly Detection for Microservice Observability:** A telemetry-based anomaly-detection system that combines OpenTelemetry ingestion, Redis streaming, machine-learning inference and a live observability dashboard, evaluated using telemetry from an instrumented CMS application."
+        },
+        {
+          "heading": "Engineering workflow",
+          "markdown": "Version configuration, separate session/service responsibilities, preserve upstream protocols and clean up asynchronous previews or processes when they stop being useful."
+        },
+        {
+          "heading": "Technical decisions",
+          "markdown": "The sharing chooser customizes selection UI while the existing portal/PipeWire services retain permission and sharing responsibilities. Desktop customization integrates upstream tools rather than reimplementing Linux graphics."
+        },
+        {
+          "heading": "Collaboration and delivery",
+          "markdown": "The completed About profile identifies **User empathy and Adaptability** as strengths. Frontend work at LYJ Events & Marketing includes stakeholder collaboration, QA feedback and evolving requirements. DWMLight's confirmed contribution focuses on CMS/backend and deployment."
+        },
+        {
+          "heading": "Learning and scope",
+          "markdown": "About confirms an interest in installing/customizing distributions including Arch and Mint. Fedora has a dedicated catalogue project; the other named distributions are profile-backed, without invented clean-machine benchmarks."
+        },
+        {
+          "heading": "Links and sources",
+          "markdown": "Project evidence comes from the completed project catalogue; broader toolkit claims come from the completed About profile.\n\n- [Repository / fedora-dotfiles](https://github.com/DamienCKj2812/fedora-dotfiles)\n- [Repository / agent-property](https://github.com/DamienCKj2812/agent-limenghar-property)\n- [DWMLight website](https://github.com/maxscale-io/Aria)\n- [ANVA CMS backend / anva-cms](https://github.com/maxscale-io/anva-cms)\n- [Load and chaos tooling / logging-loading](https://github.com/DamienCKj2812/logging-loading)\n- [Backend and ML / logging-microservice](https://github.com/DamienCKj2812/logging-microservice)\n- [Observability dashboard / logging-microservice-ui](https://github.com/DamienCKj2812/logging-microservice-ui)\n\nWebsites and previews\n\n- [MyRumawip website](https://myrumawip.com/)\n- [DWMLight / ANVA CMS website](https://dwmlight.com/en)"
+        }
+      ],
+      "contentStatus": "Approved About toolkit and project-catalogue evidence; profile-only/learning scope stated explicitly"
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "source": "banner-artwork/drive-the-next-horizon-source.png",
+  "suppliedFilename": "drive-the-next-horizon.png",
+  "sourceSize": [
+    1087,
+    1447
+  ],
+  "sourceBytes": 1316397,
+  "sourceSha256": "1c8c05b025e9c1ee61c2051c74cb7eea20c1f81924252d20d7be86cd50ee0a47",
+  "fit": "edge-to-edge proportional cover crop, biased toward headline/logo; no padding or stretching",
+  "cropBox": [
+    0,
+    545.0972789115647,
+    1087,
+    1386.433635676493
+  ],
+  "centering": [
+    0.5,
+    0.9
+  ],
+  "displayWidthM": 8.4,
+  "displayHeightM": 6.5,
+  "output": "textures-monochrome/drive-the-next-horizon.jpg",
+  "outputSize": [
+    1323,
+    1024
+  ],
+  "outputBytes": 153476,
+  "jpegQuality": 92,
+  "outputSha256": "ce63944b2bcc5f42a70cc576b63cddcb573d3ccc1286e8aa509766015166c525"
+}

@@ -1,0 +1,10 @@
+{
+  "label": "Project meeting room",
+  "source": "assets/project-hallway/meeting-room/project-meeting-room.blend",
+  "assetBase": "models/rooms/project-meeting/",
+  "entranceAnchor": [0, -6, 0],
+  "mainCamera": "Meeting / presentation camera",
+  "animationFrames": 1,
+  "width": 12,
+  "height": 4.8
+}

@@ -1,0 +1,18 @@
+{
+  "level": "skills",
+  "actors": 90,
+  "sampled_frames": [
+    1,
+    46,
+    151,
+    296,
+    510,
+    701,
+    959,
+    960,
+    2700
+  ],
+  "max_point_position_error_m": 1.3696104637475082e-06,
+  "max_route_position_error_m": 0,
+  "source_modified": false
+}

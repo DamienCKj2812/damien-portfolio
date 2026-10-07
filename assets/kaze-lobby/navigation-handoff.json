@@ -1,0 +1,177 @@
+{
+  "blend": "kaze-lobby-walkthrough.blend",
+  "scene": "KAZE / Monochrome Atrium",
+  "camera": "Lobby \u2022 Navigation / walkthrough camera",
+  "coordinate_system": "Blender meters, +Z up, camera -Z forward / +Y up",
+  "fps": 30,
+  "frame_start": 1,
+  "frame_end": 1020,
+  "duration_s": 34,
+  "escalator_ride_frames": [
+    510,
+    690
+  ],
+  "escalator_ride_duration_s": 6,
+  "route_waypoints": [
+    {
+      "frame": 1,
+      "position": [
+        0,
+        -11.6,
+        1.735
+      ]
+    },
+    {
+      "frame": 60,
+      "position": [
+        0,
+        -11.6,
+        1.735
+      ]
+    },
+    {
+      "frame": 120,
+      "position": [
+        0,
+        -8,
+        1.735
+      ]
+    },
+    {
+      "frame": 190,
+      "position": [
+        0.2,
+        -4.8,
+        1.735
+      ]
+    },
+    {
+      "frame": 260,
+      "position": [
+        0.2,
+        -1.7,
+        1.735
+      ]
+    },
+    {
+      "frame": 320,
+      "position": [
+        3.6,
+        0.7,
+        1.7
+      ]
+    },
+    {
+      "frame": 380,
+      "position": [
+        5.55,
+        3.6,
+        1.7
+      ]
+    },
+    {
+      "frame": 440,
+      "position": [
+        6.1,
+        6.35,
+        1.7
+      ]
+    },
+    {
+      "frame": 490,
+      "position": [
+        6.85,
+        8.5,
+        1.72
+      ]
+    },
+    {
+      "frame": 510,
+      "position": [
+        6.85,
+        9.3,
+        1.88
+      ]
+    },
+    {
+      "frame": 690,
+      "position": [
+        6.85,
+        18.65,
+        7.82
+      ]
+    },
+    {
+      "frame": 720,
+      "position": [
+        6.85,
+        19.5,
+        7.82
+      ]
+    },
+    {
+      "frame": 775,
+      "position": [
+        5.6,
+        20.65,
+        7.82
+      ]
+    },
+    {
+      "frame": 840,
+      "position": [
+        4.05,
+        21.45,
+        7.82
+      ]
+    },
+    {
+      "frame": 1020,
+      "position": [
+        4.05,
+        21.45,
+        7.82
+      ]
+    }
+  ],
+  "elevator": "R1",
+  "door_opening_frames": [
+    900,
+    990
+  ],
+  "camera_stop_frame": 840,
+  "camera_clearance_check": "passed; 0.10m head clearance against solid meshes",
+  "max_rotation_degrees_per_frame": 1.434474162698413,
+  "handoff": {
+    "frame": 1020,
+    "camera": {
+      "frame": 1020,
+      "time_s": 33.966667,
+      "position": [
+        4.050000190734863,
+        21.450000762939453,
+        7.820000171661377
+      ],
+      "quaternion_wxyz": [
+        0.6957754492759705,
+        0.7182593941688538,
+        0.0,
+        0.0
+      ],
+      "lens_mm": 14.0,
+      "R1_door_local_x": [
+        2.4549999237060547,
+        5.644999980926514
+      ]
+    },
+    "door_center": [
+      4.05,
+      23.965,
+      7.66
+    ],
+    "threshold_y": 23.75,
+    "upper_floor_z": 6.12,
+    "interior_designed": false,
+    "note": "Camera stops 2.3m in front of the threshold; continue forward only after adding the interior."
+  }
+}

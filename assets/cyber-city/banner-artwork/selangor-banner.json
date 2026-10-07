@@ -1,0 +1,33 @@
+{
+  "source": "banner-artwork/selangor-source.png",
+  "suppliedFilename": "Selangor.png",
+  "sourceSize": [
+    1448,
+    1086
+  ],
+  "sourceBytes": 1157886,
+  "sourceSha256": "32a1a6fc9975182eb7cabd8046f9c772254d7013914217c91ee71b70590fa458",
+  "fit": "outer black background trimmed, then edge-to-edge proportional center crop; no padding or stretching",
+  "artworkBox": [
+    0,
+    93,
+    1448,
+    998
+  ],
+  "cropBoxWithinArtwork": [
+    170.748046875,
+    0,
+    1277.251953125,
+    905
+  ],
+  "displayArcWidthM": 6.111000000000001,
+  "displayHeightM": 5,
+  "output": "textures-monochrome/selangor.jpg",
+  "outputSize": [
+    1252,
+    1024
+  ],
+  "outputBytes": 144030,
+  "jpegQuality": 92,
+  "outputSha256": "ced2d3135dea3df5710b036487dcf4c058c4c180e24c4295058a5f8f356f3050"
+}

@@ -1,0 +1,24 @@
+node_modules/
+dist/
+.vite/
+.serena/
+.claude/
+*.local
+.env
+.env.*
+!.env.example
+*.log
+.DS_Store
+__pycache__/
+
+# Local uploaded video originals; publish the prepared copies under public/videos.
+/*.mp4
+
+# Keep editable .blend masters; numbered Blender save backups are local recovery files.
+*.blend[0-9]*
+
+# Reproducible city build stages; the source and production masters stay tracked.
+assets/cyber-city/cyber-city.blend
+assets/cyber-city/monochrome-city-walkthrough.blend
+assets/cyber-city/monochrome-city-optimized.blend
+assets/cyber-city/monochrome-city-traffic-polished.blend

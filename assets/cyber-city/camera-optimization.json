@@ -1,0 +1,17 @@
+{
+  "camera_frames_checked": 450,
+  "margin_percent": 15,
+  "people_before": 38,
+  "people_after": 38,
+  "trees_before": 74,
+  "trees_after": 74,
+  "skyline_before": 35,
+  "skyline_after": 35,
+  "points_before": 88387,
+  "points_after": 87969,
+  "segments_before": 3084,
+  "segments_after": 2872,
+  "unused_mesh_objects_removed": 17,
+  "optimized_file": "/home/damienckj/Documents/damien-portfolio/assets/cyber-city/monochrome-city-optimized.blend",
+  "optimized_MB": 1.61
+}

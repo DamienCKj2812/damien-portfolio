@@ -1,0 +1,26 @@
+{
+  "country": "Malaysia",
+  "countryCode": "MYS",
+  "regions": [
+    "Peninsular Malaysia",
+    "Sabah and Sarawak"
+  ],
+  "sourceUrl": "https://raw.githubusercontent.com/nvkelso/natural-earth-vector/master/geojson/ne_50m_admin_0_countries.geojson",
+  "sourceLicense": "Natural Earth public domain",
+  "sourceSha256": "3e458fc036ad0a66411f2c1e6cac49c5d7bfb81cb1123bc513b22511a2b7fdeb",
+  "cacheSha256": "be1b0eee8bb471857240b25350eca919f515a3cc2e1edc8a43ba1219e88a3bcf",
+  "mapBoundsLonLat": [
+    98,
+    0.5,
+    120.2,
+    8.5
+  ],
+  "polygons": 9,
+  "triangles": 482,
+  "coastlineSegments": 500,
+  "contextSegments": 675,
+  "objects": 11,
+  "palette": "black / white",
+  "screen": "Office \u2022 About content screen / web texture target",
+  "nativeRepresentation": "planar meshes / thin curves / text"
+}

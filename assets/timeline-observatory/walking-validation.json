@@ -1,0 +1,16 @@
+{
+  "nativeRouteFrames": 2400,
+  "nodeOrder": [
+    "diploma-information-technology",
+    "lyj-events-marketing",
+    "cos-great-trading",
+    "freelance-full-stack",
+    "bachelors-computer-science",
+    "current-focus"
+  ],
+  "nodeDwellSeconds": 6,
+  "minimumDistanceFromRoomCenterMeters": 3.9390068198554413,
+  "orientationForced": false,
+  "pauseKeepsGlobeAnimating": true,
+  "controlsValidation": "passed"
+}

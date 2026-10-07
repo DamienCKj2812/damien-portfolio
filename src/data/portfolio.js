@@ -1,0 +1,128 @@
+import portraitAsset from '../../assets/portrait/image-manifest.json'
+
+// Personal profile and résumé details; unconfirmed project entries remain marked as samples.
+// Keep item IDs unique and stable when editing or reordering lists.
+export const portfolio = {
+  name: 'Damien',
+  fullName: 'Chong Kah Jun',
+  siteTitle: 'DamienCKJ portfolio',
+  music: {
+    title: 'Cyberpunk Suspense', artist: 'leberch',
+    src: 'media/audio/music/leberch-cyberpunk-suspense-375260.mp3', volume: .35,
+    source: 'https://pixabay.com/music/ambient-cyberpunk-suspense-375260/',
+  },
+  hero: {
+    label: '01 / MY PERSONAL PORTFOLIO',
+    headline: 'Building thoughtful experiences for the web.',
+    introduction: 'I build and deploy web applications, working across frontend, backend, databases, and server infrastructure. I also bring practical SEO knowledge to help websites perform well and be discoverable.',
+    action: { label: 'Explore my projects', href: '#projects' },
+  },
+  about: {
+    id: 'about', label: '02 / ABOUT', title: 'A little about me',
+    description: 'I build and deploy web applications, working across frontend, backend, databases, and server infrastructure. I also bring practical SEO knowledge to help websites perform well and be discoverable.',
+    profile: {
+      role: 'Full-Stack Developer',
+      status: 'Open to jobs and freelance opportunities',
+      location: 'Seri Kembangan / Serdang, Selangor, Malaysia',
+      focus: 'Backend development',
+      approach: 'Backend development is my main focus, but I learn the technologies each project requires rather than limiting myself to a single stack.',
+      stack: ['TypeScript', 'Python', 'Next.js', 'React', 'Express', 'MongoDB', 'Pinecone', 'Docker', 'Linux'],
+      strengths: ['User empathy', 'Adaptability'],
+      interests: ['Badminton, basketball, and swimming', 'Gym and fitness', 'Installing and customising Linux distributions, including Arch and Mint'],
+      portrait: { src: `${portraitAsset.image}?v=${portraitAsset.assetHash}`, originalSrc: portraitAsset.originalImage ? `${portraitAsset.originalImage}?v=${portraitAsset.originalAssetHash}` : null, cellSize: portraitAsset.cellSize, alt: 'Portrait of Chong Kah Jun (Damien)', caption: 'PIXEL PORTRAIT' },
+      revision: '2026.10',
+    },
+  },
+  skills: {
+    id: 'skills', label: '03 / SKILLS', title: 'My toolkit',
+    description: 'My development toolkit spans web applications, backend APIs, databases, deployment, and Linux servers.',
+    learning: ['3D modeling', 'Machine learning', 'Artificial intelligence'],
+    groups: [
+      { id: 'languages', title: 'Languages', items: ['JavaScript', 'TypeScript', 'Java', 'Python', 'PHP', 'C++', 'C', 'HTML / CSS', 'SQL'] },
+      { id: 'frameworks', title: 'Frameworks', items: ['React', 'Next.js', 'Node.js', 'Spring Boot', 'Tailwind CSS', 'Radix UI', 'Vite'] },
+      { id: 'backend', title: 'Backend & APIs', items: ['REST APIs', 'Express', 'FastAPI', 'WebSockets', 'Authentication'] },
+      { id: 'databases', title: 'Databases', items: ['PostgreSQL', 'MySQL', 'MongoDB', 'Redis', 'Pinecone', 'Data modeling'] },
+      { id: 'data-ai', title: 'Data & AI', items: ['Python', 'Pandas / NumPy', 'AI SDKs', 'Retrieval-augmented generation (RAG)', 'AI knowledge bases', 'Automation'] },
+      { id: 'security', title: 'Security', items: ['JWT', 'OAuth', 'Access control', 'Validation', 'Encryption', 'Secure APIs'] },
+      { id: 'devops', title: 'DevOps & CI/CD', items: ['Git', 'GitHub', 'Bitbucket', 'Docker', 'GitHub Actions', 'Deployment', 'Observability'] },
+      { id: 'microservices', title: 'Microservices', items: ['Service design', 'Message queues', 'Tracing', 'Resilience'] },
+      { id: 'linux', title: 'Linux', items: ['Linux fundamentals', 'Fedora', 'Ubuntu', 'Debian', 'Arch', 'Mint', 'Shell tools', 'Servers'] },
+    ],
+  },
+  projects: {
+    id: 'projects', label: '04 / PROJECTS', title: 'Things I’m working on',
+    description: 'Personal experiments and projects that put my learning into practice.',
+    items: [
+      {
+        id: 'portfolio', title: 'My portfolio website', status: 'IN PROGRESS',
+        description: 'A responsive, single-page portfolio with reusable React components and automated deployment to GitHub Pages.',
+        technologies: ['React', 'Vite', 'Tailwind CSS'],
+        links: [{ id: 'source', label: 'View source', href: 'https://github.com/DamienCKj2812/damien-portfolio' }],
+      },
+      {
+        id: 'task-planner', title: 'Task planner', status: 'SAMPLE PROJECT',
+        description: 'A mock project entry for a task organizer with priorities, filters, and progress tracking. Replace this with a real project.',
+        technologies: ['React', 'JavaScript', 'CSS'],
+        links: [],
+      },
+    ],
+  },
+  journey: {
+    id: 'experience', label: '05 / EXPERIENCE & EDUCATION', title: 'My journey so far',
+    description: 'My software-development experience and education at Asia Pacific University.',
+    items: [
+      {
+        id: 'freelance-full-stack', category: 'EXPERIENCE', title: 'Freelance Full-Stack Developer',
+        organization: 'Freelance / Client projects', period: 'Ongoing',
+        description: 'Develop web applications, custom CMS backends, and CRM platforms for clients, with responsibilities spanning application development, integration, and deployment.',
+        highlights: [
+          'MyRumawip (property project): developed the bilingual property website, CMS integration, and deployment workflow using Next.js, TypeScript, Strapi, and PostgreSQL.',
+          'MyRumawip achievement: helped establish the website as a well-known destination for finding affordable housing, achieving top-five Google search rankings for relevant affordable-housing searches.',
+          'DWMLight / ANVA CMS: developed the custom CMS/backend and handled deployment and server operations, using TypeScript, Express, and MongoDB to support structured multilingual content.',
+          'DWMLight achievement: helped a China-based client connect with the global market through their multilingual website.',
+          'Amplifii (Ampress) — current, unreleased: an influencer-marketing platform that helps teams manage creator partnerships and campaigns. Contributing to product development and collaborating with another developer to support the overall user experience.',
+        ],
+      },
+      {
+        id: 'cos-great-trading', category: 'EXPERIENCE', title: 'Full-Stack Developer',
+        organization: 'COS Great Trading', period: 'July 2025 – November 2025',
+        description: 'Developed an AI-powered CRM, taking responsibility for the frontend and backend implementation.',
+        highlights: ['Enabled users to build their own AI knowledge bases and answer questions for each department.', 'Implemented retrieval-augmented generation (RAG) using Pinecone.', 'Worked across Next.js, TypeScript, Express, Python, MongoDB, and AI SDKs.'],
+      },
+      {
+        id: 'lyj-events-marketing', category: 'EXPERIENCE', title: 'Front End Developer',
+        organization: 'LYJ Events & Marketing', period: 'April 2024 – November 2024',
+        description: 'Developed responsive web and mobile application interfaces from design specifications, with an emphasis on clean, maintainable code.',
+        highlights: ['Collaborated with stakeholders to adapt features to evolving business requirements.', 'Participated in daily stand-ups and resolved bugs using QA feedback and issue tickets.', 'Built user interfaces for a trading broker website.', 'Built user interfaces for a hybrid community-chat and customer-support platform.'],
+      },
+      {
+        id: 'bachelors-computer-science', category: 'EDUCATION', title: 'Bachelor of Science (Honours) in Computer Science with a specialism in Data Analytics',
+        displayTitle: 'Bachelor of Degree in Computer Science (Data Analytics Specialism)',
+        cardTitle: 'BACHELOR OF DEGREE\nIN COMPUTER SCIENCE\n(Data Analytics Specialism)',
+        cardHeading: 'BACHELOR OF DEGREE\nIN COMPUTER SCIENCE', cardSpecialism: '(Data Analytics Specialism)',
+        organization: 'Asia Pacific University', period: 'Expected June 2027',
+        description: 'Final results received · CGPA: 3.36',
+      },
+      {
+        id: 'diploma-information-technology', category: 'EDUCATION', title: 'Diploma in Information Technology (Software Engineering)',
+        displayTitle: 'Diploma in IT (Software Engineer Specialism)',
+        cardTitle: 'DIPLOMA IN IT\n(Software Engineer Specialism)',
+        cardHeading: 'DIPLOMA IN IT', cardSpecialism: '(Software Engineer Specialism)',
+        organization: 'Asia Pacific University', period: 'Graduated 2024',
+        description: 'CGPA: 3.68',
+      },
+    ],
+  },
+  contact: {
+    id: 'contact', label: '06 / CONTACT', title: 'Let’s connect',
+    description: 'Open to jobs and freelance opportunities. Get in touch by email, phone, or WhatsApp, or explore my work on GitHub.',
+    email: 'Damienckj5993@gmail.com',
+    phone: '+60 10-229 5993',
+    links: [
+      { id: 'email', label: 'Damienckj5993@gmail.com', href: 'mailto:Damienckj5993@gmail.com' },
+      { id: 'phone', label: '+60 10-229 5993', href: 'tel:+60102295993' },
+      { id: 'whatsapp', label: 'Message me on WhatsApp', href: 'https://wa.me/60102295993' },
+      { id: 'github', label: 'Visit my GitHub', href: 'https://github.com/DamienCKj2812' },
+    ],
+  },
+}

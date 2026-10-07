@@ -1,0 +1,172 @@
+[
+  {
+    "id": 0,
+    "actor": "City NPC \u2022 Walker 00",
+    "startFrame": 110,
+    "endFrame": 300,
+    "distance": 11.0,
+    "base": [
+      -16.0,
+      -10.0,
+      0.0
+    ],
+    "end": [
+      -5.0,
+      -10.0,
+      0.0
+    ]
+  },
+  {
+    "id": 1,
+    "actor": "City NPC \u2022 Walker 01",
+    "startFrame": 90,
+    "endFrame": 290,
+    "distance": 11.0,
+    "base": [
+      -5.0,
+      -18.0,
+      0.0
+    ],
+    "end": [
+      -16.0,
+      -18.0,
+      0.0
+    ]
+  },
+  {
+    "id": 2,
+    "actor": "City NPC \u2022 Walker 02",
+    "startFrame": 130,
+    "endFrame": 340,
+    "distance": 12.0,
+    "base": [
+      -8.0,
+      -20.0,
+      0.0
+    ],
+    "end": [
+      -8.0,
+      -8.0,
+      0.0
+    ]
+  },
+  {
+    "id": 3,
+    "actor": "City NPC \u2022 Walker 03",
+    "startFrame": 200,
+    "endFrame": 410,
+    "distance": 12.0,
+    "base": [
+      -12.0,
+      -8.0,
+      0.0
+    ],
+    "end": [
+      -12.0,
+      -20.0,
+      0.0
+    ]
+  },
+  {
+    "id": 4,
+    "actor": "City NPC \u2022 Walker 04",
+    "startFrame": 150,
+    "endFrame": 350,
+    "distance": 12.0,
+    "base": [
+      -4.0,
+      -20.0,
+      0.0
+    ],
+    "end": [
+      -4.0,
+      -8.0,
+      0.0
+    ]
+  },
+  {
+    "id": 5,
+    "actor": "City NPC \u2022 Walker 05",
+    "startFrame": 130,
+    "endFrame": 340,
+    "distance": 11.0,
+    "base": [
+      5.0,
+      -10.0,
+      0.0
+    ],
+    "end": [
+      16.0,
+      -10.0,
+      0.0
+    ]
+  },
+  {
+    "id": 6,
+    "actor": "City NPC \u2022 Walker 06",
+    "startFrame": 95,
+    "endFrame": 315,
+    "distance": 11.0,
+    "base": [
+      16.0,
+      -18.0,
+      0.0
+    ],
+    "end": [
+      5.0,
+      -18.0,
+      0.0
+    ]
+  },
+  {
+    "id": 7,
+    "actor": "City NPC \u2022 Walker 07",
+    "startFrame": 120,
+    "endFrame": 340,
+    "distance": 12.0,
+    "base": [
+      8.0,
+      -20.0,
+      0.0
+    ],
+    "end": [
+      8.0,
+      -8.0,
+      0.0
+    ]
+  },
+  {
+    "id": 8,
+    "actor": "City NPC \u2022 Walker 08",
+    "startFrame": 170,
+    "endFrame": 370,
+    "distance": 12.0,
+    "base": [
+      12.0,
+      -8.0,
+      0.0
+    ],
+    "end": [
+      12.0,
+      -20.0,
+      0.0
+    ]
+  },
+  {
+    "id": 9,
+    "actor": "City NPC \u2022 Walker 09",
+    "startFrame": 150,
+    "endFrame": 390,
+    "distance": 12.0,
+    "base": [
+      17.0,
+      -20.0,
+      0.0
+    ],
+    "end": [
+      17.0,
+      -8.0,
+      0.0
+    ]
+  }
+]

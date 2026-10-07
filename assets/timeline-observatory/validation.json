@@ -1,0 +1,33 @@
+{
+  "scene": "TIMELINE OBSERVATORY / My Journey So Far",
+  "npcCount": 0,
+  "milestones": 6,
+  "cosmicBanners": 0,
+  "observationWindows": 4,
+  "roofWindows": 1,
+  "exteriorPlanets": 5,
+  "planetVariants": [
+    "banded",
+    "cratered",
+    "geodesic",
+    "ringed"
+  ],
+  "architecturalWallRibs": 8,
+  "recessedWallLights": 16,
+  "diameterMeters": 25,
+  "oculusRadiusMeters": 6.6,
+  "globeLoopFrames": 1200,
+  "objects": 563,
+  "floorSlabs": 60,
+  "floorInlays": 31,
+  "floorJointWidthMeters": 0.008,
+  "floorHUDSystems": 0,
+  "dottedFloorPanels": 24,
+  "authoredMeshVertices": 15386,
+  "authoredMeshPolygons": 5664,
+  "instancedPoints": 8856,
+  "curveSegments": 13604,
+  "modelBytes": 1369604,
+  "externalDependencies": 0,
+  "validation": "passed"
+}

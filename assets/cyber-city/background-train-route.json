@@ -1,0 +1,36 @@
+{
+  "actor": "Background transit \u2022 maglev train",
+  "route": [
+    [
+      -1000,
+      7,
+      7.6
+    ],
+    [
+      1000,
+      7,
+      7.6
+    ]
+  ],
+  "motion": {
+    "startFrame": 1,
+    "endFrame": 450,
+    "mode": "one-way",
+    "passFrames": 2000,
+    "resetFrames": 60,
+    "phase": 1020
+  },
+  "autonomous": true,
+  "carriages": 3,
+  "clonedNativeParts": 154,
+  "guideRailSegments": 2,
+  "offscreenEndpointChecks": {
+    "cameraFrames": 450,
+    "viewportAspects": [
+      0.5,
+      1.6,
+      4.5,
+      8.0
+    ]
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "line_segments": 1154,
+  "fixtures": 37,
+  "labels": 9,
+  "reflection": {
+    "width": 100,
+    "depth": 70,
+    "position": [
+      0,
+      -30,
+      -0.012
+    ],
+    "strength": 0.22,
+    "paving": true
+  }
+}

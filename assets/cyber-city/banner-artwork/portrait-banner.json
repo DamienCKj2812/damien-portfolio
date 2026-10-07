@@ -1,0 +1,25 @@
+{
+  "source": "banner-artwork/portrait-source.png",
+  "suppliedFilename": "cyborg-long-banner.png",
+  "sourceSize": [
+    724,
+    2172
+  ],
+  "sourceBytes": 2795139,
+  "sourceSha256": "abfa933d1ffda7d7c9ff2e8cd79ecfc8a3294082870a37fc460c05727e2bf76e",
+  "cropBox": [
+    148,
+    0,
+    575,
+    2172
+  ],
+  "fit": "center crop to existing 5.6 \u00d7 28.5 m display; no stretching",
+  "output": "textures-monochrome/portrait.jpg",
+  "outputSize": [
+    402,
+    2048
+  ],
+  "outputBytes": 307203,
+  "jpegQuality": 92,
+  "outputSha256": "c574be3a227700e14a29d5dd6f08beaeb503d9e2a9b9e2946440543de7774010"
+}

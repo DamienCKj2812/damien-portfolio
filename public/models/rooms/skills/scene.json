@@ -1,0 +1,4119 @@
+{
+  "version": 3,
+  "level": "skills",
+  "label": "Skills gallery",
+  "geometry": "geometry.bin",
+  "animation": "animation.bin",
+  "assetHash": "80222344eef1",
+  "frameStart": 1,
+  "frameEnd": 959,
+  "fps": 30,
+  "channelStride": 12,
+  "channelCount": 91,
+  "channels": [
+    "Gallery \u2022 Guided walk / free-look camera",
+    "Gallery \u2022 01 / exploring exhibits and AT-AT / foot_L",
+    "Gallery \u2022 01 / exploring exhibits and AT-AT / foot_R",
+    "Gallery \u2022 01 / exploring exhibits and AT-AT / forearm_L",
+    "Gallery \u2022 01 / exploring exhibits and AT-AT / forearm_R",
+    "Gallery \u2022 01 / exploring exhibits and AT-AT / hand_L",
+    "Gallery \u2022 01 / exploring exhibits and AT-AT / hand_R",
+    "Gallery \u2022 01 / exploring exhibits and AT-AT / head",
+    "Gallery \u2022 01 / exploring exhibits and AT-AT / pelvis",
+    "Gallery \u2022 01 / exploring exhibits and AT-AT / shin_L",
+    "Gallery \u2022 01 / exploring exhibits and AT-AT / shin_R",
+    "Gallery \u2022 01 / exploring exhibits and AT-AT / thigh_L",
+    "Gallery \u2022 01 / exploring exhibits and AT-AT / thigh_R",
+    "Gallery \u2022 01 / exploring exhibits and AT-AT / torso",
+    "Gallery \u2022 01 / exploring exhibits and AT-AT / upper_arm_L",
+    "Gallery \u2022 01 / exploring exhibits and AT-AT / upper_arm_R",
+    "Gallery \u2022 02 / circling the walker / foot_L",
+    "Gallery \u2022 02 / circling the walker / foot_R",
+    "Gallery \u2022 02 / circling the walker / forearm_L",
+    "Gallery \u2022 02 / circling the walker / forearm_R",
+    "Gallery \u2022 02 / circling the walker / hand_L",
+    "Gallery \u2022 02 / circling the walker / hand_R",
+    "Gallery \u2022 02 / circling the walker / head",
+    "Gallery \u2022 02 / circling the walker / pelvis",
+    "Gallery \u2022 02 / circling the walker / shin_L",
+    "Gallery \u2022 02 / circling the walker / shin_R",
+    "Gallery \u2022 02 / circling the walker / thigh_L",
+    "Gallery \u2022 02 / circling the walker / thigh_R",
+    "Gallery \u2022 02 / circling the walker / torso",
+    "Gallery \u2022 02 / circling the walker / upper_arm_L",
+    "Gallery \u2022 02 / circling the walker / upper_arm_R",
+    "Gallery \u2022 03 / strolling between left exhibits / foot_L",
+    "Gallery \u2022 03 / strolling between left exhibits / foot_R",
+    "Gallery \u2022 03 / strolling between left exhibits / forearm_L",
+    "Gallery \u2022 03 / strolling between left exhibits / forearm_R",
+    "Gallery \u2022 03 / strolling between left exhibits / hand_L",
+    "Gallery \u2022 03 / strolling between left exhibits / hand_R",
+    "Gallery \u2022 03 / strolling between left exhibits / head",
+    "Gallery \u2022 03 / strolling between left exhibits / pelvis",
+    "Gallery \u2022 03 / strolling between left exhibits / shin_L",
+    "Gallery \u2022 03 / strolling between left exhibits / shin_R",
+    "Gallery \u2022 03 / strolling between left exhibits / thigh_L",
+    "Gallery \u2022 03 / strolling between left exhibits / thigh_R",
+    "Gallery \u2022 03 / strolling between left exhibits / torso",
+    "Gallery \u2022 03 / strolling between left exhibits / upper_arm_L",
+    "Gallery \u2022 03 / strolling between left exhibits / upper_arm_R",
+    "Gallery \u2022 04 / strolling between right exhibits / foot_L",
+    "Gallery \u2022 04 / strolling between right exhibits / foot_R",
+    "Gallery \u2022 04 / strolling between right exhibits / forearm_L",
+    "Gallery \u2022 04 / strolling between right exhibits / forearm_R",
+    "Gallery \u2022 04 / strolling between right exhibits / hand_L",
+    "Gallery \u2022 04 / strolling between right exhibits / hand_R",
+    "Gallery \u2022 04 / strolling between right exhibits / head",
+    "Gallery \u2022 04 / strolling between right exhibits / pelvis",
+    "Gallery \u2022 04 / strolling between right exhibits / shin_L",
+    "Gallery \u2022 04 / strolling between right exhibits / shin_R",
+    "Gallery \u2022 04 / strolling between right exhibits / thigh_L",
+    "Gallery \u2022 04 / strolling between right exhibits / thigh_R",
+    "Gallery \u2022 04 / strolling between right exhibits / torso",
+    "Gallery \u2022 04 / strolling between right exhibits / upper_arm_L",
+    "Gallery \u2022 04 / strolling between right exhibits / upper_arm_R",
+    "Gallery \u2022 05 / discussing the AT-AT / foot_L",
+    "Gallery \u2022 05 / discussing the AT-AT / foot_R",
+    "Gallery \u2022 05 / discussing the AT-AT / forearm_L",
+    "Gallery \u2022 05 / discussing the AT-AT / forearm_R",
+    "Gallery \u2022 05 / discussing the AT-AT / hand_L",
+    "Gallery \u2022 05 / discussing the AT-AT / hand_R",
+    "Gallery \u2022 05 / discussing the AT-AT / head",
+    "Gallery \u2022 05 / discussing the AT-AT / pelvis",
+    "Gallery \u2022 05 / discussing the AT-AT / shin_L",
+    "Gallery \u2022 05 / discussing the AT-AT / shin_R",
+    "Gallery \u2022 05 / discussing the AT-AT / thigh_L",
+    "Gallery \u2022 05 / discussing the AT-AT / thigh_R",
+    "Gallery \u2022 05 / discussing the AT-AT / torso",
+    "Gallery \u2022 05 / discussing the AT-AT / upper_arm_L",
+    "Gallery \u2022 05 / discussing the AT-AT / upper_arm_R",
+    "Gallery \u2022 06 / listening beside the sculpture / foot_L",
+    "Gallery \u2022 06 / listening beside the sculpture / foot_R",
+    "Gallery \u2022 06 / listening beside the sculpture / forearm_L",
+    "Gallery \u2022 06 / listening beside the sculpture / forearm_R",
+    "Gallery \u2022 06 / listening beside the sculpture / hand_L",
+    "Gallery \u2022 06 / listening beside the sculpture / hand_R",
+    "Gallery \u2022 06 / listening beside the sculpture / head",
+    "Gallery \u2022 06 / listening beside the sculpture / pelvis",
+    "Gallery \u2022 06 / listening beside the sculpture / shin_L",
+    "Gallery \u2022 06 / listening beside the sculpture / shin_R",
+    "Gallery \u2022 06 / listening beside the sculpture / thigh_L",
+    "Gallery \u2022 06 / listening beside the sculpture / thigh_R",
+    "Gallery \u2022 06 / listening beside the sculpture / torso",
+    "Gallery \u2022 06 / listening beside the sculpture / upper_arm_L",
+    "Gallery \u2022 06 / listening beside the sculpture / upper_arm_R"
+  ],
+  "actors": [
+    {
+      "index": 1,
+      "name": "Gallery \u2022 01 / exploring exhibits and AT-AT / foot_L",
+      "style": "room",
+      "morphCount": 0
+    },
+    {
+      "index": 2,
+      "name": "Gallery \u2022 01 / exploring exhibits and AT-AT / foot_R",
+      "style": "room",
+      "morphCount": 0
+    },
+    {
+      "index": 3,
+      "name": "Gallery \u2022 01 / exploring exhibits and AT-AT / forearm_L",
+      "style": "room",
+      "morphCount": 0
+    },
+    {
+      "index": 4,
+      "name": "Gallery \u2022 01 / exploring exhibits and AT-AT / forearm_R",
+      "style": "room",
+      "morphCount": 0
+    },
+    {
+      "index": 5,
+      "name": "Gallery \u2022 01 / exploring exhibits and AT-AT / hand_L",
+      "style": "room",
+      "morphCount": 0
+    },
+    {
+      "index": 6,
+      "name": "Gallery \u2022 01 / exploring exhibits and AT-AT / hand_R",
+      "style": "room",
+      "morphCount": 0
+    },
+    {
+      "index": 7,
+      "name": "Gallery \u2022 01 / exploring exhibits and AT-AT / head",
+      "style": "room",
+      "morphCount": 0
+    },
+    {
+      "index": 8,
+      "name": "Gallery \u2022 01 / exploring exhibits and AT-AT / pelvis",
+      "style": "room",
+      "morphCount": 0
+    },
+    {
+      "index": 9,
+      "name": "Gallery \u2022 01 / exploring exhibits and AT-AT / shin_L",
+      "style": "room",
+      "morphCount": 0
+    },
+    {
+      "index": 10,
+      "name": "Gallery \u2022 01 / exploring exhibits and AT-AT / shin_R",
+      "style": "room",
+      "morphCount": 0
+    },
+    {
+      "index": 11,
+      "name": "Gallery \u2022 01 / exploring exhibits and AT-AT / thigh_L",
+      "style": "room",
+      "morphCount": 0
+    },
+    {
+      "index": 12,
+      "name": "Gallery \u2022 01 / exploring exhibits and AT-AT / thigh_R",
+      "style": "room",
+      "morphCount": 0
+    },
+    {
+      "index": 13,
+      "name": "Gallery \u2022 01 / exploring exhibits and AT-AT / torso",
+      "style": "room",
+      "morphCount": 0
+    },
+    {
+      "index": 14,
+      "name": "Gallery \u2022 01 / exploring exhibits and AT-AT / upper_arm_L",
+      "style": "room",
+      "morphCount": 0
+    },
+    {
+      "index": 15,
+      "name": "Gallery \u2022 01 / exploring exhibits and AT-AT / upper_arm_R",
+      "style": "room",
+      "morphCount": 0
+    },
+    {
+      "index": 16,
+      "name": "Gallery \u2022 02 / circling the walker / foot_L",
+      "style": "room",
+      "morphCount": 0
+    },
+    {
+      "index": 17,
+      "name": "Gallery \u2022 02 / circling the walker / foot_R",
+      "style": "room",
+      "morphCount": 0
+    },
+    {
+      "index": 18,
+      "name": "Gallery \u2022 02 / circling the walker / forearm_L",
+      "style": "room",
+      "morphCount": 0
+    },
+    {
+      "index": 19,
+      "name": "Gallery \u2022 02 / circling the walker / forearm_R",
+      "style": "room",
+      "morphCount": 0
+    },
+    {
+      "index": 20,
+      "name": "Gallery \u2022 02 / circling the walker / hand_L",
+      "style": "room",
+      "morphCount": 0
+    },
+    {
+      "index": 21,
+      "name": "Gallery \u2022 02 / circling the walker / hand_R",
+      "style": "room",
+      "morphCount": 0
+    },
+    {
+      "index": 22,
+      "name": "Gallery \u2022 02 / circling the walker / head",
+      "style": "room",
+      "morphCount": 0
+    },
+    {
+      "index": 23,
+      "name": "Gallery \u2022 02 / circling the walker / pelvis",
+      "style": "room",
+      "morphCount": 0
+    },
+    {
+      "index": 24,
+      "name": "Gallery \u2022 02 / circling the walker / shin_L",
+      "style": "room",
+      "morphCount": 0
+    },
+    {
+      "index": 25,
+      "name": "Gallery \u2022 02 / circling the walker / shin_R",
+      "style": "room",
+      "morphCount": 0
+    },
+    {
+      "index": 26,
+      "name": "Gallery \u2022 02 / circling the walker / thigh_L",
+      "style": "room",
+      "morphCount": 0
+    },
+    {
+      "index": 27,
+      "name": "Gallery \u2022 02 / circling the walker / thigh_R",
+      "style": "room",
+      "morphCount": 0
+    },
+    {
+      "index": 28,
+      "name": "Gallery \u2022 02 / circling the walker / torso",
+      "style": "room",
+      "morphCount": 0
+    },
+    {
+      "index": 29,
+      "name": "Gallery \u2022 02 / circling the walker / upper_arm_L",
+      "style": "room",
+      "morphCount": 0
+    },
+    {
+      "index": 30,
+      "name": "Gallery \u2022 02 / circling the walker / upper_arm_R",
+      "style": "room",
+      "morphCount": 0
+    },
+    {
+      "index": 31,
+      "name": "Gallery \u2022 03 / strolling between left exhibits / foot_L",
+      "style": "room",
+      "morphCount": 0
+    },
+    {
+      "index": 32,
+      "name": "Gallery \u2022 03 / strolling between left exhibits / foot_R",
+      "style": "room",
+      "morphCount": 0
+    },
+    {
+      "index": 33,
+      "name": "Gallery \u2022 03 / strolling between left exhibits / forearm_L",
+      "style": "room",
+      "morphCount": 0
+    },
+    {
+      "index": 34,
+      "name": "Gallery \u2022 03 / strolling between left exhibits / forearm_R",
+      "style": "room",
+      "morphCount": 0
+    },
+    {
+      "index": 35,
+      "name": "Gallery \u2022 03 / strolling between left exhibits / hand_L",
+      "style": "room",
+      "morphCount": 0
+    },
+    {
+      "index": 36,
+      "name": "Gallery \u2022 03 / strolling between left exhibits / hand_R",
+      "style": "room",
+      "morphCount": 0
+    },
+    {
+      "index": 37,
+      "name": "Gallery \u2022 03 / strolling between left exhibits / head",
+      "style": "room",
+      "morphCount": 0
+    },
+    {
+      "index": 38,
+      "name": "Gallery \u2022 03 / strolling between left exhibits / pelvis",
+      "style": "room",
+      "morphCount": 0
+    },
+    {
+      "index": 39,
+      "name": "Gallery \u2022 03 / strolling between left exhibits / shin_L",
+      "style": "room",
+      "morphCount": 0
+    },
+    {
+      "index": 40,
+      "name": "Gallery \u2022 03 / strolling between left exhibits / shin_R",
+      "style": "room",
+      "morphCount": 0
+    },
+    {
+      "index": 41,
+      "name": "Gallery \u2022 03 / strolling between left exhibits / thigh_L",
+      "style": "room",
+      "morphCount": 0
+    },
+    {
+      "index": 42,
+      "name": "Gallery \u2022 03 / strolling between left exhibits / thigh_R",
+      "style": "room",
+      "morphCount": 0
+    },
+    {
+      "index": 43,
+      "name": "Gallery \u2022 03 / strolling between left exhibits / torso",
+      "style": "room",
+      "morphCount": 0
+    },
+    {
+      "index": 44,
+      "name": "Gallery \u2022 03 / strolling between left exhibits / upper_arm_L",
+      "style": "room",
+      "morphCount": 0
+    },
+    {
+      "index": 45,
+      "name": "Gallery \u2022 03 / strolling between left exhibits / upper_arm_R",
+      "style": "room",
+      "morphCount": 0
+    },
+    {
+      "index": 46,
+      "name": "Gallery \u2022 04 / strolling between right exhibits / foot_L",
+      "style": "room",
+      "morphCount": 0
+    },
+    {
+      "index": 47,
+      "name": "Gallery \u2022 04 / strolling between right exhibits / foot_R",
+      "style": "room",
+      "morphCount": 0
+    },
+    {
+      "index": 48,
+      "name": "Gallery \u2022 04 / strolling between right exhibits / forearm_L",
+      "style": "room",
+      "morphCount": 0
+    },
+    {
+      "index": 49,
+      "name": "Gallery \u2022 04 / strolling between right exhibits / forearm_R",
+      "style": "room",
+      "morphCount": 0
+    },
+    {
+      "index": 50,
+      "name": "Gallery \u2022 04 / strolling between right exhibits / hand_L",
+      "style": "room",
+      "morphCount": 0
+    },
+    {
+      "index": 51,
+      "name": "Gallery \u2022 04 / strolling between right exhibits / hand_R",
+      "style": "room",
+      "morphCount": 0
+    },
+    {
+      "index": 52,
+      "name": "Gallery \u2022 04 / strolling between right exhibits / head",
+      "style": "room",
+      "morphCount": 0
+    },
+    {
+      "index": 53,
+      "name": "Gallery \u2022 04 / strolling between right exhibits / pelvis",
+      "style": "room",
+      "morphCount": 0
+    },
+    {
+      "index": 54,
+      "name": "Gallery \u2022 04 / strolling between right exhibits / shin_L",
+      "style": "room",
+      "morphCount": 0
+    },
+    {
+      "index": 55,
+      "name": "Gallery \u2022 04 / strolling between right exhibits / shin_R",
+      "style": "room",
+      "morphCount": 0
+    },
+    {
+      "index": 56,
+      "name": "Gallery \u2022 04 / strolling between right exhibits / thigh_L",
+      "style": "room",
+      "morphCount": 0
+    },
+    {
+      "index": 57,
+      "name": "Gallery \u2022 04 / strolling between right exhibits / thigh_R",
+      "style": "room",
+      "morphCount": 0
+    },
+    {
+      "index": 58,
+      "name": "Gallery \u2022 04 / strolling between right exhibits / torso",
+      "style": "room",
+      "morphCount": 0
+    },
+    {
+      "index": 59,
+      "name": "Gallery \u2022 04 / strolling between right exhibits / upper_arm_L",
+      "style": "room",
+      "morphCount": 0
+    },
+    {
+      "index": 60,
+      "name": "Gallery \u2022 04 / strolling between right exhibits / upper_arm_R",
+      "style": "room",
+      "morphCount": 0
+    },
+    {
+      "index": 61,
+      "name": "Gallery \u2022 05 / discussing the AT-AT / foot_L",
+      "style": "room",
+      "morphCount": 0
+    },
+    {
+      "index": 62,
+      "name": "Gallery \u2022 05 / discussing the AT-AT / foot_R",
+      "style": "room",
+      "morphCount": 0
+    },
+    {
+      "index": 63,
+      "name": "Gallery \u2022 05 / discussing the AT-AT / forearm_L",
+      "style": "room",
+      "morphCount": 0
+    },
+    {
+      "index": 64,
+      "name": "Gallery \u2022 05 / discussing the AT-AT / forearm_R",
+      "style": "room",
+      "morphCount": 0
+    },
+    {
+      "index": 65,
+      "name": "Gallery \u2022 05 / discussing the AT-AT / hand_L",
+      "style": "room",
+      "morphCount": 0
+    },
+    {
+      "index": 66,
+      "name": "Gallery \u2022 05 / discussing the AT-AT / hand_R",
+      "style": "room",
+      "morphCount": 0
+    },
+    {
+      "index": 67,
+      "name": "Gallery \u2022 05 / discussing the AT-AT / head",
+      "style": "room",
+      "morphCount": 0
+    },
+    {
+      "index": 68,
+      "name": "Gallery \u2022 05 / discussing the AT-AT / pelvis",
+      "style": "room",
+      "morphCount": 0
+    },
+    {
+      "index": 69,
+      "name": "Gallery \u2022 05 / discussing the AT-AT / shin_L",
+      "style": "room",
+      "morphCount": 0
+    },
+    {
+      "index": 70,
+      "name": "Gallery \u2022 05 / discussing the AT-AT / shin_R",
+      "style": "room",
+      "morphCount": 0
+    },
+    {
+      "index": 71,
+      "name": "Gallery \u2022 05 / discussing the AT-AT / thigh_L",
+      "style": "room",
+      "morphCount": 0
+    },
+    {
+      "index": 72,
+      "name": "Gallery \u2022 05 / discussing the AT-AT / thigh_R",
+      "style": "room",
+      "morphCount": 0
+    },
+    {
+      "index": 73,
+      "name": "Gallery \u2022 05 / discussing the AT-AT / torso",
+      "style": "room",
+      "morphCount": 0
+    },
+    {
+      "index": 74,
+      "name": "Gallery \u2022 05 / discussing the AT-AT / upper_arm_L",
+      "style": "room",
+      "morphCount": 0
+    },
+    {
+      "index": 75,
+      "name": "Gallery \u2022 05 / discussing the AT-AT / upper_arm_R",
+      "style": "room",
+      "morphCount": 0
+    },
+    {
+      "index": 76,
+      "name": "Gallery \u2022 06 / listening beside the sculpture / foot_L",
+      "style": "room",
+      "morphCount": 0
+    },
+    {
+      "index": 77,
+      "name": "Gallery \u2022 06 / listening beside the sculpture / foot_R",
+      "style": "room",
+      "morphCount": 0
+    },
+    {
+      "index": 78,
+      "name": "Gallery \u2022 06 / listening beside the sculpture / forearm_L",
+      "style": "room",
+      "morphCount": 0
+    },
+    {
+      "index": 79,
+      "name": "Gallery \u2022 06 / listening beside the sculpture / forearm_R",
+      "style": "room",
+      "morphCount": 0
+    },
+    {
+      "index": 80,
+      "name": "Gallery \u2022 06 / listening beside the sculpture / hand_L",
+      "style": "room",
+      "morphCount": 0
+    },
+    {
+      "index": 81,
+      "name": "Gallery \u2022 06 / listening beside the sculpture / hand_R",
+      "style": "room",
+      "morphCount": 0
+    },
+    {
+      "index": 82,
+      "name": "Gallery \u2022 06 / listening beside the sculpture / head",
+      "style": "room",
+      "morphCount": 0
+    },
+    {
+      "index": 83,
+      "name": "Gallery \u2022 06 / listening beside the sculpture / pelvis",
+      "style": "room",
+      "morphCount": 0
+    },
+    {
+      "index": 84,
+      "name": "Gallery \u2022 06 / listening beside the sculpture / shin_L",
+      "style": "room",
+      "morphCount": 0
+    },
+    {
+      "index": 85,
+      "name": "Gallery \u2022 06 / listening beside the sculpture / shin_R",
+      "style": "room",
+      "morphCount": 0
+    },
+    {
+      "index": 86,
+      "name": "Gallery \u2022 06 / listening beside the sculpture / thigh_L",
+      "style": "room",
+      "morphCount": 0
+    },
+    {
+      "index": 87,
+      "name": "Gallery \u2022 06 / listening beside the sculpture / thigh_R",
+      "style": "room",
+      "morphCount": 0
+    },
+    {
+      "index": 88,
+      "name": "Gallery \u2022 06 / listening beside the sculpture / torso",
+      "style": "room",
+      "morphCount": 0
+    },
+    {
+      "index": 89,
+      "name": "Gallery \u2022 06 / listening beside the sculpture / upper_arm_L",
+      "style": "room",
+      "morphCount": 0
+    },
+    {
+      "index": 90,
+      "name": "Gallery \u2022 06 / listening beside the sculpture / upper_arm_R",
+      "style": "room",
+      "morphCount": 0
+    }
+  ],
+  "camera": {
+    "verticalFov": 73.73979529168804,
+    "sourceAspect": 1.3333333333333333,
+    "near": 0.01,
+    "far": 350,
+    "fovOffset": 10
+  },
+  "cameras": {
+    "main": {
+      "position": [
+        0.0,
+        -6.599999904632568,
+        1.7000000476837158
+      ],
+      "quaternion": [
+        0.7071067690849304,
+        0.0,
+        0.0,
+        0.7071067690849304
+      ],
+      "fov": 73.73979529168804
+    },
+    "atat": {
+      "position": [
+        -5.199999809265137,
+        -4.25,
+        3.0999999046325684
+      ],
+      "quaternion": [
+        0.6437669992446899,
+        -0.17642070353031158,
+        -0.1967993527650833,
+        0.7181294560432434
+      ],
+      "fov": 54.879455896398625
+    }
+  },
+  "entranceAnchor": [
+    0,
+    -7,
+    0
+  ],
+  "textures": [],
+  "groups": [
+    {
+      "actor": 0,
+      "kind": "glow",
+      "byteOffset": 0,
+      "floatCount": 376,
+      "vertexCount": 94,
+      "stride": 4,
+      "role": null,
+      "id": null,
+      "opacity": 1.0
+    },
+    {
+      "actor": 0,
+      "kind": "lines",
+      "byteOffset": 1504,
+      "floatCount": 7096,
+      "vertexCount": 1774,
+      "stride": 4,
+      "role": null,
+      "id": null,
+      "opacity": 1.0
+    },
+    {
+      "actor": 0,
+      "kind": "lines",
+      "byteOffset": 29888,
+      "floatCount": 46936,
+      "vertexCount": 11734,
+      "stride": 4,
+      "role": "exhibit",
+      "id": "atat",
+      "opacity": 1.0
+    },
+    {
+      "actor": 0,
+      "kind": "points",
+      "byteOffset": 217632,
+      "floatCount": 7000,
+      "vertexCount": 1400,
+      "stride": 5,
+      "role": null,
+      "id": null,
+      "opacity": 1.0
+    },
+    {
+      "actor": 0,
+      "kind": "solid",
+      "byteOffset": 245632,
+      "floatCount": 858900,
+      "vertexCount": 214725,
+      "stride": 4,
+      "role": null,
+      "id": null,
+      "opacity": 1.0
+    },
+    {
+      "actor": 0,
+      "kind": "solid",
+      "byteOffset": 3681232,
+      "floatCount": 30480,
+      "vertexCount": 7620,
+      "stride": 4,
+      "role": "exhibit",
+      "id": "atat",
+      "opacity": 1.0
+    },
+    {
+      "actor": 0,
+      "kind": "solid",
+      "byteOffset": 3803152,
+      "floatCount": 24,
+      "vertexCount": 6,
+      "stride": 4,
+      "role": "exhibit",
+      "id": "skill-01",
+      "opacity": 1.0
+    },
+    {
+      "actor": 0,
+      "kind": "solid",
+      "byteOffset": 3803248,
+      "floatCount": 24,
+      "vertexCount": 6,
+      "stride": 4,
+      "role": "exhibit",
+      "id": "skill-02",
+      "opacity": 1.0
+    },
+    {
+      "actor": 0,
+      "kind": "solid",
+      "byteOffset": 3803344,
+      "floatCount": 24,
+      "vertexCount": 6,
+      "stride": 4,
+      "role": "exhibit",
+      "id": "skill-03",
+      "opacity": 1.0
+    },
+    {
+      "actor": 0,
+      "kind": "solid",
+      "byteOffset": 3803440,
+      "floatCount": 24,
+      "vertexCount": 6,
+      "stride": 4,
+      "role": "exhibit",
+      "id": "skill-04",
+      "opacity": 1.0
+    },
+    {
+      "actor": 0,
+      "kind": "solid",
+      "byteOffset": 3803536,
+      "floatCount": 24,
+      "vertexCount": 6,
+      "stride": 4,
+      "role": "exhibit",
+      "id": "skill-05",
+      "opacity": 1.0
+    },
+    {
+      "actor": 0,
+      "kind": "solid",
+      "byteOffset": 3803632,
+      "floatCount": 24,
+      "vertexCount": 6,
+      "stride": 4,
+      "role": "exhibit",
+      "id": "skill-06",
+      "opacity": 1.0
+    },
+    {
+      "actor": 0,
+      "kind": "solid",
+      "byteOffset": 3803728,
+      "floatCount": 24,
+      "vertexCount": 6,
+      "stride": 4,
+      "role": "exhibit",
+      "id": "skill-07",
+      "opacity": 1.0
+    },
+    {
+      "actor": 0,
+      "kind": "solid",
+      "byteOffset": 3803824,
+      "floatCount": 24,
+      "vertexCount": 6,
+      "stride": 4,
+      "role": "exhibit",
+      "id": "skill-08",
+      "opacity": 1.0
+    },
+    {
+      "actor": 0,
+      "kind": "solid",
+      "byteOffset": 3803920,
+      "floatCount": 24,
+      "vertexCount": 6,
+      "stride": 4,
+      "role": "exhibit",
+      "id": "skill-09",
+      "opacity": 1.0
+    },
+    {
+      "actor": 1,
+      "kind": "points",
+      "byteOffset": 3804016,
+      "floatCount": 475,
+      "vertexCount": 95,
+      "stride": 5,
+      "role": null,
+      "id": null,
+      "opacity": 1.0
+    },
+    {
+      "actor": 2,
+      "kind": "points",
+      "byteOffset": 3805916,
+      "floatCount": 475,
+      "vertexCount": 95,
+      "stride": 5,
+      "role": null,
+      "id": null,
+      "opacity": 1.0
+    },
+    {
+      "actor": 3,
+      "kind": "points",
+      "byteOffset": 3807816,
+      "floatCount": 725,
+      "vertexCount": 145,
+      "stride": 5,
+      "role": null,
+      "id": null,
+      "opacity": 1.0
+    },
+    {
+      "actor": 4,
+      "kind": "points",
+      "byteOffset": 3810716,
+      "floatCount": 725,
+      "vertexCount": 145,
+      "stride": 5,
+      "role": null,
+      "id": null,
+      "opacity": 1.0
+    },
+    {
+      "actor": 5,
+      "kind": "points",
+      "byteOffset": 3813616,
+      "floatCount": 325,
+      "vertexCount": 65,
+      "stride": 5,
+      "role": null,
+      "id": null,
+      "opacity": 1.0
+    },
+    {
+      "actor": 6,
+      "kind": "points",
+      "byteOffset": 3814916,
+      "floatCount": 325,
+      "vertexCount": 65,
+      "stride": 5,
+      "role": null,
+      "id": null,
+      "opacity": 1.0
+    },
+    {
+      "actor": 7,
+      "kind": "points",
+      "byteOffset": 3816216,
+      "floatCount": 1325,
+      "vertexCount": 265,
+      "stride": 5,
+      "role": null,
+      "id": null,
+      "opacity": 1.0
+    },
+    {
+      "actor": 8,
+      "kind": "points",
+      "byteOffset": 3821516,
+      "floatCount": 950,
+      "vertexCount": 190,
+      "stride": 5,
+      "role": null,
+      "id": null,
+      "opacity": 1.0
+    },
+    {
+      "actor": 9,
+      "kind": "points",
+      "byteOffset": 3825316,
+      "floatCount": 1100,
+      "vertexCount": 220,
+      "stride": 5,
+      "role": null,
+      "id": null,
+      "opacity": 1.0
+    },
+    {
+      "actor": 10,
+      "kind": "points",
+      "byteOffset": 3829716,
+      "floatCount": 1100,
+      "vertexCount": 220,
+      "stride": 5,
+      "role": null,
+      "id": null,
+      "opacity": 1.0
+    },
+    {
+      "actor": 11,
+      "kind": "points",
+      "byteOffset": 3834116,
+      "floatCount": 1200,
+      "vertexCount": 240,
+      "stride": 5,
+      "role": null,
+      "id": null,
+      "opacity": 1.0
+    },
+    {
+      "actor": 12,
+      "kind": "points",
+      "byteOffset": 3838916,
+      "floatCount": 1200,
+      "vertexCount": 240,
+      "stride": 5,
+      "role": null,
+      "id": null,
+      "opacity": 1.0
+    },
+    {
+      "actor": 13,
+      "kind": "points",
+      "byteOffset": 3843716,
+      "floatCount": 2350,
+      "vertexCount": 470,
+      "stride": 5,
+      "role": null,
+      "id": null,
+      "opacity": 1.0
+    },
+    {
+      "actor": 14,
+      "kind": "points",
+      "byteOffset": 3853116,
+      "floatCount": 900,
+      "vertexCount": 180,
+      "stride": 5,
+      "role": null,
+      "id": null,
+      "opacity": 1.0
+    },
+    {
+      "actor": 15,
+      "kind": "points",
+      "byteOffset": 3856716,
+      "floatCount": 900,
+      "vertexCount": 180,
+      "stride": 5,
+      "role": null,
+      "id": null,
+      "opacity": 1.0
+    },
+    {
+      "actor": 16,
+      "kind": "points",
+      "byteOffset": 3860316,
+      "floatCount": 475,
+      "vertexCount": 95,
+      "stride": 5,
+      "role": null,
+      "id": null,
+      "opacity": 1.0
+    },
+    {
+      "actor": 17,
+      "kind": "points",
+      "byteOffset": 3862216,
+      "floatCount": 475,
+      "vertexCount": 95,
+      "stride": 5,
+      "role": null,
+      "id": null,
+      "opacity": 1.0
+    },
+    {
+      "actor": 18,
+      "kind": "points",
+      "byteOffset": 3864116,
+      "floatCount": 725,
+      "vertexCount": 145,
+      "stride": 5,
+      "role": null,
+      "id": null,
+      "opacity": 1.0
+    },
+    {
+      "actor": 19,
+      "kind": "points",
+      "byteOffset": 3867016,
+      "floatCount": 725,
+      "vertexCount": 145,
+      "stride": 5,
+      "role": null,
+      "id": null,
+      "opacity": 1.0
+    },
+    {
+      "actor": 20,
+      "kind": "points",
+      "byteOffset": 3869916,
+      "floatCount": 325,
+      "vertexCount": 65,
+      "stride": 5,
+      "role": null,
+      "id": null,
+      "opacity": 1.0
+    },
+    {
+      "actor": 21,
+      "kind": "points",
+      "byteOffset": 3871216,
+      "floatCount": 325,
+      "vertexCount": 65,
+      "stride": 5,
+      "role": null,
+      "id": null,
+      "opacity": 1.0
+    },
+    {
+      "actor": 22,
+      "kind": "points",
+      "byteOffset": 3872516,
+      "floatCount": 1325,
+      "vertexCount": 265,
+      "stride": 5,
+      "role": null,
+      "id": null,
+      "opacity": 1.0
+    },
+    {
+      "actor": 23,
+      "kind": "points",
+      "byteOffset": 3877816,
+      "floatCount": 950,
+      "vertexCount": 190,
+      "stride": 5,
+      "role": null,
+      "id": null,
+      "opacity": 1.0
+    },
+    {
+      "actor": 24,
+      "kind": "points",
+      "byteOffset": 3881616,
+      "floatCount": 1100,
+      "vertexCount": 220,
+      "stride": 5,
+      "role": null,
+      "id": null,
+      "opacity": 1.0
+    },
+    {
+      "actor": 25,
+      "kind": "points",
+      "byteOffset": 3886016,
+      "floatCount": 1100,
+      "vertexCount": 220,
+      "stride": 5,
+      "role": null,
+      "id": null,
+      "opacity": 1.0
+    },
+    {
+      "actor": 26,
+      "kind": "points",
+      "byteOffset": 3890416,
+      "floatCount": 1200,
+      "vertexCount": 240,
+      "stride": 5,
+      "role": null,
+      "id": null,
+      "opacity": 1.0
+    },
+    {
+      "actor": 27,
+      "kind": "points",
+      "byteOffset": 3895216,
+      "floatCount": 1200,
+      "vertexCount": 240,
+      "stride": 5,
+      "role": null,
+      "id": null,
+      "opacity": 1.0
+    },
+    {
+      "actor": 28,
+      "kind": "points",
+      "byteOffset": 3900016,
+      "floatCount": 2350,
+      "vertexCount": 470,
+      "stride": 5,
+      "role": null,
+      "id": null,
+      "opacity": 1.0
+    },
+    {
+      "actor": 29,
+      "kind": "points",
+      "byteOffset": 3909416,
+      "floatCount": 900,
+      "vertexCount": 180,
+      "stride": 5,
+      "role": null,
+      "id": null,
+      "opacity": 1.0
+    },
+    {
+      "actor": 30,
+      "kind": "points",
+      "byteOffset": 3913016,
+      "floatCount": 900,
+      "vertexCount": 180,
+      "stride": 5,
+      "role": null,
+      "id": null,
+      "opacity": 1.0
+    },
+    {
+      "actor": 31,
+      "kind": "points",
+      "byteOffset": 3916616,
+      "floatCount": 475,
+      "vertexCount": 95,
+      "stride": 5,
+      "role": null,
+      "id": null,
+      "opacity": 1.0
+    },
+    {
+      "actor": 32,
+      "kind": "points",
+      "byteOffset": 3918516,
+      "floatCount": 475,
+      "vertexCount": 95,
+      "stride": 5,
+      "role": null,
+      "id": null,
+      "opacity": 1.0
+    },
+    {
+      "actor": 33,
+      "kind": "points",
+      "byteOffset": 3920416,
+      "floatCount": 725,
+      "vertexCount": 145,
+      "stride": 5,
+      "role": null,
+      "id": null,
+      "opacity": 1.0
+    },
+    {
+      "actor": 34,
+      "kind": "points",
+      "byteOffset": 3923316,
+      "floatCount": 725,
+      "vertexCount": 145,
+      "stride": 5,
+      "role": null,
+      "id": null,
+      "opacity": 1.0
+    },
+    {
+      "actor": 35,
+      "kind": "points",
+      "byteOffset": 3926216,
+      "floatCount": 325,
+      "vertexCount": 65,
+      "stride": 5,
+      "role": null,
+      "id": null,
+      "opacity": 1.0
+    },
+    {
+      "actor": 36,
+      "kind": "points",
+      "byteOffset": 3927516,
+      "floatCount": 325,
+      "vertexCount": 65,
+      "stride": 5,
+      "role": null,
+      "id": null,
+      "opacity": 1.0
+    },
+    {
+      "actor": 37,
+      "kind": "points",
+      "byteOffset": 3928816,
+      "floatCount": 1325,
+      "vertexCount": 265,
+      "stride": 5,
+      "role": null,
+      "id": null,
+      "opacity": 1.0
+    },
+    {
+      "actor": 38,
+      "kind": "points",
+      "byteOffset": 3934116,
+      "floatCount": 950,
+      "vertexCount": 190,
+      "stride": 5,
+      "role": null,
+      "id": null,
+      "opacity": 1.0
+    },
+    {
+      "actor": 39,
+      "kind": "points",
+      "byteOffset": 3937916,
+      "floatCount": 1100,
+      "vertexCount": 220,
+      "stride": 5,
+      "role": null,
+      "id": null,
+      "opacity": 1.0
+    },
+    {
+      "actor": 40,
+      "kind": "points",
+      "byteOffset": 3942316,
+      "floatCount": 1100,
+      "vertexCount": 220,
+      "stride": 5,
+      "role": null,
+      "id": null,
+      "opacity": 1.0
+    },
+    {
+      "actor": 41,
+      "kind": "points",
+      "byteOffset": 3946716,
+      "floatCount": 1200,
+      "vertexCount": 240,
+      "stride": 5,
+      "role": null,
+      "id": null,
+      "opacity": 1.0
+    },
+    {
+      "actor": 42,
+      "kind": "points",
+      "byteOffset": 3951516,
+      "floatCount": 1200,
+      "vertexCount": 240,
+      "stride": 5,
+      "role": null,
+      "id": null,
+      "opacity": 1.0
+    },
+    {
+      "actor": 43,
+      "kind": "points",
+      "byteOffset": 3956316,
+      "floatCount": 2350,
+      "vertexCount": 470,
+      "stride": 5,
+      "role": null,
+      "id": null,
+      "opacity": 1.0
+    },
+    {
+      "actor": 44,
+      "kind": "points",
+      "byteOffset": 3965716,
+      "floatCount": 900,
+      "vertexCount": 180,
+      "stride": 5,
+      "role": null,
+      "id": null,
+      "opacity": 1.0
+    },
+    {
+      "actor": 45,
+      "kind": "points",
+      "byteOffset": 3969316,
+      "floatCount": 900,
+      "vertexCount": 180,
+      "stride": 5,
+      "role": null,
+      "id": null,
+      "opacity": 1.0
+    },
+    {
+      "actor": 46,
+      "kind": "points",
+      "byteOffset": 3972916,
+      "floatCount": 475,
+      "vertexCount": 95,
+      "stride": 5,
+      "role": null,
+      "id": null,
+      "opacity": 1.0
+    },
+    {
+      "actor": 47,
+      "kind": "points",
+      "byteOffset": 3974816,
+      "floatCount": 475,
+      "vertexCount": 95,
+      "stride": 5,
+      "role": null,
+      "id": null,
+      "opacity": 1.0
+    },
+    {
+      "actor": 48,
+      "kind": "points",
+      "byteOffset": 3976716,
+      "floatCount": 725,
+      "vertexCount": 145,
+      "stride": 5,
+      "role": null,
+      "id": null,
+      "opacity": 1.0
+    },
+    {
+      "actor": 49,
+      "kind": "points",
+      "byteOffset": 3979616,
+      "floatCount": 725,
+      "vertexCount": 145,
+      "stride": 5,
+      "role": null,
+      "id": null,
+      "opacity": 1.0
+    },
+    {
+      "actor": 50,
+      "kind": "points",
+      "byteOffset": 3982516,
+      "floatCount": 325,
+      "vertexCount": 65,
+      "stride": 5,
+      "role": null,
+      "id": null,
+      "opacity": 1.0
+    },
+    {
+      "actor": 51,
+      "kind": "points",
+      "byteOffset": 3983816,
+      "floatCount": 325,
+      "vertexCount": 65,
+      "stride": 5,
+      "role": null,
+      "id": null,
+      "opacity": 1.0
+    },
+    {
+      "actor": 52,
+      "kind": "points",
+      "byteOffset": 3985116,
+      "floatCount": 1325,
+      "vertexCount": 265,
+      "stride": 5,
+      "role": null,
+      "id": null,
+      "opacity": 1.0
+    },
+    {
+      "actor": 53,
+      "kind": "points",
+      "byteOffset": 3990416,
+      "floatCount": 950,
+      "vertexCount": 190,
+      "stride": 5,
+      "role": null,
+      "id": null,
+      "opacity": 1.0
+    },
+    {
+      "actor": 54,
+      "kind": "points",
+      "byteOffset": 3994216,
+      "floatCount": 1100,
+      "vertexCount": 220,
+      "stride": 5,
+      "role": null,
+      "id": null,
+      "opacity": 1.0
+    },
+    {
+      "actor": 55,
+      "kind": "points",
+      "byteOffset": 3998616,
+      "floatCount": 1100,
+      "vertexCount": 220,
+      "stride": 5,
+      "role": null,
+      "id": null,
+      "opacity": 1.0
+    },
+    {
+      "actor": 56,
+      "kind": "points",
+      "byteOffset": 4003016,
+      "floatCount": 1200,
+      "vertexCount": 240,
+      "stride": 5,
+      "role": null,
+      "id": null,
+      "opacity": 1.0
+    },
+    {
+      "actor": 57,
+      "kind": "points",
+      "byteOffset": 4007816,
+      "floatCount": 1200,
+      "vertexCount": 240,
+      "stride": 5,
+      "role": null,
+      "id": null,
+      "opacity": 1.0
+    },
+    {
+      "actor": 58,
+      "kind": "points",
+      "byteOffset": 4012616,
+      "floatCount": 2350,
+      "vertexCount": 470,
+      "stride": 5,
+      "role": null,
+      "id": null,
+      "opacity": 1.0
+    },
+    {
+      "actor": 59,
+      "kind": "points",
+      "byteOffset": 4022016,
+      "floatCount": 900,
+      "vertexCount": 180,
+      "stride": 5,
+      "role": null,
+      "id": null,
+      "opacity": 1.0
+    },
+    {
+      "actor": 60,
+      "kind": "points",
+      "byteOffset": 4025616,
+      "floatCount": 900,
+      "vertexCount": 180,
+      "stride": 5,
+      "role": null,
+      "id": null,
+      "opacity": 1.0
+    },
+    {
+      "actor": 61,
+      "kind": "points",
+      "byteOffset": 4029216,
+      "floatCount": 475,
+      "vertexCount": 95,
+      "stride": 5,
+      "role": null,
+      "id": null,
+      "opacity": 1.0
+    },
+    {
+      "actor": 62,
+      "kind": "points",
+      "byteOffset": 4031116,
+      "floatCount": 475,
+      "vertexCount": 95,
+      "stride": 5,
+      "role": null,
+      "id": null,
+      "opacity": 1.0
+    },
+    {
+      "actor": 63,
+      "kind": "points",
+      "byteOffset": 4033016,
+      "floatCount": 725,
+      "vertexCount": 145,
+      "stride": 5,
+      "role": null,
+      "id": null,
+      "opacity": 1.0
+    },
+    {
+      "actor": 64,
+      "kind": "points",
+      "byteOffset": 4035916,
+      "floatCount": 725,
+      "vertexCount": 145,
+      "stride": 5,
+      "role": null,
+      "id": null,
+      "opacity": 1.0
+    },
+    {
+      "actor": 65,
+      "kind": "points",
+      "byteOffset": 4038816,
+      "floatCount": 325,
+      "vertexCount": 65,
+      "stride": 5,
+      "role": null,
+      "id": null,
+      "opacity": 1.0
+    },
+    {
+      "actor": 66,
+      "kind": "points",
+      "byteOffset": 4040116,
+      "floatCount": 325,
+      "vertexCount": 65,
+      "stride": 5,
+      "role": null,
+      "id": null,
+      "opacity": 1.0
+    },
+    {
+      "actor": 67,
+      "kind": "points",
+      "byteOffset": 4041416,
+      "floatCount": 1325,
+      "vertexCount": 265,
+      "stride": 5,
+      "role": null,
+      "id": null,
+      "opacity": 1.0
+    },
+    {
+      "actor": 68,
+      "kind": "points",
+      "byteOffset": 4046716,
+      "floatCount": 950,
+      "vertexCount": 190,
+      "stride": 5,
+      "role": null,
+      "id": null,
+      "opacity": 1.0
+    },
+    {
+      "actor": 69,
+      "kind": "points",
+      "byteOffset": 4050516,
+      "floatCount": 1100,
+      "vertexCount": 220,
+      "stride": 5,
+      "role": null,
+      "id": null,
+      "opacity": 1.0
+    },
+    {
+      "actor": 70,
+      "kind": "points",
+      "byteOffset": 4054916,
+      "floatCount": 1100,
+      "vertexCount": 220,
+      "stride": 5,
+      "role": null,
+      "id": null,
+      "opacity": 1.0
+    },
+    {
+      "actor": 71,
+      "kind": "points",
+      "byteOffset": 4059316,
+      "floatCount": 1200,
+      "vertexCount": 240,
+      "stride": 5,
+      "role": null,
+      "id": null,
+      "opacity": 1.0
+    },
+    {
+      "actor": 72,
+      "kind": "points",
+      "byteOffset": 4064116,
+      "floatCount": 1200,
+      "vertexCount": 240,
+      "stride": 5,
+      "role": null,
+      "id": null,
+      "opacity": 1.0
+    },
+    {
+      "actor": 73,
+      "kind": "points",
+      "byteOffset": 4068916,
+      "floatCount": 2350,
+      "vertexCount": 470,
+      "stride": 5,
+      "role": null,
+      "id": null,
+      "opacity": 1.0
+    },
+    {
+      "actor": 74,
+      "kind": "points",
+      "byteOffset": 4078316,
+      "floatCount": 900,
+      "vertexCount": 180,
+      "stride": 5,
+      "role": null,
+      "id": null,
+      "opacity": 1.0
+    },
+    {
+      "actor": 75,
+      "kind": "points",
+      "byteOffset": 4081916,
+      "floatCount": 900,
+      "vertexCount": 180,
+      "stride": 5,
+      "role": null,
+      "id": null,
+      "opacity": 1.0
+    },
+    {
+      "actor": 76,
+      "kind": "points",
+      "byteOffset": 4085516,
+      "floatCount": 475,
+      "vertexCount": 95,
+      "stride": 5,
+      "role": null,
+      "id": null,
+      "opacity": 1.0
+    },
+    {
+      "actor": 77,
+      "kind": "points",
+      "byteOffset": 4087416,
+      "floatCount": 475,
+      "vertexCount": 95,
+      "stride": 5,
+      "role": null,
+      "id": null,
+      "opacity": 1.0
+    },
+    {
+      "actor": 78,
+      "kind": "points",
+      "byteOffset": 4089316,
+      "floatCount": 725,
+      "vertexCount": 145,
+      "stride": 5,
+      "role": null,
+      "id": null,
+      "opacity": 1.0
+    },
+    {
+      "actor": 79,
+      "kind": "points",
+      "byteOffset": 4092216,
+      "floatCount": 725,
+      "vertexCount": 145,
+      "stride": 5,
+      "role": null,
+      "id": null,
+      "opacity": 1.0
+    },
+    {
+      "actor": 80,
+      "kind": "points",
+      "byteOffset": 4095116,
+      "floatCount": 325,
+      "vertexCount": 65,
+      "stride": 5,
+      "role": null,
+      "id": null,
+      "opacity": 1.0
+    },
+    {
+      "actor": 81,
+      "kind": "points",
+      "byteOffset": 4096416,
+      "floatCount": 325,
+      "vertexCount": 65,
+      "stride": 5,
+      "role": null,
+      "id": null,
+      "opacity": 1.0
+    },
+    {
+      "actor": 82,
+      "kind": "points",
+      "byteOffset": 4097716,
+      "floatCount": 1325,
+      "vertexCount": 265,
+      "stride": 5,
+      "role": null,
+      "id": null,
+      "opacity": 1.0
+    },
+    {
+      "actor": 83,
+      "kind": "points",
+      "byteOffset": 4103016,
+      "floatCount": 950,
+      "vertexCount": 190,
+      "stride": 5,
+      "role": null,
+      "id": null,
+      "opacity": 1.0
+    },
+    {
+      "actor": 84,
+      "kind": "points",
+      "byteOffset": 4106816,
+      "floatCount": 1100,
+      "vertexCount": 220,
+      "stride": 5,
+      "role": null,
+      "id": null,
+      "opacity": 1.0
+    },
+    {
+      "actor": 85,
+      "kind": "points",
+      "byteOffset": 4111216,
+      "floatCount": 1100,
+      "vertexCount": 220,
+      "stride": 5,
+      "role": null,
+      "id": null,
+      "opacity": 1.0
+    },
+    {
+      "actor": 86,
+      "kind": "points",
+      "byteOffset": 4115616,
+      "floatCount": 1200,
+      "vertexCount": 240,
+      "stride": 5,
+      "role": null,
+      "id": null,
+      "opacity": 1.0
+    },
+    {
+      "actor": 87,
+      "kind": "points",
+      "byteOffset": 4120416,
+      "floatCount": 1200,
+      "vertexCount": 240,
+      "stride": 5,
+      "role": null,
+      "id": null,
+      "opacity": 1.0
+    },
+    {
+      "actor": 88,
+      "kind": "points",
+      "byteOffset": 4125216,
+      "floatCount": 2350,
+      "vertexCount": 470,
+      "stride": 5,
+      "role": null,
+      "id": null,
+      "opacity": 1.0
+    },
+    {
+      "actor": 89,
+      "kind": "points",
+      "byteOffset": 4134616,
+      "floatCount": 900,
+      "vertexCount": 180,
+      "stride": 5,
+      "role": null,
+      "id": null,
+      "opacity": 1.0
+    },
+    {
+      "actor": 90,
+      "kind": "points",
+      "byteOffset": 4138216,
+      "floatCount": 900,
+      "vertexCount": 180,
+      "stride": 5,
+      "role": null,
+      "id": null,
+      "opacity": 1.0
+    }
+  ],
+  "statistics": {
+    "points": 18290,
+    "lineSegments": 6754,
+    "glowSegments": 47,
+    "solidTriangles": 74133
+  },
+  "projects": [],
+  "exhibits": [
+    {
+      "id": "skill-01",
+      "kind": "skill",
+      "number": 1,
+      "catalogueNumber": 1,
+      "title": "Languages",
+      "section": "skills",
+      "category": "APPLIED SKILLS / LANGUAGES",
+      "summary": "Typed web development, data tooling and academic programming.",
+      "focus": "Backend development",
+      "items": [
+        "JavaScript",
+        "TypeScript",
+        "Java",
+        "Python",
+        "PHP",
+        "C++",
+        "C",
+        "HTML / CSS",
+        "SQL",
+        "Go",
+        "R",
+        "Rust"
+      ],
+      "displayItems": [
+        "TypeScript / JavaScript",
+        "Python / Go / R / SQL",
+        "Java / C++ / Rust",
+        "HTML / CSS",
+        "C / PHP"
+      ],
+      "profileOnly": [
+        "C",
+        "PHP"
+      ],
+      "evidenceProjectIds": [
+        "agent-property",
+        "report-automation",
+        "fyp",
+        "DTMAssignment",
+        "PFDAGroupAssignment",
+        "ConcurrentProgrammingAssignment",
+        "DSTRAssignment",
+        "rust-gcs-ocs-assignment"
+      ],
+      "url": "https://github.com/DamienCKj2812/logging-loading",
+      "repositories": [
+        {
+          "id": "logging-loading",
+          "title": "Load and chaos tooling",
+          "url": "https://github.com/DamienCKj2812/logging-loading"
+        },
+        {
+          "id": "logging-microservice-ui",
+          "title": "Observability dashboard",
+          "url": "https://github.com/DamienCKj2812/logging-microservice-ui"
+        },
+        {
+          "id": "DTMAssignment",
+          "title": "Repository",
+          "url": "https://github.com/DamienCKj2812/DTMAssignment"
+        },
+        {
+          "id": "PFDAGroupAssignment",
+          "title": "Repository",
+          "url": "https://github.com/DamienCKj2812/PFDAGroupAssignment"
+        },
+        {
+          "id": "ConcurrentProgrammingAssignment",
+          "title": "Repository",
+          "url": "https://github.com/DamienCKj2812/ConcurrentProgrammingAssignment"
+        },
+        {
+          "id": "DSTRAssignmentPart2",
+          "title": "Part 2 / Tournaments",
+          "url": "https://github.com/DamienCKj2812/DSTRAssignmentPart2"
+        },
+        {
+          "id": "rust-gcs-ocs-assignment",
+          "title": "Repository",
+          "url": "https://github.com/BaconCoding74/rust-gcs-ocs-assignment"
+        },
+        {
+          "id": "gcs-branch",
+          "title": "GCS branch",
+          "url": "https://github.com/BaconCoding74/rust-gcs-ocs-assignment/tree/gcs-branch"
+        },
+        {
+          "id": "ocs-branch",
+          "title": "OCS branch / context",
+          "url": "https://github.com/BaconCoding74/rust-gcs-ocs-assignment/tree/ocs-branch"
+        }
+      ],
+      "siteLinks": [
+        {
+          "url": "https://myrumawip.com/",
+          "label": "MyRumawip website"
+        }
+      ],
+      "catalogueSections": [
+        {
+          "heading": "Overview",
+          "markdown": "Typed web development, data tooling and academic programming.\n\nBackend development is my main focus, but I learn the technologies each project requires rather than limiting myself to a single stack."
+        },
+        {
+          "heading": "Core toolkit",
+          "markdown": "- JavaScript\n- TypeScript\n- Java\n- Python\n- PHP\n- C++\n- C\n- HTML / CSS\n- SQL\n- Go\n- R\n- Rust"
+        },
+        {
+          "heading": "Applied in projects",
+          "markdown": "TypeScript and JavaScript connect public websites, dashboards and APIs. Python supports automation and data/ML tooling, Go appears in the FYP telemetry/API backend, and R supports academic analysis. Java, C++ and Rust appear in simulations and data-structure/control work.\n\n- **Agent Property \u2014 Bilingual Property Website and CMS:** A bilingual property-discovery website that combines CMS-managed listings, housing-scheme information and educational content with direct WhatsApp enquiries.\n\nPublic website: [MyRumawip](https://myrumawip.com/).\n- **MyReport \u2014 WhatsApp Customer Follow-up and Reporting Workspace:** A customer-management workspace that organizes WhatsApp conversations, confirmed customer requirements, eligibility records and follow-up actions, with human-reviewed AI assistance.\n\n**Access:** Hosted privately via Tailscale; not publicly accessible.\n- **FYP \u2014 Hybrid Anomaly Detection for Microservice Observability:** A telemetry-based anomaly-detection system that combines OpenTelemetry ingestion, Redis streaming, machine-learning inference and a live observability dashboard, evaluated using telemetry from an instrumented CMS application.\n- **DTM \u2014 Coupon Data Preparation and Exploratory Analysis:** An R data-preparation study that introduces controlled data-quality problems into an in-vehicle coupon dataset, cleans it and compares exploratory views before and after preprocessing.\n- **PFDA \u2014 Credit-Risk Data Analysis:** An R-based group study of credit-risk data, combining cleaning, exploratory analysis, statistical tests and predictive experiments.\n- **Concurrent Programming \u2014 Airport Simulation:** A Java airport simulation modeling aircraft activity and access to shared runway, gate and refueling resources.\n- **Data Structures \u2014 E-commerce Analytics and Tournament Management:** A two-part C++ assignment applying custom data structures to transaction/review analysis and tournament, spectator and result-management simulations.\n- **RTS \u2014 Ground and Onboard Control Simulation:** A Rust real-time-systems assignment modeling communication between a Ground Control Station (GCS) and an Onboard Control System (OCS), with timed commands, telemetry and fault handling."
+        },
+        {
+          "heading": "Engineering workflow",
+          "markdown": "Start from the data model and interface contract. Use typed records for application boundaries, keep parsing/validation explicit, and choose concurrency or data structures according to the problem."
+        },
+        {
+          "heading": "Technical decisions",
+          "markdown": "TypeScript adds useful checks around API and UI data. SQL describes relational operations. Academic Java/C++ projects expose synchronization, ownership and algorithm mechanics rather than hiding them behind framework code."
+        },
+        {
+          "heading": "Collaboration and delivery",
+          "markdown": "The completed About profile identifies **User empathy and Adaptability** as strengths. Frontend work at LYJ Events & Marketing includes stakeholder collaboration, QA feedback and evolving requirements. DWMLight's confirmed contribution focuses on CMS/backend and deployment."
+        },
+        {
+          "heading": "Learning and scope",
+          "markdown": "C and PHP are listed in the completed About toolkit. The current 16-project catalogue does not present a dedicated C or PHP exhibit; they are profile-backed rather than attached to invented project evidence."
+        },
+        {
+          "heading": "Links and sources",
+          "markdown": "Project evidence comes from the completed project catalogue; broader toolkit claims come from the completed About profile.\n\n- [Load and chaos tooling / logging-loading](https://github.com/DamienCKj2812/logging-loading)\n- [Observability dashboard / logging-microservice-ui](https://github.com/DamienCKj2812/logging-microservice-ui)\n- [Repository / DTMAssignment](https://github.com/DamienCKj2812/DTMAssignment)\n- [Repository / PFDAGroupAssignment](https://github.com/DamienCKj2812/PFDAGroupAssignment)\n- [Repository / ConcurrentProgrammingAssignment](https://github.com/DamienCKj2812/ConcurrentProgrammingAssignment)\n- [Part 2 / Tournaments / DSTRAssignmentPart2](https://github.com/DamienCKj2812/DSTRAssignmentPart2)\n- [Repository / rust-gcs-ocs-assignment](https://github.com/BaconCoding74/rust-gcs-ocs-assignment)\n- [GCS branch / gcs-branch](https://github.com/BaconCoding74/rust-gcs-ocs-assignment/tree/gcs-branch)\n- [OCS branch / context / ocs-branch](https://github.com/BaconCoding74/rust-gcs-ocs-assignment/tree/ocs-branch)\n\nWebsites and previews\n\n- [MyRumawip website](https://myrumawip.com/)\n\nMyReport: Hosted privately via Tailscale; not publicly accessible."
+        }
+      ],
+      "contentStatus": "Approved About toolkit and project-catalogue evidence; profile-only/learning scope stated explicitly",
+      "position": [
+        -5.885000228881836,
+        -0.30000001192092896,
+        2.6500000953674316
+      ],
+      "start": 300,
+      "end": 480,
+      "hint": "Look left and slightly up",
+      "card": {
+        "center": [
+          -5.885000228881836,
+          -0.30000007152557373,
+          2.6500000953674316
+        ],
+        "normal": [
+          0.9999999403953552,
+          0.0,
+          0.0
+        ],
+        "right": [
+          0.0,
+          0.9999999403953552,
+          0.0
+        ],
+        "width": 3.1400001625498346,
+        "height": 3.3400000820045688
+      }
+    },
+    {
+      "id": "skill-02",
+      "kind": "skill",
+      "number": 2,
+      "catalogueNumber": 2,
+      "title": "Frameworks",
+      "section": "skills",
+      "category": "APPLIED SKILLS / FRAMEWORKS",
+      "summary": "Responsive interfaces, server-rendered websites and reusable UI.",
+      "focus": "Backend development",
+      "items": [
+        "React",
+        "Next.js",
+        "Node.js",
+        "Spring Boot",
+        "Tailwind CSS",
+        "Radix UI",
+        "Vite",
+        "Three.js / React Three Fiber / Drei",
+        "Blender asset integration"
+      ],
+      "displayItems": [
+        "React / Next.js",
+        "Tailwind CSS / Radix UI",
+        "Vite / routing",
+        "Responsive UI / SEO",
+        "Spring Boot"
+      ],
+      "profileOnly": [
+        "Spring Boot"
+      ],
+      "evidenceProjectIds": [
+        "agent-property",
+        "report-automation",
+        "SDMGroupAssignment",
+        "damien-portfolio"
+      ],
+      "url": "https://github.com/DamienCKj2812/SDMGroupAssignment",
+      "repositories": [
+        {
+          "id": "SDMGroupAssignment",
+          "title": "Repository",
+          "url": "https://github.com/DamienCKj2812/SDMGroupAssignment"
+        },
+        {
+          "id": "damien-portfolio",
+          "title": "GitHub / currently empty",
+          "url": "https://github.com/DamienCKj2812/damien-portfolio"
+        }
+      ],
+      "siteLinks": [
+        {
+          "url": "https://myrumawip.com/",
+          "label": "MyRumawip website"
+        }
+      ],
+      "catalogueSections": [
+        {
+          "heading": "Overview",
+          "markdown": "Responsive interfaces, server-rendered websites and reusable UI.\n\nBackend development is my main focus, but I learn the technologies each project requires rather than limiting myself to a single stack."
+        },
+        {
+          "heading": "Core toolkit",
+          "markdown": "- React\n- Next.js\n- Node.js\n- Spring Boot\n- Tailwind CSS\n- Radix UI\n- Vite\n- Three.js / React Three Fiber / Drei\n- Blender asset integration"
+        },
+        {
+          "heading": "Applied in projects",
+          "markdown": "Agent Property and MyReport use Next.js. This portfolio uses React/Vite. The property catalogue documents CMS-managed SEO fields and structured-data support; the About profile confirms practical SEO knowledge.\n\n- **Agent Property \u2014 Bilingual Property Website and CMS:** A bilingual property-discovery website that combines CMS-managed listings, housing-scheme information and educational content with direct WhatsApp enquiries.\n\nPublic website: [MyRumawip](https://myrumawip.com/).\n- **MyReport \u2014 WhatsApp Customer Follow-up and Reporting Workspace:** A customer-management workspace that organizes WhatsApp conversations, confirmed customer requirements, eligibility records and follow-up actions, with human-reviewed AI assistance.\n\n**Access:** Hosted privately via Tailscale; not publicly accessible.\n- **SDM \u2014 Recruitment and Employment Workflow Prototype:** A multi-role React frontend prototype for recruitment and employment workflows, including applicant, employer, staff and manager experiences.\n- **Damien Portfolio \u2014 Immersive 3D Portfolio:** A monochrome interactive portfolio that takes visitors through a city, lobby and elevator into dedicated rooms for identity, skills, projects and experience/education."
+        },
+        {
+          "heading": "Engineering workflow",
+          "markdown": "Separate presentation, application state and data fetching. Build reusable components and responsive controls, then verify keyboard, touch, loading and failure states."
+        },
+        {
+          "heading": "Technical decisions",
+          "markdown": "Next.js suits server-side CMS fetching and content revalidation. Vite supports interactive React applications. The portfolio uses a single demand-rendered Canvas, capped DPR and native Blender point/line exports to control ongoing work."
+        },
+        {
+          "heading": "Collaboration and delivery",
+          "markdown": "The completed About profile identifies **User empathy and Adaptability** as strengths. Frontend work at LYJ Events & Marketing includes stakeholder collaboration, QA feedback and evolving requirements. DWMLight's confirmed contribution focuses on CMS/backend and deployment."
+        },
+        {
+          "heading": "Learning and scope",
+          "markdown": "Spring Boot is self-reported in About, not demonstrated by a current catalogue entry. DWMLight frontend technology is system context; the confirmed contribution is CMS/backend and deployment, not sole frontend authorship."
+        },
+        {
+          "heading": "Links and sources",
+          "markdown": "Project evidence comes from the completed project catalogue; broader toolkit claims come from the completed About profile.\n\n- [Repository / SDMGroupAssignment](https://github.com/DamienCKj2812/SDMGroupAssignment)\n- [GitHub / currently empty / damien-portfolio](https://github.com/DamienCKj2812/damien-portfolio)\n\nWebsites and previews\n\n- [MyRumawip website](https://myrumawip.com/)\n\nMyReport: Hosted privately via Tailscale; not publicly accessible."
+        }
+      ],
+      "contentStatus": "Approved About toolkit and project-catalogue evidence; profile-only/learning scope stated explicitly",
+      "position": [
+        -5.885000228881836,
+        5.0,
+        2.6500000953674316
+      ],
+      "start": 770,
+      "end": 860,
+      "hint": "Look left",
+      "card": {
+        "center": [
+          -5.885000228881836,
+          5.0,
+          2.6500000953674316
+        ],
+        "normal": [
+          0.9999999403953552,
+          0.0,
+          0.0
+        ],
+        "right": [
+          0.0,
+          0.9999999403953552,
+          0.0
+        ],
+        "width": 3.1400003144087907,
+        "height": 3.3400000820045688
+      }
+    },
+    {
+      "id": "skill-03",
+      "kind": "skill",
+      "number": 3,
+      "catalogueNumber": 3,
+      "title": "Backend & APIs",
+      "section": "skills",
+      "category": "APPLIED SKILLS / BACKEND & APIS",
+      "summary": "Backend-focused application development and integration.",
+      "focus": "Backend development",
+      "items": [
+        "REST APIs",
+        "Express",
+        "FastAPI",
+        "WebSockets",
+        "Authentication",
+        "Go / chi / OTLP gRPC"
+      ],
+      "displayItems": [
+        "Express / REST APIs",
+        "WebSockets / integration",
+        "FastAPI / Python",
+        "Authentication",
+        "Validation / workflows"
+      ],
+      "profileOnly": [
+        "FastAPI"
+      ],
+      "evidenceProjectIds": [
+        "Aria",
+        "report-automation",
+        "fyp"
+      ],
+      "url": "https://github.com/DamienCKj2812/logging-loading",
+      "repositories": [
+        {
+          "id": "logging-loading",
+          "title": "Load and chaos tooling",
+          "url": "https://github.com/DamienCKj2812/logging-loading"
+        },
+        {
+          "id": "logging-microservice-ui",
+          "title": "Observability dashboard",
+          "url": "https://github.com/DamienCKj2812/logging-microservice-ui"
+        }
+      ],
+      "siteLinks": [
+        {
+          "url": "https://dwmlight.com/en",
+          "label": "DWMLight / ANVA CMS website"
+        }
+      ],
+      "catalogueSections": [
+        {
+          "heading": "Overview",
+          "markdown": "Backend-focused application development and integration.\n\nBackend development is my main focus, but I learn the technologies each project requires rather than limiting myself to a single stack."
+        },
+        {
+          "heading": "Core toolkit",
+          "markdown": "- REST APIs\n- Express\n- FastAPI\n- WebSockets\n- Authentication\n- Go / chi / OTLP gRPC"
+        },
+        {
+          "heading": "Applied in projects",
+          "markdown": "DWMLight/ANVA CMS uses Express services and structured content APIs. MyReport coordinates ingestion, reviewed extraction and customer workflows. FYP serves REST/WebSocket telemetry and anomaly data.\n\n- **DWMLight / ANVA CMS \u2014 Multilingual Product Website and Custom CMS:** A multilingual product and company website backed by a custom content-management API, including localized content, product media and downloadable catalogues.\n\nPublic website: [DWMLight](https://dwmlight.com/en).\n- **MyReport \u2014 WhatsApp Customer Follow-up and Reporting Workspace:** A customer-management workspace that organizes WhatsApp conversations, confirmed customer requirements, eligibility records and follow-up actions, with human-reviewed AI assistance.\n\n**Access:** Hosted privately via Tailscale; not publicly accessible.\n- **FYP \u2014 Hybrid Anomaly Detection for Microservice Observability:** A telemetry-based anomaly-detection system that combines OpenTelemetry ingestion, Redis streaming, machine-learning inference and a live observability dashboard, evaluated using telemetry from an instrumented CMS application."
+        },
+        {
+          "heading": "Engineering workflow",
+          "markdown": "Define input/output contracts, validate requests, separate routes from domain services and persistence, and preserve job or workflow state across client reconnects."
+        },
+        {
+          "heading": "Technical decisions",
+          "markdown": "Schema-driven validation supports configurable CMS content. Idempotent ingestion protects message history. Durable run state is preferable to request-lifetime ownership for long searches."
+        },
+        {
+          "heading": "Collaboration and delivery",
+          "markdown": "The completed About profile identifies **User empathy and Adaptability** as strengths. Frontend work at LYJ Events & Marketing includes stakeholder collaboration, QA feedback and evolving requirements. DWMLight's confirmed contribution focuses on CMS/backend and deployment."
+        },
+        {
+          "heading": "Learning and scope",
+          "markdown": "Backend development is the main focus stated in About. FastAPI is listed in the toolkit as a profile-backed skill."
+        },
+        {
+          "heading": "Links and sources",
+          "markdown": "Project evidence comes from the completed project catalogue; broader toolkit claims come from the completed About profile.\n\n- [Load and chaos tooling / logging-loading](https://github.com/DamienCKj2812/logging-loading)\n- [Observability dashboard / logging-microservice-ui](https://github.com/DamienCKj2812/logging-microservice-ui)\n\nWebsites and previews\n\n- [DWMLight / ANVA CMS website](https://dwmlight.com/en)\n\nMyReport: Hosted privately via Tailscale; not publicly accessible."
+        }
+      ],
+      "contentStatus": "Approved About toolkit and project-catalogue evidence; profile-only/learning scope stated explicitly",
+      "position": [
+        -3.299999952316284,
+        8.88499927520752,
+        2.6500000953674316
+      ],
+      "start": 900,
+      "end": 990,
+      "hint": "Look toward the rear wall",
+      "card": {
+        "center": [
+          -3.299999713897705,
+          8.88499927520752,
+          2.6500000953674316
+        ],
+        "normal": [
+          0.0,
+          -1.0,
+          0.0
+        ],
+        "right": [
+          1.0,
+          0.0,
+          0.0
+        ],
+        "width": 2.5899996933513445,
+        "height": 3.3400000820045688
+      }
+    },
+    {
+      "id": "skill-04",
+      "kind": "skill",
+      "number": 4,
+      "catalogueNumber": 4,
+      "title": "Databases",
+      "section": "skills",
+      "category": "APPLIED SKILLS / DATABASES",
+      "summary": "Relational, document, stream and retrieval-oriented data.",
+      "focus": "Backend development",
+      "items": [
+        "PostgreSQL",
+        "MySQL",
+        "MongoDB",
+        "Redis",
+        "Pinecone",
+        "Data modeling",
+        "Supabase / database RPCs",
+        "Redis Streams"
+      ],
+      "displayItems": [
+        "PostgreSQL / Supabase",
+        "MongoDB / Redis",
+        "Pinecone / RAG",
+        "SQL / data modeling",
+        "MySQL"
+      ],
+      "profileOnly": [
+        "MySQL"
+      ],
+      "evidenceProjectIds": [
+        "agent-property",
+        "report-automation",
+        "Aria",
+        "fyp"
+      ],
+      "url": "https://github.com/DamienCKj2812/logging-loading",
+      "repositories": [
+        {
+          "id": "logging-loading",
+          "title": "Load and chaos tooling",
+          "url": "https://github.com/DamienCKj2812/logging-loading"
+        },
+        {
+          "id": "logging-microservice-ui",
+          "title": "Observability dashboard",
+          "url": "https://github.com/DamienCKj2812/logging-microservice-ui"
+        }
+      ],
+      "siteLinks": [
+        {
+          "url": "https://myrumawip.com/",
+          "label": "MyRumawip website"
+        },
+        {
+          "url": "https://dwmlight.com/en",
+          "label": "DWMLight / ANVA CMS website"
+        }
+      ],
+      "catalogueSections": [
+        {
+          "heading": "Overview",
+          "markdown": "Relational, document, stream and retrieval-oriented data.\n\nBackend development is my main focus, but I learn the technologies each project requires rather than limiting myself to a single stack."
+        },
+        {
+          "heading": "Core toolkit",
+          "markdown": "- PostgreSQL\n- MySQL\n- MongoDB\n- Redis\n- Pinecone\n- Data modeling\n- Supabase / database RPCs\n- Redis Streams"
+        },
+        {
+          "heading": "Applied in projects",
+          "markdown": "Client projects use PostgreSQL/Supabase and MongoDB. FYP uses Redis Streams with PostgreSQL persistence when configured. The completed About experience at COS Great Trading confirms Pinecone-based RAG for departmental AI knowledge bases.\n\n- **Agent Property \u2014 Bilingual Property Website and CMS:** A bilingual property-discovery website that combines CMS-managed listings, housing-scheme information and educational content with direct WhatsApp enquiries.\n\nPublic website: [MyRumawip](https://myrumawip.com/).\n- **MyReport \u2014 WhatsApp Customer Follow-up and Reporting Workspace:** A customer-management workspace that organizes WhatsApp conversations, confirmed customer requirements, eligibility records and follow-up actions, with human-reviewed AI assistance.\n\n**Access:** Hosted privately via Tailscale; not publicly accessible.\n- **DWMLight / ANVA CMS \u2014 Multilingual Product Website and Custom CMS:** A multilingual product and company website backed by a custom content-management API, including localized content, product media and downloadable catalogues.\n\nPublic website: [DWMLight](https://dwmlight.com/en).\n- **FYP \u2014 Hybrid Anomaly Detection for Microservice Observability:** A telemetry-based anomaly-detection system that combines OpenTelemetry ingestion, Redis streaming, machine-learning inference and a live observability dashboard, evaluated using telemetry from an instrumented CMS application."
+        },
+        {
+          "heading": "Engineering workflow",
+          "markdown": "Model domain records and ownership first. Use relational constraints/RPCs for coordinated writes, schema validation for flexible documents, stream consumers for background work and retrieval stores for knowledge context."
+        },
+        {
+          "heading": "Technical decisions",
+          "markdown": "Supabase is MyReport\u2019s canonical store; Sheets is not its primary database. Redis decouples telemetry processing. Vector retrieval supplies relevant knowledge context rather than replacing transactional records."
+        },
+        {
+          "heading": "Collaboration and delivery",
+          "markdown": "The completed About profile identifies **User empathy and Adaptability** as strengths. Frontend work at LYJ Events & Marketing includes stakeholder collaboration, QA feedback and evolving requirements. DWMLight's confirmed contribution focuses on CMS/backend and deployment."
+        },
+        {
+          "heading": "Learning and scope",
+          "markdown": "MySQL is profile-backed. FYP metric/trace database insertion is configuration-dependent; a database connection does not imply every live telemetry sample is persisted."
+        },
+        {
+          "heading": "Links and sources",
+          "markdown": "Project evidence comes from the completed project catalogue; broader toolkit claims come from the completed About profile.\n\n- [Load and chaos tooling / logging-loading](https://github.com/DamienCKj2812/logging-loading)\n- [Observability dashboard / logging-microservice-ui](https://github.com/DamienCKj2812/logging-microservice-ui)\n\nWebsites and previews\n\n- [MyRumawip website](https://myrumawip.com/)\n- [DWMLight / ANVA CMS website](https://dwmlight.com/en)\n\nMyReport: Hosted privately via Tailscale; not publicly accessible."
+        }
+      ],
+      "contentStatus": "Approved About toolkit and project-catalogue evidence; profile-only/learning scope stated explicitly",
+      "position": [
+        0.0,
+        8.88499927520752,
+        2.6500000953674316
+      ],
+      "start": 1100,
+      "end": 1190,
+      "hint": "Look toward the rear wall",
+      "card": {
+        "center": [
+          0.0,
+          8.88499927520752,
+          2.6500000953674316
+        ],
+        "normal": [
+          0.0,
+          -1.0,
+          0.0
+        ],
+        "right": [
+          1.0,
+          0.0,
+          0.0
+        ],
+        "width": 2.5899998774583706,
+        "height": 3.3400000820045688
+      }
+    },
+    {
+      "id": "skill-05",
+      "kind": "skill",
+      "number": 5,
+      "catalogueNumber": 5,
+      "title": "Data & AI",
+      "section": "skills",
+      "category": "APPLIED SKILLS / DATA & AI",
+      "summary": "Data preparation, AI-assisted workflows and ongoing ML learning.",
+      "focus": "Backend development",
+      "items": [
+        "Python",
+        "Pandas / NumPy",
+        "AI SDKs",
+        "Retrieval-augmented generation (RAG)",
+        "AI knowledge bases",
+        "Automation",
+        "R / exploratory analysis",
+        "XGBoost / LOF",
+        "Locust / Toxiproxy",
+        "NLTK / TextBlob"
+      ],
+      "displayItems": [
+        "Python / Pandas / NumPy",
+        "AI SDKs / RAG",
+        "ML / attribution",
+        "Locust / automation",
+        "AI / ML (learning)"
+      ],
+      "profileOnly": [
+        "Pandas / NumPy"
+      ],
+      "evidenceProjectIds": [
+        "report-automation",
+        "fyp",
+        "DTMAssignment",
+        "PFDAGroupAssignment",
+        "txsa-group-assignment"
+      ],
+      "url": "https://github.com/DamienCKj2812/logging-loading",
+      "repositories": [
+        {
+          "id": "logging-loading",
+          "title": "Load and chaos tooling",
+          "url": "https://github.com/DamienCKj2812/logging-loading"
+        },
+        {
+          "id": "logging-microservice-ui",
+          "title": "Observability dashboard",
+          "url": "https://github.com/DamienCKj2812/logging-microservice-ui"
+        },
+        {
+          "id": "DTMAssignment",
+          "title": "Repository",
+          "url": "https://github.com/DamienCKj2812/DTMAssignment"
+        },
+        {
+          "id": "PFDAGroupAssignment",
+          "title": "Repository",
+          "url": "https://github.com/DamienCKj2812/PFDAGroupAssignment"
+        },
+        {
+          "id": "txsa-group-assignment",
+          "title": "Repository",
+          "url": "https://github.com/DamienCKj2812/txsa-group-assignment"
+        }
+      ],
+      "siteLinks": [],
+      "catalogueSections": [
+        {
+          "heading": "Overview",
+          "markdown": "Data preparation, AI-assisted workflows and ongoing ML learning.\n\nBackend development is my main focus, but I learn the technologies each project requires rather than limiting myself to a single stack."
+        },
+        {
+          "heading": "Core toolkit",
+          "markdown": "- Python\n- Pandas / NumPy\n- AI SDKs\n- Retrieval-augmented generation (RAG)\n- AI knowledge bases\n- Automation\n- R / exploratory analysis\n- XGBoost / LOF\n- Locust / Toxiproxy\n- NLTK / TextBlob"
+        },
+        {
+          "heading": "Applied in projects",
+          "markdown": "MyReport separates proposed AI updates from confirmed customer facts. FYP compares hybrid anomaly detectors. DTM/PFDA/TXSA cover preprocessing, statistical/model experiments and tokenization. About confirms RAG and AI knowledge-base work at COS Great Trading.\n\n- **MyReport \u2014 WhatsApp Customer Follow-up and Reporting Workspace:** A customer-management workspace that organizes WhatsApp conversations, confirmed customer requirements, eligibility records and follow-up actions, with human-reviewed AI assistance.\n\n**Access:** Hosted privately via Tailscale; not publicly accessible.\n- **FYP \u2014 Hybrid Anomaly Detection for Microservice Observability:** A telemetry-based anomaly-detection system that combines OpenTelemetry ingestion, Redis streaming, machine-learning inference and a live observability dashboard, evaluated using telemetry from an instrumented CMS application.\n- **DTM \u2014 Coupon Data Preparation and Exploratory Analysis:** An R data-preparation study that introduces controlled data-quality problems into an in-vehicle coupon dataset, cleans it and compares exploratory views before and after preprocessing.\n- **PFDA \u2014 Credit-Risk Data Analysis:** An R-based group study of credit-risk data, combining cleaning, exploratory analysis, statistical tests and predictive experiments.\n- **TXSA \u2014 Comparative Text Preprocessing:** A notebook-based text-analytics assignment comparing tokenization approaches and demonstrating stop-word/punctuation filtering on a supplied text corpus."
+        },
+        {
+          "heading": "Engineering workflow",
+          "markdown": "Preserve original data, validate structured outputs, prepare reproducible datasets and keep recorded offline evaluation separate from live operation. Use human review when model proposals change business records."
+        },
+        {
+          "heading": "Technical decisions",
+          "markdown": "The catalogue identifies XGBoost + LOF as the current FYP model. Attribution explains baseline deviations, not proven causal root causes."
+        },
+        {
+          "heading": "Collaboration and delivery",
+          "markdown": "The completed About profile identifies **User empathy and Adaptability** as strengths. Frontend work at LYJ Events & Marketing includes stakeholder collaboration, QA feedback and evolving requirements. DWMLight's confirmed contribution focuses on CMS/backend and deployment."
+        },
+        {
+          "heading": "Learning and scope",
+          "markdown": "About explicitly lists machine learning, artificial intelligence and 3D modeling as ongoing learning areas. The FYP notebook results are recorded offline evidence with injected anomaly labels, not a reproduced production benchmark."
+        },
+        {
+          "heading": "Links and sources",
+          "markdown": "Project evidence comes from the completed project catalogue; broader toolkit claims come from the completed About profile.\n\n- [Load and chaos tooling / logging-loading](https://github.com/DamienCKj2812/logging-loading)\n- [Observability dashboard / logging-microservice-ui](https://github.com/DamienCKj2812/logging-microservice-ui)\n- [Repository / DTMAssignment](https://github.com/DamienCKj2812/DTMAssignment)\n- [Repository / PFDAGroupAssignment](https://github.com/DamienCKj2812/PFDAGroupAssignment)\n- [Repository / txsa-group-assignment](https://github.com/DamienCKj2812/txsa-group-assignment)\n\nMyReport: Hosted privately via Tailscale; not publicly accessible."
+        }
+      ],
+      "contentStatus": "Approved About toolkit and project-catalogue evidence; profile-only/learning scope stated explicitly",
+      "position": [
+        3.299999952316284,
+        8.88499927520752,
+        2.6500000953674316
+      ],
+      "start": 1300,
+      "end": 1390,
+      "hint": "Look toward the rear wall",
+      "card": {
+        "center": [
+          3.299999952316284,
+          8.88499927520752,
+          2.6500000953674316
+        ],
+        "normal": [
+          0.0,
+          -1.0,
+          0.0
+        ],
+        "right": [
+          1.0,
+          0.0,
+          0.0
+        ],
+        "width": 2.5899996933513445,
+        "height": 3.3400000820045688
+      }
+    },
+    {
+      "id": "skill-06",
+      "kind": "skill",
+      "number": 6,
+      "catalogueNumber": 6,
+      "title": "Security",
+      "section": "skills",
+      "category": "APPLIED SKILLS / SECURITY",
+      "summary": "Validation, ownership and permission boundaries in applications.",
+      "focus": "Backend development",
+      "items": [
+        "JWT",
+        "OAuth",
+        "Access control",
+        "Validation",
+        "Encryption",
+        "Secure APIs"
+      ],
+      "displayItems": [
+        "JWT / OAuth",
+        "Access control / permissions",
+        "RLS / validation",
+        "Reviewed data / audit history",
+        "Encryption / secure APIs"
+      ],
+      "profileOnly": [
+        "Encryption"
+      ],
+      "evidenceProjectIds": [
+        "Aria",
+        "report-automation"
+      ],
+      "url": null,
+      "repositories": [],
+      "siteLinks": [
+        {
+          "url": "https://dwmlight.com/en",
+          "label": "DWMLight / ANVA CMS website"
+        }
+      ],
+      "catalogueSections": [
+        {
+          "heading": "Overview",
+          "markdown": "Validation, ownership and permission boundaries in applications.\n\nBackend development is my main focus, but I learn the technologies each project requires rather than limiting myself to a single stack."
+        },
+        {
+          "heading": "Core toolkit",
+          "markdown": "- JWT\n- OAuth\n- Access control\n- Validation\n- Encryption\n- Secure APIs"
+        },
+        {
+          "heading": "Applied in projects",
+          "markdown": "ANVA CMS checks authenticated content-operation permissions. MyReport uses owner-scoped database contracts, structured AI validation and calendar OAuth.\n\n- **DWMLight / ANVA CMS \u2014 Multilingual Product Website and Custom CMS:** A multilingual product and company website backed by a custom content-management API, including localized content, product media and downloadable catalogues.\n\nPublic website: [DWMLight](https://dwmlight.com/en).\n- **MyReport \u2014 WhatsApp Customer Follow-up and Reporting Workspace:** A customer-management workspace that organizes WhatsApp conversations, confirmed customer requirements, eligibility records and follow-up actions, with human-reviewed AI assistance.\n\n**Access:** Hosted privately via Tailscale; not publicly accessible."
+        },
+        {
+          "heading": "Engineering workflow",
+          "markdown": "Validate input at boundaries, enforce ownership in server/database operations and preserve audit history when updating customer or eligibility records."
+        },
+        {
+          "heading": "Technical decisions",
+          "markdown": "Keep privileged CMS tokens server-side. Separate immutable messages, proposed AI values and confirmed records. Treat client-side route selection as UI behavior rather than a complete authorization boundary."
+        },
+        {
+          "heading": "Collaboration and delivery",
+          "markdown": "The completed About profile identifies **User empathy and Adaptability** as strengths. Frontend work at LYJ Events & Marketing includes stakeholder collaboration, QA feedback and evolving requirements. DWMLight's confirmed contribution focuses on CMS/backend and deployment."
+        },
+        {
+          "heading": "Learning and scope",
+          "markdown": "Encryption and secure APIs are profile-listed skills. These project examples demonstrate implemented controls; the catalogue does not claim an independent security audit or guarantees of complete system security."
+        },
+        {
+          "heading": "Links and sources",
+          "markdown": "- [DWMLight / ANVA CMS website](https://dwmlight.com/en)"
+        }
+      ],
+      "contentStatus": "Approved About toolkit and project-catalogue evidence; profile-only/learning scope stated explicitly",
+      "position": [
+        5.885000228881836,
+        6.900000095367432,
+        2.6500000953674316
+      ],
+      "start": 1450,
+      "end": 1540,
+      "hint": "Look right",
+      "card": {
+        "center": [
+          5.885000228881836,
+          6.899999618530273,
+          2.6500000953674316
+        ],
+        "normal": [
+          -0.9999999403953552,
+          0.0,
+          0.0
+        ],
+        "right": [
+          0.0,
+          -0.9999999403953552,
+          0.0
+        ],
+        "width": 2.1899995964084757,
+        "height": 3.3400000820045688
+      },
+      "repositoryLinksRestricted": true
+    },
+    {
+      "id": "skill-07",
+      "kind": "skill",
+      "number": 7,
+      "catalogueNumber": 7,
+      "title": "DevOps & CI/CD",
+      "section": "skills",
+      "category": "APPLIED SKILLS / DEVOPS & CI/CD",
+      "summary": "Deployment, server operations and repeatable application delivery.",
+      "focus": "Backend development",
+      "items": [
+        "Git",
+        "GitHub",
+        "Bitbucket",
+        "Docker",
+        "GitHub Actions",
+        "Deployment",
+        "Observability"
+      ],
+      "displayItems": [
+        "Docker / PM2",
+        "Git / GitHub Actions",
+        "Ansible / deployment",
+        "Observability",
+        "Bitbucket"
+      ],
+      "profileOnly": [
+        "Bitbucket"
+      ],
+      "evidenceProjectIds": [
+        "agent-property",
+        "Aria",
+        "fyp",
+        "damien-portfolio"
+      ],
+      "url": "https://github.com/DamienCKj2812/logging-loading",
+      "repositories": [
+        {
+          "id": "logging-loading",
+          "title": "Load and chaos tooling",
+          "url": "https://github.com/DamienCKj2812/logging-loading"
+        },
+        {
+          "id": "logging-microservice-ui",
+          "title": "Observability dashboard",
+          "url": "https://github.com/DamienCKj2812/logging-microservice-ui"
+        },
+        {
+          "id": "damien-portfolio",
+          "title": "GitHub / currently empty",
+          "url": "https://github.com/DamienCKj2812/damien-portfolio"
+        }
+      ],
+      "siteLinks": [
+        {
+          "url": "https://myrumawip.com/",
+          "label": "MyRumawip website"
+        },
+        {
+          "url": "https://dwmlight.com/en",
+          "label": "DWMLight / ANVA CMS website"
+        }
+      ],
+      "catalogueSections": [
+        {
+          "heading": "Overview",
+          "markdown": "Deployment, server operations and repeatable application delivery.\n\nBackend development is my main focus, but I learn the technologies each project requires rather than limiting myself to a single stack."
+        },
+        {
+          "heading": "Core toolkit",
+          "markdown": "- Git\n- GitHub\n- Bitbucket\n- Docker\n- GitHub Actions\n- Deployment\n- Observability"
+        },
+        {
+          "heading": "Applied in projects",
+          "markdown": "Agent Property includes deployment/sync tooling, Docker, PM2 and Ansible. DWMLight\u2019s confirmed work includes deployment/server operations. FYP uses a multi-service Compose topology.\n\n- **Agent Property \u2014 Bilingual Property Website and CMS:** A bilingual property-discovery website that combines CMS-managed listings, housing-scheme information and educational content with direct WhatsApp enquiries.\n\nPublic website: [MyRumawip](https://myrumawip.com/).\n- **DWMLight / ANVA CMS \u2014 Multilingual Product Website and Custom CMS:** A multilingual product and company website backed by a custom content-management API, including localized content, product media and downloadable catalogues.\n\nPublic website: [DWMLight](https://dwmlight.com/en).\n- **FYP \u2014 Hybrid Anomaly Detection for Microservice Observability:** A telemetry-based anomaly-detection system that combines OpenTelemetry ingestion, Redis streaming, machine-learning inference and a live observability dashboard, evaluated using telemetry from an instrumented CMS application.\n- **Damien Portfolio \u2014 Immersive 3D Portfolio:** A monochrome interactive portfolio that takes visitors through a city, lobby and elevator into dedicated rooms for identity, skills, projects and experience/education."
+        },
+        {
+          "heading": "Engineering workflow",
+          "markdown": "Separate application and environment configuration, use repeatable builds/deployments, define process boundaries and validate generated artifacts before consuming them."
+        },
+        {
+          "heading": "Technical decisions",
+          "markdown": "The portfolio checks native/browser geometry, routes and hashes before a Vite deployment. Operational configuration demonstrates a deployment design; it is not by itself evidence of live uptime or measured business outcomes."
+        },
+        {
+          "heading": "Collaboration and delivery",
+          "markdown": "The completed About profile identifies **User empathy and Adaptability** as strengths. Frontend work at LYJ Events & Marketing includes stakeholder collaboration, QA feedback and evolving requirements. DWMLight's confirmed contribution focuses on CMS/backend and deployment."
+        },
+        {
+          "heading": "Learning and scope",
+          "markdown": "Bitbucket is profile-backed. The catalogue distinguishes delivered code/configuration from unconfirmed production status and does not invent availability or performance measurements."
+        },
+        {
+          "heading": "Links and sources",
+          "markdown": "Project evidence comes from the completed project catalogue; broader toolkit claims come from the completed About profile.\n\n- [Load and chaos tooling / logging-loading](https://github.com/DamienCKj2812/logging-loading)\n- [Observability dashboard / logging-microservice-ui](https://github.com/DamienCKj2812/logging-microservice-ui)\n- [GitHub / currently empty / damien-portfolio](https://github.com/DamienCKj2812/damien-portfolio)\n\nWebsites and previews\n\n- [MyRumawip website](https://myrumawip.com/)\n- [DWMLight / ANVA CMS website](https://dwmlight.com/en)"
+        }
+      ],
+      "contentStatus": "Approved About toolkit and project-catalogue evidence; profile-only/learning scope stated explicitly",
+      "position": [
+        5.885000228881836,
+        3.700000047683716,
+        2.6500000953674316
+      ],
+      "start": 1650,
+      "end": 1740,
+      "hint": "Look right",
+      "card": {
+        "center": [
+          5.885000228881836,
+          3.700000047683716,
+          2.6500000953674316
+        ],
+        "normal": [
+          -0.9999999403953552,
+          0.0,
+          0.0
+        ],
+        "right": [
+          0.0,
+          -0.9999999403953552,
+          0.0
+        ],
+        "width": 2.190000031876237,
+        "height": 3.3400000820045688
+      }
+    },
+    {
+      "id": "skill-08",
+      "kind": "skill",
+      "number": 8,
+      "catalogueNumber": 8,
+      "title": "Microservices",
+      "section": "skills",
+      "category": "APPLIED SKILLS / MICROSERVICES",
+      "summary": "Service boundaries, asynchronous processing and observability.",
+      "focus": "Backend development",
+      "items": [
+        "Service design",
+        "Message queues",
+        "Tracing",
+        "Resilience"
+      ],
+      "displayItems": [
+        "Redis Streams / OTLP",
+        "REST / WebSockets",
+        "Metrics / traces",
+        "Queues / resilience"
+      ],
+      "profileOnly": [],
+      "evidenceProjectIds": [
+        "fyp",
+        "report-automation"
+      ],
+      "url": "https://github.com/DamienCKj2812/logging-loading",
+      "repositories": [
+        {
+          "id": "logging-loading",
+          "title": "Load and chaos tooling",
+          "url": "https://github.com/DamienCKj2812/logging-loading"
+        },
+        {
+          "id": "logging-microservice-ui",
+          "title": "Observability dashboard",
+          "url": "https://github.com/DamienCKj2812/logging-microservice-ui"
+        }
+      ],
+      "siteLinks": [],
+      "catalogueSections": [
+        {
+          "heading": "Overview",
+          "markdown": "Service boundaries, asynchronous processing and observability.\n\nBackend development is my main focus, but I learn the technologies each project requires rather than limiting myself to a single stack."
+        },
+        {
+          "heading": "Core toolkit",
+          "markdown": "- Service design\n- Message queues\n- Tracing\n- Resilience"
+        },
+        {
+          "heading": "Applied in projects",
+          "markdown": "FYP separates the Go telemetry receiver, stream consumers, Python inference and REST/WebSocket API. MyReport normalizes provider messages into an owner-scoped workflow.\n\n- **FYP \u2014 Hybrid Anomaly Detection for Microservice Observability:** A telemetry-based anomaly-detection system that combines OpenTelemetry ingestion, Redis streaming, machine-learning inference and a live observability dashboard, evaluated using telemetry from an instrumented CMS application.\n- **MyReport \u2014 WhatsApp Customer Follow-up and Reporting Workspace:** A customer-management workspace that organizes WhatsApp conversations, confirmed customer requirements, eligibility records and follow-up actions, with human-reviewed AI assistance.\n\n**Access:** Hosted privately via Tailscale; not publicly accessible."
+        },
+        {
+          "heading": "Engineering workflow",
+          "markdown": "Define transport contracts, decouple ingestion from expensive processing, keep durable state for recoverable work and make operational events observable."
+        },
+        {
+          "heading": "Technical decisions",
+          "markdown": "FYP supports OTLP metrics and traces, not a complete implemented logs receiver. Redis Streams is its evidenced messaging path."
+        },
+        {
+          "heading": "Collaboration and delivery",
+          "markdown": "The completed About profile identifies **User empathy and Adaptability** as strengths. Frontend work at LYJ Events & Marketing includes stakeholder collaboration, QA feedback and evolving requirements. DWMLight's confirmed contribution focuses on CMS/backend and deployment."
+        },
+        {
+          "heading": "Learning and scope",
+          "markdown": "Resilience is listed in About. The current catalogue demonstrates Redis Streams and service integration, without claiming a proven fault-tolerance guarantee."
+        },
+        {
+          "heading": "Links and sources",
+          "markdown": "Project evidence comes from the completed project catalogue; broader toolkit claims come from the completed About profile.\n\n- [Load and chaos tooling / logging-loading](https://github.com/DamienCKj2812/logging-loading)\n- [Observability dashboard / logging-microservice-ui](https://github.com/DamienCKj2812/logging-microservice-ui)\n\nMyReport: Hosted privately via Tailscale; not publicly accessible."
+        }
+      ],
+      "contentStatus": "Approved About toolkit and project-catalogue evidence; profile-only/learning scope stated explicitly",
+      "position": [
+        5.885000228881836,
+        0.5,
+        2.6500000953674316
+      ],
+      "start": 1850,
+      "end": 1940,
+      "hint": "Look right",
+      "card": {
+        "center": [
+          5.885000228881836,
+          0.5,
+          2.6500000953674316
+        ],
+        "normal": [
+          -0.9999999403953552,
+          0.0,
+          0.0
+        ],
+        "right": [
+          0.0,
+          -0.9999999403953552,
+          0.0
+        ],
+        "width": 2.190000031876237,
+        "height": 3.3400000820045688
+      }
+    },
+    {
+      "id": "skill-09",
+      "kind": "skill",
+      "number": 9,
+      "catalogueNumber": 9,
+      "title": "Linux",
+      "section": "skills",
+      "category": "APPLIED SKILLS / LINUX",
+      "summary": "Linux workstations, custom desktop tools and application servers.",
+      "focus": "Backend development",
+      "items": [
+        "Linux fundamentals",
+        "Fedora",
+        "Ubuntu",
+        "Debian",
+        "Arch",
+        "Mint",
+        "Shell tools",
+        "Servers"
+      ],
+      "displayItems": [
+        "Fedora / Linux",
+        "KDE / Hyprland",
+        "Shell / servers",
+        "Ubuntu / Debian",
+        "Arch / Mint"
+      ],
+      "profileOnly": [
+        "Ubuntu",
+        "Debian",
+        "Arch",
+        "Mint"
+      ],
+      "evidenceProjectIds": [
+        "fedora-dotfiles",
+        "agent-property",
+        "Aria",
+        "fyp"
+      ],
+      "url": "https://github.com/DamienCKj2812/logging-loading",
+      "repositories": [
+        {
+          "id": "logging-loading",
+          "title": "Load and chaos tooling",
+          "url": "https://github.com/DamienCKj2812/logging-loading"
+        },
+        {
+          "id": "logging-microservice-ui",
+          "title": "Observability dashboard",
+          "url": "https://github.com/DamienCKj2812/logging-microservice-ui"
+        }
+      ],
+      "siteLinks": [
+        {
+          "url": "https://myrumawip.com/",
+          "label": "MyRumawip website"
+        },
+        {
+          "url": "https://dwmlight.com/en",
+          "label": "DWMLight / ANVA CMS website"
+        }
+      ],
+      "catalogueSections": [
+        {
+          "heading": "Overview",
+          "markdown": "Linux workstations, custom desktop tools and application servers.\n\nBackend development is my main focus, but I learn the technologies each project requires rather than limiting myself to a single stack."
+        },
+        {
+          "heading": "Core toolkit",
+          "markdown": "- Linux fundamentals\n- Fedora\n- Ubuntu\n- Debian\n- Arch\n- Mint\n- Shell tools\n- Servers"
+        },
+        {
+          "heading": "Applied in projects",
+          "markdown": "Fedora Dotfiles combines Stow, KDE/Hyprland, Quickshell/QML and a native PyQt6 sharing chooser. Client work includes server/deployment responsibilities, and FYP provides shell-driven load/chaos tooling.\n\n- **Fedora Dotfiles \u2014 Customized Wayland Desktop Environment:** A personalized Fedora desktop/development environment combining KDE Plasma and Hyprland sessions with a custom shell, login appearance, sharing picker and reusable configuration management.\n- **Agent Property \u2014 Bilingual Property Website and CMS:** A bilingual property-discovery website that combines CMS-managed listings, housing-scheme information and educational content with direct WhatsApp enquiries.\n\nPublic website: [MyRumawip](https://myrumawip.com/).\n- **DWMLight / ANVA CMS \u2014 Multilingual Product Website and Custom CMS:** A multilingual product and company website backed by a custom content-management API, including localized content, product media and downloadable catalogues.\n\nPublic website: [DWMLight](https://dwmlight.com/en).\n- **FYP \u2014 Hybrid Anomaly Detection for Microservice Observability:** A telemetry-based anomaly-detection system that combines OpenTelemetry ingestion, Redis streaming, machine-learning inference and a live observability dashboard, evaluated using telemetry from an instrumented CMS application."
+        },
+        {
+          "heading": "Engineering workflow",
+          "markdown": "Version configuration, separate session/service responsibilities, preserve upstream protocols and clean up asynchronous previews or processes when they stop being useful."
+        },
+        {
+          "heading": "Technical decisions",
+          "markdown": "The sharing chooser customizes selection UI while the existing portal/PipeWire services retain permission and sharing responsibilities. Desktop customization integrates upstream tools rather than reimplementing Linux graphics."
+        },
+        {
+          "heading": "Collaboration and delivery",
+          "markdown": "The completed About profile identifies **User empathy and Adaptability** as strengths. Frontend work at LYJ Events & Marketing includes stakeholder collaboration, QA feedback and evolving requirements. DWMLight's confirmed contribution focuses on CMS/backend and deployment."
+        },
+        {
+          "heading": "Learning and scope",
+          "markdown": "About confirms an interest in installing/customizing distributions including Arch and Mint. Fedora has a dedicated catalogue project; the other named distributions are profile-backed, without invented clean-machine benchmarks."
+        },
+        {
+          "heading": "Links and sources",
+          "markdown": "Project evidence comes from the completed project catalogue; broader toolkit claims come from the completed About profile.\n\n- [Load and chaos tooling / logging-loading](https://github.com/DamienCKj2812/logging-loading)\n- [Observability dashboard / logging-microservice-ui](https://github.com/DamienCKj2812/logging-microservice-ui)\n\nWebsites and previews\n\n- [MyRumawip website](https://myrumawip.com/)\n- [DWMLight / ANVA CMS website](https://dwmlight.com/en)"
+        }
+      ],
+      "contentStatus": "Approved About toolkit and project-catalogue evidence; profile-only/learning scope stated explicitly",
+      "position": [
+        5.885000228881836,
+        -2.700000047683716,
+        2.6500000953674316
+      ],
+      "start": 2050,
+      "end": 2140,
+      "hint": "Look right",
+      "card": {
+        "center": [
+          5.885000228881836,
+          -2.6999998092651367,
+          2.6500000953674316
+        ],
+        "normal": [
+          -0.9999999403953552,
+          0.0,
+          0.0
+        ],
+        "right": [
+          0.0,
+          -0.9999999403953552,
+          0.0
+        ],
+        "width": 2.190000031876237,
+        "height": 3.3400000820045688
+      }
+    },
+    {
+      "id": "atat",
+      "title": "AT-AT walker",
+      "items": [],
+      "caption": "Star Wars AT-AT \u00b7 Black armor and fine white contours",
+      "position": [
+        0.0,
+        3.8499999046325684,
+        2.0687201023101807
+      ],
+      "start": 2290,
+      "end": 2380,
+      "hint": "Look ahead and around the mechanical walker"
+    }
+  ],
+  "navigation": {
+    "type": "guided",
+    "eyeHeight": 1.7000000476837158,
+    "initialYaw": 0.0,
+    "initialPitch": 0.0,
+    "animationFollowsWalk": false,
+    "route": {
+      "file": "route.bin",
+      "frameStart": 1,
+      "frameEnd": 2940,
+      "stride": 3,
+      "loop": false
+    },
+    "stations": [
+      {
+        "id": "skill-01",
+        "kind": "skill",
+        "number": 1,
+        "catalogueNumber": 1,
+        "title": "Languages",
+        "section": "skills",
+        "category": "APPLIED SKILLS / LANGUAGES",
+        "summary": "Typed web development, data tooling and academic programming.",
+        "focus": "Backend development",
+        "items": [
+          "JavaScript",
+          "TypeScript",
+          "Java",
+          "Python",
+          "PHP",
+          "C++",
+          "C",
+          "HTML / CSS",
+          "SQL",
+          "Go",
+          "R",
+          "Rust"
+        ],
+        "displayItems": [
+          "TypeScript / JavaScript",
+          "Python / Go / R / SQL",
+          "Java / C++ / Rust",
+          "HTML / CSS",
+          "C / PHP"
+        ],
+        "profileOnly": [
+          "C",
+          "PHP"
+        ],
+        "evidenceProjectIds": [
+          "agent-property",
+          "report-automation",
+          "fyp",
+          "DTMAssignment",
+          "PFDAGroupAssignment",
+          "ConcurrentProgrammingAssignment",
+          "DSTRAssignment",
+          "rust-gcs-ocs-assignment"
+        ],
+        "url": "https://github.com/DamienCKj2812/logging-loading",
+        "repositories": [
+          {
+            "id": "logging-loading",
+            "title": "Load and chaos tooling",
+            "url": "https://github.com/DamienCKj2812/logging-loading"
+          },
+          {
+            "id": "logging-microservice-ui",
+            "title": "Observability dashboard",
+            "url": "https://github.com/DamienCKj2812/logging-microservice-ui"
+          },
+          {
+            "id": "DTMAssignment",
+            "title": "Repository",
+            "url": "https://github.com/DamienCKj2812/DTMAssignment"
+          },
+          {
+            "id": "PFDAGroupAssignment",
+            "title": "Repository",
+            "url": "https://github.com/DamienCKj2812/PFDAGroupAssignment"
+          },
+          {
+            "id": "ConcurrentProgrammingAssignment",
+            "title": "Repository",
+            "url": "https://github.com/DamienCKj2812/ConcurrentProgrammingAssignment"
+          },
+          {
+            "id": "DSTRAssignmentPart2",
+            "title": "Part 2 / Tournaments",
+            "url": "https://github.com/DamienCKj2812/DSTRAssignmentPart2"
+          },
+          {
+            "id": "rust-gcs-ocs-assignment",
+            "title": "Repository",
+            "url": "https://github.com/BaconCoding74/rust-gcs-ocs-assignment"
+          },
+          {
+            "id": "gcs-branch",
+            "title": "GCS branch",
+            "url": "https://github.com/BaconCoding74/rust-gcs-ocs-assignment/tree/gcs-branch"
+          },
+          {
+            "id": "ocs-branch",
+            "title": "OCS branch / context",
+            "url": "https://github.com/BaconCoding74/rust-gcs-ocs-assignment/tree/ocs-branch"
+          }
+        ],
+        "siteLinks": [
+          {
+            "url": "https://myrumawip.com/",
+            "label": "MyRumawip website"
+          }
+        ],
+        "catalogueSections": [
+          {
+            "heading": "Overview",
+            "markdown": "Typed web development, data tooling and academic programming.\n\nBackend development is my main focus, but I learn the technologies each project requires rather than limiting myself to a single stack."
+          },
+          {
+            "heading": "Core toolkit",
+            "markdown": "- JavaScript\n- TypeScript\n- Java\n- Python\n- PHP\n- C++\n- C\n- HTML / CSS\n- SQL\n- Go\n- R\n- Rust"
+          },
+          {
+            "heading": "Applied in projects",
+            "markdown": "TypeScript and JavaScript connect public websites, dashboards and APIs. Python supports automation and data/ML tooling, Go appears in the FYP telemetry/API backend, and R supports academic analysis. Java, C++ and Rust appear in simulations and data-structure/control work.\n\n- **Agent Property \u2014 Bilingual Property Website and CMS:** A bilingual property-discovery website that combines CMS-managed listings, housing-scheme information and educational content with direct WhatsApp enquiries.\n\nPublic website: [MyRumawip](https://myrumawip.com/).\n- **MyReport \u2014 WhatsApp Customer Follow-up and Reporting Workspace:** A customer-management workspace that organizes WhatsApp conversations, confirmed customer requirements, eligibility records and follow-up actions, with human-reviewed AI assistance.\n\n**Access:** Hosted privately via Tailscale; not publicly accessible.\n- **FYP \u2014 Hybrid Anomaly Detection for Microservice Observability:** A telemetry-based anomaly-detection system that combines OpenTelemetry ingestion, Redis streaming, machine-learning inference and a live observability dashboard, evaluated using telemetry from an instrumented CMS application.\n- **DTM \u2014 Coupon Data Preparation and Exploratory Analysis:** An R data-preparation study that introduces controlled data-quality problems into an in-vehicle coupon dataset, cleans it and compares exploratory views before and after preprocessing.\n- **PFDA \u2014 Credit-Risk Data Analysis:** An R-based group study of credit-risk data, combining cleaning, exploratory analysis, statistical tests and predictive experiments.\n- **Concurrent Programming \u2014 Airport Simulation:** A Java airport simulation modeling aircraft activity and access to shared runway, gate and refueling resources.\n- **Data Structures \u2014 E-commerce Analytics and Tournament Management:** A two-part C++ assignment applying custom data structures to transaction/review analysis and tournament, spectator and result-management simulations.\n- **RTS \u2014 Ground and Onboard Control Simulation:** A Rust real-time-systems assignment modeling communication between a Ground Control Station (GCS) and an Onboard Control System (OCS), with timed commands, telemetry and fault handling."
+          },
+          {
+            "heading": "Engineering workflow",
+            "markdown": "Start from the data model and interface contract. Use typed records for application boundaries, keep parsing/validation explicit, and choose concurrency or data structures according to the problem."
+          },
+          {
+            "heading": "Technical decisions",
+            "markdown": "TypeScript adds useful checks around API and UI data. SQL describes relational operations. Academic Java/C++ projects expose synchronization, ownership and algorithm mechanics rather than hiding them behind framework code."
+          },
+          {
+            "heading": "Collaboration and delivery",
+            "markdown": "The completed About profile identifies **User empathy and Adaptability** as strengths. Frontend work at LYJ Events & Marketing includes stakeholder collaboration, QA feedback and evolving requirements. DWMLight's confirmed contribution focuses on CMS/backend and deployment."
+          },
+          {
+            "heading": "Learning and scope",
+            "markdown": "C and PHP are listed in the completed About toolkit. The current 16-project catalogue does not present a dedicated C or PHP exhibit; they are profile-backed rather than attached to invented project evidence."
+          },
+          {
+            "heading": "Links and sources",
+            "markdown": "Project evidence comes from the completed project catalogue; broader toolkit claims come from the completed About profile.\n\n- [Load and chaos tooling / logging-loading](https://github.com/DamienCKj2812/logging-loading)\n- [Observability dashboard / logging-microservice-ui](https://github.com/DamienCKj2812/logging-microservice-ui)\n- [Repository / DTMAssignment](https://github.com/DamienCKj2812/DTMAssignment)\n- [Repository / PFDAGroupAssignment](https://github.com/DamienCKj2812/PFDAGroupAssignment)\n- [Repository / ConcurrentProgrammingAssignment](https://github.com/DamienCKj2812/ConcurrentProgrammingAssignment)\n- [Part 2 / Tournaments / DSTRAssignmentPart2](https://github.com/DamienCKj2812/DSTRAssignmentPart2)\n- [Repository / rust-gcs-ocs-assignment](https://github.com/BaconCoding74/rust-gcs-ocs-assignment)\n- [GCS branch / gcs-branch](https://github.com/BaconCoding74/rust-gcs-ocs-assignment/tree/gcs-branch)\n- [OCS branch / context / ocs-branch](https://github.com/BaconCoding74/rust-gcs-ocs-assignment/tree/ocs-branch)\n\nWebsites and previews\n\n- [MyRumawip website](https://myrumawip.com/)\n\nMyReport: Hosted privately via Tailscale; not publicly accessible."
+          }
+        ],
+        "contentStatus": "Approved About toolkit and project-catalogue evidence; profile-only/learning scope stated explicitly",
+        "position": [
+          -5.885000228881836,
+          -0.30000001192092896,
+          2.6500000953674316
+        ],
+        "start": 300,
+        "end": 480,
+        "hint": "Look left and slightly up",
+        "card": {
+          "center": [
+            -5.885000228881836,
+            -0.30000007152557373,
+            2.6500000953674316
+          ],
+          "normal": [
+            0.9999999403953552,
+            0.0,
+            0.0
+          ],
+          "right": [
+            0.0,
+            0.9999999403953552,
+            0.0
+          ],
+          "width": 3.1400001625498346,
+          "height": 3.3400000820045688
+        }
+      },
+      {
+        "id": "skill-02",
+        "kind": "skill",
+        "number": 2,
+        "catalogueNumber": 2,
+        "title": "Frameworks",
+        "section": "skills",
+        "category": "APPLIED SKILLS / FRAMEWORKS",
+        "summary": "Responsive interfaces, server-rendered websites and reusable UI.",
+        "focus": "Backend development",
+        "items": [
+          "React",
+          "Next.js",
+          "Node.js",
+          "Spring Boot",
+          "Tailwind CSS",
+          "Radix UI",
+          "Vite",
+          "Three.js / React Three Fiber / Drei",
+          "Blender asset integration"
+        ],
+        "displayItems": [
+          "React / Next.js",
+          "Tailwind CSS / Radix UI",
+          "Vite / routing",
+          "Responsive UI / SEO",
+          "Spring Boot"
+        ],
+        "profileOnly": [
+          "Spring Boot"
+        ],
+        "evidenceProjectIds": [
+          "agent-property",
+          "report-automation",
+          "SDMGroupAssignment",
+          "damien-portfolio"
+        ],
+        "url": "https://github.com/DamienCKj2812/SDMGroupAssignment",
+        "repositories": [
+          {
+            "id": "SDMGroupAssignment",
+            "title": "Repository",
+            "url": "https://github.com/DamienCKj2812/SDMGroupAssignment"
+          },
+          {
+            "id": "damien-portfolio",
+            "title": "GitHub / currently empty",
+            "url": "https://github.com/DamienCKj2812/damien-portfolio"
+          }
+        ],
+        "siteLinks": [
+          {
+            "url": "https://myrumawip.com/",
+            "label": "MyRumawip website"
+          }
+        ],
+        "catalogueSections": [
+          {
+            "heading": "Overview",
+            "markdown": "Responsive interfaces, server-rendered websites and reusable UI.\n\nBackend development is my main focus, but I learn the technologies each project requires rather than limiting myself to a single stack."
+          },
+          {
+            "heading": "Core toolkit",
+            "markdown": "- React\n- Next.js\n- Node.js\n- Spring Boot\n- Tailwind CSS\n- Radix UI\n- Vite\n- Three.js / React Three Fiber / Drei\n- Blender asset integration"
+          },
+          {
+            "heading": "Applied in projects",
+            "markdown": "Agent Property and MyReport use Next.js. This portfolio uses React/Vite. The property catalogue documents CMS-managed SEO fields and structured-data support; the About profile confirms practical SEO knowledge.\n\n- **Agent Property \u2014 Bilingual Property Website and CMS:** A bilingual property-discovery website that combines CMS-managed listings, housing-scheme information and educational content with direct WhatsApp enquiries.\n\nPublic website: [MyRumawip](https://myrumawip.com/).\n- **MyReport \u2014 WhatsApp Customer Follow-up and Reporting Workspace:** A customer-management workspace that organizes WhatsApp conversations, confirmed customer requirements, eligibility records and follow-up actions, with human-reviewed AI assistance.\n\n**Access:** Hosted privately via Tailscale; not publicly accessible.\n- **SDM \u2014 Recruitment and Employment Workflow Prototype:** A multi-role React frontend prototype for recruitment and employment workflows, including applicant, employer, staff and manager experiences.\n- **Damien Portfolio \u2014 Immersive 3D Portfolio:** A monochrome interactive portfolio that takes visitors through a city, lobby and elevator into dedicated rooms for identity, skills, projects and experience/education."
+          },
+          {
+            "heading": "Engineering workflow",
+            "markdown": "Separate presentation, application state and data fetching. Build reusable components and responsive controls, then verify keyboard, touch, loading and failure states."
+          },
+          {
+            "heading": "Technical decisions",
+            "markdown": "Next.js suits server-side CMS fetching and content revalidation. Vite supports interactive React applications. The portfolio uses a single demand-rendered Canvas, capped DPR and native Blender point/line exports to control ongoing work."
+          },
+          {
+            "heading": "Collaboration and delivery",
+            "markdown": "The completed About profile identifies **User empathy and Adaptability** as strengths. Frontend work at LYJ Events & Marketing includes stakeholder collaboration, QA feedback and evolving requirements. DWMLight's confirmed contribution focuses on CMS/backend and deployment."
+          },
+          {
+            "heading": "Learning and scope",
+            "markdown": "Spring Boot is self-reported in About, not demonstrated by a current catalogue entry. DWMLight frontend technology is system context; the confirmed contribution is CMS/backend and deployment, not sole frontend authorship."
+          },
+          {
+            "heading": "Links and sources",
+            "markdown": "Project evidence comes from the completed project catalogue; broader toolkit claims come from the completed About profile.\n\n- [Repository / SDMGroupAssignment](https://github.com/DamienCKj2812/SDMGroupAssignment)\n- [GitHub / currently empty / damien-portfolio](https://github.com/DamienCKj2812/damien-portfolio)\n\nWebsites and previews\n\n- [MyRumawip website](https://myrumawip.com/)\n\nMyReport: Hosted privately via Tailscale; not publicly accessible."
+          }
+        ],
+        "contentStatus": "Approved About toolkit and project-catalogue evidence; profile-only/learning scope stated explicitly",
+        "position": [
+          -5.885000228881836,
+          5.0,
+          2.6500000953674316
+        ],
+        "start": 770,
+        "end": 860,
+        "hint": "Look left",
+        "card": {
+          "center": [
+            -5.885000228881836,
+            5.0,
+            2.6500000953674316
+          ],
+          "normal": [
+            0.9999999403953552,
+            0.0,
+            0.0
+          ],
+          "right": [
+            0.0,
+            0.9999999403953552,
+            0.0
+          ],
+          "width": 3.1400003144087907,
+          "height": 3.3400000820045688
+        }
+      },
+      {
+        "id": "skill-03",
+        "kind": "skill",
+        "number": 3,
+        "catalogueNumber": 3,
+        "title": "Backend & APIs",
+        "section": "skills",
+        "category": "APPLIED SKILLS / BACKEND & APIS",
+        "summary": "Backend-focused application development and integration.",
+        "focus": "Backend development",
+        "items": [
+          "REST APIs",
+          "Express",
+          "FastAPI",
+          "WebSockets",
+          "Authentication",
+          "Go / chi / OTLP gRPC"
+        ],
+        "displayItems": [
+          "Express / REST APIs",
+          "WebSockets / integration",
+          "FastAPI / Python",
+          "Authentication",
+          "Validation / workflows"
+        ],
+        "profileOnly": [
+          "FastAPI"
+        ],
+        "evidenceProjectIds": [
+          "Aria",
+          "report-automation",
+          "fyp"
+        ],
+        "url": "https://github.com/DamienCKj2812/logging-loading",
+        "repositories": [
+          {
+            "id": "logging-loading",
+            "title": "Load and chaos tooling",
+            "url": "https://github.com/DamienCKj2812/logging-loading"
+          },
+          {
+            "id": "logging-microservice-ui",
+            "title": "Observability dashboard",
+            "url": "https://github.com/DamienCKj2812/logging-microservice-ui"
+          }
+        ],
+        "siteLinks": [
+          {
+            "url": "https://dwmlight.com/en",
+            "label": "DWMLight / ANVA CMS website"
+          }
+        ],
+        "catalogueSections": [
+          {
+            "heading": "Overview",
+            "markdown": "Backend-focused application development and integration.\n\nBackend development is my main focus, but I learn the technologies each project requires rather than limiting myself to a single stack."
+          },
+          {
+            "heading": "Core toolkit",
+            "markdown": "- REST APIs\n- Express\n- FastAPI\n- WebSockets\n- Authentication\n- Go / chi / OTLP gRPC"
+          },
+          {
+            "heading": "Applied in projects",
+            "markdown": "DWMLight/ANVA CMS uses Express services and structured content APIs. MyReport coordinates ingestion, reviewed extraction and customer workflows. FYP serves REST/WebSocket telemetry and anomaly data.\n\n- **DWMLight / ANVA CMS \u2014 Multilingual Product Website and Custom CMS:** A multilingual product and company website backed by a custom content-management API, including localized content, product media and downloadable catalogues.\n\nPublic website: [DWMLight](https://dwmlight.com/en).\n- **MyReport \u2014 WhatsApp Customer Follow-up and Reporting Workspace:** A customer-management workspace that organizes WhatsApp conversations, confirmed customer requirements, eligibility records and follow-up actions, with human-reviewed AI assistance.\n\n**Access:** Hosted privately via Tailscale; not publicly accessible.\n- **FYP \u2014 Hybrid Anomaly Detection for Microservice Observability:** A telemetry-based anomaly-detection system that combines OpenTelemetry ingestion, Redis streaming, machine-learning inference and a live observability dashboard, evaluated using telemetry from an instrumented CMS application."
+          },
+          {
+            "heading": "Engineering workflow",
+            "markdown": "Define input/output contracts, validate requests, separate routes from domain services and persistence, and preserve job or workflow state across client reconnects."
+          },
+          {
+            "heading": "Technical decisions",
+            "markdown": "Schema-driven validation supports configurable CMS content. Idempotent ingestion protects message history. Durable run state is preferable to request-lifetime ownership for long searches."
+          },
+          {
+            "heading": "Collaboration and delivery",
+            "markdown": "The completed About profile identifies **User empathy and Adaptability** as strengths. Frontend work at LYJ Events & Marketing includes stakeholder collaboration, QA feedback and evolving requirements. DWMLight's confirmed contribution focuses on CMS/backend and deployment."
+          },
+          {
+            "heading": "Learning and scope",
+            "markdown": "Backend development is the main focus stated in About. FastAPI is listed in the toolkit as a profile-backed skill."
+          },
+          {
+            "heading": "Links and sources",
+            "markdown": "Project evidence comes from the completed project catalogue; broader toolkit claims come from the completed About profile.\n\n- [Load and chaos tooling / logging-loading](https://github.com/DamienCKj2812/logging-loading)\n- [Observability dashboard / logging-microservice-ui](https://github.com/DamienCKj2812/logging-microservice-ui)\n\nWebsites and previews\n\n- [DWMLight / ANVA CMS website](https://dwmlight.com/en)\n\nMyReport: Hosted privately via Tailscale; not publicly accessible."
+          }
+        ],
+        "contentStatus": "Approved About toolkit and project-catalogue evidence; profile-only/learning scope stated explicitly",
+        "position": [
+          -3.299999952316284,
+          8.88499927520752,
+          2.6500000953674316
+        ],
+        "start": 900,
+        "end": 990,
+        "hint": "Look toward the rear wall",
+        "card": {
+          "center": [
+            -3.299999713897705,
+            8.88499927520752,
+            2.6500000953674316
+          ],
+          "normal": [
+            0.0,
+            -1.0,
+            0.0
+          ],
+          "right": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "width": 2.5899996933513445,
+          "height": 3.3400000820045688
+        }
+      },
+      {
+        "id": "skill-04",
+        "kind": "skill",
+        "number": 4,
+        "catalogueNumber": 4,
+        "title": "Databases",
+        "section": "skills",
+        "category": "APPLIED SKILLS / DATABASES",
+        "summary": "Relational, document, stream and retrieval-oriented data.",
+        "focus": "Backend development",
+        "items": [
+          "PostgreSQL",
+          "MySQL",
+          "MongoDB",
+          "Redis",
+          "Pinecone",
+          "Data modeling",
+          "Supabase / database RPCs",
+          "Redis Streams"
+        ],
+        "displayItems": [
+          "PostgreSQL / Supabase",
+          "MongoDB / Redis",
+          "Pinecone / RAG",
+          "SQL / data modeling",
+          "MySQL"
+        ],
+        "profileOnly": [
+          "MySQL"
+        ],
+        "evidenceProjectIds": [
+          "agent-property",
+          "report-automation",
+          "Aria",
+          "fyp"
+        ],
+        "url": "https://github.com/DamienCKj2812/logging-loading",
+        "repositories": [
+          {
+            "id": "logging-loading",
+            "title": "Load and chaos tooling",
+            "url": "https://github.com/DamienCKj2812/logging-loading"
+          },
+          {
+            "id": "logging-microservice-ui",
+            "title": "Observability dashboard",
+            "url": "https://github.com/DamienCKj2812/logging-microservice-ui"
+          }
+        ],
+        "siteLinks": [
+          {
+            "url": "https://myrumawip.com/",
+            "label": "MyRumawip website"
+          },
+          {
+            "url": "https://dwmlight.com/en",
+            "label": "DWMLight / ANVA CMS website"
+          }
+        ],
+        "catalogueSections": [
+          {
+            "heading": "Overview",
+            "markdown": "Relational, document, stream and retrieval-oriented data.\n\nBackend development is my main focus, but I learn the technologies each project requires rather than limiting myself to a single stack."
+          },
+          {
+            "heading": "Core toolkit",
+            "markdown": "- PostgreSQL\n- MySQL\n- MongoDB\n- Redis\n- Pinecone\n- Data modeling\n- Supabase / database RPCs\n- Redis Streams"
+          },
+          {
+            "heading": "Applied in projects",
+            "markdown": "Client projects use PostgreSQL/Supabase and MongoDB. FYP uses Redis Streams with PostgreSQL persistence when configured. The completed About experience at COS Great Trading confirms Pinecone-based RAG for departmental AI knowledge bases.\n\n- **Agent Property \u2014 Bilingual Property Website and CMS:** A bilingual property-discovery website that combines CMS-managed listings, housing-scheme information and educational content with direct WhatsApp enquiries.\n\nPublic website: [MyRumawip](https://myrumawip.com/).\n- **MyReport \u2014 WhatsApp Customer Follow-up and Reporting Workspace:** A customer-management workspace that organizes WhatsApp conversations, confirmed customer requirements, eligibility records and follow-up actions, with human-reviewed AI assistance.\n\n**Access:** Hosted privately via Tailscale; not publicly accessible.\n- **DWMLight / ANVA CMS \u2014 Multilingual Product Website and Custom CMS:** A multilingual product and company website backed by a custom content-management API, including localized content, product media and downloadable catalogues.\n\nPublic website: [DWMLight](https://dwmlight.com/en).\n- **FYP \u2014 Hybrid Anomaly Detection for Microservice Observability:** A telemetry-based anomaly-detection system that combines OpenTelemetry ingestion, Redis streaming, machine-learning inference and a live observability dashboard, evaluated using telemetry from an instrumented CMS application."
+          },
+          {
+            "heading": "Engineering workflow",
+            "markdown": "Model domain records and ownership first. Use relational constraints/RPCs for coordinated writes, schema validation for flexible documents, stream consumers for background work and retrieval stores for knowledge context."
+          },
+          {
+            "heading": "Technical decisions",
+            "markdown": "Supabase is MyReport\u2019s canonical store; Sheets is not its primary database. Redis decouples telemetry processing. Vector retrieval supplies relevant knowledge context rather than replacing transactional records."
+          },
+          {
+            "heading": "Collaboration and delivery",
+            "markdown": "The completed About profile identifies **User empathy and Adaptability** as strengths. Frontend work at LYJ Events & Marketing includes stakeholder collaboration, QA feedback and evolving requirements. DWMLight's confirmed contribution focuses on CMS/backend and deployment."
+          },
+          {
+            "heading": "Learning and scope",
+            "markdown": "MySQL is profile-backed. FYP metric/trace database insertion is configuration-dependent; a database connection does not imply every live telemetry sample is persisted."
+          },
+          {
+            "heading": "Links and sources",
+            "markdown": "Project evidence comes from the completed project catalogue; broader toolkit claims come from the completed About profile.\n\n- [Load and chaos tooling / logging-loading](https://github.com/DamienCKj2812/logging-loading)\n- [Observability dashboard / logging-microservice-ui](https://github.com/DamienCKj2812/logging-microservice-ui)\n\nWebsites and previews\n\n- [MyRumawip website](https://myrumawip.com/)\n- [DWMLight / ANVA CMS website](https://dwmlight.com/en)\n\nMyReport: Hosted privately via Tailscale; not publicly accessible."
+          }
+        ],
+        "contentStatus": "Approved About toolkit and project-catalogue evidence; profile-only/learning scope stated explicitly",
+        "position": [
+          0.0,
+          8.88499927520752,
+          2.6500000953674316
+        ],
+        "start": 1100,
+        "end": 1190,
+        "hint": "Look toward the rear wall",
+        "card": {
+          "center": [
+            0.0,
+            8.88499927520752,
+            2.6500000953674316
+          ],
+          "normal": [
+            0.0,
+            -1.0,
+            0.0
+          ],
+          "right": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "width": 2.5899998774583706,
+          "height": 3.3400000820045688
+        }
+      },
+      {
+        "id": "skill-05",
+        "kind": "skill",
+        "number": 5,
+        "catalogueNumber": 5,
+        "title": "Data & AI",
+        "section": "skills",
+        "category": "APPLIED SKILLS / DATA & AI",
+        "summary": "Data preparation, AI-assisted workflows and ongoing ML learning.",
+        "focus": "Backend development",
+        "items": [
+          "Python",
+          "Pandas / NumPy",
+          "AI SDKs",
+          "Retrieval-augmented generation (RAG)",
+          "AI knowledge bases",
+          "Automation",
+          "R / exploratory analysis",
+          "XGBoost / LOF",
+          "Locust / Toxiproxy",
+          "NLTK / TextBlob"
+        ],
+        "displayItems": [
+          "Python / Pandas / NumPy",
+          "AI SDKs / RAG",
+          "ML / attribution",
+          "Locust / automation",
+          "AI / ML (learning)"
+        ],
+        "profileOnly": [
+          "Pandas / NumPy"
+        ],
+        "evidenceProjectIds": [
+          "report-automation",
+          "fyp",
+          "DTMAssignment",
+          "PFDAGroupAssignment",
+          "txsa-group-assignment"
+        ],
+        "url": "https://github.com/DamienCKj2812/logging-loading",
+        "repositories": [
+          {
+            "id": "logging-loading",
+            "title": "Load and chaos tooling",
+            "url": "https://github.com/DamienCKj2812/logging-loading"
+          },
+          {
+            "id": "logging-microservice-ui",
+            "title": "Observability dashboard",
+            "url": "https://github.com/DamienCKj2812/logging-microservice-ui"
+          },
+          {
+            "id": "DTMAssignment",
+            "title": "Repository",
+            "url": "https://github.com/DamienCKj2812/DTMAssignment"
+          },
+          {
+            "id": "PFDAGroupAssignment",
+            "title": "Repository",
+            "url": "https://github.com/DamienCKj2812/PFDAGroupAssignment"
+          },
+          {
+            "id": "txsa-group-assignment",
+            "title": "Repository",
+            "url": "https://github.com/DamienCKj2812/txsa-group-assignment"
+          }
+        ],
+        "siteLinks": [],
+        "catalogueSections": [
+          {
+            "heading": "Overview",
+            "markdown": "Data preparation, AI-assisted workflows and ongoing ML learning.\n\nBackend development is my main focus, but I learn the technologies each project requires rather than limiting myself to a single stack."
+          },
+          {
+            "heading": "Core toolkit",
+            "markdown": "- Python\n- Pandas / NumPy\n- AI SDKs\n- Retrieval-augmented generation (RAG)\n- AI knowledge bases\n- Automation\n- R / exploratory analysis\n- XGBoost / LOF\n- Locust / Toxiproxy\n- NLTK / TextBlob"
+          },
+          {
+            "heading": "Applied in projects",
+            "markdown": "MyReport separates proposed AI updates from confirmed customer facts. FYP compares hybrid anomaly detectors. DTM/PFDA/TXSA cover preprocessing, statistical/model experiments and tokenization. About confirms RAG and AI knowledge-base work at COS Great Trading.\n\n- **MyReport \u2014 WhatsApp Customer Follow-up and Reporting Workspace:** A customer-management workspace that organizes WhatsApp conversations, confirmed customer requirements, eligibility records and follow-up actions, with human-reviewed AI assistance.\n\n**Access:** Hosted privately via Tailscale; not publicly accessible.\n- **FYP \u2014 Hybrid Anomaly Detection for Microservice Observability:** A telemetry-based anomaly-detection system that combines OpenTelemetry ingestion, Redis streaming, machine-learning inference and a live observability dashboard, evaluated using telemetry from an instrumented CMS application.\n- **DTM \u2014 Coupon Data Preparation and Exploratory Analysis:** An R data-preparation study that introduces controlled data-quality problems into an in-vehicle coupon dataset, cleans it and compares exploratory views before and after preprocessing.\n- **PFDA \u2014 Credit-Risk Data Analysis:** An R-based group study of credit-risk data, combining cleaning, exploratory analysis, statistical tests and predictive experiments.\n- **TXSA \u2014 Comparative Text Preprocessing:** A notebook-based text-analytics assignment comparing tokenization approaches and demonstrating stop-word/punctuation filtering on a supplied text corpus."
+          },
+          {
+            "heading": "Engineering workflow",
+            "markdown": "Preserve original data, validate structured outputs, prepare reproducible datasets and keep recorded offline evaluation separate from live operation. Use human review when model proposals change business records."
+          },
+          {
+            "heading": "Technical decisions",
+            "markdown": "The catalogue identifies XGBoost + LOF as the current FYP model. Attribution explains baseline deviations, not proven causal root causes."
+          },
+          {
+            "heading": "Collaboration and delivery",
+            "markdown": "The completed About profile identifies **User empathy and Adaptability** as strengths. Frontend work at LYJ Events & Marketing includes stakeholder collaboration, QA feedback and evolving requirements. DWMLight's confirmed contribution focuses on CMS/backend and deployment."
+          },
+          {
+            "heading": "Learning and scope",
+            "markdown": "About explicitly lists machine learning, artificial intelligence and 3D modeling as ongoing learning areas. The FYP notebook results are recorded offline evidence with injected anomaly labels, not a reproduced production benchmark."
+          },
+          {
+            "heading": "Links and sources",
+            "markdown": "Project evidence comes from the completed project catalogue; broader toolkit claims come from the completed About profile.\n\n- [Load and chaos tooling / logging-loading](https://github.com/DamienCKj2812/logging-loading)\n- [Observability dashboard / logging-microservice-ui](https://github.com/DamienCKj2812/logging-microservice-ui)\n- [Repository / DTMAssignment](https://github.com/DamienCKj2812/DTMAssignment)\n- [Repository / PFDAGroupAssignment](https://github.com/DamienCKj2812/PFDAGroupAssignment)\n- [Repository / txsa-group-assignment](https://github.com/DamienCKj2812/txsa-group-assignment)\n\nMyReport: Hosted privately via Tailscale; not publicly accessible."
+          }
+        ],
+        "contentStatus": "Approved About toolkit and project-catalogue evidence; profile-only/learning scope stated explicitly",
+        "position": [
+          3.299999952316284,
+          8.88499927520752,
+          2.6500000953674316
+        ],
+        "start": 1300,
+        "end": 1390,
+        "hint": "Look toward the rear wall",
+        "card": {
+          "center": [
+            3.299999952316284,
+            8.88499927520752,
+            2.6500000953674316
+          ],
+          "normal": [
+            0.0,
+            -1.0,
+            0.0
+          ],
+          "right": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "width": 2.5899996933513445,
+          "height": 3.3400000820045688
+        }
+      },
+      {
+        "id": "skill-06",
+        "kind": "skill",
+        "number": 6,
+        "catalogueNumber": 6,
+        "title": "Security",
+        "section": "skills",
+        "category": "APPLIED SKILLS / SECURITY",
+        "summary": "Validation, ownership and permission boundaries in applications.",
+        "focus": "Backend development",
+        "items": [
+          "JWT",
+          "OAuth",
+          "Access control",
+          "Validation",
+          "Encryption",
+          "Secure APIs"
+        ],
+        "displayItems": [
+          "JWT / OAuth",
+          "Access control / permissions",
+          "RLS / validation",
+          "Reviewed data / audit history",
+          "Encryption / secure APIs"
+        ],
+        "profileOnly": [
+          "Encryption"
+        ],
+        "evidenceProjectIds": [
+          "Aria",
+          "report-automation"
+        ],
+        "url": null,
+        "repositories": [],
+        "siteLinks": [
+          {
+            "url": "https://dwmlight.com/en",
+            "label": "DWMLight / ANVA CMS website"
+          }
+        ],
+        "catalogueSections": [
+          {
+            "heading": "Overview",
+            "markdown": "Validation, ownership and permission boundaries in applications.\n\nBackend development is my main focus, but I learn the technologies each project requires rather than limiting myself to a single stack."
+          },
+          {
+            "heading": "Core toolkit",
+            "markdown": "- JWT\n- OAuth\n- Access control\n- Validation\n- Encryption\n- Secure APIs"
+          },
+          {
+            "heading": "Applied in projects",
+            "markdown": "ANVA CMS checks authenticated content-operation permissions. MyReport uses owner-scoped database contracts, structured AI validation and calendar OAuth.\n\n- **DWMLight / ANVA CMS \u2014 Multilingual Product Website and Custom CMS:** A multilingual product and company website backed by a custom content-management API, including localized content, product media and downloadable catalogues.\n\nPublic website: [DWMLight](https://dwmlight.com/en).\n- **MyReport \u2014 WhatsApp Customer Follow-up and Reporting Workspace:** A customer-management workspace that organizes WhatsApp conversations, confirmed customer requirements, eligibility records and follow-up actions, with human-reviewed AI assistance.\n\n**Access:** Hosted privately via Tailscale; not publicly accessible."
+          },
+          {
+            "heading": "Engineering workflow",
+            "markdown": "Validate input at boundaries, enforce ownership in server/database operations and preserve audit history when updating customer or eligibility records."
+          },
+          {
+            "heading": "Technical decisions",
+            "markdown": "Keep privileged CMS tokens server-side. Separate immutable messages, proposed AI values and confirmed records. Treat client-side route selection as UI behavior rather than a complete authorization boundary."
+          },
+          {
+            "heading": "Collaboration and delivery",
+            "markdown": "The completed About profile identifies **User empathy and Adaptability** as strengths. Frontend work at LYJ Events & Marketing includes stakeholder collaboration, QA feedback and evolving requirements. DWMLight's confirmed contribution focuses on CMS/backend and deployment."
+          },
+          {
+            "heading": "Learning and scope",
+            "markdown": "Encryption and secure APIs are profile-listed skills. These project examples demonstrate implemented controls; the catalogue does not claim an independent security audit or guarantees of complete system security."
+          },
+          {
+            "heading": "Links and sources",
+            "markdown": "- [DWMLight / ANVA CMS website](https://dwmlight.com/en)"
+          }
+        ],
+        "contentStatus": "Approved About toolkit and project-catalogue evidence; profile-only/learning scope stated explicitly",
+        "position": [
+          5.885000228881836,
+          6.900000095367432,
+          2.6500000953674316
+        ],
+        "start": 1450,
+        "end": 1540,
+        "hint": "Look right",
+        "card": {
+          "center": [
+            5.885000228881836,
+            6.899999618530273,
+            2.6500000953674316
+          ],
+          "normal": [
+            -0.9999999403953552,
+            0.0,
+            0.0
+          ],
+          "right": [
+            0.0,
+            -0.9999999403953552,
+            0.0
+          ],
+          "width": 2.1899995964084757,
+          "height": 3.3400000820045688
+        },
+        "repositoryLinksRestricted": true
+      },
+      {
+        "id": "skill-07",
+        "kind": "skill",
+        "number": 7,
+        "catalogueNumber": 7,
+        "title": "DevOps & CI/CD",
+        "section": "skills",
+        "category": "APPLIED SKILLS / DEVOPS & CI/CD",
+        "summary": "Deployment, server operations and repeatable application delivery.",
+        "focus": "Backend development",
+        "items": [
+          "Git",
+          "GitHub",
+          "Bitbucket",
+          "Docker",
+          "GitHub Actions",
+          "Deployment",
+          "Observability"
+        ],
+        "displayItems": [
+          "Docker / PM2",
+          "Git / GitHub Actions",
+          "Ansible / deployment",
+          "Observability",
+          "Bitbucket"
+        ],
+        "profileOnly": [
+          "Bitbucket"
+        ],
+        "evidenceProjectIds": [
+          "agent-property",
+          "Aria",
+          "fyp",
+          "damien-portfolio"
+        ],
+        "url": "https://github.com/DamienCKj2812/logging-loading",
+        "repositories": [
+          {
+            "id": "logging-loading",
+            "title": "Load and chaos tooling",
+            "url": "https://github.com/DamienCKj2812/logging-loading"
+          },
+          {
+            "id": "logging-microservice-ui",
+            "title": "Observability dashboard",
+            "url": "https://github.com/DamienCKj2812/logging-microservice-ui"
+          },
+          {
+            "id": "damien-portfolio",
+            "title": "GitHub / currently empty",
+            "url": "https://github.com/DamienCKj2812/damien-portfolio"
+          }
+        ],
+        "siteLinks": [
+          {
+            "url": "https://myrumawip.com/",
+            "label": "MyRumawip website"
+          },
+          {
+            "url": "https://dwmlight.com/en",
+            "label": "DWMLight / ANVA CMS website"
+          }
+        ],
+        "catalogueSections": [
+          {
+            "heading": "Overview",
+            "markdown": "Deployment, server operations and repeatable application delivery.\n\nBackend development is my main focus, but I learn the technologies each project requires rather than limiting myself to a single stack."
+          },
+          {
+            "heading": "Core toolkit",
+            "markdown": "- Git\n- GitHub\n- Bitbucket\n- Docker\n- GitHub Actions\n- Deployment\n- Observability"
+          },
+          {
+            "heading": "Applied in projects",
+            "markdown": "Agent Property includes deployment/sync tooling, Docker, PM2 and Ansible. DWMLight\u2019s confirmed work includes deployment/server operations. FYP uses a multi-service Compose topology.\n\n- **Agent Property \u2014 Bilingual Property Website and CMS:** A bilingual property-discovery website that combines CMS-managed listings, housing-scheme information and educational content with direct WhatsApp enquiries.\n\nPublic website: [MyRumawip](https://myrumawip.com/).\n- **DWMLight / ANVA CMS \u2014 Multilingual Product Website and Custom CMS:** A multilingual product and company website backed by a custom content-management API, including localized content, product media and downloadable catalogues.\n\nPublic website: [DWMLight](https://dwmlight.com/en).\n- **FYP \u2014 Hybrid Anomaly Detection for Microservice Observability:** A telemetry-based anomaly-detection system that combines OpenTelemetry ingestion, Redis streaming, machine-learning inference and a live observability dashboard, evaluated using telemetry from an instrumented CMS application.\n- **Damien Portfolio \u2014 Immersive 3D Portfolio:** A monochrome interactive portfolio that takes visitors through a city, lobby and elevator into dedicated rooms for identity, skills, projects and experience/education."
+          },
+          {
+            "heading": "Engineering workflow",
+            "markdown": "Separate application and environment configuration, use repeatable builds/deployments, define process boundaries and validate generated artifacts before consuming them."
+          },
+          {
+            "heading": "Technical decisions",
+            "markdown": "The portfolio checks native/browser geometry, routes and hashes before a Vite deployment. Operational configuration demonstrates a deployment design; it is not by itself evidence of live uptime or measured business outcomes."
+          },
+          {
+            "heading": "Collaboration and delivery",
+            "markdown": "The completed About profile identifies **User empathy and Adaptability** as strengths. Frontend work at LYJ Events & Marketing includes stakeholder collaboration, QA feedback and evolving requirements. DWMLight's confirmed contribution focuses on CMS/backend and deployment."
+          },
+          {
+            "heading": "Learning and scope",
+            "markdown": "Bitbucket is profile-backed. The catalogue distinguishes delivered code/configuration from unconfirmed production status and does not invent availability or performance measurements."
+          },
+          {
+            "heading": "Links and sources",
+            "markdown": "Project evidence comes from the completed project catalogue; broader toolkit claims come from the completed About profile.\n\n- [Load and chaos tooling / logging-loading](https://github.com/DamienCKj2812/logging-loading)\n- [Observability dashboard / logging-microservice-ui](https://github.com/DamienCKj2812/logging-microservice-ui)\n- [GitHub / currently empty / damien-portfolio](https://github.com/DamienCKj2812/damien-portfolio)\n\nWebsites and previews\n\n- [MyRumawip website](https://myrumawip.com/)\n- [DWMLight / ANVA CMS website](https://dwmlight.com/en)"
+          }
+        ],
+        "contentStatus": "Approved About toolkit and project-catalogue evidence; profile-only/learning scope stated explicitly",
+        "position": [
+          5.885000228881836,
+          3.700000047683716,
+          2.6500000953674316
+        ],
+        "start": 1650,
+        "end": 1740,
+        "hint": "Look right",
+        "card": {
+          "center": [
+            5.885000228881836,
+            3.700000047683716,
+            2.6500000953674316
+          ],
+          "normal": [
+            -0.9999999403953552,
+            0.0,
+            0.0
+          ],
+          "right": [
+            0.0,
+            -0.9999999403953552,
+            0.0
+          ],
+          "width": 2.190000031876237,
+          "height": 3.3400000820045688
+        }
+      },
+      {
+        "id": "skill-08",
+        "kind": "skill",
+        "number": 8,
+        "catalogueNumber": 8,
+        "title": "Microservices",
+        "section": "skills",
+        "category": "APPLIED SKILLS / MICROSERVICES",
+        "summary": "Service boundaries, asynchronous processing and observability.",
+        "focus": "Backend development",
+        "items": [
+          "Service design",
+          "Message queues",
+          "Tracing",
+          "Resilience"
+        ],
+        "displayItems": [
+          "Redis Streams / OTLP",
+          "REST / WebSockets",
+          "Metrics / traces",
+          "Queues / resilience"
+        ],
+        "profileOnly": [],
+        "evidenceProjectIds": [
+          "fyp",
+          "report-automation"
+        ],
+        "url": "https://github.com/DamienCKj2812/logging-loading",
+        "repositories": [
+          {
+            "id": "logging-loading",
+            "title": "Load and chaos tooling",
+            "url": "https://github.com/DamienCKj2812/logging-loading"
+          },
+          {
+            "id": "logging-microservice-ui",
+            "title": "Observability dashboard",
+            "url": "https://github.com/DamienCKj2812/logging-microservice-ui"
+          }
+        ],
+        "siteLinks": [],
+        "catalogueSections": [
+          {
+            "heading": "Overview",
+            "markdown": "Service boundaries, asynchronous processing and observability.\n\nBackend development is my main focus, but I learn the technologies each project requires rather than limiting myself to a single stack."
+          },
+          {
+            "heading": "Core toolkit",
+            "markdown": "- Service design\n- Message queues\n- Tracing\n- Resilience"
+          },
+          {
+            "heading": "Applied in projects",
+            "markdown": "FYP separates the Go telemetry receiver, stream consumers, Python inference and REST/WebSocket API. MyReport normalizes provider messages into an owner-scoped workflow.\n\n- **FYP \u2014 Hybrid Anomaly Detection for Microservice Observability:** A telemetry-based anomaly-detection system that combines OpenTelemetry ingestion, Redis streaming, machine-learning inference and a live observability dashboard, evaluated using telemetry from an instrumented CMS application.\n- **MyReport \u2014 WhatsApp Customer Follow-up and Reporting Workspace:** A customer-management workspace that organizes WhatsApp conversations, confirmed customer requirements, eligibility records and follow-up actions, with human-reviewed AI assistance.\n\n**Access:** Hosted privately via Tailscale; not publicly accessible."
+          },
+          {
+            "heading": "Engineering workflow",
+            "markdown": "Define transport contracts, decouple ingestion from expensive processing, keep durable state for recoverable work and make operational events observable."
+          },
+          {
+            "heading": "Technical decisions",
+            "markdown": "FYP supports OTLP metrics and traces, not a complete implemented logs receiver. Redis Streams is its evidenced messaging path."
+          },
+          {
+            "heading": "Collaboration and delivery",
+            "markdown": "The completed About profile identifies **User empathy and Adaptability** as strengths. Frontend work at LYJ Events & Marketing includes stakeholder collaboration, QA feedback and evolving requirements. DWMLight's confirmed contribution focuses on CMS/backend and deployment."
+          },
+          {
+            "heading": "Learning and scope",
+            "markdown": "Resilience is listed in About. The current catalogue demonstrates Redis Streams and service integration, without claiming a proven fault-tolerance guarantee."
+          },
+          {
+            "heading": "Links and sources",
+            "markdown": "Project evidence comes from the completed project catalogue; broader toolkit claims come from the completed About profile.\n\n- [Load and chaos tooling / logging-loading](https://github.com/DamienCKj2812/logging-loading)\n- [Observability dashboard / logging-microservice-ui](https://github.com/DamienCKj2812/logging-microservice-ui)\n\nMyReport: Hosted privately via Tailscale; not publicly accessible."
+          }
+        ],
+        "contentStatus": "Approved About toolkit and project-catalogue evidence; profile-only/learning scope stated explicitly",
+        "position": [
+          5.885000228881836,
+          0.5,
+          2.6500000953674316
+        ],
+        "start": 1850,
+        "end": 1940,
+        "hint": "Look right",
+        "card": {
+          "center": [
+            5.885000228881836,
+            0.5,
+            2.6500000953674316
+          ],
+          "normal": [
+            -0.9999999403953552,
+            0.0,
+            0.0
+          ],
+          "right": [
+            0.0,
+            -0.9999999403953552,
+            0.0
+          ],
+          "width": 2.190000031876237,
+          "height": 3.3400000820045688
+        }
+      },
+      {
+        "id": "skill-09",
+        "kind": "skill",
+        "number": 9,
+        "catalogueNumber": 9,
+        "title": "Linux",
+        "section": "skills",
+        "category": "APPLIED SKILLS / LINUX",
+        "summary": "Linux workstations, custom desktop tools and application servers.",
+        "focus": "Backend development",
+        "items": [
+          "Linux fundamentals",
+          "Fedora",
+          "Ubuntu",
+          "Debian",
+          "Arch",
+          "Mint",
+          "Shell tools",
+          "Servers"
+        ],
+        "displayItems": [
+          "Fedora / Linux",
+          "KDE / Hyprland",
+          "Shell / servers",
+          "Ubuntu / Debian",
+          "Arch / Mint"
+        ],
+        "profileOnly": [
+          "Ubuntu",
+          "Debian",
+          "Arch",
+          "Mint"
+        ],
+        "evidenceProjectIds": [
+          "fedora-dotfiles",
+          "agent-property",
+          "Aria",
+          "fyp"
+        ],
+        "url": "https://github.com/DamienCKj2812/logging-loading",
+        "repositories": [
+          {
+            "id": "logging-loading",
+            "title": "Load and chaos tooling",
+            "url": "https://github.com/DamienCKj2812/logging-loading"
+          },
+          {
+            "id": "logging-microservice-ui",
+            "title": "Observability dashboard",
+            "url": "https://github.com/DamienCKj2812/logging-microservice-ui"
+          }
+        ],
+        "siteLinks": [
+          {
+            "url": "https://myrumawip.com/",
+            "label": "MyRumawip website"
+          },
+          {
+            "url": "https://dwmlight.com/en",
+            "label": "DWMLight / ANVA CMS website"
+          }
+        ],
+        "catalogueSections": [
+          {
+            "heading": "Overview",
+            "markdown": "Linux workstations, custom desktop tools and application servers.\n\nBackend development is my main focus, but I learn the technologies each project requires rather than limiting myself to a single stack."
+          },
+          {
+            "heading": "Core toolkit",
+            "markdown": "- Linux fundamentals\n- Fedora\n- Ubuntu\n- Debian\n- Arch\n- Mint\n- Shell tools\n- Servers"
+          },
+          {
+            "heading": "Applied in projects",
+            "markdown": "Fedora Dotfiles combines Stow, KDE/Hyprland, Quickshell/QML and a native PyQt6 sharing chooser. Client work includes server/deployment responsibilities, and FYP provides shell-driven load/chaos tooling.\n\n- **Fedora Dotfiles \u2014 Customized Wayland Desktop Environment:** A personalized Fedora desktop/development environment combining KDE Plasma and Hyprland sessions with a custom shell, login appearance, sharing picker and reusable configuration management.\n- **Agent Property \u2014 Bilingual Property Website and CMS:** A bilingual property-discovery website that combines CMS-managed listings, housing-scheme information and educational content with direct WhatsApp enquiries.\n\nPublic website: [MyRumawip](https://myrumawip.com/).\n- **DWMLight / ANVA CMS \u2014 Multilingual Product Website and Custom CMS:** A multilingual product and company website backed by a custom content-management API, including localized content, product media and downloadable catalogues.\n\nPublic website: [DWMLight](https://dwmlight.com/en).\n- **FYP \u2014 Hybrid Anomaly Detection for Microservice Observability:** A telemetry-based anomaly-detection system that combines OpenTelemetry ingestion, Redis streaming, machine-learning inference and a live observability dashboard, evaluated using telemetry from an instrumented CMS application."
+          },
+          {
+            "heading": "Engineering workflow",
+            "markdown": "Version configuration, separate session/service responsibilities, preserve upstream protocols and clean up asynchronous previews or processes when they stop being useful."
+          },
+          {
+            "heading": "Technical decisions",
+            "markdown": "The sharing chooser customizes selection UI while the existing portal/PipeWire services retain permission and sharing responsibilities. Desktop customization integrates upstream tools rather than reimplementing Linux graphics."
+          },
+          {
+            "heading": "Collaboration and delivery",
+            "markdown": "The completed About profile identifies **User empathy and Adaptability** as strengths. Frontend work at LYJ Events & Marketing includes stakeholder collaboration, QA feedback and evolving requirements. DWMLight's confirmed contribution focuses on CMS/backend and deployment."
+          },
+          {
+            "heading": "Learning and scope",
+            "markdown": "About confirms an interest in installing/customizing distributions including Arch and Mint. Fedora has a dedicated catalogue project; the other named distributions are profile-backed, without invented clean-machine benchmarks."
+          },
+          {
+            "heading": "Links and sources",
+            "markdown": "Project evidence comes from the completed project catalogue; broader toolkit claims come from the completed About profile.\n\n- [Load and chaos tooling / logging-loading](https://github.com/DamienCKj2812/logging-loading)\n- [Observability dashboard / logging-microservice-ui](https://github.com/DamienCKj2812/logging-microservice-ui)\n\nWebsites and previews\n\n- [MyRumawip website](https://myrumawip.com/)\n- [DWMLight / ANVA CMS website](https://dwmlight.com/en)"
+          }
+        ],
+        "contentStatus": "Approved About toolkit and project-catalogue evidence; profile-only/learning scope stated explicitly",
+        "position": [
+          5.885000228881836,
+          -2.700000047683716,
+          2.6500000953674316
+        ],
+        "start": 2050,
+        "end": 2140,
+        "hint": "Look right",
+        "card": {
+          "center": [
+            5.885000228881836,
+            -2.6999998092651367,
+            2.6500000953674316
+          ],
+          "normal": [
+            -0.9999999403953552,
+            0.0,
+            0.0
+          ],
+          "right": [
+            0.0,
+            -0.9999999403953552,
+            0.0
+          ],
+          "width": 2.190000031876237,
+          "height": 3.3400000820045688
+        }
+      },
+      {
+        "id": "atat",
+        "title": "AT-AT walker",
+        "items": [],
+        "caption": "Star Wars AT-AT \u00b7 Black armor and fine white contours",
+        "position": [
+          0.0,
+          3.8499999046325684,
+          2.0687201023101807
+        ],
+        "start": 2290,
+        "end": 2380,
+        "hint": "Look ahead and around the mechanical walker"
+      }
+    ]
+  },
+  "npcCount": 6,
+  "loop": true
+}

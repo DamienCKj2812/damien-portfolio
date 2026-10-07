@@ -1,0 +1,23 @@
+{
+  "description": "18 active street NPCs: ten long-path walkers, two conversation pairs, two phone users, and two bag carriers. Paths keep the entrance corridor clear.",
+  "people": [
+    { "id": 0, "base": [-16, -10, 0], "scale": 1.0, "pose": "walking", "walk": { "offset": [11, 0, 0], "startFrame": 110, "endFrame": 300 } },
+    { "id": 1, "base": [-5, -18, 0], "scale": 0.98, "pose": "walking", "walk": { "offset": [-11, 0, 0], "startFrame": 90, "endFrame": 290 } },
+    { "id": 2, "base": [-8, -20, 0], "scale": 1.03, "pose": "walking", "walk": { "offset": [0, 12, 0], "startFrame": 130, "endFrame": 340 } },
+    { "id": 3, "base": [-12, -8, 0], "scale": 0.96, "pose": "walking", "walk": { "offset": [0, -12, 0], "startFrame": 200, "endFrame": 410 } },
+    { "id": 4, "base": [-4, -20, 0], "scale": 1.01, "pose": "walking", "walk": { "offset": [0, 12, 0], "startFrame": 150, "endFrame": 350 } },
+    { "id": 5, "base": [5, -10, 0], "scale": 1.02, "pose": "walking", "walk": { "offset": [11, 0, 0], "startFrame": 130, "endFrame": 340 } },
+    { "id": 6, "base": [16, -18, 0], "scale": 0.97, "pose": "walking", "walk": { "offset": [-11, 0, 0], "startFrame": 95, "endFrame": 315 } },
+    { "id": 7, "base": [8, -20, 0], "scale": 1.04, "pose": "walking", "walk": { "offset": [0, 12, 0], "startFrame": 120, "endFrame": 340 } },
+    { "id": 8, "base": [12, -8, 0], "scale": 0.99, "pose": "walking", "walk": { "offset": [0, -12, 0], "startFrame": 170, "endFrame": 370 } },
+    { "id": 9, "base": [17, -20, 0], "scale": 1.0, "pose": "walking", "walk": { "offset": [0, 12, 0], "startFrame": 150, "endFrame": 390 } },
+    { "id": 10, "base": [-9.7, -13.5, 0], "scale": 1.0, "pose": "talking", "facing": -1.5707963268, "interaction_group": "left_conversation" },
+    { "id": 11, "base": [-10.9, -13.5, 0], "scale": 0.98, "pose": "listening", "facing": 1.5707963268, "interaction_group": "left_conversation" },
+    { "id": 12, "base": [9.7, -13.5, 0], "scale": 1.02, "pose": "talking", "facing": 1.5707963268, "interaction_group": "right_conversation" },
+    { "id": 13, "base": [10.9, -13.5, 0], "scale": 0.96, "pose": "listening", "facing": -1.5707963268, "interaction_group": "right_conversation" },
+    { "id": 14, "base": [-15, -13.5, 0], "scale": 0.99, "pose": "phone", "facing": -0.3 },
+    { "id": 15, "base": [15, -13.5, 0], "scale": 1.0, "pose": "phone", "facing": 0.35 },
+    { "id": 16, "base": [-6.2, -14.5, 0], "scale": 1.01, "pose": "carrying_bag", "facing": 0.45 },
+    { "id": 17, "base": [6.4, -14.5, 0], "scale": 0.98, "pose": "carrying_bag", "facing": -0.4 }
+  ]
+}

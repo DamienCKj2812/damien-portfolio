@@ -1,0 +1,15 @@
+{
+  "image": "portraits/damien-pixel.png",
+  "source": "Chong Kah Jun - Bg remove.png",
+  "assetHash": "afd37c62034d1c1c",
+  "size": [
+    640,
+    800
+  ],
+  "cellSize": 5,
+  "softness": 1.1,
+  "effect": "Soft monochrome raster portrait with uniform grading, compressed highlights and a faint grid",
+  "originalImage": "portraits/damien-original.png",
+  "originalAssetHash": "460b01ec2c07d4c8",
+  "originalEffect": "Original photographic color and detail with matching transparent subject framing; no tonal grading or grid"
+}

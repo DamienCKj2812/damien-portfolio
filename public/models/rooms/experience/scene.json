@@ -1,0 +1,1404 @@
+{
+  "version": 3,
+  "level": "experience",
+  "label": "Timeline observatory",
+  "geometry": "geometry.bin",
+  "animation": "animation.bin",
+  "assetHash": "451cab054528",
+  "frameStart": 1,
+  "frameEnd": 2400,
+  "fps": 30,
+  "channelStride": 16,
+  "channelCount": 7,
+  "channels": [
+    "Timeline Observatory / guided free-look camera",
+    "Exterior planet / Overhead world",
+    "Exterior planet / Window world 01",
+    "Exterior planet / Window world 02",
+    "Exterior planet / Window world 03",
+    "Exterior planet / Window world 04",
+    "Observatory / central rotating geodesic globe"
+  ],
+  "actors": [
+    {
+      "index": 1,
+      "name": "Exterior planet / Overhead world",
+      "style": "room",
+      "morphCount": 0
+    },
+    {
+      "index": 2,
+      "name": "Exterior planet / Window world 01",
+      "style": "room",
+      "morphCount": 0
+    },
+    {
+      "index": 3,
+      "name": "Exterior planet / Window world 02",
+      "style": "room",
+      "morphCount": 0
+    },
+    {
+      "index": 4,
+      "name": "Exterior planet / Window world 03",
+      "style": "room",
+      "morphCount": 0
+    },
+    {
+      "index": 5,
+      "name": "Exterior planet / Window world 04",
+      "style": "room",
+      "morphCount": 0
+    },
+    {
+      "index": 6,
+      "name": "Observatory / central rotating geodesic globe",
+      "style": "room",
+      "morphCount": 0
+    }
+  ],
+  "camera": {
+    "verticalFov": 55.79454206189526,
+    "sourceAspect": 1.7435897435897436,
+    "near": 0.01,
+    "far": 350,
+    "fovOffset": 10
+  },
+  "cameras": {
+    "main": {
+      "position": [
+        0.0,
+        -8.699999809265137,
+        2.450000047683716
+      ],
+      "quaternion": [
+        0.7347602844238281,
+        0.0,
+        0.0,
+        0.6783269643783569
+      ],
+      "fov": 55.79454206189526
+    },
+    "globe": {
+      "position": [
+        4.400000095367432,
+        -7.0,
+        2.5
+      ],
+      "quaternion": [
+        0.6244615912437439,
+        0.17996002733707428,
+        0.2104664295911789,
+        0.730319082736969
+      ],
+      "fov": 37.978488520695535
+    },
+    "oculus": {
+      "position": [
+        0.0,
+        -1.5,
+        2.5
+      ],
+      "quaternion": [
+        0.9677146673202515,
+        0.0,
+        0.0,
+        0.252048134803772
+      ],
+      "fov": 59.67107820052311
+    },
+    "window": {
+      "position": [
+        -9.0,
+        2.799999952316284,
+        3.9000000953674316
+      ],
+      "quaternion": [
+        0.6993275284767151,
+        0.24983671307563782,
+        0.22531212866306305,
+        0.6306798458099365
+      ],
+      "fov": 52.35715246474731
+    }
+  },
+  "entranceAnchor": [
+    0,
+    -12.5,
+    0
+  ],
+  "textures": [
+    "logos/apu-logo.png",
+    "logos/cos-logo.png",
+    "logos/lyj-logo.png"
+  ],
+  "groups": [
+    {
+      "actor": 0,
+      "kind": "glow",
+      "byteOffset": 0,
+      "floatCount": 6016,
+      "vertexCount": 1504,
+      "stride": 4,
+      "role": null,
+      "id": null,
+      "opacity": 1.0
+    },
+    {
+      "actor": 0,
+      "kind": "lines",
+      "byteOffset": 24064,
+      "floatCount": 26632,
+      "vertexCount": 6658,
+      "stride": 4,
+      "role": null,
+      "id": null,
+      "opacity": 1.0
+    },
+    {
+      "actor": 0,
+      "kind": "points",
+      "byteOffset": 130592,
+      "floatCount": 44280,
+      "vertexCount": 8856,
+      "stride": 5,
+      "role": null,
+      "id": null,
+      "opacity": 1.0
+    },
+    {
+      "actor": 0,
+      "kind": "screen",
+      "byteOffset": 307712,
+      "floatCount": 30,
+      "vertexCount": 6,
+      "stride": 5,
+      "role": "milestoneLogo",
+      "id": "logos/apu-logo.png",
+      "opacity": 1.0,
+      "texture": "logos/apu-logo.png"
+    },
+    {
+      "actor": 0,
+      "kind": "screen",
+      "byteOffset": 307832,
+      "floatCount": 30,
+      "vertexCount": 6,
+      "stride": 5,
+      "role": "milestoneLogo",
+      "id": "logos/cos-logo.png",
+      "opacity": 1.0,
+      "texture": "logos/cos-logo.png"
+    },
+    {
+      "actor": 0,
+      "kind": "screen",
+      "byteOffset": 307952,
+      "floatCount": 30,
+      "vertexCount": 6,
+      "stride": 5,
+      "role": "milestoneLogo",
+      "id": "logos/lyj-logo.png",
+      "opacity": 1.0,
+      "texture": "logos/lyj-logo.png"
+    },
+    {
+      "actor": 0,
+      "kind": "solid",
+      "byteOffset": 308072,
+      "floatCount": 2664,
+      "vertexCount": 666,
+      "stride": 4,
+      "role": null,
+      "id": null,
+      "opacity": 0.02500000037252903
+    },
+    {
+      "actor": 0,
+      "kind": "solid",
+      "byteOffset": 318728,
+      "floatCount": 349440,
+      "vertexCount": 87360,
+      "stride": 4,
+      "role": null,
+      "id": null,
+      "opacity": 1.0
+    },
+    {
+      "actor": 0,
+      "kind": "solid",
+      "byteOffset": 1716488,
+      "floatCount": 144,
+      "vertexCount": 36,
+      "stride": 4,
+      "role": "exhibit",
+      "id": "bachelors-computer-science",
+      "opacity": 1.0
+    },
+    {
+      "actor": 0,
+      "kind": "solid",
+      "byteOffset": 1717064,
+      "floatCount": 144,
+      "vertexCount": 36,
+      "stride": 4,
+      "role": "exhibit",
+      "id": "cos-great-trading",
+      "opacity": 1.0
+    },
+    {
+      "actor": 0,
+      "kind": "solid",
+      "byteOffset": 1717640,
+      "floatCount": 144,
+      "vertexCount": 36,
+      "stride": 4,
+      "role": "exhibit",
+      "id": "current-focus",
+      "opacity": 1.0
+    },
+    {
+      "actor": 0,
+      "kind": "solid",
+      "byteOffset": 1718216,
+      "floatCount": 144,
+      "vertexCount": 36,
+      "stride": 4,
+      "role": "exhibit",
+      "id": "diploma-information-technology",
+      "opacity": 1.0
+    },
+    {
+      "actor": 0,
+      "kind": "solid",
+      "byteOffset": 1718792,
+      "floatCount": 144,
+      "vertexCount": 36,
+      "stride": 4,
+      "role": "exhibit",
+      "id": "freelance-full-stack",
+      "opacity": 1.0
+    },
+    {
+      "actor": 0,
+      "kind": "solid",
+      "byteOffset": 1719368,
+      "floatCount": 144,
+      "vertexCount": 36,
+      "stride": 4,
+      "role": "exhibit",
+      "id": "lyj-events-marketing",
+      "opacity": 1.0
+    },
+    {
+      "actor": 0,
+      "kind": "solid",
+      "byteOffset": 1719944,
+      "floatCount": 144,
+      "vertexCount": 36,
+      "stride": 4,
+      "role": "exhibitPick",
+      "id": "bachelors-computer-science",
+      "opacity": 0.0
+    },
+    {
+      "actor": 0,
+      "kind": "solid",
+      "byteOffset": 1720520,
+      "floatCount": 144,
+      "vertexCount": 36,
+      "stride": 4,
+      "role": "exhibitPick",
+      "id": "cos-great-trading",
+      "opacity": 0.0
+    },
+    {
+      "actor": 0,
+      "kind": "solid",
+      "byteOffset": 1721096,
+      "floatCount": 144,
+      "vertexCount": 36,
+      "stride": 4,
+      "role": "exhibitPick",
+      "id": "current-focus",
+      "opacity": 0.0
+    },
+    {
+      "actor": 0,
+      "kind": "solid",
+      "byteOffset": 1721672,
+      "floatCount": 144,
+      "vertexCount": 36,
+      "stride": 4,
+      "role": "exhibitPick",
+      "id": "diploma-information-technology",
+      "opacity": 0.0
+    },
+    {
+      "actor": 0,
+      "kind": "solid",
+      "byteOffset": 1722248,
+      "floatCount": 144,
+      "vertexCount": 36,
+      "stride": 4,
+      "role": "exhibitPick",
+      "id": "freelance-full-stack",
+      "opacity": 0.0
+    },
+    {
+      "actor": 0,
+      "kind": "solid",
+      "byteOffset": 1722824,
+      "floatCount": 144,
+      "vertexCount": 36,
+      "stride": 4,
+      "role": "exhibitPick",
+      "id": "lyj-events-marketing",
+      "opacity": 0.0
+    },
+    {
+      "actor": 1,
+      "kind": "lines",
+      "byteOffset": 1723400,
+      "floatCount": 3840,
+      "vertexCount": 960,
+      "stride": 4,
+      "role": null,
+      "id": null,
+      "opacity": 1.0
+    },
+    {
+      "actor": 1,
+      "kind": "solid",
+      "byteOffset": 1738760,
+      "floatCount": 3840,
+      "vertexCount": 960,
+      "stride": 4,
+      "role": null,
+      "id": null,
+      "opacity": 1.0
+    },
+    {
+      "actor": 2,
+      "kind": "lines",
+      "byteOffset": 1754120,
+      "floatCount": 25344,
+      "vertexCount": 6336,
+      "stride": 4,
+      "role": null,
+      "id": null,
+      "opacity": 1.0
+    },
+    {
+      "actor": 2,
+      "kind": "solid",
+      "byteOffset": 1855496,
+      "floatCount": 28800,
+      "vertexCount": 7200,
+      "stride": 4,
+      "role": null,
+      "id": null,
+      "opacity": 1.0
+    },
+    {
+      "actor": 3,
+      "kind": "lines",
+      "byteOffset": 1970696,
+      "floatCount": 3840,
+      "vertexCount": 960,
+      "stride": 4,
+      "role": null,
+      "id": null,
+      "opacity": 1.0
+    },
+    {
+      "actor": 3,
+      "kind": "solid",
+      "byteOffset": 1986056,
+      "floatCount": 3840,
+      "vertexCount": 960,
+      "stride": 4,
+      "role": null,
+      "id": null,
+      "opacity": 1.0
+    },
+    {
+      "actor": 4,
+      "kind": "lines",
+      "byteOffset": 2001416,
+      "floatCount": 20224,
+      "vertexCount": 5056,
+      "stride": 4,
+      "role": null,
+      "id": null,
+      "opacity": 1.0
+    },
+    {
+      "actor": 4,
+      "kind": "solid",
+      "byteOffset": 2082312,
+      "floatCount": 26496,
+      "vertexCount": 6624,
+      "stride": 4,
+      "role": null,
+      "id": null,
+      "opacity": 1.0
+    },
+    {
+      "actor": 5,
+      "kind": "lines",
+      "byteOffset": 2188296,
+      "floatCount": 21504,
+      "vertexCount": 5376,
+      "stride": 4,
+      "role": null,
+      "id": null,
+      "opacity": 1.0
+    },
+    {
+      "actor": 5,
+      "kind": "solid",
+      "byteOffset": 2274312,
+      "floatCount": 26496,
+      "vertexCount": 6624,
+      "stride": 4,
+      "role": null,
+      "id": null,
+      "opacity": 1.0
+    },
+    {
+      "actor": 6,
+      "kind": "lines",
+      "byteOffset": 2380296,
+      "floatCount": 960,
+      "vertexCount": 240,
+      "stride": 4,
+      "role": null,
+      "id": null,
+      "opacity": 1.0
+    }
+  ],
+  "statistics": {
+    "points": 8856,
+    "lineSegments": 12793,
+    "glowSegments": 752,
+    "solidTriangles": 36870
+  },
+  "projects": [],
+  "exhibits": [
+    {
+      "id": "diploma-information-technology",
+      "title": "Diploma in IT (Software Engineer Specialism)",
+      "cardTitle": "DIPLOMA IN IT\n(Software Engineer Specialism)",
+      "cardHeading": "DIPLOMA IN IT",
+      "cardSpecialism": "(Software Engineer Specialism)",
+      "logo": {
+        "id": "apu",
+        "texture": "logos/apu-logo.png",
+        "source": "assets/media/logos/organisations/apu-logo.png"
+      },
+      "caption": "GRADUATED 2024 / CGPA 3.68",
+      "icon": "mountains",
+      "categoryLabel": "Education",
+      "catalogueNumber": 1,
+      "summary": "Diploma in Information Technology (Software Engineering)",
+      "metadata": [
+        [
+          "Org.",
+          "Asia Pacific University"
+        ],
+        [
+          "Period",
+          "Graduated 2024"
+        ],
+        [
+          "CGPA",
+          "3.68"
+        ]
+      ],
+      "catalogueSections": [
+        {
+          "heading": "Overview",
+          "markdown": "Diploma in Information Technology (Software Engineering)\n\nAsia Pacific University\n\nCGPA: 3.68"
+        },
+        {
+          "heading": "Qualification",
+          "markdown": "Diploma in Information Technology (Software Engineering)"
+        },
+        {
+          "heading": "Status and results",
+          "markdown": "Graduated 2024\n\nCGPA: 3.68"
+        }
+      ],
+      "card": {
+        "center": [
+          -7.179608345031738,
+          3.484395742416382,
+          2.75
+        ],
+        "normal": [
+          0.42976585030555725,
+          -0.9029403924942017,
+          0.0
+        ],
+        "right": [
+          0.9029403924942017,
+          0.42976585030555725,
+          0.0
+        ],
+        "width": 1.899999976158142,
+        "height": 2.4000000953674316
+      },
+      "position": [
+        -7.190352439880371,
+        3.5069692134857178,
+        2.75
+      ],
+      "start": 451,
+      "end": 631,
+      "hint": "Select the timeline card to read its story"
+    },
+    {
+      "id": "lyj-events-marketing",
+      "title": "LYJ Events & Marketing",
+      "cardTitle": "LYJ EVENTS\n& MARKETING",
+      "logo": {
+        "id": "lyj",
+        "texture": "logos/lyj-logo.png",
+        "source": "assets/media/logos/organisations/lyj-events-and-marketing-logo.png"
+      },
+      "caption": "APRIL 2024 \u2013 NOVEMBER 2024",
+      "icon": "cube",
+      "categoryLabel": "Experience",
+      "catalogueNumber": 2,
+      "summary": "Front End Developer",
+      "metadata": [
+        [
+          "Org.",
+          "LYJ Events & Marketing"
+        ],
+        [
+          "Period",
+          "April 2024 \u2013 November 2024"
+        ],
+        [
+          "Role",
+          "Front End Developer"
+        ]
+      ],
+      "catalogueSections": [
+        {
+          "heading": "Overview",
+          "markdown": "Front End Developer\n\nLYJ Events & Marketing\n\nDeveloped responsive web and mobile application interfaces from design specifications, with an emphasis on clean, maintainable code."
+        },
+        {
+          "heading": "Responsibilities",
+          "markdown": "- Collaborated with stakeholders to adapt features to evolving business requirements.\n- Participated in daily stand-ups and resolved bugs using QA feedback and issue tickets.\n- Built user interfaces for a trading broker website.\n- Built user interfaces for a hybrid community-chat and customer-support platform."
+        },
+        {
+          "heading": "Delivered interfaces",
+          "markdown": "- Built user interfaces for a trading broker website.\n- Built user interfaces for a hybrid community-chat and customer-support platform."
+        }
+      ],
+      "card": {
+        "center": [
+          -4.962484359741211,
+          6.245461463928223,
+          2.75
+        ],
+        "normal": [
+          0.26791512966156006,
+          -0.9634425640106201,
+          0.0
+        ],
+        "right": [
+          0.9634425640106201,
+          0.26791512966156006,
+          0.0
+        ],
+        "width": 1.8999998569488525,
+        "height": 2.4000000953674316
+      },
+      "position": [
+        -4.969182014465332,
+        6.269547462463379,
+        2.75
+      ],
+      "start": 721,
+      "end": 901,
+      "hint": "Select the timeline card to read its story"
+    },
+    {
+      "id": "cos-great-trading",
+      "title": "COS Great Trading",
+      "cardTitle": "COS GREAT\nTRADING",
+      "logo": {
+        "id": "cos",
+        "texture": "logos/cos-logo.png",
+        "source": "assets/media/logos/organisations/cos-great-trading-logo.png"
+      },
+      "caption": "JULY 2025 \u2013 NOVEMBER 2025",
+      "icon": "graduation",
+      "categoryLabel": "Experience",
+      "catalogueNumber": 3,
+      "summary": "Full-Stack Developer",
+      "metadata": [
+        [
+          "Org.",
+          "COS Great Trading"
+        ],
+        [
+          "Period",
+          "July 2025 \u2013 November 2025"
+        ],
+        [
+          "Role",
+          "Full-Stack Developer"
+        ]
+      ],
+      "catalogueSections": [
+        {
+          "heading": "Overview",
+          "markdown": "Full-Stack Developer\n\nCOS Great Trading\n\nDeveloped an AI-powered CRM, taking responsibility for the frontend and backend implementation."
+        },
+        {
+          "heading": "Responsibilities",
+          "markdown": "- Enabled users to build their own AI knowledge bases and answer questions for each department.\n- Implemented retrieval-augmented generation (RAG) using Pinecone.\n- Worked across Next.js, TypeScript, Express, Python, MongoDB, and AI SDKs."
+        },
+        {
+          "heading": "AI knowledge-base workflow",
+          "markdown": "Users build knowledge bases for their departments. The CRM uses retrieval-augmented generation (RAG), with Pinecone supporting retrieval to answer department-specific questions."
+        },
+        {
+          "heading": "Technologies",
+          "markdown": "Python \u00b7 TypeScript \u00b7 Express \u00b7 MongoDB \u00b7 Next.js \u00b7 Pinecone \u00b7 AI SDKs"
+        }
+      ],
+      "card": {
+        "center": [
+          -1.7701135873794556,
+          7.776298522949219,
+          2.75
+        ],
+        "normal": [
+          0.09097573906183243,
+          -0.9958531260490417,
+          0.0
+        ],
+        "right": [
+          0.9958531260490417,
+          0.09097573906183243,
+          0.0
+        ],
+        "width": 1.899999976158142,
+        "height": 2.4000000953674316
+      },
+      "position": [
+        -1.772387981414795,
+        7.801194667816162,
+        2.75
+      ],
+      "start": 991,
+      "end": 1171,
+      "hint": "Select the timeline card to read its story"
+    },
+    {
+      "id": "freelance-full-stack",
+      "title": "Freelance development",
+      "cardTitle": "FREELANCE\nDEVELOPMENT",
+      "caption": "ONGOING",
+      "icon": "buildings",
+      "categoryLabel": "Experience",
+      "catalogueNumber": 4,
+      "summary": "Freelance Full-Stack Developer",
+      "metadata": [
+        [
+          "Org.",
+          "Freelance / Client projects"
+        ],
+        [
+          "Period",
+          "Ongoing"
+        ],
+        [
+          "Role",
+          "Freelance Full-Stack Developer"
+        ]
+      ],
+      "repositoryLinksRestricted": true,
+      "siteLinks": [
+        {
+          "url": "https://myrumawip.com/",
+          "label": "MyRumawip website"
+        },
+        {
+          "url": "https://dwmlight.com/en",
+          "label": "DWMLight website"
+        },
+        {
+          "url": "https://amplyfii.io/login?redirect=%2F",
+          "label": "Amplifii (Ampress) preview (unreleased)"
+        }
+      ],
+      "catalogueSections": [
+        {
+          "heading": "Overview",
+          "markdown": "Freelance Full-Stack Developer\n\nFreelance / Client projects\n\nDevelop web applications, custom CMS backends, and CRM platforms for clients, with responsibilities spanning application development, integration, and deployment."
+        },
+        {
+          "heading": "MyRumawip",
+          "markdown": "MyRumawip (property project): developed the bilingual property website, CMS integration, and deployment workflow using Next.js, TypeScript, Strapi, and PostgreSQL.\n\nA bilingual property-discovery website that combines CMS-managed listings, housing-scheme information and educational content with direct WhatsApp enquiries.\n\nPublic website: [MyRumawip](https://myrumawip.com/).\n\n- Next.js / TypeScript\n- Strapi / PostgreSQL\n- Docker / Ansible"
+        },
+        {
+          "heading": "DWMLight / ANVA CMS",
+          "markdown": "DWMLight / ANVA CMS: developed the custom CMS/backend and handled deployment and server operations, using TypeScript, Express, and MongoDB to support structured multilingual content.\n\nA multilingual product and company website backed by a custom content-management API, including localized content, product media and downloadable catalogues.\n\nPublic website: [DWMLight](https://dwmlight.com/en).\n\n- TypeScript / Express\n- MongoDB / AJV\n- PM2 / OpenTelemetry"
+        },
+        {
+          "heading": "Amplifii (Ampress)",
+          "markdown": "Amplifii (Ampress) \u2014 current, unreleased: an influencer-marketing platform that helps teams manage creator partnerships and campaigns. Contributing to product development and collaborating with another developer to support the overall user experience.\n\nAn influencer-marketing platform that helps teams manage creator partnerships and campaigns.\n\n**Status: Unreleased.** [Preview login](https://amplyfii.io/login?redirect=%2F) is provided as an unreleased preview, not a launched public product.\n\n- Influencer marketing\n- Product development\n- Team collaboration"
+        },
+        {
+          "heading": "Achievements",
+          "markdown": "- MyRumawip achievement: helped establish the website as a well-known destination for finding affordable housing, achieving top-five Google search rankings for relevant affordable-housing searches.\n- DWMLight achievement: helped a China-based client connect with the global market through their multilingual website."
+        },
+        {
+          "heading": "Links and source references",
+          "markdown": "- [MyRumawip website](https://myrumawip.com/)\n- [DWMLight website](https://dwmlight.com/en)\n- [Amplifii (Ampress) preview (unreleased)](https://amplyfii.io/login?redirect=%2F)"
+        }
+      ],
+      "card": {
+        "center": [
+          1.7701135873794556,
+          7.776298522949219,
+          2.75
+        ],
+        "normal": [
+          -0.09097573906183243,
+          -0.9958531260490417,
+          0.0
+        ],
+        "right": [
+          0.9958531260490417,
+          -0.09097573906183243,
+          0.0
+        ],
+        "width": 1.899999976158142,
+        "height": 2.4000000953674316
+      },
+      "position": [
+        1.772387981414795,
+        7.801194667816162,
+        2.75
+      ],
+      "start": 1261,
+      "end": 1441,
+      "hint": "Select the timeline card to read its story"
+    },
+    {
+      "id": "bachelors-computer-science",
+      "title": "Bachelor of Degree in Computer Science (Data Analytics Specialism)",
+      "cardTitle": "BACHELOR OF DEGREE\nIN COMPUTER SCIENCE\n(Data Analytics Specialism)",
+      "cardHeading": "BACHELOR OF DEGREE\nIN COMPUTER SCIENCE",
+      "cardSpecialism": "(Data Analytics Specialism)",
+      "caption": "EXPECTED JUNE 2027 / CGPA 3.36",
+      "icon": "gears",
+      "categoryLabel": "Education",
+      "catalogueNumber": 5,
+      "summary": "Bachelor of Science (Honours) in Computer Science with a specialism in Data Analytics",
+      "metadata": [
+        [
+          "Org.",
+          "Asia Pacific University"
+        ],
+        [
+          "Period",
+          "Expected June 2027"
+        ],
+        [
+          "CGPA",
+          "3.36"
+        ]
+      ],
+      "catalogueSections": [
+        {
+          "heading": "Overview",
+          "markdown": "Bachelor of Science (Honours) in Computer Science with a specialism in Data Analytics\n\nAsia Pacific University\n\nFinal results received \u00b7 CGPA: 3.36"
+        },
+        {
+          "heading": "Qualification",
+          "markdown": "Bachelor of Science (Honours) in Computer Science with a specialism in Data Analytics"
+        },
+        {
+          "heading": "Status and results",
+          "markdown": "Expected June 2027\n\nFinal results received \u00b7 CGPA: 3.36"
+        },
+        {
+          "heading": "Specialisation",
+          "markdown": "Computer Science with a specialism in Data Analytics. Final results have been received; graduation is expected in June 2027."
+        }
+      ],
+      "card": {
+        "center": [
+          4.962484359741211,
+          6.245461463928223,
+          2.75
+        ],
+        "normal": [
+          -0.26791512966156006,
+          -0.9634425640106201,
+          0.0
+        ],
+        "right": [
+          0.9634425640106201,
+          -0.26791512966156006,
+          0.0
+        ],
+        "width": 1.8999998569488525,
+        "height": 2.4000000953674316
+      },
+      "position": [
+        4.969182014465332,
+        6.269547462463379,
+        2.75
+      ],
+      "start": 1531,
+      "end": 1711,
+      "hint": "Select the timeline card to read its story"
+    },
+    {
+      "id": "current-focus",
+      "title": "Current focus",
+      "cardTitle": "BACKEND\n& BEYOND",
+      "caption": "OPEN TO JOBS / FREELANCE",
+      "icon": "globe",
+      "categoryLabel": "Current focus",
+      "catalogueNumber": 6,
+      "summary": "Open to jobs and freelance opportunities",
+      "metadata": [
+        [
+          "Focus",
+          "Backend development"
+        ],
+        [
+          "Based",
+          "Seri Kembangan / Serdang, Selangor, Malaysia"
+        ]
+      ],
+      "catalogueSections": [
+        {
+          "heading": "Overview",
+          "markdown": "I build and deploy web applications, working across frontend, backend, databases, and server infrastructure. I also bring practical SEO knowledge to help websites perform well and be discoverable."
+        },
+        {
+          "heading": "Approach",
+          "markdown": "Backend development is my main focus, but I learn the technologies each project requires rather than limiting myself to a single stack."
+        },
+        {
+          "heading": "Currently learning",
+          "markdown": "- 3D modeling\n- Machine learning\n- Artificial intelligence"
+        },
+        {
+          "heading": "Interests",
+          "markdown": "- Badminton, basketball, and swimming\n- Gym and fitness\n- Installing and customising Linux distributions, including Arch and Mint"
+        },
+        {
+          "heading": "Contact",
+          "markdown": "- [Damienckj5993@gmail.com](mailto:Damienckj5993@gmail.com)\n- [+60 10-229 5993](tel:+60102295993)\n- [Message me on WhatsApp](https://wa.me/60102295993)\n- [Visit my GitHub](https://github.com/DamienCKj2812)"
+        }
+      ],
+      "card": {
+        "center": [
+          7.179608345031738,
+          3.484395742416382,
+          2.75
+        ],
+        "normal": [
+          -0.42976585030555725,
+          -0.9029403924942017,
+          0.0
+        ],
+        "right": [
+          0.9029403924942017,
+          -0.42976585030555725,
+          0.0
+        ],
+        "width": 1.899999976158142,
+        "height": 2.4000000953674316
+      },
+      "position": [
+        7.190352439880371,
+        3.5069692134857178,
+        2.75
+      ],
+      "start": 1801,
+      "end": 1981,
+      "hint": "Select the timeline card to read its story"
+    }
+  ],
+  "navigation": {
+    "type": "guided",
+    "eyeHeight": 2.450000047683716,
+    "initialYaw": 0.0,
+    "initialPitch": 0.07982993672762975,
+    "animationFollowsWalk": false,
+    "route": {
+      "file": "route.bin",
+      "frameStart": 1,
+      "frameEnd": 2400,
+      "stride": 3,
+      "loop": true
+    },
+    "stations": [
+      {
+        "id": "diploma-information-technology",
+        "title": "Diploma in IT (Software Engineer Specialism)",
+        "cardTitle": "DIPLOMA IN IT\n(Software Engineer Specialism)",
+        "cardHeading": "DIPLOMA IN IT",
+        "cardSpecialism": "(Software Engineer Specialism)",
+        "logo": {
+          "id": "apu",
+          "texture": "logos/apu-logo.png",
+          "source": "assets/media/logos/organisations/apu-logo.png"
+        },
+        "caption": "GRADUATED 2024 / CGPA 3.68",
+        "icon": "mountains",
+        "categoryLabel": "Education",
+        "catalogueNumber": 1,
+        "summary": "Diploma in Information Technology (Software Engineering)",
+        "metadata": [
+          [
+            "Org.",
+            "Asia Pacific University"
+          ],
+          [
+            "Period",
+            "Graduated 2024"
+          ],
+          [
+            "CGPA",
+            "3.68"
+          ]
+        ],
+        "catalogueSections": [
+          {
+            "heading": "Overview",
+            "markdown": "Diploma in Information Technology (Software Engineering)\n\nAsia Pacific University\n\nCGPA: 3.68"
+          },
+          {
+            "heading": "Qualification",
+            "markdown": "Diploma in Information Technology (Software Engineering)"
+          },
+          {
+            "heading": "Status and results",
+            "markdown": "Graduated 2024\n\nCGPA: 3.68"
+          }
+        ],
+        "card": {
+          "center": [
+            -7.179608345031738,
+            3.484395742416382,
+            2.75
+          ],
+          "normal": [
+            0.42976585030555725,
+            -0.9029403924942017,
+            0.0
+          ],
+          "right": [
+            0.9029403924942017,
+            0.42976585030555725,
+            0.0
+          ],
+          "width": 1.899999976158142,
+          "height": 2.4000000953674316
+        },
+        "position": [
+          -7.190352439880371,
+          3.5069692134857178,
+          2.75
+        ],
+        "start": 451,
+        "end": 631,
+        "hint": "Select the timeline card to read its story"
+      },
+      {
+        "id": "lyj-events-marketing",
+        "title": "LYJ Events & Marketing",
+        "cardTitle": "LYJ EVENTS\n& MARKETING",
+        "logo": {
+          "id": "lyj",
+          "texture": "logos/lyj-logo.png",
+          "source": "assets/media/logos/organisations/lyj-events-and-marketing-logo.png"
+        },
+        "caption": "APRIL 2024 \u2013 NOVEMBER 2024",
+        "icon": "cube",
+        "categoryLabel": "Experience",
+        "catalogueNumber": 2,
+        "summary": "Front End Developer",
+        "metadata": [
+          [
+            "Org.",
+            "LYJ Events & Marketing"
+          ],
+          [
+            "Period",
+            "April 2024 \u2013 November 2024"
+          ],
+          [
+            "Role",
+            "Front End Developer"
+          ]
+        ],
+        "catalogueSections": [
+          {
+            "heading": "Overview",
+            "markdown": "Front End Developer\n\nLYJ Events & Marketing\n\nDeveloped responsive web and mobile application interfaces from design specifications, with an emphasis on clean, maintainable code."
+          },
+          {
+            "heading": "Responsibilities",
+            "markdown": "- Collaborated with stakeholders to adapt features to evolving business requirements.\n- Participated in daily stand-ups and resolved bugs using QA feedback and issue tickets.\n- Built user interfaces for a trading broker website.\n- Built user interfaces for a hybrid community-chat and customer-support platform."
+          },
+          {
+            "heading": "Delivered interfaces",
+            "markdown": "- Built user interfaces for a trading broker website.\n- Built user interfaces for a hybrid community-chat and customer-support platform."
+          }
+        ],
+        "card": {
+          "center": [
+            -4.962484359741211,
+            6.245461463928223,
+            2.75
+          ],
+          "normal": [
+            0.26791512966156006,
+            -0.9634425640106201,
+            0.0
+          ],
+          "right": [
+            0.9634425640106201,
+            0.26791512966156006,
+            0.0
+          ],
+          "width": 1.8999998569488525,
+          "height": 2.4000000953674316
+        },
+        "position": [
+          -4.969182014465332,
+          6.269547462463379,
+          2.75
+        ],
+        "start": 721,
+        "end": 901,
+        "hint": "Select the timeline card to read its story"
+      },
+      {
+        "id": "cos-great-trading",
+        "title": "COS Great Trading",
+        "cardTitle": "COS GREAT\nTRADING",
+        "logo": {
+          "id": "cos",
+          "texture": "logos/cos-logo.png",
+          "source": "assets/media/logos/organisations/cos-great-trading-logo.png"
+        },
+        "caption": "JULY 2025 \u2013 NOVEMBER 2025",
+        "icon": "graduation",
+        "categoryLabel": "Experience",
+        "catalogueNumber": 3,
+        "summary": "Full-Stack Developer",
+        "metadata": [
+          [
+            "Org.",
+            "COS Great Trading"
+          ],
+          [
+            "Period",
+            "July 2025 \u2013 November 2025"
+          ],
+          [
+            "Role",
+            "Full-Stack Developer"
+          ]
+        ],
+        "catalogueSections": [
+          {
+            "heading": "Overview",
+            "markdown": "Full-Stack Developer\n\nCOS Great Trading\n\nDeveloped an AI-powered CRM, taking responsibility for the frontend and backend implementation."
+          },
+          {
+            "heading": "Responsibilities",
+            "markdown": "- Enabled users to build their own AI knowledge bases and answer questions for each department.\n- Implemented retrieval-augmented generation (RAG) using Pinecone.\n- Worked across Next.js, TypeScript, Express, Python, MongoDB, and AI SDKs."
+          },
+          {
+            "heading": "AI knowledge-base workflow",
+            "markdown": "Users build knowledge bases for their departments. The CRM uses retrieval-augmented generation (RAG), with Pinecone supporting retrieval to answer department-specific questions."
+          },
+          {
+            "heading": "Technologies",
+            "markdown": "Python \u00b7 TypeScript \u00b7 Express \u00b7 MongoDB \u00b7 Next.js \u00b7 Pinecone \u00b7 AI SDKs"
+          }
+        ],
+        "card": {
+          "center": [
+            -1.7701135873794556,
+            7.776298522949219,
+            2.75
+          ],
+          "normal": [
+            0.09097573906183243,
+            -0.9958531260490417,
+            0.0
+          ],
+          "right": [
+            0.9958531260490417,
+            0.09097573906183243,
+            0.0
+          ],
+          "width": 1.899999976158142,
+          "height": 2.4000000953674316
+        },
+        "position": [
+          -1.772387981414795,
+          7.801194667816162,
+          2.75
+        ],
+        "start": 991,
+        "end": 1171,
+        "hint": "Select the timeline card to read its story"
+      },
+      {
+        "id": "freelance-full-stack",
+        "title": "Freelance development",
+        "cardTitle": "FREELANCE\nDEVELOPMENT",
+        "caption": "ONGOING",
+        "icon": "buildings",
+        "categoryLabel": "Experience",
+        "catalogueNumber": 4,
+        "summary": "Freelance Full-Stack Developer",
+        "metadata": [
+          [
+            "Org.",
+            "Freelance / Client projects"
+          ],
+          [
+            "Period",
+            "Ongoing"
+          ],
+          [
+            "Role",
+            "Freelance Full-Stack Developer"
+          ]
+        ],
+        "repositoryLinksRestricted": true,
+        "siteLinks": [
+          {
+            "url": "https://myrumawip.com/",
+            "label": "MyRumawip website"
+          },
+          {
+            "url": "https://dwmlight.com/en",
+            "label": "DWMLight website"
+          },
+          {
+            "url": "https://amplyfii.io/login?redirect=%2F",
+            "label": "Amplifii (Ampress) preview (unreleased)"
+          }
+        ],
+        "catalogueSections": [
+          {
+            "heading": "Overview",
+            "markdown": "Freelance Full-Stack Developer\n\nFreelance / Client projects\n\nDevelop web applications, custom CMS backends, and CRM platforms for clients, with responsibilities spanning application development, integration, and deployment."
+          },
+          {
+            "heading": "MyRumawip",
+            "markdown": "MyRumawip (property project): developed the bilingual property website, CMS integration, and deployment workflow using Next.js, TypeScript, Strapi, and PostgreSQL.\n\nA bilingual property-discovery website that combines CMS-managed listings, housing-scheme information and educational content with direct WhatsApp enquiries.\n\nPublic website: [MyRumawip](https://myrumawip.com/).\n\n- Next.js / TypeScript\n- Strapi / PostgreSQL\n- Docker / Ansible"
+          },
+          {
+            "heading": "DWMLight / ANVA CMS",
+            "markdown": "DWMLight / ANVA CMS: developed the custom CMS/backend and handled deployment and server operations, using TypeScript, Express, and MongoDB to support structured multilingual content.\n\nA multilingual product and company website backed by a custom content-management API, including localized content, product media and downloadable catalogues.\n\nPublic website: [DWMLight](https://dwmlight.com/en).\n\n- TypeScript / Express\n- MongoDB / AJV\n- PM2 / OpenTelemetry"
+          },
+          {
+            "heading": "Amplifii (Ampress)",
+            "markdown": "Amplifii (Ampress) \u2014 current, unreleased: an influencer-marketing platform that helps teams manage creator partnerships and campaigns. Contributing to product development and collaborating with another developer to support the overall user experience.\n\nAn influencer-marketing platform that helps teams manage creator partnerships and campaigns.\n\n**Status: Unreleased.** [Preview login](https://amplyfii.io/login?redirect=%2F) is provided as an unreleased preview, not a launched public product.\n\n- Influencer marketing\n- Product development\n- Team collaboration"
+          },
+          {
+            "heading": "Achievements",
+            "markdown": "- MyRumawip achievement: helped establish the website as a well-known destination for finding affordable housing, achieving top-five Google search rankings for relevant affordable-housing searches.\n- DWMLight achievement: helped a China-based client connect with the global market through their multilingual website."
+          },
+          {
+            "heading": "Links and source references",
+            "markdown": "- [MyRumawip website](https://myrumawip.com/)\n- [DWMLight website](https://dwmlight.com/en)\n- [Amplifii (Ampress) preview (unreleased)](https://amplyfii.io/login?redirect=%2F)"
+          }
+        ],
+        "card": {
+          "center": [
+            1.7701135873794556,
+            7.776298522949219,
+            2.75
+          ],
+          "normal": [
+            -0.09097573906183243,
+            -0.9958531260490417,
+            0.0
+          ],
+          "right": [
+            0.9958531260490417,
+            -0.09097573906183243,
+            0.0
+          ],
+          "width": 1.899999976158142,
+          "height": 2.4000000953674316
+        },
+        "position": [
+          1.772387981414795,
+          7.801194667816162,
+          2.75
+        ],
+        "start": 1261,
+        "end": 1441,
+        "hint": "Select the timeline card to read its story"
+      },
+      {
+        "id": "bachelors-computer-science",
+        "title": "Bachelor of Degree in Computer Science (Data Analytics Specialism)",
+        "cardTitle": "BACHELOR OF DEGREE\nIN COMPUTER SCIENCE\n(Data Analytics Specialism)",
+        "cardHeading": "BACHELOR OF DEGREE\nIN COMPUTER SCIENCE",
+        "cardSpecialism": "(Data Analytics Specialism)",
+        "caption": "EXPECTED JUNE 2027 / CGPA 3.36",
+        "icon": "gears",
+        "categoryLabel": "Education",
+        "catalogueNumber": 5,
+        "summary": "Bachelor of Science (Honours) in Computer Science with a specialism in Data Analytics",
+        "metadata": [
+          [
+            "Org.",
+            "Asia Pacific University"
+          ],
+          [
+            "Period",
+            "Expected June 2027"
+          ],
+          [
+            "CGPA",
+            "3.36"
+          ]
+        ],
+        "catalogueSections": [
+          {
+            "heading": "Overview",
+            "markdown": "Bachelor of Science (Honours) in Computer Science with a specialism in Data Analytics\n\nAsia Pacific University\n\nFinal results received \u00b7 CGPA: 3.36"
+          },
+          {
+            "heading": "Qualification",
+            "markdown": "Bachelor of Science (Honours) in Computer Science with a specialism in Data Analytics"
+          },
+          {
+            "heading": "Status and results",
+            "markdown": "Expected June 2027\n\nFinal results received \u00b7 CGPA: 3.36"
+          },
+          {
+            "heading": "Specialisation",
+            "markdown": "Computer Science with a specialism in Data Analytics. Final results have been received; graduation is expected in June 2027."
+          }
+        ],
+        "card": {
+          "center": [
+            4.962484359741211,
+            6.245461463928223,
+            2.75
+          ],
+          "normal": [
+            -0.26791512966156006,
+            -0.9634425640106201,
+            0.0
+          ],
+          "right": [
+            0.9634425640106201,
+            -0.26791512966156006,
+            0.0
+          ],
+          "width": 1.8999998569488525,
+          "height": 2.4000000953674316
+        },
+        "position": [
+          4.969182014465332,
+          6.269547462463379,
+          2.75
+        ],
+        "start": 1531,
+        "end": 1711,
+        "hint": "Select the timeline card to read its story"
+      },
+      {
+        "id": "current-focus",
+        "title": "Current focus",
+        "cardTitle": "BACKEND\n& BEYOND",
+        "caption": "OPEN TO JOBS / FREELANCE",
+        "icon": "globe",
+        "categoryLabel": "Current focus",
+        "catalogueNumber": 6,
+        "summary": "Open to jobs and freelance opportunities",
+        "metadata": [
+          [
+            "Focus",
+            "Backend development"
+          ],
+          [
+            "Based",
+            "Seri Kembangan / Serdang, Selangor, Malaysia"
+          ]
+        ],
+        "catalogueSections": [
+          {
+            "heading": "Overview",
+            "markdown": "I build and deploy web applications, working across frontend, backend, databases, and server infrastructure. I also bring practical SEO knowledge to help websites perform well and be discoverable."
+          },
+          {
+            "heading": "Approach",
+            "markdown": "Backend development is my main focus, but I learn the technologies each project requires rather than limiting myself to a single stack."
+          },
+          {
+            "heading": "Currently learning",
+            "markdown": "- 3D modeling\n- Machine learning\n- Artificial intelligence"
+          },
+          {
+            "heading": "Interests",
+            "markdown": "- Badminton, basketball, and swimming\n- Gym and fitness\n- Installing and customising Linux distributions, including Arch and Mint"
+          },
+          {
+            "heading": "Contact",
+            "markdown": "- [Damienckj5993@gmail.com](mailto:Damienckj5993@gmail.com)\n- [+60 10-229 5993](tel:+60102295993)\n- [Message me on WhatsApp](https://wa.me/60102295993)\n- [Visit my GitHub](https://github.com/DamienCKj2812)"
+          }
+        ],
+        "card": {
+          "center": [
+            7.179608345031738,
+            3.484395742416382,
+            2.75
+          ],
+          "normal": [
+            -0.42976585030555725,
+            -0.9029403924942017,
+            0.0
+          ],
+          "right": [
+            0.9029403924942017,
+            -0.42976585030555725,
+            0.0
+          ],
+          "width": 1.899999976158142,
+          "height": 2.4000000953674316
+        },
+        "position": [
+          7.190352439880371,
+          3.5069692134857178,
+          2.75
+        ],
+        "start": 1801,
+        "end": 1981,
+        "hint": "Select the timeline card to read its story"
+      }
+    ]
+  },
+  "npcCount": 0,
+  "loop": true
+}

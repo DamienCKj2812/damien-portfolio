@@ -1,0 +1,293 @@
+{
+  "title": "MY JOURNEY SO FAR",
+  "subtitle": "EDUCATION / EXPERIENCE\nBUILDING / LEARNING",
+  "description": "Confirmed education, employment, freelance projects and current focus from src/data/portfolio.js and the Level 03 project catalogue.",
+  "milestones": [
+    {
+      "id": "diploma-information-technology",
+      "title": "Diploma in IT (Software Engineer Specialism)",
+      "cardTitle": "DIPLOMA IN IT\n(Software Engineer Specialism)",
+      "cardHeading": "DIPLOMA IN IT",
+      "cardSpecialism": "(Software Engineer Specialism)",
+      "logo": {
+        "id": "apu",
+        "texture": "logos/apu-logo.png",
+        "source": "assets/media/logos/organisations/apu-logo.png"
+      },
+      "caption": "GRADUATED 2024 / CGPA 3.68",
+      "icon": "mountains",
+      "categoryLabel": "Education",
+      "catalogueNumber": 1,
+      "summary": "Diploma in Information Technology (Software Engineering)",
+      "metadata": [
+        [
+          "Org.",
+          "Asia Pacific University"
+        ],
+        [
+          "Period",
+          "Graduated 2024"
+        ],
+        [
+          "CGPA",
+          "3.68"
+        ]
+      ],
+      "catalogueSections": [
+        {
+          "heading": "Overview",
+          "markdown": "Diploma in Information Technology (Software Engineering)\n\nAsia Pacific University\n\nCGPA: 3.68"
+        },
+        {
+          "heading": "Qualification",
+          "markdown": "Diploma in Information Technology (Software Engineering)"
+        },
+        {
+          "heading": "Status and results",
+          "markdown": "Graduated 2024\n\nCGPA: 3.68"
+        }
+      ]
+    },
+    {
+      "id": "lyj-events-marketing",
+      "title": "LYJ Events & Marketing",
+      "cardTitle": "LYJ EVENTS\n& MARKETING",
+      "logo": {
+        "id": "lyj",
+        "texture": "logos/lyj-logo.png",
+        "source": "assets/media/logos/organisations/lyj-events-and-marketing-logo.png"
+      },
+      "caption": "APRIL 2024 – NOVEMBER 2024",
+      "icon": "cube",
+      "categoryLabel": "Experience",
+      "catalogueNumber": 2,
+      "summary": "Front End Developer",
+      "metadata": [
+        [
+          "Org.",
+          "LYJ Events & Marketing"
+        ],
+        [
+          "Period",
+          "April 2024 – November 2024"
+        ],
+        [
+          "Role",
+          "Front End Developer"
+        ]
+      ],
+      "catalogueSections": [
+        {
+          "heading": "Overview",
+          "markdown": "Front End Developer\n\nLYJ Events & Marketing\n\nDeveloped responsive web and mobile application interfaces from design specifications, with an emphasis on clean, maintainable code."
+        },
+        {
+          "heading": "Responsibilities",
+          "markdown": "- Collaborated with stakeholders to adapt features to evolving business requirements.\n- Participated in daily stand-ups and resolved bugs using QA feedback and issue tickets.\n- Built user interfaces for a trading broker website.\n- Built user interfaces for a hybrid community-chat and customer-support platform."
+        },
+        {
+          "heading": "Delivered interfaces",
+          "markdown": "- Built user interfaces for a trading broker website.\n- Built user interfaces for a hybrid community-chat and customer-support platform."
+        }
+      ]
+    },
+    {
+      "id": "cos-great-trading",
+      "title": "COS Great Trading",
+      "cardTitle": "COS GREAT\nTRADING",
+      "logo": {
+        "id": "cos",
+        "texture": "logos/cos-logo.png",
+        "source": "assets/media/logos/organisations/cos-great-trading-logo.png"
+      },
+      "caption": "JULY 2025 – NOVEMBER 2025",
+      "icon": "graduation",
+      "categoryLabel": "Experience",
+      "catalogueNumber": 3,
+      "summary": "Full-Stack Developer",
+      "metadata": [
+        [
+          "Org.",
+          "COS Great Trading"
+        ],
+        [
+          "Period",
+          "July 2025 – November 2025"
+        ],
+        [
+          "Role",
+          "Full-Stack Developer"
+        ]
+      ],
+      "catalogueSections": [
+        {
+          "heading": "Overview",
+          "markdown": "Full-Stack Developer\n\nCOS Great Trading\n\nDeveloped an AI-powered CRM, taking responsibility for the frontend and backend implementation."
+        },
+        {
+          "heading": "Responsibilities",
+          "markdown": "- Enabled users to build their own AI knowledge bases and answer questions for each department.\n- Implemented retrieval-augmented generation (RAG) using Pinecone.\n- Worked across Next.js, TypeScript, Express, Python, MongoDB, and AI SDKs."
+        },
+        {
+          "heading": "AI knowledge-base workflow",
+          "markdown": "Users build knowledge bases for their departments. The CRM uses retrieval-augmented generation (RAG), with Pinecone supporting retrieval to answer department-specific questions."
+        },
+        {
+          "heading": "Technologies",
+          "markdown": "Python · TypeScript · Express · MongoDB · Next.js · Pinecone · AI SDKs"
+        }
+      ]
+    },
+    {
+      "id": "freelance-full-stack",
+      "title": "Freelance development",
+      "cardTitle": "FREELANCE\nDEVELOPMENT",
+      "caption": "ONGOING",
+      "icon": "buildings",
+      "categoryLabel": "Experience",
+      "catalogueNumber": 4,
+      "summary": "Freelance Full-Stack Developer",
+      "metadata": [
+        [
+          "Org.",
+          "Freelance / Client projects"
+        ],
+        [
+          "Period",
+          "Ongoing"
+        ],
+        [
+          "Role",
+          "Freelance Full-Stack Developer"
+        ]
+      ],
+      "repositoryLinksRestricted": true,
+      "siteLinks": [
+        {
+          "url": "https://myrumawip.com/",
+          "label": "MyRumawip website"
+        },
+        {
+          "url": "https://dwmlight.com/en",
+          "label": "DWMLight website"
+        },
+        {
+          "url": "https://amplyfii.io/login?redirect=%2F",
+          "label": "Amplifii (Ampress) preview (unreleased)"
+        }
+      ],
+      "catalogueSections": [
+        {
+          "heading": "Overview",
+          "markdown": "Freelance Full-Stack Developer\n\nFreelance / Client projects\n\nDevelop web applications, custom CMS backends, and CRM platforms for clients, with responsibilities spanning application development, integration, and deployment."
+        },
+        {
+          "heading": "MyRumawip",
+          "markdown": "MyRumawip (property project): developed the bilingual property website, CMS integration, and deployment workflow using Next.js, TypeScript, Strapi, and PostgreSQL.\n\nA bilingual property-discovery website that combines CMS-managed listings, housing-scheme information and educational content with direct WhatsApp enquiries.\n\nPublic website: [MyRumawip](https://myrumawip.com/).\n\n- Next.js / TypeScript\n- Strapi / PostgreSQL\n- Docker / Ansible"
+        },
+        {
+          "heading": "DWMLight / ANVA CMS",
+          "markdown": "DWMLight / ANVA CMS: developed the custom CMS/backend and handled deployment and server operations, using TypeScript, Express, and MongoDB to support structured multilingual content.\n\nA multilingual product and company website backed by a custom content-management API, including localized content, product media and downloadable catalogues.\n\nPublic website: [DWMLight](https://dwmlight.com/en).\n\n- TypeScript / Express\n- MongoDB / AJV\n- PM2 / OpenTelemetry"
+        },
+        {
+          "heading": "Amplifii (Ampress)",
+          "markdown": "Amplifii (Ampress) — current, unreleased: an influencer-marketing platform that helps teams manage creator partnerships and campaigns. Contributing to product development and collaborating with another developer to support the overall user experience.\n\nAn influencer-marketing platform that helps teams manage creator partnerships and campaigns.\n\n**Status: Unreleased.** [Preview login](https://amplyfii.io/login?redirect=%2F) is provided as an unreleased preview, not a launched public product.\n\n- Influencer marketing\n- Product development\n- Team collaboration"
+        },
+        {
+          "heading": "Achievements",
+          "markdown": "- MyRumawip achievement: helped establish the website as a well-known destination for finding affordable housing, achieving top-five Google search rankings for relevant affordable-housing searches.\n- DWMLight achievement: helped a China-based client connect with the global market through their multilingual website."
+        },
+        {
+          "heading": "Links and source references",
+          "markdown": "- [MyRumawip website](https://myrumawip.com/)\n- [DWMLight website](https://dwmlight.com/en)\n- [Amplifii (Ampress) preview (unreleased)](https://amplyfii.io/login?redirect=%2F)\n- [MyRumawip repository](https://github.com/DamienCKj2812/agent-limenghar-property)\n- [DWMLight website repository](https://github.com/maxscale-io/Aria)\n- [ANVA CMS repository](https://github.com/maxscale-io/anva-cms)"
+        }
+      ]
+    },
+    {
+      "id": "bachelors-computer-science",
+      "title": "Bachelor of Degree in Computer Science (Data Analytics Specialism)",
+      "cardTitle": "BACHELOR OF DEGREE\nIN COMPUTER SCIENCE\n(Data Analytics Specialism)",
+      "cardHeading": "BACHELOR OF DEGREE\nIN COMPUTER SCIENCE",
+      "cardSpecialism": "(Data Analytics Specialism)",
+      "caption": "EXPECTED JUNE 2027 / CGPA 3.36",
+      "icon": "gears",
+      "categoryLabel": "Education",
+      "catalogueNumber": 5,
+      "summary": "Bachelor of Science (Honours) in Computer Science with a specialism in Data Analytics",
+      "metadata": [
+        [
+          "Org.",
+          "Asia Pacific University"
+        ],
+        [
+          "Period",
+          "Expected June 2027"
+        ],
+        [
+          "CGPA",
+          "3.36"
+        ]
+      ],
+      "catalogueSections": [
+        {
+          "heading": "Overview",
+          "markdown": "Bachelor of Science (Honours) in Computer Science with a specialism in Data Analytics\n\nAsia Pacific University\n\nFinal results received · CGPA: 3.36"
+        },
+        {
+          "heading": "Qualification",
+          "markdown": "Bachelor of Science (Honours) in Computer Science with a specialism in Data Analytics"
+        },
+        {
+          "heading": "Status and results",
+          "markdown": "Expected June 2027\n\nFinal results received · CGPA: 3.36"
+        },
+        {
+          "heading": "Specialisation",
+          "markdown": "Computer Science with a specialism in Data Analytics. Final results have been received; graduation is expected in June 2027."
+        }
+      ]
+    },
+    {
+      "id": "current-focus",
+      "title": "Current focus",
+      "cardTitle": "BACKEND\n& BEYOND",
+      "caption": "OPEN TO JOBS / FREELANCE",
+      "icon": "globe",
+      "categoryLabel": "Current focus",
+      "catalogueNumber": 6,
+      "summary": "Open to jobs and freelance opportunities",
+      "metadata": [
+        [
+          "Focus",
+          "Backend development"
+        ],
+        [
+          "Based",
+          "Seri Kembangan / Serdang, Selangor, Malaysia"
+        ]
+      ],
+      "catalogueSections": [
+        {
+          "heading": "Overview",
+          "markdown": "I build and deploy web applications, working across frontend, backend, databases, and server infrastructure. I also bring practical SEO knowledge to help websites perform well and be discoverable."
+        },
+        {
+          "heading": "Approach",
+          "markdown": "Backend development is my main focus, but I learn the technologies each project requires rather than limiting myself to a single stack."
+        },
+        {
+          "heading": "Currently learning",
+          "markdown": "- 3D modeling\n- Machine learning\n- Artificial intelligence"
+        },
+        {
+          "heading": "Interests",
+          "markdown": "- Badminton, basketball, and swimming\n- Gym and fitness\n- Installing and customising Linux distributions, including Arch and Mint"
+        },
+        {
+          "heading": "Contact",
+          "markdown": "- [Damienckj5993@gmail.com](mailto:Damienckj5993@gmail.com)\n- [+60 10-229 5993](tel:+60102295993)\n- [Message me on WhatsApp](https://wa.me/60102295993)\n- [Visit my GitHub](https://github.com/DamienCKj2812)"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "source": "https://github.com/DamienCKj2812",
+  "retrieved": "2026-10-04",
+  "description": "Original public-repository exhibit snapshot, retained before user-curated category ordering.",
+  "projects": [
+    {"id":"damien-portfolio","title":"Damien Portfolio","category":"PERSONAL WEBSITE","summary":"An immersive portfolio journey.\nCity, atrium and project gallery.","tags":["React","Vite","Three.js"]},
+    {"id":"logging-microservice-ui","title":"Logging Microservice UI","category":"FINAL YEAR PROJECT","summary":"The user interface for my\nlogging microservice project.","tags":["TypeScript","Observability"]},
+    {"id":"logging-loading","title":"Logging Loading","category":"FINAL YEAR PROJECT","summary":"Logging project repository.\nShell-based tooling.","tags":["Shell","Logging"]},
+    {"id":"real-time-anomaly-detection-backend","title":"Real-time Anomaly\nDetection Backend","category":"ANOMALY DETECTION","summary":"Backend and notebook work for\nreal-time anomaly detection.","tags":["Jupyter Notebook"]},
+    {"id":"React-Project-Ecommerce","title":"React E-commerce","category":"WEB APPLICATION","summary":"An e-commerce application\nbuilt with the MERN stack.","tags":["MERN","JavaScript"]},
+    {"id":"PHP-Ecommerce","title":"PHP E-commerce","category":"WEB APPLICATION","summary":"An e-commerce project\nimplemented in PHP.","tags":["PHP"]},
+    {"id":"mymovie_mern_new","title":"MyMovie / New Edition","category":"WEB APPLICATION","summary":"A newer MyMovie\napplication repository.","tags":["JavaScript","MERN"]},
+    {"id":"mymovie_mern","title":"MyMovie / Original","category":"WEB APPLICATION","summary":"A movie application\nbuilt with the MERN stack.","tags":["MERN"]},
+    {"id":"mychat","title":"MyChat","category":"WEB APPLICATION","summary":"A JavaScript chat\napplication project.","tags":["JavaScript"]},
+    {"id":"SDMGroupAssignment","title":"SDM Group Assignment","category":"GROUP COURSEWORK","summary":"Software development\ngroup assignment.","tags":["TypeScript"]},
+    {"id":"ConcurrentProgrammingAssignment","title":"Concurrent Programming","category":"COURSEWORK","summary":"Concurrent programming\nassignment in Java.","tags":["Java","Concurrency"]},
+    {"id":"DSTRAssignmentPart2","title":"Data Structures / Part 2","category":"COURSEWORK","summary":"Data structures\nassignment repository.","tags":["C++"]},
+    {"id":"OODJ","title":"Object-oriented Java","category":"GROUP COURSEWORK","summary":"Degree level 1\nOODJ group assignment.","tags":["Java","Object-oriented"]},
+    {"id":"Java-Programming-G18-","title":"Java Programming / G18","category":"COURSEWORK","summary":"Java programming\ngroup repository.","tags":["Java"]},
+    {"id":"DTMAssignment","title":"DTM Assignment","category":"COURSEWORK","summary":"R-based assignment\nand analysis repository.","tags":["R"]},
+    {"id":"PFDAGroupAssignment","title":"PFDA Group Assignment","category":"GROUP COURSEWORK","summary":"R-based group\nassignment repository.","tags":["R"]},
+    {"id":"odl-code","title":"ODL Code","category":"NOTEBOOK EXPERIMENTS","summary":"Coursework and experiments\nin Jupyter notebooks.","tags":["Jupyter Notebook"]},
+    {"id":"txsa-group-assignment","title":"TXSA Group Assignment","category":"GROUP COURSEWORK","summary":"Notebook-based\ngroup assignment.","tags":["Jupyter Notebook"]},
+    {"id":"txsa-part2-tp067165","title":"TXSA / Part 2","category":"COURSEWORK","summary":"Part two of the\nTXSA assignment.","tags":["Coursework"]},
+    {"id":"zmk-config","title":"ZMK Configuration","category":"KEYBOARD PROJECT","summary":"Personal ZMK\nkeyboard configuration.","tags":["ZMK","Keyboard"]},
+    {"id":"zmk-sofle","title":"ZMK Sofle","category":"KEYBOARD / FORK","summary":"Forked Sofle keyboard\nrepository and configuration.","tags":["ZMK","Fork"],"fork":true}
+  ]
+}

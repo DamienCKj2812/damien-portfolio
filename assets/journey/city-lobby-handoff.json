@@ -1,0 +1,133 @@
+{
+  "version": 1,
+  "cityEnd": 383,
+  "cityHideFrame": 383,
+  "transitionFrames": 60,
+  "lobbyEnd": 1020,
+  "frameEnd": 1521,
+  "fps": 30,
+  "lobbyOffset": [
+    -1.5,
+    6.449999809265137,
+    0.0
+  ],
+  "lobbyRevealFrame": 245,
+  "lobbyHoldFrame": 245,
+  "preloadFrame": 100,
+  "bookmarks": {
+    "start": 1,
+    "lookDown": 90,
+    "doors": 245,
+    "train": 145,
+    "entrance": 383,
+    "lobby": 443,
+    "reception": 703,
+    "escalator": 893,
+    "landing": 1073,
+    "elevator": 1223,
+    "elevatorOpen": 1403,
+    "cabin": 1521
+  },
+  "portal": {
+    "center": [
+      -1.5,
+      -5.55,
+      0
+    ],
+    "width": 5.75,
+    "height": 7.65
+  },
+  "lobbyPortal": {
+    "center": [
+      -1.5,
+      -5.98,
+      3.825
+    ],
+    "width": 5.48,
+    "height": 7.45
+  },
+  "lobbyAssetBase": "models/lobby/",
+  "lobbyGlobalEnd": 1403,
+  "elevatorOffset": [
+    2.5500001907348633,
+    30.615001678466797,
+    6.119999885559082
+  ],
+  "elevatorEntryStart": 62,
+  "elevatorSelectionFrame": 180,
+  "elevatorTransitionFrames": 30,
+  "elevatorRevealFrame": 1283,
+  "elevatorHoldFrame": 1283,
+  "elevatorPreloadFrame": 893,
+  "lobbyHideFrame": 1483,
+  "rooms": {
+    "about": {
+      "label": "About office",
+      "source": "assets/about-office/about-office.blend",
+      "assetBase": "models/rooms/about/",
+      "entranceAnchor": [
+        0,
+        -6.8,
+        0
+      ],
+      "mainCamera": "Office \u2022 About office presentation camera",
+      "entryCamera": "Office \u2022 Office arrival camera",
+      "focusCamera": "Office \u2022 Contact card focus camera",
+      "width": 12,
+      "height": 4.6
+    },
+    "skills": {
+      "label": "Skills gallery",
+      "source": "assets/skills-gallery/skills-gallery.blend",
+      "assetBase": "models/rooms/skills/",
+      "entranceAnchor": [
+        0,
+        -7,
+        0
+      ],
+      "mainCamera": "Gallery \u2022 Guided walk / free-look camera",
+      "detailCameras": {
+        "atat": "Gallery \u2022 AT-AT walker detail camera"
+      },
+      "animationFrames": 959,
+      "guidedFrames": 2940,
+      "guidedLoop": false,
+      "width": 12,
+      "height": 5.4
+    },
+    "projects": {
+      "label": "Projects hallway",
+      "source": "assets/project-hallway/project-hallway.blend",
+      "assetBase": "models/rooms/projects/",
+      "entranceAnchor": [
+        0,
+        -10,
+        0
+      ],
+      "mainCamera": "Project Hallway / free-look camera",
+      "width": 14.2,
+      "height": 6.2
+    },
+    "experience": {
+      "label": "Timeline observatory",
+      "source": "assets/timeline-observatory/timeline-observatory.blend",
+      "assetBase": "models/rooms/experience/",
+      "entranceAnchor": [
+        0,
+        -12.5,
+        0
+      ],
+      "mainCamera": "Timeline Observatory / guided free-look camera",
+      "detailCameras": {
+        "globe": "Timeline Observatory / Globe detail",
+        "oculus": "Timeline Observatory / Star oculus",
+        "window": "Timeline Observatory / Space window"
+      },
+      "animationFrames": 2400,
+      "guidedFrames": 2400,
+      "guidedLoop": true,
+      "width": 25,
+      "height": 8.3
+    }
+  }
+}

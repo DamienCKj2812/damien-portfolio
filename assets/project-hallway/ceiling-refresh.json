@@ -1,0 +1,20 @@
+{
+  "nonCeilingFingerprint": "4dc75cce9b56a9d7da00b4451ab8501b4b5e3164edb6b7025fde9768d89bc33a",
+  "authoredRoomPreserved": true,
+  "ceiling": {
+    "style": "flowing wave ribs",
+    "recessedLights": [],
+    "ribCount": 41,
+    "curvedLightRails": 5,
+    "perimeterLightRails": 2,
+    "wavePeriodMeters": 18,
+    "palette": "black and white",
+    "longitudinalLightRails": 7,
+    "ceilingHeightMeters": 6.2,
+    "minimumLightHeightMeters": 5.878,
+    "plainPanels": 0,
+    "squareJunctions": 0,
+    "surfaceGrid": false,
+    "ceilingDots": false
+  }
+}

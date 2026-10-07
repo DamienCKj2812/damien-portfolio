@@ -1,0 +1,63 @@
+{
+  "name": "KAJU Elevator Interior",
+  "units": "meters",
+  "axes": {
+    "up": "+Z (Blender), +Y (glTF)",
+    "entrance": "Blender Y=0",
+    "rear": "+Y (Blender)"
+  },
+  "clear_interior": {
+    "width": 2.6,
+    "depth": 2.8,
+    "height": 3.2
+  },
+  "files": {
+    "source": "kaze-elevator-journey.blend",
+    "browser": "kaze-elevator.glb",
+    "portrait": "elevator-reference.png",
+    "interior": "elevator-interior.png",
+    "controls": "elevator-controls.png"
+  },
+  "doors": {
+    "left": {
+      "open_x": -1.77,
+      "closed_x": -0.58
+    },
+    "right": {
+      "open_x": 1.77,
+      "closed_x": 0.58
+    }
+  },
+  "levels": [
+    {
+      "id": "about",
+      "number": 1,
+      "label": "ABOUT ME",
+      "button": "Elevator / Level button about"
+    },
+    {
+      "id": "skills",
+      "number": 2,
+      "label": "SKILLS",
+      "button": "Elevator / Level button skills"
+    },
+    {
+      "id": "projects",
+      "number": 3,
+      "label": "PROJECTS",
+      "button": "Elevator / Level button projects"
+    },
+    {
+      "id": "experience",
+      "number": 4,
+      "label": "EXPERIENCE & EDUCATION",
+      "button": "Elevator / Level button experience"
+    }
+  ],
+  "notes": [
+    "Static open doors with runtime transform metadata.",
+    "Four named portfolio levels; separate meshes include interaction metadata.",
+    "All text and portrait pointwork are geometry; no external textures or fonts."
+  ],
+  "rebuild": "rebuild_elevator.py"
+}

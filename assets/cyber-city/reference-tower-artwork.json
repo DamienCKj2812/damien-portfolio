@@ -1,0 +1,67 @@
+{
+  "source": "banner-artwork/portrait-source.png",
+  "sourceSha256": "abfa933d1ffda7d7c9ff2e8cd79ecfc8a3294082870a37fc460c05727e2bf76e",
+  "portraitPanelMeters": [
+    8.346862614737681,
+    19.8
+  ],
+  "portraitFit": "proportional head-to-suit crop; lower-left caption overlay; logo on separate curved screen",
+  "screenAspects": {
+    "logo": 0.7995079132890498,
+    "portrait": 0.4215587179160445,
+    "order": 0.8615244507594959,
+    "orbital": 1.0428980193404425,
+    "eclipse": 0.6832780126713242
+  },
+  "outputs": {
+    "reference-portrait.jpg": {
+      "size": [
+        1295,
+        3072
+      ],
+      "bytes": 987032,
+      "sha256": "10e429ddfa47bcceac0a6a30d4ebca691ad7468e57c3e67c23a0dd63bbaed380"
+    },
+    "reference-logo.jpg": {
+      "size": [
+        1199,
+        1500
+      ],
+      "bytes": 29545,
+      "sha256": "ed144169116d2ea7a01c4ee7de79b60241c0f6ae380ea7ac48e176d887d8e76c"
+    },
+    "reference-order.jpg": {
+      "size": [
+        1700,
+        1973
+      ],
+      "bytes": 57939,
+      "sha256": "a04987275cb2d94a5242a09b5340764a02e1d9957a4e078689d8d208be8c9279"
+    },
+    "reference-orbital.jpg": {
+      "size": [
+        1335,
+        1280
+      ],
+      "bytes": 18626,
+      "sha256": "7c3699794f5bb9a2f984bbe087d66b11cec3e4e794f4a163bb6754e16cec8c87"
+    },
+    "reference-eclipse.jpg": {
+      "size": [
+        1050,
+        1536
+      ],
+      "bytes": 140770,
+      "sha256": "2d5ebc4b9ff8ad650e3193cf13ed0d77353b05e3eda4f4573454c02c70376618"
+    },
+    "reference-earth.jpg": {
+      "size": [
+        2048,
+        1024
+      ],
+      "bytes": 242212,
+      "sha256": "3d8fd2e958d540b40037d1c73a772de2fea82425048489c2f30035d9607c5140"
+    }
+  },
+  "earthSource": "banner-artwork/natural-earth-land-110m.geojson"
+}

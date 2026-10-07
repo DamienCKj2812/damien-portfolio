@@ -1,0 +1,40 @@
+{
+  "source": "kaze-elevator-journey.blend",
+  "levels": [
+    {
+      "id": "about",
+      "number": 1,
+      "title": "ABOUT ME",
+      "description": "Meet Damien: my interests, my approach to building software, and the ideas behind my work.",
+      "button": "Elevator / Level button about",
+      "dialog_collection": "Elevator / Dialog / about"
+    },
+    {
+      "id": "skills",
+      "number": 2,
+      "title": "SKILLS",
+      "description": "Explore the languages, frameworks, and development tools in my toolkit.",
+      "button": "Elevator / Level button skills",
+      "dialog_collection": "Elevator / Dialog / skills"
+    },
+    {
+      "id": "projects",
+      "number": 3,
+      "title": "PROJECTS",
+      "description": "Discover what I am building, the problems each project explores, and the technologies behind it.",
+      "button": "Elevator / Level button projects",
+      "dialog_collection": "Elevator / Dialog / projects"
+    },
+    {
+      "id": "experience",
+      "number": 4,
+      "title": "EXPERIENCE & EDUCATION",
+      "description": "Follow my learning and professional journey through education, hands-on experience, and key milestones.",
+      "button": "Elevator / Level button experience",
+      "dialog_collection": "Elevator / Dialog / experience"
+    }
+  ],
+  "blender_controls": "KAZE_Elevator_Controls.py (embedded Text datablock)",
+  "status": "Four browser destinations: About office, Skills gallery, Projects hallway, and Timeline observatory.",
+  "rebuild": "rebuild_elevator.py"
+}

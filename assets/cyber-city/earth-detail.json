@@ -1,0 +1,15 @@
+{
+  "source": "banner-artwork/natural-earth-land-110m.geojson",
+  "sourceUrl": "https://raw.githubusercontent.com/nvkelso/natural-earth-vector/master/geojson/ne_110m_land.geojson",
+  "sourceLicense": "Natural Earth public domain",
+  "sourceSha256": "9e0729ee253ca7d7a5c4ae9395fb1902264c5377c52e224d13dd85010e2835d9",
+  "output": "textures-monochrome/reference-earth.jpg",
+  "size": [
+    2048,
+    1024
+  ],
+  "frontLongitudeDegrees": 25,
+  "features": 127,
+  "outputSha256": "3d8fd2e958d540b40037d1c73a772de2fea82425048489c2f30035d9607c5140",
+  "outputBytes": 242212
+}

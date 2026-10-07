@@ -1,0 +1,571 @@
+{
+  "model": "project-hallway.blend",
+  "coordinateSystem": "Blender Z-up",
+  "lengthMeters": 126.2,
+  "projectCount": 16,
+  "npcCount": 15,
+  "camera": "Project Hallway / free-look camera",
+  "tourCamera": "Project Hallway / walkthrough camera",
+  "controlsScript": "hallway_controls.py",
+  "frameStart": 1,
+  "frameEnd": 1200,
+  "projectBaySpacingMeters": 11.5,
+  "rightDisplayStaggerMeters": 3.0,
+  "displayFacing": {
+    "left": "east / entrance 45\u00b0",
+    "right": "west / entrance 45\u00b0"
+  },
+  "pillarWidthMeters": 1.1,
+  "projectorCount": 17,
+  "windows": [],
+  "npcLayout": [
+    {
+      "position": [
+        -1.850000023841858,
+        16.53620719909668
+      ],
+      "target": [
+        -3.049999952316284,
+        17.562068939208984,
+        1.7000000476837158
+      ],
+      "pose": "talking",
+      "activity": "conversation",
+      "group": "conversation-left",
+      "facing": -2.278119462002694
+    },
+    {
+      "position": [
+        -3.049999952316284,
+        17.562068939208984
+      ],
+      "target": [
+        -1.850000023841858,
+        16.53620719909668,
+        1.7000000476837158
+      ],
+      "pose": "listening",
+      "activity": "conversation",
+      "group": "conversation-left",
+      "facing": 0.8634731915870993
+    },
+    {
+      "position": [
+        1.850000023841858,
+        68.75172424316406
+      ],
+      "target": [
+        3.049999952316284,
+        69.777587890625,
+        1.7000000476837158
+      ],
+      "pose": "talking",
+      "activity": "conversation",
+      "group": "conversation-right",
+      "facing": 2.2781203803238483
+    },
+    {
+      "position": [
+        3.049999952316284,
+        69.777587890625
+      ],
+      "target": [
+        1.850000023841858,
+        68.75172424316406,
+        1.7000000476837158
+      ],
+      "pose": "listening",
+      "activity": "conversation",
+      "group": "conversation-right",
+      "facing": -0.8634722732659447
+    },
+    {
+      "position": [
+        -1.9500000476837158,
+        8.550000190734863
+      ],
+      "target": [
+        -4.800000190734863,
+        8.699999809265137,
+        2.8499999046325684
+      ],
+      "pose": "listening",
+      "activity": "viewing_display",
+      "project_id": "agent-property",
+      "facing": -1.6233792522921067
+    },
+    {
+      "position": [
+        1.9500000476837158,
+        23.380001068115234
+      ],
+      "target": [
+        4.800000190734863,
+        23.200000762939453,
+        2.8499999046325684
+      ],
+      "pose": "listening",
+      "activity": "viewing_display",
+      "project_id": "amplifii",
+      "facing": 1.5077221054017156
+    },
+    {
+      "position": [
+        -1.9500000476837158,
+        40.54999923706055
+      ],
+      "target": [
+        -4.800000190734863,
+        40.70000076293945,
+        2.8499999046325684
+      ],
+      "pose": "listening",
+      "activity": "viewing_display",
+      "project_id": "fyp",
+      "facing": -1.62337991968845
+    },
+    {
+      "position": [
+        1.9500000476837158,
+        55.380001068115234
+      ],
+      "target": [
+        4.800000190734863,
+        55.20000076293945,
+        2.8499999046325684
+      ],
+      "pose": "listening",
+      "activity": "viewing_display",
+      "project_id": "DTMAssignment",
+      "facing": 1.5077221054017156
+    },
+    {
+      "position": [
+        -1.9500000476837158,
+        75.04999542236328
+      ],
+      "target": [
+        -4.800000190734863,
+        75.19999694824219,
+        2.8499999046325684
+      ],
+      "pose": "listening",
+      "activity": "viewing_display",
+      "project_id": "PFDAGroupAssignment",
+      "facing": -1.62337991968845
+    },
+    {
+      "position": [
+        1.9500000476837158,
+        110.37999725341797
+      ],
+      "target": [
+        4.800000190734863,
+        110.19999694824219,
+        2.8499999046325684
+      ],
+      "pose": "listening",
+      "activity": "viewing_display",
+      "project_id": "damien-portfolio",
+      "facing": 1.5077221054017156
+    },
+    {
+      "position": [
+        2.049999952316284,
+        36.5
+      ],
+      "target": [
+        1.649999976158142,
+        35.29999923706055,
+        1.399999976158142
+      ],
+      "pose": "phone",
+      "activity": "phone",
+      "facing": -0.3217503457805036
+    },
+    {
+      "position": [
+        -1.9500000476837158,
+        82.06896209716797
+      ],
+      "target": [
+        -1.649999976158142,
+        84.26895904541016,
+        1.7000000476837158
+      ],
+      "pose": "carrying_bag",
+      "activity": "carrying_bag",
+      "route": {
+        "center": [
+          -1.9,
+          83.76896551724138
+        ],
+        "radius": [
+          0.04,
+          2.2
+        ],
+        "phase": 1.1
+      },
+      "facing": 3.0060647219805476
+    },
+    {
+      "position": [
+        2.1500000953674316,
+        13.16551685333252
+      ],
+      "target": [
+        2.1500000953674316,
+        16.165517807006836,
+        1.7000000476837158
+      ],
+      "pose": "walking",
+      "activity": "walking",
+      "route": {
+        "center": [
+          1.9,
+          13.165517241379309
+        ],
+        "radius": [
+          0.04,
+          3
+        ],
+        "phase": 0.3
+      },
+      "facing": 3.141592653589793
+    },
+    {
+      "position": [
+        -2.1500000953674316,
+        46.1655158996582
+      ],
+      "target": [
+        -2.1500000953674316,
+        49.1655158996582,
+        1.7000000476837158
+      ],
+      "pose": "walking",
+      "activity": "walking",
+      "route": {
+        "center": [
+          -1.9,
+          45.16551724137931
+        ],
+        "radius": [
+          0.04,
+          2.5
+        ],
+        "phase": 2.1
+      },
+      "facing": 3.141592653589793
+    },
+    {
+      "position": [
+        -1.9500000476837158,
+        107.37999725341797
+      ],
+      "target": [
+        -4.800000190734863,
+        107.19999694824219,
+        2.8499999046325684
+      ],
+      "pose": "phone",
+      "activity": "thinking",
+      "project_id": "fedora-dotfiles",
+      "facing": -1.5077221054017156
+    }
+  ],
+  "categories": [
+    {
+      "id": "client",
+      "title": "Client / real world project",
+      "number": 1,
+      "startY": -10,
+      "displayStartY": 8.7,
+      "endY": 27.2,
+      "projectIds": [
+        "agent-property",
+        "report-automation",
+        "Aria",
+        "amplifii"
+      ]
+    },
+    {
+      "id": "academic",
+      "title": "Academic Assignment",
+      "number": 2,
+      "startY": 32.0,
+      "displayStartY": 40.7,
+      "endY": 93.7,
+      "projectIds": [
+        "fyp",
+        "ConcurrentProgrammingAssignment",
+        "DSTRAssignment",
+        "DTMAssignment",
+        "Java-Programming-G18-",
+        "OODJ",
+        "PFDAGroupAssignment",
+        "txsa-group-assignment",
+        "SDMGroupAssignment",
+        "rust-gcs-ocs-assignment"
+      ],
+      "door": {
+        "y": 32.0,
+        "revealY": 24.2,
+        "automatic": true,
+        "previousCategory": "client"
+      }
+    },
+    {
+      "id": "personal",
+      "title": "Personal Project",
+      "number": 3,
+      "startY": 98.5,
+      "displayStartY": 107.2,
+      "endY": 114.2,
+      "projectIds": [
+        "fedora-dotfiles",
+        "damien-portfolio"
+      ],
+      "door": {
+        "y": 98.5,
+        "revealY": 90.7,
+        "automatic": true,
+        "previousCategory": "academic"
+      }
+    }
+  ],
+  "galleryLighting": {
+    "solidBlackWalls": 2,
+    "spotlightCount": 0,
+    "worldStrength": 0.025,
+    "softboxWatts": 5
+  },
+  "floorSlabs": {
+    "widthMeters": 2.5,
+    "lengthMeters": 7.8
+  },
+  "ceiling": {
+    "style": "flowing wave ribs",
+    "recessedLights": [],
+    "ribCount": 41,
+    "curvedLightRails": 5,
+    "perimeterLightRails": 2,
+    "wavePeriodMeters": 18,
+    "palette": "black and white",
+    "longitudinalLightRails": 7,
+    "ceilingHeightMeters": 6.2,
+    "minimumLightHeightMeters": 5.878,
+    "plainPanels": 0,
+    "squareJunctions": 0,
+    "surfaceGrid": false,
+    "ceilingDots": false
+  },
+  "npcAnimation": {
+    "globalLoopFrames": 1200,
+    "walkingLoopFrames": 300,
+    "interactionLoopFrames": [
+      120,
+      150,
+      200
+    ],
+    "nativeShapeKeys": true,
+    "independentOfUserMovement": true
+  },
+  "projects": [
+    {
+      "id": "agent-property",
+      "section": "client",
+      "position": [
+        -4.8,
+        8.7,
+        0
+      ],
+      "facing": "east-entrance",
+      "url": "https://github.com/DamienCKj2812/agent-limenghar-property",
+      "frame": 119
+    },
+    {
+      "id": "report-automation",
+      "section": "client",
+      "position": [
+        4.8,
+        11.7,
+        0
+      ],
+      "facing": "west-entrance",
+      "url": "https://github.com/DamienCKj2812/report-automation",
+      "frame": 147
+    },
+    {
+      "id": "Aria",
+      "section": "client",
+      "position": [
+        -4.8,
+        20.2,
+        0
+      ],
+      "facing": "east-entrance",
+      "url": "https://github.com/maxscale-io/Aria",
+      "frame": 228
+    },
+    {
+      "id": "amplifii",
+      "section": "client",
+      "position": [
+        4.8,
+        23.2,
+        0
+      ],
+      "facing": "west-entrance",
+      "url": null,
+      "frame": 256
+    },
+    {
+      "id": "fyp",
+      "section": "academic",
+      "position": [
+        -4.8,
+        40.7,
+        0
+      ],
+      "facing": "east-entrance",
+      "url": "https://github.com/DamienCKj2812/logging-loading",
+      "frame": 421
+    },
+    {
+      "id": "ConcurrentProgrammingAssignment",
+      "section": "academic",
+      "position": [
+        4.8,
+        43.7,
+        0
+      ],
+      "facing": "west-entrance",
+      "url": "https://github.com/DamienCKj2812/ConcurrentProgrammingAssignment",
+      "frame": 449
+    },
+    {
+      "id": "DSTRAssignment",
+      "section": "academic",
+      "position": [
+        -4.8,
+        52.2,
+        0
+      ],
+      "facing": "east-entrance",
+      "url": "https://github.com/DamienCKj2812/DSTRAssignment",
+      "frame": 530
+    },
+    {
+      "id": "DTMAssignment",
+      "section": "academic",
+      "position": [
+        4.8,
+        55.2,
+        0
+      ],
+      "facing": "west-entrance",
+      "url": "https://github.com/DamienCKj2812/DTMAssignment",
+      "frame": 558
+    },
+    {
+      "id": "Java-Programming-G18-",
+      "section": "academic",
+      "position": [
+        -4.8,
+        63.7,
+        0
+      ],
+      "facing": "east-entrance",
+      "url": "https://github.com/DamienCKj2812/Java-Programming-G18-",
+      "frame": 638
+    },
+    {
+      "id": "OODJ",
+      "section": "academic",
+      "position": [
+        4.8,
+        66.7,
+        0
+      ],
+      "facing": "west-entrance",
+      "url": "https://github.com/DamienCKj2812/OODJ",
+      "frame": 667
+    },
+    {
+      "id": "PFDAGroupAssignment",
+      "section": "academic",
+      "position": [
+        -4.8,
+        75.2,
+        0
+      ],
+      "facing": "east-entrance",
+      "url": "https://github.com/DamienCKj2812/PFDAGroupAssignment",
+      "frame": 747
+    },
+    {
+      "id": "txsa-group-assignment",
+      "section": "academic",
+      "position": [
+        4.8,
+        78.2,
+        0
+      ],
+      "facing": "west-entrance",
+      "url": "https://github.com/DamienCKj2812/txsa-group-assignment",
+      "frame": 775
+    },
+    {
+      "id": "SDMGroupAssignment",
+      "section": "academic",
+      "position": [
+        -4.8,
+        86.7,
+        0
+      ],
+      "facing": "east-entrance",
+      "url": "https://github.com/DamienCKj2812/SDMGroupAssignment",
+      "frame": 855
+    },
+    {
+      "id": "rust-gcs-ocs-assignment",
+      "section": "academic",
+      "position": [
+        4.8,
+        89.7,
+        0
+      ],
+      "facing": "west-entrance",
+      "url": "https://github.com/BaconCoding74/rust-gcs-ocs-assignment",
+      "frame": 884
+    },
+    {
+      "id": "fedora-dotfiles",
+      "section": "personal",
+      "position": [
+        -4.8,
+        107.2,
+        0
+      ],
+      "facing": "east-entrance",
+      "url": "https://github.com/DamienCKj2812/fedora-dotfiles",
+      "frame": 1049
+    },
+    {
+      "id": "damien-portfolio",
+      "section": "personal",
+      "position": [
+        4.8,
+        110.2,
+        0
+      ],
+      "facing": "west-entrance",
+      "url": "https://github.com/DamienCKj2812/damien-portfolio",
+      "frame": 1077
+    }
+  ],
+  "npcSource": "assets/cyber-city/monochrome-city-solid-tower.blend",
+  "widthMeters": 14.2,
+  "floorWidthMeters": 14.399999999999999
+}

@@ -1,0 +1,14 @@
+.project-video-dock { position: absolute; left: 0; top: 0; visibility: hidden; pointer-events: auto; color: #ddd; font: 10px/1.6 ui-monospace, monospace; }
+.project-video-description { display: grid; gap: 7px; width: 100%; padding: 13px 16px; border: 1px solid #ffffff55; border-radius: 0; background: #080808e8; color: inherit; text-align: left; font: inherit; cursor: pointer; backdrop-filter: blur(8px); }
+.project-video-description strong { color: #fff; font-size: 11px; font-weight: 400; text-transform: uppercase; letter-spacing: .14em; }
+.project-video-description > span { color: #aaa; }
+.project-video-description .project-video-action { color: #eee; font-size: 9px; text-transform: uppercase; letter-spacing: .1em; }
+.project-video-description:hover, .project-video-description:focus-visible { border-color: #fff; outline: 1px solid #fff; outline-offset: 3px; }
+.project-video-controls { padding: 10px 12px; border: 1px solid #ffffff40; background: #060606df; backdrop-filter: blur(8px); }
+.project-video-control-row { display: flex; align-items: center; gap: 12px; }
+.project-video-control-row button { flex-shrink: 0; min-height: 32px; border: 0; padding: 0; color: #ddd; background: none; font: inherit; cursor: pointer; }
+.project-video-control-row button:focus-visible { outline: 1px solid #ddd; outline-offset: 4px; }
+.project-video-control-row input { flex: 1; min-width: 40px; accent-color: #b8b8b8; cursor: pointer; }
+.project-video-control-row output { flex-shrink: 0; color: #999; font-size: 9px; }
+.project-video-controls p { margin: 6px 0 0; color: #999; }
+@media(max-width:600px) { .project-video-control-row { gap: 8px; flex-wrap: wrap; } .project-video-control-row output { font-size: 8px; } .project-video-control-row button { min-height: 36px; } }

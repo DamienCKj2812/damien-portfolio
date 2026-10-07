@@ -1,0 +1,251 @@
+{
+  "blend": "skills-gallery.blend",
+  "scene": "SKILLS / Technology Gallery",
+  "section": "Skills Gallery",
+  "dimensions_m": {
+    "width": 12,
+    "depth": 16,
+    "height": 5.4
+  },
+  "entrance_anchor": [
+    0,
+    -7,
+    0
+  ],
+  "forward_axis": "+Y",
+  "up_axis": "+Z",
+  "exhibits": 9,
+  "categories": [
+    "Languages",
+    "Frameworks",
+    "Backend & APIs",
+    "Databases",
+    "Data & AI",
+    "Security",
+    "DevOps & CI/CD",
+    "Microservices",
+    "Linux"
+  ],
+  "people": 6,
+  "visitors": [
+    {
+      "root": "Gallery \u2022 Visitor / 01 / exploring exhibits and AT-AT",
+      "activity": "explore_walk_pause",
+      "idle_pose": "standing",
+      "route_frames": [
+        1,
+        30,
+        130,
+        205,
+        260,
+        360,
+        400,
+        450,
+        495,
+        605,
+        650,
+        800,
+        960
+      ]
+    },
+    {
+      "root": "Gallery \u2022 Visitor / 02 / circling the walker",
+      "activity": "explore_walk_pause",
+      "idle_pose": "standing",
+      "route_frames": [
+        1,
+        30,
+        75,
+        145,
+        200,
+        320,
+        365,
+        450,
+        510,
+        565,
+        620,
+        675,
+        815,
+        880,
+        960
+      ]
+    },
+    {
+      "root": "Gallery \u2022 Visitor / 03 / strolling between left exhibits",
+      "activity": "explore_walk_pause",
+      "idle_pose": "observing",
+      "route_frames": [
+        1,
+        60,
+        240,
+        400,
+        620,
+        960
+      ]
+    },
+    {
+      "root": "Gallery \u2022 Visitor / 04 / strolling between right exhibits",
+      "activity": "explore_walk_pause",
+      "idle_pose": "thinking",
+      "route_frames": [
+        1,
+        90,
+        285,
+        465,
+        685,
+        960
+      ]
+    },
+    {
+      "root": "Gallery \u2022 Visitor / 05 / discussing the AT-AT",
+      "activity": "explaining",
+      "idle_pose": "explaining",
+      "route_frames": []
+    },
+    {
+      "root": "Gallery \u2022 Visitor / 06 / listening beside the sculpture",
+      "activity": "listening",
+      "idle_pose": "listening",
+      "route_frames": []
+    }
+  ],
+  "frames": [
+    1,
+    2940
+  ],
+  "fps": 30,
+  "duration_s": 98.0,
+  "saved_frame": 1,
+  "activity_loop": true,
+  "presentation_camera": "Gallery \u2022 Skills gallery presentation camera",
+  "objects": 580,
+  "particle_count": 18290,
+  "existing_assets_modified": false,
+  "visitor_clearance_checks": "passed",
+  "integration_status": "Standalone Blender gallery; website integration deferred.",
+  "centre_exhibit": {
+    "id": "atat",
+    "root": "Gallery \u2022 AT-AT / walker exhibit",
+    "style": "Black armored surfaces with fine white contour lines",
+    "bounds_min": [
+      -2.7297000885009766,
+      2.9355998039245605,
+      0.3400000035762787
+    ],
+    "bounds_max": [
+      1.7423999309539795,
+      4.764400005340576,
+      3.7974400520324707
+    ],
+    "dimensions_m": [
+      4.472100019454956,
+      1.8288002014160156,
+      3.457440048456192
+    ],
+    "plinth_rect": [
+      -0.2,
+      3.85,
+      7.4,
+      3.2
+    ],
+    "legs": 4,
+    "display_scale": 0.72,
+    "reference": "User-supplied AT-AT outline image"
+  },
+  "moving_people": 4,
+  "active_camera": "Gallery \u2022 Guided walk / free-look camera",
+  "guided_walk": {
+    "camera": "Gallery \u2022 Guided walk / free-look camera",
+    "rig": "Gallery \u2022 Guided walk / player movement",
+    "frames": [
+      1,
+      2940
+    ],
+    "fps": 30,
+    "duration_s": 98.0,
+    "camera_rotation_animated": false,
+    "camera_auto_aim": false,
+    "stops": [
+      {
+        "start": 300,
+        "end": 480,
+        "label": "Languages",
+        "hint": "Look left and slightly up",
+        "index": 1
+      },
+      {
+        "start": 770,
+        "end": 860,
+        "label": "Frameworks",
+        "hint": "Look left",
+        "index": 2
+      },
+      {
+        "start": 900,
+        "end": 990,
+        "label": "Backend & APIs",
+        "hint": "Look toward the rear wall",
+        "index": 3
+      },
+      {
+        "start": 1100,
+        "end": 1190,
+        "label": "Databases",
+        "hint": "Look toward the rear wall",
+        "index": 4
+      },
+      {
+        "start": 1300,
+        "end": 1390,
+        "label": "Data & AI",
+        "hint": "Look toward the rear wall",
+        "index": 5
+      },
+      {
+        "start": 1450,
+        "end": 1540,
+        "label": "Security",
+        "hint": "Look right",
+        "index": 6
+      },
+      {
+        "start": 1650,
+        "end": 1740,
+        "label": "DevOps & CI/CD",
+        "hint": "Look right",
+        "index": 7
+      },
+      {
+        "start": 1850,
+        "end": 1940,
+        "label": "Microservices",
+        "hint": "Look right",
+        "index": 8
+      },
+      {
+        "start": 2050,
+        "end": 2140,
+        "label": "Linux",
+        "hint": "Look right",
+        "index": 9
+      },
+      {
+        "start": 2290,
+        "end": 2380,
+        "label": "AT-AT walker",
+        "hint": "Look ahead and around the mechanical walker",
+        "index": 0
+      }
+    ]
+  },
+  "npc_clip_frames": [
+    1,
+    960
+  ],
+  "npc_clip_loops_during_tour": true,
+  "sculpture_detail_camera": "Gallery \u2022 AT-AT walker detail camera",
+  "skillContentSource": [
+    "src/data/portfolio.js",
+    "docs/project-catalogue.md"
+  ]
+}

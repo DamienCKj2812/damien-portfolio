@@ -1,0 +1,27 @@
+{
+  "source": "banner-artwork/shaping-a-brighter-tomorrow-source.png",
+  "suppliedFilename": "shaping-a-brighter-tomorrow.png",
+  "sourceSize": [
+    887,
+    1774
+  ],
+  "sourceBytes": 2091780,
+  "sourceSha256": "43f8fb1f6f02578e3fba220324581a2be01ea50b1eba390c40ad951df5421a7d",
+  "fit": "edge-to-edge proportional center crop; no padding or stretching",
+  "cropBox": [
+    0,
+    306.2531969309463,
+    887,
+    1467.7468030690538
+  ],
+  "displayArcWidthM": 6.111000000000001,
+  "displayHeightM": 8,
+  "output": "textures-monochrome/shaping-a-brighter-tomorrow.jpg",
+  "outputSize": [
+    1173,
+    1536
+  ],
+  "outputBytes": 371383,
+  "jpegQuality": 92,
+  "outputSha256": "14f1ce2f90bbc076c2d40bfe299299e032809b7eaf35e9cd032f378d225439ff"
+}

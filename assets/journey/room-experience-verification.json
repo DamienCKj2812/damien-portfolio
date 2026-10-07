@@ -1,0 +1,18 @@
+{
+  "level": "experience",
+  "actors": 6,
+  "sampled_frames": [
+    1,
+    46,
+    151,
+    296,
+    510,
+    701,
+    2400,
+    2401,
+    2700
+  ],
+  "max_point_position_error_m": 0,
+  "max_route_position_error_m": 0,
+  "source_modified": false
+}

@@ -1,0 +1,24 @@
+{
+  "source": "Minimalist Portrait in Striped Shirt.png",
+  "sourceSize": [
+    1111,
+    1416
+  ],
+  "model": "portrait.glb",
+  "assetHash": "7e08895894adcc00",
+  "reconstruction": "Photo front feathered into inferred surfaces using continuous cylindrical atlases",
+  "unseenSurfaces": "Inferred sides, back, skin, hair, and shirt stripes",
+  "surfaceVersion": 2,
+  "textures": [
+    "continuous-head-and-neck-wrap.png",
+    "hair-detail-wrap.png",
+    "tailored-shirt-torso-wrap.png",
+    "rounded-trouser-waist-wrap.png",
+    "left-sleeve-and-tucked-wrist-wrap.png",
+    "right-sleeve-and-tucked-wrist-wrap.png",
+    "left-rounded-ear-wrap.png",
+    "right-rounded-ear-wrap.png"
+  ],
+  "meshCount": 8,
+  "triangles": 78112
+}

@@ -1,0 +1,48 @@
+{
+  "about": {
+    "label": "About office",
+    "source": "assets/about-office/about-office.blend",
+    "assetBase": "models/rooms/about/",
+    "entranceAnchor": [0, -6.8, 0],
+    "mainCamera": "Office • About office presentation camera",
+    "entryCamera": "Office • Office arrival camera",
+    "focusCamera": "Office • Contact card focus camera",
+    "width": 12,
+    "height": 4.6
+  },
+  "skills": {
+    "label": "Skills gallery",
+    "source": "assets/skills-gallery/skills-gallery.blend",
+    "assetBase": "models/rooms/skills/",
+    "entranceAnchor": [0, -7, 0],
+    "mainCamera": "Gallery • Guided walk / free-look camera",
+    "detailCameras": {"atat": "Gallery • AT-AT walker detail camera"},
+    "animationFrames": 959,
+    "guidedFrames": 2940,
+    "guidedLoop": false,
+    "width": 12,
+    "height": 5.4
+  },
+  "projects": {
+    "label": "Projects hallway",
+    "source": "assets/project-hallway/project-hallway.blend",
+    "assetBase": "models/rooms/projects/",
+    "entranceAnchor": [0, -10, 0],
+    "mainCamera": "Project Hallway / free-look camera",
+    "width": 14.2,
+    "height": 6.2
+  },
+  "experience": {
+    "label": "Timeline observatory",
+    "source": "assets/timeline-observatory/timeline-observatory.blend",
+    "assetBase": "models/rooms/experience/",
+    "entranceAnchor": [0, -12.5, 0],
+    "mainCamera": "Timeline Observatory / guided free-look camera",
+    "detailCameras": {"globe": "Timeline Observatory / Globe detail", "oculus": "Timeline Observatory / Star oculus", "window": "Timeline Observatory / Space window"},
+    "animationFrames": 2400,
+    "guidedFrames": 2400,
+    "guidedLoop": true,
+    "width": 25,
+    "height": 8.3
+  }
+}

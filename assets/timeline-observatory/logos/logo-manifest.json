@@ -1,0 +1,53 @@
+{
+  "apu": {
+    "source": "assets/media/logos/organisations/apu-logo.png",
+    "sourceSha256": "638176ca617ad82cdc1457f0aa01e6f1a301e54507b93b39dcf3799a611edd1a",
+    "texture": "logos/apu-logo.png",
+    "outputSha256": "dbda0ed55e1b6eec4ea1eddab8120f979acce492059618fcc51c4a84fa896a6f",
+    "size": [
+      1024,
+      895
+    ],
+    "cropBounds": [
+      31,
+      0,
+      1341,
+      1145
+    ],
+    "palette": "original-color RGBA"
+  },
+  "lyj": {
+    "source": "assets/media/logos/organisations/lyj-events-and-marketing-logo.png",
+    "sourceSha256": "321be8a2f52d03321a17d805e6dfdd962e48eb63496ce7326613e03f2c89bcba",
+    "texture": "logos/lyj-logo.png",
+    "outputSha256": "dea083b8d614d3cdd1763e26c7869948a183860946e328fd069f42dae0da6591",
+    "size": [
+      1024,
+      554
+    ],
+    "cropBounds": [
+      31,
+      121,
+      1520,
+      927
+    ],
+    "palette": "original-color RGBA"
+  },
+  "cos": {
+    "source": "assets/media/logos/organisations/cos-great-trading-logo.png",
+    "sourceSha256": "a3b8200706cb2ce53ee96e7e7c55cabaaff2e178341839085fe963f467d4780d",
+    "texture": "logos/cos-logo.png",
+    "outputSha256": "63420f8a72dd14eac525705bd0b46a579d4a0037fb1817611c35f58610231995",
+    "size": [
+      1024,
+      768
+    ],
+    "cropBounds": [
+      22,
+      54,
+      1370,
+      1065
+    ],
+    "palette": "original-color RGBA"
+  }
+}

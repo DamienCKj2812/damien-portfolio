@@ -1,0 +1,166 @@
+{
+  "blend": "kaze-lobby-walkthrough.blend",
+  "scene": "KAZE / Monochrome Atrium",
+  "dimensions_m": {
+    "width": 20.0,
+    "depth": 36.5,
+    "height": 18,
+    "mezzanine_floor": 6.12
+  },
+  "elevators": 4,
+  "elevators_per_side": 2,
+  "upper_foyer": {
+    "floor_z": 6.12,
+    "front_y": 19,
+    "rear_y": 24.5
+  },
+  "escalator_entry_y": 8.45,
+  "clearance_behind_reception_m": 3.8499999999999996,
+  "identity_pillar": {
+    "center": [
+      0,
+      6.9,
+      8
+    ],
+    "dimensions_m": [
+      3.5,
+      2.2,
+      16
+    ],
+    "front_y": 5.8,
+    "reception_clearance_m": 1.2
+  },
+  "entrance_center": [
+    0,
+    -12,
+    0
+  ],
+  "forward_axis": "+Y",
+  "up_axis": "+Z",
+  "objects": 564,
+  "escalators": 2,
+  "escalator_steps_per_flight": 34,
+  "lounge_sofa_bases": 0,
+  "ceiling": {
+    "openings": [
+      "Left sweep",
+      "Central slit",
+      "Right sweep",
+      "Rear fan",
+      "Right rear fork"
+    ],
+    "continuous_soffit": true,
+    "collection": "Lobby \u2022 16 Sculpted ceiling",
+    "height_range_m": [
+      16.0,
+      17.87
+    ],
+    "grid_spacing_m": 1.15,
+    "pillar_junctions": [
+      {
+        "side": -1,
+        "pillar_corner": [
+          -1.75,
+          5.800000190734863,
+          16.0
+        ],
+        "roof_lip": [
+          -1.899999976158142,
+          4.599999904632568,
+          16.600000381469727
+        ]
+      },
+      {
+        "side": 1,
+        "pillar_corner": [
+          1.75,
+          5.800000190734863,
+          16.0
+        ],
+        "roof_lip": [
+          3.4000000953674316,
+          6.0,
+          16.600000381469727
+        ]
+      }
+    ],
+    "flared_left_support": false,
+    "trailing_vines": 0
+  },
+  "rear_exhibit": {
+    "center": [
+      0,
+      15.55,
+      0
+    ],
+    "collection": "Lobby \u2022 17 Holographic fish exhibit",
+    "fish_bounds_m": {
+      "x": [
+        -2.72,
+        2.1
+      ],
+      "z": [
+        1.98,
+        5.05
+      ]
+    },
+    "pedestal_radius_m": 0.82,
+    "pedestal_height_m": 1.07,
+    "escalator_clearance_x_m": 0.31,
+    "native_particle_geometry": true,
+    "camera": "Lobby \u2022 Holographic fish exhibit camera",
+    "motion": {
+      "loop_frames": 1019,
+      "scroll_independent": true,
+      "tail_cycle_seconds": 1.887037037037037,
+      "animated_parts": [
+        "body",
+        "upper tail",
+        "lower tail",
+        "dorsal",
+        "near pectoral",
+        "lower ventral"
+      ]
+    },
+    "sub_ceiling": false
+  },
+  "reception_carpet": {
+    "center": [
+      0,
+      -3.625,
+      0.023
+    ],
+    "dimensions_m": [
+      4.0,
+      16.75,
+      0.022
+    ]
+  },
+  "people": 17,
+  "trees": 12,
+  "npc_poses": {
+    "carrying_bag": 1,
+    "checking_terminal": 1,
+    "greeting": 1,
+    "leaning": 1,
+    "listening": 1,
+    "observing": 1,
+    "phone": 2,
+    "pointing": 1,
+    "seated_drinking": 1,
+    "seated_phone": 1,
+    "seated_reading": 1,
+    "seated_relaxed": 1,
+    "talking": 1,
+    "walking": 3
+  },
+  "particle_count": 74610,
+  "camera": "Lobby \u2022 Navigation / walkthrough camera",
+  "city_files_modified": false,
+  "frames": [
+    1,
+    1020
+  ],
+  "fps": 30,
+  "duration_s": 34.0
+}

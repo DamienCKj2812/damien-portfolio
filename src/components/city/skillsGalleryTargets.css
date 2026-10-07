@@ -1,0 +1,7 @@
+.skills-target-dock .about-target-label.skills-target-label { position: absolute; top: 72px; right: 32px; width: 224px; max-width: calc(100vw - 32px); gap: 8px; padding: 12px 14px; }
+.skills-target-dock .skills-target-label::after { display: none; }
+.skills-target-label .about-target-title { font-size: 13px; line-height: 1.4; letter-spacing: .1em; overflow-wrap: anywhere; }
+@media (max-width: 600px) {
+  .skills-target-dock .about-target-label.skills-target-label { top: 64px; right: 16px; width: 184px; padding: 10px 12px; gap: 6px; }
+  .skills-target-label .about-target-title { font-size: 12px; }
+}

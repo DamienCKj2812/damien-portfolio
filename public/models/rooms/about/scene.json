@@ -1,0 +1,687 @@
+{
+  "version": 3,
+  "level": "about",
+  "label": "About office",
+  "geometry": "geometry.bin",
+  "animation": "animation.bin",
+  "assetHash": "6b2b24a6a08a",
+  "frameStart": 1,
+  "frameEnd": 720,
+  "fps": 30,
+  "channelStride": 16,
+  "channelCount": 20,
+  "channels": [
+    "Office \u2022 About office presentation camera",
+    "Office \u2022 Aquarium bubble 00-00 / rise loop",
+    "Office \u2022 Aquarium bubble 00-01 / rise loop",
+    "Office \u2022 Aquarium bubble 00-02 / rise loop",
+    "Office \u2022 Aquarium bubble 00-03 / rise loop",
+    "Office \u2022 Aquarium bubble 00-04 / rise loop",
+    "Office \u2022 Aquarium bubble 00-05 / rise loop",
+    "Office \u2022 Aquarium bubble 00-06 / rise loop",
+    "Office \u2022 Aquarium bubble 00-07 / rise loop",
+    "Office \u2022 Aquarium bubble 01-00 / rise loop",
+    "Office \u2022 Aquarium bubble 01-01 / rise loop",
+    "Office \u2022 Aquarium bubble 01-02 / rise loop",
+    "Office \u2022 Aquarium bubble 01-03 / rise loop",
+    "Office \u2022 Aquarium bubble 01-04 / rise loop",
+    "Office \u2022 Aquarium bubble 01-05 / rise loop",
+    "Office \u2022 Aquarium bubble 01-06 / rise loop",
+    "Office \u2022 Aquarium bubble 01-07 / rise loop",
+    "Office \u2022 Aquarium fish 00 / swim route",
+    "Office \u2022 Aquarium fish 01 / swim route",
+    "Office \u2022 Aquarium fish 02 / swim route"
+  ],
+  "actors": [
+    {
+      "index": 1,
+      "name": "Office \u2022 Aquarium bubble 00-00 / rise loop",
+      "style": "room",
+      "morphCount": 0
+    },
+    {
+      "index": 2,
+      "name": "Office \u2022 Aquarium bubble 00-01 / rise loop",
+      "style": "room",
+      "morphCount": 0
+    },
+    {
+      "index": 3,
+      "name": "Office \u2022 Aquarium bubble 00-02 / rise loop",
+      "style": "room",
+      "morphCount": 0
+    },
+    {
+      "index": 4,
+      "name": "Office \u2022 Aquarium bubble 00-03 / rise loop",
+      "style": "room",
+      "morphCount": 0
+    },
+    {
+      "index": 5,
+      "name": "Office \u2022 Aquarium bubble 00-04 / rise loop",
+      "style": "room",
+      "morphCount": 0
+    },
+    {
+      "index": 6,
+      "name": "Office \u2022 Aquarium bubble 00-05 / rise loop",
+      "style": "room",
+      "morphCount": 0
+    },
+    {
+      "index": 7,
+      "name": "Office \u2022 Aquarium bubble 00-06 / rise loop",
+      "style": "room",
+      "morphCount": 0
+    },
+    {
+      "index": 8,
+      "name": "Office \u2022 Aquarium bubble 00-07 / rise loop",
+      "style": "room",
+      "morphCount": 0
+    },
+    {
+      "index": 9,
+      "name": "Office \u2022 Aquarium bubble 01-00 / rise loop",
+      "style": "room",
+      "morphCount": 0
+    },
+    {
+      "index": 10,
+      "name": "Office \u2022 Aquarium bubble 01-01 / rise loop",
+      "style": "room",
+      "morphCount": 0
+    },
+    {
+      "index": 11,
+      "name": "Office \u2022 Aquarium bubble 01-02 / rise loop",
+      "style": "room",
+      "morphCount": 0
+    },
+    {
+      "index": 12,
+      "name": "Office \u2022 Aquarium bubble 01-03 / rise loop",
+      "style": "room",
+      "morphCount": 0
+    },
+    {
+      "index": 13,
+      "name": "Office \u2022 Aquarium bubble 01-04 / rise loop",
+      "style": "room",
+      "morphCount": 0
+    },
+    {
+      "index": 14,
+      "name": "Office \u2022 Aquarium bubble 01-05 / rise loop",
+      "style": "room",
+      "morphCount": 0
+    },
+    {
+      "index": 15,
+      "name": "Office \u2022 Aquarium bubble 01-06 / rise loop",
+      "style": "room",
+      "morphCount": 0
+    },
+    {
+      "index": 16,
+      "name": "Office \u2022 Aquarium bubble 01-07 / rise loop",
+      "style": "room",
+      "morphCount": 0
+    },
+    {
+      "index": 17,
+      "name": "Office \u2022 Aquarium fish 00 / swim route",
+      "style": "room",
+      "morphCount": 0
+    },
+    {
+      "index": 18,
+      "name": "Office \u2022 Aquarium fish 01 / swim route",
+      "style": "room",
+      "morphCount": 0
+    },
+    {
+      "index": 19,
+      "name": "Office \u2022 Aquarium fish 02 / swim route",
+      "style": "room",
+      "morphCount": 0
+    }
+  ],
+  "camera": {
+    "verticalFov": 41.112090439166934,
+    "sourceAspect": 1.7142857142857142,
+    "near": 0.01,
+    "far": 350,
+    "fovOffset": 10
+  },
+  "cameras": {
+    "main": {
+      "position": [
+        0.3499999940395355,
+        -5.5,
+        2.1500000953674316
+      ],
+      "quaternion": [
+        0.6708377599716187,
+        0.0,
+        0.0,
+        0.741604208946228
+      ],
+      "fov": 41.112090439166934
+    },
+    "entry": {
+      "position": [
+        0.0,
+        -6.5,
+        1.7000000476837158
+      ],
+      "quaternion": [
+        0.7051615715026855,
+        0.0,
+        0.0,
+        0.7090466618537903
+      ],
+      "fov": 55.39894561611
+    },
+    "card": {
+      "position": [
+        1.8320000171661377,
+        -0.25999999046325684,
+        1.0262000560760498
+      ],
+      "quaternion": [
+        0.3239116966724396,
+        0.019365187734365463,
+        0.05644955486059189,
+        0.9442031979560852
+      ],
+      "fov": 26.268044612792647
+    }
+  },
+  "entranceAnchor": [
+    0,
+    -6.8,
+    0
+  ],
+  "textures": [],
+  "groups": [
+    {
+      "actor": 0,
+      "kind": "glow",
+      "byteOffset": 0,
+      "floatCount": 568,
+      "vertexCount": 142,
+      "stride": 4,
+      "role": null,
+      "id": null,
+      "opacity": 1.0
+    },
+    {
+      "actor": 0,
+      "kind": "lines",
+      "byteOffset": 2272,
+      "floatCount": 59992,
+      "vertexCount": 14998,
+      "stride": 4,
+      "role": null,
+      "id": null,
+      "opacity": 1.0
+    },
+    {
+      "actor": 0,
+      "kind": "lines",
+      "byteOffset": 242240,
+      "floatCount": 9448,
+      "vertexCount": 2362,
+      "stride": 4,
+      "role": "officeScreenMap",
+      "id": "malaysia",
+      "opacity": 1.0
+    },
+    {
+      "actor": 0,
+      "kind": "points",
+      "byteOffset": 280032,
+      "floatCount": 45175,
+      "vertexCount": 9035,
+      "stride": 5,
+      "role": null,
+      "id": null,
+      "opacity": 1.0
+    },
+    {
+      "actor": 0,
+      "kind": "solid",
+      "byteOffset": 460732,
+      "floatCount": 144,
+      "vertexCount": 36,
+      "stride": 4,
+      "role": null,
+      "id": null,
+      "opacity": 0.10000000149011612
+    },
+    {
+      "actor": 0,
+      "kind": "solid",
+      "byteOffset": 461308,
+      "floatCount": 228924,
+      "vertexCount": 57231,
+      "stride": 4,
+      "role": null,
+      "id": null,
+      "opacity": 1.0
+    },
+    {
+      "actor": 0,
+      "kind": "solid",
+      "byteOffset": 1377004,
+      "floatCount": 24,
+      "vertexCount": 6,
+      "stride": 4,
+      "role": "contact",
+      "id": "card",
+      "opacity": 1.0
+    },
+    {
+      "actor": 0,
+      "kind": "solid",
+      "byteOffset": 1377100,
+      "floatCount": 24,
+      "vertexCount": 6,
+      "stride": 4,
+      "role": "contactLinkPick",
+      "id": "contact-github",
+      "opacity": 0.0
+    },
+    {
+      "actor": 0,
+      "kind": "solid",
+      "byteOffset": 1377196,
+      "floatCount": 24,
+      "vertexCount": 6,
+      "stride": 4,
+      "role": "contactLinkPick",
+      "id": "contact-whatsapp",
+      "opacity": 0.0
+    },
+    {
+      "actor": 0,
+      "kind": "solid",
+      "byteOffset": 1377292,
+      "floatCount": 144,
+      "vertexCount": 36,
+      "stride": 4,
+      "role": "contactPick",
+      "id": "card",
+      "opacity": 0.0
+    },
+    {
+      "actor": 0,
+      "kind": "solid",
+      "byteOffset": 1377868,
+      "floatCount": 144,
+      "vertexCount": 36,
+      "stride": 4,
+      "role": "observerPick",
+      "id": "observer",
+      "opacity": 0.0
+    },
+    {
+      "actor": 0,
+      "kind": "solid",
+      "byteOffset": 1378444,
+      "floatCount": 288,
+      "vertexCount": 72,
+      "stride": 4,
+      "role": "officeDoor",
+      "id": "office-entry",
+      "opacity": 1.0
+    },
+    {
+      "actor": 0,
+      "kind": "solid",
+      "byteOffset": 1379596,
+      "floatCount": 26172,
+      "vertexCount": 6543,
+      "stride": 4,
+      "role": "officeScreenMap",
+      "id": "malaysia",
+      "opacity": 1.0
+    },
+    {
+      "actor": 1,
+      "kind": "lines",
+      "byteOffset": 1484284,
+      "floatCount": 128,
+      "vertexCount": 32,
+      "stride": 4,
+      "role": null,
+      "id": null,
+      "opacity": 1.0
+    },
+    {
+      "actor": 2,
+      "kind": "lines",
+      "byteOffset": 1484796,
+      "floatCount": 128,
+      "vertexCount": 32,
+      "stride": 4,
+      "role": null,
+      "id": null,
+      "opacity": 1.0
+    },
+    {
+      "actor": 3,
+      "kind": "lines",
+      "byteOffset": 1485308,
+      "floatCount": 128,
+      "vertexCount": 32,
+      "stride": 4,
+      "role": null,
+      "id": null,
+      "opacity": 1.0
+    },
+    {
+      "actor": 4,
+      "kind": "lines",
+      "byteOffset": 1485820,
+      "floatCount": 128,
+      "vertexCount": 32,
+      "stride": 4,
+      "role": null,
+      "id": null,
+      "opacity": 1.0
+    },
+    {
+      "actor": 5,
+      "kind": "lines",
+      "byteOffset": 1486332,
+      "floatCount": 128,
+      "vertexCount": 32,
+      "stride": 4,
+      "role": null,
+      "id": null,
+      "opacity": 1.0
+    },
+    {
+      "actor": 6,
+      "kind": "lines",
+      "byteOffset": 1486844,
+      "floatCount": 128,
+      "vertexCount": 32,
+      "stride": 4,
+      "role": null,
+      "id": null,
+      "opacity": 1.0
+    },
+    {
+      "actor": 7,
+      "kind": "lines",
+      "byteOffset": 1487356,
+      "floatCount": 128,
+      "vertexCount": 32,
+      "stride": 4,
+      "role": null,
+      "id": null,
+      "opacity": 1.0
+    },
+    {
+      "actor": 8,
+      "kind": "lines",
+      "byteOffset": 1487868,
+      "floatCount": 128,
+      "vertexCount": 32,
+      "stride": 4,
+      "role": null,
+      "id": null,
+      "opacity": 1.0
+    },
+    {
+      "actor": 9,
+      "kind": "lines",
+      "byteOffset": 1488380,
+      "floatCount": 128,
+      "vertexCount": 32,
+      "stride": 4,
+      "role": null,
+      "id": null,
+      "opacity": 1.0
+    },
+    {
+      "actor": 10,
+      "kind": "lines",
+      "byteOffset": 1488892,
+      "floatCount": 128,
+      "vertexCount": 32,
+      "stride": 4,
+      "role": null,
+      "id": null,
+      "opacity": 1.0
+    },
+    {
+      "actor": 11,
+      "kind": "lines",
+      "byteOffset": 1489404,
+      "floatCount": 128,
+      "vertexCount": 32,
+      "stride": 4,
+      "role": null,
+      "id": null,
+      "opacity": 1.0
+    },
+    {
+      "actor": 12,
+      "kind": "lines",
+      "byteOffset": 1489916,
+      "floatCount": 128,
+      "vertexCount": 32,
+      "stride": 4,
+      "role": null,
+      "id": null,
+      "opacity": 1.0
+    },
+    {
+      "actor": 13,
+      "kind": "lines",
+      "byteOffset": 1490428,
+      "floatCount": 128,
+      "vertexCount": 32,
+      "stride": 4,
+      "role": null,
+      "id": null,
+      "opacity": 1.0
+    },
+    {
+      "actor": 14,
+      "kind": "lines",
+      "byteOffset": 1490940,
+      "floatCount": 128,
+      "vertexCount": 32,
+      "stride": 4,
+      "role": null,
+      "id": null,
+      "opacity": 1.0
+    },
+    {
+      "actor": 15,
+      "kind": "lines",
+      "byteOffset": 1491452,
+      "floatCount": 128,
+      "vertexCount": 32,
+      "stride": 4,
+      "role": null,
+      "id": null,
+      "opacity": 1.0
+    },
+    {
+      "actor": 16,
+      "kind": "lines",
+      "byteOffset": 1491964,
+      "floatCount": 128,
+      "vertexCount": 32,
+      "stride": 4,
+      "role": null,
+      "id": null,
+      "opacity": 1.0
+    },
+    {
+      "actor": 17,
+      "kind": "lines",
+      "byteOffset": 1492476,
+      "floatCount": 344,
+      "vertexCount": 86,
+      "stride": 4,
+      "role": null,
+      "id": null,
+      "opacity": 1.0
+    },
+    {
+      "actor": 17,
+      "kind": "points",
+      "byteOffset": 1493852,
+      "floatCount": 10,
+      "vertexCount": 2,
+      "stride": 5,
+      "role": null,
+      "id": null,
+      "opacity": 1.0
+    },
+    {
+      "actor": 17,
+      "kind": "solid",
+      "byteOffset": 1493892,
+      "floatCount": 456,
+      "vertexCount": 114,
+      "stride": 4,
+      "role": null,
+      "id": null,
+      "opacity": 1.0
+    },
+    {
+      "actor": 18,
+      "kind": "lines",
+      "byteOffset": 1495716,
+      "floatCount": 344,
+      "vertexCount": 86,
+      "stride": 4,
+      "role": null,
+      "id": null,
+      "opacity": 1.0
+    },
+    {
+      "actor": 18,
+      "kind": "points",
+      "byteOffset": 1497092,
+      "floatCount": 10,
+      "vertexCount": 2,
+      "stride": 5,
+      "role": null,
+      "id": null,
+      "opacity": 1.0
+    },
+    {
+      "actor": 18,
+      "kind": "solid",
+      "byteOffset": 1497132,
+      "floatCount": 456,
+      "vertexCount": 114,
+      "stride": 4,
+      "role": null,
+      "id": null,
+      "opacity": 1.0
+    },
+    {
+      "actor": 19,
+      "kind": "lines",
+      "byteOffset": 1498956,
+      "floatCount": 344,
+      "vertexCount": 86,
+      "stride": 4,
+      "role": null,
+      "id": null,
+      "opacity": 1.0
+    },
+    {
+      "actor": 19,
+      "kind": "points",
+      "byteOffset": 1500332,
+      "floatCount": 10,
+      "vertexCount": 2,
+      "stride": 5,
+      "role": null,
+      "id": null,
+      "opacity": 1.0
+    },
+    {
+      "actor": 19,
+      "kind": "solid",
+      "byteOffset": 1500372,
+      "floatCount": 456,
+      "vertexCount": 114,
+      "stride": 4,
+      "role": null,
+      "id": null,
+      "opacity": 1.0
+    }
+  ],
+  "statistics": {
+    "points": 9041,
+    "lineSegments": 9065,
+    "glowSegments": 71,
+    "solidTriangles": 21410
+  },
+  "projects": [],
+  "exhibits": [],
+  "navigation": {
+    "type": "look",
+    "eyeHeight": 2.1500000953674316,
+    "initialYaw": 0.0,
+    "initialPitch": -0.10012071939398155,
+    "lookTarget": [
+      0.3499999940395355,
+      1.0700000524520874,
+      1.4900000095367432
+    ],
+    "animationBounds": {
+      "min": [
+        -6.65,
+        -4.55,
+        1.09
+      ],
+      "max": [
+        -5.98,
+        1.55,
+        3.05
+      ]
+    }
+  },
+  "npcCount": 0,
+  "loop": true,
+  "officeScreen": {
+    "country": "Malaysia",
+    "countryCode": "MYS",
+    "regions": [
+      "Peninsular Malaysia",
+      "Sabah and Sarawak"
+    ],
+    "sourceUrl": "https://raw.githubusercontent.com/nvkelso/natural-earth-vector/master/geojson/ne_50m_admin_0_countries.geojson",
+    "sourceLicense": "Natural Earth public domain",
+    "sourceSha256": "3e458fc036ad0a66411f2c1e6cac49c5d7bfb81cb1123bc513b22511a2b7fdeb",
+    "cacheSha256": "be1b0eee8bb471857240b25350eca919f515a3cc2e1edc8a43ba1219e88a3bcf",
+    "mapBoundsLonLat": [
+      98,
+      0.5,
+      120.2,
+      8.5
+    ],
+    "polygons": 9,
+    "triangles": 482,
+    "coastlineSegments": 500,
+    "contextSegments": 675,
+    "objects": 11,
+    "palette": "black / white",
+    "screen": "Office \u2022 About content screen / web texture target",
+    "nativeRepresentation": "planar meshes / thin curves / text"
+  }
+}

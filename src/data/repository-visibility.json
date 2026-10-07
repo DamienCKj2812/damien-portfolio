@@ -1,0 +1,28 @@
+{
+  "checkedAt": "2026-10-06",
+  "policy": "Only verified public, non-organization repositories may be linked. Unknown repositories are hidden.",
+  "publicRepositories": [
+    "baconcoding74/rust-gcs-ocs-assignment",
+    "damienckj2812/concurrentprogrammingassignment",
+    "damienckj2812/damien-portfolio",
+    "damienckj2812/dstrassignmentpart2",
+    "damienckj2812/dtmassignment",
+    "damienckj2812/java-programming-g18-",
+    "damienckj2812/logging-loading",
+    "damienckj2812/logging-microservice-ui",
+    "damienckj2812/mychat",
+    "damienckj2812/mymovie_mern",
+    "damienckj2812/mymovie_mern_new",
+    "damienckj2812/odl-code",
+    "damienckj2812/oodj",
+    "damienckj2812/pfdagroupassignment",
+    "damienckj2812/php-ecommerce",
+    "damienckj2812/react-project-ecommerce",
+    "damienckj2812/real-time-anomaly-detection-backend",
+    "damienckj2812/sdmgroupassignment",
+    "damienckj2812/txsa-group-assignment",
+    "damienckj2812/txsa-part2-tp067165",
+    "damienckj2812/zmk-config",
+    "damienckj2812/zmk-sofle"
+  ]
+}

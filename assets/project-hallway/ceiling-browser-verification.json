@@ -1,0 +1,22 @@
+{
+  "assetHash": "1952b15f4429",
+  "animationHash": "ab2a0ed6ced3d14f4d17e7e0fbb79bdb55a18e44e38829d8107ced2ac258ef46",
+  "geometryBytes": 20652684,
+  "animationBytes": 1228800,
+  "flowingRibs": 41,
+  "curvedLightRails": 5,
+  "perimeterLightRails": 2,
+  "interiorCeilingDots": 0,
+  "ribVertices": 424596,
+  "entryRibVertices": 30324,
+  "ribHeightRange": [
+    5.889999866485596,
+    6.179999828338623
+  ],
+  "lightSegments": 1437,
+  "curvedSegments": 1428,
+  "doorwayAligned": true,
+  "verifiedNpcLoops": 15,
+  "checkedExistingMotion": false,
+  "validation": "passed"
+}

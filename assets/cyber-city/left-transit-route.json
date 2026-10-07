@@ -1,0 +1,72 @@
+{
+  "corridor": "left flank",
+  "deckCenterX": -14,
+  "railCenterX": -14.65,
+  "timing": "original follow-path action",
+  "modifiedNetworks": {
+    "Clean outlines \u2022 Highway edges": 24,
+    "Clean outlines \u2022 Highway supports": 72,
+    "Clean outlines \u2022 Secondary guide rails": 4,
+    "Mono \u2022 05 Elevated highways \u2022 particles 0": 2,
+    "Mono \u2022 05 Elevated highways \u2022 particles 1": 338
+  },
+  "removedUpperInterchange": {
+    "Clean outlines \u2022 Highway edges": 48,
+    "Clean outlines \u2022 Highway supports": 72,
+    "Clean outlines \u2022 Secondary guide rails": 0,
+    "Mono \u2022 05 Elevated highways \u2022 particles 0": 0,
+    "Mono \u2022 05 Elevated highways \u2022 particles 1": 235
+  },
+  "routeFramesChecked": 450,
+  "minimumTowerLateralClearanceMeters": 2.673954963684082,
+  "samples": [
+    {
+      "frame": 1,
+      "trainPosition": [
+        -14.650016784667969,
+        -93.14777374267578,
+        1.900002121925354
+      ]
+    },
+    {
+      "frame": 90,
+      "trainPosition": [
+        -14.650007247924805,
+        -42.882240295410156,
+        4.377729415893555
+      ]
+    },
+    {
+      "frame": 145,
+      "trainPosition": [
+        -14.65000057220459,
+        -11.819256782531738,
+        5.908911228179932
+      ]
+    },
+    {
+      "frame": 245,
+      "trainPosition": [
+        -14.649991989135742,
+        44.65888214111328,
+        8.692877769470215
+      ]
+    },
+    {
+      "frame": 383,
+      "trainPosition": [
+        -14.649971008300781,
+        122.59868621826172,
+        12.534748077392578
+      ]
+    },
+    {
+      "frame": 450,
+      "trainPosition": [
+        -14.649967193603516,
+        160.4390106201172,
+        14.400003433227539
+      ]
+    }
+  ]
+}

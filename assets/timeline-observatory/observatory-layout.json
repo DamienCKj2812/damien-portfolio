@@ -1,0 +1,518 @@
+{
+  "model": "timeline-observatory.blend",
+  "roomRadiusMeters": 12.5,
+  "heightMeters": 8.3,
+  "npcCount": 0,
+  "milestones": [
+    {
+      "id": "diploma-information-technology",
+      "position": [
+        -7.190352370393336,
+        3.5069691743126197,
+        0
+      ],
+      "angleDegrees": -64.0
+    },
+    {
+      "id": "lyj-events-marketing",
+      "position": [
+        -4.969182242226482,
+        6.269547658606719,
+        0
+      ],
+      "angleDegrees": -38.4
+    },
+    {
+      "id": "cos-great-trading",
+      "position": [
+        -1.772387980955738,
+        7.801194834444506,
+        0
+      ],
+      "angleDegrees": -12.799999999999997
+    },
+    {
+      "id": "freelance-full-stack",
+      "position": [
+        1.772387980955738,
+        7.801194834444506,
+        0
+      ],
+      "angleDegrees": 12.799999999999997
+    },
+    {
+      "id": "bachelors-computer-science",
+      "position": [
+        4.969182242226483,
+        6.269547658606718,
+        0
+      ],
+      "angleDegrees": 38.400000000000006
+    },
+    {
+      "id": "current-focus",
+      "position": [
+        7.190352370393336,
+        3.5069691743126197,
+        0
+      ],
+      "angleDegrees": 64.0
+    }
+  ],
+  "mainCamera": "Timeline Observatory / Main gallery",
+  "defaultCamera": "Timeline Observatory / guided free-look camera",
+  "guidedWalk": {
+    "periodFrames": 2400,
+    "fps": 30,
+    "eyeHeightMeters": 2.45,
+    "nodeDwellFrames": 180,
+    "movementOnly": true,
+    "stations": [
+      {
+        "id": "diploma-information-technology",
+        "title": "Diploma in IT (Software Engineer Specialism)",
+        "arrivalFrame": 451,
+        "leaveFrame": 631,
+        "viewPosition": [
+          -5.987007991726266,
+          0.9787361339600569,
+          0
+        ]
+      },
+      {
+        "id": "lyj-events-marketing",
+        "title": "LYJ Events & Marketing",
+        "arrivalFrame": 721,
+        "leaveFrame": 901,
+        "viewPosition": [
+          -4.21901998560279,
+          3.571908581795803,
+          0
+        ]
+      },
+      {
+        "id": "cos-great-trading",
+        "title": "COS Great Trading",
+        "arrivalFrame": 991,
+        "leaveFrame": 1171,
+        "viewPosition": [
+          -1.5176559054828003,
+          5.01280612952454,
+          0
+        ]
+      },
+      {
+        "id": "freelance-full-stack",
+        "title": "Freelance development",
+        "arrivalFrame": 1261,
+        "leaveFrame": 1441,
+        "viewPosition": [
+          1.5176559054828003,
+          5.01280612952454,
+          0
+        ]
+      },
+      {
+        "id": "bachelors-computer-science",
+        "title": "Bachelor of Degree in Computer Science (Data Analytics Specialism)",
+        "arrivalFrame": 1531,
+        "leaveFrame": 1711,
+        "viewPosition": [
+          4.21901998560279,
+          3.5719085817958023,
+          0
+        ]
+      },
+      {
+        "id": "current-focus",
+        "title": "Current focus",
+        "arrivalFrame": 1801,
+        "leaveFrame": 1981,
+        "viewPosition": [
+          5.987007991726266,
+          0.9787361339600569,
+          0
+        ]
+      }
+    ],
+    "keyframes": [
+      {
+        "frame": 1,
+        "position": [
+          0,
+          -8.7,
+          0
+        ]
+      },
+      {
+        "frame": 91,
+        "position": [
+          0,
+          -8.7,
+          0
+        ]
+      },
+      {
+        "frame": 271,
+        "position": [
+          -2.899137802864845,
+          -2.8991378028648445,
+          0
+        ]
+      },
+      {
+        "frame": 331,
+        "position": [
+          -5.732124986794041,
+          -2.086322874286579,
+          0
+        ]
+      },
+      {
+        "frame": 391,
+        "position": [
+          -6.096284044816484,
+          0.21288692988525657,
+          0
+        ]
+      },
+      {
+        "frame": 451,
+        "position": [
+          -5.987007991726266,
+          0.9787361339600569,
+          0
+        ]
+      },
+      {
+        "frame": 631,
+        "position": [
+          -5.987007991726266,
+          0.9787361339600569,
+          0
+        ]
+      },
+      {
+        "frame": 721,
+        "position": [
+          -4.21901998560279,
+          3.571908581795803,
+          0
+        ]
+      },
+      {
+        "frame": 901,
+        "position": [
+          -4.21901998560279,
+          3.571908581795803,
+          0
+        ]
+      },
+      {
+        "frame": 991,
+        "position": [
+          -1.5176559054828003,
+          5.01280612952454,
+          0
+        ]
+      },
+      {
+        "frame": 1171,
+        "position": [
+          -1.5176559054828003,
+          5.01280612952454,
+          0
+        ]
+      },
+      {
+        "frame": 1261,
+        "position": [
+          1.5176559054828003,
+          5.01280612952454,
+          0
+        ]
+      },
+      {
+        "frame": 1441,
+        "position": [
+          1.5176559054828003,
+          5.01280612952454,
+          0
+        ]
+      },
+      {
+        "frame": 1531,
+        "position": [
+          4.21901998560279,
+          3.5719085817958023,
+          0
+        ]
+      },
+      {
+        "frame": 1711,
+        "position": [
+          4.21901998560279,
+          3.5719085817958023,
+          0
+        ]
+      },
+      {
+        "frame": 1801,
+        "position": [
+          5.987007991726266,
+          0.9787361339600569,
+          0
+        ]
+      },
+      {
+        "frame": 1981,
+        "position": [
+          5.987007991726266,
+          0.9787361339600569,
+          0
+        ]
+      },
+      {
+        "frame": 2041,
+        "position": [
+          6.096284044816484,
+          0.21288692988525657,
+          0
+        ]
+      },
+      {
+        "frame": 2101,
+        "position": [
+          5.732124986794041,
+          -2.086322874286579,
+          0
+        ]
+      },
+      {
+        "frame": 2161,
+        "position": [
+          2.899137802864845,
+          -2.8991378028648445,
+          0
+        ]
+      },
+      {
+        "frame": 2341,
+        "position": [
+          0,
+          -8.7,
+          0
+        ]
+      },
+      {
+        "frame": 2401,
+        "position": [
+          0,
+          -8.7,
+          0
+        ]
+      }
+    ]
+  },
+  "oculusRadiusMeters": 6.6,
+  "globeLoopFrames": 1200,
+  "coordinateSystem": "Blender Z-up",
+  "windows": [
+    {
+      "angleDegrees": -68,
+      "halfAngleDegrees": 8,
+      "bottomMeters": 0.55,
+      "topMeters": 7.75
+    },
+    {
+      "angleDegrees": -33,
+      "halfAngleDegrees": 8,
+      "bottomMeters": 0.55,
+      "topMeters": 7.75
+    },
+    {
+      "angleDegrees": 33,
+      "halfAngleDegrees": 8,
+      "bottomMeters": 0.55,
+      "topMeters": 7.75
+    },
+    {
+      "angleDegrees": 68,
+      "halfAngleDegrees": 8,
+      "bottomMeters": 0.55,
+      "topMeters": 7.75
+    }
+  ],
+  "exteriorPlanets": [
+    {
+      "name": "Window world 01",
+      "center": [
+        -18.537982940673828,
+        14.444131851196289,
+        5.4594597816467285
+      ],
+      "radiusMeters": 4.0,
+      "variant": "ringed",
+      "zone": "wall",
+      "loopFrames": 2400
+    },
+    {
+      "name": "Window world 02",
+      "center": [
+        -10.339235305786133,
+        21.937847137451172,
+        5.370561122894287
+      ],
+      "radiusMeters": 4.8,
+      "variant": "geodesic",
+      "zone": "wall",
+      "loopFrames": 2400
+    },
+    {
+      "name": "Window world 03",
+      "center": [
+        10.339235305786133,
+        21.937847137451172,
+        5.370561122894287
+      ],
+      "radiusMeters": 5.0,
+      "variant": "banded",
+      "zone": "wall",
+      "loopFrames": 2400
+    },
+    {
+      "name": "Window world 04",
+      "center": [
+        18.537982940673828,
+        14.444131851196289,
+        5.4594597816467285
+      ],
+      "radiusMeters": 4.3,
+      "variant": "cratered",
+      "zone": "wall",
+      "loopFrames": 2400
+    },
+    {
+      "name": "Overhead world",
+      "center": [
+        0,
+        8,
+        19.5
+      ],
+      "radiusMeters": 8.0,
+      "variant": "geodesic",
+      "zone": "roof",
+      "loopFrames": 2400
+    }
+  ],
+  "wallPillars": [
+    {
+      "angleDegrees": -128,
+      "center": [
+        -9.724052429199219,
+        -7.597262382507324,
+        0.0
+      ],
+      "widthMeters": 0.5,
+      "heightMeters": 7.84,
+      "design": "satin black rib / recessed white LEDs"
+    },
+    {
+      "angleDegrees": -94,
+      "center": [
+        -12.309940338134766,
+        -0.8607949018478394,
+        0.0
+      ],
+      "widthMeters": 0.5,
+      "heightMeters": 7.84,
+      "design": "satin black rib / recessed white LEDs"
+    },
+    {
+      "angleDegrees": -51,
+      "center": [
+        -9.589981079101562,
+        7.765813827514648,
+        0.0
+      ],
+      "widthMeters": 0.5,
+      "heightMeters": 7.84,
+      "design": "satin black rib / recessed white LEDs"
+    },
+    {
+      "angleDegrees": -20,
+      "center": [
+        -4.220528602600098,
+        11.595807075500488,
+        0.0
+      ],
+      "widthMeters": 0.5,
+      "heightMeters": 7.84,
+      "design": "satin black rib / recessed white LEDs"
+    },
+    {
+      "angleDegrees": 20,
+      "center": [
+        4.220528602600098,
+        11.595807075500488,
+        0.0
+      ],
+      "widthMeters": 0.5,
+      "heightMeters": 7.84,
+      "design": "satin black rib / recessed white LEDs"
+    },
+    {
+      "angleDegrees": 51,
+      "center": [
+        9.589981079101562,
+        7.765813827514648,
+        0.0
+      ],
+      "widthMeters": 0.5,
+      "heightMeters": 7.84,
+      "design": "satin black rib / recessed white LEDs"
+    },
+    {
+      "angleDegrees": 94,
+      "center": [
+        12.309940338134766,
+        -0.8607949018478394,
+        0.0
+      ],
+      "widthMeters": 0.5,
+      "heightMeters": 7.84,
+      "design": "satin black rib / recessed white LEDs"
+    },
+    {
+      "angleDegrees": 128,
+      "center": [
+        9.724052429199219,
+        -7.597262382507324,
+        0.0
+      ],
+      "widthMeters": 0.5,
+      "heightMeters": 7.84,
+      "design": "satin black rib / recessed white LEDs"
+    }
+  ],
+  "interfaceFloor": {
+    "slabs": 60,
+    "jointWidthMeters": 0.008,
+    "surfaceHeightMeters": 0,
+    "slabDepthMeters": 0.07,
+    "hudLineDiameterMeters": 0.0016,
+    "hudSystems": 0,
+    "squareSlabSizeMeters": 3,
+    "dottedPanels": 24,
+    "dotDiameterMeters": 0.006,
+    "plainPanelAreaFraction": 0.5599684133395277,
+    "palette": "black / charcoal / white",
+    "layers": [
+      "foundation",
+      "smoked glass slabs",
+      "embedded HUD inlays",
+      "selected LED joints"
+    ]
+  },
+  "wallDesign": "Solid satin-black panels / recessed white LEDs / smooth ceiling fascia"
+}

@@ -1,0 +1,12 @@
+# Portrait image
+
+- Owns the About profile's static photo treatment, not the office room or Observer NPC.
+- Current build: `python3 assets/portrait/build_pixel_portrait.py --source "/path/to/photo.png"` (Pillow and NumPy).
+- Output: `public/portraits/damien-pixel.png`, aligned original-color `damien-original.png`, and generated `image-manifest.json` with both hashes, imported by portfolio data for cache-busting.
+- Use the original front photograph directly: soft monochrome detail, one uniform tonal curve with compressed highlights, and a faint grid. No region-specific clothing darkening or bottom fade. Avoid a heavy checkerboard, harsh sharpening, or a white background halo.
+- Display with a normally scaled HTML image; raster/grid detail is baked into the PNG. Do not add CSS nearest-neighbour scaling or extra scanlines that make the image harsh. No portrait model, rotation controls, or WebGL loading.
+- `PixelPortrait.jsx` reveals original color locally through an SVG pixel-cell mask on fine-pointer movement, with a short fading trail; keyboard focus reveals the full photograph. Leave/blur restores the monochrome grid photo. The original layer preserves photographic color/detail with the same subject crop/placement; do not grade or grid it. No negative/contrast effect or canvas. Clear pointer/focus when hidden/offscreen/blurred/closing, keep touch hover silent/inactive, and remove listeners/animation frames on unmount. Schedule frames only while trail cells fade; reduced motion uses only the current pixel brush. The portrait cursor is an outline, not difference-blended. Never invalidate the shared WebGL renderer.
+- Original input is read-only. Regenerate image and hash together.
+- On pointer leave, release the held brush and continue fading existing mask cells outside the image until empty; then hide the original-colour SVG layer to prevent stale mask patches. Reduced motion clears immediately. Reset the previous sample on exit so re-entry cannot draw a connecting streak. Blur/hidden/offscreen/closing/unmount cancel frames and clear immediately.
+- Current source: `~/Pictures/Chong Kah Jun - Bg remove.png`. For background-removed PNGs, preserve their supplied alpha (including soft edges/gaps) in both aligned layers; do not rerun the studio-background matte estimation or erode the original-color layer.
+- `portrait.blend`, the previous model generator, wrap helper, and model review renders are retired authoring/recovery artifacts; do not regenerate or deploy that model unless specifically requested.

@@ -1,0 +1,21 @@
+{
+  "source": "banner-artwork/black-hole-source.png",
+  "suppliedFilename": "black-hole.png",
+  "sourceSize": [
+    1254,
+    1254
+  ],
+  "sourceBytes": 1882711,
+  "sourceSha256": "efeac43f08151d678eba53e69704d68b792b0b91c7cebc2abb62b24fe9be3aa6",
+  "fit": "full artwork contained with black side padding; no cropping or stretching",
+  "displayArcWidthM": 6.111000000000001,
+  "displayHeightM": 5.3,
+  "output": "textures-monochrome/black-hole.jpg",
+  "outputSize": [
+    1181,
+    1024
+  ],
+  "outputBytes": 227634,
+  "jpegQuality": 92,
+  "outputSha256": "1ccad1c5ee36edc83b1c8b1b5fc7d694a8252e8f9c9cff094c6f66463dc780ed"
+}

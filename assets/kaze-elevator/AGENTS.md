@@ -1,0 +1,10 @@
+# Elevator model guidance
+
+- Master: `kaze-elevator-journey.blend`, scene `KAZE / Enter - choose - exit`. `kaze-elevator-journey.blend1` is recovery; local GLBs are review exports, not the native browser package.
+- Full rebuild: `blender --background --factory-startup --python-exit-code 1 --python assets/kaze-elevator/rebuild_elevator.py`. It runs cabin → entrance → dialogs → journey and removes only known intermediate files after final-scene/library checks; keep failed stages for diagnosis.
+- Visible branding is KAJU. `../branding/kaju_brand.py` supplies the same triangular rear mark as the lobby/billboard. Focused updates use `../branding/apply_kaju_branding.py -- --model elevator`, preserving sampled motion. Native scene/object/control IDs remain stable while displayed words use KAJU.
+- `update_floor_panel.py` is the explicit master-saving edit. `floor_panel_design.py` supplies chamfered graphite switches, separated floor numbers/captions, chevrons, idle dash display, and alarm/footer details. The same design is used by full rebuilds. Preserve sampled camera/door motion; read-only exporters derive availability from `../journey/room-destinations.json`.
+- Selection stop is local 180; departure is 181–510, with closed-door load hold at 296 and room camera blend 414–510. Preserve threshold clearance and 21 mm constant authored journey lens.
+- Keep `level_id`/number metadata, separate door leaves, and each switch's face/lettering/border assembly. Browser `buttonDetail` groups participate in the same 6 mm press/spring travel.
+- Embedded `KAZE_Elevator_Controls.py` is opt-in Blender review logic; it must not run during export or be treated as website event handling. Dialog/landing review geometry is suppressed for connected room departures.
+- Export: `blender --background assets/kaze-elevator/kaze-elevator-journey.blend --python-exit-code 1 --python assets/journey/export_browser_elevator.py`. Then rebuild/verify the integration as documented in [WORKFLOW.md](WORKFLOW.md).

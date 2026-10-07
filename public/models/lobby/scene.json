@@ -1,0 +1,1216 @@
+{
+  "version": 3,
+  "coordinateSystem": "Blender Z-up",
+  "geometry": "geometry.bin",
+  "animation": "animation.bin",
+  "preview": "preview.png",
+  "assetHash": "0391e405fc76",
+  "frameStart": 1,
+  "frameEnd": 1020,
+  "fps": 30,
+  "channelStride": 16,
+  "channelCount": 41,
+  "channels": [
+    "Lobby \u2022 Navigation / walkthrough camera",
+    "Lobby \u2022 Conversation / explaining",
+    "Lobby \u2022 Conversation / listening",
+    "Lobby \u2022 Elevator R1 / center door seam",
+    "Lobby \u2022 Elevator R1 / left door leaf",
+    "Lobby \u2022 Elevator R1 / right door leaf",
+    "Lobby \u2022 Exhibit / swim / body",
+    "Lobby \u2022 Exhibit / swim / dorsal",
+    "Lobby \u2022 Exhibit / swim / lower tail",
+    "Lobby \u2022 Exhibit / swim / lower ventral",
+    "Lobby \u2022 Exhibit / swim / near pectoral",
+    "Lobby \u2022 Exhibit / swim / upper tail",
+    "Lobby \u2022 Gallery / looking across the atrium",
+    "Lobby \u2022 Gallery / pointing out the view",
+    "Lobby \u2022 Gallery / reading messages",
+    "Lobby \u2022 Gallery / reading messages / phone",
+    "Lobby \u2022 Gallery / reading messages / phone / feature edges",
+    "Lobby \u2022 Gallery / resting one arm on rail",
+    "Lobby \u2022 Gallery / slow stroll",
+    "Lobby \u2022 Lounge / checking a phone",
+    "Lobby \u2022 Lounge / checking a phone / phone",
+    "Lobby \u2022 Lounge / checking a phone / phone / feature edges",
+    "Lobby \u2022 Lounge / reading a book",
+    "Lobby \u2022 Lounge / reading a book / open book left",
+    "Lobby \u2022 Lounge / reading a book / open book left / feature edges",
+    "Lobby \u2022 Lounge / reading a book / open book right",
+    "Lobby \u2022 Lounge / reading a book / open book right / feature edges",
+    "Lobby \u2022 Lounge / resting with legs stretched",
+    "Lobby \u2022 Lounge / sipping coffee",
+    "Lobby \u2022 Lounge / sipping coffee / cup",
+    "Lobby \u2022 Reception / greeting arriving guest",
+    "Lobby \u2022 Reception / working at terminal",
+    "Lobby \u2022 Visitor / carrying a briefcase",
+    "Lobby \u2022 Visitor / carrying a briefcase / bag handle",
+    "Lobby \u2022 Visitor / carrying a briefcase / briefcase",
+    "Lobby \u2022 Visitor / carrying a briefcase / briefcase / feature edges",
+    "Lobby \u2022 Visitor / checking messages",
+    "Lobby \u2022 Visitor / checking messages / phone",
+    "Lobby \u2022 Visitor / checking messages / phone / feature edges",
+    "Lobby \u2022 Visitor / heading deeper into lobby",
+    "Lobby \u2022 Visitor / walking toward entrance"
+  ],
+  "actors": [
+    {
+      "index": 1,
+      "name": "Lobby \u2022 Conversation / explaining",
+      "style": "lobby",
+      "visibilityOffset": 11,
+      "autonomous": true,
+      "morphCount": 4,
+      "activity": "explain with a hand gesture and head nod"
+    },
+    {
+      "index": 2,
+      "name": "Lobby \u2022 Conversation / listening",
+      "style": "lobby",
+      "visibilityOffset": 11,
+      "autonomous": true,
+      "morphCount": 4,
+      "activity": "listen, nod, and briefly respond"
+    },
+    {
+      "index": 3,
+      "name": "Lobby \u2022 Elevator R1 / center door seam",
+      "style": "lobby",
+      "visibilityOffset": 11,
+      "autonomous": false,
+      "morphCount": 0
+    },
+    {
+      "index": 4,
+      "name": "Lobby \u2022 Elevator R1 / left door leaf",
+      "style": "lobby",
+      "visibilityOffset": 11,
+      "autonomous": false,
+      "morphCount": 0
+    },
+    {
+      "index": 5,
+      "name": "Lobby \u2022 Elevator R1 / right door leaf",
+      "style": "lobby",
+      "visibilityOffset": 11,
+      "autonomous": false,
+      "morphCount": 0
+    },
+    {
+      "index": 6,
+      "name": "Lobby \u2022 Exhibit / swim / body",
+      "style": "lobby",
+      "visibilityOffset": 11,
+      "autonomous": true,
+      "morphCount": 0,
+      "activity": "Seamless hovering swim: tail swish, head/body sway and fin flutter",
+      "motionType": "holographicFish",
+      "part": "body",
+      "loopFrames": 1019
+    },
+    {
+      "index": 7,
+      "name": "Lobby \u2022 Exhibit / swim / dorsal",
+      "style": "lobby",
+      "visibilityOffset": 11,
+      "autonomous": true,
+      "morphCount": 0,
+      "activity": "Seamless hovering swim: tail swish, head/body sway and fin flutter",
+      "motionType": "holographicFish",
+      "part": "dorsal",
+      "loopFrames": 1019
+    },
+    {
+      "index": 8,
+      "name": "Lobby \u2022 Exhibit / swim / lower tail",
+      "style": "lobby",
+      "visibilityOffset": 11,
+      "autonomous": true,
+      "morphCount": 0,
+      "activity": "Seamless hovering swim: tail swish, head/body sway and fin flutter",
+      "motionType": "holographicFish",
+      "part": "lower tail",
+      "loopFrames": 1019
+    },
+    {
+      "index": 9,
+      "name": "Lobby \u2022 Exhibit / swim / lower ventral",
+      "style": "lobby",
+      "visibilityOffset": 11,
+      "autonomous": true,
+      "morphCount": 0,
+      "activity": "Seamless hovering swim: tail swish, head/body sway and fin flutter",
+      "motionType": "holographicFish",
+      "part": "lower ventral",
+      "loopFrames": 1019
+    },
+    {
+      "index": 10,
+      "name": "Lobby \u2022 Exhibit / swim / near pectoral",
+      "style": "lobby",
+      "visibilityOffset": 11,
+      "autonomous": true,
+      "morphCount": 0,
+      "activity": "Seamless hovering swim: tail swish, head/body sway and fin flutter",
+      "motionType": "holographicFish",
+      "part": "near pectoral",
+      "loopFrames": 1019
+    },
+    {
+      "index": 11,
+      "name": "Lobby \u2022 Exhibit / swim / upper tail",
+      "style": "lobby",
+      "visibilityOffset": 11,
+      "autonomous": true,
+      "morphCount": 0,
+      "activity": "Seamless hovering swim: tail swish, head/body sway and fin flutter",
+      "motionType": "holographicFish",
+      "part": "upper tail",
+      "loopFrames": 1019
+    },
+    {
+      "index": 12,
+      "name": "Lobby \u2022 Gallery / looking across the atrium",
+      "style": "lobby",
+      "visibilityOffset": 11,
+      "autonomous": true,
+      "morphCount": 4,
+      "activity": "look across the atrium"
+    },
+    {
+      "index": 13,
+      "name": "Lobby \u2022 Gallery / pointing out the view",
+      "style": "lobby",
+      "visibilityOffset": 11,
+      "autonomous": true,
+      "morphCount": 4,
+      "activity": "point out the view and turn the head"
+    },
+    {
+      "index": 14,
+      "name": "Lobby \u2022 Gallery / reading messages",
+      "style": "lobby",
+      "visibilityOffset": 11,
+      "autonomous": true,
+      "morphCount": 4,
+      "activity": "tap phone and look up briefly"
+    },
+    {
+      "index": 15,
+      "name": "Lobby \u2022 Gallery / reading messages / phone",
+      "style": "lobby",
+      "visibilityOffset": 11,
+      "autonomous": true,
+      "morphCount": 0
+    },
+    {
+      "index": 16,
+      "name": "Lobby \u2022 Gallery / reading messages / phone / feature edges",
+      "style": "lobby",
+      "visibilityOffset": 11,
+      "autonomous": true,
+      "morphCount": 0
+    },
+    {
+      "index": 17,
+      "name": "Lobby \u2022 Gallery / resting one arm on rail",
+      "style": "lobby",
+      "visibilityOffset": 11,
+      "autonomous": true,
+      "morphCount": 4,
+      "activity": "rest on the rail and look around"
+    },
+    {
+      "index": 18,
+      "name": "Lobby \u2022 Gallery / slow stroll",
+      "style": "lobby",
+      "visibilityOffset": 11,
+      "autonomous": true,
+      "morphCount": 4,
+      "activity": "walk, pause, look, return"
+    },
+    {
+      "index": 19,
+      "name": "Lobby \u2022 Lounge / checking a phone",
+      "style": "lobby",
+      "visibilityOffset": 11,
+      "autonomous": true,
+      "morphCount": 4,
+      "activity": "tap phone and glance toward the conversation"
+    },
+    {
+      "index": 20,
+      "name": "Lobby \u2022 Lounge / checking a phone / phone",
+      "style": "lobby",
+      "visibilityOffset": 11,
+      "autonomous": true,
+      "morphCount": 0
+    },
+    {
+      "index": 21,
+      "name": "Lobby \u2022 Lounge / checking a phone / phone / feature edges",
+      "style": "lobby",
+      "visibilityOffset": 11,
+      "autonomous": true,
+      "morphCount": 0
+    },
+    {
+      "index": 22,
+      "name": "Lobby \u2022 Lounge / reading a book",
+      "style": "lobby",
+      "visibilityOffset": 11,
+      "autonomous": true,
+      "morphCount": 4,
+      "activity": "read, glance up, and nod to the conversation"
+    },
+    {
+      "index": 23,
+      "name": "Lobby \u2022 Lounge / reading a book / open book left",
+      "style": "lobby",
+      "visibilityOffset": 11,
+      "autonomous": true,
+      "morphCount": 0
+    },
+    {
+      "index": 24,
+      "name": "Lobby \u2022 Lounge / reading a book / open book left / feature edges",
+      "style": "lobby",
+      "visibilityOffset": 11,
+      "autonomous": true,
+      "morphCount": 0
+    },
+    {
+      "index": 25,
+      "name": "Lobby \u2022 Lounge / reading a book / open book right",
+      "style": "lobby",
+      "visibilityOffset": 11,
+      "autonomous": true,
+      "morphCount": 0
+    },
+    {
+      "index": 26,
+      "name": "Lobby \u2022 Lounge / reading a book / open book right / feature edges",
+      "style": "lobby",
+      "visibilityOffset": 11,
+      "autonomous": true,
+      "morphCount": 0
+    },
+    {
+      "index": 27,
+      "name": "Lobby \u2022 Lounge / resting with legs stretched",
+      "style": "lobby",
+      "visibilityOffset": 11,
+      "autonomous": true,
+      "morphCount": 4,
+      "activity": "seated conversation with alternating hand gestures"
+    },
+    {
+      "index": 28,
+      "name": "Lobby \u2022 Lounge / sipping coffee",
+      "style": "lobby",
+      "visibilityOffset": 11,
+      "autonomous": true,
+      "morphCount": 4,
+      "activity": "sip coffee and gesture while chatting"
+    },
+    {
+      "index": 29,
+      "name": "Lobby \u2022 Lounge / sipping coffee / cup",
+      "style": "lobby",
+      "visibilityOffset": 11,
+      "autonomous": true,
+      "morphCount": 0
+    },
+    {
+      "index": 30,
+      "name": "Lobby \u2022 Reception / greeting arriving guest",
+      "style": "lobby",
+      "visibilityOffset": 11,
+      "autonomous": true,
+      "morphCount": 4,
+      "activity": "occasionally wave to arriving guests"
+    },
+    {
+      "index": 31,
+      "name": "Lobby \u2022 Reception / working at terminal",
+      "style": "lobby",
+      "visibilityOffset": 11,
+      "autonomous": true,
+      "morphCount": 4,
+      "activity": "type and check the terminal"
+    },
+    {
+      "index": 32,
+      "name": "Lobby \u2022 Visitor / carrying a briefcase",
+      "style": "lobby",
+      "visibilityOffset": 11,
+      "autonomous": true,
+      "morphCount": 4,
+      "activity": "walk, pause, look, return"
+    },
+    {
+      "index": 33,
+      "name": "Lobby \u2022 Visitor / carrying a briefcase / bag handle",
+      "style": "lobby",
+      "visibilityOffset": 11,
+      "autonomous": true,
+      "morphCount": 0
+    },
+    {
+      "index": 34,
+      "name": "Lobby \u2022 Visitor / carrying a briefcase / briefcase",
+      "style": "lobby",
+      "visibilityOffset": 11,
+      "autonomous": true,
+      "morphCount": 0
+    },
+    {
+      "index": 35,
+      "name": "Lobby \u2022 Visitor / carrying a briefcase / briefcase / feature edges",
+      "style": "lobby",
+      "visibilityOffset": 11,
+      "autonomous": true,
+      "morphCount": 0
+    },
+    {
+      "index": 36,
+      "name": "Lobby \u2022 Visitor / checking messages",
+      "style": "lobby",
+      "visibilityOffset": 11,
+      "autonomous": true,
+      "morphCount": 4,
+      "activity": "tap phone and look up briefly"
+    },
+    {
+      "index": 37,
+      "name": "Lobby \u2022 Visitor / checking messages / phone",
+      "style": "lobby",
+      "visibilityOffset": 11,
+      "autonomous": true,
+      "morphCount": 0
+    },
+    {
+      "index": 38,
+      "name": "Lobby \u2022 Visitor / checking messages / phone / feature edges",
+      "style": "lobby",
+      "visibilityOffset": 11,
+      "autonomous": true,
+      "morphCount": 0
+    },
+    {
+      "index": 39,
+      "name": "Lobby \u2022 Visitor / heading deeper into lobby",
+      "style": "lobby",
+      "visibilityOffset": 11,
+      "autonomous": true,
+      "morphCount": 4,
+      "activity": "walk, pause, look, return"
+    },
+    {
+      "index": 40,
+      "name": "Lobby \u2022 Visitor / walking toward entrance",
+      "style": "lobby",
+      "visibilityOffset": 11,
+      "autonomous": true,
+      "morphCount": 4,
+      "activity": "walk, pause, look, return"
+    }
+  ],
+  "camera": {
+    "verticalFov": 70.2240223688444,
+    "sourceAspect": 1.6,
+    "near": 0.05,
+    "far": 250,
+    "fovOffset": 10
+  },
+  "textures": [],
+  "groups": [
+    {
+      "actor": 0,
+      "kind": "glow",
+      "byteOffset": 0,
+      "floatCount": 11648,
+      "vertexCount": 2912,
+      "stride": 4
+    },
+    {
+      "actor": 0,
+      "kind": "lines",
+      "byteOffset": 46592,
+      "floatCount": 76784,
+      "vertexCount": 19196,
+      "stride": 4
+    },
+    {
+      "actor": 0,
+      "kind": "points",
+      "byteOffset": 353728,
+      "floatCount": 86410,
+      "vertexCount": 17282,
+      "stride": 5
+    },
+    {
+      "actor": 0,
+      "kind": "solid",
+      "byteOffset": 699368,
+      "floatCount": 336588,
+      "vertexCount": 84147,
+      "stride": 4
+    },
+    {
+      "actor": 1,
+      "kind": "points",
+      "byteOffset": 2045720,
+      "floatCount": 13950,
+      "vertexCount": 2790,
+      "stride": 5,
+      "morphs": [
+        {
+          "byteOffset": 2101520,
+          "floatCount": 8370
+        },
+        {
+          "byteOffset": 2135000,
+          "floatCount": 8370
+        },
+        {
+          "byteOffset": 2168480,
+          "floatCount": 8370
+        },
+        {
+          "byteOffset": 2201960,
+          "floatCount": 8370
+        }
+      ]
+    },
+    {
+      "actor": 2,
+      "kind": "points",
+      "byteOffset": 2235440,
+      "floatCount": 13950,
+      "vertexCount": 2790,
+      "stride": 5,
+      "morphs": [
+        {
+          "byteOffset": 2291240,
+          "floatCount": 8370
+        },
+        {
+          "byteOffset": 2324720,
+          "floatCount": 8370
+        },
+        {
+          "byteOffset": 2358200,
+          "floatCount": 8370
+        },
+        {
+          "byteOffset": 2391680,
+          "floatCount": 8370
+        }
+      ]
+    },
+    {
+      "actor": 3,
+      "kind": "lines",
+      "byteOffset": 2425160,
+      "floatCount": 8,
+      "vertexCount": 2,
+      "stride": 4
+    },
+    {
+      "actor": 4,
+      "kind": "lines",
+      "byteOffset": 2425192,
+      "floatCount": 96,
+      "vertexCount": 24,
+      "stride": 4
+    },
+    {
+      "actor": 4,
+      "kind": "solid",
+      "byteOffset": 2425576,
+      "floatCount": 144,
+      "vertexCount": 36,
+      "stride": 4
+    },
+    {
+      "actor": 5,
+      "kind": "lines",
+      "byteOffset": 2426152,
+      "floatCount": 96,
+      "vertexCount": 24,
+      "stride": 4
+    },
+    {
+      "actor": 5,
+      "kind": "solid",
+      "byteOffset": 2426536,
+      "floatCount": 144,
+      "vertexCount": 36,
+      "stride": 4
+    },
+    {
+      "actor": 6,
+      "kind": "glow",
+      "byteOffset": 2427112,
+      "floatCount": 2064,
+      "vertexCount": 516,
+      "stride": 4
+    },
+    {
+      "actor": 6,
+      "kind": "lines",
+      "byteOffset": 2435368,
+      "floatCount": 2560,
+      "vertexCount": 640,
+      "stride": 4
+    },
+    {
+      "actor": 6,
+      "kind": "points",
+      "byteOffset": 2445608,
+      "floatCount": 38000,
+      "vertexCount": 7600,
+      "stride": 5
+    },
+    {
+      "actor": 7,
+      "kind": "glow",
+      "byteOffset": 2597608,
+      "floatCount": 576,
+      "vertexCount": 144,
+      "stride": 4
+    },
+    {
+      "actor": 7,
+      "kind": "lines",
+      "byteOffset": 2599912,
+      "floatCount": 4032,
+      "vertexCount": 1008,
+      "stride": 4
+    },
+    {
+      "actor": 7,
+      "kind": "points",
+      "byteOffset": 2616040,
+      "floatCount": 2800,
+      "vertexCount": 560,
+      "stride": 5
+    },
+    {
+      "actor": 8,
+      "kind": "glow",
+      "byteOffset": 2627240,
+      "floatCount": 768,
+      "vertexCount": 192,
+      "stride": 4
+    },
+    {
+      "actor": 8,
+      "kind": "lines",
+      "byteOffset": 2630312,
+      "floatCount": 4032,
+      "vertexCount": 1008,
+      "stride": 4
+    },
+    {
+      "actor": 8,
+      "kind": "points",
+      "byteOffset": 2646440,
+      "floatCount": 2800,
+      "vertexCount": 560,
+      "stride": 5
+    },
+    {
+      "actor": 9,
+      "kind": "glow",
+      "byteOffset": 2657640,
+      "floatCount": 768,
+      "vertexCount": 192,
+      "stride": 4
+    },
+    {
+      "actor": 9,
+      "kind": "lines",
+      "byteOffset": 2660712,
+      "floatCount": 4032,
+      "vertexCount": 1008,
+      "stride": 4
+    },
+    {
+      "actor": 9,
+      "kind": "points",
+      "byteOffset": 2676840,
+      "floatCount": 2400,
+      "vertexCount": 480,
+      "stride": 5
+    },
+    {
+      "actor": 10,
+      "kind": "glow",
+      "byteOffset": 2686440,
+      "floatCount": 768,
+      "vertexCount": 192,
+      "stride": 4
+    },
+    {
+      "actor": 10,
+      "kind": "lines",
+      "byteOffset": 2689512,
+      "floatCount": 4032,
+      "vertexCount": 1008,
+      "stride": 4
+    },
+    {
+      "actor": 10,
+      "kind": "points",
+      "byteOffset": 2705640,
+      "floatCount": 2100,
+      "vertexCount": 420,
+      "stride": 5
+    },
+    {
+      "actor": 11,
+      "kind": "glow",
+      "byteOffset": 2714040,
+      "floatCount": 768,
+      "vertexCount": 192,
+      "stride": 4
+    },
+    {
+      "actor": 11,
+      "kind": "lines",
+      "byteOffset": 2717112,
+      "floatCount": 4032,
+      "vertexCount": 1008,
+      "stride": 4
+    },
+    {
+      "actor": 11,
+      "kind": "points",
+      "byteOffset": 2733240,
+      "floatCount": 2800,
+      "vertexCount": 560,
+      "stride": 5
+    },
+    {
+      "actor": 12,
+      "kind": "points",
+      "byteOffset": 2744440,
+      "floatCount": 13950,
+      "vertexCount": 2790,
+      "stride": 5,
+      "morphs": [
+        {
+          "byteOffset": 2800240,
+          "floatCount": 8370
+        },
+        {
+          "byteOffset": 2833720,
+          "floatCount": 8370
+        },
+        {
+          "byteOffset": 2867200,
+          "floatCount": 8370
+        },
+        {
+          "byteOffset": 2900680,
+          "floatCount": 8370
+        }
+      ]
+    },
+    {
+      "actor": 13,
+      "kind": "points",
+      "byteOffset": 2934160,
+      "floatCount": 13950,
+      "vertexCount": 2790,
+      "stride": 5,
+      "morphs": [
+        {
+          "byteOffset": 2989960,
+          "floatCount": 8370
+        },
+        {
+          "byteOffset": 3023440,
+          "floatCount": 8370
+        },
+        {
+          "byteOffset": 3056920,
+          "floatCount": 8370
+        },
+        {
+          "byteOffset": 3090400,
+          "floatCount": 8370
+        }
+      ]
+    },
+    {
+      "actor": 14,
+      "kind": "points",
+      "byteOffset": 3123880,
+      "floatCount": 13950,
+      "vertexCount": 2790,
+      "stride": 5,
+      "morphs": [
+        {
+          "byteOffset": 3179680,
+          "floatCount": 8370
+        },
+        {
+          "byteOffset": 3213160,
+          "floatCount": 8370
+        },
+        {
+          "byteOffset": 3246640,
+          "floatCount": 8370
+        },
+        {
+          "byteOffset": 3280120,
+          "floatCount": 8370
+        }
+      ]
+    },
+    {
+      "actor": 15,
+      "kind": "solid",
+      "byteOffset": 3313600,
+      "floatCount": 144,
+      "vertexCount": 36,
+      "stride": 4
+    },
+    {
+      "actor": 16,
+      "kind": "lines",
+      "byteOffset": 3314176,
+      "floatCount": 96,
+      "vertexCount": 24,
+      "stride": 4
+    },
+    {
+      "actor": 17,
+      "kind": "points",
+      "byteOffset": 3314560,
+      "floatCount": 13950,
+      "vertexCount": 2790,
+      "stride": 5,
+      "morphs": [
+        {
+          "byteOffset": 3370360,
+          "floatCount": 8370
+        },
+        {
+          "byteOffset": 3403840,
+          "floatCount": 8370
+        },
+        {
+          "byteOffset": 3437320,
+          "floatCount": 8370
+        },
+        {
+          "byteOffset": 3470800,
+          "floatCount": 8370
+        }
+      ]
+    },
+    {
+      "actor": 18,
+      "kind": "points",
+      "byteOffset": 3504280,
+      "floatCount": 11160,
+      "vertexCount": 2232,
+      "stride": 5,
+      "morphs": [
+        {
+          "byteOffset": 3548920,
+          "floatCount": 6696
+        },
+        {
+          "byteOffset": 3575704,
+          "floatCount": 6696
+        },
+        {
+          "byteOffset": 3602488,
+          "floatCount": 6696
+        },
+        {
+          "byteOffset": 3629272,
+          "floatCount": 6696
+        }
+      ]
+    },
+    {
+      "actor": 19,
+      "kind": "points",
+      "byteOffset": 3656056,
+      "floatCount": 13950,
+      "vertexCount": 2790,
+      "stride": 5,
+      "morphs": [
+        {
+          "byteOffset": 3711856,
+          "floatCount": 8370
+        },
+        {
+          "byteOffset": 3745336,
+          "floatCount": 8370
+        },
+        {
+          "byteOffset": 3778816,
+          "floatCount": 8370
+        },
+        {
+          "byteOffset": 3812296,
+          "floatCount": 8370
+        }
+      ]
+    },
+    {
+      "actor": 20,
+      "kind": "solid",
+      "byteOffset": 3845776,
+      "floatCount": 144,
+      "vertexCount": 36,
+      "stride": 4
+    },
+    {
+      "actor": 21,
+      "kind": "lines",
+      "byteOffset": 3846352,
+      "floatCount": 96,
+      "vertexCount": 24,
+      "stride": 4
+    },
+    {
+      "actor": 22,
+      "kind": "points",
+      "byteOffset": 3846736,
+      "floatCount": 13950,
+      "vertexCount": 2790,
+      "stride": 5,
+      "morphs": [
+        {
+          "byteOffset": 3902536,
+          "floatCount": 8370
+        },
+        {
+          "byteOffset": 3936016,
+          "floatCount": 8370
+        },
+        {
+          "byteOffset": 3969496,
+          "floatCount": 8370
+        },
+        {
+          "byteOffset": 4002976,
+          "floatCount": 8370
+        }
+      ]
+    },
+    {
+      "actor": 23,
+      "kind": "solid",
+      "byteOffset": 4036456,
+      "floatCount": 144,
+      "vertexCount": 36,
+      "stride": 4
+    },
+    {
+      "actor": 24,
+      "kind": "lines",
+      "byteOffset": 4037032,
+      "floatCount": 96,
+      "vertexCount": 24,
+      "stride": 4
+    },
+    {
+      "actor": 25,
+      "kind": "solid",
+      "byteOffset": 4037416,
+      "floatCount": 144,
+      "vertexCount": 36,
+      "stride": 4
+    },
+    {
+      "actor": 26,
+      "kind": "lines",
+      "byteOffset": 4037992,
+      "floatCount": 96,
+      "vertexCount": 24,
+      "stride": 4
+    },
+    {
+      "actor": 27,
+      "kind": "points",
+      "byteOffset": 4038376,
+      "floatCount": 13950,
+      "vertexCount": 2790,
+      "stride": 5,
+      "morphs": [
+        {
+          "byteOffset": 4094176,
+          "floatCount": 8370
+        },
+        {
+          "byteOffset": 4127656,
+          "floatCount": 8370
+        },
+        {
+          "byteOffset": 4161136,
+          "floatCount": 8370
+        },
+        {
+          "byteOffset": 4194616,
+          "floatCount": 8370
+        }
+      ]
+    },
+    {
+      "actor": 28,
+      "kind": "points",
+      "byteOffset": 4228096,
+      "floatCount": 13950,
+      "vertexCount": 2790,
+      "stride": 5,
+      "morphs": [
+        {
+          "byteOffset": 4283896,
+          "floatCount": 8370
+        },
+        {
+          "byteOffset": 4317376,
+          "floatCount": 8370
+        },
+        {
+          "byteOffset": 4350856,
+          "floatCount": 8370
+        },
+        {
+          "byteOffset": 4384336,
+          "floatCount": 8370
+        }
+      ]
+    },
+    {
+      "actor": 29,
+      "kind": "lines",
+      "byteOffset": 4417816,
+      "floatCount": 272,
+      "vertexCount": 68,
+      "stride": 4
+    },
+    {
+      "actor": 30,
+      "kind": "points",
+      "byteOffset": 4418904,
+      "floatCount": 13950,
+      "vertexCount": 2790,
+      "stride": 5,
+      "morphs": [
+        {
+          "byteOffset": 4474704,
+          "floatCount": 8370
+        },
+        {
+          "byteOffset": 4508184,
+          "floatCount": 8370
+        },
+        {
+          "byteOffset": 4541664,
+          "floatCount": 8370
+        },
+        {
+          "byteOffset": 4575144,
+          "floatCount": 8370
+        }
+      ]
+    },
+    {
+      "actor": 31,
+      "kind": "points",
+      "byteOffset": 4608624,
+      "floatCount": 13950,
+      "vertexCount": 2790,
+      "stride": 5,
+      "morphs": [
+        {
+          "byteOffset": 4664424,
+          "floatCount": 8370
+        },
+        {
+          "byteOffset": 4697904,
+          "floatCount": 8370
+        },
+        {
+          "byteOffset": 4731384,
+          "floatCount": 8370
+        },
+        {
+          "byteOffset": 4764864,
+          "floatCount": 8370
+        }
+      ]
+    },
+    {
+      "actor": 32,
+      "kind": "points",
+      "byteOffset": 4798344,
+      "floatCount": 13950,
+      "vertexCount": 2790,
+      "stride": 5,
+      "morphs": [
+        {
+          "byteOffset": 4854144,
+          "floatCount": 8370
+        },
+        {
+          "byteOffset": 4887624,
+          "floatCount": 8370
+        },
+        {
+          "byteOffset": 4921104,
+          "floatCount": 8370
+        },
+        {
+          "byteOffset": 4954584,
+          "floatCount": 8370
+        }
+      ]
+    },
+    {
+      "actor": 33,
+      "kind": "lines",
+      "byteOffset": 4988064,
+      "floatCount": 24,
+      "vertexCount": 6,
+      "stride": 4
+    },
+    {
+      "actor": 34,
+      "kind": "solid",
+      "byteOffset": 4988160,
+      "floatCount": 144,
+      "vertexCount": 36,
+      "stride": 4
+    },
+    {
+      "actor": 35,
+      "kind": "lines",
+      "byteOffset": 4988736,
+      "floatCount": 96,
+      "vertexCount": 24,
+      "stride": 4
+    },
+    {
+      "actor": 36,
+      "kind": "points",
+      "byteOffset": 4989120,
+      "floatCount": 13950,
+      "vertexCount": 2790,
+      "stride": 5,
+      "morphs": [
+        {
+          "byteOffset": 5044920,
+          "floatCount": 8370
+        },
+        {
+          "byteOffset": 5078400,
+          "floatCount": 8370
+        },
+        {
+          "byteOffset": 5111880,
+          "floatCount": 8370
+        },
+        {
+          "byteOffset": 5145360,
+          "floatCount": 8370
+        }
+      ]
+    },
+    {
+      "actor": 37,
+      "kind": "solid",
+      "byteOffset": 5178840,
+      "floatCount": 144,
+      "vertexCount": 36,
+      "stride": 4
+    },
+    {
+      "actor": 38,
+      "kind": "lines",
+      "byteOffset": 5179416,
+      "floatCount": 96,
+      "vertexCount": 24,
+      "stride": 4
+    },
+    {
+      "actor": 39,
+      "kind": "points",
+      "byteOffset": 5179800,
+      "floatCount": 13950,
+      "vertexCount": 2790,
+      "stride": 5,
+      "morphs": [
+        {
+          "byteOffset": 5235600,
+          "floatCount": 8370
+        },
+        {
+          "byteOffset": 5269080,
+          "floatCount": 8370
+        },
+        {
+          "byteOffset": 5302560,
+          "floatCount": 8370
+        },
+        {
+          "byteOffset": 5336040,
+          "floatCount": 8370
+        }
+      ]
+    },
+    {
+      "actor": 40,
+      "kind": "points",
+      "byteOffset": 5369520,
+      "floatCount": 15330,
+      "vertexCount": 3066,
+      "stride": 5,
+      "morphs": [
+        {
+          "byteOffset": 5430840,
+          "floatCount": 9198
+        },
+        {
+          "byteOffset": 5467632,
+          "floatCount": 9198
+        },
+        {
+          "byteOffset": 5504424,
+          "floatCount": 9198
+        },
+        {
+          "byteOffset": 5541216,
+          "floatCount": 9198
+        }
+      ]
+    }
+  ],
+  "statistics": {
+    "points": 74610,
+    "lineSegments": 12572,
+    "glowSegments": 2170,
+    "solidTriangles": 28145
+  },
+  "bookmarks": {
+    "start": 1,
+    "reception": 320,
+    "escalator": 510,
+    "landing": 690,
+    "elevator": 840,
+    "elevatorOpen": 1020
+  },
+  "npcLoopFrames": 1019,
+  "autonomousLoopFrames": 1019,
+  "fishLoopFrames": 1019
+}
