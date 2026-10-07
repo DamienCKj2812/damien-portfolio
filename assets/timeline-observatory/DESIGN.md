@@ -1,6 +1,6 @@
 # Observatory design and controls
 
-The 25 m-diameter chamber has curved satin-black panel walls, entry opening, reflective floor and a glazed roof oculus with architectural light rings and a smooth black ceiling fascia. Six cards cover the APU diploma, LYJ Events & Marketing, COS Great Trading, freelance work, the APU bachelor's degree and current focus. `build_timeline_content.mjs` generates `milestones.json` from confirmed About data and the Level 03 project catalogue. Focused entries share the Projects left-info/right-section-menu layout, with the authored card framed in the centre.
+The 25 m-diameter chamber has curved satin-black panel walls, entry opening, reflective floor and a glazed roof oculus with architectural light rings and a smooth black ceiling fascia. Six cards cover the APU diploma, LYJ Events & Marketing, COS Great Trading, freelance work, the APU bachelor's degree and current focus. `build_timeline_content.mts` generates `milestones.json` directly from confirmed About data in `src/data/portfolio.json` and the Level 03 project catalogue. Focused entries share the Projects left-info/right-section-menu layout, with the authored card framed in the centre.
 
 Four real curved wall windows have thin frames/clear glazing and replace former flat cosmic banners. Five 3D exterior planets include ringed, geodesic, banded, cratered and overhead worlds. Opaque planet bodies mask far-side contours; a spatial starfield gives real depth/parallax.
 

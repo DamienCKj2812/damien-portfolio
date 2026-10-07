@@ -1,24 +1,34 @@
 """Read the card's static contact copy from the website's canonical data."""
-import re
+import json
 from pathlib import Path
 
 
 def read_contact_details():
-    source = (Path(__file__).resolve().parents[2] / 'src/data/portfolio.js').read_text()
+    source = json.loads((Path(__file__).resolve().parents[2] / 'src/data/portfolio.json').read_text(encoding='utf-8'))
+    if not isinstance(source, dict) or not isinstance(source.get('contact'), dict):
+        raise ValueError('Contact card requires portfolio.contact')
+    contact = source['contact']
 
-    def field(name):
-        match = re.search(rf"^\s*{name}:\s*'([^']+)'", source, re.MULTILINE)
-        if not match:
-            raise ValueError(f'Contact card requires a literal portfolio.{name}')
-        return match.group(1)
+    def field(record, name):
+        value = record.get(name)
+        if not isinstance(value, str) or not value.strip():
+            raise ValueError(f'Contact card requires a non-empty {name}')
+        return value
+
+    links = contact.get('links')
+    if not isinstance(links, list) or any(not isinstance(item, dict) for item in links):
+        raise ValueError('Contact card requires portfolio.contact.links')
+    identities = [field(item, 'id') for item in links]
+    if len(set(identities)) != len(identities):
+        raise ValueError('Contact card requires unique contact link IDs')
 
     def link(identity):
-        match = re.search(r"\{\s*id:\s*'" + re.escape(identity) + r"'[^}]*href:\s*'([^']+)'", source)
-        if not match:
-            raise ValueError(f'Contact card requires the {identity} contact link')
-        return match.group(1)
+        for item in links:
+            if item['id'] == identity:
+                return field(item, 'href')
+        raise ValueError(f'Contact card requires the {identity} contact link')
 
-    return {'name': field('name'), 'email': field('email'), 'phone': field('phone'),
+    return {'name': field(source, 'name'), 'email': field(contact, 'email'), 'phone': field(contact, 'phone'),
             'github': link('github'), 'whatsapp': link('whatsapp')}
 
 

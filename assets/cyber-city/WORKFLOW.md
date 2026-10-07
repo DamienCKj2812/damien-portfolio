@@ -138,7 +138,7 @@ Rebuild the connected city/lobby integration and export the city from that copy 
 
 ```sh
 blender --background assets/cyber-city/monochrome-city-solid-tower.blend --python-exit-code 1 --python assets/cyber-city/verify_orbital_sky.py
-node assets/journey/verify_rooms.mjs
+node --import tsx assets/journey/verify_rooms.mts
 ```
 
 Reapply the sky step after a full styling rebuild.
@@ -165,7 +165,7 @@ The update checks the complete three-car envelope across all 450 frames and unre
 
 ```sh
 blender --background assets/cyber-city/monochrome-city-solid-tower.blend --python-exit-code 1 --python assets/cyber-city/verify_left_transit.py
-node assets/journey/verify_rooms.mjs
+node --import tsx assets/journey/verify_rooms.mts
 ```
 
 The read-only check compares every published train pose to the native follow-path motion, verifies the left-side rail placement and checks the full source envelope/timing. `traffic-animation.json` belongs to the original architecture/motion workflow; the connected browser uses freshly exported city motion.
@@ -183,8 +183,8 @@ This replaces only `Background transit • Autonomous train`, cloning the three-
 ```sh
 blender --background assets/cyber-city/monochrome-city-solid-tower.blend --python-exit-code 1 --python assets/cyber-city/verify_background_train.py
 blender --background assets/cyber-city/monochrome-city-solid-tower.blend --python-exit-code 1 --python assets/cyber-city/verify_left_transit.py
-node assets/journey/verify_rooms.mjs
-npm run lint && npm run build
+node --import tsx assets/journey/verify_rooms.mts
+npm run lint && npm run typecheck && npm run build && npm run verify
 ```
 
 The rear-train verifier checks all 450 native/exported motion frames, fixed heading, lateral fit within the rear deck, one-way/hidden-reset metadata, foreground timing ownership, removed interchange counts and scene-linked recovery baselines. Reapply this step after a full styling rebuild, following the left-corridor update.

@@ -890,11 +890,11 @@ The project presents portfolio information as a navigable spatial experience whi
 
 `Blender-authored masters → Python integration/export → binary geometry/motion/route packages + manifests → React loader → shared React Three Fiber Canvas → room controls`
 
-`App.jsx` lazy-loads `CityWalkthrough` and keeps audio providers/controls around it. Native point vertices and curve centerlines are exported separately from solid triangles; the browser uses manifest offsets/hashes and authored animation/route data. A single demand-rendered Canvas is shared across areas.
+`App.tsx` lazy-loads `CityWalkthrough` and keeps audio providers/controls around it. Native point vertices and curve centerlines are exported separately from solid triangles; the browser uses manifest offsets/hashes and authored animation/route data. A single demand-rendered Canvas is shared across areas.
 
 #### Technologies and technical decisions
 
-**React 19, Vite, Three.js, React Three Fiber/Drei, Tailwind CSS v4, Blender, Python export/build tooling and JavaScript package-verification scripts.** Native point/line export preserves the visual representation an ordinary GLB would not retain. Capped DPR, active-area clocks, demand rendering and staged caching control ongoing browser work. Planar reflections are documented for the lobby, Skills and Projects floors; do not assume every native glass effect is reproduced identically in every browser room.
+**React 19, TypeScript, Vite, Three.js, React Three Fiber/Drei, Tailwind CSS v4, Blender, Python export/build tooling and TypeScript Node package-verification scripts.** Native point/line export preserves the visual representation an ordinary GLB would not retain. Capped DPR, active-area clocks, demand rendering and staged caching control ongoing browser work. Planar reflections are documented for the lobby, Skills and Projects floors; do not assume every native glass effect is reproduced identically in every browser room.
 
 #### Technical challenges and solutions
 
@@ -916,7 +916,7 @@ Potential takeaways: 3D web experiences need explicit loading, input, accessibil
 
 - [GitHub repository — currently empty](https://github.com/DamienCKj2812/damien-portfolio).
 - [Local architecture](architecture.md), [development/deployment](development.md), [roadmap](roadmap.md).
-- [Application entry](../src/App.jsx), [dependencies](../package.json), [room destinations](../assets/journey/room-destinations.json), [export workflow](../assets/journey/WORKFLOW.md).
+- [Application entry](../src/App.tsx), [dependencies](../package.json), [room destinations](../assets/journey/room-destinations.json), [export workflow](../assets/journey/WORKFLOW.md).
 
 ---
 

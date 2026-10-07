@@ -1,6 +1,6 @@
 # Audio source assets
 
-Canonical originals live here in `music/` and `effects/`. Browser copies are generated at `public/media/audio/` by `scripts/sync_media_assets.mjs`. Paths and immutable byte hashes are registered in [`../manifest.json`](../manifest.json); original supplied audio is never re-encoded during deployment.
+Canonical originals live here in `music/` and `effects/`. Browser copies are generated at `public/media/audio/` by `scripts/sync_media_assets.mts` (`npm run assets:sync`, or `node --import tsx scripts/sync_media_assets.mts`). Paths and immutable byte hashes are registered in [`../manifest.json`](../manifest.json); original supplied audio is never re-encoded during deployment.
 
 ## Interaction effects
 

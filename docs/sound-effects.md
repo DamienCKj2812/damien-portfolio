@@ -13,7 +13,7 @@ This mapping replaces the earlier hover/click convention at the owner's request.
 
 ## Playback and settings
 
-`SoundEffectsProvider` wraps the app and delegates DOM activation; `src/audio/interactionAudio.js` owns Web Audio buffering/playback. `src/assets/media.js` resolves the shared manifest's asset URLs using `import.meta.env.BASE_URL` for the `/damien-portfolio/` deployment.
+`SoundEffectsProvider` wraps the app and delegates DOM activation; `src/audio/interactionAudio.ts` owns Web Audio buffering/playback. `src/assets/media.ts` resolves the shared manifest's asset URLs using `import.meta.env.BASE_URL` for the `/damien-portfolio/` deployment.
 
 The first visit shows the full-screen **ENTER WITH SOUND?** startup dialog, based on the read-only `Sound Prompt.dc.html` design reference. It uses a blurred/darkened scene backdrop, with the existing city poster as a fallback that fades away once the live scene is loaded, JetBrains Mono, five CSS-animated bars and **YES / MUTED** actions. Enter selects YES from its default focus; M or Escape selects muted. Native button activation and a focus trap remain accessible, and reduced motion stops the bars and fallback transition.
 
@@ -33,11 +33,11 @@ Effects files preload after effects are enabled; decoded buffers are reused. Web
 
 ### Level 03 portal exception
 
-`hallwayPortalAudio.js` tracks stable sides of the generated category doorway planes with a 0.3 m dead band. `RoomNavigator` samples the actual main-view camera position on existing demand frames and calls `portalCrossing(id)` once per forward/backward passage. Arrival, card-focus transitions, modals, Home and progress seeks rebaseline silently. Walking/scrolling elsewhere remains silent. The lightsaber cue follows SFX mute/volume and never creates/resumes Web Audio from a render frame; it uses the already gesture-unlocked engine. This is a discrete crossing event, not continuous movement audio.
+`hallwayPortalAudio.ts` tracks stable sides of the generated category doorway planes with a 0.3 m dead band. `RoomNavigator` samples the actual main-view camera position on existing demand frames and calls `portalCrossing(id)` once per forward/backward passage. Arrival, card-focus transitions, modals, Home and progress seeks rebaseline silently. Walking/scrolling elsewhere remains silent. The lightsaber cue follows SFX mute/volume and never creates/resumes Web Audio from a render frame; it uses the already gesture-unlocked engine. This is a discrete crossing event, not continuous movement audio.
 
 ### Main gate and elevator motion
 
-`doorSoundTiming.js` follows actual rendered frames for the city gate, lobby R1 and selected cabin opening. Loading holds remain silent until motion starts; standing at an open door does not repeat the cue. Rewinding before the main gate then reopening re-arms it. On return, the closing threshold schedules the same sci-fi clip 250 ms later. Instant reduced-motion returns schedule it after cabin arrival instead. The shared engine owns these finite timers and cancels them/door voices on trip cancellation, new selection, mute, zero volume, hidden page or disposal. No render-frame effect creates or resumes an AudioContext. Normal closing tails can finish after return completes.
+`doorSoundTiming.ts` follows actual rendered frames for the city gate, lobby R1 and selected cabin opening. Loading holds remain silent until motion starts; standing at an open door does not repeat the cue. Rewinding before the main gate then reopening re-arms it. On return, the closing threshold schedules the same sci-fi clip 250 ms later. Instant reduced-motion returns schedule it after cabin arrival instead. The shared engine owns these finite timers and cancels them/door voices on trip cancellation, new selection, mute, zero volume, hidden page or disposal. No render-frame effect creates or resumes an AudioContext. Normal closing tails can finish after return completes.
 
 ## Convention for future interactions
 
@@ -47,7 +47,7 @@ Enabled buttons, links, summaries, selects, range/checkbox/radio inputs and `[ro
 
 An HTML control representing an environment item must use **`data-sound-effect="environment"`**:
 
-```jsx
+```tsx
 <button data-sound-effect="environment" onClick={activateObserver}>
   Open Observer profile
 </button>
@@ -57,9 +57,9 @@ Existing About target labels, room elevator labels and keyboard-accessible floor
 
 ### React Three Fiber picks and shortcuts
 
-For native environment picks, import `useSoundEffects` from `src/audio/useSoundEffects.js` and use **`environmentClick()` after the click/drag guard**:
+For native environment picks, import `useSoundEffects` from `src/audio/useSoundEffects.ts` and use **`environmentClick()` after the click/drag guard**:
 
-```jsx
+```tsx
 const { environmentClick } = useSoundEffects()
 onClick={event => {
   event.stopPropagation()
@@ -76,16 +76,16 @@ Discrete system shortcuts use **`click()`** once per accepted non-repeated keypr
 ## Verification
 
 ```sh
-node scripts/verify_interaction_audio.mjs
-node scripts/verify_category_portal_audio.mjs
-node scripts/verify_category_portal_audio_browser.mjs
-node scripts/verify_door_audio.mjs
-node scripts/verify_door_audio_browser.mjs
-node scripts/verify_audio_consent.mjs
-node scripts/verify_music_autoplay.mjs
-npm run lint && npm run build
+npm run lint && npm run typecheck && npm run build
+node --import tsx scripts/verify_interaction_audio.mts
+node --import tsx scripts/verify_category_portal_audio.mts
+node --import tsx scripts/verify_category_portal_audio_browser.mts
+node --import tsx scripts/verify_door_audio.mts
+node --import tsx scripts/verify_door_audio_browser.mts
+node --import tsx scripts/verify_audio_consent.mts
+node --import tsx scripts/verify_music_autoplay.mts
 ```
 
-`verify_audio_consent.mjs` uses Playwright/Chrome with a blocked autoplay policy. It checks no pre-consent music/context/download, remembered enabled/muted choices across refreshes, gesture fallback, Enter/M/Escape, preferences reopening the shared prompt, saved settings, silent hover/focus tooltips, modal focus/input, the fixed mix, hidden-page music pause/resume and reduced motion. It also verifies that selecting YES again does not interrupt an already-playing track. Layout checks cover the city, stationary About room and Level 4 progress at 1280/768/390 px. `verify_music_autoplay.mjs` separately checks allowed autoplay/reload, rejected/unknown-policy fallback and remembered mute. Automatic music never constructs an effects AudioContext. `PLAYWRIGHT_MODULE` can point to an external installed Playwright module; `VITE_TEST_OUT_DIR` can select an isolated preview build when other builds are running. Build first so preview serves current code.
+`verify_audio_consent.mts` uses Playwright/Chrome with a blocked autoplay policy. It checks no pre-consent music/context/download, remembered enabled/muted choices across refreshes, gesture fallback, Enter/M/Escape, preferences reopening the shared prompt, saved settings, silent hover/focus tooltips, modal focus/input, the fixed mix, hidden-page music pause/resume and reduced motion. It also verifies that selecting YES again does not interrupt an already-playing track. Layout checks cover the city, stationary About room and Level 4 progress at 1280/768/390 px. `verify_music_autoplay.mts` separately checks allowed autoplay/reload, rejected/unknown-policy fallback and remembered mute. Automatic music never constructs an effects AudioContext. Playwright 1.61.1 is installed by `npm ci`; `PLAYWRIGHT_MODULE` remains an external-module override. `CHROME_EXECUTABLE` overrides `/usr/bin/google-chrome`, and `VERIFY_OUTPUT_DIR` overrides the temporary screenshot directory. `VITE_TEST_OUT_DIR` can select an isolated preview build when other builds are running. Build first so preview serves current code. See [development](development.md) for the full `npm run verify` / `npm run verify:browser` groups and shared browser serialization helper.
 
 Browser review: hover/focus silently across both HTML and 3D controls; verify system versus environment click mapping on all four floors, both physical and accessible elevator controls, return door/call-panel/labels, keyboard activation, audio controls, touch, mute/volume persistence, hidden-page cancellation and silent dragging/disabled targets. Each accepted action must play at most one effect.

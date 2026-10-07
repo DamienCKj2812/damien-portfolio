@@ -26,16 +26,16 @@ Options:
 
 ```sh
 blender --background assets/project-hallway/project-hallway.blend --python-exit-code 1 --python assets/journey/export_browser_room.py -- --level projects
-node assets/journey/verify_rooms.mjs
-node scripts/verify_project_categories.mjs
-node scripts/verify_project_card_focus.mjs
+node --import tsx assets/journey/verify_rooms.mts
+node --import tsx scripts/verify_project_categories.mts
+node --import tsx scripts/verify_project_card_focus.mts
 blender --background assets/project-hallway/project-hallway.blend --python-exit-code 1 --python assets/journey/verify_room_source.py -- --level projects
 ```
 
 After ceiling edits also run:
 
 ```sh
-node assets/project-hallway/verify_browser_ceiling.mjs
+node --import tsx assets/project-hallway/verify_browser_ceiling.mts
 ```
 
 This focused check verifies the package hash, sculpted rib depth/bounds, curved integrated light geometry, full hallway/entrance coverage and absence of ceiling dots independently of the other floors. Pass the previous animation-buffer SHA-256 as an optional argument to verify that a ceiling-only update leaves NPC motion byte-identical.
@@ -46,6 +46,6 @@ Also verify Client → Academic → Personal ordering, no first-section portal, 
 
 Verify native card clicks and sidebar focus, full-card corner bounds on both walls and after resize, Explore readiness, translucent description/navigation panels, all ten case-file sections and keyboard/mobile selection, visitor suspension/idle settling, isolated guide Escape, and two-stage Back restoring the original walking position/look. The focus verifier projects actual authored card bounds through the computed cameras across seven viewport sizes and both UI modes.
 
-For the entrance/category presentation, use `refresh_directory_board.py`, `refresh_category_titles.py` and `refresh_category_wall_numbers.py` against the existing master. They guard unrelated transforms, text and animation. Re-export Projects afterward. `node scripts/verify_project_directory.mjs` checks the authored top-projector framing, native board click, sidebar-free zoom, resizing and saved-view return. `-- --preview-only --category-previews` refreshes the portal/number views without rebuilding.
+For the entrance/category presentation, use `refresh_directory_board.py`, `refresh_category_titles.py` and `refresh_category_wall_numbers.py` against the existing master. They guard unrelated transforms, text and animation. Re-export Projects afterward. `node --import tsx scripts/verify_project_directory.mts` checks the authored top-projector framing, native board click, sidebar-free zoom, resizing and saved-view return. `-- --preview-only --category-previews` refreshes the portal/number views without rebuilding.
 
-After a browser build, `node scripts/verify_project_detail_v2.mjs` checks the v2 panel widths/fades, fixed header/scroll body, numbered rows, previous/next limits, progress rail, responsive framing and toggle-only audio. `node scripts/verify_audio_consent.mjs` separately verifies consent, remembered choices, trusted activation, preset levels and hidden-page playback cleanup. Both use the external Playwright installation configurable with `PLAYWRIGHT_MODULE`.
+After a browser build, `node --import tsx scripts/verify_project_detail_v2.mts` checks the v2 panel widths/fades, fixed header/scroll body, numbered rows, previous/next limits, progress rail, responsive framing and toggle-only audio. `node --import tsx scripts/verify_audio_consent.mts` separately verifies consent, remembered choices, trusted activation, preset levels and hidden-page playback cleanup. Both use declared Playwright 1.61.1, with `PLAYWRIGHT_MODULE` retained as an external-module override. `CHROME_EXECUTABLE` overrides `/usr/bin/google-chrome`, and `VERIFY_OUTPUT_DIR` overrides temporary screenshot output. Run `npm run verify` for all 19 non-browser checks and `npm run verify:browser` for all nine browser checks; video/Python/Pillow prerequisites are in [development](../../docs/development.md).

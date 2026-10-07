@@ -36,7 +36,7 @@ This replaces the two partial light strips with one closed perimeter following t
 
 ```sh
 blender --background assets/about-office/about-office.blend --python-exit-code 1 --python assets/journey/export_browser_room.py -- --level about
-node assets/journey/verify_rooms.mjs
+node --import tsx assets/journey/verify_rooms.mts
 blender --background assets/about-office/about-office.blend --python-exit-code 1 --python assets/about-office/verify_malaysia_screen.py
 ```
 
@@ -46,6 +46,6 @@ The exporter writes native points/lines/triangles and static stride-16 camera da
 
 Enter About through floor 01. Confirm the computer center is centered in the viewport; test mouse/touch turns, 360° yaw, arrow-key look, R/Reset look, and idle settling. Test actual Observer clicks/taps, Meet the Observer, native dialog focus/Tab/Escape, and background-look suspension. Then test real card picks, View business card and a smooth Back to office preserving the previous look direction. Clicking outside the focused card also smoothly returns to the saved office look; card clicks, dragging, multi-touch and contact links must not dismiss it. Reduced motion skips the camera easing. Scrolling backward at the office home view opens the elevator-return confirmation and walking transition.
 
-Focused contact-card dismissal checks: `node scripts/verify_contact_card_dismissal.mjs`; audio checks: `node scripts/verify_interaction_audio.mjs`.
+Focused contact-card dismissal checks: `node --import tsx scripts/verify_contact_card_dismissal.mts`; audio checks: `node --import tsx scripts/verify_interaction_audio.mts`.
 
-Observer implementation is `ObserverProfile.jsx` / `observerProfile.css`, with picking in `CityScene.jsx` and state in `CityWalkthrough.jsx`. `profileOpen` suspends room input and picks; it must not change the camera target. Content edits need lint/build, while model/export edits also need room-package validation.
+Observer implementation is `ObserverProfile.tsx` / `observerProfile.css`, with picking in `CityScene.tsx` and state in `CityWalkthrough.tsx`. `profileOpen` suspends room input and picks; it must not change the camera target. Canonical content is `src/data/portfolio.json`, validated by `src/data/portfolio.ts` for React and read directly by Python contact-card tooling. Content edits need lint/typecheck/build and relevant content checks, while model/export edits also need room-package validation.

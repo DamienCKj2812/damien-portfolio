@@ -1,7 +1,7 @@
 {
   "title": "MY JOURNEY SO FAR",
   "subtitle": "EDUCATION / EXPERIENCE\nBUILDING / LEARNING",
-  "description": "Confirmed education, employment, freelance projects and current focus from src/data/portfolio.js and the Level 03 project catalogue.",
+  "description": "Confirmed education, employment, freelance projects and current focus from src/data/portfolio.json and the Level 03 project catalogue.",
   "milestones": [
     {
       "id": "diploma-information-technology",

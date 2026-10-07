@@ -31,8 +31,12 @@ jobs:
         run: npm ci
       - name: Lint
         run: npm run lint
+      - name: Typecheck
+        run: npm run typecheck
       - name: Build
         run: npm run build
+      - name: Verify content and model packages
+        run: npm run verify
       - name: Upload site
         uses: actions/upload-pages-artifact@v3
         with:

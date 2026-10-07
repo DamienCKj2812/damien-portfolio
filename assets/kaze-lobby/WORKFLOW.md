@@ -18,7 +18,7 @@ The full rebuild also installs `fish_motion.py`: a shared body/head sway, nested
 
 ```sh
 blender --background assets/kaze-lobby/kaze-lobby-walkthrough.blend --python-exit-code 1 --python assets/kaze-lobby/verify_fish_motion.py
-node assets/kaze-lobby/verify_fish_motion.mjs
+node --import tsx assets/kaze-lobby/verify_fish_motion.mts
 ```
 
 For an animated fixed-camera preview: `blender --background assets/kaze-lobby/kaze-lobby-walkthrough.blend --python-exit-code 1 --python assets/kaze-lobby/render_fish_preview.py`. It writes `holographic-fish-swimming.gif` without saving the master.
@@ -56,8 +56,8 @@ This saves the four floor indicators at the shared Z=9.40 baseline and checks th
 
 ```sh
 blender --background assets/kaze-lobby/kaze-lobby-walkthrough.blend --python-exit-code 1 --python assets/journey/export_browser_lobby.py
-node assets/kaze-lobby/verify_browser_npcs.mjs
-node assets/journey/verify_rooms.mjs
+node --import tsx assets/kaze-lobby/verify_browser_npcs.mts
+node --import tsx assets/journey/verify_rooms.mts
 ```
 
 The exporter writes `public/models/lobby/` without saving the master. It fits the R1 aperture/doors and removes the placeholder in memory. Rebuild the connected preview when doorway/shell/alignment changes; see [journey workflow](../journey/WORKFLOW.md).

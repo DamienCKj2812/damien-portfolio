@@ -1,2 +1,4 @@
+allowBuilds:
+  esbuild: false
 minimumReleaseAgeExclude:
   - eslint@10.12.0

@@ -13,7 +13,7 @@ Level 02 uses the completed About toolkit and Projects catalogue instead of conc
 
 Click a skill card or choose its sidebar entry to open the exact v2 case-file shell shared with Projects: the full card in the middle, information on the left and section navigation on the right. Eight sections explain toolkit, project evidence, workflow, trade-offs, collaboration and learning scope. Back/Escape restores the original route/look and tour pause state; the AT-AT remains a separate sculpture exhibit.
 
-Generate approved content with `node scripts/build_skills_catalogue.mjs`; use the content-only refresh in [WORKFLOW.md](WORKFLOW.md) to preserve the master and its performances.
+Generate approved content with `node --import tsx scripts/build_skills_catalogue.mts`; it reads canonical `src/data/portfolio.json` directly and hashes its bytes for profile provenance. Use the content-only refresh in [WORKFLOW.md](WORKFLOW.md) to preserve the master and its performances.
 
 ![Skills focus and project evidence](skills-focus-browser.png)
 

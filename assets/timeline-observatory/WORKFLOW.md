@@ -6,16 +6,16 @@ For qualification labels and source-backed board logos, use the focused path:
 
 ```sh
 python assets/timeline-observatory/prepare_timeline_logos.py
-node assets/timeline-observatory/build_timeline_content.mjs
+node --import tsx assets/timeline-observatory/build_timeline_content.mts
 blender --background assets/timeline-observatory/timeline-observatory.blend --python-exit-code 1 --python assets/timeline-observatory/update_timeline_content.py
 ```
 
-The updater preserves existing room transforms/actions and route, changing only copy and the intentionally replaced board symbols. Original qualification records remain in About data; card display fields supply the requested label wording. APU/LYJ/COS inputs stay unchanged; original-color copies are packed into Blender and exported with the Experience package. After the browser export below, run `verify_board_art.py` against the master and `node scripts/verify_timeline_focus.mjs`.
+The updater preserves existing room transforms/actions and route, changing only copy and the intentionally replaced board symbols. Original qualification records remain in About data; card display fields supply the requested label wording. APU/LYJ/COS inputs stay unchanged; original-color copies are packed into Blender and exported with the Experience package. After the browser export below, run `verify_board_art.py` against the master and `node --import tsx scripts/verify_timeline_focus.mts`.
 
 For content-only changes, preserve the completed room and route:
 
 ```sh
-node assets/timeline-observatory/build_timeline_content.mjs
+node --import tsx assets/timeline-observatory/build_timeline_content.mts
 blender --background assets/timeline-observatory/timeline-observatory.blend --python-exit-code 1 --python assets/timeline-observatory/update_timeline_content.py
 ```
 
@@ -29,15 +29,15 @@ blender --background --python-exit-code 1 --python assets/timeline-observatory/v
 
 `-- --all-previews` builds/renders everything; `-- --preview-only --all-previews` renders the saved file. The full builder resets factory data and disables numbered save versions. Preserve manual edits/recovery before replacing the master.
 
-Confirmed content comes from `src/data/portfolio.js` and the project catalogue; `milestones.json` is generated. `observatory-layout.json`, `validation.json` and `walking-validation.json` are generated reports. Embedded controls add input preview; native animation needs no handlers/cache.
+Confirmed content comes directly from canonical `src/data/portfolio.json` and the project catalogue, without VM evaluation of app source; `milestones.json` is generated. `src/data/portfolio.ts` is the validated browser facade, not the generator's content input. `observatory-layout.json`, `validation.json` and `walking-validation.json` are generated reports. Embedded controls add input preview; native animation needs no handlers/cache.
 
 ## Browser export
 
 ```sh
 blender --background assets/timeline-observatory/timeline-observatory.blend --python-exit-code 1 --python assets/journey/export_browser_room.py -- --level experience
-node assets/journey/verify_rooms.mjs
-node scripts/verify_timeline_focus.mjs
-node scripts/verify_project_card_focus.mjs
+node --import tsx assets/journey/verify_rooms.mts
+node --import tsx scripts/verify_timeline_focus.mts
+node --import tsx scripts/verify_project_card_focus.mts
 blender --background assets/timeline-observatory/timeline-observatory.blend --python-exit-code 1 --python assets/journey/verify_room_source.py -- --level experience
 ```
 

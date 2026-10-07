@@ -48,7 +48,7 @@ In the main office view, looking left/right until the camera's central vertical 
 
 The sheet uses nearly the full viewport and opens with a monochrome adaptation of [Jitter's Glitch 01 text reveal](https://jitter.video/template/glitch-01-text-reveal/): staggered rectangular signal masks, displaced duplicate text slices, and per-line clipping that resolves into clean lettering in about a second. Closing reuses this staggered, stepped language with mirrored slice offsets, progressively dissolving text and advancing block masks, then fades out over roughly 960 ms while retaining focus trapping and blocking room input until dismissal completes. An 82%-opaque dark background, light backdrop dimming and subtle blur let the office remain visible behind the sheet. Visual duplicates are accessibility-hidden; close controls stay usable throughout. Reduced-motion preferences disable these effects and dismiss immediately. Portrait sizing adapts to available height; shorter screens scroll internally, with a sticky close header and reachable footer instead of clipped content.
 
-`src/data/portfolio.js` supplies identity, About description, skill groups and records. `about.profile.portrait` accepts `{ src: 'images/portrait.jpg', alt: 'Portrait description' }`; otherwise a 4:5 hatched placeholder is shown. Development records remain labelled as samples.
+Canonical `src/data/portfolio.json` supplies identity, About description, skill groups and records through the validated `src/data/portfolio.ts` facade. That facade attaches generated portrait paths/hashes from `assets/portrait/image-manifest.json`; authored portrait alt text stays in JSON. Python contact-card tooling reads the same JSON directly. Development records remain labelled as samples.
 
 ## Anchors
 

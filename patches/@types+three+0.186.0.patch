@@ -1,0 +1,13 @@
+diff --git a/node_modules/@types/three/examples/jsm/lines/LineMaterial.d.ts b/node_modules/@types/three/examples/jsm/lines/LineMaterial.d.ts
+index d7b2b34..9945488 100644
+--- a/node_modules/@types/three/examples/jsm/lines/LineMaterial.d.ts
++++ b/node_modules/@types/three/examples/jsm/lines/LineMaterial.d.ts
+@@ -1,7 +1,7 @@
+ import { Color, ColorRepresentation, ShaderMaterial, ShaderMaterialParameters, Vector2 } from "three";
+ 
+ export interface LineMaterialParameters extends ShaderMaterialParameters {
+-    alphaToCoverage?: boolean | undefined;
++    alphaToCoverage?: boolean;
+     color?: ColorRepresentation | undefined;
+     dashed?: boolean | undefined;
+     dashScale?: number | undefined;

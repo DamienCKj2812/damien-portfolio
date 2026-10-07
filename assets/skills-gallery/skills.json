@@ -1,11 +1,11 @@
 {
   "version": 1,
   "source": [
-    "src/data/portfolio.js",
+    "src/data/portfolio.json",
     "docs/project-catalogue.md"
   ],
-  "profileSourceHash": "fc70a0553aaa9efffbbd5e288979a4aeacbc0cd94b842c6d87ba5b2d67519c90",
-  "projectSourceHash": "84d83c442ff4f3ec654dbaf6fa2d13ba43394b1b65db02ce3a6d4b70d2fc2e64",
+  "profileSourceHash": "a670e0629b7763df5a1aa1c913a5613578ab494d96b0788fc27484365f7dba14",
+  "projectSourceHash": "df6a90c4a03832942008b90033eeb7f6c85452b798fefa75c7111b1a5a851b2a",
   "description": "My development toolkit spans web applications, backend APIs, databases, deployment, and Linux servers.",
   "learning": [
     "3D modeling",

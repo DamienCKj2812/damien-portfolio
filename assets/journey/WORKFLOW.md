@@ -33,12 +33,12 @@ Export only the affected packages unless routing/shared handoff changed. Exporte
 
 City entrance regression: `verify_handoff.py` checks 120 closed-vestibule sealing rays, 72 open-leaf casing-occlusion rays and 32 clear atrium-skin sightlines for the cylindrical tower. Clear the atrium cavity from both curved skins while retaining the exterior front band. Generate leaves, fitted pockets and enclosing jamb/header/floor returns together; avoid broad flat pockets across the neighboring curved storefront.
 
-`node scripts/verify_lobby_portal.mjs` checks that the preloaded lobby stays inside the street aperture throughout the authored approach, releases its four clipping planes after crossing, and restores clipping during reverse navigation. Generated `lobbyPortal` dimensions must match the vestibule's real front opening, not the full lobby width.
+`node --import tsx scripts/verify_lobby_portal.mts` checks that the preloaded lobby stays inside the street aperture throughout the authored approach, releases its four clipping planes after crossing, and restores clipping during reverse navigation. Generated `lobbyPortal` dimensions must match the vestibule's real front opening, not the full lobby width.
 
-With Playwright available, `node assets/journey/verify_city_entrance.mjs` checks restored sky metadata, captures frames 245–450, reverses to the closed entrance and confirms elevator arrival. `PLAYWRIGHT_MODULE` can point to an external installed Playwright module. `FIXED_APPROACH=1` holds only the test camera at frame 245 to isolate moving-door artifacts without editing authored/exported camera data.
+After a build, `node --import tsx assets/journey/verify_city_entrance.mts` checks restored sky metadata, captures frames 245–450, reverses to the closed entrance and confirms elevator arrival. Playwright 1.61.1 is installed by `npm ci`; `PLAYWRIGHT_MODULE` remains an external-module override. `CHROME_EXECUTABLE` overrides `/usr/bin/google-chrome`, and `VERIFY_OUTPUT_DIR` overrides temporary screenshot output. `FIXED_APPROACH=1` holds only the test camera at frame 245 to isolate moving-door artifacts without editing authored/exported camera data.
 
 ```sh
-node assets/journey/verify_rooms.mjs
+node --import tsx assets/journey/verify_rooms.mts
 blender --background assets/project-hallway/project-hallway.blend --python-exit-code 1 --python assets/journey/verify_room_source.py -- --level projects
 blender --background assets/skills-gallery/skills-gallery.blend --python-exit-code 1 --python assets/journey/verify_room_source.py -- --level skills
 blender --background assets/timeline-observatory/timeline-observatory.blend --python-exit-code 1 --python assets/journey/verify_room_source.py -- --level experience
@@ -46,4 +46,4 @@ blender --background assets/timeline-observatory/timeline-observatory.blend --py
 
 The Node check validates current package bounds, frame/route sizes, all four floors, ascending switches, entrance alignment, forward arrival, Observer/card/node picks, guided stop/wrap and AT-AT surface/contour groups. Source checks compare sampled transforms/scales/morphs/points/routes read-only; there is no About option in that script.
 
-After relevant UI changes, run `npm run lint && npm run build` and review real 3D plus accessible picks, all floors, press/release/drag-off, keyboard/touch controls, delayed/failing load/Retry/cancel, room caching, reverse/jump cleanup, reduced motion and offscreen/idle settling. Detailed input/clock ownership is in [runtime architecture](../../docs/architecture.md).
+After relevant UI changes, run `npm run lint && npm run typecheck && npm run build && npm run verify`, then `npm run verify:browser` for the nine actual-browser checks. Review real 3D plus accessible picks, all floors, press/release/drag-off, keyboard/touch controls, delayed/failing load/Retry/cancel, room caching, reverse/jump cleanup, reduced motion and offscreen/idle settling. Detailed input/clock ownership is in [runtime architecture](../../docs/architecture.md); browser prerequisites are in [development](../../docs/development.md).

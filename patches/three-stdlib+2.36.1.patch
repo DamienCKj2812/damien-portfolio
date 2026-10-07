@@ -1,0 +1,60 @@
+diff --git a/node_modules/three-stdlib/libs/MotionControllers.d.ts b/node_modules/three-stdlib/libs/MotionControllers.d.ts
+index b4ac6fc..c5a4951 100644
+--- a/node_modules/three-stdlib/libs/MotionControllers.d.ts
++++ b/node_modules/three-stdlib/libs/MotionControllers.d.ts
+@@ -129,7 +129,7 @@ declare class Component implements ComponentDescription {
+     gamepadIndices: GamepadIndices;
+     rootNodeName: string;
+     visualResponses: Record<string, VisualResponse>;
+-    touchPointNodeName?: string | undefined;
++    touchPointNodeName?: string;
+     touchPointNode?: Object3D;
+     /**
+      * @param {string} componentId - Id of the component
+diff --git a/node_modules/three-stdlib/lines/LineMaterial.d.ts b/node_modules/three-stdlib/lines/LineMaterial.d.ts
+index cae3975..d64be1c 100644
+--- a/node_modules/three-stdlib/lines/LineMaterial.d.ts
++++ b/node_modules/three-stdlib/lines/LineMaterial.d.ts
+@@ -1,7 +1,7 @@
+ import { Color, MaterialParameters, ShaderMaterial, Vector2 } from 'three'
+ 
+ export interface LineMaterialParameters extends MaterialParameters {
+-  alphaToCoverage?: boolean | undefined
++  alphaToCoverage?: boolean
+   color?: number | undefined
+   dashed?: boolean | undefined
+   dashScale?: number | undefined
+diff --git a/node_modules/three-stdlib/loaders/SVGLoader.d.ts b/node_modules/three-stdlib/loaders/SVGLoader.d.ts
+index 406ae30..838278b 100644
+--- a/node_modules/three-stdlib/loaders/SVGLoader.d.ts
++++ b/node_modules/three-stdlib/loaders/SVGLoader.d.ts
+@@ -1,11 +1,7 @@
+ import { Loader, LoadingManager, ShapePath, BufferGeometry, Vector2, Shape } from 'three'
+ 
+ export interface SVGResultPaths extends ShapePath {
+-  userData?:
+-    | {
+-        [key: string]: any
+-      }
+-    | undefined
++  userData: Record<string, unknown>
+ }
+ 
+ export interface SVGResult {
+diff --git a/node_modules/three-stdlib/loaders/TGALoader.d.ts b/node_modules/three-stdlib/loaders/TGALoader.d.ts
+index 16e035f..8fcec81 100644
+--- a/node_modules/three-stdlib/loaders/TGALoader.d.ts
++++ b/node_modules/three-stdlib/loaders/TGALoader.d.ts
+@@ -1,4 +1,4 @@
+-import { DataTexture, DataTextureLoader, LoadingManager } from 'three'
++import { DataTexture, DataTextureLoader, DataTextureLoaderTexData, LoadingManager } from 'three'
+ 
+ export class TGALoader extends DataTextureLoader {
+   constructor(manager?: LoadingManager)
+@@ -10,5 +10,5 @@ export class TGALoader extends DataTextureLoader {
+     onError?: (event: ErrorEvent) => void,
+   ): DataTexture
+   loadAsync(url: string, onProgress?: (event: ProgressEvent) => void): Promise<DataTexture>
+-  parse(data: ArrayBuffer): DataTexture
++  parse(data: ArrayBuffer): DataTextureLoaderTexData
+ }

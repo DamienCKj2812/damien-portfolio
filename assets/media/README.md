@@ -7,10 +7,10 @@ browser destinations and attribution. Originals stay unchanged here:
 - `audio/effects/`: system/environment clicks and portal/door effects.
 - `logos/organisations/`: original APU, LYJ and COS supplied artwork.
 
-`scripts/sync_media_assets.mjs` publishes exact-byte audio copies to
-`public/media/audio/{music,effects}/`. `src/assets/media.js` owns BASE_URL-aware
+`scripts/sync_media_assets.mts` publishes exact-byte audio copies to
+`public/media/audio/{music,effects}/`. `src/assets/media.ts` owns BASE_URL-aware
 runtime URLs. Production builds run the sync automatically; run
-`node scripts/verify_media_assets.mjs --dist` to verify the deployed copies.
+`node --import tsx scripts/verify_media_assets.mts --dist` to verify the deployed copies.
 
 Organisation logos are cropped/prepared by
 `assets/timeline-observatory/prepare_timeline_logos.py`; generated original-color
