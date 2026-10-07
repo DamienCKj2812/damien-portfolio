@@ -11,8 +11,8 @@ dist/
 .DS_Store
 __pycache__/
 
-# Local uploaded video originals; publish the prepared copies under public/videos.
-/*.mp4
+# Local uploaded video originals; prepared browser copies live under public/videos.
+/assets/project-hallway/videos/originals/
 
 # Keep editable .blend masters; numbered Blender save backups are local recovery files.
 *.blend[0-9]*

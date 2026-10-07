@@ -40,6 +40,8 @@ Playwright **1.61.1** is a declared, locked development dependency installed by 
 
 The video browser check needs `python3` with Pillow for rendered-pixel scoring and available project video/poster assets. Run `VIDEO_TEST_DEV=1 node --import tsx scripts/verify_project_video_browser.mts` to cover Vite development/StrictMode effect replay. Audio and Skills preview checks support `VITE_TEST_OUT_DIR` for an isolated build. Previous local smoke artifacts are not prerequisites for these checked-in verifiers.
 
+Project video uploads are organized in `assets/project-hallway/videos/originals/<project>/` and remain local/Git-ignored. Browser-ready recordings, compatibility copies and posters are tracked in `public/videos/` and copied into `dist/videos/` by Vite. See [project video ownership](../assets/project-hallway/videos/README.md); builds do not require the original uploads or video transcoding.
+
 `scripts/browser_tools.mts` centralizes SDK/Chrome/output selection and browser instrumentation. Use `installBrowserHelpers` when serializing instrumented callbacks: it installs the `__name` helper introduced by `tsx` in the same init script, avoiding missing module scope and unordered init-script execution.
 
 ## Deployment

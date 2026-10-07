@@ -23,6 +23,11 @@ geometry/route packages remain with their model owners. `assets/branding/`
 continues to own KAJU's generated vector artwork/reference preview; portrait
 authoring and generated portrait files remain in their existing scoped workflow.
 
+Project video originals belong to
+`assets/project-hallway/videos/originals/<project>/` (local, Git-ignored uploads).
+Prepared previews, full walkthroughs, H.264 compatibility copies and posters are
+tracked in `public/videos/`; see the [project video notes](../project-hallway/videos/README.md).
+
 When adding media, place the original in the appropriate source subdirectory,
 add its ID/hash/provenance and optional `publicPath` to the manifest, sync, then
 reference its registered runtime URL. Do not drop source PNG/MP3 files in the
