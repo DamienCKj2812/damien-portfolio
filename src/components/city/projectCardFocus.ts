@@ -7,11 +7,12 @@ export function createProjectCardFocus(project: CardTarget, alignment: Pick<Room
   const mobile = width <= 600
   const short = height < 500
   const leftPanelWidth=Math.max(220,Math.min(320,width*.26-60))
+  const mobileProject = mobile && exploring
   const rect = {
     left: !mobile && exploring ? Math.max(leftPanelWidth+60,width*.26) : mobile ? 32 : 100,
     right: width - (!mobile && exploring ? Math.min(320,width*.22) : mobile ? 24 : 38),
-    top: short ? 76 : mobile ? exploring ? 218 : 170 : exploring ? 96 : width < 1100 ? 180 : 110,
-    bottom: height - (short ? 72 : mobile ? exploring ? 330 : 220 : exploring ? 96 : 100),
+    top: mobileProject ? 112 : short ? 76 : mobile ? exploring ? 218 : 170 : exploring ? 96 : width < 1100 ? 180 : 110,
+    bottom: mobileProject ? Math.max(180,Math.min(height*.46,390)-64) : height - (short ? 72 : mobile ? exploring ? 330 : 220 : exploring ? 96 : 100),
   }
   // The native card includes its corner brackets; use authored bounds when
   // available, with a fallback for an already cached hallway package.

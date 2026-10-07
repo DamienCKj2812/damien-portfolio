@@ -4,7 +4,7 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "postinstall": "patch-package --error-on-fail",
+    "postinstall": "node --import tsx scripts/apply_dependency_patches.mts",
     "predev": "node --import tsx scripts/sync_media_assets.mts",
     "dev": "vite",
     "prebuild": "node --import tsx scripts/sync_media_assets.mts",

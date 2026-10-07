@@ -9,7 +9,7 @@ export default function App() {
   return (
     <SoundEffectsProvider><main id="home" className="experience">
       <Suspense fallback={<div className="city-shell"><p className="city-loading-shell" role="status">Loading the interactive city…</p></div>}>
-        <CityWalkthrough title={portfolio.siteTitle} />
+        <CityWalkthrough />
       </Suspense>
       <BackgroundMusic track={portfolio.music} />
     </main></SoundEffectsProvider>

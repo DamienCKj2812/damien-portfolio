@@ -3,6 +3,7 @@ import { fileURLToPath } from 'node:url'
 import { resolve } from 'node:path'
 import { preview } from 'vite'
 import { chromium, chromeExecutable, installBrowserHelpers, screenshotPath } from './browser_tools.mts'
+import type { Page } from 'playwright'
 interface PlayRecord { active: boolean; src: string; failure?: string }
 declare global { interface Window {
   audioChecks: { plays: PlayRecord[]; contexts: { active: boolean }[]; resumes: { active: boolean }[] }
@@ -10,6 +11,12 @@ declare global { interface Window {
 } }
 
 const root = resolve(fileURLToPath(new URL('..', import.meta.url)))
+async function seekCity(page: Page, frame: number) {
+  await page.locator('#city-timeline').evaluate((input, value) => {
+    Object.getOwnPropertyDescriptor(HTMLInputElement.prototype, 'value')!.set!.call(input, String(value))
+    input.dispatchEvent(new Event('input', { bubbles: true }));input.dispatchEvent(new Event('change', { bubbles: true }))
+  }, frame)
+}
 const server = await preview({ root, build: { outDir: process.env.VITE_TEST_OUT_DIR || 'dist' }, preview: { host: '127.0.0.1', port: 5196, strictPort: true } })
 let browser
 try {
@@ -140,7 +147,8 @@ try {
   assert.equal(await page.evaluate(() => window.audioChecks.contexts.length), 0)
   await visit(false)
   assert.equal(await page.evaluate(() => document.querySelector<HTMLAudioElement>('#background-music-audio')!.paused), true)
-  assert.equal(await page.getByRole('button', { name: 'Enable interaction sound effects', exact: true }).count(), 1)
+  assert.equal(await page.locator('.sound-effects-toggle').getAttribute('aria-label'), 'Enable interaction sound effects')
+  assert.equal(await page.locator('.sound-effects-toggle').isVisible(), false, 'Mobile SFX control lives in the settings sheet')
   await page.evaluate(() => localStorage.removeItem('damien-portfolio:audio-consent'))
   await visit()
   await page.keyboard.press('Enter')
@@ -148,6 +156,7 @@ try {
   await page.waitForFunction(() => !document.querySelector<HTMLAudioElement>('#background-music-audio')!.paused)
   assert.equal(await page.evaluate(() => window.audioChecks.plays[0].active), true)
   assert.equal(await page.getByRole('button', { name: 'Show sound prompt again', exact: true }).count(), 0, 'No center prompt-reopen button')
+  await page.setViewportSize({ width: 1280, height: 800 })
   await page.evaluate(() => localStorage.removeItem('damien-portfolio:audio-consent'))
   await visit()
   await page.emulateMedia({ reducedMotion: 'no-preference' })
@@ -234,7 +243,7 @@ try {
       if (progress) {
          const bar = await page.locator('.city-controls:not([hidden])').boundingBox()
          assert.ok(bar)
-        assert(audio.y + audio.height <= bar.y - 8, 'Audio panel must sit above the progress control hit area')
+        assert(audio.y + audio.height <= bar.y - (width <= 600 ? 4 : 8), 'Audio panel must sit above the progress track with the reference mobile dock gap')
       } else {
         assert.equal(await page.locator('.city-controls:not([hidden])').count(), 0)
         assert.equal(await page.locator('.background-music').evaluate(node => getComputedStyle(node).bottom), width <= 600 ? '16px' : '20px', 'Return audio controls to the corner without progress')
@@ -258,9 +267,143 @@ try {
   await page.waitForSelector('.city-stage[data-elevator-status=idle]', { timeout: 90000 })
   await enterRoom(4)
   await checkLayout(true)
+  await page.setViewportSize({ width: 312, height: 678 })
+  await page.goto('http://127.0.0.1:5196/damien-portfolio/')
+  await page.waitForSelector('.city-stage[data-loaded=true]')
+  const cluster = await page.locator('.city-topline-actions').boundingBox()
+  assert.ok(cluster)
+  assert.equal(cluster.x + cluster.width, 296, 'Reference HUD has a 16px right inset')
+  assert.equal(cluster.y, 16)
+  for (const button of [preferencesButton, helpButton, page.getByRole('button', { name: 'Choose a floor', exact: true })]) {
+    const bounds = await button.boundingBox()
+    assert.ok(bounds)
+    assert.equal(bounds.width, 44)
+    assert.equal(bounds.height, 44, 'Reference buttons retain touch-sized targets')
+  }
+  assert.equal(await page.locator('.city-topline > span').count(), 0, 'No top-left branding')
+  assert.equal(await page.locator('.mobile-journey-stop').count(), 0, 'Mobile uses the continuous desktop slider without checkpoint buttons')
+  assert.equal(await page.locator('#city-timeline').isVisible(), true)
+  await seekCity(page, 145)
+  await page.waitForSelector('.city-stage[data-frame="145"][data-rendered-frame="145"]')
+  await seekCity(page, 383)
+  await page.waitForSelector('.city-stage[data-frame="383"][data-rendered-frame="383"]', { timeout: 90000 })
+  await seekCity(page, 145)
+  await page.waitForSelector('.city-stage[data-frame="145"][data-rendered-frame="145"]')
+  await page.mouse.move(0, 0)
+  await page.screenshot({ path: screenshotPath('mobile-hud.png') })
+  await preferencesButton.click()
+  await page.getByRole('dialog', { name: 'Settings', exact: true }).waitFor()
+  const settingsFrame = await page.locator('.city-stage').getAttribute('data-frame')
+  await page.keyboard.press('PageDown')
+  await page.mouse.wheel(0, 600)
+  assert.equal(await page.locator('.city-stage').getAttribute('data-frame'), settingsFrame, 'Mobile settings own navigation input')
+  const musicPreference = page.getByRole('button', { name: 'Toggle background music', exact: true })
+  const effectsPreference = page.getByRole('button', { name: 'Toggle interaction sound effects', exact: true })
+  const musicBefore = await musicPreference.getAttribute('aria-pressed')
+  const effectsBefore = await effectsPreference.getAttribute('aria-pressed')
+  await musicPreference.click()
+  assert.equal(await musicPreference.getAttribute('aria-pressed'), String(musicBefore !== 'true'))
+  assert.equal(await effectsPreference.getAttribute('aria-pressed'), effectsBefore, 'Music toggle preserves SFX choice')
+  await effectsPreference.click()
+  assert.equal(await effectsPreference.getAttribute('aria-pressed'), String(effectsBefore !== 'true'))
+  assert.equal(await musicPreference.getAttribute('aria-pressed'), String(musicBefore !== 'true'), 'SFX toggle preserves music choice')
+  assert.equal(await page.getByRole('dialog').getByRole('link', { name: /^Music credit:/ }).count(), 1)
+  await page.getByRole('dialog').getByRole('link', { name: /^Music credit:/ }).focus()
+  await page.keyboard.press('Tab')
+  assert.equal(await page.getByRole('button', { name: 'Close sound preferences' }).evaluate(button => button === document.activeElement), true, 'Mobile settings trap keyboard focus')
+  await page.mouse.move(0, 0)
+  await page.screenshot({ path: screenshotPath('mobile-hud-settings.png') })
+  await page.keyboard.press('Escape')
+  await page.getByRole('dialog').waitFor({ state: 'detached' })
+  assert.equal(await preferencesButton.evaluate(button => button === document.activeElement), true)
+  const mobileContext = await browser.newContext({ viewport: { width: 312, height: 678 }, isMobile: true, hasTouch: true, reducedMotion: 'reduce' })
+  await installBrowserHelpers(mobileContext, () => {
+    localStorage.setItem('damien-portfolio:audio-consent', 'muted')
+    localStorage.setItem('damien-portfolio:background-music', JSON.stringify({ enabled: false }))
+    localStorage.setItem('damien-portfolio:sound-effects', JSON.stringify({ enabled: false }))
+  })
+  const mobilePage = await mobileContext.newPage()
+  mobilePage.on('pageerror', error => errors.push(error.message))
+  await mobilePage.goto('http://127.0.0.1:5196/damien-portfolio/')
+  await mobilePage.waitForSelector('.city-stage[data-loaded=true]')
+  const touchSession = await mobileContext.newCDPSession(mobilePage)
+  await touchSession.send('Input.dispatchTouchEvent', { type: 'touchStart', touchPoints: [{ x: 150, y: 480 }] })
+  await touchSession.send('Input.dispatchTouchEvent', { type: 'touchMove', touchPoints: [{ x: 150, y: 380 }] })
+  await touchSession.send('Input.dispatchTouchEvent', { type: 'touchEnd', touchPoints: [] })
+  await mobilePage.waitForFunction(() => Number(document.querySelector<HTMLElement>('.city-stage')?.dataset.frame) > 50)
+  await mobilePage.locator('#city-timeline').focus();await mobilePage.keyboard.press('Home')
+  await mobilePage.waitForSelector('.city-stage[data-frame="1"]')
+  const slider = await mobilePage.locator('#city-timeline').boundingBox()
+  assert.ok(slider)
+  await touchSession.send('Input.dispatchTouchEvent', { type: 'touchStart', touchPoints: [{ x: slider.x + 3, y: slider.y + slider.height / 2 }] })
+  await touchSession.send('Input.dispatchTouchEvent', { type: 'touchMove', touchPoints: [{ x: slider.x + slider.width / 2, y: slider.y + slider.height / 2 }] })
+  await touchSession.send('Input.dispatchTouchEvent', { type: 'touchEnd', touchPoints: [] })
+  await mobilePage.waitForFunction(() => {
+    const frame = Number(document.querySelector<HTMLElement>('.city-stage')?.dataset.frame)
+    return frame > 650 && frame < 850
+  })
+  await mobilePage.screenshot({ path: screenshotPath('mobile-hud-touch.png') })
+  await mobilePage.getByRole('button', { name: 'Open sound preferences', exact: true }).tap()
+  await mobilePage.getByRole('dialog', { name: 'Settings', exact: true }).waitFor()
+  await mobilePage.getByRole('button', { name: 'Close sound preferences', exact: true }).tap()
+  await mobilePage.getByRole('dialog').waitFor({ state: 'detached' })
+  for (const level of [3, 2, 4, 1]) {
+    console.log(`VERIFY mobile return cancellation: level ${level}`)
+    await mobilePage.getByRole('button', { name: 'Choose a floor', exact: true }).tap()
+    await mobilePage.waitForSelector('.city-stage[data-elevator-loaded=true][data-interactive=true]', { timeout: 90000 })
+    const floor = mobilePage.getByRole('button', { name: new RegExp(`^Select level ${level}:`) })
+    await floor.focus();await floor.press('Enter')
+    await mobilePage.waitForSelector('.city-stage[data-elevator-status=arrived][data-room-loaded=true]', { timeout: 90000 })
+    const room = await mobilePage.locator('.city-stage').getAttribute('data-room')
+    const hideMenu = mobilePage.getByRole('button', { name: 'Hide menu', exact: true })
+    if (await hideMenu.isVisible()) await hideMenu.tap()
+    await mobilePage.locator('#city').focus();await mobilePage.keyboard.press('Home')
+    await touchSession.send('Input.dispatchTouchEvent', { type: 'touchStart', touchPoints: [{ x: 150, y: 350 }] })
+    await touchSession.send('Input.dispatchTouchEvent', { type: 'touchMove', touchPoints: [{ x: 150, y: 450 }] })
+    await touchSession.send('Input.dispatchTouchEvent', { type: 'touchEnd', touchPoints: [] })
+    await mobilePage.getByRole('dialog', { name: 'Return to elevator?' }).waitFor()
+    // Let the swipe's compatibility-event sequence settle before the next tap.
+    await mobilePage.waitForTimeout(350)
+    await mobilePage.getByRole('button', { name: 'Stay in room', exact: true }).click()
+    await mobilePage.screenshot({ path: screenshotPath(`mobile-stay-level-${level}.png`) })
+    await mobilePage.getByRole('dialog', { name: 'Return to elevator?' }).waitFor({ state: 'detached' })
+    await mobilePage.waitForTimeout(1000)
+    for (const [x, y] of [[60, 160], [155, 200], [260, 170]]) {
+      assert.ok(x !== undefined && y !== undefined)
+      await mobilePage.touchscreen.tap(x, y)
+      await mobilePage.waitForTimeout(100)
+      assert.equal(await mobilePage.locator('.city-stage').getAttribute('data-elevator-status'), 'arrived', `Level ${level}: tapping the room after cancelling must not activate the elevator`)
+      assert.equal(await mobilePage.locator('.city-stage').getAttribute('data-room'), room)
+    }
+    // The real doorway must remain usable from inside the room, rather than
+    // disabling the exit entirely to avoid the cancelled-return regression.
+    if (level === 3) {
+      await mobilePage.locator('#room-progress').evaluate(input => {
+        Object.getOwnPropertyDescriptor(HTMLInputElement.prototype, 'value')!.set!.call(input, '2')
+        input.dispatchEvent(new Event('input', { bubbles: true }));input.dispatchEvent(new Event('change', { bubbles: true }))
+      })
+      await mobilePage.waitForFunction(() => Math.abs(Number(document.querySelector<HTMLElement>('.city-stage')?.dataset.roomY) - 2) < .02)
+      for (let turn = 0; turn < 4; turn++) {
+        await touchSession.send('Input.dispatchTouchEvent', { type: 'touchStart', touchPoints: [{ x: 280, y: 200 }] })
+        await touchSession.send('Input.dispatchTouchEvent', { type: 'touchMove', touchPoints: [{ x: 20, y: 200 }] })
+        await touchSession.send('Input.dispatchTouchEvent', { type: 'touchEnd', touchPoints: [] })
+      }
+      await mobilePage.waitForTimeout(350)
+      await mobilePage.touchscreen.tap(156, 339)
+      await mobilePage.waitForSelector('.city-stage[data-elevator-status=idle]', { timeout: 90000 })
+      continue
+    }
+    // Cancellation must leave navigation working, including a deliberate retry.
+    await mobilePage.keyboard.press('Escape')
+    await mobilePage.locator('#city').focus();await mobilePage.keyboard.press('Home');await mobilePage.keyboard.press('PageUp')
+    await mobilePage.getByRole('dialog', { name: 'Return to elevator?' }).waitFor()
+    await mobilePage.getByRole('button', { name: 'Yes, return to elevator', exact: true }).tap()
+    await mobilePage.waitForSelector('.city-stage[data-elevator-status=idle]', { timeout: 90000 })
+  }
+  await mobileContext.close()
   assert.deepEqual(errors, [])
   await context.close()
-  console.log('PASS sound choice/preferences: shared YES/MUTED prompt, saved decisions, blocked-policy readiness, silent tooltips, modal input/focus and responsive layout')
+  console.log('PASS sound choice/preferences: initial YES/MUTED prompt, saved decisions, blocked-policy readiness, silent tooltips, mobile continuous slider/swipes, independent settings and modal focus')
 } finally {
   await browser?.close()
   await new Promise(done => server.httpServer.close(done))

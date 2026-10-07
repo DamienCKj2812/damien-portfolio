@@ -1,16 +1,19 @@
 .city-topline { align-items: center; }
-.city-topline-actions { display: flex; align-items: center; gap: 12px; margin-block: -8px; }
-.portfolio-help { display: flex; align-items: center; justify-content: center; flex: 0 0 auto; width: 32px; height: 32px; border: 0; padding: 0; background: transparent; color: #aaa; cursor: pointer; transition: color 150ms ease; }
-.portfolio-help svg { width: 18px; height: 18px; flex: 0 0 auto; }
+.city-topline-actions { display: flex; align-items: stretch; flex: 0 0 auto; gap: 0; margin-block: -8px; border: 1px solid #ffffff30; background: #05050580; }
+.city-topline-actions > .topline-control + .topline-control { border-left: 1px solid #ffffff30; }
+.city-topline-actions button { display: flex; align-items: center; justify-content: center; min-height: 36px; border-radius: 0; padding: 0; transition: color 150ms ease, background-color 150ms ease; }
+.city-topline-actions button:hover, .city-topline-actions button[aria-expanded="true"] { background: #ffffff0a; color: #fff; }
+.portfolio-help { display: flex; align-items: center; justify-content: center; flex: 0 0 auto; width: 36px; height: 36px; border: 0; padding: 0; background: transparent; color: #aaa; cursor: pointer; transition: color 150ms ease; }
+.portfolio-help svg { width: 14px; height: 14px; flex: 0 0 auto; }
 .portfolio-help:hover { color: #fff; }
 .portfolio-help:focus-visible { outline: 1px solid #ddd; outline-offset: -5px; }
-.portfolio-preferences { display: flex; align-items: center; justify-content: center; flex: 0 0 auto; width: 32px; height: 32px; padding: 0; }
-.portfolio-preferences svg { width: 18px; height: 18px; }
+.portfolio-preferences { display: flex; align-items: center; justify-content: center; flex: 0 0 auto; width: 36px; height: 36px; padding: 0; }
+.portfolio-preferences svg { width: 14px; height: 14px; }
 .portfolio-preferences:focus-visible { outline: 1px solid #ddd; outline-offset: -5px; }
 .topline-control { position: relative; display: inline-flex; flex: 0 0 auto; }
 .topline-tooltip { position: absolute; top: calc(100% + 8px); right: 0; z-index: 70; padding: 8px 10px; border: 1px solid #ffffff30; background: #080808ed; color: #ddd; font-size: 9px; line-height: 1.5; letter-spacing: .06em; white-space: nowrap; }
 .topline-tooltip[hidden] { display: none; }
-.city-floor-shortcut { min-height: 32px; }
+.city-topline-actions .city-floor-shortcut { min-height: 36px; padding-inline: 12px; }
 .portfolio-guide { position: fixed; inset: 0; width: 100%; max-width: none; height: 100dvh; max-height: none; box-sizing: border-box; margin: 0; border: 0; padding: 80px 32px 96px; color: #e8e8e4; background: radial-gradient(ellipse at 50% 45%, #04040470 0%, #040404d1 70%); font-family: 'JetBrains Mono', ui-monospace, 'SFMono-Regular', Consolas, monospace; overflow: auto; overscroll-behavior: contain; }
 .portfolio-guide::backdrop { background: #04040455; backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); }
 .city-stage[data-guide-open="true"] .city-canvas, .city-stage[data-guide-open="true"] .city-poster { filter: blur(16px); transform: scale(1.04); }
@@ -56,11 +59,15 @@ body:has(.portfolio-guide[open]) .city-negative-cursor { display: none !importan
 .guide-actions button:hover { color: #fff; }
 .guide-actions kbd { padding: 2px 6px; border: 1px solid #ffffff4d; color: #e8e8e4; font: inherit; letter-spacing: .05em; }
 @media (max-width: 600px) {
-  .portfolio-help { width: 44px; height: 44px; }
-  .portfolio-preferences { width: 44px; height: 44px; }
-  .city-floor-shortcut { width: 44px; min-height: 44px; }
+  .city-topline-actions { border-color: #ffffff2e; background: #0404048c; backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); }
+  .city-topline-actions > .topline-control + .topline-control { border-color: #ffffff24; }
+  .city-topline-actions button { width: 44px; height: 44px; min-height: 44px; font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 13px; letter-spacing: 0; color: #e8e8e4; }
+  .portfolio-preferences svg { width: 16px; height: 16px; }
+  .city-topline-actions button[aria-expanded="true"] { background: #e8e8e4; color: #040404; }
+  .city-topline-actions button[aria-expanded="true"] circle { fill: #e8e8e4; }
+  .city-topline-actions .city-floor-shortcut { width: 44px; min-height: 44px; padding: 0; }
   .city-floor-shortcut .floor-shortcut-label { display: none; }
-  .city-topline-actions { gap: 6px; margin-block: -14px; }
+  .city-topline-actions { margin-block: 0; }
   .portfolio-guide { padding: 64px 22px 94px; }
   .guide-orientation { left: 24px; right: 24px; top: 24px; font-size: 9px; }
   .guide-readout { position: static; transform: none; align-items: center; margin-top: 20px; }
@@ -78,4 +85,4 @@ body:has(.portfolio-guide[open]) .city-negative-cursor { display: none !importan
   .guide-copy #portfolio-guide-detail { margin-top: 6px; }
   .guide-actions { bottom: 10px; }
 }
-@media (prefers-reduced-motion: reduce) { .portfolio-help { transition: none; } }
+@media (prefers-reduced-motion: reduce) { .portfolio-help, .city-topline-actions button { transition: none; } }

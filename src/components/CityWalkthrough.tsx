@@ -60,7 +60,7 @@ const phases: { end: keyof JourneyConfig['bookmarks']; label: string; title: str
 
 const initialRoomState = (): RoomState => ({ view: 'main', project: null, projectExploring:false, projectSection:'Overview', projectFocusReady:false, exhibit: null, paused: false, walkPaused: true, profileOpen: false, returnPrompt: false, openedCategories: ['client'] })
 
-export default function CityWalkthrough({ title }: { title: string }) {
+export default function CityWalkthrough() {
   const { environmentClick: playClick, click: playSystemClick, doorSound, cancelDoorSounds, preferencesOpen, openPreferences, closePreferences } = useSoundEffects()
   const sectionRef = useRef<HTMLElement>(null)
   const stageRef = useRef<HTMLDivElement>(null)
@@ -427,6 +427,8 @@ export default function CityWalkthrough({ title }: { title: string }) {
             <p className="city-loading" role={load.error ? 'alert' : 'status'}>{load.error ? load.error.message : 'Loading the city…'}</p>
           </>
         )}
+        <div className="mobile-hud-scrim mobile-hud-scrim-top" aria-hidden="true" />
+        <div className="mobile-hud-scrim mobile-hud-scrim-bottom" aria-hidden="true" />
         {preloadLobby && !lobby.assets && frame >= (load.journey?.lobbyHoldFrame ?? bookmarks.doors) && <div className="city-chapter-loading" role={lobby.error ? 'alert' : 'status'}>
           <p>{lobby.error ? 'The lobby could not load. Your city view is preserved.' : 'Preparing the atrium…'}</p>
           {lobby.error && <button type="button" onClick={() => { setLobby({ assets: null, error: null }); setRetry((value) => value + 1) }}>Retry lobby</button>}
@@ -439,16 +441,14 @@ export default function CityWalkthrough({ title }: { title: string }) {
           <p>{roomError ? `The ${roomConfig.label.toLowerCase()} could not load. The doors will stay closed.` : `Preparing the ${roomConfig.label.toLowerCase()}…`}</p>
            {roomError && <button type="button" onClick={() => { if (!roomId) return;setRooms((current) => ({ ...current, [roomId]: { assets: null, error: null } }));setRoomRetry((value) => value + 1) }}>Retry room</button>}
         </div>}
-         <div className="city-topline"><span>{title}</span><div className="city-topline-actions">
+         <div className="city-topline"><div className="city-topline-actions">
            <ToplineControl className="portfolio-preferences" label="Open sound preferences" tooltip="Sound preferences" aria-haspopup="dialog" aria-controls="audio-consent-dialog" aria-expanded={preferencesOpen} onClick={openSoundPreferences}>
-             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1" aria-hidden="true">
-               <path d="M3 6h5m4 0h9M3 12h11m4 0h3M3 18h3m4 0h11" /><circle cx="10" cy="6" r="2" /><circle cx="16" cy="12" r="2" /><circle cx="8" cy="18" r="2" />
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1" aria-hidden="true">
+                <path d="M2 4h12M2 8h12M2 12h12" /><circle cx="5" cy="4" r="1.6" fill="#040404" /><circle cx="10.5" cy="8" r="1.6" fill="#040404" /><circle cx="7" cy="12" r="1.6" fill="#040404" />
              </svg>
            </ToplineControl>
            <ToplineControl className="portfolio-help" label="Open navigation guide" tooltip="Navigation guide" aria-haspopup="dialog" aria-controls="portfolio-guide" aria-expanded={guideOpen} onClick={openGuide}>
-             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1" aria-hidden="true">
-               <circle cx="12" cy="12" r="9" /><path d="M9.4 9a2.7 2.7 0 0 1 5.2 1c0 1.8-2.6 2-2.6 3.8" /><circle cx="12" cy="17" r=".6" fill="currentColor" stroke="none" />
-             </svg>
+              <span aria-hidden="true">?</span>
            </ToplineControl>
            {!inRoom && <ToplineControl className="city-floor-shortcut" label="Choose a floor" tooltip="Choose a floor" onClick={() => { replaySelection();seekFrame(bookmarks.cabin) }}><span className="floor-shortcut-label">Choose a floor </span><span aria-hidden="true">↗</span></ToplineControl>}
          </div></div>

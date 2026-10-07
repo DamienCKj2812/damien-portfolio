@@ -128,11 +128,10 @@ export default function BackgroundMusic({ track }: { track: BackgroundMusicTrack
     else { cancelAttempt();setStarting(false);setPlaying(false);audioRef.current?.pause() }
   }
 
-  const toggle = (event: ReactMouseEvent<HTMLButtonElement>) => {
-    if (effects.consent === null || !event.isTrusted) return
+  const changeMusic = (enabled: boolean) => {
     activated.current = true
     setError('')
-    if (playing || starting) {
+    if (!enabled) {
       wanted.current = false;cancelAttempt();setStarting(false)
       setPlaying(false)
       setSettings(current => ({ ...current, enabled: false }))
@@ -144,10 +143,18 @@ export default function BackgroundMusic({ track }: { track: BackgroundMusicTrack
     }
   }
 
+  const toggle = (event: ReactMouseEvent<HTMLButtonElement>) => {
+    if (effects.consent !== null && event.isTrusted) changeMusic(!(playing || starting))
+  }
+  const togglePreference = (event: ReactMouseEvent<HTMLButtonElement>) => {
+    if (effects.consent !== null && event.isTrusted) changeMusic(!settings.enabled)
+  }
+
   const musicState = error ? 'error' : playing ? 'playing' : starting ? 'starting' : settings.enabled ? 'ready' : 'off'
   const musicLabel = { error: 'Music unavailable', playing: 'Music on', starting: 'Starting…', ready: 'Music ready', off: 'Music off' }[musicState]
   return <>
-    {(effects.consent === null || effects.preferencesOpen) && <AudioConsentDialog onEnable={() => chooseSound(true)} onMute={() => chooseSound(false)} onDismiss={effects.preferencesOpen ? effects.closePreferences : undefined} />}
+    {(effects.consent === null || effects.preferencesOpen) && <AudioConsentDialog onEnable={() => chooseSound(true)} onMute={() => chooseSound(false)} onDismiss={effects.preferencesOpen ? effects.closePreferences : undefined}
+      preferences={{ musicEnabled: settings.enabled, effectsEnabled: effects.enabled, track, onToggleMusic: togglePreference, onToggleEffects: effects.toggle }} />}
     <aside className="background-music" data-background-music data-music-enabled={settings.enabled} data-music-state={musicState} data-autoplay-policy={automaticPolicy} data-autoplay-blocked={autoplayBlocked} aria-label="Audio controls">
     <audio id="background-music-audio" ref={audioRef} src={`${import.meta.env.BASE_URL}${track.src}`} preload="none" loop
       onPlaying={event => {
@@ -160,8 +167,8 @@ export default function BackgroundMusic({ track }: { track: BackgroundMusicTrack
       <button type="button" className="background-music-toggle" data-enabled={playing} onClick={toggle} aria-pressed={playing} aria-busy={starting}
         aria-label={playing || starting ? 'Pause background music' : 'Play background music'}
         title={autoplayBlocked ? 'Your browser blocked automatic music. Click to play, or allow autoplay for this site in your browser settings.' : undefined}>
-        <svg className="background-music-icon" data-active={playing} width="13" height="14" viewBox="0 0 13 14" fill="currentColor" aria-hidden="true">
-          {[5, 9, 13, 7].map((height, index) => <rect key={index} x={index * 3} y={14 - (playing ? height : 3)} width="1.5" height={playing ? height : 3} />)}
+        <svg className="background-music-icon" data-active={playing} width="14" height="12" viewBox="0 0 14 14" fill="currentColor" aria-hidden="true">
+          {[5, 9, 13, 7].map((height, index) => <rect key={index} x={index * 4} y={14 - (playing ? height : 2)} width="2" height={playing ? height : 2} />)}
         </svg>
         <span>{musicLabel}</span>
       </button>

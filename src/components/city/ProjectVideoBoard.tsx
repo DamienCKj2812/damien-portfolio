@@ -19,10 +19,15 @@ export interface ProjectVideoCandidate {
   focused: boolean
   score: number
   centred: boolean
+  promptElement: HTMLDivElement | null
+  promptEligible: boolean
+  promptEnabled: boolean
+  distance: number
 }
 
 export interface ProjectVideoSelection {
   active: string | null
+  prompt: string | null
   entries: Map<string, ProjectVideoCandidate>
 }
 
@@ -73,10 +78,10 @@ export default function ProjectVideoBoard({ project, groups, enabled, focused, p
     // VideoTexture cannot survive StrictMode's dispose/replay or a size change.
     return {video,texture:null,textureSource:null,poster:null}
   }, [])
-  const candidate=useMemo<ProjectVideoCandidate>(()=>({video:media.video,eligible:false,focused:false,score:Infinity,centred:false}),[media])
+  const candidate=useMemo<ProjectVideoCandidate>(()=>({video:media.video,eligible:false,focused:false,score:Infinity,centred:false,promptElement:null,promptEligible:false,promptEnabled:false,distance:Infinity}),[media])
   useEffect(()=>{
     selection.entries.set(project.id,candidate)
-    return ()=>{selection.entries.delete(project.id);media.video.pause();if(selection.active===project.id) selection.active=null}
+    return ()=>{selection.entries.delete(project.id);media.video.pause();if(selection.active===project.id) selection.active=null;if(selection.prompt===project.id) selection.prompt=null}
   },[selection,project.id,candidate,media])
   const face = useMemo(() => {
     const card=project.card,normal=new Vector3().fromArray(card.normal),right=new Vector3().fromArray(card.right || [0,1,0]),up=new Vector3(0,0,1)
@@ -220,10 +225,15 @@ export default function ProjectVideoBoard({ project, groups, enabled, focused, p
         }
       }
       const outside=x+width<=left-gap||x>=right+gap||y+height<=top-gap||y>=bottom+gap
-      node.style.width=`${width}px`;node.style.transform=`translate(${x}px,${y}px)`;node.style.visibility=show&&outside&&y>=0?'visible':'hidden'
+      node.style.width=`${width}px`;node.style.transform=`translate(${x}px,${y}px)`
+      candidate.promptEligible=show&&outside&&y>=0
+      candidate.distance=scratch.center.copy(face.center).applyMatrix4(root.current.matrixWorld).distanceToSquared(camera.position)
       node.dataset.boardLeft=String(left);node.dataset.boardRight=String(right);node.dataset.boardTop=String(top);node.dataset.boardBottom=String(bottom)
-      node.dataset.visible=String(show&&outside&&y>=0)
     }
+    candidate.promptElement=dock.current
+    candidate.promptEnabled=enabled&&!paused&&!document.hidden
+    dock.current.dataset.promptEligible=String(candidate.promptEligible&&candidate.promptEnabled)
+    dock.current.dataset.cameraDistance=String(candidate.distance)
     const source=focused?(video.canPlayType('video/mp4; codecs="av01.0.08M.08"')?project.video.full:project.video.fullFallback):(project.video.previewFallback || project.video.preview)
     const mode=focused?'full':'preview'
     if(control.mode!==mode) {
@@ -283,7 +293,7 @@ export default function ProjectVideoBoard({ project, groups, enabled, focused, p
           </div>
           {state.error&&<p role="status">{state.error}</p>}
         </>:<button type="button" className="project-video-description" data-sound-effect="environment" aria-label={`Watch ${project.title} full walkthrough`} disabled={!enabled||paused}
-          onFocus={()=>{held.current=true;scratch.dirty=true;invalidate()}} onBlur={()=>{held.current=false;scratch.dirty=true;invalidate()}} onClick={()=>onInteract(project.id,'label')}>
+          onFocus={()=>{held.current=true;scratch.dirty=true;invalidate()}} onBlur={()=>{held.current=false;scratch.dirty=true;invalidate()}} onClick={()=>{if(selection.prompt===project.id) onInteract(project.id,'label')}}>
           <strong>{project.title}</strong><span>{project.summary.replaceAll('\n',' ')}</span><span className="project-video-action">Watch full walkthrough ↗</span>
         </button>}
       </div>

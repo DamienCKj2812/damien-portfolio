@@ -1,66 +1,91 @@
 import { useEffect, useRef, useState } from 'react'
 import { createPortal } from 'react-dom'
-import type { CSSProperties } from 'react'
 import type { JourneyRecord } from '../../types/portfolio'
 import { portfolio } from '../../data/portfolio'
 import { useReducedMotion } from './useScrollTimeline'
-import './observerProfile.css'
 import PixelPortrait from './PixelPortrait'
 import useSoundEffects from '../../audio/useSoundEffects'
+import './observerProfile.css'
 
 export interface ObserverProfileProps { onClose: () => void }
-export interface GlitchTextProps { children: string; delay?: number }
-export interface RecordSectionProps { title: string; items: readonly JourneyRecord[] }
-type GlitchStyle = CSSProperties & { '--observer-text-delay': string }
-type SignalStyle = CSSProperties & { '--signal-index': number; '--signal-origin': string; '--signal-delay': string }
 
-function GlitchText({ children, delay = 0 }: GlitchTextProps) {
-  const style: GlitchStyle = { '--observer-text-delay': `${delay}ms` }
-  return <span className="observer-glitch-text" style={style}>
-    <span className="observer-glitch-base">{children}</span>
-    <span className="observer-glitch-fragment observer-glitch-fragment-top" data-text={children} aria-hidden="true" />
-    <span className="observer-glitch-fragment observer-glitch-fragment-bottom" data-text={children} aria-hidden="true" />
-    <span className="observer-glitch-text-mask" aria-hidden="true" />
-  </span>
+function recordHighlights(lines: readonly string[]) {
+  const cards: { title: string; description: string; result?: string }[] = []
+  for (const line of lines) {
+    const match = /^([^:]{1,80}): (.+)$/.exec(line)
+    const title = match?.[1] || ''
+    const description = match?.[2] || line
+    const previous = cards.at(-1)
+    const resultName = title.endsWith(' achievement') ? title.replace(/ achievement$/, '') : null
+    if (resultName && previous?.title.startsWith(resultName)) previous.result = description
+    else cards.push({ title, description })
+  }
+  return cards
 }
 
-function RecordSection({ title, items }: RecordSectionProps) {
+function RecordEntry({ item, narrow, initiallyOpen }: { item: JourneyRecord; narrow: boolean; initiallyOpen: boolean }) {
+  const [expanded, setExpanded] = useState(initiallyOpen)
+  const highlights = 'highlights' in item ? item.highlights : []
+  const cards = recordHighlights(highlights)
+  const showDetails = !narrow || expanded
+  return <article className="observer-record-row">
+    <div className="observer-record-title">
+      {item.period && <p className="observer-period">{item.period === 'Ongoing' && <span className="observer-status-dot" aria-hidden="true"/>}{item.period}</p>}
+      <h4>{item.organization}</h4>
+      <p className="observer-record-role">{item.title}</p>
+      {item.category.includes('SAMPLE') && <span className="observer-sample">Sample entry</span>}
+    </div>
+    {item.description && <p className="observer-record-description">{item.description}</p>}
+    {highlights.length > 0 && <>
+      <ul id={`observer-highlights-${item.id}`} className="observer-record-highlights" hidden={!showDetails}>{cards.map(card=><li key={card.description}>{card.title && <strong>{card.title}</strong>}<p>{card.description}</p>{card.result && <div className="observer-highlight-result"><span>Result</span><p>{card.result}</p></div>}</li>)}</ul>
+      {narrow && <button type="button" className="observer-details-toggle" aria-expanded={expanded} aria-controls={`observer-highlights-${item.id}`} onClick={()=>setExpanded(value=>!value)}>{expanded?'Hide details −':`Show ${cards.length} highlights +`}</button>}
+    </>}
+  </article>
+}
+
+function RecordSection({ title, items, narrow }: { title: string; items: readonly JourneyRecord[]; narrow: boolean }) {
   return <section className="observer-record-section" aria-label={title}>
-    <div className="observer-record-heading"><h3><GlitchText delay={220}>{title}</GlitchText></h3><span><GlitchText delay={250}>{String(items.length).padStart(2, '0')}</GlitchText></span></div>
-    {items.length ? items.map((item, index) => <article className="observer-record-row" data-undated={!item.period} key={item.id}>
-      {item.period && <p className="observer-period"><GlitchText delay={310 + index * 40}>{item.period}</GlitchText></p>}
-      <div><h4><GlitchText delay={330 + index * 40}>{item.organization}</GlitchText></h4><p><GlitchText delay={370 + index * 40}>{item.title}</GlitchText></p>
-        {item.category.includes('SAMPLE') && <span className="observer-sample">Sample entry</span>}
-        {item.description && <p className="observer-record-description">{item.description}</p>}
-        {'highlights' in item && item.highlights && item.highlights.length > 0 && <ul className="observer-record-highlights">{item.highlights.map(highlight=><li key={highlight}>{highlight}</li>)}</ul>}
-      </div>
-    </article>) : <p className="observer-empty-record">Details to be added.</p>}
+    <div className="observer-record-heading"><h3>{title}</h3><span>{String(items.length).padStart(2,'0')}</span></div>
+    {items.length ? items.map((item,index)=><RecordEntry key={item.id} item={item} narrow={narrow} initiallyOpen={index===0}/>) : <p className="observer-empty-record">Details to be added.</p>}
   </section>
 }
+
+const PANEL_LABELS = ['Identity','Portrait','Record'] as const
 
 export default function ObserverProfile({ onClose }: ObserverProfileProps) {
   const { click: playClick } = useSoundEffects()
   const dialogRef = useRef<HTMLDialogElement>(null)
   const closeRef = useRef<HTMLButtonElement>(null)
+  const mainRef = useRef<HTMLDivElement>(null)
+  const panels = useRef<(HTMLElement | null)[]>([])
+  const copyTimer = useRef<ReturnType<typeof setTimeout> | null>(null)
+  const copyRequest = useRef({ value: 0 })
   const reducedMotion = useReducedMotion()
-  const [closing, setClosing] = useState(false)
-  const requestClose = () => {
-    if (closing) return
-    if (reducedMotion) onClose()
-    else setClosing(true)
-  }
+  const [narrow, setNarrow] = useState(()=>window.matchMedia('(max-width: 899px)').matches)
+  const [activePanel, setActivePanel] = useState(0)
+  const [copied, setCopied] = useState<string | null>(null)
+  const [copyMessage, setCopyMessage] = useState('')
   const profile = portfolio.about.profile
-  const education = portfolio.journey.items.filter((item) => /education/i.test(item.category))
-  const experience = portfolio.journey.items.filter((item) => !/education/i.test(item.category))
-  const stack = (profile.stack || [...new Set(portfolio.skills.groups.flatMap((group) => group.items))]).join(', ')
+  const education = portfolio.journey.items.filter(item=>/education/i.test(item.category))
+  const experience = portfolio.journey.items.filter(item=>!/education/i.test(item.category))
+  const stack = profile.stack || [...new Set(portfolio.skills.groups.flatMap(group=>group.items))]
   const portrait = profile.portrait
-  const portraitSrc = portrait?.src ? /^https?:\/\//.test(portrait.src) ? portrait.src : `${import.meta.env.BASE_URL}${portrait.src.replace(/^\/+/, '')}` : null
-  const originalPortraitSrc = portrait?.originalSrc ? /^https?:\/\//.test(portrait.originalSrc) ? portrait.originalSrc : `${import.meta.env.BASE_URL}${portrait.originalSrc.replace(/^\/+/, '')}` : null
+  const assetUrl = (src?: string | null) => src ? /^https?:\/\//.test(src) ? src : `${import.meta.env.BASE_URL}${src.replace(/^\/+/, '')}` : null
+  const portraitSrc = assetUrl(portrait?.src)
+  const originalPortraitSrc = assetUrl(portrait?.originalSrc)
+
+  useEffect(()=>{
+    const query = window.matchMedia('(max-width: 899px)')
+    const update = () => setNarrow(query.matches)
+    query.addEventListener('change',update)
+    return ()=>query.removeEventListener('change',update)
+  },[])
 
   useEffect(() => {
     const dialog = dialogRef.current
     if (!dialog) return
     const previousFocus = document.activeElement
+    const request = copyRequest.current
     const body = document.body
     const previousOverflow = body.style.overflow
     const previousPadding = body.style.paddingRight
@@ -73,86 +98,98 @@ export default function ObserverProfile({ onClose }: ObserverProfileProps) {
       if (dialog.open) dialog.close()
       body.style.overflow = previousOverflow
       body.style.paddingRight = previousPadding
+      request.value++
+      if (copyTimer.current) clearTimeout(copyTimer.current)
       const fallback = document.getElementById('observer-profile-trigger')
       const target = previousFocus instanceof HTMLElement && previousFocus.isConnected && previousFocus.matches('button, a, input, select, textarea, [tabindex]') ? previousFocus : fallback
       target?.focus({ preventScroll: true })
     }
   }, [])
 
-  useEffect(() => {
-    if (!closing) return
-    const timer = window.setTimeout(onClose, reducedMotion ? 0 : 960)
-    return () => window.clearTimeout(timer)
-  }, [closing, reducedMotion, onClose])
+  const copyContact = async (id: string, text: string) => {
+    const request = ++copyRequest.current.value
+    if (copyTimer.current) clearTimeout(copyTimer.current)
+    try {
+      await navigator.clipboard.writeText(text)
+      if (request !== copyRequest.current.value) return
+      setCopied(id)
+      setCopyMessage(`${id === 'email'?'Email address':'Phone number'} copied.`)
+      copyTimer.current = setTimeout(()=>{setCopied(null);setCopyMessage('')},1500)
+    } catch {
+      if (request !== copyRequest.current.value) return
+      setCopied(null)
+      setCopyMessage('Could not copy. Please select the contact text to copy it.')
+    }
+  }
 
-  return createPortal(<dialog
-    ref={dialogRef}
-    id="observer-profile-dialog"
-    className="observer-profile"
-    data-closing={closing}
-    aria-labelledby="observer-profile-title"
-    onKeyDown={(event) => {
-      if (event.key !== 'Tab') return
-      const items = [...event.currentTarget.querySelectorAll<HTMLElement>('button, a[href], input, select, textarea, [tabindex="0"]')].filter((item) => !item.matches(':disabled'))
-      const first = items[0], last = items.at(-1)
-      if (event.shiftKey && document.activeElement === first) { event.preventDefault();last?.focus() }
-      else if (!event.shiftKey && document.activeElement === last) { event.preventDefault();first?.focus() }
-    }}
-    onCancel={(event) => { event.preventDefault();playClick();requestClose() }}
-  >
+  const selectPanel = (index: number) => {
+    const panel = panels.current[index]
+    if (!panel || !mainRef.current) return
+    mainRef.current.scrollTo({top:panel.offsetTop,behavior:reducedMotion?'instant':'smooth'})
+    panel.focus({preventScroll:true})
+    setActivePanel(index)
+  }
+  const updateActivePanel = () => {
+    const main = mainRef.current
+    if (!narrow || !main) return
+    let index = 0
+    panels.current.forEach((panel,i)=>{if(panel && panel.offsetTop <= main.scrollTop+120) index=i})
+    setActivePanel(index)
+  }
+
+  return createPortal(<dialog ref={dialogRef} id="observer-profile-dialog" className="observer-profile" aria-labelledby="observer-profile-title"
+    onKeyDown={event=>{
+      if(event.key!=='Tab') return
+      const items = [...event.currentTarget.querySelectorAll<HTMLElement>('button, a[href], input, select, textarea, [tabindex="0"]')].filter(item=>!item.matches(':disabled') && item.getClientRects().length>0)
+      const first=items[0],last=items.at(-1)
+      if(event.shiftKey && document.activeElement===first) {event.preventDefault();last?.focus()}
+      else if(!event.shiftKey && document.activeElement===last) {event.preventDefault();first?.focus()}
+    }} onCancel={event=>{event.preventDefault();playClick();onClose()}}>
     <div className="observer-sheet">
       <header className="observer-sheet-header">
-        <span>ROOM 01 / ABOUT</span>
-        <span className="observer-header-center">{portfolio.name.toUpperCase()} / PERSONAL PORTFOLIO</span>
-        <div className="observer-header-actions"><span>REV. {profile.revision}</span><button ref={closeRef} type="button" onClick={requestClose} aria-label="Close about profile">CLOSE <span aria-hidden="true">×</span></button></div>
+        <span>Room 01 / About</span>
+        <span className="observer-header-center">{portfolio.name} / Personal portfolio</span>
+        <div className="observer-header-actions"><span>Rev. {profile.revision}</span><button ref={closeRef} type="button" onClick={onClose} aria-label="Close about profile">Close <span aria-hidden="true">×</span></button></div>
       </header>
-
-      <div className="observer-columns">
-        <div className="observer-signal-blocks" aria-hidden="true">
-          {Array.from({ length: 18 }, (_, index) => {
-            const style: SignalStyle = { '--signal-index': index, '--signal-origin': index % 3 === 0 ? 'top' : 'bottom', '--signal-delay': `${(index * 37) % 190}ms` }
-            return <span key={index} style={style} />
-          })}
-        </div>
-        <section className="observer-column observer-identity" aria-label="Identity" tabIndex={0}>
-          <p className="observer-section-index"><GlitchText delay={80}>01 — IDENTITY</GlitchText></p>
-          <h2 id="observer-profile-title">{(portfolio.fullName || portfolio.name).split(/\s+/).map((part, index) => <GlitchText key={`${part}-${index}`} delay={130 + index * 70}>{part.toUpperCase()}</GlitchText>)}</h2>
-          {portfolio.fullName && <p className="observer-role"><GlitchText delay={190}>{`English name · ${portfolio.name}`}</GlitchText></p>}
-          <p className="observer-role"><GlitchText delay={210}>{profile.role}</GlitchText></p>
-          <p className="observer-status"><span className="observer-status-dot" aria-hidden="true" /><GlitchText delay={250}>{profile.status}</GlitchText></p>
-          <p className="observer-bio"><GlitchText delay={290}>{portfolio.about.description}</GlitchText></p>
-          {profile.approach && <p className="observer-bio"><GlitchText delay={310}>{profile.approach}</GlitchText></p>}
+      <nav className="observer-mobile-nav" aria-label="Profile sections">{PANEL_LABELS.map((label,index)=><button type="button" key={label} aria-current={index===activePanel?'location':undefined} onClick={()=>selectPanel(index)}>{label}</button>)}</nav>
+      <div className="observer-columns" ref={mainRef} onScroll={updateActivePanel}>
+        <section ref={node=>{panels.current[0]=node}} className="observer-column observer-identity" aria-label="Identity" tabIndex={0}>
+          <p className="observer-section-index">01 — Identity</p>
+          <div className="observer-identity-heading">
+            <h2 id="observer-profile-title">{(portfolio.fullName || portfolio.name).split(/\s+/).map((part,index)=><span key={`${part}-${index}`}>{part}</span>)}</h2>
+            <div className="observer-roles">{portfolio.fullName && <p className="observer-role">English name · {portfolio.name}</p>}<p className="observer-role">{profile.role}</p></div>
+            <p className="observer-status"><span className="observer-status-dot" aria-hidden="true"/>{profile.status}</p>
+          </div>
+          <div className="observer-bios"><p className="observer-bio">{portfolio.about.description}</p>{profile.approach && <p className="observer-bio">{profile.approach}</p>}</div>
           <dl className="observer-identity-facts">
-            <div><dt><GlitchText delay={330}>BASED</GlitchText></dt><dd><GlitchText delay={350}>{profile.location || '—'}</GlitchText></dd></div>
-            <div><dt><GlitchText delay={370}>STACK</GlitchText></dt><dd><GlitchText delay={390}>{stack}</GlitchText></dd></div>
-            <div><dt><GlitchText delay={410}>FOCUS</GlitchText></dt><dd><GlitchText delay={430}>{profile.focus}</GlitchText></dd></div>
-            {portfolio.skills.learning?.length > 0 && <div><dt><GlitchText delay={450}>LEARNING</GlitchText></dt><dd><GlitchText delay={470}>{portfolio.skills.learning.join(', ')}</GlitchText></dd></div>}
-            {profile.strengths?.length > 0 && <div><dt><GlitchText delay={490}>STRENGTHS</GlitchText></dt><dd><GlitchText delay={510}>{profile.strengths.join(', ')}</GlitchText></dd></div>}
+            <div><dt>Based</dt><dd>{profile.location || '—'}</dd></div>
+            <div><dt>Focus</dt><dd>{profile.focus}</dd></div>
+            {portfolio.skills.learning.length>0 && <div><dt>Learning</dt><dd>{portfolio.skills.learning.join(', ')}</dd></div>}
+            {profile.strengths?.length>0 && <div><dt>Strengths</dt><dd>{profile.strengths.join(', ')}</dd></div>}
+            <div><dt>Stack</dt><dd className="observer-stack">{stack.map(tag=><span key={tag}>{tag}</span>)}</dd></div>
           </dl>
-          <section className="observer-record-section" aria-label="Contact"><div className="observer-record-heading"><h3>Contact</h3></div><ul className="observer-profile-links">{portfolio.contact.links.map(link=><li key={link.id}><a href={link.href} target={/^https?:/.test(link.href)?'_blank':undefined} rel={/^https?:/.test(link.href)?'noreferrer':undefined}>{link.label}</a></li>)}</ul></section>
-          {profile.interests?.length > 0 && <section className="observer-record-section" aria-label="Interests"><div className="observer-record-heading"><h3>Interests</h3></div><ul className="observer-record-highlights">{profile.interests.map(interest=><li key={interest}>{interest}</li>)}</ul></section>}
+          <section className="observer-contacts" aria-label="Contact"><h3>Contact</h3>
+            {portfolio.contact.links.filter(link=>link.id==='email'||link.id==='phone').map(link=><div className="observer-contact" key={link.id}><a href={link.href}><span>{link.id}</span><strong>{link.label}</strong></a><button type="button" aria-label={`Copy ${link.id}`} onClick={()=>{void copyContact(link.id,link.label)}}>{copied===link.id?'Copied':'Copy'}</button></div>)}
+            <ul className="observer-profile-links">{portfolio.contact.links.filter(link=>link.id!=='email'&&link.id!=='phone').map(link=><li key={link.id}><a href={link.href} target="_blank" rel="noopener noreferrer">{link.label} ↗</a></li>)}</ul>
+            <p className="observer-copy-status" role="status">{copyMessage}</p>
+          </section>
+          {profile.interests?.length>0 && <section className="observer-interests" aria-label="Interests"><h3>Interests</h3><ul>{profile.interests.map(interest=><li key={interest}>{interest}</li>)}</ul></section>}
         </section>
-
-        <section className="observer-column observer-portrait-column" aria-label="Portrait" tabIndex={0}>
-          <p className="observer-section-index"><GlitchText delay={140}>02 — PORTRAIT</GlitchText></p>
-          <figure className="observer-portrait">
-            <div className="observer-portrait-frame">
-              {[0, 1, 2, 3].map((corner) => <span key={corner} className={`observer-corner observer-corner-${corner}`} aria-hidden="true" />)}
-              <div className="observer-portrait-window">
-                {portraitSrc ? <PixelPortrait src={portraitSrc} originalSrc={originalPortraitSrc} alt={portrait?.alt || `Portrait of ${portfolio.name}`} reducedMotion={reducedMotion} active={!closing} /> : <span className="observer-portrait-placeholder">[ PORTRAIT ]</span>}
-              </div>
-            </div>
-            <figcaption><span>FIG. 01</span><span>{portrait?.caption || '4 : 5'}</span></figcaption>
-          </figure>
+        <section ref={node=>{panels.current[1]=node}} className="observer-column observer-portrait-column" aria-label="Portrait" tabIndex={0}>
+          <p className="observer-section-index">02 — Portrait</p>
+          <figure className="observer-portrait"><div className="observer-portrait-frame">
+            {[0,1,2,3].map(corner=><span key={corner} className={`observer-corner observer-corner-${corner}`} aria-hidden="true"/>)}
+            <div className="observer-portrait-window">{portraitSrc?<PixelPortrait src={portraitSrc} originalSrc={originalPortraitSrc} alt={portrait?.alt || `Portrait of ${portfolio.name}`} reducedMotion={reducedMotion} active/>:<span className="observer-portrait-placeholder">[ Portrait ]</span>}</div>
+          </div><figcaption><span>Fig. 01</span><span>{portrait?.caption || 'Pixel portrait'}</span></figcaption></figure>
+          <p className="observer-portrait-hint">Move your cursor across the portrait to reveal its original colors. Keyboard focus reveals the full photograph.</p>
         </section>
-
-        <section className="observer-column observer-record" aria-label="Experience and education" tabIndex={0}>
-          <p className="observer-section-index"><GlitchText delay={180}>03 — RECORD</GlitchText></p>
-          <RecordSection title="Experience" items={experience} />
-          <RecordSection title="Education" items={education} />
+        <section ref={node=>{panels.current[2]=node}} className="observer-column observer-record" aria-label="Experience and education" tabIndex={0}>
+          <p className="observer-section-index">03 — Record</p>
+          <RecordSection title="Experience" items={experience} narrow={narrow}/>
+          <RecordSection title="Education" items={education} narrow={narrow}/>
         </section>
       </div>
-      <footer className="observer-sheet-footer"><span>IDENTITY / PORTRAIT / RECORD</span><button type="button" onClick={requestClose}>RETURN TO OFFICE <span aria-hidden="true">↗</span></button><span>ESC TO CLOSE</span></footer>
+      <footer className="observer-sheet-footer"><span>Identity / Portrait / Record</span><button type="button" onClick={onClose}>Return to office <span aria-hidden="true">↗</span></button><span>Esc to close</span></footer>
     </div>
-  </dialog>, document.body)
+  </dialog>,document.body)
 }

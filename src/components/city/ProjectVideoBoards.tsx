@@ -17,8 +17,33 @@ export interface ProjectVideoBoardsProps {
 
 export default function ProjectVideoBoards({ projects, groups, roomState, roomArrived, reducedMotion, onInteract }: ProjectVideoBoardsProps) {
   const { invalidate, gl }=useThree()
-  const selection=useMemo<ProjectVideoSelection>(()=>({active:null,entries:new Map<string, ProjectVideoCandidate>()}),[])
+  const selection=useMemo<ProjectVideoSelection>(()=>({active:null,prompt:null,entries:new Map<string, ProjectVideoCandidate>()}),[])
   useFrame(()=>{
+    let prompt: string | null=null,distance=Infinity,focusedPrompt=false
+    for(const [id,entry] of selection.entries) {
+      if(!entry.promptElement||!entry.promptEligible||!entry.promptEnabled) continue
+      if(entry.focused&&!focusedPrompt||entry.focused===focusedPrompt&&entry.distance<distance) {
+        prompt=id;distance=entry.distance;focusedPrompt=entry.focused
+      }
+    }
+    // Hide every losing prompt before revealing the winner. Prompt selection is
+    // distance-based and independent of preview playback/reduced-motion policy.
+    for(const [id,entry] of selection.entries) {
+      const node=entry.promptElement
+      if(!node||id===prompt) continue
+      if(node.style.visibility!=='hidden') node.style.visibility='hidden'
+      if(node.dataset.visible!=='false') node.dataset.visible='false'
+    }
+    const node=prompt?selection.entries.get(prompt)?.promptElement:null
+    if(node) {
+      if(node.style.visibility!=='visible') node.style.visibility='visible'
+      if(node.dataset.visible!=='true') node.dataset.visible='true'
+    }
+    if(selection.prompt!==prompt) {
+      selection.prompt=prompt
+      gl.domElement.dataset.activeProjectPrompt=prompt || ''
+      invalidate()
+    }
     let best: string | null=null,score=Infinity
     for(const [id,entry] of selection.entries) {
       if(!entry.eligible) continue

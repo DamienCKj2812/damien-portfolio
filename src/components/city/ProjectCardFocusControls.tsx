@@ -42,6 +42,7 @@ export default function ProjectCardFocusControls(props: ProjectCardFocusControls
   const { project, projectCount, selectedSection, onSection, onBack, variant = 'project' } = props
   const { click } = useSoundEffects()
   const description = useRef<HTMLDivElement>(null)
+  const chapterSheet = useRef<HTMLDialogElement>(null)
   const wheel = useRef({ delta: 0, lastEvent: 0, changedAt: -Infinity })
   const sections = useMemo(()=>publicCaseSections(project,project.catalogueSections || [{heading:'Overview',markdown:('overview' in project && project.overview) || (project.summary ?? '').replaceAll('\n',' ')}]),[project])
   const index = Math.max(0,sections.findIndex(section=>section.heading===selectedSection))
@@ -105,11 +106,27 @@ export default function ProjectCardFocusControls(props: ProjectCardFocusControls
   const liveUrl = 'liveUrl' in project ? project.liveUrl : undefined
   const liveLabel = 'liveLabel' in project ? project.liveLabel : undefined
   return <>
+    <>
+      <header className="project-mobile-header">
+        <button type="button" aria-label={skill?'Back to gallery':timeline?'Back to observatory':'Back to hallway'} onClick={onBack}>←</button>
+        <div><span>{skill?'Skills / Skill guide':timeline?'Journey / Journey record':'Projects / Case file'}</span><strong>{String(project.catalogueNumber || 1).padStart(2,'0')} {project.title.replaceAll('\n',' ')}</strong></div>
+        <nav aria-label="Chapter progress">{sections.map((item,i)=><button key={item.heading} type="button" aria-label={`Chapter ${i+1}: ${TITLES[item.heading] || item.heading}`} aria-current={i===index?'step':undefined} data-complete={i<=index} onClick={()=>onSection(item.heading)}><span/></button>)}</nav>
+      </header>
+      <nav className="project-mobile-dock" aria-label={skill?'Skill chapters':timeline?'Timeline chapters':'Project chapters'}>
+        <button type="button" aria-label="Previous chapter" disabled={!prev} onClick={()=>{if(prev) onSection(prev.heading)}}>←</button>
+        <button type="button" aria-haspopup="dialog" onClick={()=>chapterSheet.current?.showModal()}><span>{String(index+1).padStart(2,'0')}/{String(sections.length).padStart(2,'0')}</span><strong>{TITLES[section.heading] || section.heading}</strong><span>▴</span></button>
+        <button type="button" aria-label="Next chapter" disabled={!next} onClick={()=>{if(next) onSection(next.heading)}}>→</button>
+      </nav>
+      <dialog ref={chapterSheet} className="project-mobile-sheet" aria-labelledby="project-mobile-chapters-title" onKeyDown={event=>event.stopPropagation()} onClick={event=>{if(event.target===event.currentTarget) chapterSheet.current?.close()}}>
+        <header><h2 id="project-mobile-chapters-title">Chapters</h2><button type="button" aria-label="Close chapters" onClick={()=>chapterSheet.current?.close()}>×</button></header>
+        <ol>{sections.map((item,i)=><li key={item.heading}><button type="button" aria-current={i===index?'step':undefined} onClick={()=>{onSection(item.heading);chapterSheet.current?.close()}}><span>{String(i+1).padStart(2,'0')}</span><strong>{TITLES[item.heading] || item.heading}</strong><span>{i===index?'●':''}</span></button></li>)}</ol>
+      </dialog>
+    </>
     <button type="button" className="project-focus-back" data-exploring="true" onClick={onBack}>← {skill?'Back to gallery':timeline?'Back to observatory':'Back to hallway'} <kbd>Esc</kbd></button>
       <div className="project-case-sidefade project-case-sidefade-left" aria-hidden="true"/>
       <div className="project-case-sidefade project-case-sidefade-right" aria-hidden="true"/>
       <div className="project-case-context" aria-label={skill?'Skill context':timeline?'Timeline context':'Project context'}><span>{portfolio.siteTitle}</span><span aria-hidden="true">/</span><span>{skill?'Skills':timeline?'Journey':'Projects'}</span><span aria-hidden="true">/</span><span>{category.number} {category.title}</span></div>
-      <aside className="project-case-description" aria-label={skill?'Skill description':timeline?'Timeline entry description':'Project description'}>
+      <aside className="project-case-description" data-mobile-project="true" aria-label={skill?'Skill description':timeline?'Timeline entry description':'Project description'}>
         <header>
           <div className="project-case-eyebrow"><span>{skill?'Skill':timeline?'Entry':'Project'} {String(project.catalogueNumber||1).padStart(2,'0')} / {projectCount}</span>{props.variant==='timeline'?<span>{props.project.categoryLabel}</span>:'year' in project && project.year && <span>{project.year}</span>}</div>
           <h2>{project.title.replaceAll('\n',' ')}</h2>
@@ -117,8 +134,11 @@ export default function ProjectCardFocusControls(props: ProjectCardFocusControls
         </header>
         <dl className="project-case-meta">{metadata.map(([label,value])=><Fragment key={label}><dt>{label}</dt><dd>{value}</dd></Fragment>)}</dl>
         <section aria-live="polite">
-          <h3>{String(index+1).padStart(2,'0')} / {TITLES[section.heading] || section.heading}</h3>
-          <div className="project-case-scroll" ref={description}><ProjectCatalogueContent section={section} numberedRows/></div>
+          <div className="project-mobile-chapter-count">Chapter {String(index+1).padStart(2,'0')} / {String(sections.length).padStart(2,'0')}</div>
+          <h3><span className="project-case-section-number">{String(index+1).padStart(2,'0')} / </span>{TITLES[section.heading] || section.heading}</h3>
+          <div className="project-case-scroll" ref={description}><ProjectCatalogueContent section={section} numberedRows/>
+            <button type="button" className="project-mobile-next" onClick={()=>onSection((next || sections[0] || section).heading)}><span><small>{next?`Next · ${String(index+2).padStart(2,'0')}`:'Back to start'}</small><strong>{TITLES[(next || sections[0] || section).heading] || (next || sections[0] || section).heading}</strong></span><span>→</span></button>
+          </div>
           <div className="project-case-pagination">
             <button type="button" disabled={!prev} onClick={()=>{ if (prev) onSection(prev.heading) }} aria-label={`Previous ${skill?'skill':'project'} section`}>← {prev?(TITLES[prev.heading]||prev.heading):'Start'}</button>
             <button type="button" disabled={!next} onClick={()=>{ if (next) onSection(next.heading) }} aria-label={`Next ${skill?'skill':'project'} section`}>{next?(TITLES[next.heading]||next.heading):'End'} →</button>

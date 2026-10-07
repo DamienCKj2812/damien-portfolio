@@ -1,6 +1,7 @@
 import { useCallback, useEffect, useState } from 'react'
 import type { RefObject } from 'react'
 import { ELEVATOR_PLAYBACK_RATE } from './elevatorTiming'
+import { TOUCH_SCROLL_MULTIPLIER } from './navigationInput'
 
 export function useReducedMotion() {
   const [reduced, setReduced] = useState(() => window.matchMedia('(prefers-reduced-motion: reduce)').matches)
@@ -44,7 +45,7 @@ export function useScrollTimeline(sectionRef: RefObject<HTMLElement | null>, ena
       if (!firstTouch) return
       event.preventDefault()
       const next = firstTouch.clientY
-      advance(touchY - next)
+      advance((touchY - next) * TOUCH_SCROLL_MULTIPLIER)
       touchY = next
     }
     const touchend = () => { touchY = null }

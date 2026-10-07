@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+html,body{margin:0;background:#070707;}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent;}
+a{color:#f2f0ea;text-decoration:none;}
+a:hover{color:#ffffff;}
+button{font:inherit;color:inherit;}
+</style>
+</helmet>
+<div ref="{{ rootRef }}" data-screen-label="Profile" style="height:100vh;min-height:560px;display:flex;flex-direction:column;background:#0a0a09;color:#f2f0ea;font-family:'IBM Plex Sans',sans-serif;">
+
+  <header style="flex:none;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:6px 8px 6px 20px;border-bottom:1px solid #23231f;min-height:56px;">
+    <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.14em;color:#8d8b85;text-transform:uppercase;white-space:nowrap;">Room 01 / About</div>
+    <sc-if value="{{ wide }}" hint-placeholder-val="{{ true }}">
+      <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.14em;color:#8d8b85;text-transform:uppercase;white-space:nowrap;">Damien / Personal portfolio</div>
+    </sc-if>
+    <div style="display:flex;align-items:center;gap:16px;">
+      <sc-if value="{{ wide }}" hint-placeholder-val="{{ true }}">
+        <span style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.14em;color:#8d8b85;">REV. 2026.10</span>
+      </sc-if>
+      <button aria-label="Close" style="height:44px;display:flex;align-items:center;gap:10px;padding:0 12px;background:transparent;border:1px solid #2c2c29;cursor:pointer;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.14em;" style-hover="background:#161614;">CLOSE <span style="font-size:14px;">✕</span></button>
+    </div>
+  </header>
+
+  <main ref="{{ mainRef }}" onScroll="{{ onScroll }}" style="flex:1;min-height:0;position:relative;display:grid;grid-template-columns:{{ cols }};overflow-y:{{ mainOverflow }};">
+
+    <sc-if value="{{ narrow }}" hint-placeholder-val="{{ false }}">
+      <nav style="position:sticky;top:0;z-index:4;order:-2;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));background:rgba(10,10,9,0.92);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid #23231f;">
+        <sc-for list="{{ tabs }}" as="t" hint-placeholder-count="3">
+          <button onClick="{{ t.go }}" style="height:48px;background:transparent;border:none;border-bottom:2px solid {{ t.line }};cursor:pointer;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.12em;text-transform:uppercase;color:{{ t.color }};">{{ t.label }}</button>
+        </sc-for>
+      </nav>
+    </sc-if>
+
+    <section ref="{{ identityRef }}" style="min-width:0;overflow-y:{{ colOverflow }};padding:28px 20px 36px;display:flex;flex-direction:column;gap:28px;">
+      <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.14em;color:#8d8b85;text-transform:uppercase;">01 — Identity</div>
+      <div style="display:flex;flex-direction:column;gap:14px;">
+        <h1 style="margin:0;font-family:'IBM Plex Mono',monospace;font-weight:400;font-size:40px;line-height:1.12;letter-spacing:0.22em;text-transform:uppercase;">Chong<br>Kah<br>Jun</h1>
+        <div style="display:flex;flex-direction:column;gap:6px;font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:0.12em;text-transform:uppercase;color:#b9b7b0;">
+          <span>English name · Damien</span>
+          <span>Full-stack developer</span>
+        </div>
+        <div style="display:flex;align-items:center;gap:8px;align-self:flex-start;padding:8px 12px;border:1px solid #3a3a36;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.1em;text-transform:uppercase;">
+          <span style="width:6px;height:6px;border-radius:50%;background:#9be29b;flex:none;"></span>
+          Open to jobs &amp; freelance
+        </div>
+      </div>
+
+      <div style="display:flex;flex-direction:column;gap:14px;font-size:16px;line-height:1.6;color:#d6d4ce;max-width:46ch;text-wrap:pretty;">
+        <p style="margin:0;">I build and deploy web applications, working across frontend, backend, databases, and server infrastructure. I also bring practical SEO knowledge to help websites perform well and be discoverable.</p>
+        <p style="margin:0;">Backend development is my main focus, but I learn the technologies each project requires rather than limiting myself to a single stack.</p>
+      </div>
+
+      <div style="display:flex;flex-direction:column;">
+        <sc-for list="{{ facts }}" as="f" hint-placeholder-count="4">
+          <div style="display:grid;grid-template-columns:96px minmax(0,1fr);gap:12px;padding:14px 0;border-top:1px solid #23231f;">
+            <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.12em;color:#8d8b85;text-transform:uppercase;padding-top:3px;">{{ f.k }}</div>
+            <div style="font-size:15px;line-height:1.5;color:#e4e2dc;">{{ f.v }}</div>
+          </div>
+        </sc-for>
+        <div style="display:grid;grid-template-columns:96px minmax(0,1fr);gap:12px;padding:14px 0;border-top:1px solid #23231f;">
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.12em;color:#8d8b85;text-transform:uppercase;padding-top:9px;">Stack</div>
+          <div style="display:flex;flex-wrap:wrap;gap:6px;">
+            <sc-for list="{{ stack }}" as="s" hint-placeholder-count="9">
+              <span style="font-family:'IBM Plex Mono',monospace;font-size:12px;padding:6px 9px;border:1px solid #2c2c29;background:#121211;color:#e4e2dc;">{{ s }}</span>
+            </sc-for>
+          </div>
+        </div>
+      </div>
+
+      <div style="display:flex;flex-direction:column;gap:10px;">
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.14em;color:#8d8b85;text-transform:uppercase;">Contact</div>
+        <sc-for list="{{ contacts }}" as="c" hint-placeholder-count="2">
+          <div style="display:flex;align-items:stretch;border:1px solid #2c2c29;">
+            <a href="{{ c.href }}" style="flex:1;min-width:0;min-height:52px;display:flex;flex-direction:column;justify-content:center;gap:2px;padding:8px 14px;" style-hover="background:#161614;">
+              <span style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:0.14em;color:#8d8b85;text-transform:uppercase;">{{ c.k }}</span>
+              <span style="font-family:'IBM Plex Mono',monospace;font-size:14px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">{{ c.v }}</span>
+            </a>
+            <button onClick="{{ c.copy }}" aria-label="Copy" style="flex:none;width:76px;background:transparent;border:none;border-left:1px solid #2c2c29;cursor:pointer;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.1em;text-transform:uppercase;color:#b9b7b0;" style-hover="background:#161614;">{{ c.copyLabel }}</button>
+          </div>
+        </sc-for>
+      </div>
+    </section>
+
+    <section ref="{{ portraitRef }}" style="min-width:0;order:{{ portraitOrder }};overflow-y:{{ colOverflow }};padding:28px 20px 36px;border-left:{{ sideBorder }};border-top:{{ stackBorder }};display:flex;flex-direction:column;gap:20px;">
+      <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.14em;color:#8d8b85;text-transform:uppercase;">02 — Portrait</div>
+      <figure style="margin:0 auto;width:100%;max-width:{{ portraitMax }};display:flex;flex-direction:column;gap:12px;">
+        <div style="position:relative;padding:12px;">
+          <span style="position:absolute;left:0;top:0;width:14px;height:14px;border-left:1px solid #f2f0ea;border-top:1px solid #f2f0ea;"></span>
+          <span style="position:absolute;right:0;top:0;width:14px;height:14px;border-right:1px solid #f2f0ea;border-top:1px solid #f2f0ea;"></span>
+          <span style="position:absolute;left:0;bottom:0;width:14px;height:14px;border-left:1px solid #f2f0ea;border-bottom:1px solid #f2f0ea;"></span>
+          <span style="position:absolute;right:0;bottom:0;width:14px;height:14px;border-right:1px solid #f2f0ea;border-bottom:1px solid #f2f0ea;"></span>
+          <img src="assets/portrait.png" alt="Portrait of Chong Kah Jun" style="display:block;width:100%;aspect-ratio:4/5;object-fit:cover;border:1px solid #2c2c29;background:#000;">
+        </div>
+        <figcaption style="display:flex;justify-content:space-between;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.14em;color:#8d8b85;text-transform:uppercase;">
+          <span>Fig. 01</span><span>Pixel portrait</span>
+        </figcaption>
+      </figure>
+    </section>
+
+    <section ref="{{ recordRef }}" style="min-width:0;overflow-y:{{ colOverflow }};padding:28px 20px 36px;border-left:{{ sideBorder }};border-top:{{ stackBorder }};display:flex;flex-direction:column;gap:20px;">
+      <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.14em;color:#8d8b85;text-transform:uppercase;">03 — Record</div>
+      <div style="display:flex;justify-content:space-between;align-items:baseline;padding-bottom:12px;border-bottom:1px solid #3a3a36;">
+        <span style="font-family:'IBM Plex Mono',monospace;font-size:13px;letter-spacing:0.14em;text-transform:uppercase;">Experience</span>
+        <span style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:#8d8b85;">{{ expCount }}</span>
+      </div>
+
+      <sc-for list="{{ experience }}" as="e" hint-placeholder-count="2">
+        <article style="display:flex;flex-direction:column;gap:12px;padding-bottom:24px;border-bottom:1px solid #23231f;">
+          <div style="display:flex;flex-direction:column;gap:4px;">
+            <div style="display:flex;align-items:center;gap:8px;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.12em;color:#8d8b85;text-transform:uppercase;">
+              <sc-if value="{{ e.current }}" hint-placeholder-val="{{ false }}"><span style="width:6px;height:6px;border-radius:50%;background:#9be29b;"></span></sc-if>
+              {{ e.period }}
+            </div>
+            <h3 style="margin:0;font-family:'IBM Plex Mono',monospace;font-weight:500;font-size:17px;line-height:1.3;">{{ e.org }}</h3>
+            <div style="font-size:14px;color:#b9b7b0;">{{ e.role }}</div>
+          </div>
+          <p style="margin:0;font-size:15px;line-height:1.6;color:#d6d4ce;text-wrap:pretty;">{{ e.summary }}</p>
+
+          <sc-if value="{{ e.showDetails }}" hint-placeholder-val="{{ true }}">
+            <div style="display:flex;flex-direction:column;gap:10px;">
+              <sc-for list="{{ e.items }}" as="it" hint-placeholder-count="3">
+                <div style="display:flex;flex-direction:column;gap:6px;padding:14px;background:#111110;border:1px solid #1f1f1d;">
+                  <div style="display:flex;flex-wrap:wrap;align-items:center;gap:8px;">
+                    <span style="font-family:'IBM Plex Mono',monospace;font-size:13px;font-weight:500;">{{ it.name }}</span>
+                    <sc-if value="{{ it.tag }}" hint-placeholder-val="{{ false }}">
+                      <span style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:0.1em;text-transform:uppercase;padding:2px 6px;border:1px solid #3a3a36;color:#b9b7b0;">{{ it.tag }}</span>
+                    </sc-if>
+                  </div>
+                  <sc-for list="{{ it.lines }}" as="l" hint-placeholder-count="1">
+                    <div style="font-size:14px;line-height:1.55;color:#c4c2bb;text-wrap:pretty;">{{ l }}</div>
+                  </sc-for>
+                  <sc-if value="{{ it.result }}" hint-placeholder-val="{{ false }}">
+                    <div style="display:grid;grid-template-columns:auto minmax(0,1fr);gap:8px;padding-top:6px;margin-top:2px;border-top:1px dashed #2c2c29;">
+                      <span style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:0.12em;color:#8d8b85;text-transform:uppercase;padding-top:3px;">Result</span>
+                      <span style="font-size:14px;line-height:1.55;color:#f2f0ea;">{{ it.result }}</span>
+                    </div>
+                  </sc-if>
+                </div>
+              </sc-for>
+            </div>
+          </sc-if>
+
+          <sc-if value="{{ e.canToggle }}" hint-placeholder-val="{{ false }}">
+            <button onClick="{{ e.toggle }}" style="align-self:flex-start;height:44px;padding:0 14px;display:flex;align-items:center;gap:8px;background:transparent;border:1px solid #2c2c29;cursor:pointer;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.12em;text-transform:uppercase;">{{ e.toggleLabel }}</button>
+          </sc-if>
+        </article>
+      </sc-for>
+    </section>
+  </main>
+
+  <footer style="flex:none;display:grid;grid-template-columns:{{ footCols }};align-items:center;gap:12px;padding:8px 12px;border-top:1px solid #23231f;min-height:60px;">
+    <sc-if value="{{ wide }}" hint-placeholder-val="{{ true }}">
+      <span style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:0.14em;color:#8d8b85;text-transform:uppercase;padding-left:8px;">Identity / Portrait / Record</span>
+    </sc-if>
+    <a href="#" style="justify-self:center;width:{{ ctaWidth }};height:44px;display:flex;align-items:center;justify-content:center;gap:8px;padding:0 20px;border:1px solid #f2f0ea;font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:0.14em;text-transform:uppercase;" style-hover="background:#f2f0ea;color:#0a0a09;">Return to office ↗</a>
+    <sc-if value="{{ wide }}" hint-placeholder-val="{{ true }}">
+      <span style="justify-self:end;font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:0.14em;color:#8d8b85;text-transform:uppercase;padding-right:8px;">Esc to close</span>
+    </sc-if>
+  </footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;collapseOnMobile&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Mobile&quot;},&quot;portraitFirst&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:false,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Mobile&quot;}}">
+const EXPERIENCE = [
+  { period: 'Ongoing', current: true, org: 'Freelance / Client projects', role: 'Freelance Full-Stack Developer',
+    summary: 'Develop web applications, custom CMS backends, and CRM platforms for clients, with responsibilities spanning application development, integration, and deployment.',
+    items: [
+      { name: 'MyRumawip', tag: 'Property', lines: ['Developed the bilingual property website, CMS integration, and deployment workflow using Next.js, TypeScript, Strapi, and PostgreSQL.'], result: 'Helped establish the site as a well-known destination for affordable housing, with top-five Google rankings for relevant searches.' },
+      { name: 'DWMLight / ANVA CMS', tag: 'CMS', lines: ['Developed the custom CMS/backend and handled deployment and server operations, using TypeScript, Express, and MongoDB to support structured multilingual content.'], result: 'Helped a China-based client connect with the global market through their multilingual website.' },
+      { name: 'Amplifii (Ampress)', tag: 'Current · unreleased', lines: ['An influencer-marketing platform that helps teams manage creator partnerships and campaigns. Contributing to product development and collaborating with another developer to support the overall user experience.'] },
+    ] },
+  { period: 'Jul 2025 – Nov 2025', org: 'COS Great Trading', role: 'Full-Stack Developer',
+    summary: 'Developed an AI-powered CRM, taking responsibility for the frontend and backend implementation.',
+    items: [
+      { name: 'AI knowledge bases', lines: ['Enabled users to build their own AI knowledge bases and answer questions for each department.'] },
+      { name: 'Retrieval-augmented generation', lines: ['Implemented RAG using Pinecone.'] },
+      { name: 'Stack', lines: ['Next.js, TypeScript, Express, Python, MongoDB, and AI SDKs.'] },
+    ] },
+];
+
+class Component extends DCLogic {
+  state = { w: 1200, open: { 0: true }, active: 0, copied: null };
+  rootRef = React.createRef(); mainRef = React.createRef();
+  identityRef = React.createRef(); portraitRef = React.createRef(); recordRef = React.createRef();
+
+  componentDidMount() {
+    const el = this.rootRef.current;
+    if (!el) return;
+    this.ro = new ResizeObserver(([e]) => this.setState({ w: e.contentRect.width }));
+    this.ro.observe(el);
+  }
+  componentWillUnmount() { this.ro && this.ro.disconnect(); clearTimeout(this.ct); }
+
+  sections() {
+    const pf = this.props.portraitFirst ?? false;
+    const s = [['Identity', this.identityRef], ['Portrait', this.portraitRef], ['Record', this.recordRef]];
+    return pf && this.state.w < 900 ? [s[1], s[0], s[2]] : s;
+  }
+
+  renderVals() {
+    const { w, open, active, copied } = this.state;
+    const narrow = w < 900;
+    const collapse = this.props.collapseOnMobile ?? true;
+    const pf = (this.props.portraitFirst ?? false) && narrow;
+    const secs = this.sections();
+    const copy = (txt, i) => () => {
+      navigator.clipboard && navigator.clipboard.writeText(txt).catch(() => {});
+      this.setState({ copied: i }); clearTimeout(this.ct);
+      this.ct = setTimeout(() => this.setState({ copied: null }), 1500);
+    };
+    const contacts = [
+      { k: 'Email', v: 'damienckj5993@gmail.com', href: 'mailto:damienckj5993@gmail.com' },
+      { k: 'Phone', v: '+60 10-229 5993', href: 'tel:+60102295993' },
+    ].map((c, i) => ({ ...c, copy: copy(c.v, i), copyLabel: copied === i ? 'Copied' : 'Copy' }));
+
+    return {
+      rootRef: this.rootRef, mainRef: this.mainRef,
+      identityRef: this.identityRef, portraitRef: this.portraitRef, recordRef: this.recordRef,
+      wide: !narrow, narrow,
+      cols: narrow ? 'minmax(0,1fr)' : 'minmax(0,1fr) minmax(0,1fr) minmax(0,1fr)',
+      mainOverflow: narrow ? 'auto' : 'hidden',
+      colOverflow: narrow ? 'visible' : 'auto',
+      sideBorder: narrow ? 'none' : '1px solid #23231f',
+      stackBorder: narrow ? '1px solid #23231f' : 'none',
+      portraitOrder: pf ? -1 : 0,
+      portraitMax: narrow ? '340px' : '460px',
+      footCols: narrow ? 'minmax(0,1fr)' : '1fr auto 1fr',
+      ctaWidth: narrow ? '100%' : 'auto',
+      tabs: secs.map(([label, ref], i) => ({
+        label, color: active === i ? '#f2f0ea' : '#8d8b85', line: active === i ? '#f2f0ea' : 'transparent',
+        go: () => { const m = this.mainRef.current; if (m && ref.current) m.scrollTo({ top: ref.current.offsetTop - 48, behavior: 'smooth' }); },
+      })),
+      onScroll: e => {
+        if (!narrow) return;
+        const y = e.currentTarget.scrollTop + 120;
+        let a = 0; secs.forEach(([, ref], i) => { if (ref.current && ref.current.offsetTop <= y) a = i; });
+        if (a !== this.state.active) this.setState({ active: a });
+      },
+      facts: [
+        { k: 'Based', v: 'Seri Kembangan / Serdang, Selangor, Malaysia' },
+        { k: 'Focus', v: 'Backend development' },
+        { k: 'Learning', v: '3D modeling, machine learning, artificial intelligence' },
+        { k: 'Strengths', v: 'User empathy, adaptability' },
+      ],
+      stack: ['TypeScript', 'Python', 'Next.js', 'React', 'Express', 'MongoDB', 'Pinecone', 'Docker', 'Linux'],
+      contacts,
+      expCount: String(EXPERIENCE.length).padStart(2, '0'),
+      experience: EXPERIENCE.map((e, i) => {
+        const canToggle = narrow && collapse;
+        const isOpen = !canToggle || !!open[i];
+        return { ...e, current: !!e.current, items: e.items.map(it => ({ ...it, tag: it.tag || '', result: it.result || '' })),
+          showDetails: isOpen, canToggle,
+          toggleLabel: isOpen ? 'Hide details −' : `Show ${e.items.length} highlights +`,
+          toggle: () => this.setState(s => ({ open: { ...s.open, [i]: !s.open[i] } })) };
+      }),
+    };
+  }
+}
+</script>
+</body>
+</html>

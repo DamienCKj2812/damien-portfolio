@@ -10,7 +10,7 @@ const server=process.env.VIDEO_TEST_DEV?await createServer({server:{host:'127.0.
 if('listen' in server) await server.listen()
 const browser=await chromium.launch({executablePath:chromeExecutable,headless:true,args:['--no-sandbox','--enable-unsafe-swiftshader','--use-gl=angle','--use-angle=swiftshader']})
 const errors: string[]=[]
-declare global { interface Window { __rafCount: number; __testedVideoDock: HTMLElement; __maximumPlayingVideos: number } }
+declare global { interface Window { __rafCount: number; __testedVideoDock: HTMLElement; __maximumPlayingVideos: number; __maximumVisibleProjectPrompts: number } }
 async function enter(viewport: ViewportSize,motion: 'reduce' | 'no-preference'='no-preference',sound=false) {
   const page=await browser.newPage({viewport,reducedMotion:motion})
   page.on('pageerror',error=>errors.push(error.message))
@@ -30,6 +30,14 @@ async function outside(dock: Locator) {
   assert.ok(bounds)
   assert.ok(bounds.x+bounds.width<board.left||bounds.x>board.right||bounds.y+bounds.height<board.top||bounds.y>board.bottom,'Prompt/controls overlap the video board')
 }
+async function exclusiveNearestPrompt(page: Page) {
+  const candidates=await page.locator('[data-project-video]').evaluateAll((nodes: HTMLElement[])=>nodes.map(node=>({
+    id:node.dataset.projectVideo,eligible:node.dataset.promptEligible==='true',distance:Number(node.dataset.cameraDistance),visible:node.dataset.visible==='true',
+  })))
+  const eligible=candidates.filter(candidate=>candidate.eligible).sort((a,b)=>a.distance-b.distance)
+  assert.ok(eligible.length>=2,'Regression view must contain two eligible project prompts')
+  assert.deepEqual(candidates.filter(candidate=>candidate.visible).map(candidate=>candidate.id),[eligible[0]?.id],'Only the nearest eligible project may show its information prompt')
+}
 async function visiblePixels(page: Page,dock: Locator) {
   await dock.evaluate((node: HTMLElement)=>{window.__testedVideoDock=node})
   await page.waitForFunction(()=>window.__testedVideoDock.dataset.renderedSurface==='video')
@@ -43,9 +51,14 @@ try {
   await page.waitForFunction(()=>document.querySelector('canvas')!.dataset.roomFov)
   await page.evaluate(()=>{
     window.__maximumPlayingVideos=0
-    const check=()=>{window.__maximumPlayingVideos=Math.max(window.__maximumPlayingVideos,[...document.querySelectorAll<HTMLElement>('[data-project-video]')].filter(node=>node.dataset.videoPaused==='false').length)}
+    window.__maximumVisibleProjectPrompts=0
+    const check=()=>{
+      const docks=[...document.querySelectorAll<HTMLElement>('[data-project-video]')]
+      window.__maximumPlayingVideos=Math.max(window.__maximumPlayingVideos,docks.filter(node=>node.dataset.videoPaused==='false').length)
+      window.__maximumVisibleProjectPrompts=Math.max(window.__maximumVisibleProjectPrompts,docks.filter(node=>node.dataset.visible==='true').length)
+    }
     const observer=new MutationObserver(check)
-    observer.observe(document.querySelector('.city-stage')!,{subtree:true,attributes:true,attributeFilter:['data-video-paused']})
+    observer.observe(document.querySelector('.city-stage')!,{subtree:true,attributes:true,attributeFilter:['data-video-paused','data-visible']})
   })
   assert.ok(!requests.some(url=>url.includes('myrumawip-full')))
   const walkingFov=await page.locator('canvas').getAttribute('data-room-fov')
@@ -60,6 +73,25 @@ try {
   assert.equal(await page.locator('canvas').getAttribute('data-room-fov'),walkingFov,'Looking at a nearby video must not change the walking FOV')
   await visiblePixels(page,dock)
   assert.ok(!requests.some(url=>url.includes('myrumawip-full')))
+  // A shallow view down the left wall brings the near and far video boards
+  // into the centre together, reproducing the overlapping information boxes.
+  await page.locator('#room-progress').evaluate(input=>{Object.getOwnPropertyDescriptor(HTMLInputElement.prototype,'value')!.set!.call(input,'2');input.dispatchEvent(new Event('input',{bubbles:true}));input.dispatchEvent(new Event('change',{bubbles:true}))})
+  await page.waitForFunction(()=>Math.abs(Number(document.querySelector<HTMLElement>('.city-stage')!.dataset.roomY)-2)<.02)
+  await page.mouse.move(720,200);await page.mouse.down();await page.mouse.move(590,200,{steps:8});await page.mouse.up()
+  for(const viewport of [{width:1440,height:900},{width:390,height:844}]) {
+    await page.setViewportSize(viewport)
+    await page.waitForFunction(()=>[...document.querySelectorAll<HTMLElement>('[data-project-video]')].filter(node=>node.dataset.promptEligible==='true').length>=2,undefined,{timeout:20000})
+    await exclusiveNearestPrompt(page)
+  }
+  await page.emulateMedia({reducedMotion:'reduce'})
+  await page.waitForFunction(()=>[...document.querySelectorAll<HTMLElement>('[data-project-video]')].every(node=>node.dataset.videoPaused!=='false'))
+  await exclusiveNearestPrompt(page)
+  assert.ok(await page.evaluate(()=>window.__maximumVisibleProjectPrompts)<=1,'Prompt handoffs must never expose two information boxes')
+  await page.emulateMedia({reducedMotion:'no-preference'})
+  await page.setViewportSize({width:1440,height:900})
+  await page.mouse.move(590,200);await page.mouse.down();await page.mouse.move(720,200,{steps:8});await page.mouse.up()
+  await page.locator('#room-progress').evaluate((input,y)=>{Object.getOwnPropertyDescriptor(HTMLInputElement.prototype,'value')!.set!.call(input,String(y));input.dispatchEvent(new Event('input',{bubbles:true}));input.dispatchEvent(new Event('change',{bubbles:true}))},approachY('agent-property'))
+  await page.waitForFunction(y=>Math.abs(Number(document.querySelector<HTMLElement>('.city-stage')!.dataset.roomY)-y)<.02,approachY('agent-property'))
   // Hand off between two previews on the same visit; never overlap decoders.
   await page.getByRole('button',{name:'Show menu'}).click()
   await page.locator('#room-progress').evaluate((input,y)=>{Object.getOwnPropertyDescriptor(HTMLInputElement.prototype,'value')!.set!.call(input,String(y));input.dispatchEvent(new Event('input',{bubbles:true}));input.dispatchEvent(new Event('change',{bubbles:true}))},approachY('report-automation'))
@@ -84,6 +116,7 @@ try {
   await dock.getByRole('button',{name:'Pause video',exact:true}).click()
   await page.waitForFunction(()=>document.querySelector<HTMLElement>('[data-project-video]')!.dataset.videoPaused==='true')
   assert.ok(await page.evaluate(()=>window.__maximumPlayingVideos)<=1,'Never decode/play multiple project videos at the same time')
+  assert.ok(await page.evaluate(()=>window.__maximumVisibleProjectPrompts)<=1,'Preview prompts and focused controls share one exclusive information dock')
   await page.locator('.city-stage[data-card-focus-settled="true"]').waitFor({timeout:30000})
   await page.evaluate(()=>document.dispatchEvent(new PointerEvent('pointerleave',{pointerType:'mouse'})))
   await page.waitForTimeout(500)

@@ -8,6 +8,7 @@ import useSoundEffects from '../../audio/useSoundEffects'
 import { clampHallwayY } from './hallwayCategories'
 import { createProjectCardFocus } from './projectCardFocus'
 import { createHallwayPortalAudio } from './hallwayPortalAudio'
+import { TOUCH_SCROLL_MULTIPLIER } from './navigationInput'
 import type { RefObject } from 'react'
 import type { LoadedGuidedRoomAssets, LoadedRoomAssets } from '../../types/scene'
 import type { ActiveNavigationState, CameraFocusState, NavigationState, RoomAlignment, RoomState, RoomView } from '../../types/navigation'
@@ -187,7 +188,7 @@ export default function RoomNavigator({ assets, alignment, active, arrived, room
       const dx = event.clientX - drag.x, dy = event.clientY - drag.y
       const nav = navigationRef.current
       nav.dragDistance += Math.abs(dx) + Math.abs(dy)
-      if (drag.mode === 'scroll') { scroll(-dy);if (!drag) return }
+      if (drag.mode === 'scroll') { scroll(-dy * TOUCH_SCROLL_MULTIPLIER);if (!drag) return }
       else if (assets.manifest.navigation && roomState.view === 'main') { nav.yaw -= dx * (lookOnly && drag.touch ? .005 : .003);nav.pitch = MathUtils.clamp(nav.pitch + dy * .003, -Math.PI * .47, Math.PI * .47);invalidate() }
       drag.x = event.clientX;drag.y = event.clientY
     }

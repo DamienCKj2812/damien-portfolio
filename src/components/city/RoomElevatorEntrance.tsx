@@ -3,7 +3,7 @@ import { useEffect, useMemo, useRef, useState } from 'react'
 import { useFrame, useThree } from '@react-three/fiber'
 import type { ThreeEvent } from '@react-three/fiber'
 import { Html } from '@react-three/drei'
-import { BufferGeometry, DoubleSide, Float32BufferAttribute, Vector3 } from 'three'
+import { BufferGeometry, Float32BufferAttribute, Vector3 } from 'three'
 import './roomElevatorEntrance.css'
 import './aboutOfficeTargets.css'
 import useSoundEffects from '../../audio/useSoundEffects'
@@ -115,23 +115,25 @@ export default function RoomElevatorEntrance({ entrance, active, interactive, na
       <sphereGeometry args={[.035, 16, 12]} />
       <meshBasicMaterial color="#eeeeee" toneMapped={false} />
     </mesh>
-    <mesh name="room-elevator-return-pick" position={[0, .10, 1.60]}
+    {/* Room-facing planes cannot enclose the entrance camera and intercept
+        unrelated taps while looking into the room after cancelling return. */}
+    <mesh name="room-elevator-return-pick" position={[0, .10, 1.60]} rotation={[-Math.PI / 2, 0, 0]}
       {...(interactive ? {
         onClick: (event: ThreeEvent<MouseEvent>) => { event.stopPropagation();if (event.delta <= 5 && navigationRef.current.dragDistance <= 5) { playClick();onReturn() } },
         onPointerOver: (event: ThreeEvent<PointerEvent>) => { event.stopPropagation();document.body.style.cursor = 'pointer' },
         onPointerOut: () => { document.body.style.cursor = '' },
       } : {})}>
-      <boxGeometry args={[2.62, .24, 3.22]} />
-      <meshBasicMaterial transparent opacity={0} depthWrite={false} side={DoubleSide} />
+      <planeGeometry args={[2.62, 3.22]} />
+      <meshBasicMaterial transparent opacity={0} depthWrite={false} />
     </mesh>
-    <mesh name="room-elevator-call-pick" position={CALL_PANEL}
+    <mesh name="room-elevator-call-pick" position={CALL_PANEL} rotation={[-Math.PI / 2, 0, 0]}
       {...(interactive ? {
         onClick: (event: ThreeEvent<MouseEvent>) => { event.stopPropagation();if (event.delta <= 5 && navigationRef.current.dragDistance <= 5) { playClick();onReturn() } },
         onPointerOver: (event: ThreeEvent<PointerEvent>) => { event.stopPropagation();document.body.style.cursor = 'pointer' },
         onPointerOut: () => { document.body.style.cursor = '' },
       } : {})}>
-      <boxGeometry args={[.84, .24, 1.00]} />
-      <meshBasicMaterial transparent opacity={0} depthWrite={false} side={DoubleSide} />
+      <planeGeometry args={[.84, 1.00]} />
+      <meshBasicMaterial transparent opacity={0} depthWrite={false} />
     </mesh>
     {showLabel && interactive && <lineSegments geometry={callOutline} raycast={() => null} renderOrder={8}>
       <lineBasicMaterial color="#ffffff" transparent opacity={.85} depthWrite={false} depthTest={false} toneMapped={false} />
