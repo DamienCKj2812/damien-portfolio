@@ -144,6 +144,8 @@ for obj in objects:
         role = 'officeDoor';identity = 'office-entry'
     if level == 'about' and obj.get('office_screen_map'):
         role = 'officeScreenMap';identity = 'malaysia'
+    if level == 'about' and obj.name.startswith('Office • Printer /'):
+        role = 'printer';identity = 'printer'
     if level == 'projects' and obj.get('ceiling_role') == 'wave_rib':
         role = 'ceilingRib';identity = 'wave-ribs'
     elif level == 'projects' and obj.get('ceiling_role') == 'light_rail':

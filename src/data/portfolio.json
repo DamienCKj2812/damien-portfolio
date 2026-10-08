@@ -15,11 +15,11 @@
   },
   "about": {
     "id": "about", "label": "02 / ABOUT", "title": "A little about me",
-    "description": "I build and deploy web applications, working across frontend, backend, databases, and server infrastructure. I also bring practical SEO knowledge to help websites perform well and be discoverable.",
+    "description": "I deliver production systems end to end: an AI-powered CRM with RAG knowledge bases, a multilingual CMS backend, and a bilingual property website that reached top-five Google rankings for relevant searches. I work across React, Next.js, TypeScript, Express, Python, PostgreSQL, and MongoDB, through to Docker and Linux deployment and server operations.",
     "profile": {
       "role": "Full-Stack Developer",
       "status": "Open to jobs and freelance opportunities",
-      "location": "Seri Kembangan / Serdang, Selangor, Malaysia",
+      "location": "Seri Kembangan, Selangor, Malaysia",
       "focus": "Full-stack development",
       "approach": "Full-stack development is my main focus, working across frontend, backend, databases, and deployment. I learn the technologies each project requires rather than limiting myself to a single stack.",
       "stack": ["TypeScript", "Python", "Next.js", "React", "Express", "MongoDB", "Pinecone", "Docker", "Linux"],
@@ -31,7 +31,7 @@
   },
   "skills": {
     "id": "skills", "label": "03 / SKILLS", "title": "My toolkit",
-    "description": "My development toolkit spans web applications, backend APIs, databases, deployment, and Linux servers.",
+    "description": "My development toolkit spans web applications, backend APIs, databases, testing, deployment, and Linux servers.",
     "learning": ["3D modeling", "Machine learning", "Artificial intelligence"],
     "groups": [
       { "id": "languages", "title": "Languages", "items": ["JavaScript", "TypeScript", "Java", "Python", "PHP", "C++", "C", "HTML / CSS", "SQL"] },
@@ -40,7 +40,7 @@
       { "id": "databases", "title": "Databases", "items": ["PostgreSQL", "MySQL", "MongoDB", "Redis", "Pinecone", "Data modeling"] },
       { "id": "data-ai", "title": "Data & AI", "items": ["Python", "Pandas / NumPy", "AI SDKs", "Retrieval-augmented generation (RAG)", "AI knowledge bases", "Automation"] },
       { "id": "security", "title": "Security", "items": ["JWT", "OAuth", "Access control", "Validation", "Encryption", "Secure APIs"] },
-      { "id": "devops", "title": "DevOps & CI/CD", "items": ["Git", "GitHub", "Bitbucket", "Docker", "GitHub Actions", "Deployment", "Observability"] },
+      { "id": "devops", "title": "DevOps & Testing", "items": ["Git", "GitHub", "Bitbucket", "Docker", "GitHub Actions", "Deployment", "Observability", "Playwright", "Browser / end-to-end testing", "Regression testing", "Responsive and accessibility testing", "Integration testing"] },
       { "id": "microservices", "title": "Microservices", "items": ["Service design", "Message queues", "Tracing", "Resilience"] },
       { "id": "linux", "title": "Linux", "items": ["Linux fundamentals", "Fedora", "Ubuntu", "Debian", "Arch", "Mint", "Shell tools", "Servers"] }
     ]
@@ -70,19 +70,20 @@
       {
         "id": "freelance-full-stack", "category": "EXPERIENCE", "title": "Freelance Full-Stack Developer",
         "organization": "Freelance / Client projects", "period": "Ongoing",
-        "description": "Develop web applications, custom CMS backends, and CRM platforms for clients, with responsibilities spanning application development, integration, and deployment.",
+        "description": "Deliver web applications, custom CMS backends, and CRM platforms for clients, covering development, integration, deployment, and server operations.",
         "highlights": [
           "MyRumawip (property project): developed the bilingual property website, CMS integration, and deployment workflow using Next.js, TypeScript, Strapi, and PostgreSQL.",
           "MyRumawip achievement: helped establish the website as a well-known destination for finding affordable housing, achieving top-five Google search rankings for relevant affordable-housing searches.",
           "DWMLight / ANVA CMS: developed the custom CMS/backend and handled deployment and server operations, using TypeScript, Express, and MongoDB to support structured multilingual content.",
           "DWMLight achievement: helped a China-based client connect with the global market through their multilingual website.",
+          "MyReport (customer workspace): built the customer workspace as sole developer, connecting WhatsApp message ingestion, customer records, reviewed AI assistance, and follow-up workflows.",
           "Amplifii (Ampress) — current, unreleased: an influencer-marketing platform that helps teams manage creator partnerships and campaigns. Contributing to product development and collaborating with another developer to support the overall user experience."
         ]
       },
       {
         "id": "cos-great-trading", "category": "EXPERIENCE", "title": "Full-Stack Developer",
         "organization": "COS Great Trading", "period": "July 2025 – November 2025",
-        "description": "Developed an AI-powered CRM, taking responsibility for the frontend and backend implementation.",
+        "description": "Built an AI-powered CRM, owning both the frontend and backend implementation.",
         "highlights": ["Enabled users to build their own AI knowledge bases and answer questions for each department.", "Implemented retrieval-augmented generation (RAG) using Pinecone.", "Worked across Next.js, TypeScript, Express, Python, MongoDB, and AI SDKs."]
       },
       {
@@ -112,10 +113,10 @@
   "contact": {
     "id": "contact", "label": "06 / CONTACT", "title": "Let’s connect",
     "description": "Open to jobs and freelance opportunities. Get in touch by email, phone, or WhatsApp, or explore my work on GitHub.",
-    "email": "Damienckj5993@gmail.com",
+    "email": "damienckj5993@gmail.com",
     "phone": "+60 10-229 5993",
     "links": [
-      { "id": "email", "label": "Damienckj5993@gmail.com", "href": "mailto:Damienckj5993@gmail.com" },
+      { "id": "email", "label": "damienckj5993@gmail.com", "href": "mailto:damienckj5993@gmail.com" },
       { "id": "phone", "label": "+60 10-229 5993", "href": "tel:+60102295993" },
       { "id": "whatsapp", "label": "Message me on WhatsApp", "href": "https://wa.me/60102295993" },
       { "id": "github", "label": "Visit my GitHub", "href": "https://github.com/DamienCKj2812" }

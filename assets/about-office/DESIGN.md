@@ -34,7 +34,7 @@ The presentation camera is aligned horizontally with the monitor and looks at it
 
 ## Flat card
 
-The 90 × 55 × 0.8 mm paper card lies near `(1.82,-.16,.8962)`, slightly rotated. Its top mesh **Name card / contact face** has `CardUV` and click metadata. Contact text matches the existing GitHub link.
+The 90 × 55 × 0.8 mm paper card lies on the left side of the desk near `(-1.35,-.16,.8962)`, slightly rotated. Its top mesh **Name card / contact face** has `CardUV` and click metadata. Contact text matches the existing GitHub link.
 
 There is no standing base or automatic close-up playback. The 180-frame/6-second idle timeline pulses only a thin luminous rim and corner glint; shine peaks at 46/136. Hidden review/controller metadata does not implement website clicking by itself.
 

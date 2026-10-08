@@ -1,6 +1,10 @@
 import assert from 'node:assert/strict'
 import { preview } from 'vite'
 import { chromium, chromeExecutable, installBrowserHelpers, screenshotPath } from './browser_tools.mts'
+import { jsonFile } from './node_json.mts'
+import { parseCv } from '../src/types/cv.ts'
+
+const cv = parseCv(jsonFile(new URL('../src/data/cv.json', import.meta.url)))
 
 const server = await preview({ preview: { host: '127.0.0.1', port: 0 } })
 let browser
@@ -39,6 +43,18 @@ try {
   assert.deepEqual(await dialog.locator('.observer-sheet-header').boundingBox(), headerBefore)
   await dialog.getByRole('button', { name: 'Copy email' }).click()
   assert.match(await page.evaluate(() => navigator.clipboard.readText()), /@gmail\.com$/)
+  const cvHref = await dialog.getByRole('link', { name: /Download CV/ }).getAttribute('href')
+  assert.ok(cvHref?.includes('/cv/'), 'Profile offers the uploaded CV')
+  assert.equal((await page.request.get(new URL(cvHref ?? '', page.url()).href)).status(), 200)
+  const pdfUrl = new URL(`cv/${encodeURIComponent(cv.pdf.file)}`, page.url()).href
+  const pdfOpened = page.waitForEvent('popup')
+  await dialog.locator('.observer-sheet-header').getByRole('button', { name: 'Print CV' }).click()
+  const pdfPage = await pdfOpened
+  await pdfPage.waitForURL(pdfUrl)
+  assert.equal(await pdfPage.evaluate(() => document.contentType), 'application/pdf')
+  assert.equal(await pdfPage.evaluate(() => window.opener), null)
+  assert.equal(await page.locator('.city-stage').getAttribute('data-profile-open'), 'true', 'Opening CV preserves the profile')
+  await pdfPage.close()
   await columns.nth(0).evaluate(element => { element.scrollTop = 0 })
   await page.screenshot({ path: screenshotPath('profile-desktop.png') })
 
@@ -84,6 +100,7 @@ try {
     assert.ok(bounds && bounds.width <= viewport.width && bounds.height <= viewport.height)
     assert.equal(await dialog.evaluate(element => element.scrollWidth <= element.clientWidth), true)
     assert.equal(await dialog.getByRole('button', { name: /Return to office/ }).isVisible(), true)
+    assert.equal(await dialog.locator('.observer-sheet-header').getByRole('button', { name: 'Print CV' }).isVisible(), true)
   }
   await dialog.getByRole('button', { name: /Return to office/ }).click()
   await page.locator('.city-stage[data-room="about"][data-profile-open="false"]').waitFor()

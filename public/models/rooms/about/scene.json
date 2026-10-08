@@ -4,7 +4,7 @@
   "label": "About office",
   "geometry": "geometry.bin",
   "animation": "animation.bin",
-  "assetHash": "6b2b24a6a08a",
+  "assetHash": "c1946c97d26e",
   "frameStart": 1,
   "frameEnd": 720,
   "fps": 30,
@@ -186,7 +186,7 @@
     },
     "card": {
       "position": [
-        1.8320000171661377,
+        -1.3380000591278076,
         -0.25999999046325684,
         1.0262000560760498
       ],
@@ -221,8 +221,8 @@
       "actor": 0,
       "kind": "lines",
       "byteOffset": 2272,
-      "floatCount": 59992,
-      "vertexCount": 14998,
+      "floatCount": 57592,
+      "vertexCount": 14398,
       "stride": 4,
       "role": null,
       "id": null,
@@ -231,7 +231,7 @@
     {
       "actor": 0,
       "kind": "lines",
-      "byteOffset": 242240,
+      "byteOffset": 232640,
       "floatCount": 9448,
       "vertexCount": 2362,
       "stride": 4,
@@ -241,8 +241,19 @@
     },
     {
       "actor": 0,
+      "kind": "lines",
+      "byteOffset": 270432,
+      "floatCount": 1720,
+      "vertexCount": 430,
+      "stride": 4,
+      "role": "printer",
+      "id": "printer",
+      "opacity": 1.0
+    },
+    {
+      "actor": 0,
       "kind": "points",
-      "byteOffset": 280032,
+      "byteOffset": 277312,
       "floatCount": 45175,
       "vertexCount": 9035,
       "stride": 5,
@@ -253,7 +264,7 @@
     {
       "actor": 0,
       "kind": "solid",
-      "byteOffset": 460732,
+      "byteOffset": 458012,
       "floatCount": 144,
       "vertexCount": 36,
       "stride": 4,
@@ -264,9 +275,9 @@
     {
       "actor": 0,
       "kind": "solid",
-      "byteOffset": 461308,
-      "floatCount": 228924,
-      "vertexCount": 57231,
+      "byteOffset": 458588,
+      "floatCount": 225684,
+      "vertexCount": 56421,
       "stride": 4,
       "role": null,
       "id": null,
@@ -275,7 +286,7 @@
     {
       "actor": 0,
       "kind": "solid",
-      "byteOffset": 1377004,
+      "byteOffset": 1361324,
       "floatCount": 24,
       "vertexCount": 6,
       "stride": 4,
@@ -286,7 +297,7 @@
     {
       "actor": 0,
       "kind": "solid",
-      "byteOffset": 1377100,
+      "byteOffset": 1361420,
       "floatCount": 24,
       "vertexCount": 6,
       "stride": 4,
@@ -297,7 +308,7 @@
     {
       "actor": 0,
       "kind": "solid",
-      "byteOffset": 1377196,
+      "byteOffset": 1361516,
       "floatCount": 24,
       "vertexCount": 6,
       "stride": 4,
@@ -308,7 +319,7 @@
     {
       "actor": 0,
       "kind": "solid",
-      "byteOffset": 1377292,
+      "byteOffset": 1361612,
       "floatCount": 144,
       "vertexCount": 36,
       "stride": 4,
@@ -319,7 +330,7 @@
     {
       "actor": 0,
       "kind": "solid",
-      "byteOffset": 1377868,
+      "byteOffset": 1362188,
       "floatCount": 144,
       "vertexCount": 36,
       "stride": 4,
@@ -330,7 +341,7 @@
     {
       "actor": 0,
       "kind": "solid",
-      "byteOffset": 1378444,
+      "byteOffset": 1362764,
       "floatCount": 288,
       "vertexCount": 72,
       "stride": 4,
@@ -341,7 +352,7 @@
     {
       "actor": 0,
       "kind": "solid",
-      "byteOffset": 1379596,
+      "byteOffset": 1363916,
       "floatCount": 26172,
       "vertexCount": 6543,
       "stride": 4,
@@ -350,9 +361,20 @@
       "opacity": 1.0
     },
     {
+      "actor": 0,
+      "kind": "solid",
+      "byteOffset": 1468604,
+      "floatCount": 2400,
+      "vertexCount": 600,
+      "stride": 4,
+      "role": "printer",
+      "id": "printer",
+      "opacity": 1.0
+    },
+    {
       "actor": 1,
       "kind": "lines",
-      "byteOffset": 1484284,
+      "byteOffset": 1478204,
       "floatCount": 128,
       "vertexCount": 32,
       "stride": 4,
@@ -363,7 +385,7 @@
     {
       "actor": 2,
       "kind": "lines",
-      "byteOffset": 1484796,
+      "byteOffset": 1478716,
       "floatCount": 128,
       "vertexCount": 32,
       "stride": 4,
@@ -374,7 +396,7 @@
     {
       "actor": 3,
       "kind": "lines",
-      "byteOffset": 1485308,
+      "byteOffset": 1479228,
       "floatCount": 128,
       "vertexCount": 32,
       "stride": 4,
@@ -385,7 +407,7 @@
     {
       "actor": 4,
       "kind": "lines",
-      "byteOffset": 1485820,
+      "byteOffset": 1479740,
       "floatCount": 128,
       "vertexCount": 32,
       "stride": 4,
@@ -396,7 +418,7 @@
     {
       "actor": 5,
       "kind": "lines",
-      "byteOffset": 1486332,
+      "byteOffset": 1480252,
       "floatCount": 128,
       "vertexCount": 32,
       "stride": 4,
@@ -407,7 +429,7 @@
     {
       "actor": 6,
       "kind": "lines",
-      "byteOffset": 1486844,
+      "byteOffset": 1480764,
       "floatCount": 128,
       "vertexCount": 32,
       "stride": 4,
@@ -418,7 +440,7 @@
     {
       "actor": 7,
       "kind": "lines",
-      "byteOffset": 1487356,
+      "byteOffset": 1481276,
       "floatCount": 128,
       "vertexCount": 32,
       "stride": 4,
@@ -429,7 +451,7 @@
     {
       "actor": 8,
       "kind": "lines",
-      "byteOffset": 1487868,
+      "byteOffset": 1481788,
       "floatCount": 128,
       "vertexCount": 32,
       "stride": 4,
@@ -440,7 +462,7 @@
     {
       "actor": 9,
       "kind": "lines",
-      "byteOffset": 1488380,
+      "byteOffset": 1482300,
       "floatCount": 128,
       "vertexCount": 32,
       "stride": 4,
@@ -451,7 +473,7 @@
     {
       "actor": 10,
       "kind": "lines",
-      "byteOffset": 1488892,
+      "byteOffset": 1482812,
       "floatCount": 128,
       "vertexCount": 32,
       "stride": 4,
@@ -462,7 +484,7 @@
     {
       "actor": 11,
       "kind": "lines",
-      "byteOffset": 1489404,
+      "byteOffset": 1483324,
       "floatCount": 128,
       "vertexCount": 32,
       "stride": 4,
@@ -473,7 +495,7 @@
     {
       "actor": 12,
       "kind": "lines",
-      "byteOffset": 1489916,
+      "byteOffset": 1483836,
       "floatCount": 128,
       "vertexCount": 32,
       "stride": 4,
@@ -484,7 +506,7 @@
     {
       "actor": 13,
       "kind": "lines",
-      "byteOffset": 1490428,
+      "byteOffset": 1484348,
       "floatCount": 128,
       "vertexCount": 32,
       "stride": 4,
@@ -495,7 +517,7 @@
     {
       "actor": 14,
       "kind": "lines",
-      "byteOffset": 1490940,
+      "byteOffset": 1484860,
       "floatCount": 128,
       "vertexCount": 32,
       "stride": 4,
@@ -506,7 +528,7 @@
     {
       "actor": 15,
       "kind": "lines",
-      "byteOffset": 1491452,
+      "byteOffset": 1485372,
       "floatCount": 128,
       "vertexCount": 32,
       "stride": 4,
@@ -517,7 +539,7 @@
     {
       "actor": 16,
       "kind": "lines",
-      "byteOffset": 1491964,
+      "byteOffset": 1485884,
       "floatCount": 128,
       "vertexCount": 32,
       "stride": 4,
@@ -528,7 +550,7 @@
     {
       "actor": 17,
       "kind": "lines",
-      "byteOffset": 1492476,
+      "byteOffset": 1486396,
       "floatCount": 344,
       "vertexCount": 86,
       "stride": 4,
@@ -539,7 +561,7 @@
     {
       "actor": 17,
       "kind": "points",
-      "byteOffset": 1493852,
+      "byteOffset": 1487772,
       "floatCount": 10,
       "vertexCount": 2,
       "stride": 5,
@@ -550,7 +572,7 @@
     {
       "actor": 17,
       "kind": "solid",
-      "byteOffset": 1493892,
+      "byteOffset": 1487812,
       "floatCount": 456,
       "vertexCount": 114,
       "stride": 4,
@@ -561,7 +583,7 @@
     {
       "actor": 18,
       "kind": "lines",
-      "byteOffset": 1495716,
+      "byteOffset": 1489636,
       "floatCount": 344,
       "vertexCount": 86,
       "stride": 4,
@@ -572,7 +594,7 @@
     {
       "actor": 18,
       "kind": "points",
-      "byteOffset": 1497092,
+      "byteOffset": 1491012,
       "floatCount": 10,
       "vertexCount": 2,
       "stride": 5,
@@ -583,7 +605,7 @@
     {
       "actor": 18,
       "kind": "solid",
-      "byteOffset": 1497132,
+      "byteOffset": 1491052,
       "floatCount": 456,
       "vertexCount": 114,
       "stride": 4,
@@ -594,7 +616,7 @@
     {
       "actor": 19,
       "kind": "lines",
-      "byteOffset": 1498956,
+      "byteOffset": 1492876,
       "floatCount": 344,
       "vertexCount": 86,
       "stride": 4,
@@ -605,7 +627,7 @@
     {
       "actor": 19,
       "kind": "points",
-      "byteOffset": 1500332,
+      "byteOffset": 1494252,
       "floatCount": 10,
       "vertexCount": 2,
       "stride": 5,
@@ -616,7 +638,7 @@
     {
       "actor": 19,
       "kind": "solid",
-      "byteOffset": 1500372,
+      "byteOffset": 1494292,
       "floatCount": 456,
       "vertexCount": 114,
       "stride": 4,
@@ -627,9 +649,9 @@
   ],
   "statistics": {
     "points": 9041,
-    "lineSegments": 9065,
+    "lineSegments": 8980,
     "glowSegments": 71,
-    "solidTriangles": 21410
+    "solidTriangles": 21340
   },
   "projects": [],
   "exhibits": [],

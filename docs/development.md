@@ -9,7 +9,7 @@ Use Node.js **22.13+ in Node 22 LTS**, matching the CI major version. Both npm a
 | CI checks, in order | `npm run lint && npm run typecheck && npm run build && npm run verify` |
 | Lint one changed component | `npx eslint src/components/CityWalkthrough.tsx` |
 | Check app and Node tool types | `npm run typecheck` |
-| Run 19 non-browser checks | `npm run verify` |
+| Run 20 non-browser checks | `npm run verify` |
 | Run ten actual-browser checks after build | `npm run verify:browser` |
 | Serve the production build | `npm run preview` |
 | Validate room packages/alignment | `node --import tsx assets/journey/verify_rooms.mts` |
@@ -29,6 +29,10 @@ All 61 original application modules are now TS/TSX, including unmounted componen
 Installation runs `scripts/apply_dependency_patches.mts` via `postinstall`: npm uses `patch-package --error-on-fail`, while pnpm applies the same checked-in patches to the packages resolved by the application, including Drei's nested `three-stdlib` dependency. The patches for `three-stdlib@2.36.1` and `@types/three@0.186.0` fix SVG `userData`, TGA parser returns, and exact optional-property compatibility in line materials/motion-controller declarations. They change no runtime code; preserve them rather than disabling dependency declaration checks. Keep the same package manager for installation and the running dev session. After changing the dependency layout, restart Vite so hot reload does not reference removed package paths.
 
 Edit profile/Observer/contact/music copy in canonical `src/data/portfolio.json`. The typed `src/data/portfolio.ts` facade validates it and attaches generated portrait URLs/hashes. Node generators use the shared JSON reader and Python contact tooling reads JSON directly, replacing VM evaluation and regex extraction of application declarations. Profile provenance hashes the canonical JSON bytes, so TypeScript-only edits do not invalidate Skills content.
+
+### Downloadable CV
+
+The CV is uploaded, not generated. Put the finished file(s) in `public/cv/` and list their file names in `src/data/cv.json` `files`. The first entry is the main "Download CV" link, and the rest appear as extra format buttons in 2D Contact. Include a `.pdf`, because the 3D office printer prints it; `.docx`/`.doc` are optional. Vite copies the folder to `dist/cv/` unchanged. `scripts/verify_cv.mts` checks that `public/cv/` contains exactly the listed files and that each one really is a PDF or Word file. Changing the CV text never requires editing `portfolio.json`; keep facts such as dates consistent by hand.
 
 ## Vite and browser review
 
@@ -51,6 +55,6 @@ Startup checks deliberately delay the lazy runtime and a destination package to 
 
 ## Deployment
 
-`.github/workflows/deploy.yml` runs `npm ci`, lint, typecheck, build and the 19 non-browser checks on Node 22, then deploys `dist/` to GitHub Pages on pushes to `main` or manual dispatch. Configure Pages to use **GitHub Actions**.
+`.github/workflows/deploy.yml` runs `npm ci`, lint, typecheck, build and the 20 non-browser checks on Node 22, then deploys `dist/` to GitHub Pages on pushes to `main` or manual dispatch. Configure Pages to use **GitHub Actions**.
 
 The workflow consumes checked-in generated model packages; Blender and browser automation are local checks rather than CI jobs. Export and verify packages locally before deployment. The repository base URL is configured in Vite and must be reconciled when renaming the repository or using a custom domain.

@@ -16,6 +16,7 @@ sys.path.insert(0, str(ROOT))
 from office_environment import build_environment
 from contact_card_content import contact_card_lines, read_contact_details
 from malaysia_screen import apply_malaysia_screen
+from office_printer import build_printer
 if bpy.data.filepath:
     raise RuntimeError('Generate in a fresh --factory-startup process to preserve existing work.')
 random.seed(47)
@@ -288,9 +289,7 @@ box('Pen holder',(-.66,.76,1.045),(.19,.19,.25),graphite,'03')
 for i in range(5):
     x = -.72+i*.030
     lines('Pen',[[(x,.75,.96),(x+random.uniform(-.025,.025),.75,1.30)]],edge,.003,'03')
-box('Standing notebook',(2.18,.62,1.16),(.53,.06,.48),graphite,'03',rotation=(0,0,-.12))
-text('Notebook cover','IDEAS\nPLANS\nPEOPLE',(2.18,.574,1.17),.048,'03')
-box('Notebook foot',(2.18,.58,.93),(.58,.27,.025),graphite,'03')
+build_printer(link, box, lines, ellipse, graphite, black, edge, quiet)
 
 # A turned, adjustable office chair: cloth panels, open arms, five-star base.
 chair_root = link('Chair / editable root',None,'02')
@@ -349,7 +348,10 @@ box('Window-side console',(-4.55,2.3,.38),(2.9,.84,.72),graphite,'02')
 for x in [-5.45,-4.55,-3.65]:
     box('Console front panel',(x,1.869,.39),(.85,.028,.62),graphite,'02',edge_mat=quiet)
 plant('Window-side broad-leaf plant',(-5.45,2.27,.75),1.7)
-plant('Desktop plant',(2.58,1.01,.90),.58)
+# Keep the downstream seeded figure/atmosphere unchanged after removing the
+# desktop plant (its nine leaves consumed two random samples apiece).
+for _ in range(18):
+    random.random()
 for i,title in enumerate(['CODE','SYSTEMS','IDEAS']):
     box('Console book '+title,(-4.5,2.16,.78+i*.065),(1.00,.41,.06),graphite,'03')
     text('Book spine '+title,title,(-4.5,1.946,.785+i*.065),.032,'03')
@@ -501,9 +503,11 @@ def build_name_card(name=None,contact_url=None):
     for obj in set(scene.objects)-before:
         if obj != root and obj.parent is None:
             obj.parent = root
-    root.location = (1.82,-.16,.8962)
+    root.location = (-1.35,-.16,.8962)
     root.rotation_euler.z = .18
-    focus = camera('Contact card focus camera',(1.832,-.26,1.0262),(1.82,-.16,.89668),45)
+    focus = camera('Contact card focus camera',
+                   root.location+Vector((.012,-.10,.13)),
+                   root.location+Vector((0,0,.00048)),45)
     root['focus_camera'] = focus.name
     face['focus_camera'] = focus.name
     hint = apply_name_card_click_hint(root,face)

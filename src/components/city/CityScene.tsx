@@ -19,6 +19,7 @@ import type { RoomReturnJourneyProps } from './RoomReturnJourney'
 import { ELEVATOR_PLAYBACK_RATE } from './elevatorTiming'
 import ElevatorButton from './ElevatorButton'
 import AboutOfficeTargets from './AboutOfficeTargets'
+import OfficePrinter from './OfficePrinter'
 import ContactCardDismiss from './ContactCardDismiss'
 import SkillsGalleryTargets from './SkillsGalleryTargets'
 import ProjectVideoBoards from './ProjectVideoBoards'
@@ -377,6 +378,7 @@ function ZoneGeometry({ assets, frameRef, elevatorFrameRef, roomFrameRef, destin
   const lobbyLoopFrames = isLobbyManifest(assets.manifest) ? assets.manifest.autonomousLoopFrames ?? assets.manifest.npcLoopFrames : undefined
   const lobbyClock = useCityActorClock({ enabled: zone === 'lobby' && Boolean(lobbyLoopFrames), frameRef, journey, fps: assets.manifest.fps, reducedMotion, zone: 'lobby' })
   const groups = useMemo(() => createCityGeometries(assets), [assets])
+  const printerItems = useMemo(() => groups.filter(item => item.role === 'printer'), [groups])
   const lobbyClip = useMemo(() => zone === 'lobby' && journey.lobbyPortal ? createLobbyPortalClip(journey.lobbyPortal, BASIS) : null, [zone, journey])
   const floors = useMemo<ReflectiveFloorProps[]>(() => {
     if (zone === 'city' && assets.manifest.level === undefined && assets.manifest.channelStride === 10 && assets.manifest.streetPlaza) return [
@@ -522,7 +524,8 @@ function ZoneGeometry({ assets, frameRef, elevatorFrameRef, roomFrameRef, destin
         {floors.map(floor => <ReflectiveFloor key={floor.name} {...floor} {...(lobbyClip ? { clippingPlanes: lobbyClip.planes } : {})} />)}
         {switches.length > 0 && <><ambientLight intensity={.24} /><pointLight position={[.65, 1.05, 2.55]} intensity={12} distance={3.8} decay={2} /></>}
         {onSelect && switches.map(({ level, items }) => <ElevatorButton key={level.id} level={level} items={items} selected={level.id === selectedLevel} focused={level.id === focusedLevel} keyboardPressed={level.id === pressedLevel} interactive={Boolean(interactive)} reducedMotion={reducedMotion} onSelect={onSelect} />)}
-        {groups.filter((item) => item.actor === 0 && !['button', 'buttonDetail'].includes(item.role ?? '')).map((item) => <group key={`${item.actor}-${item.kind}-${item.byteOffset}`} ref={(object) => { if (object) variants.current.set(item.byteOffset, object);else variants.current.delete(item.byteOffset) }}>
+        {zone === 'room-about' && onInteract && printerItems.length > 0 && <OfficePrinter items={printerItems} enabled={Boolean(interactive && showTargets)} reducedMotion={reducedMotion} onInteract={onInteract} onHover={setHovered} />}
+        {groups.filter((item) => item.actor === 0 && !['button', 'buttonDetail', 'printer'].includes(item.role ?? '')).map((item) => <group key={`${item.actor}-${item.kind}-${item.byteOffset}`} ref={(object) => { if (object) variants.current.set(item.byteOffset, object);else variants.current.delete(item.byteOffset) }}>
           <DrawGroup item={item} materials={materials} selectedLevel={selectedLevel} interactive={interactive} cardFocused={cardFocused} onSelect={onSelect} onInteract={onInteract} onHover={zone === 'room-about' || zone === 'room-skills' ? setHovered : undefined} />
         </group>)}
         {zone === 'room-about' && onInteract && <AboutOfficeTargets groups={groups} enabled={Boolean(interactive && showTargets)} hovered={hovered} onInteract={onInteract} />}

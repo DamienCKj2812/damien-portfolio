@@ -26,6 +26,9 @@
   "contact_card": {
     "name": "Damien",
     "url": "https://github.com/DamienCKj2812",
+    "email": "damienckj5993@gmail.com",
+    "phone": "+60 10-229 5993",
+    "whatsapp": "https://wa.me/60102295993",
     "face_mesh": "Office \u2022 Name card / contact face",
     "focus_camera": "Office \u2022 Contact card focus camera",
     "dimensions_m": [
@@ -45,10 +48,7 @@
       2.2,
       5.0
     ],
-    "interaction_status": "Click-triggered contact focus prepared; website interaction planned",
-    "email": "Damienckj5993@gmail.com",
-    "phone": "+60 10-229 5993",
-    "whatsapp": "https://wa.me/60102295993"
+    "interaction_status": "Click-triggered contact focus prepared; website interaction planned"
   },
   "environment": {
     "right_wall": "Rounded orbital art panel above a long low console, with one narrow lit end bookshelf",
@@ -66,11 +66,10 @@
   },
   "screen_aspect_ratio": 2.259259259259259,
   "skyline_towers": 45,
-  "objects": 819,
+  "objects": 837,
   "particle_count": 9521,
   "existing_assets_modified": false,
-  "screen_content": "Monochrome Malaysia map / Natural Earth public-domain geography",
-  "integration_status": "Standalone office; not yet connected to the elevator or website.",
+  "screen_content": "Monochrome Malaysia geography",
   "malaysia_map": {
     "country": "Malaysia",
     "countryCode": "MYS",
@@ -96,5 +95,6 @@
     "palette": "black / white",
     "screen": "Office \u2022 About content screen / web texture target",
     "nativeRepresentation": "planar meshes / thin curves / text"
-  }
+  },
+  "integration_status": "Standalone office; not yet connected to the elevator or website."
 }

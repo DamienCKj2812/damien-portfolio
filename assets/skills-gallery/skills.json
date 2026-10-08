@@ -4,9 +4,9 @@
     "src/data/portfolio.json",
     "docs/project-catalogue.md"
   ],
-  "profileSourceHash": "52e54b23dd2fe22969dea02aa1e96893e9da577aa0ea2452df4a3410a1136485",
+  "profileSourceHash": "35c0df6a6da249a5a7ede8eab338fb88ac6a9b4857ba505ce3e9fd31d79c885e",
   "projectSourceHash": "1493e043f7b09aee688c8b36323f1465fe425e65c7c9c349231af5c797f12ebc",
-  "description": "My development toolkit spans web applications, backend APIs, databases, deployment, and Linux servers.",
+  "description": "My development toolkit spans web applications, backend APIs, databases, testing, deployment, and Linux servers.",
   "learning": [
     "3D modeling",
     "Machine learning",
@@ -517,14 +517,13 @@
         "Automation",
         "R / exploratory analysis",
         "XGBoost / LOF",
-        "Locust / Toxiproxy",
         "NLTK / TextBlob"
       ],
       "displayItems": [
         "Python / Pandas / NumPy",
         "AI SDKs / RAG",
         "ML / attribution",
-        "Locust / automation",
+        "Data tooling / automation",
         "AI / ML (learning)"
       ],
       "profileOnly": [
@@ -583,7 +582,7 @@
         },
         {
           "heading": "Core toolkit",
-          "markdown": "- Python\n- Pandas / NumPy\n- AI SDKs\n- Retrieval-augmented generation (RAG)\n- AI knowledge bases\n- Automation\n- R / exploratory analysis\n- XGBoost / LOF\n- Locust / Toxiproxy\n- NLTK / TextBlob"
+          "markdown": "- Python\n- Pandas / NumPy\n- AI SDKs\n- Retrieval-augmented generation (RAG)\n- AI knowledge bases\n- Automation\n- R / exploratory analysis\n- XGBoost / LOF\n- NLTK / TextBlob"
         },
         {
           "heading": "Applied in projects",
@@ -709,10 +708,10 @@
       "kind": "skill",
       "number": 7,
       "catalogueNumber": 7,
-      "title": "DevOps & CI/CD",
+      "title": "DevOps & Testing",
       "section": "skills",
-      "category": "APPLIED SKILLS / DEVOPS & CI/CD",
-      "summary": "Deployment, server operations and repeatable application delivery.",
+      "category": "APPLIED SKILLS / DEVOPS & TESTING",
+      "summary": "Testing, deployment, server operations and repeatable application delivery.",
       "focus": "Full-stack development",
       "items": [
         "Git",
@@ -721,14 +720,19 @@
         "Docker",
         "GitHub Actions",
         "Deployment",
-        "Observability"
+        "Observability",
+        "Playwright",
+        "Browser / end-to-end testing",
+        "Regression testing",
+        "Responsive and accessibility testing",
+        "Integration testing"
       ],
       "displayItems": [
-        "Docker / PM2",
+        "Docker / PM2 / Ansible",
         "Git / GitHub Actions",
-        "Ansible / deployment",
-        "Observability",
-        "Bitbucket"
+        "Playwright / browser tests",
+        "Regression / accessibility",
+        "Integration / observability"
       ],
       "profileOnly": [
         "Bitbucket"
@@ -736,6 +740,7 @@
       "evidenceProjectIds": [
         "agent-property",
         "Aria",
+        "report-automation",
         "fyp",
         "damien-portfolio"
       ],
@@ -755,6 +760,11 @@
           "id": "anva-cms",
           "title": "ANVA CMS backend",
           "url": "https://github.com/maxscale-io/anva-cms"
+        },
+        {
+          "id": "report-automation",
+          "title": "Repository",
+          "url": "https://github.com/DamienCKj2812/report-automation"
         },
         {
           "id": "logging-loading",
@@ -790,23 +800,23 @@
       "catalogueSections": [
         {
           "heading": "Overview",
-          "markdown": "Deployment, server operations and repeatable application delivery.\n\nFull-stack development is my main focus, working across frontend, backend, databases, and deployment. I learn the technologies each project requires rather than limiting myself to a single stack."
+          "markdown": "Testing, deployment, server operations and repeatable application delivery.\n\nFull-stack development is my main focus, working across frontend, backend, databases, and deployment. I learn the technologies each project requires rather than limiting myself to a single stack."
         },
         {
           "heading": "Core toolkit",
-          "markdown": "- Git\n- GitHub\n- Bitbucket\n- Docker\n- GitHub Actions\n- Deployment\n- Observability"
+          "markdown": "- Git\n- GitHub\n- Bitbucket\n- Docker\n- GitHub Actions\n- Deployment\n- Observability\n- Playwright\n- Browser / end-to-end testing\n- Regression testing\n- Responsive and accessibility testing\n- Integration testing"
         },
         {
           "heading": "Applied in projects",
-          "markdown": "Agent Property includes deployment/sync tooling, Docker, PM2 and Ansible. DWMLight’s confirmed work includes deployment/server operations. FYP uses a multi-service Compose topology.\n\n- **Agent Property — Bilingual Property Website and CMS:** A bilingual property-discovery website that combines CMS-managed listings, housing-scheme information and educational content with direct WhatsApp enquiries.\n\nPublic website: [MyRumawip](https://myrumawip.com/).\n- **DWMLight / ANVA CMS — Multilingual Product Website and Custom CMS:** A multilingual product and company website backed by a custom content-management API, including localized content, product media and downloadable catalogues.\n\nPublic website: [DWMLight](https://dwmlight.com/en).\n- **FYP — Hybrid Anomaly Detection for Microservice Observability:** A telemetry-based anomaly-detection system that combines OpenTelemetry ingestion, Redis streaming, machine-learning inference and a live observability dashboard, evaluated using telemetry from an instrumented CMS application.\n- **Damien Portfolio — Immersive 3D Portfolio:** A monochrome interactive portfolio that takes visitors through a city, lobby and elevator into dedicated rooms for identity, skills, projects and experience/education."
+          "markdown": "Agent Property includes deployment/sync tooling, Docker, PM2 and Ansible. DWMLight’s confirmed work includes deployment/server operations. MyReport documents validation, integration-oriented tests and browser workflow tests. This portfolio uses Playwright to check browser interactions, navigation, loading, responsive layouts and accessibility behaviour. FYP uses a multi-service Compose topology.\n\n- **Agent Property — Bilingual Property Website and CMS:** A bilingual property-discovery website that combines CMS-managed listings, housing-scheme information and educational content with direct WhatsApp enquiries.\n\nPublic website: [MyRumawip](https://myrumawip.com/).\n- **DWMLight / ANVA CMS — Multilingual Product Website and Custom CMS:** A multilingual product and company website backed by a custom content-management API, including localized content, product media and downloadable catalogues.\n\nPublic website: [DWMLight](https://dwmlight.com/en).\n- **MyReport — WhatsApp Customer Follow-up and Reporting Workspace:** A customer-management workspace that organizes WhatsApp conversations, confirmed customer requirements, eligibility records and follow-up actions, with human-reviewed AI assistance.\n\n**Access:** Hosted privately via Tailscale; not publicly accessible.\n- **FYP — Hybrid Anomaly Detection for Microservice Observability:** A telemetry-based anomaly-detection system that combines OpenTelemetry ingestion, Redis streaming, machine-learning inference and a live observability dashboard, evaluated using telemetry from an instrumented CMS application.\n- **Damien Portfolio — Immersive 3D Portfolio:** A monochrome interactive portfolio that takes visitors through a city, lobby and elevator into dedicated rooms for identity, skills, projects and experience/education."
         },
         {
           "heading": "Engineering workflow",
-          "markdown": "Separate application and environment configuration, use repeatable builds/deployments, define process boundaries and validate generated artifacts before consuming them."
+          "markdown": "Separate application and environment configuration, use repeatable builds/deployments and validate generated artifacts before consuming them. Check application workflows and failure paths, repeat regression checks after changes, and verify keyboard navigation, focus handling and responsive layouts."
         },
         {
           "heading": "Technical decisions",
-          "markdown": "The portfolio checks native/browser geometry, routes and hashes before a Vite deployment. Operational configuration demonstrates a deployment design; it is not by itself evidence of live uptime or measured business outcomes."
+          "markdown": "The portfolio combines TypeScript, lint, content/package checks and actual-browser Playwright verification. Its browser checks cover 2D/3D mode switching, loading/Retry, keyboard and touch interactions, modal focus and responsive layouts. MyReport’s reviewed tests cover structured validation and integration contracts. Operational configuration demonstrates a deployment design; it is not by itself evidence of live uptime or measured business outcomes."
         },
         {
           "heading": "Collaboration and delivery",
@@ -814,11 +824,11 @@
         },
         {
           "heading": "Learning and scope",
-          "markdown": "Bitbucket is profile-backed. The catalogue distinguishes delivered code/configuration from unconfirmed production status and does not invent availability or performance measurements."
+          "markdown": "Bitbucket is profile-backed. Testing evidence comes from implemented portfolio browser checks and MyReport’s reviewed validation/integration tests; no additional test-framework proficiency or coverage percentage is inferred. The catalogue distinguishes delivered code/configuration from unconfirmed production status and does not invent availability or performance measurements."
         },
         {
           "heading": "Links and sources",
-          "markdown": "Project evidence comes from the completed project catalogue; broader toolkit claims come from the completed About profile.\n\n- [Repository / agent-property](https://github.com/DamienCKj2812/agent-limenghar-property)\n- [DWMLight website](https://github.com/maxscale-io/Aria)\n- [ANVA CMS backend / anva-cms](https://github.com/maxscale-io/anva-cms)\n- [Load and chaos tooling / logging-loading](https://github.com/DamienCKj2812/logging-loading)\n- [Backend and ML / logging-microservice](https://github.com/DamienCKj2812/logging-microservice)\n- [Observability dashboard / logging-microservice-ui](https://github.com/DamienCKj2812/logging-microservice-ui)\n- [GitHub / currently empty / damien-portfolio](https://github.com/DamienCKj2812/damien-portfolio)\n\nWebsites and previews\n\n- [MyRumawip website](https://myrumawip.com/)\n- [DWMLight / ANVA CMS website](https://dwmlight.com/en)"
+          "markdown": "Project evidence comes from the completed project catalogue; broader toolkit claims come from the completed About profile.\n\n- [Repository / agent-property](https://github.com/DamienCKj2812/agent-limenghar-property)\n- [DWMLight website](https://github.com/maxscale-io/Aria)\n- [ANVA CMS backend / anva-cms](https://github.com/maxscale-io/anva-cms)\n- [Repository / report-automation](https://github.com/DamienCKj2812/report-automation)\n- [Load and chaos tooling / logging-loading](https://github.com/DamienCKj2812/logging-loading)\n- [Backend and ML / logging-microservice](https://github.com/DamienCKj2812/logging-microservice)\n- [Observability dashboard / logging-microservice-ui](https://github.com/DamienCKj2812/logging-microservice-ui)\n- [GitHub / currently empty / damien-portfolio](https://github.com/DamienCKj2812/damien-portfolio)\n\nWebsites and previews\n\n- [MyRumawip website](https://myrumawip.com/)\n- [DWMLight / ANVA CMS website](https://dwmlight.com/en)\n\nMyReport: Hosted privately via Tailscale; not publicly accessible."
         }
       ],
       "contentStatus": "Approved About toolkit and project-catalogue evidence; profile-only/learning scope stated explicitly"
@@ -1008,7 +1018,7 @@
         },
         {
           "heading": "Applied in projects",
-          "markdown": "Fedora Dotfiles combines Stow, KDE/Hyprland, Quickshell/QML and a native PyQt6 sharing chooser. Client work includes server/deployment responsibilities, and FYP provides shell-driven load/chaos tooling.\n\n- **Fedora Dotfiles — Customized Wayland Desktop Environment:** A personalized Fedora desktop/development environment combining KDE Plasma and Hyprland sessions with a custom shell, login appearance, sharing picker and reusable configuration management.\n- **Agent Property — Bilingual Property Website and CMS:** A bilingual property-discovery website that combines CMS-managed listings, housing-scheme information and educational content with direct WhatsApp enquiries.\n\nPublic website: [MyRumawip](https://myrumawip.com/).\n- **DWMLight / ANVA CMS — Multilingual Product Website and Custom CMS:** A multilingual product and company website backed by a custom content-management API, including localized content, product media and downloadable catalogues.\n\nPublic website: [DWMLight](https://dwmlight.com/en).\n- **FYP — Hybrid Anomaly Detection for Microservice Observability:** A telemetry-based anomaly-detection system that combines OpenTelemetry ingestion, Redis streaming, machine-learning inference and a live observability dashboard, evaluated using telemetry from an instrumented CMS application."
+          "markdown": "Fedora Dotfiles combines Stow, KDE/Hyprland, Quickshell/QML and a native PyQt6 sharing chooser. Client work includes server/deployment responsibilities, and FYP uses Linux-based multi-service deployment tooling.\n\n- **Fedora Dotfiles — Customized Wayland Desktop Environment:** A personalized Fedora desktop/development environment combining KDE Plasma and Hyprland sessions with a custom shell, login appearance, sharing picker and reusable configuration management.\n- **Agent Property — Bilingual Property Website and CMS:** A bilingual property-discovery website that combines CMS-managed listings, housing-scheme information and educational content with direct WhatsApp enquiries.\n\nPublic website: [MyRumawip](https://myrumawip.com/).\n- **DWMLight / ANVA CMS — Multilingual Product Website and Custom CMS:** A multilingual product and company website backed by a custom content-management API, including localized content, product media and downloadable catalogues.\n\nPublic website: [DWMLight](https://dwmlight.com/en).\n- **FYP — Hybrid Anomaly Detection for Microservice Observability:** A telemetry-based anomaly-detection system that combines OpenTelemetry ingestion, Redis streaming, machine-learning inference and a live observability dashboard, evaluated using telemetry from an instrumented CMS application."
         },
         {
           "heading": "Engineering workflow",

@@ -150,10 +150,11 @@ def build_environment(scene, box, lines, text, material, particles, ellipse):
         box('Feature console / plain door %d' % index, (5.325, y, .54), (.025, 1.67, .75), cabinet, group, edge_mat=quiet)
     lines('Feature console / upper edge light', [[(5.248, -3.49, 1.011), (5.248, 3.33, 1.011)]], light, .002, group)
     lines('Feature console / recessed plinth light', [[(5.327, -3.47, .14), (5.327, 3.31, .14)]], light, .003, group)
-    for index, title in enumerate(['SYSTEMS', 'HUMANITY']):
-        z = 1.05 + index * .075
-        box('Feature console / stacked book ' + title, (5.48, -2.58, z), (.38, .92 - index * .07, .070), joinery, group, edge_mat=quiet)
-        wall_text('Feature console / book caption ' + title, title, -2.58, z, .046, x=5.279)
+    title = 'Designing Data-Intensive Applications'
+    box('Feature console / book ' + title, (5.48, -2.58, 1.078),
+        (.38, .92, .13), joinery, group, edge_mat=quiet)
+    wall_text('Feature console / book caption ' + title,
+              'DESIGNING DATA-INTENSIVE\nAPPLICATIONS', -2.58, 1.078, .032, x=5.279)
 
     # A softly rounded architectural art panel; native curves carry the glow.
     panel_y, panel_z = -.12, 2.63

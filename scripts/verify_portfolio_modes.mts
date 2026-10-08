@@ -4,6 +4,8 @@ import { chromium, chromeExecutable, installBrowserHelpers, screenshotPath } fro
 import { portfolio } from '../src/data/portfolio.ts'
 import projects from '../src/data/projects2d.generated.json' with { type: 'json' }
 import { isPublicLink } from '../src/data/publicLinks.ts'
+import cvContent from '../src/data/cv.json' with { type: 'json' }
+import { parseCv } from '../src/types/cv.ts'
 
 const server = await preview({ preview: { host: '127.0.0.1', port: 0 } })
 let browser
@@ -22,6 +24,10 @@ try {
   await page.getByRole('heading', { name: 'How would you like to explore?' }).waitFor()
   assert.equal(await page.locator('canvas,audio,.startup-loader').count(), 0)
   await page.screenshot({ path: screenshotPath('portfolio-entry-desktop.png') })
+  const cv = parseCv(cvContent)
+  const [entryCv] = await Promise.all([page.waitForEvent('download'), page.getByRole('link', { name: `Download CV (${cv.primary.format})` }).click()])
+  assert.equal(entryCv.suggestedFilename(), cv.primary.file)
+  assert.equal(await page.locator('.entry-mode').count(), 1, 'Downloading the CV keeps the entry screen open')
   for (const viewport of [{ width: 390, height: 844 }, { width: 320, height: 568 }, { width: 844, height: 390 }]) {
     await page.setViewportSize(viewport)
     assert.ok(await page.locator('.entry-mode').evaluate(element => element.scrollWidth <= element.clientWidth + 1), 'Entry has no horizontal overflow')
@@ -42,6 +48,14 @@ try {
   assert.ok((await page.locator('#journey').textContent())?.includes('Expected June 2027'))
   assert.ok(!(await page.locator('.flat-scroll').innerText()).includes('SAMPLE PROJECT'))
   assert.equal(await page.locator('canvas,audio').count(), 0)
+  const cvLinks = await page.locator('.flat-mode a[download]').all()
+  assert.equal(cvLinks.length, 2 + cv.alternates.length, '2D header and contact offer every uploaded CV file')
+  for (const link of cvLinks) {
+    const href = await link.getAttribute('href')
+    assert.ok([cv.primary, ...cv.alternates].some(item => href?.endsWith(`/cv/${encodeURIComponent(item.file)}`)), `${href} is a listed CV file`)
+    const response = await page.request.get(new URL(href ?? '', url).href)
+    assert.equal(response.status(), 200); assert.ok((await response.body()).length > 1000, `${href} is a real file`)
+  }
   assert.ok(!requests.some(request => /CityWalkthrough-.*\.js|\/models\/|\/media\/audio\//.test(request)), 'Entry and 2D do not load WebGL packages or audio')
   for (const link of await page.locator('#work a[href]').all()) assert.ok(isPublicLink(await link.getAttribute('href')))
   assert.equal(await page.locator('#work .flat-project-links a[href*="amplyfii"]').textContent(), 'Preview (unreleased) →')

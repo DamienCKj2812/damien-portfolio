@@ -39,7 +39,7 @@ export default function AboutOfficeTargets({ groups, enabled, hovered, onInterac
   const [focused, setFocused] = useState<string | null>(null)
   const { camera, size, pointer, invalidate } = useThree()
   const scratch = useMemo(() => new Vector3(), [])
-  const targets = useMemo(() => groups.filter(item => item.role === 'contactPick' || item.role === 'observerPick').flatMap(item => {
+  const targets = useMemo(() => groups.filter(item => item.role === 'contactPick' || item.role === 'observerPick' || item.role === 'printer' && item.kind === 'solid').flatMap(item => {
     item.geometry.computeBoundingBox()
     if (!item.id || !item.geometry.boundingBox) return []
     const bounds = item.geometry.boundingBox.clone()
@@ -55,8 +55,9 @@ export default function AboutOfficeTargets({ groups, enabled, hovered, onInterac
     }
     return [{
       id: item.id,
-      title: item.id === 'card' ? 'Contact' : portfolio.name,
-      action: item.id === 'card' ? 'View business card' : `Meet ${portfolio.name}`,
+      title: item.id === 'card' ? 'Contact' : item.id === 'printer' ? 'Printer' : portfolio.name,
+      action: item.id === 'card' ? 'View business card' : item.id === 'printer' ? 'Print CV' : `Meet ${portfolio.name}`,
+      ariaLabel: item.id === 'printer' ? 'Print CV' : `Open ${item.id === 'card' ? 'contact card' : `${portfolio.name} profile`}`,
       center,
       corners: cornersOf(bounds),
       label: new Vector3(center.x, center.y, outline.max.z + (item.id === 'card' ? .25 : .18)),
@@ -95,7 +96,7 @@ export default function AboutOfficeTargets({ groups, enabled, hovered, onInterac
         <lineBasicMaterial color="#ffffff" transparent opacity={.85} depthWrite={false} depthTest={false} toneMapped={false} />
       </lineSegments>
       <Html position={target.label.toArray()} center zIndexRange={[20, 10]} style={{ pointerEvents: 'none' }}>
-        <button className="about-target-label" data-sound-effect="environment" data-target={target.id} aria-label={`Open ${target.id === 'card' ? 'contact card' : `${portfolio.name} profile`}`} onClick={() => onInteract(target.id, 'label')}>
+        <button className="about-target-label" data-sound-effect="environment" data-target={target.id} aria-label={target.ariaLabel} onClick={() => onInteract(target.id, 'label')}>
           <span className="about-target-title">{target.title}</span>
           <span className="about-target-action">{target.action}<span aria-hidden="true">↗</span></span>
         </button>

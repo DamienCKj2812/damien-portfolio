@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import { portfolio } from '../data/portfolio'
 import { rememberedMode } from '../data/portfolioMode'
+import { cvDownload } from '../data/cv'
 import './portfolioFlat.css'
 
 export function Starfield() {
@@ -46,6 +47,7 @@ export default function EntryChoice({ onChoose }: { onChoose: (mode: '2d' | '3d'
         })}
       </div>
       <label className="entry-remember"><input type="checkbox" checked={remember} onChange={event => setRemember(event.target.checked)}/>Remember my choice on this device</label>
+      <a className="entry-cv flat-mono" href={cvDownload.primary.href} download={cvDownload.primary.file}>Download CV ({cvDownload.primary.format}) <span aria-hidden="true">↓</span></a>
     </main>
   </div>
 }

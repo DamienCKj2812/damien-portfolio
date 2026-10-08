@@ -2,8 +2,10 @@ import { useEffect, useRef, useState } from 'react'
 import { createPortal } from 'react-dom'
 import type { JourneyRecord } from '../../types/portfolio'
 import { portfolio } from '../../data/portfolio'
+import { cvDownload } from '../../data/cv'
 import { useReducedMotion } from './useScrollTimeline'
 import PixelPortrait from './PixelPortrait'
+import useCvPrinter from './useCvPrinter'
 import useSoundEffects from '../../audio/useSoundEffects'
 import './observerProfile.css'
 
@@ -54,6 +56,7 @@ const PANEL_LABELS = ['Identity','Portrait','Record'] as const
 
 export default function ObserverProfile({ onClose }: ObserverProfileProps) {
   const { click: playClick } = useSoundEffects()
+  const printCv = useCvPrinter()
   const dialogRef = useRef<HTMLDialogElement>(null)
   const closeRef = useRef<HTMLButtonElement>(null)
   const mainRef = useRef<HTMLDivElement>(null)
@@ -149,7 +152,7 @@ export default function ObserverProfile({ onClose }: ObserverProfileProps) {
       <header className="observer-sheet-header">
         <span>Room 01 / About</span>
         <span className="observer-header-center">{portfolio.name} / Personal portfolio</span>
-        <div className="observer-header-actions"><span>Rev. {profile.revision}</span><button ref={closeRef} type="button" onClick={onClose} aria-label="Close about profile">Close <span aria-hidden="true">×</span></button></div>
+        <div className="observer-header-actions"><span>Rev. {profile.revision}</span><button type="button" onClick={printCv}>Print CV</button><button ref={closeRef} type="button" onClick={onClose} aria-label="Close about profile">Close <span aria-hidden="true">×</span></button></div>
       </header>
       <nav className="observer-mobile-nav" aria-label="Profile sections">{PANEL_LABELS.map((label,index)=><button type="button" key={label} aria-current={index===activePanel?'location':undefined} onClick={()=>selectPanel(index)}>{label}</button>)}</nav>
       <div className="observer-columns" ref={mainRef} onScroll={updateActivePanel}>
@@ -170,7 +173,7 @@ export default function ObserverProfile({ onClose }: ObserverProfileProps) {
           </dl>
           <section className="observer-contacts" aria-label="Contact"><h3>Contact</h3>
             {portfolio.contact.links.filter(link=>link.id==='email'||link.id==='phone').map(link=><div className="observer-contact" key={link.id}><a href={link.href}><span>{link.id}</span><strong>{link.label}</strong></a><button type="button" aria-label={`Copy ${link.id}`} onClick={()=>{void copyContact(link.id,link.label)}}>{copied===link.id?'Copied':'Copy'}</button></div>)}
-            <ul className="observer-profile-links">{portfolio.contact.links.filter(link=>link.id!=='email'&&link.id!=='phone').map(link=><li key={link.id}><a href={link.href} target="_blank" rel="noopener noreferrer">{link.label} ↗</a></li>)}</ul>
+            <ul className="observer-profile-links">{portfolio.contact.links.filter(link=>link.id!=='email'&&link.id!=='phone').map(link=><li key={link.id}><a href={link.href} target="_blank" rel="noopener noreferrer">{link.label} ↗</a></li>)}<li><a href={cvDownload.primary.href} download={cvDownload.primary.file}>Download CV ({cvDownload.primary.format}) ↓</a></li></ul>
             <p className="observer-copy-status" role="status">{copyMessage}</p>
           </section>
           {profile.interests?.length>0 && <section className="observer-interests" aria-label="Interests"><h3>Interests</h3><ul>{profile.interests.map(interest=><li key={interest}>{interest}</li>)}</ul></section>}

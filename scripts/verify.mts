@@ -4,6 +4,7 @@ import { fileURLToPath } from 'node:url'
 export const checks = [
   'scripts/verify_media_assets.mts',
   'scripts/verify_public_links.mts',
+  'scripts/verify_cv.mts',
   'scripts/verify_skills_content.mts',
   'scripts/verify_project_categories.mts',
   'scripts/verify_spacious_hallway.mts',

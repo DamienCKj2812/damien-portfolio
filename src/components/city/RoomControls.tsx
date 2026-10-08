@@ -10,6 +10,7 @@ import ProjectCardFocusControls from './ProjectCardFocusControls'
 export interface RoomControlsProps extends Omit<GuidedRoomControlsProps, 'assets'> {
   assets: Pick<LoadedRoomAssets, 'manifest'>
   onObserver: () => void
+  onPrintCv: () => void
   onProject: (id: string, inspect: boolean) => void
   onProjectSection: (heading: string) => void
   onCloseProject: () => void
@@ -18,7 +19,7 @@ export interface RoomControlsProps extends Omit<GuidedRoomControlsProps, 'assets
 
 const movementControls: readonly [string, -1 | 1, string][] = [['Back', -1, '↓'], ['Forward', 1, '↑']]
 
-export default function RoomControls({ assets, state, reducedMotion, onView, onObserver, onProject, onProjectSection, onCloseProject, onMove, onLook, onPause, onToggleWalk, onSeekTour, onStation, onExhibit, onLookAt, onResetLook }: RoomControlsProps) {
+export default function RoomControls({ assets, state, reducedMotion, onView, onObserver, onPrintCv, onProject, onProjectSection, onCloseProject, onMove, onLook, onPause, onToggleWalk, onSeekTour, onStation, onExhibit, onLookAt, onResetLook }: RoomControlsProps) {
   const { manifest } = assets
   if (assets.manifest.level==='projects'&&state.view==='directory') return <button type="button" className="project-focus-back" onClick={()=>onView('main')}>← Back to hallway <kbd>Esc</kbd></button>
   if (assets.manifest.level==='skills' && state.view==='skill') {
@@ -48,6 +49,7 @@ export default function RoomControls({ assets, state, reducedMotion, onView, onO
     </> : <>
       {card && <RoomAction shortcut="←" onClick={() => onView('main')}>Back to office</RoomAction>}
       {!card && <div className="room-motion-controls"><RoomAction shortcut="←" onClick={() => onLook(-Math.PI / 4)}>Look left</RoomAction><RoomAction shortcut="→" onClick={() => onLook(Math.PI / 4)}>Look right</RoomAction><RoomAction shortcut="R" onClick={onResetLook}>Reset look</RoomAction></div>}
+      {!card && <RoomAction data-sound-effect="environment" onClick={onPrintCv}>Print CV</RoomAction>}
       <p className="room-key-hint">{card ? 'Click outside the card or use Back to return to your office view.' : 'Drag to turn around · Arrow keys to look'}</p>
     </>}>
     {hallway ? <>

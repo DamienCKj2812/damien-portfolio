@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from 'react'
 import type { ReactNode } from 'react'
 import { portfolio } from '../data/portfolio'
+import { cvDownload } from '../data/cv'
 import projects from '../data/projects2d.generated.json'
 import { isPublicLink } from '../data/publicLinks'
 import PixelPortrait from './city/PixelPortrait'
@@ -88,7 +89,7 @@ export default function Portfolio2D({ onEnter3D, onEntry }: { onEnter3D: () => v
     <header className="flat-header"><div className="flat-header-inner">
       <a className="flat-brand" href="#top" onClick={event => { event.preventDefault(); go('top') }}><span className="flat-diamond"/>DamienCKJ</a>
       <nav className="flat-desktop-nav" aria-label="Portfolio sections">{floors.map(([id, label], index) => <button key={id} aria-current={active === index ? 'location' : undefined} onClick={() => go(id)}><span>F0{index + 1}</span>{label}</button>)}</nav>
-      <div className="flat-header-actions"><button className="flat-action" onClick={onEnter3D}>Enter 3D <span aria-hidden="true">↗</span></button></div>
+      <div className="flat-header-actions"><a className="flat-action" href={cvDownload.primary.href} download={cvDownload.primary.file} aria-label={`Download CV (${cvDownload.primary.format})`}>CV <span aria-hidden="true">↓</span></a><button className="flat-action" onClick={onEnter3D}>Enter 3D <span aria-hidden="true">↗</span></button></div>
     </div></header>
     <main>
       <section id="top" className="flat-hero" tabIndex={-1}>
@@ -136,7 +137,7 @@ export default function Portfolio2D({ onEnter3D, onEntry }: { onEnter3D: () => v
           <div className="flat-contacts">{portfolio.contact.links.map(link => {
             const copyText = link.id === 'email' ? portfolio.contact.email : link.id === 'phone' ? portfolio.contact.phone : null
             return <div key={link.id}><a href={link.href} target={/^https:/.test(link.href) ? '_blank' : undefined} rel={/^https:/.test(link.href) ? 'noopener noreferrer' : undefined}><span className="flat-mono">{link.id} ↗</span><span>{link.label}</span></a>{copyText && <button aria-label={`Copy ${link.id}`} onClick={() => { void copy(link.id, copyText) }}>{copyStatus?.id === link.id ? copyStatus.text : 'Copy'}</button>}</div>
-          })}</div><span className="flat-copy-feedback" role="status">{copyStatus ? `${copyStatus.id}: ${copyStatus.text}` : ''}</span>
+          })}<div><a href={cvDownload.primary.href} download={cvDownload.primary.file}><span className="flat-mono">cv ↓</span><span>Download CV ({cvDownload.primary.format})</span></a>{cvDownload.alternates.map(item => <a key={item.file} className="flat-contact-side" href={item.href} download={item.file} aria-label={`Download CV (${item.format})`}>{item.format}</a>)}</div></div><span className="flat-copy-feedback" role="status">{copyStatus ? `${copyStatus.id}: ${copyStatus.text}` : ''}</span>
           <button className="flat-action" onClick={onEntry}>Change portfolio experience ↗</button>
           <footer><span>© {new Date().getFullYear()} {portfolio.fullName}</span><span>Off duty: {profile.interests.join(' · ')}</span></footer>
         </section>

@@ -5,6 +5,7 @@ import { NoToneMapping } from 'three'
 import { portfolio } from '../data/portfolio'
 import CityScene from './city/CityScene'
 import type { CitySceneProps } from './city/CityScene'
+import useCvPrinter from './city/useCvPrinter'
 import NegativeCursor from './city/NegativeCursor'
 import { loadCityAssets, loadElevatorAssets, loadJourneyConfig, loadLobbyAssets, loadRoomAssets } from './city/cityAssets'
 import StartupFrameReady from './city/StartupFrameReady'
@@ -321,9 +322,11 @@ export default function CityWalkthrough({ startupReady, onStartup, onStartupErro
     return ()=>window.removeEventListener('keydown',escape)
   },[roomId,roomState.view,interfaceOpen,changeRoomView,playSystemClick])
   const openObserverProfile = useCallback(() => { setRoomState(current => ({ ...current, profileOpen: true }));document.body.style.cursor = '' }, [])
+  const printCv = useCvPrinter()
   const closeObserverProfile = useCallback(() => setRoomState(current => ({ ...current, profileOpen: false })), [])
   const interactWithRoom = useCallback<CitySceneProps['onRoomInteract']>((id, source = 'scene') => {
     if (source === 'scene' && navigationRef.current.dragDistance > 5) return
+    if (roomId === 'about' && id === 'printer' && (interfaceOpen || elevatorState.status !== 'arrived' || latestRoomState.current.view !== 'main' || latestRoomState.current.profileOpen || latestRoomState.current.returnPrompt)) return
     if (roomId === 'projects' && id!=='directory' && !(roomAssets?.manifest.level==='projects' && roomAssets.manifest.projects.some(project => project.id === id && latestRoomState.current.openedCategories.includes(project.section)))) return
     if (source === 'scene') playClick()
     if (roomId === 'about' && id === 'card') changeRoomView('card')
@@ -332,6 +335,7 @@ export default function CityWalkthrough({ startupReady, onStartup, onStartupErro
       if (link && /^https:\/\//.test(link.href)) window.open(link.href, '_blank', 'noopener,noreferrer')
     }
     else if (roomId === 'about' && id === 'observer') openObserverProfile()
+    else if (roomId === 'about' && id === 'printer') printCv()
     else if (roomId==='projects'&&id==='directory'&&roomAssets?.manifest.level==='projects'&&roomAssets.manifest.directory) {
       navigationRef.current.forward=0;navigationRef.current.fast=false
       setRoomState(current=>({...current,view:'directory',projectExploring:false}))
@@ -351,7 +355,7 @@ export default function CityWalkthrough({ startupReady, onStartup, onStartupErro
       if (roomAssets.manifest.exhibits.some(entry=>entry.id===id&&entry.kind==='skill')) openSkillCard(id)
       else setRoomState(current=>({...current,exhibit:id}))
     }
-  }, [roomId, roomAssets, changeRoomView, openObserverProfile, openTimelineEntry, openSkillCard, playClick])
+  }, [roomId, roomAssets, changeRoomView, openObserverProfile, openTimelineEntry, openSkillCard, playClick, printCv, interfaceOpen, elevatorState.status])
   const jumpToProject = (id: string, jump: boolean) => {
     const project = roomAssets?.manifest.level==='projects'?roomAssets.manifest.projects.find((item) => item.id === id):undefined
     if (project && !roomState.openedCategories.includes(project.section)) return
@@ -513,7 +517,7 @@ export default function CityWalkthrough({ startupReady, onStartup, onStartupErro
            {!inRoom && <ToplineControl className="city-floor-shortcut" label="Choose a floor" tooltip="Choose a floor" onClick={() => { replaySelection();seekFrame(bookmarks.cabin) }}><span className="floor-shortcut-label">Choose a floor </span><span aria-hidden="true">↗</span></ToplineControl>}
          </div></div>
         {roomId === 'projects' && elevatorState.status === 'arrived' && roomAssets?.manifest.level === 'projects' && !roomState.returnPrompt && <HallwayCategoryLabel navigation={roomAssets.manifest.navigation} navigationRef={navigationRef} labelRef={categoryLabelRef} />}
-        {chooseReady && cabin.assets && elevatorState.status !== 'returning' && (elevatorState.status === 'arrived' && roomAssets ? <RoomControls assets={roomAssets} state={roomState} reducedMotion={reducedMotion} onView={changeRoomView} onObserver={openObserverProfile} onProject={jumpToProject} onProjectSection={selectProjectSection} onCloseProject={()=>changeRoomView('main')} onMove={moveInRoom} onLook={lookInRoom} onPause={() => setRoomState((current) => ({ ...current, paused: !current.paused }))} onToggleWalk={toggleRoomWalk} onSeekTour={seekRoomTour} onStation={stepRoomStation} onExhibit={selectRoomExhibit} onLookAt={lookAtRoomExhibit} onResetLook={resetRoomLook} /> : <ElevatorControls levels={cabin.assets.manifest.levels} state={elevatorState} onSelect={selectLevel} onReplay={replaySelection} onEnterRoom={selectLevel} onFocusLevel={setFocusedLevel} onPressLevel={setPressedLevel} />)}
+        {chooseReady && cabin.assets && elevatorState.status !== 'returning' && (elevatorState.status === 'arrived' && roomAssets ? <RoomControls assets={roomAssets} state={roomState} reducedMotion={reducedMotion} onView={changeRoomView} onObserver={openObserverProfile} onPrintCv={() => interactWithRoom('printer', 'label')} onProject={jumpToProject} onProjectSection={selectProjectSection} onCloseProject={()=>changeRoomView('main')} onMove={moveInRoom} onLook={lookInRoom} onPause={() => setRoomState((current) => ({ ...current, paused: !current.paused }))} onToggleWalk={toggleRoomWalk} onSeekTour={seekRoomTour} onStation={stepRoomStation} onExhibit={selectRoomExhibit} onLookAt={lookAtRoomExhibit} onResetLook={resetRoomLook} /> : <ElevatorControls levels={cabin.assets.manifest.levels} state={elevatorState} onSelect={selectLevel} onReplay={replaySelection} onEnterRoom={selectLevel} onFocusLevel={setFocusedLevel} onPressLevel={setPressedLevel} />)}
         {roomState.returnPrompt && roomAssets && <RoomReturnDialog label={roomAssets.manifest.label} onConfirm={confirmRoomReturn} onCancel={cancelRoomReturn} />}
         {elevatorState.status === 'returning' && <div className="room-return-status" role="status" aria-live="polite"><span className="room-status-dot" aria-hidden="true"/><span id="room-return-status">Walking back to the elevator…</span></div>}
         {chooseReady && roomId === 'about' && elevatorState.status === 'arrived' && roomAssets && roomState.profileOpen && <ObserverProfile onClose={closeObserverProfile} />}

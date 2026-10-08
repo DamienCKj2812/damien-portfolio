@@ -4,7 +4,7 @@
   "label": "Skills gallery",
   "geometry": "geometry.bin",
   "animation": "animation.bin",
-  "assetHash": "30f15719925a",
+  "assetHash": "4d694d6728a2",
   "frameStart": 1,
   "frameEnd": 959,
   "fps": 30,
@@ -737,8 +737,8 @@
       "actor": 0,
       "kind": "solid",
       "byteOffset": 245632,
-      "floatCount": 859380,
-      "vertexCount": 214845,
+      "floatCount": 909000,
+      "vertexCount": 227250,
       "stride": 4,
       "role": null,
       "id": null,
@@ -747,7 +747,7 @@
     {
       "actor": 0,
       "kind": "solid",
-      "byteOffset": 3683152,
+      "byteOffset": 3881632,
       "floatCount": 30480,
       "vertexCount": 7620,
       "stride": 4,
@@ -758,7 +758,7 @@
     {
       "actor": 0,
       "kind": "solid",
-      "byteOffset": 3805072,
+      "byteOffset": 4003552,
       "floatCount": 24,
       "vertexCount": 6,
       "stride": 4,
@@ -769,7 +769,7 @@
     {
       "actor": 0,
       "kind": "solid",
-      "byteOffset": 3805168,
+      "byteOffset": 4003648,
       "floatCount": 24,
       "vertexCount": 6,
       "stride": 4,
@@ -780,7 +780,7 @@
     {
       "actor": 0,
       "kind": "solid",
-      "byteOffset": 3805264,
+      "byteOffset": 4003744,
       "floatCount": 24,
       "vertexCount": 6,
       "stride": 4,
@@ -791,7 +791,7 @@
     {
       "actor": 0,
       "kind": "solid",
-      "byteOffset": 3805360,
+      "byteOffset": 4003840,
       "floatCount": 24,
       "vertexCount": 6,
       "stride": 4,
@@ -802,7 +802,7 @@
     {
       "actor": 0,
       "kind": "solid",
-      "byteOffset": 3805456,
+      "byteOffset": 4003936,
       "floatCount": 24,
       "vertexCount": 6,
       "stride": 4,
@@ -813,7 +813,7 @@
     {
       "actor": 0,
       "kind": "solid",
-      "byteOffset": 3805552,
+      "byteOffset": 4004032,
       "floatCount": 24,
       "vertexCount": 6,
       "stride": 4,
@@ -824,7 +824,7 @@
     {
       "actor": 0,
       "kind": "solid",
-      "byteOffset": 3805648,
+      "byteOffset": 4004128,
       "floatCount": 24,
       "vertexCount": 6,
       "stride": 4,
@@ -835,7 +835,7 @@
     {
       "actor": 0,
       "kind": "solid",
-      "byteOffset": 3805744,
+      "byteOffset": 4004224,
       "floatCount": 24,
       "vertexCount": 6,
       "stride": 4,
@@ -846,7 +846,7 @@
     {
       "actor": 0,
       "kind": "solid",
-      "byteOffset": 3805840,
+      "byteOffset": 4004320,
       "floatCount": 24,
       "vertexCount": 6,
       "stride": 4,
@@ -857,7 +857,7 @@
     {
       "actor": 1,
       "kind": "points",
-      "byteOffset": 3805936,
+      "byteOffset": 4004416,
       "floatCount": 475,
       "vertexCount": 95,
       "stride": 5,
@@ -868,7 +868,7 @@
     {
       "actor": 2,
       "kind": "points",
-      "byteOffset": 3807836,
+      "byteOffset": 4006316,
       "floatCount": 475,
       "vertexCount": 95,
       "stride": 5,
@@ -879,7 +879,7 @@
     {
       "actor": 3,
       "kind": "points",
-      "byteOffset": 3809736,
+      "byteOffset": 4008216,
       "floatCount": 725,
       "vertexCount": 145,
       "stride": 5,
@@ -890,7 +890,7 @@
     {
       "actor": 4,
       "kind": "points",
-      "byteOffset": 3812636,
+      "byteOffset": 4011116,
       "floatCount": 725,
       "vertexCount": 145,
       "stride": 5,
@@ -901,7 +901,7 @@
     {
       "actor": 5,
       "kind": "points",
-      "byteOffset": 3815536,
+      "byteOffset": 4014016,
       "floatCount": 325,
       "vertexCount": 65,
       "stride": 5,
@@ -912,7 +912,7 @@
     {
       "actor": 6,
       "kind": "points",
-      "byteOffset": 3816836,
+      "byteOffset": 4015316,
       "floatCount": 325,
       "vertexCount": 65,
       "stride": 5,
@@ -923,7 +923,7 @@
     {
       "actor": 7,
       "kind": "points",
-      "byteOffset": 3818136,
+      "byteOffset": 4016616,
       "floatCount": 1325,
       "vertexCount": 265,
       "stride": 5,
@@ -934,7 +934,7 @@
     {
       "actor": 8,
       "kind": "points",
-      "byteOffset": 3823436,
+      "byteOffset": 4021916,
       "floatCount": 950,
       "vertexCount": 190,
       "stride": 5,
@@ -945,7 +945,7 @@
     {
       "actor": 9,
       "kind": "points",
-      "byteOffset": 3827236,
+      "byteOffset": 4025716,
       "floatCount": 1100,
       "vertexCount": 220,
       "stride": 5,
@@ -956,7 +956,7 @@
     {
       "actor": 10,
       "kind": "points",
-      "byteOffset": 3831636,
+      "byteOffset": 4030116,
       "floatCount": 1100,
       "vertexCount": 220,
       "stride": 5,
@@ -967,7 +967,7 @@
     {
       "actor": 11,
       "kind": "points",
-      "byteOffset": 3836036,
+      "byteOffset": 4034516,
       "floatCount": 1200,
       "vertexCount": 240,
       "stride": 5,
@@ -978,7 +978,7 @@
     {
       "actor": 12,
       "kind": "points",
-      "byteOffset": 3840836,
+      "byteOffset": 4039316,
       "floatCount": 1200,
       "vertexCount": 240,
       "stride": 5,
@@ -989,7 +989,7 @@
     {
       "actor": 13,
       "kind": "points",
-      "byteOffset": 3845636,
+      "byteOffset": 4044116,
       "floatCount": 2350,
       "vertexCount": 470,
       "stride": 5,
@@ -1000,7 +1000,7 @@
     {
       "actor": 14,
       "kind": "points",
-      "byteOffset": 3855036,
+      "byteOffset": 4053516,
       "floatCount": 900,
       "vertexCount": 180,
       "stride": 5,
@@ -1011,7 +1011,7 @@
     {
       "actor": 15,
       "kind": "points",
-      "byteOffset": 3858636,
+      "byteOffset": 4057116,
       "floatCount": 900,
       "vertexCount": 180,
       "stride": 5,
@@ -1022,7 +1022,7 @@
     {
       "actor": 16,
       "kind": "points",
-      "byteOffset": 3862236,
+      "byteOffset": 4060716,
       "floatCount": 475,
       "vertexCount": 95,
       "stride": 5,
@@ -1033,7 +1033,7 @@
     {
       "actor": 17,
       "kind": "points",
-      "byteOffset": 3864136,
+      "byteOffset": 4062616,
       "floatCount": 475,
       "vertexCount": 95,
       "stride": 5,
@@ -1044,7 +1044,7 @@
     {
       "actor": 18,
       "kind": "points",
-      "byteOffset": 3866036,
+      "byteOffset": 4064516,
       "floatCount": 725,
       "vertexCount": 145,
       "stride": 5,
@@ -1055,7 +1055,7 @@
     {
       "actor": 19,
       "kind": "points",
-      "byteOffset": 3868936,
+      "byteOffset": 4067416,
       "floatCount": 725,
       "vertexCount": 145,
       "stride": 5,
@@ -1066,7 +1066,7 @@
     {
       "actor": 20,
       "kind": "points",
-      "byteOffset": 3871836,
+      "byteOffset": 4070316,
       "floatCount": 325,
       "vertexCount": 65,
       "stride": 5,
@@ -1077,7 +1077,7 @@
     {
       "actor": 21,
       "kind": "points",
-      "byteOffset": 3873136,
+      "byteOffset": 4071616,
       "floatCount": 325,
       "vertexCount": 65,
       "stride": 5,
@@ -1088,7 +1088,7 @@
     {
       "actor": 22,
       "kind": "points",
-      "byteOffset": 3874436,
+      "byteOffset": 4072916,
       "floatCount": 1325,
       "vertexCount": 265,
       "stride": 5,
@@ -1099,7 +1099,7 @@
     {
       "actor": 23,
       "kind": "points",
-      "byteOffset": 3879736,
+      "byteOffset": 4078216,
       "floatCount": 950,
       "vertexCount": 190,
       "stride": 5,
@@ -1110,7 +1110,7 @@
     {
       "actor": 24,
       "kind": "points",
-      "byteOffset": 3883536,
+      "byteOffset": 4082016,
       "floatCount": 1100,
       "vertexCount": 220,
       "stride": 5,
@@ -1121,7 +1121,7 @@
     {
       "actor": 25,
       "kind": "points",
-      "byteOffset": 3887936,
+      "byteOffset": 4086416,
       "floatCount": 1100,
       "vertexCount": 220,
       "stride": 5,
@@ -1132,7 +1132,7 @@
     {
       "actor": 26,
       "kind": "points",
-      "byteOffset": 3892336,
+      "byteOffset": 4090816,
       "floatCount": 1200,
       "vertexCount": 240,
       "stride": 5,
@@ -1143,7 +1143,7 @@
     {
       "actor": 27,
       "kind": "points",
-      "byteOffset": 3897136,
+      "byteOffset": 4095616,
       "floatCount": 1200,
       "vertexCount": 240,
       "stride": 5,
@@ -1154,7 +1154,7 @@
     {
       "actor": 28,
       "kind": "points",
-      "byteOffset": 3901936,
+      "byteOffset": 4100416,
       "floatCount": 2350,
       "vertexCount": 470,
       "stride": 5,
@@ -1165,7 +1165,7 @@
     {
       "actor": 29,
       "kind": "points",
-      "byteOffset": 3911336,
+      "byteOffset": 4109816,
       "floatCount": 900,
       "vertexCount": 180,
       "stride": 5,
@@ -1176,7 +1176,7 @@
     {
       "actor": 30,
       "kind": "points",
-      "byteOffset": 3914936,
+      "byteOffset": 4113416,
       "floatCount": 900,
       "vertexCount": 180,
       "stride": 5,
@@ -1187,7 +1187,7 @@
     {
       "actor": 31,
       "kind": "points",
-      "byteOffset": 3918536,
+      "byteOffset": 4117016,
       "floatCount": 475,
       "vertexCount": 95,
       "stride": 5,
@@ -1198,7 +1198,7 @@
     {
       "actor": 32,
       "kind": "points",
-      "byteOffset": 3920436,
+      "byteOffset": 4118916,
       "floatCount": 475,
       "vertexCount": 95,
       "stride": 5,
@@ -1209,7 +1209,7 @@
     {
       "actor": 33,
       "kind": "points",
-      "byteOffset": 3922336,
+      "byteOffset": 4120816,
       "floatCount": 725,
       "vertexCount": 145,
       "stride": 5,
@@ -1220,7 +1220,7 @@
     {
       "actor": 34,
       "kind": "points",
-      "byteOffset": 3925236,
+      "byteOffset": 4123716,
       "floatCount": 725,
       "vertexCount": 145,
       "stride": 5,
@@ -1231,7 +1231,7 @@
     {
       "actor": 35,
       "kind": "points",
-      "byteOffset": 3928136,
+      "byteOffset": 4126616,
       "floatCount": 325,
       "vertexCount": 65,
       "stride": 5,
@@ -1242,7 +1242,7 @@
     {
       "actor": 36,
       "kind": "points",
-      "byteOffset": 3929436,
+      "byteOffset": 4127916,
       "floatCount": 325,
       "vertexCount": 65,
       "stride": 5,
@@ -1253,7 +1253,7 @@
     {
       "actor": 37,
       "kind": "points",
-      "byteOffset": 3930736,
+      "byteOffset": 4129216,
       "floatCount": 1325,
       "vertexCount": 265,
       "stride": 5,
@@ -1264,7 +1264,7 @@
     {
       "actor": 38,
       "kind": "points",
-      "byteOffset": 3936036,
+      "byteOffset": 4134516,
       "floatCount": 950,
       "vertexCount": 190,
       "stride": 5,
@@ -1275,7 +1275,7 @@
     {
       "actor": 39,
       "kind": "points",
-      "byteOffset": 3939836,
+      "byteOffset": 4138316,
       "floatCount": 1100,
       "vertexCount": 220,
       "stride": 5,
@@ -1286,7 +1286,7 @@
     {
       "actor": 40,
       "kind": "points",
-      "byteOffset": 3944236,
+      "byteOffset": 4142716,
       "floatCount": 1100,
       "vertexCount": 220,
       "stride": 5,
@@ -1297,7 +1297,7 @@
     {
       "actor": 41,
       "kind": "points",
-      "byteOffset": 3948636,
+      "byteOffset": 4147116,
       "floatCount": 1200,
       "vertexCount": 240,
       "stride": 5,
@@ -1308,7 +1308,7 @@
     {
       "actor": 42,
       "kind": "points",
-      "byteOffset": 3953436,
+      "byteOffset": 4151916,
       "floatCount": 1200,
       "vertexCount": 240,
       "stride": 5,
@@ -1319,7 +1319,7 @@
     {
       "actor": 43,
       "kind": "points",
-      "byteOffset": 3958236,
+      "byteOffset": 4156716,
       "floatCount": 2350,
       "vertexCount": 470,
       "stride": 5,
@@ -1330,7 +1330,7 @@
     {
       "actor": 44,
       "kind": "points",
-      "byteOffset": 3967636,
+      "byteOffset": 4166116,
       "floatCount": 900,
       "vertexCount": 180,
       "stride": 5,
@@ -1341,7 +1341,7 @@
     {
       "actor": 45,
       "kind": "points",
-      "byteOffset": 3971236,
+      "byteOffset": 4169716,
       "floatCount": 900,
       "vertexCount": 180,
       "stride": 5,
@@ -1352,7 +1352,7 @@
     {
       "actor": 46,
       "kind": "points",
-      "byteOffset": 3974836,
+      "byteOffset": 4173316,
       "floatCount": 475,
       "vertexCount": 95,
       "stride": 5,
@@ -1363,7 +1363,7 @@
     {
       "actor": 47,
       "kind": "points",
-      "byteOffset": 3976736,
+      "byteOffset": 4175216,
       "floatCount": 475,
       "vertexCount": 95,
       "stride": 5,
@@ -1374,7 +1374,7 @@
     {
       "actor": 48,
       "kind": "points",
-      "byteOffset": 3978636,
+      "byteOffset": 4177116,
       "floatCount": 725,
       "vertexCount": 145,
       "stride": 5,
@@ -1385,7 +1385,7 @@
     {
       "actor": 49,
       "kind": "points",
-      "byteOffset": 3981536,
+      "byteOffset": 4180016,
       "floatCount": 725,
       "vertexCount": 145,
       "stride": 5,
@@ -1396,7 +1396,7 @@
     {
       "actor": 50,
       "kind": "points",
-      "byteOffset": 3984436,
+      "byteOffset": 4182916,
       "floatCount": 325,
       "vertexCount": 65,
       "stride": 5,
@@ -1407,7 +1407,7 @@
     {
       "actor": 51,
       "kind": "points",
-      "byteOffset": 3985736,
+      "byteOffset": 4184216,
       "floatCount": 325,
       "vertexCount": 65,
       "stride": 5,
@@ -1418,7 +1418,7 @@
     {
       "actor": 52,
       "kind": "points",
-      "byteOffset": 3987036,
+      "byteOffset": 4185516,
       "floatCount": 1325,
       "vertexCount": 265,
       "stride": 5,
@@ -1429,7 +1429,7 @@
     {
       "actor": 53,
       "kind": "points",
-      "byteOffset": 3992336,
+      "byteOffset": 4190816,
       "floatCount": 950,
       "vertexCount": 190,
       "stride": 5,
@@ -1440,7 +1440,7 @@
     {
       "actor": 54,
       "kind": "points",
-      "byteOffset": 3996136,
+      "byteOffset": 4194616,
       "floatCount": 1100,
       "vertexCount": 220,
       "stride": 5,
@@ -1451,7 +1451,7 @@
     {
       "actor": 55,
       "kind": "points",
-      "byteOffset": 4000536,
+      "byteOffset": 4199016,
       "floatCount": 1100,
       "vertexCount": 220,
       "stride": 5,
@@ -1462,7 +1462,7 @@
     {
       "actor": 56,
       "kind": "points",
-      "byteOffset": 4004936,
+      "byteOffset": 4203416,
       "floatCount": 1200,
       "vertexCount": 240,
       "stride": 5,
@@ -1473,7 +1473,7 @@
     {
       "actor": 57,
       "kind": "points",
-      "byteOffset": 4009736,
+      "byteOffset": 4208216,
       "floatCount": 1200,
       "vertexCount": 240,
       "stride": 5,
@@ -1484,7 +1484,7 @@
     {
       "actor": 58,
       "kind": "points",
-      "byteOffset": 4014536,
+      "byteOffset": 4213016,
       "floatCount": 2350,
       "vertexCount": 470,
       "stride": 5,
@@ -1495,7 +1495,7 @@
     {
       "actor": 59,
       "kind": "points",
-      "byteOffset": 4023936,
+      "byteOffset": 4222416,
       "floatCount": 900,
       "vertexCount": 180,
       "stride": 5,
@@ -1506,7 +1506,7 @@
     {
       "actor": 60,
       "kind": "points",
-      "byteOffset": 4027536,
+      "byteOffset": 4226016,
       "floatCount": 900,
       "vertexCount": 180,
       "stride": 5,
@@ -1517,7 +1517,7 @@
     {
       "actor": 61,
       "kind": "points",
-      "byteOffset": 4031136,
+      "byteOffset": 4229616,
       "floatCount": 475,
       "vertexCount": 95,
       "stride": 5,
@@ -1528,7 +1528,7 @@
     {
       "actor": 62,
       "kind": "points",
-      "byteOffset": 4033036,
+      "byteOffset": 4231516,
       "floatCount": 475,
       "vertexCount": 95,
       "stride": 5,
@@ -1539,7 +1539,7 @@
     {
       "actor": 63,
       "kind": "points",
-      "byteOffset": 4034936,
+      "byteOffset": 4233416,
       "floatCount": 725,
       "vertexCount": 145,
       "stride": 5,
@@ -1550,7 +1550,7 @@
     {
       "actor": 64,
       "kind": "points",
-      "byteOffset": 4037836,
+      "byteOffset": 4236316,
       "floatCount": 725,
       "vertexCount": 145,
       "stride": 5,
@@ -1561,7 +1561,7 @@
     {
       "actor": 65,
       "kind": "points",
-      "byteOffset": 4040736,
+      "byteOffset": 4239216,
       "floatCount": 325,
       "vertexCount": 65,
       "stride": 5,
@@ -1572,7 +1572,7 @@
     {
       "actor": 66,
       "kind": "points",
-      "byteOffset": 4042036,
+      "byteOffset": 4240516,
       "floatCount": 325,
       "vertexCount": 65,
       "stride": 5,
@@ -1583,7 +1583,7 @@
     {
       "actor": 67,
       "kind": "points",
-      "byteOffset": 4043336,
+      "byteOffset": 4241816,
       "floatCount": 1325,
       "vertexCount": 265,
       "stride": 5,
@@ -1594,7 +1594,7 @@
     {
       "actor": 68,
       "kind": "points",
-      "byteOffset": 4048636,
+      "byteOffset": 4247116,
       "floatCount": 950,
       "vertexCount": 190,
       "stride": 5,
@@ -1605,7 +1605,7 @@
     {
       "actor": 69,
       "kind": "points",
-      "byteOffset": 4052436,
+      "byteOffset": 4250916,
       "floatCount": 1100,
       "vertexCount": 220,
       "stride": 5,
@@ -1616,7 +1616,7 @@
     {
       "actor": 70,
       "kind": "points",
-      "byteOffset": 4056836,
+      "byteOffset": 4255316,
       "floatCount": 1100,
       "vertexCount": 220,
       "stride": 5,
@@ -1627,7 +1627,7 @@
     {
       "actor": 71,
       "kind": "points",
-      "byteOffset": 4061236,
+      "byteOffset": 4259716,
       "floatCount": 1200,
       "vertexCount": 240,
       "stride": 5,
@@ -1638,7 +1638,7 @@
     {
       "actor": 72,
       "kind": "points",
-      "byteOffset": 4066036,
+      "byteOffset": 4264516,
       "floatCount": 1200,
       "vertexCount": 240,
       "stride": 5,
@@ -1649,7 +1649,7 @@
     {
       "actor": 73,
       "kind": "points",
-      "byteOffset": 4070836,
+      "byteOffset": 4269316,
       "floatCount": 2350,
       "vertexCount": 470,
       "stride": 5,
@@ -1660,7 +1660,7 @@
     {
       "actor": 74,
       "kind": "points",
-      "byteOffset": 4080236,
+      "byteOffset": 4278716,
       "floatCount": 900,
       "vertexCount": 180,
       "stride": 5,
@@ -1671,7 +1671,7 @@
     {
       "actor": 75,
       "kind": "points",
-      "byteOffset": 4083836,
+      "byteOffset": 4282316,
       "floatCount": 900,
       "vertexCount": 180,
       "stride": 5,
@@ -1682,7 +1682,7 @@
     {
       "actor": 76,
       "kind": "points",
-      "byteOffset": 4087436,
+      "byteOffset": 4285916,
       "floatCount": 475,
       "vertexCount": 95,
       "stride": 5,
@@ -1693,7 +1693,7 @@
     {
       "actor": 77,
       "kind": "points",
-      "byteOffset": 4089336,
+      "byteOffset": 4287816,
       "floatCount": 475,
       "vertexCount": 95,
       "stride": 5,
@@ -1704,7 +1704,7 @@
     {
       "actor": 78,
       "kind": "points",
-      "byteOffset": 4091236,
+      "byteOffset": 4289716,
       "floatCount": 725,
       "vertexCount": 145,
       "stride": 5,
@@ -1715,7 +1715,7 @@
     {
       "actor": 79,
       "kind": "points",
-      "byteOffset": 4094136,
+      "byteOffset": 4292616,
       "floatCount": 725,
       "vertexCount": 145,
       "stride": 5,
@@ -1726,7 +1726,7 @@
     {
       "actor": 80,
       "kind": "points",
-      "byteOffset": 4097036,
+      "byteOffset": 4295516,
       "floatCount": 325,
       "vertexCount": 65,
       "stride": 5,
@@ -1737,7 +1737,7 @@
     {
       "actor": 81,
       "kind": "points",
-      "byteOffset": 4098336,
+      "byteOffset": 4296816,
       "floatCount": 325,
       "vertexCount": 65,
       "stride": 5,
@@ -1748,7 +1748,7 @@
     {
       "actor": 82,
       "kind": "points",
-      "byteOffset": 4099636,
+      "byteOffset": 4298116,
       "floatCount": 1325,
       "vertexCount": 265,
       "stride": 5,
@@ -1759,7 +1759,7 @@
     {
       "actor": 83,
       "kind": "points",
-      "byteOffset": 4104936,
+      "byteOffset": 4303416,
       "floatCount": 950,
       "vertexCount": 190,
       "stride": 5,
@@ -1770,7 +1770,7 @@
     {
       "actor": 84,
       "kind": "points",
-      "byteOffset": 4108736,
+      "byteOffset": 4307216,
       "floatCount": 1100,
       "vertexCount": 220,
       "stride": 5,
@@ -1781,7 +1781,7 @@
     {
       "actor": 85,
       "kind": "points",
-      "byteOffset": 4113136,
+      "byteOffset": 4311616,
       "floatCount": 1100,
       "vertexCount": 220,
       "stride": 5,
@@ -1792,7 +1792,7 @@
     {
       "actor": 86,
       "kind": "points",
-      "byteOffset": 4117536,
+      "byteOffset": 4316016,
       "floatCount": 1200,
       "vertexCount": 240,
       "stride": 5,
@@ -1803,7 +1803,7 @@
     {
       "actor": 87,
       "kind": "points",
-      "byteOffset": 4122336,
+      "byteOffset": 4320816,
       "floatCount": 1200,
       "vertexCount": 240,
       "stride": 5,
@@ -1814,7 +1814,7 @@
     {
       "actor": 88,
       "kind": "points",
-      "byteOffset": 4127136,
+      "byteOffset": 4325616,
       "floatCount": 2350,
       "vertexCount": 470,
       "stride": 5,
@@ -1825,7 +1825,7 @@
     {
       "actor": 89,
       "kind": "points",
-      "byteOffset": 4136536,
+      "byteOffset": 4335016,
       "floatCount": 900,
       "vertexCount": 180,
       "stride": 5,
@@ -1836,7 +1836,7 @@
     {
       "actor": 90,
       "kind": "points",
-      "byteOffset": 4140136,
+      "byteOffset": 4338616,
       "floatCount": 900,
       "vertexCount": 180,
       "stride": 5,
@@ -1849,7 +1849,7 @@
     "points": 18290,
     "lineSegments": 6754,
     "glowSegments": 47,
-    "solidTriangles": 74173
+    "solidTriangles": 78308
   },
   "projects": [],
   "exhibits": [
@@ -2390,14 +2390,13 @@
         "Automation",
         "R / exploratory analysis",
         "XGBoost / LOF",
-        "Locust / Toxiproxy",
         "NLTK / TextBlob"
       ],
       "displayItems": [
         "Python / Pandas / NumPy",
         "AI SDKs / RAG",
         "ML / attribution",
-        "Locust / automation",
+        "Data tooling / automation",
         "AI / ML (learning)"
       ],
       "profileOnly": [
@@ -2446,7 +2445,7 @@
         },
         {
           "heading": "Core toolkit",
-          "markdown": "- Python\n- Pandas / NumPy\n- AI SDKs\n- Retrieval-augmented generation (RAG)\n- AI knowledge bases\n- Automation\n- R / exploratory analysis\n- XGBoost / LOF\n- Locust / Toxiproxy\n- NLTK / TextBlob"
+          "markdown": "- Python\n- Pandas / NumPy\n- AI SDKs\n- Retrieval-augmented generation (RAG)\n- AI knowledge bases\n- Automation\n- R / exploratory analysis\n- XGBoost / LOF\n- NLTK / TextBlob"
         },
         {
           "heading": "Applied in projects",
@@ -2611,10 +2610,10 @@
       "kind": "skill",
       "number": 7,
       "catalogueNumber": 7,
-      "title": "DevOps & CI/CD",
+      "title": "DevOps & Testing",
       "section": "skills",
-      "category": "APPLIED SKILLS / DEVOPS & CI/CD",
-      "summary": "Deployment, server operations and repeatable application delivery.",
+      "category": "APPLIED SKILLS / DEVOPS & TESTING",
+      "summary": "Testing, deployment, server operations and repeatable application delivery.",
       "focus": "Full-stack development",
       "items": [
         "Git",
@@ -2623,14 +2622,19 @@
         "Docker",
         "GitHub Actions",
         "Deployment",
-        "Observability"
+        "Observability",
+        "Playwright",
+        "Browser / end-to-end testing",
+        "Regression testing",
+        "Responsive and accessibility testing",
+        "Integration testing"
       ],
       "displayItems": [
-        "Docker / PM2",
+        "Docker / PM2 / Ansible",
         "Git / GitHub Actions",
-        "Ansible / deployment",
-        "Observability",
-        "Bitbucket"
+        "Playwright / browser tests",
+        "Regression / accessibility",
+        "Integration / observability"
       ],
       "profileOnly": [
         "Bitbucket"
@@ -2638,6 +2642,7 @@
       "evidenceProjectIds": [
         "agent-property",
         "Aria",
+        "report-automation",
         "fyp",
         "damien-portfolio"
       ],
@@ -2672,23 +2677,23 @@
       "catalogueSections": [
         {
           "heading": "Overview",
-          "markdown": "Deployment, server operations and repeatable application delivery.\n\nFull-stack development is my main focus, working across frontend, backend, databases, and deployment. I learn the technologies each project requires rather than limiting myself to a single stack."
+          "markdown": "Testing, deployment, server operations and repeatable application delivery.\n\nFull-stack development is my main focus, working across frontend, backend, databases, and deployment. I learn the technologies each project requires rather than limiting myself to a single stack."
         },
         {
           "heading": "Core toolkit",
-          "markdown": "- Git\n- GitHub\n- Bitbucket\n- Docker\n- GitHub Actions\n- Deployment\n- Observability"
+          "markdown": "- Git\n- GitHub\n- Bitbucket\n- Docker\n- GitHub Actions\n- Deployment\n- Observability\n- Playwright\n- Browser / end-to-end testing\n- Regression testing\n- Responsive and accessibility testing\n- Integration testing"
         },
         {
           "heading": "Applied in projects",
-          "markdown": "Agent Property includes deployment/sync tooling, Docker, PM2 and Ansible. DWMLight\u2019s confirmed work includes deployment/server operations. FYP uses a multi-service Compose topology.\n\n- **Agent Property \u2014 Bilingual Property Website and CMS:** A bilingual property-discovery website that combines CMS-managed listings, housing-scheme information and educational content with direct WhatsApp enquiries.\n\nPublic website: [MyRumawip](https://myrumawip.com/).\n- **DWMLight / ANVA CMS \u2014 Multilingual Product Website and Custom CMS:** A multilingual product and company website backed by a custom content-management API, including localized content, product media and downloadable catalogues.\n\nPublic website: [DWMLight](https://dwmlight.com/en).\n- **FYP \u2014 Hybrid Anomaly Detection for Microservice Observability:** A telemetry-based anomaly-detection system that combines OpenTelemetry ingestion, Redis streaming, machine-learning inference and a live observability dashboard, evaluated using telemetry from an instrumented CMS application.\n- **Damien Portfolio \u2014 Immersive 3D Portfolio:** A monochrome interactive portfolio that takes visitors through a city, lobby and elevator into dedicated rooms for identity, skills, projects and experience/education."
+          "markdown": "Agent Property includes deployment/sync tooling, Docker, PM2 and Ansible. DWMLight\u2019s confirmed work includes deployment/server operations. MyReport documents validation, integration-oriented tests and browser workflow tests. This portfolio uses Playwright to check browser interactions, navigation, loading, responsive layouts and accessibility behaviour. FYP uses a multi-service Compose topology.\n\n- **Agent Property \u2014 Bilingual Property Website and CMS:** A bilingual property-discovery website that combines CMS-managed listings, housing-scheme information and educational content with direct WhatsApp enquiries.\n\nPublic website: [MyRumawip](https://myrumawip.com/).\n- **DWMLight / ANVA CMS \u2014 Multilingual Product Website and Custom CMS:** A multilingual product and company website backed by a custom content-management API, including localized content, product media and downloadable catalogues.\n\nPublic website: [DWMLight](https://dwmlight.com/en).\n- **MyReport \u2014 WhatsApp Customer Follow-up and Reporting Workspace:** A customer-management workspace that organizes WhatsApp conversations, confirmed customer requirements, eligibility records and follow-up actions, with human-reviewed AI assistance.\n\n**Access:** Hosted privately via Tailscale; not publicly accessible.\n- **FYP \u2014 Hybrid Anomaly Detection for Microservice Observability:** A telemetry-based anomaly-detection system that combines OpenTelemetry ingestion, Redis streaming, machine-learning inference and a live observability dashboard, evaluated using telemetry from an instrumented CMS application.\n- **Damien Portfolio \u2014 Immersive 3D Portfolio:** A monochrome interactive portfolio that takes visitors through a city, lobby and elevator into dedicated rooms for identity, skills, projects and experience/education."
         },
         {
           "heading": "Engineering workflow",
-          "markdown": "Separate application and environment configuration, use repeatable builds/deployments, define process boundaries and validate generated artifacts before consuming them."
+          "markdown": "Separate application and environment configuration, use repeatable builds/deployments and validate generated artifacts before consuming them. Check application workflows and failure paths, repeat regression checks after changes, and verify keyboard navigation, focus handling and responsive layouts."
         },
         {
           "heading": "Technical decisions",
-          "markdown": "The portfolio checks native/browser geometry, routes and hashes before a Vite deployment. Operational configuration demonstrates a deployment design; it is not by itself evidence of live uptime or measured business outcomes."
+          "markdown": "The portfolio combines TypeScript, lint, content/package checks and actual-browser Playwright verification. Its browser checks cover 2D/3D mode switching, loading/Retry, keyboard and touch interactions, modal focus and responsive layouts. MyReport\u2019s reviewed tests cover structured validation and integration contracts. Operational configuration demonstrates a deployment design; it is not by itself evidence of live uptime or measured business outcomes."
         },
         {
           "heading": "Collaboration and delivery",
@@ -2696,11 +2701,11 @@
         },
         {
           "heading": "Learning and scope",
-          "markdown": "Bitbucket is profile-backed. The catalogue distinguishes delivered code/configuration from unconfirmed production status and does not invent availability or performance measurements."
+          "markdown": "Bitbucket is profile-backed. Testing evidence comes from implemented portfolio browser checks and MyReport\u2019s reviewed validation/integration tests; no additional test-framework proficiency or coverage percentage is inferred. The catalogue distinguishes delivered code/configuration from unconfirmed production status and does not invent availability or performance measurements."
         },
         {
           "heading": "Links and sources",
-          "markdown": "Project evidence comes from the completed project catalogue; broader toolkit claims come from the completed About profile.\n\n- [Load and chaos tooling / logging-loading](https://github.com/DamienCKj2812/logging-loading)\n- [Observability dashboard / logging-microservice-ui](https://github.com/DamienCKj2812/logging-microservice-ui)\n- [GitHub / currently empty / damien-portfolio](https://github.com/DamienCKj2812/damien-portfolio)\n\nWebsites and previews\n\n- [MyRumawip website](https://myrumawip.com/)\n- [DWMLight / ANVA CMS website](https://dwmlight.com/en)"
+          "markdown": "Project evidence comes from the completed project catalogue; broader toolkit claims come from the completed About profile.\n\n- [Load and chaos tooling / logging-loading](https://github.com/DamienCKj2812/logging-loading)\n- [Observability dashboard / logging-microservice-ui](https://github.com/DamienCKj2812/logging-microservice-ui)\n- [GitHub / currently empty / damien-portfolio](https://github.com/DamienCKj2812/damien-portfolio)\n\nWebsites and previews\n\n- [MyRumawip website](https://myrumawip.com/)\n- [DWMLight / ANVA CMS website](https://dwmlight.com/en)\n\nMyReport: Hosted privately via Tailscale; not publicly accessible."
         }
       ],
       "contentStatus": "Approved About toolkit and project-catalogue evidence; profile-only/learning scope stated explicitly",
@@ -2909,7 +2914,7 @@
         },
         {
           "heading": "Applied in projects",
-          "markdown": "Fedora Dotfiles combines Stow, KDE/Hyprland, Quickshell/QML and a native PyQt6 sharing chooser. Client work includes server/deployment responsibilities, and FYP provides shell-driven load/chaos tooling.\n\n- **Fedora Dotfiles \u2014 Customized Wayland Desktop Environment:** A personalized Fedora desktop/development environment combining KDE Plasma and Hyprland sessions with a custom shell, login appearance, sharing picker and reusable configuration management.\n- **Agent Property \u2014 Bilingual Property Website and CMS:** A bilingual property-discovery website that combines CMS-managed listings, housing-scheme information and educational content with direct WhatsApp enquiries.\n\nPublic website: [MyRumawip](https://myrumawip.com/).\n- **DWMLight / ANVA CMS \u2014 Multilingual Product Website and Custom CMS:** A multilingual product and company website backed by a custom content-management API, including localized content, product media and downloadable catalogues.\n\nPublic website: [DWMLight](https://dwmlight.com/en).\n- **FYP \u2014 Hybrid Anomaly Detection for Microservice Observability:** A telemetry-based anomaly-detection system that combines OpenTelemetry ingestion, Redis streaming, machine-learning inference and a live observability dashboard, evaluated using telemetry from an instrumented CMS application."
+          "markdown": "Fedora Dotfiles combines Stow, KDE/Hyprland, Quickshell/QML and a native PyQt6 sharing chooser. Client work includes server/deployment responsibilities, and FYP uses Linux-based multi-service deployment tooling.\n\n- **Fedora Dotfiles \u2014 Customized Wayland Desktop Environment:** A personalized Fedora desktop/development environment combining KDE Plasma and Hyprland sessions with a custom shell, login appearance, sharing picker and reusable configuration management.\n- **Agent Property \u2014 Bilingual Property Website and CMS:** A bilingual property-discovery website that combines CMS-managed listings, housing-scheme information and educational content with direct WhatsApp enquiries.\n\nPublic website: [MyRumawip](https://myrumawip.com/).\n- **DWMLight / ANVA CMS \u2014 Multilingual Product Website and Custom CMS:** A multilingual product and company website backed by a custom content-management API, including localized content, product media and downloadable catalogues.\n\nPublic website: [DWMLight](https://dwmlight.com/en).\n- **FYP \u2014 Hybrid Anomaly Detection for Microservice Observability:** A telemetry-based anomaly-detection system that combines OpenTelemetry ingestion, Redis streaming, machine-learning inference and a live observability dashboard, evaluated using telemetry from an instrumented CMS application."
         },
         {
           "heading": "Engineering workflow",
@@ -3527,14 +3532,13 @@
           "Automation",
           "R / exploratory analysis",
           "XGBoost / LOF",
-          "Locust / Toxiproxy",
           "NLTK / TextBlob"
         ],
         "displayItems": [
           "Python / Pandas / NumPy",
           "AI SDKs / RAG",
           "ML / attribution",
-          "Locust / automation",
+          "Data tooling / automation",
           "AI / ML (learning)"
         ],
         "profileOnly": [
@@ -3583,7 +3587,7 @@
           },
           {
             "heading": "Core toolkit",
-            "markdown": "- Python\n- Pandas / NumPy\n- AI SDKs\n- Retrieval-augmented generation (RAG)\n- AI knowledge bases\n- Automation\n- R / exploratory analysis\n- XGBoost / LOF\n- Locust / Toxiproxy\n- NLTK / TextBlob"
+            "markdown": "- Python\n- Pandas / NumPy\n- AI SDKs\n- Retrieval-augmented generation (RAG)\n- AI knowledge bases\n- Automation\n- R / exploratory analysis\n- XGBoost / LOF\n- NLTK / TextBlob"
           },
           {
             "heading": "Applied in projects",
@@ -3748,10 +3752,10 @@
         "kind": "skill",
         "number": 7,
         "catalogueNumber": 7,
-        "title": "DevOps & CI/CD",
+        "title": "DevOps & Testing",
         "section": "skills",
-        "category": "APPLIED SKILLS / DEVOPS & CI/CD",
-        "summary": "Deployment, server operations and repeatable application delivery.",
+        "category": "APPLIED SKILLS / DEVOPS & TESTING",
+        "summary": "Testing, deployment, server operations and repeatable application delivery.",
         "focus": "Full-stack development",
         "items": [
           "Git",
@@ -3760,14 +3764,19 @@
           "Docker",
           "GitHub Actions",
           "Deployment",
-          "Observability"
+          "Observability",
+          "Playwright",
+          "Browser / end-to-end testing",
+          "Regression testing",
+          "Responsive and accessibility testing",
+          "Integration testing"
         ],
         "displayItems": [
-          "Docker / PM2",
+          "Docker / PM2 / Ansible",
           "Git / GitHub Actions",
-          "Ansible / deployment",
-          "Observability",
-          "Bitbucket"
+          "Playwright / browser tests",
+          "Regression / accessibility",
+          "Integration / observability"
         ],
         "profileOnly": [
           "Bitbucket"
@@ -3775,6 +3784,7 @@
         "evidenceProjectIds": [
           "agent-property",
           "Aria",
+          "report-automation",
           "fyp",
           "damien-portfolio"
         ],
@@ -3809,23 +3819,23 @@
         "catalogueSections": [
           {
             "heading": "Overview",
-            "markdown": "Deployment, server operations and repeatable application delivery.\n\nFull-stack development is my main focus, working across frontend, backend, databases, and deployment. I learn the technologies each project requires rather than limiting myself to a single stack."
+            "markdown": "Testing, deployment, server operations and repeatable application delivery.\n\nFull-stack development is my main focus, working across frontend, backend, databases, and deployment. I learn the technologies each project requires rather than limiting myself to a single stack."
           },
           {
             "heading": "Core toolkit",
-            "markdown": "- Git\n- GitHub\n- Bitbucket\n- Docker\n- GitHub Actions\n- Deployment\n- Observability"
+            "markdown": "- Git\n- GitHub\n- Bitbucket\n- Docker\n- GitHub Actions\n- Deployment\n- Observability\n- Playwright\n- Browser / end-to-end testing\n- Regression testing\n- Responsive and accessibility testing\n- Integration testing"
           },
           {
             "heading": "Applied in projects",
-            "markdown": "Agent Property includes deployment/sync tooling, Docker, PM2 and Ansible. DWMLight\u2019s confirmed work includes deployment/server operations. FYP uses a multi-service Compose topology.\n\n- **Agent Property \u2014 Bilingual Property Website and CMS:** A bilingual property-discovery website that combines CMS-managed listings, housing-scheme information and educational content with direct WhatsApp enquiries.\n\nPublic website: [MyRumawip](https://myrumawip.com/).\n- **DWMLight / ANVA CMS \u2014 Multilingual Product Website and Custom CMS:** A multilingual product and company website backed by a custom content-management API, including localized content, product media and downloadable catalogues.\n\nPublic website: [DWMLight](https://dwmlight.com/en).\n- **FYP \u2014 Hybrid Anomaly Detection for Microservice Observability:** A telemetry-based anomaly-detection system that combines OpenTelemetry ingestion, Redis streaming, machine-learning inference and a live observability dashboard, evaluated using telemetry from an instrumented CMS application.\n- **Damien Portfolio \u2014 Immersive 3D Portfolio:** A monochrome interactive portfolio that takes visitors through a city, lobby and elevator into dedicated rooms for identity, skills, projects and experience/education."
+            "markdown": "Agent Property includes deployment/sync tooling, Docker, PM2 and Ansible. DWMLight\u2019s confirmed work includes deployment/server operations. MyReport documents validation, integration-oriented tests and browser workflow tests. This portfolio uses Playwright to check browser interactions, navigation, loading, responsive layouts and accessibility behaviour. FYP uses a multi-service Compose topology.\n\n- **Agent Property \u2014 Bilingual Property Website and CMS:** A bilingual property-discovery website that combines CMS-managed listings, housing-scheme information and educational content with direct WhatsApp enquiries.\n\nPublic website: [MyRumawip](https://myrumawip.com/).\n- **DWMLight / ANVA CMS \u2014 Multilingual Product Website and Custom CMS:** A multilingual product and company website backed by a custom content-management API, including localized content, product media and downloadable catalogues.\n\nPublic website: [DWMLight](https://dwmlight.com/en).\n- **MyReport \u2014 WhatsApp Customer Follow-up and Reporting Workspace:** A customer-management workspace that organizes WhatsApp conversations, confirmed customer requirements, eligibility records and follow-up actions, with human-reviewed AI assistance.\n\n**Access:** Hosted privately via Tailscale; not publicly accessible.\n- **FYP \u2014 Hybrid Anomaly Detection for Microservice Observability:** A telemetry-based anomaly-detection system that combines OpenTelemetry ingestion, Redis streaming, machine-learning inference and a live observability dashboard, evaluated using telemetry from an instrumented CMS application.\n- **Damien Portfolio \u2014 Immersive 3D Portfolio:** A monochrome interactive portfolio that takes visitors through a city, lobby and elevator into dedicated rooms for identity, skills, projects and experience/education."
           },
           {
             "heading": "Engineering workflow",
-            "markdown": "Separate application and environment configuration, use repeatable builds/deployments, define process boundaries and validate generated artifacts before consuming them."
+            "markdown": "Separate application and environment configuration, use repeatable builds/deployments and validate generated artifacts before consuming them. Check application workflows and failure paths, repeat regression checks after changes, and verify keyboard navigation, focus handling and responsive layouts."
           },
           {
             "heading": "Technical decisions",
-            "markdown": "The portfolio checks native/browser geometry, routes and hashes before a Vite deployment. Operational configuration demonstrates a deployment design; it is not by itself evidence of live uptime or measured business outcomes."
+            "markdown": "The portfolio combines TypeScript, lint, content/package checks and actual-browser Playwright verification. Its browser checks cover 2D/3D mode switching, loading/Retry, keyboard and touch interactions, modal focus and responsive layouts. MyReport\u2019s reviewed tests cover structured validation and integration contracts. Operational configuration demonstrates a deployment design; it is not by itself evidence of live uptime or measured business outcomes."
           },
           {
             "heading": "Collaboration and delivery",
@@ -3833,11 +3843,11 @@
           },
           {
             "heading": "Learning and scope",
-            "markdown": "Bitbucket is profile-backed. The catalogue distinguishes delivered code/configuration from unconfirmed production status and does not invent availability or performance measurements."
+            "markdown": "Bitbucket is profile-backed. Testing evidence comes from implemented portfolio browser checks and MyReport\u2019s reviewed validation/integration tests; no additional test-framework proficiency or coverage percentage is inferred. The catalogue distinguishes delivered code/configuration from unconfirmed production status and does not invent availability or performance measurements."
           },
           {
             "heading": "Links and sources",
-            "markdown": "Project evidence comes from the completed project catalogue; broader toolkit claims come from the completed About profile.\n\n- [Load and chaos tooling / logging-loading](https://github.com/DamienCKj2812/logging-loading)\n- [Observability dashboard / logging-microservice-ui](https://github.com/DamienCKj2812/logging-microservice-ui)\n- [GitHub / currently empty / damien-portfolio](https://github.com/DamienCKj2812/damien-portfolio)\n\nWebsites and previews\n\n- [MyRumawip website](https://myrumawip.com/)\n- [DWMLight / ANVA CMS website](https://dwmlight.com/en)"
+            "markdown": "Project evidence comes from the completed project catalogue; broader toolkit claims come from the completed About profile.\n\n- [Load and chaos tooling / logging-loading](https://github.com/DamienCKj2812/logging-loading)\n- [Observability dashboard / logging-microservice-ui](https://github.com/DamienCKj2812/logging-microservice-ui)\n- [GitHub / currently empty / damien-portfolio](https://github.com/DamienCKj2812/damien-portfolio)\n\nWebsites and previews\n\n- [MyRumawip website](https://myrumawip.com/)\n- [DWMLight / ANVA CMS website](https://dwmlight.com/en)\n\nMyReport: Hosted privately via Tailscale; not publicly accessible."
           }
         ],
         "contentStatus": "Approved About toolkit and project-catalogue evidence; profile-only/learning scope stated explicitly",
@@ -4046,7 +4056,7 @@
           },
           {
             "heading": "Applied in projects",
-            "markdown": "Fedora Dotfiles combines Stow, KDE/Hyprland, Quickshell/QML and a native PyQt6 sharing chooser. Client work includes server/deployment responsibilities, and FYP provides shell-driven load/chaos tooling.\n\n- **Fedora Dotfiles \u2014 Customized Wayland Desktop Environment:** A personalized Fedora desktop/development environment combining KDE Plasma and Hyprland sessions with a custom shell, login appearance, sharing picker and reusable configuration management.\n- **Agent Property \u2014 Bilingual Property Website and CMS:** A bilingual property-discovery website that combines CMS-managed listings, housing-scheme information and educational content with direct WhatsApp enquiries.\n\nPublic website: [MyRumawip](https://myrumawip.com/).\n- **DWMLight / ANVA CMS \u2014 Multilingual Product Website and Custom CMS:** A multilingual product and company website backed by a custom content-management API, including localized content, product media and downloadable catalogues.\n\nPublic website: [DWMLight](https://dwmlight.com/en).\n- **FYP \u2014 Hybrid Anomaly Detection for Microservice Observability:** A telemetry-based anomaly-detection system that combines OpenTelemetry ingestion, Redis streaming, machine-learning inference and a live observability dashboard, evaluated using telemetry from an instrumented CMS application."
+            "markdown": "Fedora Dotfiles combines Stow, KDE/Hyprland, Quickshell/QML and a native PyQt6 sharing chooser. Client work includes server/deployment responsibilities, and FYP uses Linux-based multi-service deployment tooling.\n\n- **Fedora Dotfiles \u2014 Customized Wayland Desktop Environment:** A personalized Fedora desktop/development environment combining KDE Plasma and Hyprland sessions with a custom shell, login appearance, sharing picker and reusable configuration management.\n- **Agent Property \u2014 Bilingual Property Website and CMS:** A bilingual property-discovery website that combines CMS-managed listings, housing-scheme information and educational content with direct WhatsApp enquiries.\n\nPublic website: [MyRumawip](https://myrumawip.com/).\n- **DWMLight / ANVA CMS \u2014 Multilingual Product Website and Custom CMS:** A multilingual product and company website backed by a custom content-management API, including localized content, product media and downloadable catalogues.\n\nPublic website: [DWMLight](https://dwmlight.com/en).\n- **FYP \u2014 Hybrid Anomaly Detection for Microservice Observability:** A telemetry-based anomaly-detection system that combines OpenTelemetry ingestion, Redis streaming, machine-learning inference and a live observability dashboard, evaluated using telemetry from an instrumented CMS application."
           },
           {
             "heading": "Engineering workflow",
