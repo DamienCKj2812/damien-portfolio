@@ -19,7 +19,7 @@ try {
   })
   const page=await context.newPage()
   page.on('pageerror',error=>errors.push(error.message))
-  await page.goto('http://127.0.0.1:5198/damien-portfolio/')
+  await page.goto('http://127.0.0.1:5198/damien-portfolio/?mode=3d')
   await page.locator('.city-stage[data-loaded="true"]').waitFor({timeout:120000})
   assert.equal(await page.locator('.background-music input').count(),0)
   assert.equal(await page.evaluate(()=>(document.getElementById('background-music-audio') as HTMLAudioElement).volume),.35)

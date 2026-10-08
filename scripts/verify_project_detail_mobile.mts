@@ -21,7 +21,7 @@ try {
   page.on('pageerror', error => errors.push(error.message))
   const address = server.httpServer.address()
   assert.ok(address && typeof address !== 'string')
-  await page.goto(`http://127.0.0.1:${address.port}/damien-portfolio/`)
+  await page.goto(`http://127.0.0.1:${address.port}/damien-portfolio/?mode=3d`)
   await page.locator('.city-stage[data-loaded="true"]').waitFor({ timeout: 120000 })
   await page.getByRole('button', { name: /^Choose a floor/ }).click()
   await page.locator('.city-stage[data-elevator-loaded="true"]').waitFor({ timeout: 120000 })

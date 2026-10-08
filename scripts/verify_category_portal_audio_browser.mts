@@ -42,7 +42,7 @@ try {
       return context
     } })
   }, portalBytes)
-  await page.goto('http://127.0.0.1:5199/damien-portfolio/')
+  await page.goto('http://127.0.0.1:5199/damien-portfolio/?mode=3d')
   await page.getByRole('button', { name: 'Choose a floor', exact: true }).click()
   await page.waitForSelector('.city-stage[data-interactive=true][data-elevator-loaded=true]', { timeout: 90000 })
   await page.getByRole('button', { name: /^Select level 3:/ }).focus()

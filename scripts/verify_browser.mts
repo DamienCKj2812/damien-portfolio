@@ -3,6 +3,7 @@ import { fileURLToPath } from 'node:url'
 
 // Optional: run after a production build (or VIDEO_TEST_DEV=1 for the video check).
 export const checks = [
+  'scripts/verify_portfolio_modes.mts',
   'scripts/verify_skills_focus.mts',
   'scripts/verify_project_directory.mts',
   'scripts/verify_project_detail_v2.mts',

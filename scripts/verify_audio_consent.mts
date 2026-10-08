@@ -57,7 +57,7 @@ try {
   const visit = async (prompt = true) => {
     const automatic = !prompt && await page.evaluate(()=>(JSON.parse(localStorage.getItem('damien-portfolio:background-music')!) as {enabled:boolean}).enabled)
     const firstAttempt = new Promise<PlayRecord>(resolve=>{reportAutomaticAttempt=resolve})
-    await page.goto('http://127.0.0.1:5196/damien-portfolio/')
+    await page.goto('http://127.0.0.1:5196/damien-portfolio/?mode=3d')
     if(automatic) {
       const attempt=await firstAttempt
       assert.equal(attempt.failure,'NotAllowedError','Remembered sound gets one policy-controlled automatic attempt')
@@ -280,7 +280,7 @@ try {
   await enterRoom(4)
   await checkLayout(true)
   await page.setViewportSize({ width: 312, height: 678 })
-  await page.goto('http://127.0.0.1:5196/damien-portfolio/')
+  await page.goto('http://127.0.0.1:5196/damien-portfolio/?mode=3d')
   await page.waitForSelector('.city-stage[data-loaded=true]')
   const cluster = await page.locator('.city-topline-actions').boundingBox()
   assert.ok(cluster)
@@ -336,8 +336,9 @@ try {
   })
   const mobilePage = await mobileContext.newPage()
   mobilePage.on('pageerror', error => errors.push(error.message))
-  await mobilePage.goto('http://127.0.0.1:5196/damien-portfolio/')
+  await mobilePage.goto('http://127.0.0.1:5196/damien-portfolio/?mode=3d')
   await mobilePage.waitForSelector('.city-stage[data-loaded=true]')
+  await mobilePage.waitForSelector('.experience[data-startup-ready="true"]', { timeout: 120000 })
   const touchSession = await mobileContext.newCDPSession(mobilePage)
   await touchSession.send('Input.dispatchTouchEvent', { type: 'touchStart', touchPoints: [{ x: 150, y: 480 }] })
   await touchSession.send('Input.dispatchTouchEvent', { type: 'touchMove', touchPoints: [{ x: 150, y: 380 }] })

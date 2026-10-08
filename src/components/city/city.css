@@ -252,12 +252,12 @@
 @media (prefers-reduced-motion: reduce) { .project-case-progress span, .project-case-navigation button { transition: none; } }
 
 @media (max-width: 600px) {
-  .project-mobile-header { position: absolute; inset: 0 0 auto; z-index: 4; display: grid; grid-template-columns: 44px minmax(0,1fr); gap: 4px 12px; padding: 10px 112px 0 12px; color: #f2f0ea; background: #0c0c0b80; backdrop-filter: blur(14px); border-bottom: 1px solid #ffffff20; font-family: 'JetBrains Mono',ui-monospace,monospace; }
+  .project-mobile-header { position: absolute; inset: 0 0 auto; z-index: 4; display: grid; grid-template-columns: 44px minmax(0,1fr); gap: 4px 12px; padding: 10px 156px 0 12px; color: #f2f0ea; background: #0c0c0b80; backdrop-filter: blur(14px); border-bottom: 1px solid #ffffff20; font-family: 'JetBrains Mono',ui-monospace,monospace; }
   .project-mobile-header > button { width: 44px; height: 44px; border: 1px solid #ffffff40; background: transparent; color: inherit; font: inherit; font-size: 18px; cursor: pointer; }
   .project-mobile-header > div { display: flex; flex-direction: column; justify-content: center; gap: 3px; min-width: 0; }
   .project-mobile-header > div span { color: #aaa; font-size: 9px; letter-spacing: .1em; text-transform: uppercase; }
   .project-mobile-header strong { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-size: 13px; font-weight: 500; }
-  .project-mobile-header nav { grid-column: 1 / -1; display: flex; gap: 4px; margin-right: -100px; }
+  .project-mobile-header nav { grid-column: 1 / -1; display: flex; gap: 4px; margin-right: -144px; }
   .project-mobile-header nav button { flex: 1; min-width: 0; height: 28px; padding: 10px 0; border: 0; background: transparent; cursor: pointer; }
   .project-mobile-header nav span { display: block; height: 3px; background: #ffffff30; }
   .project-mobile-header nav button[data-complete="true"] span { background: #f2f0ea; }

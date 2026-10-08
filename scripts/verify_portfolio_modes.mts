@@ -1,0 +1,128 @@
+import assert from 'node:assert/strict'
+import { preview } from 'vite'
+import { chromium, chromeExecutable, installBrowserHelpers, screenshotPath } from './browser_tools.mts'
+import { portfolio } from '../src/data/portfolio.ts'
+import projects from '../src/data/projects2d.generated.json' with { type: 'json' }
+import { isPublicLink } from '../src/data/publicLinks.ts'
+
+const server = await preview({ preview: { host: '127.0.0.1', port: 0 } })
+let browser
+try {
+  browser = await chromium.launch({ executablePath: chromeExecutable, headless: true, args: ['--no-sandbox', '--enable-unsafe-swiftshader', '--use-gl=angle', '--use-angle=swiftshader'] })
+  const address = server.httpServer.address()
+  assert.ok(address && typeof address !== 'string')
+  const url = `http://127.0.0.1:${address.port}/damien-portfolio/`
+  const context = await browser.newContext({ viewport: { width: 1440, height: 900 }, reducedMotion: 'reduce' })
+  await installBrowserHelpers(context)
+  const page = await context.newPage()
+  const errors: string[] = [], requests: string[] = []
+  page.on('pageerror', error => errors.push(error.message))
+  page.on('request', request => requests.push(request.url()))
+  await page.goto(url)
+  await page.getByRole('heading', { name: 'How would you like to explore?' }).waitFor()
+  assert.equal(await page.locator('canvas,audio,.startup-loader').count(), 0)
+  await page.screenshot({ path: screenshotPath('portfolio-entry-desktop.png') })
+  for (const viewport of [{ width: 390, height: 844 }, { width: 320, height: 568 }, { width: 844, height: 390 }]) {
+    await page.setViewportSize(viewport)
+    assert.ok(await page.locator('.entry-mode').evaluate(element => element.scrollWidth <= element.clientWidth + 1), 'Entry has no horizontal overflow')
+    for (const option of await page.locator('.entry-option').all()) {
+      const bounds = await option.boundingBox()
+      assert.ok(bounds && bounds.x >= 0 && bounds.x + bounds.width <= viewport.width + 1)
+    }
+    if (viewport.width === 390) await page.screenshot({ path: screenshotPath('portfolio-entry-mobile.png') })
+  }
+  await page.setViewportSize({ width: 1440, height: 900 })
+  await page.getByRole('link', { name: /Read the portfolio/ }).click()
+  await page.getByRole('heading', { name: portfolio.fullName, exact: true }).waitFor()
+  assert.equal(await page.evaluate(() => localStorage.getItem('damienckj-entry-mode')), null, 'Choice is not saved without opt-in')
+  assert.equal(await page.locator('.flat-project').count(), projects.length)
+  assert.equal(await page.locator('.flat-skill-grid > div').count(), portfolio.skills.groups.length)
+  assert.equal(await page.locator('.flat-education > article').count(), 2)
+  assert.ok((await page.locator('#about').innerText()).includes(portfolio.about.profile.approach))
+  assert.ok((await page.locator('#journey').textContent())?.includes('Expected June 2027'))
+  assert.ok(!(await page.locator('.flat-scroll').innerText()).includes('SAMPLE PROJECT'))
+  assert.equal(await page.locator('canvas,audio').count(), 0)
+  assert.ok(!requests.some(request => /CityWalkthrough-.*\.js|\/models\/|\/media\/audio\//.test(request)), 'Entry and 2D do not load WebGL packages or audio')
+  for (const link of await page.locator('#work a[href]').all()) assert.ok(isPublicLink(await link.getAttribute('href')))
+  assert.equal(await page.locator('#work .flat-project-links a[href*="amplyfii"]').textContent(), 'Preview (unreleased) →')
+  await page.screenshot({ path: screenshotPath('portfolio-2d-desktop.png') })
+  await page.getByRole('button', { name: 'Client', exact: true }).click()
+  assert.equal(await page.locator('.flat-project').count(), projects.filter(project => project.section === 'client').length)
+  await page.getByRole('button', { name: 'Academic', exact: true }).click()
+  assert.equal(await page.locator('.flat-project').count(), projects.filter(project => project.section === 'academic').length)
+  await page.getByRole('button', { name: 'All', exact: true }).click()
+  const summary = page.locator('.flat-project > summary').first()
+  await summary.focus(); await summary.press('Enter')
+  assert.equal(await page.locator('.flat-project').first().getAttribute('open'), null, 'Native project accordion is keyboard-operable')
+  await summary.press('Enter')
+  assert.equal(await page.locator('.flat-project').first().getAttribute('open'), '')
+
+  for (const viewport of [{ width: 390, height: 844 }, { width: 320, height: 568 }, { width: 844, height: 390 }]) {
+    await page.setViewportSize(viewport)
+    assert.ok(await page.locator('.flat-scroll').evaluate(element => element.scrollWidth <= element.clientWidth + 1), '2D has no horizontal overflow')
+    await page.locator('.flat-floor-trigger').click()
+    const picker = page.getByRole('dialog', { name: 'Choose a floor' })
+    await picker.waitFor()
+    await page.keyboard.press('Escape')
+    assert.equal(await picker.isVisible(), false)
+    assert.equal(await page.locator('.flat-floor-trigger').evaluate(element => element === document.activeElement), true, 'Native dialog restores opener focus')
+    await page.locator('.flat-floor-trigger').click()
+    await picker.getByRole('button', { name: 'F03 Skills' }).click()
+    await page.waitForFunction(() => document.querySelector('.flat-floor-trigger')?.textContent?.includes('Skills'))
+    assert.equal(await picker.isVisible(), false)
+    assert.ok(await page.locator('.flat-scroll').evaluate(element => element.scrollTop > 0), '2D has real scroll navigation')
+    await page.screenshot({ path: screenshotPath(`portfolio-2d-${viewport.width}.png`) })
+  }
+  await page.locator('.flat-mobile-dock').getByRole('button', { name: 'Contact', exact: true }).click()
+  await page.evaluate(() => Object.defineProperty(navigator, 'clipboard', { configurable: true, value: { writeText: async () => { throw new Error('denied') } } }))
+  await page.getByRole('button', { name: 'Copy email' }).click()
+  await page.waitForFunction(() => document.querySelector('.flat-copy-feedback')?.textContent?.includes('Copy unavailable'))
+  await page.evaluate(() => Object.defineProperty(navigator, 'clipboard', { configurable: true, value: { writeText: async (text: string) => { document.documentElement.dataset.clipboard = text } } }))
+  await page.getByRole('button', { name: 'Copy email' }).click()
+  await page.waitForFunction(() => document.querySelector('.flat-copy-feedback')?.textContent?.includes('Copied'))
+  assert.equal(await page.evaluate(() => document.documentElement.dataset.clipboard), portfolio.contact.email)
+
+  await page.getByRole('button', { name: 'Change portfolio experience' }).click()
+  await page.getByRole('checkbox', { name: 'Remember my choice on this device' }).check()
+  await page.getByRole('link', { name: /Read the portfolio/ }).click()
+  await page.goto(url)
+  await page.locator('[data-portfolio-mode="2d"]').waitFor()
+  assert.equal(await page.getByRole('heading', { name: 'How would you like to explore?' }).count(), 0, 'Remembered mode skips entry')
+  await page.getByRole('button', { name: 'Change portfolio experience' }).click()
+  await page.getByRole('checkbox', { name: 'Remember my choice on this device' }).uncheck()
+  await page.getByRole('link', { name: /Read the portfolio/ }).click()
+  await page.goto(url)
+  await page.getByRole('heading', { name: 'How would you like to explore?' }).waitFor()
+  await page.getByRole('link', { name: /Read the portfolio/ }).click()
+  await page.goBack()
+  await page.getByRole('heading', { name: 'How would you like to explore?' }).waitFor()
+  await page.goForward()
+  await page.locator('[data-portfolio-mode="2d"]').waitFor()
+
+  // Real 3D startup retains its loader; switching away disposes its scene/audio.
+  await page.evaluate(() => localStorage.setItem('damien-portfolio:audio-consent', 'muted'))
+  await page.getByRole('button', { name: 'Enter 3D', exact: true }).click()
+  await page.getByRole('region', { name: 'Preparing portfolio' }).waitFor()
+  await page.locator('.experience[data-startup-ready="true"]').waitFor({ timeout: 120000 })
+  assert.equal(await page.locator('canvas').count(), 1)
+  await page.getByRole('button', { name: 'Open 2D portfolio', exact: true }).click()
+  await page.locator('[data-portfolio-mode="2d"]').waitFor()
+  assert.equal(await page.locator('canvas,audio,.city-stage').count(), 0)
+  const textSize = await page.locator('.flat-case-sections li').first().evaluate(element => Number.parseFloat(getComputedStyle(element).fontSize))
+  assert.ok(textSize >= 14, '3D styles cannot shrink 2D case-file text after switching')
+  assert.deepEqual(errors, [])
+  await context.close()
+
+  const blocked = await browser.newContext({ viewport: { width: 390, height: 844 }, reducedMotion: 'reduce' })
+  await installBrowserHelpers(blocked, () => Object.defineProperty(window, 'localStorage', { get() { throw new Error('Storage disabled') } }))
+  const blockedPage = await blocked.newPage()
+  await blockedPage.goto(url)
+  await blockedPage.getByRole('checkbox', { name: 'Remember my choice on this device' }).check()
+  await blockedPage.getByRole('link', { name: /Read the portfolio/ }).click()
+  await blockedPage.locator('[data-portfolio-mode="2d"]').waitFor()
+  await blocked.close()
+  console.log('PASS entry / 2D / 3D: isolated loading, canonical content, public projects, filters, keyboard/scroll/mobile dialogs, truthful clipboard, opt-in storage, history, mode switching and cleanup')
+} finally {
+  await browser?.close()
+  await new Promise<void>(resolve => server.httpServer.close(() => resolve()))
+}

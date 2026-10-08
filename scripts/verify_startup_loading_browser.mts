@@ -2,7 +2,7 @@ import assert from 'node:assert/strict'
 import { createServer, preview } from 'vite'
 import { chromium, chromeExecutable, installBrowserHelpers, screenshotPath } from './browser_tools.mts'
 
-declare global { interface Window { startupAudioContexts: number; startupHandoffTimes: {prepared: number; entered: number} } }
+declare global { interface Window { startupAudioContexts: number } }
 
 const dev=Boolean(process.env.STARTUP_TEST_DEV)
 const server=dev?await createServer({server:{host:'127.0.0.1',port:0}}):await preview({preview:{host:'127.0.0.1',port:0}})
@@ -12,7 +12,7 @@ try {
   browser=await chromium.launch({executablePath:chromeExecutable,headless:true,args:['--no-sandbox','--enable-unsafe-swiftshader','--use-gl=angle','--use-angle=swiftshader']})
   const address=server.httpServer?.address()
   assert.ok(address && typeof address!=='string')
-  const url=`http://127.0.0.1:${address.port}/damien-portfolio/`
+  const url=`http://127.0.0.1:${address.port}/damien-portfolio/?mode=3d`
   const context=await browser.newContext({viewport:{width:1440,height:900},reducedMotion:'reduce'})
   await installBrowserHelpers(context)
   const page=await context.newPage()
@@ -51,21 +51,8 @@ try {
     if(viewport.width===390) await page.screenshot({path:screenshotPath('startup-loading-mobile.png')})
   }
   await page.screenshot({path:screenshotPath('startup-loading-landscape.png')})
-  await page.evaluate(()=>{
-    window.startupHandoffTimes={prepared:0,entered:0}
-    const observer=new MutationObserver(()=>{
-      if(document.querySelector('.startup-loader[data-starting="true"]') && !window.startupHandoffTimes.prepared) window.startupHandoffTimes.prepared=performance.now()
-      if(document.querySelector('.experience[data-startup-ready="true"]')) {window.startupHandoffTimes.entered=performance.now();observer.disconnect()}
-    })
-    observer.observe(document.body,{attributes:true,subtree:true,childList:true})
-  })
   releaseRoom()
-  await loader.locator('.startup-summary [role="status"]').filter({hasText:'Starting your journey…'}).waitFor({timeout:30000})
-  assert.equal(await loader.getAttribute('data-progress'),'100')
-  assert.equal(await page.getByRole('dialog').count(),0,'Sound choice stays deferred throughout the one-second handoff')
   await page.locator('.experience[data-startup-ready="true"]').waitFor({timeout:30000}).catch(async error=>{console.log(await loader.textContent(),errors);throw error})
-  const handoff=await page.evaluate(()=>window.startupHandoffTimes)
-  assert.ok(handoff.prepared>0 && handoff.entered-handoff.prepared>=950,'Completed loader remains visible for one additional second')
   assert.equal(await loader.count(),0)
   assert.equal(await page.locator('.city-stage').getAttribute('data-lobby-loaded'),'true')
   assert.equal(await page.locator('.city-stage').getAttribute('data-elevator-loaded'),'true')

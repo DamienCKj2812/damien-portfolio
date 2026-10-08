@@ -7,7 +7,7 @@
 .portfolio-help svg { width: 14px; height: 14px; flex: 0 0 auto; }
 .portfolio-help:hover { color: #fff; }
 .portfolio-help:focus-visible { outline: 1px solid #ddd; outline-offset: -5px; }
-.portfolio-preferences { display: flex; align-items: center; justify-content: center; flex: 0 0 auto; width: 36px; height: 36px; padding: 0; }
+.portfolio-preferences, .portfolio-mode-switch { display: flex; align-items: center; justify-content: center; flex: 0 0 auto; width: 36px; height: 36px; padding: 0; }
 .portfolio-preferences svg { width: 14px; height: 14px; }
 .portfolio-preferences:focus-visible { outline: 1px solid #ddd; outline-offset: -5px; }
 .topline-control { position: relative; display: inline-flex; flex: 0 0 auto; }

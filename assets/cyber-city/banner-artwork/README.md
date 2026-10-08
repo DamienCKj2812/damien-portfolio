@@ -12,9 +12,21 @@
 
 `replace_nexus_banner.py` packs the JPEG into production, verifies unchanged geometry/UVs and all object/camera/actor poses at five route frames, and preserves the previous custom banners. Full ad/tower generation retains the override.
 
-## Cyborg long portrait banner
+## SANCTUM long banner / current cylindrical A bay
 
-The current cylindrical tower uses this same supplied source through `prepare_reference_tower_artwork.py`, cropping it head-to-suit with a lower-left caption overlay. Its logo has a separate curved panel. `reference_tower_spec.py` derives all five texture widths from the actual arc-length / height ratios; `reference-tower-artwork.json` records the resulting sizes and hashes. See [the current tower workflow](../WORKFLOW.md#current-reference-based-main-tower). The preparation below remains the retained earlier banner fit.
+`long-banner-source.png` is the owner's supplied `long-banner.png`, moved unchanged into this model-owned folder. The full source retains **HUMANITY WAS A BUG. WE FIXED IT.**, the moon, and **SANCTUM / A CLEANER TOMORROW** lettering.
+
+`prepare_long_banner.py` maps the full image to the combined curved A-bay span, then slices it into the existing upper `logo` and lower `portrait` UV surfaces by their metre-scale heights. It retains the existing physical gap and all source borders/lettering, adding no captions or padding. Outputs are `../textures-monochrome/reference-logo.jpg` and `reference-portrait.jpg`; `../reference-tower-artwork.json` records original bytes/hash, dimensions, canvas rows, panel heights and output hashes. Its CLI updates only these outputs and merges the unchanged right-bay/Earth records.
+
+`replace_long_banner.py` packs the two prepared images into the production master and checks unchanged geometry/UVs, camera and all object/actor poses/visibility/actions at five route frames. `prepare_reference_tower_artwork.py` uses the same preparation during a full rebuild. Publish from the regenerated city/lobby copy, retaining all other displays, sky, crowd and entrance connections. See [the current tower workflow](../WORKFLOW.md#current-reference-based-main-tower).
+
+The scattered glitch-block border on the long banner's right edge is removed
+through `remove_long_banner_glitch.py` and omitted by full tower generation.
+The thin frame, LED lighting and artwork's own line/square details remain intact.
+
+## Retained cyborg portrait source / earlier layout
+
+The previous cyborg source and single-panel preparation remain as earlier-layout authoring assets. They are no longer the active cylindrical A-bay campaign.
 
 `portrait-source.png` is the owner's supplied **cyborg-long-banner.png**, copied from Downloads without modifying the original. It replaces the previous female glitch portrait on the largest KAJU facade display, `Hero display • KAZE • cyborg campaign • LED display`.
 

@@ -4,7 +4,7 @@
   "geometry": "geometry.bin",
   "animation": "animation.bin",
   "preview": "preview.png",
-  "assetHash": "1286f99a9287",
+  "assetHash": "a5d426d649e6",
   "frameStart": 1,
   "frameEnd": 450,
   "fps": 30,
@@ -357,14 +357,14 @@
       "actor": 0,
       "kind": "solid",
       "byteOffset": 3481820,
-      "floatCount": 549144,
-      "vertexCount": 137286,
+      "floatCount": 547224,
+      "vertexCount": 136806,
       "stride": 4
     },
     {
       "actor": 1,
       "kind": "outline",
-      "byteOffset": 5678396,
+      "byteOffset": 5670716,
       "floatCount": 4296,
       "vertexCount": 1074,
       "stride": 4
@@ -372,7 +372,7 @@
     {
       "actor": 1,
       "kind": "solid",
-      "byteOffset": 5695580,
+      "byteOffset": 5687900,
       "floatCount": 6168,
       "vertexCount": 1542,
       "stride": 4
@@ -380,7 +380,7 @@
     {
       "actor": 2,
       "kind": "points",
-      "byteOffset": 5720252,
+      "byteOffset": 5712572,
       "floatCount": 6000,
       "vertexCount": 1200,
       "stride": 5
@@ -388,7 +388,7 @@
     {
       "actor": 3,
       "kind": "points",
-      "byteOffset": 5744252,
+      "byteOffset": 5736572,
       "floatCount": 5760,
       "vertexCount": 1152,
       "stride": 5
@@ -396,7 +396,7 @@
     {
       "actor": 4,
       "kind": "points",
-      "byteOffset": 5767292,
+      "byteOffset": 5759612,
       "floatCount": 6365,
       "vertexCount": 1273,
       "stride": 5
@@ -404,7 +404,7 @@
     {
       "actor": 5,
       "kind": "points",
-      "byteOffset": 5792752,
+      "byteOffset": 5785072,
       "floatCount": 5525,
       "vertexCount": 1105,
       "stride": 5
@@ -412,7 +412,7 @@
     {
       "actor": 6,
       "kind": "points",
-      "byteOffset": 5814852,
+      "byteOffset": 5807172,
       "floatCount": 6120,
       "vertexCount": 1224,
       "stride": 5
@@ -420,7 +420,7 @@
     {
       "actor": 7,
       "kind": "points",
-      "byteOffset": 5839332,
+      "byteOffset": 5831652,
       "floatCount": 6240,
       "vertexCount": 1248,
       "stride": 5
@@ -428,7 +428,7 @@
     {
       "actor": 8,
       "kind": "points",
-      "byteOffset": 5864292,
+      "byteOffset": 5856612,
       "floatCount": 5645,
       "vertexCount": 1129,
       "stride": 5
@@ -436,7 +436,7 @@
     {
       "actor": 9,
       "kind": "points",
-      "byteOffset": 5886872,
+      "byteOffset": 5879192,
       "floatCount": 6485,
       "vertexCount": 1297,
       "stride": 5
@@ -444,7 +444,7 @@
     {
       "actor": 10,
       "kind": "points",
-      "byteOffset": 5912812,
+      "byteOffset": 5905132,
       "floatCount": 5880,
       "vertexCount": 1176,
       "stride": 5
@@ -452,7 +452,7 @@
     {
       "actor": 11,
       "kind": "points",
-      "byteOffset": 5936332,
+      "byteOffset": 5928652,
       "floatCount": 6000,
       "vertexCount": 1200,
       "stride": 5
@@ -460,7 +460,7 @@
     {
       "actor": 12,
       "kind": "outline",
-      "byteOffset": 5960332,
+      "byteOffset": 5952652,
       "floatCount": 2736,
       "vertexCount": 684,
       "stride": 4
@@ -468,7 +468,7 @@
     {
       "actor": 12,
       "kind": "solid",
-      "byteOffset": 5971276,
+      "byteOffset": 5963596,
       "floatCount": 5856,
       "vertexCount": 1464,
       "stride": 4
@@ -476,7 +476,7 @@
     {
       "actor": 13,
       "kind": "outline",
-      "byteOffset": 5994700,
+      "byteOffset": 5987020,
       "floatCount": 2736,
       "vertexCount": 684,
       "stride": 4
@@ -484,7 +484,7 @@
     {
       "actor": 13,
       "kind": "solid",
-      "byteOffset": 6005644,
+      "byteOffset": 5997964,
       "floatCount": 5856,
       "vertexCount": 1464,
       "stride": 4
@@ -492,7 +492,7 @@
     {
       "actor": 14,
       "kind": "outline",
-      "byteOffset": 6029068,
+      "byteOffset": 6021388,
       "floatCount": 2736,
       "vertexCount": 684,
       "stride": 4
@@ -500,7 +500,7 @@
     {
       "actor": 14,
       "kind": "solid",
-      "byteOffset": 6040012,
+      "byteOffset": 6032332,
       "floatCount": 5856,
       "vertexCount": 1464,
       "stride": 4
@@ -508,7 +508,7 @@
     {
       "actor": 15,
       "kind": "outline",
-      "byteOffset": 6063436,
+      "byteOffset": 6055756,
       "floatCount": 2736,
       "vertexCount": 684,
       "stride": 4
@@ -516,7 +516,7 @@
     {
       "actor": 15,
       "kind": "solid",
-      "byteOffset": 6074380,
+      "byteOffset": 6066700,
       "floatCount": 5856,
       "vertexCount": 1464,
       "stride": 4
@@ -524,7 +524,7 @@
     {
       "actor": 16,
       "kind": "glow",
-      "byteOffset": 6097804,
+      "byteOffset": 6090124,
       "floatCount": 48,
       "vertexCount": 12,
       "stride": 4
@@ -532,7 +532,7 @@
     {
       "actor": 16,
       "kind": "solid",
-      "byteOffset": 6097996,
+      "byteOffset": 6090316,
       "floatCount": 1008,
       "vertexCount": 252,
       "stride": 4
@@ -540,7 +540,7 @@
     {
       "actor": 17,
       "kind": "glow",
-      "byteOffset": 6102028,
+      "byteOffset": 6094348,
       "floatCount": 48,
       "vertexCount": 12,
       "stride": 4
@@ -548,7 +548,7 @@
     {
       "actor": 17,
       "kind": "solid",
-      "byteOffset": 6102220,
+      "byteOffset": 6094540,
       "floatCount": 1008,
       "vertexCount": 252,
       "stride": 4
@@ -556,7 +556,7 @@
     {
       "actor": 18,
       "kind": "outline",
-      "byteOffset": 6106252,
+      "byteOffset": 6098572,
       "floatCount": 2736,
       "vertexCount": 684,
       "stride": 4
@@ -564,7 +564,7 @@
     {
       "actor": 18,
       "kind": "solid",
-      "byteOffset": 6117196,
+      "byteOffset": 6109516,
       "floatCount": 5856,
       "vertexCount": 1464,
       "stride": 4
@@ -572,7 +572,7 @@
     {
       "actor": 19,
       "kind": "outline",
-      "byteOffset": 6140620,
+      "byteOffset": 6132940,
       "floatCount": 4296,
       "vertexCount": 1074,
       "stride": 4
@@ -580,7 +580,7 @@
     {
       "actor": 19,
       "kind": "solid",
-      "byteOffset": 6157804,
+      "byteOffset": 6150124,
       "floatCount": 6168,
       "vertexCount": 1542,
       "stride": 4
@@ -591,7 +591,7 @@
     "lineSegments": 10175,
     "vehicleOutlineSegments": 2784,
     "glowSegments": 416,
-    "solidTriangles": 49398,
+    "solidTriangles": 49238,
     "screenTriangles": 37824,
     "maskTriangles": 432
   },
@@ -739,7 +739,9 @@
       "solidObjects": 230,
       "screens": 5
     },
-    "cameraAndExistingPosesPreserved": true
+    "cameraAndExistingPosesPreserved": true,
+    "longBannerGlitchBorderRemoved": true,
+    "hiddenBannerGlitchBlocks": 80
   },
   "trainRoute": {
     "corridor": "left flank",

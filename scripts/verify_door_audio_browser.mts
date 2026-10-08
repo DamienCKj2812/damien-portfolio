@@ -31,7 +31,7 @@ try {
       return context
     } })
   }, bytes)
-  await page.goto('http://127.0.0.1:5201/damien-portfolio/')
+  await page.goto('http://127.0.0.1:5201/damien-portfolio/?mode=3d')
   await page.waitForSelector('.city-stage[data-loaded=true]', { timeout: 90000 })
   await page.waitForSelector('.experience[data-startup-ready=true]', { timeout: 120000 })
   await page.mouse.click(20, 400)

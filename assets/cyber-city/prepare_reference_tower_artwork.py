@@ -3,15 +3,13 @@ import hashlib
 import json
 import math
 import random
-import sys
 from pathlib import Path
 from PIL import Image, ImageChops, ImageDraw, ImageFilter, ImageFont, ImageOps
 
 ROOT = Path(__file__).resolve().parent
-sys.path.insert(0, str(ROOT.parent / 'branding'))
-from kaju_brand import LOGO_PATHS
 from reference_tower_spec import SCREENS
 from prepare_earth_detail import prepare_earth_detail
+from prepare_long_banner import prepare_long_banner_artwork
 
 OUTPUT = ROOT / 'textures-monochrome'
 FONT = next(path for path in [
@@ -105,34 +103,8 @@ def mountain_landscape(image, seed=19):
 
 
 def prepare_reference_tower_artwork():
-    records = {}
-    source = ROOT / 'banner-artwork/portrait-source.png'
-    with Image.open(source) as original:
-        original = ImageOps.exif_transpose(original).convert('L')
-        caption_mask = ImageDraw.Draw(original)
-        for x0, x1, y0, y1 in [(.12, .31, .105, .172), (.79, .94, .11, .20)]:
-            caption_mask.rectangle((round(x0 * original.width), round(y0 * original.height),
-                                    round(x1 * original.width), round(y1 * original.height)), fill=2)
-        # Crop the original's tall header so the head begins at the top of the
-        # portrait bay. Logo and slogans now occupy their own upper screen.
-        original = original.crop((0, round(original.height * .235), original.width, round(original.height * .97)))
-        portrait = ImageOps.fit(original, (round(3072 * SCREENS['portrait']['aspect']), 3072),
-                                method=Image.Resampling.LANCZOS)
-    draw = ImageDraw.Draw(portrait)
-    draw.line((portrait.width * .24, 2480, portrait.width * .31, 2480), fill=210, width=3)
-    for i, text in enumerate(['HUMANITY', 'WAS A BUG.', 'I FIXED IT.']):
-        lettering(draw, text, portrait.width * .44, 2550 + i * 115, 72, 12)
-    save(portrait, 'reference-portrait.jpg', records)
-
-    logo = Image.new('L', (round(1500 * SCREENS['logo']['aspect']), 1500), 2)
-    draw = ImageDraw.Draw(logo)
-    center = logo.width * .53
-    for path in LOGO_PATHS:
-        draw.line([(center + x * 103, 450 - y * 103) for x, y in path], fill=245, width=4)
-    for i, text in enumerate(['CONTROL', 'CREATES', 'PEACE']):
-        lettering(draw, text, center, 730 + i * 115, 78, 16)
-    draw.line((center - 140, 1140, center - 60, 1140), fill=210, width=3)
-    save(logo, 'reference-logo.jpg', records)
+    banner = prepare_long_banner_artwork()
+    records = banner.pop('outputs')
 
     order = Image.new('L', (round(1973 * SCREENS['order']['aspect']), 1973), 3)
     draw = ImageDraw.Draw(order)
@@ -174,10 +146,7 @@ def prepare_reference_tower_artwork():
     lettering(draw, 'TOMORROW', 444, 1390, 27, 8)
     draw.line((383, 1460, 438, 1460), fill=170, width=2)
     save(eclipse, 'reference-eclipse.jpg', records)
-    report = {'source': 'banner-artwork/portrait-source.png',
-              'sourceSha256': hashlib.sha256(source.read_bytes()).hexdigest(),
-              'portraitPanelMeters': [SCREENS['portrait']['arcLength'], SCREENS['portrait']['z'][1] - SCREENS['portrait']['z'][0]],
-              'portraitFit': 'proportional head-to-suit crop; lower-left caption overlay; logo on separate curved screen',
+    report = {**banner,
               'screenAspects': {key: value['aspect'] for key, value in SCREENS.items()},
               'outputs': records}
     earth = prepare_earth_detail()

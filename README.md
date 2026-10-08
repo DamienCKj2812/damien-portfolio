@@ -1,6 +1,6 @@
 # Damien's immersive portfolio
 
-React + TypeScript + Vite + React Three Fiber/Three.js. The full-viewport experience connects a monochrome city, KAJU lobby, interactive elevator, and four portfolio rooms. Navigation and content stay inside the 3D journey.
+React + TypeScript + Vite + React Three Fiber/Three.js. Choose a scrolling 2D portfolio or an immersive 3D journey through a monochrome city, KAJU lobby, interactive elevator, and four portfolio rooms. Both experiences share the same profile, reviewed projects, skills, experience, education and contact data.
 
 ```sh
 npm ci
@@ -9,7 +9,9 @@ npm run dev
 
 Open **http://localhost:5173/damien-portfolio/** (use the port Vite reports).
 
-All 61 original application modules now use TS/TSX; the 31 existing Node tools use MTS, with shared helpers and verification aggregators. Run `npm run lint && npm run typecheck && npm run build && npm run verify` for the CI checks. After building, `npm run verify:browser` runs the nine browser checks with the declared Playwright dependency and local Chrome; setup and overrides are in the development guide.
+The entry screen offers **3D / 2D** and an optional remembered choice. Direct links use `?mode=entry`, `?mode=2d` or `?mode=3d`; visitors can switch modes within the site. Entry and 2D load without preparing 3D models or audio.
+
+All 61 original application modules now use TS/TSX; the 31 existing Node tools use MTS, with shared helpers and verification aggregators. Run `npm run lint && npm run typecheck && npm run build && npm run verify` for the CI checks. After building, `npm run verify:browser` runs ten browser checks, including entry/2D/3D mode verification, with the declared Playwright dependency and local Chrome; setup and overrides are in the development guide.
 
 ## Guides
 

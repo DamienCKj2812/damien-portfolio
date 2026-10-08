@@ -4,7 +4,7 @@
     "src/data/portfolio.json",
     "docs/project-catalogue.md"
   ],
-  "profileSourceHash": "a670e0629b7763df5a1aa1c913a5613578ab494d96b0788fc27484365f7dba14",
+  "profileSourceHash": "52e54b23dd2fe22969dea02aa1e96893e9da577aa0ea2452df4a3410a1136485",
   "projectSourceHash": "1493e043f7b09aee688c8b36323f1465fe425e65c7c9c349231af5c797f12ebc",
   "description": "My development toolkit spans web applications, backend APIs, databases, deployment, and Linux servers.",
   "learning": [
@@ -22,7 +22,7 @@
       "section": "skills",
       "category": "APPLIED SKILLS / LANGUAGES",
       "summary": "Typed web development, data tooling and academic programming.",
-      "focus": "Backend development",
+      "focus": "Full-stack development",
       "items": [
         "JavaScript",
         "TypeScript",
@@ -135,7 +135,7 @@
       "catalogueSections": [
         {
           "heading": "Overview",
-          "markdown": "Typed web development, data tooling and academic programming.\n\nBackend development is my main focus, but I learn the technologies each project requires rather than limiting myself to a single stack."
+          "markdown": "Typed web development, data tooling and academic programming.\n\nFull-stack development is my main focus, working across frontend, backend, databases, and deployment. I learn the technologies each project requires rather than limiting myself to a single stack."
         },
         {
           "heading": "Core toolkit",
@@ -177,7 +177,7 @@
       "section": "skills",
       "category": "APPLIED SKILLS / FRAMEWORKS",
       "summary": "Responsive interfaces, server-rendered websites and reusable UI.",
-      "focus": "Backend development",
+      "focus": "Full-stack development",
       "items": [
         "React",
         "Next.js",
@@ -237,7 +237,7 @@
       "catalogueSections": [
         {
           "heading": "Overview",
-          "markdown": "Responsive interfaces, server-rendered websites and reusable UI.\n\nBackend development is my main focus, but I learn the technologies each project requires rather than limiting myself to a single stack."
+          "markdown": "Responsive interfaces, server-rendered websites and reusable UI.\n\nFull-stack development is my main focus, working across frontend, backend, databases, and deployment. I learn the technologies each project requires rather than limiting myself to a single stack."
         },
         {
           "heading": "Core toolkit",
@@ -278,8 +278,8 @@
       "title": "Backend & APIs",
       "section": "skills",
       "category": "APPLIED SKILLS / BACKEND & APIS",
-      "summary": "Backend-focused application development and integration.",
-      "focus": "Backend development",
+      "summary": "Backend application development and integration.",
+      "focus": "Full-stack development",
       "items": [
         "REST APIs",
         "Express",
@@ -345,7 +345,7 @@
       "catalogueSections": [
         {
           "heading": "Overview",
-          "markdown": "Backend-focused application development and integration.\n\nBackend development is my main focus, but I learn the technologies each project requires rather than limiting myself to a single stack."
+          "markdown": "Backend application development and integration.\n\nFull-stack development is my main focus, working across frontend, backend, databases, and deployment. I learn the technologies each project requires rather than limiting myself to a single stack."
         },
         {
           "heading": "Core toolkit",
@@ -369,7 +369,7 @@
         },
         {
           "heading": "Learning and scope",
-          "markdown": "Backend development is the main focus stated in About. FastAPI is listed in the toolkit as a profile-backed skill."
+          "markdown": "Full-stack development is the main focus stated in About. FastAPI is listed in the toolkit as a profile-backed skill."
         },
         {
           "heading": "Links and sources",
@@ -387,7 +387,7 @@
       "section": "skills",
       "category": "APPLIED SKILLS / DATABASES",
       "summary": "Relational, document, stream and retrieval-oriented data.",
-      "focus": "Backend development",
+      "focus": "Full-stack development",
       "items": [
         "PostgreSQL",
         "MySQL",
@@ -465,7 +465,7 @@
       "catalogueSections": [
         {
           "heading": "Overview",
-          "markdown": "Relational, document, stream and retrieval-oriented data.\n\nBackend development is my main focus, but I learn the technologies each project requires rather than limiting myself to a single stack."
+          "markdown": "Relational, document, stream and retrieval-oriented data.\n\nFull-stack development is my main focus, working across frontend, backend, databases, and deployment. I learn the technologies each project requires rather than limiting myself to a single stack."
         },
         {
           "heading": "Core toolkit",
@@ -507,7 +507,7 @@
       "section": "skills",
       "category": "APPLIED SKILLS / DATA & AI",
       "summary": "Data preparation, AI-assisted workflows and ongoing ML learning.",
-      "focus": "Backend development",
+      "focus": "Full-stack development",
       "items": [
         "Python",
         "Pandas / NumPy",
@@ -579,7 +579,7 @@
       "catalogueSections": [
         {
           "heading": "Overview",
-          "markdown": "Data preparation, AI-assisted workflows and ongoing ML learning.\n\nBackend development is my main focus, but I learn the technologies each project requires rather than limiting myself to a single stack."
+          "markdown": "Data preparation, AI-assisted workflows and ongoing ML learning.\n\nFull-stack development is my main focus, working across frontend, backend, databases, and deployment. I learn the technologies each project requires rather than limiting myself to a single stack."
         },
         {
           "heading": "Core toolkit",
@@ -621,7 +621,7 @@
       "section": "skills",
       "category": "APPLIED SKILLS / SECURITY",
       "summary": "Validation, ownership and permission boundaries in applications.",
-      "focus": "Backend development",
+      "focus": "Full-stack development",
       "items": [
         "JWT",
         "OAuth",
@@ -671,7 +671,7 @@
       "catalogueSections": [
         {
           "heading": "Overview",
-          "markdown": "Validation, ownership and permission boundaries in applications.\n\nBackend development is my main focus, but I learn the technologies each project requires rather than limiting myself to a single stack."
+          "markdown": "Validation, ownership and permission boundaries in applications.\n\nFull-stack development is my main focus, working across frontend, backend, databases, and deployment. I learn the technologies each project requires rather than limiting myself to a single stack."
         },
         {
           "heading": "Core toolkit",
@@ -713,7 +713,7 @@
       "section": "skills",
       "category": "APPLIED SKILLS / DEVOPS & CI/CD",
       "summary": "Deployment, server operations and repeatable application delivery.",
-      "focus": "Backend development",
+      "focus": "Full-stack development",
       "items": [
         "Git",
         "GitHub",
@@ -790,7 +790,7 @@
       "catalogueSections": [
         {
           "heading": "Overview",
-          "markdown": "Deployment, server operations and repeatable application delivery.\n\nBackend development is my main focus, but I learn the technologies each project requires rather than limiting myself to a single stack."
+          "markdown": "Deployment, server operations and repeatable application delivery.\n\nFull-stack development is my main focus, working across frontend, backend, databases, and deployment. I learn the technologies each project requires rather than limiting myself to a single stack."
         },
         {
           "heading": "Core toolkit",
@@ -832,7 +832,7 @@
       "section": "skills",
       "category": "APPLIED SKILLS / MICROSERVICES",
       "summary": "Service boundaries, asynchronous processing and observability.",
-      "focus": "Backend development",
+      "focus": "Full-stack development",
       "items": [
         "Service design",
         "Message queues",
@@ -877,7 +877,7 @@
       "catalogueSections": [
         {
           "heading": "Overview",
-          "markdown": "Service boundaries, asynchronous processing and observability.\n\nBackend development is my main focus, but I learn the technologies each project requires rather than limiting myself to a single stack."
+          "markdown": "Service boundaries, asynchronous processing and observability.\n\nFull-stack development is my main focus, working across frontend, backend, databases, and deployment. I learn the technologies each project requires rather than limiting myself to a single stack."
         },
         {
           "heading": "Core toolkit",
@@ -919,7 +919,7 @@
       "section": "skills",
       "category": "APPLIED SKILLS / LINUX",
       "summary": "Linux workstations, custom desktop tools and application servers.",
-      "focus": "Backend development",
+      "focus": "Full-stack development",
       "items": [
         "Linux fundamentals",
         "Fedora",
@@ -1000,7 +1000,7 @@
       "catalogueSections": [
         {
           "heading": "Overview",
-          "markdown": "Linux workstations, custom desktop tools and application servers.\n\nBackend development is my main focus, but I learn the technologies each project requires rather than limiting myself to a single stack."
+          "markdown": "Linux workstations, custom desktop tools and application servers.\n\nFull-stack development is my main focus, working across frontend, backend, databases, and deployment. I learn the technologies each project requires rather than limiting myself to a single stack."
         },
         {
           "heading": "Core toolkit",

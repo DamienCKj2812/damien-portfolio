@@ -114,5 +114,7 @@
     "solidObjects": 230,
     "screens": 5
   },
-  "cameraAndExistingPosesPreserved": true
+  "cameraAndExistingPosesPreserved": true,
+  "longBannerGlitchBorderRemoved": true,
+  "hiddenBannerGlitchBlocks": 80
 }

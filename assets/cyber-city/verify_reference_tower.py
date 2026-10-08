@@ -2,16 +2,26 @@
 import hashlib
 import json
 import math
+import sys
 from pathlib import Path
 import bpy
 from mathutils.bvhtree import BVHTree
+from mathutils import Vector
 
 ROOT = Path(__file__).resolve().parent
+sys.path.insert(0, str(ROOT))
+from reference_tower_spec import CENTER
 scene = bpy.context.scene
 assert scene.name == 'MONO / Wire & Particle City'
 assert scene.get('reference_tower_redesign')
 art = json.loads((ROOT / 'reference-tower-artwork.json').read_text())
 layout = json.loads(scene['reference_tower_redesign'])
+assert layout.get('longBannerGlitchBorderRemoved'), 'Long-banner glitch border removal must survive rebuilds'
+for obj in scene.objects:
+    if obj.type == 'MESH' and not obj.hide_render and obj.name.startswith('Reference tower • Scattered glitch block'):
+        center = sum((obj.matrix_world @ vertex.co for vertex in obj.data.vertices), Vector()) / len(obj.data.vertices)
+        angle = math.degrees(math.atan2(center.x - CENTER[0], CENTER[1] - center.y))
+        assert not 2.49 <= angle <= 8.51, f'Visible glitch block on the long-banner edge: {obj.name}'
 assert hashlib.sha256((ROOT / art['source']).read_bytes()).hexdigest() == art['sourceSha256']
 screens = [o for o in scene.objects if o.get('tower_reference_display') and not o.hide_render]
 assert len(screens) == 5
@@ -22,6 +32,10 @@ for obj in screens:
     assert obj.data.uv_layers.active
     image = next(n.image for n in obj.active_material.node_tree.nodes if n.type == 'TEX_IMAGE')
     assert image.packed_file and list(image.size) == art['outputs'][filename]['size']
+    assert hashlib.sha256(bytes(image.packed_file.data)).hexdigest() == art['outputs'][filename]['sha256'], f'Stale packed artwork: {filename}'
+    if obj['tower_display_key'] in ('logo', 'portrait') and art.get('longBanner'):
+        assert obj.get('banner_artwork_source') == art['source']
+        assert obj.get('banner_artwork_sha256') == art['outputs'][filename]['sha256']
     spec = layout['screens'][obj['tower_display_key']]
     assert abs(image.size[0] / image.size[1] - spec['aspect']) < 1 / image.size[1]
     assert all(math.isfinite(v) for loop in obj.data.uv_layers.active.data for v in loop.uv)

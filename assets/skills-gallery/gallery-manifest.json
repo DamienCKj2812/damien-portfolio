@@ -245,7 +245,7 @@
   "npc_clip_loops_during_tour": true,
   "sculpture_detail_camera": "Gallery \u2022 AT-AT walker detail camera",
   "skillContentSource": [
-    "src/data/portfolio.js",
+    "src/data/portfolio.json",
     "docs/project-catalogue.md"
   ]
 }

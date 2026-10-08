@@ -2,6 +2,7 @@ import assert from 'node:assert/strict'
 import { jsonFile, sceneFile } from './node_json.mts'
 import { listValue, objectValue, parseCaseSections, stringValue } from '../src/types/portfolio.ts'
 import { isPublicLink, publicMarkdown } from '../src/data/publicLinks.ts'
+import flatProjects from '../src/data/projects2d.generated.json' with { type: 'json' }
 
 const projects=sceneFile(new URL('../public/models/rooms/projects/scene.json',import.meta.url),'projects').projects
 const expected=[
@@ -64,4 +65,16 @@ function audit(value: unknown,path: string) {
   else if(value&&typeof value==='object') for(const [key,item] of Object.entries(value)) audit(item,`${path}.${key}`)
 }
 for(const level of ['projects','skills','experience'] as const) audit(sceneFile(new URL(`../public/models/rooms/${level}/scene.json`,import.meta.url),level),level)
-console.log('PASS public sites, unreleased preview, private Tailscale status, verified-public repository policy and no restricted URLs in published room metadata')
+assert.deepEqual(flatProjects.map(project=>project.id),projects.map(project=>project.id),'2D must include every published project in catalogue order')
+for(const flat of flatProjects) {
+  const source=projects.find(project=>project.id===flat.id)
+  assert.ok(source)
+  assert.equal(flat.overview,source.overview,'2D content must match the published catalogue')
+  assert.deepEqual(flat.tags,source.tags)
+  assert.deepEqual(flat.sections,source.catalogueSections)
+  for(const link of flat.links) assert.ok(isPublicLink(link.href))
+}
+audit(flatProjects,'2D projects')
+const flatAmpress=flatProjects.find(project=>project.id==='amplifii')
+assert.ok(flatAmpress&&!confidentialTerms.test(JSON.stringify(flatAmpress)),'2D must preserve the NDA content boundary')
+console.log('PASS public sites, unreleased preview, private Tailscale status, verified-public repository policy and aligned 2D/3D public project content')

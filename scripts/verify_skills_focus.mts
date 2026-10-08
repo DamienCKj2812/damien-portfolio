@@ -23,7 +23,7 @@ try {
     })
     const page=await context.newPage()
     page.on('pageerror',error=>errors.push(error.message))
-    await page.goto('http://127.0.0.1:5199/damien-portfolio/')
+    await page.goto('http://127.0.0.1:5199/damien-portfolio/?mode=3d')
     await page.locator('.city-stage[data-loaded="true"]').waitFor({timeout:120000})
     await page.getByRole('button',{name:/Choose a floor/}).click()
     await page.locator('.city-stage[data-elevator-loaded="true"]').waitFor({timeout:120000})

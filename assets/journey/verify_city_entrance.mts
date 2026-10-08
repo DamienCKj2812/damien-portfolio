@@ -39,7 +39,7 @@ try {
   page.on('console', message => {
     if (message.type() === 'error' && !message.text().startsWith('Failed to load resource:')) errors.push(message.text())
   })
-  await page.goto('http://127.0.0.1:5193/damien-portfolio/')
+  await page.goto('http://127.0.0.1:5193/damien-portfolio/?mode=3d')
   await page.getByRole('button', { name: 'Continue muted', exact: true }).click()
   await page.waitForSelector('.city-stage[data-loaded=true]', { timeout: 90000 })
   await page.waitForTimeout(700)

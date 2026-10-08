@@ -1,11 +1,11 @@
 {
-  "source": "banner-artwork/portrait-source.png",
-  "sourceSha256": "abfa933d1ffda7d7c9ff2e8cd79ecfc8a3294082870a37fc460c05727e2bf76e",
+  "source": "banner-artwork/long-banner-source.png",
+  "sourceSha256": "714e95b3049c97b63e76a86cd261f5d4d5ad2492004d57fea392fe4f0e5a47bd",
   "portraitPanelMeters": [
     8.346862614737681,
     19.8
   ],
-  "portraitFit": "proportional head-to-suit crop; lower-left caption overlay; logo on separate curved screen",
+  "portraitFit": "full supplied long banner mapped across both existing curved A-bay panels; no added captions or padding",
   "screenAspects": {
     "logo": 0.7995079132890498,
     "portrait": 0.4215587179160445,
@@ -16,19 +16,19 @@
   "outputs": {
     "reference-portrait.jpg": {
       "size": [
-        1295,
-        3072
+        1104,
+        2620
       ],
-      "bytes": 987032,
-      "sha256": "10e429ddfa47bcceac0a6a30d4ebca691ad7468e57c3e67c23a0dd63bbaed380"
+      "bytes": 287270,
+      "sha256": "6066afc4ac8a88935139f93439bd4153cd86fd177c127d1f43cd19f9cf0de097"
     },
     "reference-logo.jpg": {
       "size": [
-        1199,
-        1500
+        1104,
+        1381
       ],
-      "bytes": 29545,
-      "sha256": "ed144169116d2ea7a01c4ee7de79b60241c0f6ae380ea7ac48e176d887d8e76c"
+      "bytes": 132756,
+      "sha256": "4e66de8346df2a9e207da06403b9a509ddd813e3e1a3ebe12893626bfdd81b6a"
     },
     "reference-order.jpg": {
       "size": [
@@ -63,5 +63,42 @@
       "sha256": "3d8fd2e958d540b40037d1c73a772de2fea82425048489c2f30035d9607c5140"
     }
   },
-  "earthSource": "banner-artwork/natural-earth-land-110m.geojson"
+  "earthSource": "banner-artwork/natural-earth-land-110m.geojson",
+  "sourceSize": [
+    627,
+    2508
+  ],
+  "longBanner": {
+    "canvasSize": [
+      1104,
+      4096
+    ],
+    "spanMeters": [
+      8.399999999999999,
+      39.36
+    ],
+    "panelSlices": {
+      "logo": {
+        "zMeters": [
+          28.919999999999998,
+          39.36
+        ],
+        "canvasRows": [
+          0,
+          1381
+        ]
+      },
+      "portrait": {
+        "zMeters": [
+          8.399999999999999,
+          28.2
+        ],
+        "canvasRows": [
+          1476,
+          4096
+        ]
+      }
+    },
+    "existingGapPreserved": true
+  }
 }

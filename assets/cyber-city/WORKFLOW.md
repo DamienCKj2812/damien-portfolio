@@ -20,13 +20,30 @@ blender --background assets/cyber-city/monochrome-city-solid-tower.blend --pytho
 blender --background assets/cyber-city/monochrome-city-solid-tower.blend --python-exit-code 1 --python assets/cyber-city/verify_reference_tower.py
 ```
 
-Version 2 follows the supplied cylindrical specification rather than the former block-tower arrangement. `reference_tower_spec.py` fits the radial scale and azimuths to the fixed entrance, tunes facade/crown heights against the portrait framing, and derives each image aspect from actual arc length / panel height. The A bay has separate logo and portrait screens; captions are overlaid on the suit. Three right-side screens contain the slogans, glass-like native hologram and eclipse/mountain/lake landscape. The rooftop has a drum, halo, full parapet and four paired masts. L1 and L2 have separate partial-ring slabs; L1 continues into the sweeping crescent fin. Glitch blocks, larger left luminous panels, vertical fins, storefront glazing, trees and the layered canopy complete the shape. Native Cycles materials/compositor and browser luminance/centerline proxies are authored together. `reference-tower.json` and `reference-tower-artwork.json` record geometry, framing and texture provenance.
+Version 2 follows the supplied cylindrical specification rather than the former block-tower arrangement. `reference_tower_spec.py` fits the radial scale and azimuths to the fixed entrance, tunes facade/crown heights, and derives each image aspect from actual arc length / panel height. The A bay retains its two stacked curved surfaces, now carrying coordinated slices of the supplied SANCTUM long banner with its original text/borders and no added captions. Three right-side screens contain the slogans, glass-like native hologram and eclipse/mountain/lake landscape. The rooftop has a drum, halo, full parapet and four paired masts. L1 and L2 have separate partial-ring slabs; L1 continues into the sweeping crescent fin. Glitch blocks, larger left luminous panels, vertical fins, storefront glazing, trees and the layered canopy complete the shape. Native Cycles materials/compositor and browser luminance/centerline proxies are authored together. `reference-tower.json` and `reference-tower-artwork.json` record geometry, framing and texture provenance.
 
 This focused script hides the former block-tower solids, terraces, cage and foreground entrance-obscuring sign, retaining their recovery data. It restores the authored orbital sky, outdoor people and wireframe night skyline with sparse floor/window detail. It updates five existing display IDs and verifies unchanged existing transforms/camera at six route frames. Verification independently checks all 450 camera frames, packed texture hashes, UVs, mast/balcony presence and retired displays. On the master, the two export-cut skin objects are excluded from collision checks; repeat the same check on the generated city/lobby copy to test the evaluated doorway/atrium cuts. Reapplying the script replaces its own tower collection and refreshes the owned skyline detail.
 
 Rebuild the connected city/lobby copy and export the city, then rebuild/verify the elevator handoff using the [integration sequence](../journey/WORKFLOW.md). The builder carves the front portal and rear atrium separately, hides the old flat podium, and recesses the sliding-door/pocket assemblies by 1.8 m without changing their timing. Reapply this redesign after a full styling/branding rebuild. The older banner sections below describe retained sources and the former layout; the current facade uses `reference-{logo,portrait,order,orbital,eclipse}.jpg`. Run the existing foreground/rear train verification after export.
 
 `reference-tower-preview.png` is the current browser-rendered full-building view, captured with an isolated preview camera without editing the authored route. The city exporter also uses it as the loading-poster source when the reference redesign is active.
+
+### Focused long-banner replacement
+
+```sh
+python3 assets/cyber-city/prepare_long_banner.py
+blender --background assets/cyber-city/monochrome-city-solid-tower.blend --python-exit-code 1 --python assets/cyber-city/replace_long_banner.py
+```
+
+The source is `banner-artwork/long-banner-source.png`. This focused path updates only the two prepared A-bay images/metadata and packs them without rebuilding the tower. Rebuild the connected city/lobby copy, export the city, and rebuild the elevator handoff in the integration sequence. Check `verify_reference_tower.py` on production and the connected copy; review the browser banner and refresh browser-rendered building/sky previews. The city `assetHash` includes both JPEGs, while geometry and animation buffers remain unchanged for this texture-only edit.
+
+### Clean long-banner border
+
+```sh
+blender --background assets/cyber-city/monochrome-city-solid-tower.blend --python-exit-code 1 --python assets/cyber-city/remove_long_banner_glitch.py
+```
+
+The focused update hides the 80 scattered rectangle meshes along the banner's right edge (2.5°–8.5° azimuth), retaining them for recovery. It preserves the artwork, thin frame, LED rails, receding-left facade decoration and all unrelated transforms/visibility/actions. Full generation omits this strip. Rebuild/export the connected city and elevator handoff; check the master/integration with `verify_reference_tower.py` and refresh browser previews. This geometry-visibility edit regenerates the city geometry/hash but preserves animation.
 
 ## Restore the wireframe night skyline
 

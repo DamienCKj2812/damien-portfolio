@@ -3,7 +3,7 @@
   "structuralFingerprint": "e53939d112855e0ade9ec4455a6be46eff9a5547e1fa8ffa0d18cdc621663ef5",
   "architectureSculptureVisitorsAndRoutePreserved": true,
   "sources": [
-    "src/data/portfolio.js",
+    "src/data/portfolio.json",
     "docs/project-catalogue.md"
   ],
   "validation": "passed"

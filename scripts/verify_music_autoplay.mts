@@ -40,7 +40,7 @@ try {
         const NativeContext = window.AudioContext
         window.AudioContext = new Proxy(NativeContext, { construct(target, args) { window.musicChecks.contexts++;return Reflect.construct(target, args) } })
       }, mode)
-       await page.goto('http://127.0.0.1:5197/damien-portfolio/')
+       await page.goto('http://127.0.0.1:5197/damien-portfolio/?mode=3d')
        // Await instrumentation without DOM evaluations during preparation:
        // Playwright evaluate calls can grant transient browser user activation.
        if(mode!=='muted') {

@@ -16,7 +16,7 @@ async function enter(viewport: ViewportSize,motion: 'reduce' | 'no-preference'='
   page.on('pageerror',error=>errors.push(error.message))
   await installBrowserHelpers(page,()=>{const raf=requestAnimationFrame.bind(window);window.__rafCount=0;window.requestAnimationFrame=callback=>{window.__rafCount++;return raf(callback)}})
   const requests: string[]=[];page.on('request',request=>{if(request.url().includes('/videos/'))requests.push(request.url())})
-  await page.goto('http://127.0.0.1:5196/damien-portfolio/')
+  await page.goto('http://127.0.0.1:5196/damien-portfolio/?mode=3d')
   await page.getByRole('button',{name:sound?/Enable sound/:'Continue muted'}).click()
   await page.locator('.city-stage[data-loaded="true"]').waitFor({timeout:120000})
   await page.getByRole('button',{name:/Choose a floor/}).click()

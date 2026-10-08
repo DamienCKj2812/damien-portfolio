@@ -4,7 +4,7 @@
   "label": "Skills gallery",
   "geometry": "geometry.bin",
   "animation": "animation.bin",
-  "assetHash": "80222344eef1",
+  "assetHash": "30f15719925a",
   "frameStart": 1,
   "frameEnd": 959,
   "fps": 30,
@@ -737,8 +737,8 @@
       "actor": 0,
       "kind": "solid",
       "byteOffset": 245632,
-      "floatCount": 858900,
-      "vertexCount": 214725,
+      "floatCount": 859380,
+      "vertexCount": 214845,
       "stride": 4,
       "role": null,
       "id": null,
@@ -747,7 +747,7 @@
     {
       "actor": 0,
       "kind": "solid",
-      "byteOffset": 3681232,
+      "byteOffset": 3683152,
       "floatCount": 30480,
       "vertexCount": 7620,
       "stride": 4,
@@ -758,7 +758,7 @@
     {
       "actor": 0,
       "kind": "solid",
-      "byteOffset": 3803152,
+      "byteOffset": 3805072,
       "floatCount": 24,
       "vertexCount": 6,
       "stride": 4,
@@ -769,7 +769,7 @@
     {
       "actor": 0,
       "kind": "solid",
-      "byteOffset": 3803248,
+      "byteOffset": 3805168,
       "floatCount": 24,
       "vertexCount": 6,
       "stride": 4,
@@ -780,7 +780,7 @@
     {
       "actor": 0,
       "kind": "solid",
-      "byteOffset": 3803344,
+      "byteOffset": 3805264,
       "floatCount": 24,
       "vertexCount": 6,
       "stride": 4,
@@ -791,7 +791,7 @@
     {
       "actor": 0,
       "kind": "solid",
-      "byteOffset": 3803440,
+      "byteOffset": 3805360,
       "floatCount": 24,
       "vertexCount": 6,
       "stride": 4,
@@ -802,7 +802,7 @@
     {
       "actor": 0,
       "kind": "solid",
-      "byteOffset": 3803536,
+      "byteOffset": 3805456,
       "floatCount": 24,
       "vertexCount": 6,
       "stride": 4,
@@ -813,7 +813,7 @@
     {
       "actor": 0,
       "kind": "solid",
-      "byteOffset": 3803632,
+      "byteOffset": 3805552,
       "floatCount": 24,
       "vertexCount": 6,
       "stride": 4,
@@ -824,7 +824,7 @@
     {
       "actor": 0,
       "kind": "solid",
-      "byteOffset": 3803728,
+      "byteOffset": 3805648,
       "floatCount": 24,
       "vertexCount": 6,
       "stride": 4,
@@ -835,7 +835,7 @@
     {
       "actor": 0,
       "kind": "solid",
-      "byteOffset": 3803824,
+      "byteOffset": 3805744,
       "floatCount": 24,
       "vertexCount": 6,
       "stride": 4,
@@ -846,7 +846,7 @@
     {
       "actor": 0,
       "kind": "solid",
-      "byteOffset": 3803920,
+      "byteOffset": 3805840,
       "floatCount": 24,
       "vertexCount": 6,
       "stride": 4,
@@ -857,7 +857,7 @@
     {
       "actor": 1,
       "kind": "points",
-      "byteOffset": 3804016,
+      "byteOffset": 3805936,
       "floatCount": 475,
       "vertexCount": 95,
       "stride": 5,
@@ -868,7 +868,7 @@
     {
       "actor": 2,
       "kind": "points",
-      "byteOffset": 3805916,
+      "byteOffset": 3807836,
       "floatCount": 475,
       "vertexCount": 95,
       "stride": 5,
@@ -879,7 +879,7 @@
     {
       "actor": 3,
       "kind": "points",
-      "byteOffset": 3807816,
+      "byteOffset": 3809736,
       "floatCount": 725,
       "vertexCount": 145,
       "stride": 5,
@@ -890,7 +890,7 @@
     {
       "actor": 4,
       "kind": "points",
-      "byteOffset": 3810716,
+      "byteOffset": 3812636,
       "floatCount": 725,
       "vertexCount": 145,
       "stride": 5,
@@ -901,7 +901,7 @@
     {
       "actor": 5,
       "kind": "points",
-      "byteOffset": 3813616,
+      "byteOffset": 3815536,
       "floatCount": 325,
       "vertexCount": 65,
       "stride": 5,
@@ -912,7 +912,7 @@
     {
       "actor": 6,
       "kind": "points",
-      "byteOffset": 3814916,
+      "byteOffset": 3816836,
       "floatCount": 325,
       "vertexCount": 65,
       "stride": 5,
@@ -923,7 +923,7 @@
     {
       "actor": 7,
       "kind": "points",
-      "byteOffset": 3816216,
+      "byteOffset": 3818136,
       "floatCount": 1325,
       "vertexCount": 265,
       "stride": 5,
@@ -934,7 +934,7 @@
     {
       "actor": 8,
       "kind": "points",
-      "byteOffset": 3821516,
+      "byteOffset": 3823436,
       "floatCount": 950,
       "vertexCount": 190,
       "stride": 5,
@@ -945,7 +945,7 @@
     {
       "actor": 9,
       "kind": "points",
-      "byteOffset": 3825316,
+      "byteOffset": 3827236,
       "floatCount": 1100,
       "vertexCount": 220,
       "stride": 5,
@@ -956,7 +956,7 @@
     {
       "actor": 10,
       "kind": "points",
-      "byteOffset": 3829716,
+      "byteOffset": 3831636,
       "floatCount": 1100,
       "vertexCount": 220,
       "stride": 5,
@@ -967,7 +967,7 @@
     {
       "actor": 11,
       "kind": "points",
-      "byteOffset": 3834116,
+      "byteOffset": 3836036,
       "floatCount": 1200,
       "vertexCount": 240,
       "stride": 5,
@@ -978,7 +978,7 @@
     {
       "actor": 12,
       "kind": "points",
-      "byteOffset": 3838916,
+      "byteOffset": 3840836,
       "floatCount": 1200,
       "vertexCount": 240,
       "stride": 5,
@@ -989,7 +989,7 @@
     {
       "actor": 13,
       "kind": "points",
-      "byteOffset": 3843716,
+      "byteOffset": 3845636,
       "floatCount": 2350,
       "vertexCount": 470,
       "stride": 5,
@@ -1000,7 +1000,7 @@
     {
       "actor": 14,
       "kind": "points",
-      "byteOffset": 3853116,
+      "byteOffset": 3855036,
       "floatCount": 900,
       "vertexCount": 180,
       "stride": 5,
@@ -1011,7 +1011,7 @@
     {
       "actor": 15,
       "kind": "points",
-      "byteOffset": 3856716,
+      "byteOffset": 3858636,
       "floatCount": 900,
       "vertexCount": 180,
       "stride": 5,
@@ -1022,7 +1022,7 @@
     {
       "actor": 16,
       "kind": "points",
-      "byteOffset": 3860316,
+      "byteOffset": 3862236,
       "floatCount": 475,
       "vertexCount": 95,
       "stride": 5,
@@ -1033,7 +1033,7 @@
     {
       "actor": 17,
       "kind": "points",
-      "byteOffset": 3862216,
+      "byteOffset": 3864136,
       "floatCount": 475,
       "vertexCount": 95,
       "stride": 5,
@@ -1044,7 +1044,7 @@
     {
       "actor": 18,
       "kind": "points",
-      "byteOffset": 3864116,
+      "byteOffset": 3866036,
       "floatCount": 725,
       "vertexCount": 145,
       "stride": 5,
@@ -1055,7 +1055,7 @@
     {
       "actor": 19,
       "kind": "points",
-      "byteOffset": 3867016,
+      "byteOffset": 3868936,
       "floatCount": 725,
       "vertexCount": 145,
       "stride": 5,
@@ -1066,7 +1066,7 @@
     {
       "actor": 20,
       "kind": "points",
-      "byteOffset": 3869916,
+      "byteOffset": 3871836,
       "floatCount": 325,
       "vertexCount": 65,
       "stride": 5,
@@ -1077,7 +1077,7 @@
     {
       "actor": 21,
       "kind": "points",
-      "byteOffset": 3871216,
+      "byteOffset": 3873136,
       "floatCount": 325,
       "vertexCount": 65,
       "stride": 5,
@@ -1088,7 +1088,7 @@
     {
       "actor": 22,
       "kind": "points",
-      "byteOffset": 3872516,
+      "byteOffset": 3874436,
       "floatCount": 1325,
       "vertexCount": 265,
       "stride": 5,
@@ -1099,7 +1099,7 @@
     {
       "actor": 23,
       "kind": "points",
-      "byteOffset": 3877816,
+      "byteOffset": 3879736,
       "floatCount": 950,
       "vertexCount": 190,
       "stride": 5,
@@ -1110,7 +1110,7 @@
     {
       "actor": 24,
       "kind": "points",
-      "byteOffset": 3881616,
+      "byteOffset": 3883536,
       "floatCount": 1100,
       "vertexCount": 220,
       "stride": 5,
@@ -1121,7 +1121,7 @@
     {
       "actor": 25,
       "kind": "points",
-      "byteOffset": 3886016,
+      "byteOffset": 3887936,
       "floatCount": 1100,
       "vertexCount": 220,
       "stride": 5,
@@ -1132,7 +1132,7 @@
     {
       "actor": 26,
       "kind": "points",
-      "byteOffset": 3890416,
+      "byteOffset": 3892336,
       "floatCount": 1200,
       "vertexCount": 240,
       "stride": 5,
@@ -1143,7 +1143,7 @@
     {
       "actor": 27,
       "kind": "points",
-      "byteOffset": 3895216,
+      "byteOffset": 3897136,
       "floatCount": 1200,
       "vertexCount": 240,
       "stride": 5,
@@ -1154,7 +1154,7 @@
     {
       "actor": 28,
       "kind": "points",
-      "byteOffset": 3900016,
+      "byteOffset": 3901936,
       "floatCount": 2350,
       "vertexCount": 470,
       "stride": 5,
@@ -1165,7 +1165,7 @@
     {
       "actor": 29,
       "kind": "points",
-      "byteOffset": 3909416,
+      "byteOffset": 3911336,
       "floatCount": 900,
       "vertexCount": 180,
       "stride": 5,
@@ -1176,7 +1176,7 @@
     {
       "actor": 30,
       "kind": "points",
-      "byteOffset": 3913016,
+      "byteOffset": 3914936,
       "floatCount": 900,
       "vertexCount": 180,
       "stride": 5,
@@ -1187,7 +1187,7 @@
     {
       "actor": 31,
       "kind": "points",
-      "byteOffset": 3916616,
+      "byteOffset": 3918536,
       "floatCount": 475,
       "vertexCount": 95,
       "stride": 5,
@@ -1198,7 +1198,7 @@
     {
       "actor": 32,
       "kind": "points",
-      "byteOffset": 3918516,
+      "byteOffset": 3920436,
       "floatCount": 475,
       "vertexCount": 95,
       "stride": 5,
@@ -1209,7 +1209,7 @@
     {
       "actor": 33,
       "kind": "points",
-      "byteOffset": 3920416,
+      "byteOffset": 3922336,
       "floatCount": 725,
       "vertexCount": 145,
       "stride": 5,
@@ -1220,7 +1220,7 @@
     {
       "actor": 34,
       "kind": "points",
-      "byteOffset": 3923316,
+      "byteOffset": 3925236,
       "floatCount": 725,
       "vertexCount": 145,
       "stride": 5,
@@ -1231,7 +1231,7 @@
     {
       "actor": 35,
       "kind": "points",
-      "byteOffset": 3926216,
+      "byteOffset": 3928136,
       "floatCount": 325,
       "vertexCount": 65,
       "stride": 5,
@@ -1242,7 +1242,7 @@
     {
       "actor": 36,
       "kind": "points",
-      "byteOffset": 3927516,
+      "byteOffset": 3929436,
       "floatCount": 325,
       "vertexCount": 65,
       "stride": 5,
@@ -1253,7 +1253,7 @@
     {
       "actor": 37,
       "kind": "points",
-      "byteOffset": 3928816,
+      "byteOffset": 3930736,
       "floatCount": 1325,
       "vertexCount": 265,
       "stride": 5,
@@ -1264,7 +1264,7 @@
     {
       "actor": 38,
       "kind": "points",
-      "byteOffset": 3934116,
+      "byteOffset": 3936036,
       "floatCount": 950,
       "vertexCount": 190,
       "stride": 5,
@@ -1275,7 +1275,7 @@
     {
       "actor": 39,
       "kind": "points",
-      "byteOffset": 3937916,
+      "byteOffset": 3939836,
       "floatCount": 1100,
       "vertexCount": 220,
       "stride": 5,
@@ -1286,7 +1286,7 @@
     {
       "actor": 40,
       "kind": "points",
-      "byteOffset": 3942316,
+      "byteOffset": 3944236,
       "floatCount": 1100,
       "vertexCount": 220,
       "stride": 5,
@@ -1297,7 +1297,7 @@
     {
       "actor": 41,
       "kind": "points",
-      "byteOffset": 3946716,
+      "byteOffset": 3948636,
       "floatCount": 1200,
       "vertexCount": 240,
       "stride": 5,
@@ -1308,7 +1308,7 @@
     {
       "actor": 42,
       "kind": "points",
-      "byteOffset": 3951516,
+      "byteOffset": 3953436,
       "floatCount": 1200,
       "vertexCount": 240,
       "stride": 5,
@@ -1319,7 +1319,7 @@
     {
       "actor": 43,
       "kind": "points",
-      "byteOffset": 3956316,
+      "byteOffset": 3958236,
       "floatCount": 2350,
       "vertexCount": 470,
       "stride": 5,
@@ -1330,7 +1330,7 @@
     {
       "actor": 44,
       "kind": "points",
-      "byteOffset": 3965716,
+      "byteOffset": 3967636,
       "floatCount": 900,
       "vertexCount": 180,
       "stride": 5,
@@ -1341,7 +1341,7 @@
     {
       "actor": 45,
       "kind": "points",
-      "byteOffset": 3969316,
+      "byteOffset": 3971236,
       "floatCount": 900,
       "vertexCount": 180,
       "stride": 5,
@@ -1352,7 +1352,7 @@
     {
       "actor": 46,
       "kind": "points",
-      "byteOffset": 3972916,
+      "byteOffset": 3974836,
       "floatCount": 475,
       "vertexCount": 95,
       "stride": 5,
@@ -1363,7 +1363,7 @@
     {
       "actor": 47,
       "kind": "points",
-      "byteOffset": 3974816,
+      "byteOffset": 3976736,
       "floatCount": 475,
       "vertexCount": 95,
       "stride": 5,
@@ -1374,7 +1374,7 @@
     {
       "actor": 48,
       "kind": "points",
-      "byteOffset": 3976716,
+      "byteOffset": 3978636,
       "floatCount": 725,
       "vertexCount": 145,
       "stride": 5,
@@ -1385,7 +1385,7 @@
     {
       "actor": 49,
       "kind": "points",
-      "byteOffset": 3979616,
+      "byteOffset": 3981536,
       "floatCount": 725,
       "vertexCount": 145,
       "stride": 5,
@@ -1396,7 +1396,7 @@
     {
       "actor": 50,
       "kind": "points",
-      "byteOffset": 3982516,
+      "byteOffset": 3984436,
       "floatCount": 325,
       "vertexCount": 65,
       "stride": 5,
@@ -1407,7 +1407,7 @@
     {
       "actor": 51,
       "kind": "points",
-      "byteOffset": 3983816,
+      "byteOffset": 3985736,
       "floatCount": 325,
       "vertexCount": 65,
       "stride": 5,
@@ -1418,7 +1418,7 @@
     {
       "actor": 52,
       "kind": "points",
-      "byteOffset": 3985116,
+      "byteOffset": 3987036,
       "floatCount": 1325,
       "vertexCount": 265,
       "stride": 5,
@@ -1429,7 +1429,7 @@
     {
       "actor": 53,
       "kind": "points",
-      "byteOffset": 3990416,
+      "byteOffset": 3992336,
       "floatCount": 950,
       "vertexCount": 190,
       "stride": 5,
@@ -1440,7 +1440,7 @@
     {
       "actor": 54,
       "kind": "points",
-      "byteOffset": 3994216,
+      "byteOffset": 3996136,
       "floatCount": 1100,
       "vertexCount": 220,
       "stride": 5,
@@ -1451,7 +1451,7 @@
     {
       "actor": 55,
       "kind": "points",
-      "byteOffset": 3998616,
+      "byteOffset": 4000536,
       "floatCount": 1100,
       "vertexCount": 220,
       "stride": 5,
@@ -1462,7 +1462,7 @@
     {
       "actor": 56,
       "kind": "points",
-      "byteOffset": 4003016,
+      "byteOffset": 4004936,
       "floatCount": 1200,
       "vertexCount": 240,
       "stride": 5,
@@ -1473,7 +1473,7 @@
     {
       "actor": 57,
       "kind": "points",
-      "byteOffset": 4007816,
+      "byteOffset": 4009736,
       "floatCount": 1200,
       "vertexCount": 240,
       "stride": 5,
@@ -1484,7 +1484,7 @@
     {
       "actor": 58,
       "kind": "points",
-      "byteOffset": 4012616,
+      "byteOffset": 4014536,
       "floatCount": 2350,
       "vertexCount": 470,
       "stride": 5,
@@ -1495,7 +1495,7 @@
     {
       "actor": 59,
       "kind": "points",
-      "byteOffset": 4022016,
+      "byteOffset": 4023936,
       "floatCount": 900,
       "vertexCount": 180,
       "stride": 5,
@@ -1506,7 +1506,7 @@
     {
       "actor": 60,
       "kind": "points",
-      "byteOffset": 4025616,
+      "byteOffset": 4027536,
       "floatCount": 900,
       "vertexCount": 180,
       "stride": 5,
@@ -1517,7 +1517,7 @@
     {
       "actor": 61,
       "kind": "points",
-      "byteOffset": 4029216,
+      "byteOffset": 4031136,
       "floatCount": 475,
       "vertexCount": 95,
       "stride": 5,
@@ -1528,7 +1528,7 @@
     {
       "actor": 62,
       "kind": "points",
-      "byteOffset": 4031116,
+      "byteOffset": 4033036,
       "floatCount": 475,
       "vertexCount": 95,
       "stride": 5,
@@ -1539,7 +1539,7 @@
     {
       "actor": 63,
       "kind": "points",
-      "byteOffset": 4033016,
+      "byteOffset": 4034936,
       "floatCount": 725,
       "vertexCount": 145,
       "stride": 5,
@@ -1550,7 +1550,7 @@
     {
       "actor": 64,
       "kind": "points",
-      "byteOffset": 4035916,
+      "byteOffset": 4037836,
       "floatCount": 725,
       "vertexCount": 145,
       "stride": 5,
@@ -1561,7 +1561,7 @@
     {
       "actor": 65,
       "kind": "points",
-      "byteOffset": 4038816,
+      "byteOffset": 4040736,
       "floatCount": 325,
       "vertexCount": 65,
       "stride": 5,
@@ -1572,7 +1572,7 @@
     {
       "actor": 66,
       "kind": "points",
-      "byteOffset": 4040116,
+      "byteOffset": 4042036,
       "floatCount": 325,
       "vertexCount": 65,
       "stride": 5,
@@ -1583,7 +1583,7 @@
     {
       "actor": 67,
       "kind": "points",
-      "byteOffset": 4041416,
+      "byteOffset": 4043336,
       "floatCount": 1325,
       "vertexCount": 265,
       "stride": 5,
@@ -1594,7 +1594,7 @@
     {
       "actor": 68,
       "kind": "points",
-      "byteOffset": 4046716,
+      "byteOffset": 4048636,
       "floatCount": 950,
       "vertexCount": 190,
       "stride": 5,
@@ -1605,7 +1605,7 @@
     {
       "actor": 69,
       "kind": "points",
-      "byteOffset": 4050516,
+      "byteOffset": 4052436,
       "floatCount": 1100,
       "vertexCount": 220,
       "stride": 5,
@@ -1616,7 +1616,7 @@
     {
       "actor": 70,
       "kind": "points",
-      "byteOffset": 4054916,
+      "byteOffset": 4056836,
       "floatCount": 1100,
       "vertexCount": 220,
       "stride": 5,
@@ -1627,7 +1627,7 @@
     {
       "actor": 71,
       "kind": "points",
-      "byteOffset": 4059316,
+      "byteOffset": 4061236,
       "floatCount": 1200,
       "vertexCount": 240,
       "stride": 5,
@@ -1638,7 +1638,7 @@
     {
       "actor": 72,
       "kind": "points",
-      "byteOffset": 4064116,
+      "byteOffset": 4066036,
       "floatCount": 1200,
       "vertexCount": 240,
       "stride": 5,
@@ -1649,7 +1649,7 @@
     {
       "actor": 73,
       "kind": "points",
-      "byteOffset": 4068916,
+      "byteOffset": 4070836,
       "floatCount": 2350,
       "vertexCount": 470,
       "stride": 5,
@@ -1660,7 +1660,7 @@
     {
       "actor": 74,
       "kind": "points",
-      "byteOffset": 4078316,
+      "byteOffset": 4080236,
       "floatCount": 900,
       "vertexCount": 180,
       "stride": 5,
@@ -1671,7 +1671,7 @@
     {
       "actor": 75,
       "kind": "points",
-      "byteOffset": 4081916,
+      "byteOffset": 4083836,
       "floatCount": 900,
       "vertexCount": 180,
       "stride": 5,
@@ -1682,7 +1682,7 @@
     {
       "actor": 76,
       "kind": "points",
-      "byteOffset": 4085516,
+      "byteOffset": 4087436,
       "floatCount": 475,
       "vertexCount": 95,
       "stride": 5,
@@ -1693,7 +1693,7 @@
     {
       "actor": 77,
       "kind": "points",
-      "byteOffset": 4087416,
+      "byteOffset": 4089336,
       "floatCount": 475,
       "vertexCount": 95,
       "stride": 5,
@@ -1704,7 +1704,7 @@
     {
       "actor": 78,
       "kind": "points",
-      "byteOffset": 4089316,
+      "byteOffset": 4091236,
       "floatCount": 725,
       "vertexCount": 145,
       "stride": 5,
@@ -1715,7 +1715,7 @@
     {
       "actor": 79,
       "kind": "points",
-      "byteOffset": 4092216,
+      "byteOffset": 4094136,
       "floatCount": 725,
       "vertexCount": 145,
       "stride": 5,
@@ -1726,7 +1726,7 @@
     {
       "actor": 80,
       "kind": "points",
-      "byteOffset": 4095116,
+      "byteOffset": 4097036,
       "floatCount": 325,
       "vertexCount": 65,
       "stride": 5,
@@ -1737,7 +1737,7 @@
     {
       "actor": 81,
       "kind": "points",
-      "byteOffset": 4096416,
+      "byteOffset": 4098336,
       "floatCount": 325,
       "vertexCount": 65,
       "stride": 5,
@@ -1748,7 +1748,7 @@
     {
       "actor": 82,
       "kind": "points",
-      "byteOffset": 4097716,
+      "byteOffset": 4099636,
       "floatCount": 1325,
       "vertexCount": 265,
       "stride": 5,
@@ -1759,7 +1759,7 @@
     {
       "actor": 83,
       "kind": "points",
-      "byteOffset": 4103016,
+      "byteOffset": 4104936,
       "floatCount": 950,
       "vertexCount": 190,
       "stride": 5,
@@ -1770,7 +1770,7 @@
     {
       "actor": 84,
       "kind": "points",
-      "byteOffset": 4106816,
+      "byteOffset": 4108736,
       "floatCount": 1100,
       "vertexCount": 220,
       "stride": 5,
@@ -1781,7 +1781,7 @@
     {
       "actor": 85,
       "kind": "points",
-      "byteOffset": 4111216,
+      "byteOffset": 4113136,
       "floatCount": 1100,
       "vertexCount": 220,
       "stride": 5,
@@ -1792,7 +1792,7 @@
     {
       "actor": 86,
       "kind": "points",
-      "byteOffset": 4115616,
+      "byteOffset": 4117536,
       "floatCount": 1200,
       "vertexCount": 240,
       "stride": 5,
@@ -1803,7 +1803,7 @@
     {
       "actor": 87,
       "kind": "points",
-      "byteOffset": 4120416,
+      "byteOffset": 4122336,
       "floatCount": 1200,
       "vertexCount": 240,
       "stride": 5,
@@ -1814,7 +1814,7 @@
     {
       "actor": 88,
       "kind": "points",
-      "byteOffset": 4125216,
+      "byteOffset": 4127136,
       "floatCount": 2350,
       "vertexCount": 470,
       "stride": 5,
@@ -1825,7 +1825,7 @@
     {
       "actor": 89,
       "kind": "points",
-      "byteOffset": 4134616,
+      "byteOffset": 4136536,
       "floatCount": 900,
       "vertexCount": 180,
       "stride": 5,
@@ -1836,7 +1836,7 @@
     {
       "actor": 90,
       "kind": "points",
-      "byteOffset": 4138216,
+      "byteOffset": 4140136,
       "floatCount": 900,
       "vertexCount": 180,
       "stride": 5,
@@ -1849,7 +1849,7 @@
     "points": 18290,
     "lineSegments": 6754,
     "glowSegments": 47,
-    "solidTriangles": 74133
+    "solidTriangles": 74173
   },
   "projects": [],
   "exhibits": [
@@ -1862,7 +1862,7 @@
       "section": "skills",
       "category": "APPLIED SKILLS / LANGUAGES",
       "summary": "Typed web development, data tooling and academic programming.",
-      "focus": "Backend development",
+      "focus": "Full-stack development",
       "items": [
         "JavaScript",
         "TypeScript",
@@ -1955,7 +1955,7 @@
       "catalogueSections": [
         {
           "heading": "Overview",
-          "markdown": "Typed web development, data tooling and academic programming.\n\nBackend development is my main focus, but I learn the technologies each project requires rather than limiting myself to a single stack."
+          "markdown": "Typed web development, data tooling and academic programming.\n\nFull-stack development is my main focus, working across frontend, backend, databases, and deployment. I learn the technologies each project requires rather than limiting myself to a single stack."
         },
         {
           "heading": "Core toolkit",
@@ -2024,7 +2024,7 @@
       "section": "skills",
       "category": "APPLIED SKILLS / FRAMEWORKS",
       "summary": "Responsive interfaces, server-rendered websites and reusable UI.",
-      "focus": "Backend development",
+      "focus": "Full-stack development",
       "items": [
         "React",
         "Next.js",
@@ -2074,7 +2074,7 @@
       "catalogueSections": [
         {
           "heading": "Overview",
-          "markdown": "Responsive interfaces, server-rendered websites and reusable UI.\n\nBackend development is my main focus, but I learn the technologies each project requires rather than limiting myself to a single stack."
+          "markdown": "Responsive interfaces, server-rendered websites and reusable UI.\n\nFull-stack development is my main focus, working across frontend, backend, databases, and deployment. I learn the technologies each project requires rather than limiting myself to a single stack."
         },
         {
           "heading": "Core toolkit",
@@ -2142,8 +2142,8 @@
       "title": "Backend & APIs",
       "section": "skills",
       "category": "APPLIED SKILLS / BACKEND & APIS",
-      "summary": "Backend-focused application development and integration.",
-      "focus": "Backend development",
+      "summary": "Backend application development and integration.",
+      "focus": "Full-stack development",
       "items": [
         "REST APIs",
         "Express",
@@ -2189,7 +2189,7 @@
       "catalogueSections": [
         {
           "heading": "Overview",
-          "markdown": "Backend-focused application development and integration.\n\nBackend development is my main focus, but I learn the technologies each project requires rather than limiting myself to a single stack."
+          "markdown": "Backend application development and integration.\n\nFull-stack development is my main focus, working across frontend, backend, databases, and deployment. I learn the technologies each project requires rather than limiting myself to a single stack."
         },
         {
           "heading": "Core toolkit",
@@ -2213,7 +2213,7 @@
         },
         {
           "heading": "Learning and scope",
-          "markdown": "Backend development is the main focus stated in About. FastAPI is listed in the toolkit as a profile-backed skill."
+          "markdown": "Full-stack development is the main focus stated in About. FastAPI is listed in the toolkit as a profile-backed skill."
         },
         {
           "heading": "Links and sources",
@@ -2258,7 +2258,7 @@
       "section": "skills",
       "category": "APPLIED SKILLS / DATABASES",
       "summary": "Relational, document, stream and retrieval-oriented data.",
-      "focus": "Backend development",
+      "focus": "Full-stack development",
       "items": [
         "PostgreSQL",
         "MySQL",
@@ -2311,7 +2311,7 @@
       "catalogueSections": [
         {
           "heading": "Overview",
-          "markdown": "Relational, document, stream and retrieval-oriented data.\n\nBackend development is my main focus, but I learn the technologies each project requires rather than limiting myself to a single stack."
+          "markdown": "Relational, document, stream and retrieval-oriented data.\n\nFull-stack development is my main focus, working across frontend, backend, databases, and deployment. I learn the technologies each project requires rather than limiting myself to a single stack."
         },
         {
           "heading": "Core toolkit",
@@ -2380,7 +2380,7 @@
       "section": "skills",
       "category": "APPLIED SKILLS / DATA & AI",
       "summary": "Data preparation, AI-assisted workflows and ongoing ML learning.",
-      "focus": "Backend development",
+      "focus": "Full-stack development",
       "items": [
         "Python",
         "Pandas / NumPy",
@@ -2442,7 +2442,7 @@
       "catalogueSections": [
         {
           "heading": "Overview",
-          "markdown": "Data preparation, AI-assisted workflows and ongoing ML learning.\n\nBackend development is my main focus, but I learn the technologies each project requires rather than limiting myself to a single stack."
+          "markdown": "Data preparation, AI-assisted workflows and ongoing ML learning.\n\nFull-stack development is my main focus, working across frontend, backend, databases, and deployment. I learn the technologies each project requires rather than limiting myself to a single stack."
         },
         {
           "heading": "Core toolkit",
@@ -2511,7 +2511,7 @@
       "section": "skills",
       "category": "APPLIED SKILLS / SECURITY",
       "summary": "Validation, ownership and permission boundaries in applications.",
-      "focus": "Backend development",
+      "focus": "Full-stack development",
       "items": [
         "JWT",
         "OAuth",
@@ -2545,7 +2545,7 @@
       "catalogueSections": [
         {
           "heading": "Overview",
-          "markdown": "Validation, ownership and permission boundaries in applications.\n\nBackend development is my main focus, but I learn the technologies each project requires rather than limiting myself to a single stack."
+          "markdown": "Validation, ownership and permission boundaries in applications.\n\nFull-stack development is my main focus, working across frontend, backend, databases, and deployment. I learn the technologies each project requires rather than limiting myself to a single stack."
         },
         {
           "heading": "Core toolkit",
@@ -2615,7 +2615,7 @@
       "section": "skills",
       "category": "APPLIED SKILLS / DEVOPS & CI/CD",
       "summary": "Deployment, server operations and repeatable application delivery.",
-      "focus": "Backend development",
+      "focus": "Full-stack development",
       "items": [
         "Git",
         "GitHub",
@@ -2672,7 +2672,7 @@
       "catalogueSections": [
         {
           "heading": "Overview",
-          "markdown": "Deployment, server operations and repeatable application delivery.\n\nBackend development is my main focus, but I learn the technologies each project requires rather than limiting myself to a single stack."
+          "markdown": "Deployment, server operations and repeatable application delivery.\n\nFull-stack development is my main focus, working across frontend, backend, databases, and deployment. I learn the technologies each project requires rather than limiting myself to a single stack."
         },
         {
           "heading": "Core toolkit",
@@ -2741,7 +2741,7 @@
       "section": "skills",
       "category": "APPLIED SKILLS / MICROSERVICES",
       "summary": "Service boundaries, asynchronous processing and observability.",
-      "focus": "Backend development",
+      "focus": "Full-stack development",
       "items": [
         "Service design",
         "Message queues",
@@ -2776,7 +2776,7 @@
       "catalogueSections": [
         {
           "heading": "Overview",
-          "markdown": "Service boundaries, asynchronous processing and observability.\n\nBackend development is my main focus, but I learn the technologies each project requires rather than limiting myself to a single stack."
+          "markdown": "Service boundaries, asynchronous processing and observability.\n\nFull-stack development is my main focus, working across frontend, backend, databases, and deployment. I learn the technologies each project requires rather than limiting myself to a single stack."
         },
         {
           "heading": "Core toolkit",
@@ -2845,7 +2845,7 @@
       "section": "skills",
       "category": "APPLIED SKILLS / LINUX",
       "summary": "Linux workstations, custom desktop tools and application servers.",
-      "focus": "Backend development",
+      "focus": "Full-stack development",
       "items": [
         "Linux fundamentals",
         "Fedora",
@@ -2901,7 +2901,7 @@
       "catalogueSections": [
         {
           "heading": "Overview",
-          "markdown": "Linux workstations, custom desktop tools and application servers.\n\nBackend development is my main focus, but I learn the technologies each project requires rather than limiting myself to a single stack."
+          "markdown": "Linux workstations, custom desktop tools and application servers.\n\nFull-stack development is my main focus, working across frontend, backend, databases, and deployment. I learn the technologies each project requires rather than limiting myself to a single stack."
         },
         {
           "heading": "Core toolkit",
@@ -2999,7 +2999,7 @@
         "section": "skills",
         "category": "APPLIED SKILLS / LANGUAGES",
         "summary": "Typed web development, data tooling and academic programming.",
-        "focus": "Backend development",
+        "focus": "Full-stack development",
         "items": [
           "JavaScript",
           "TypeScript",
@@ -3092,7 +3092,7 @@
         "catalogueSections": [
           {
             "heading": "Overview",
-            "markdown": "Typed web development, data tooling and academic programming.\n\nBackend development is my main focus, but I learn the technologies each project requires rather than limiting myself to a single stack."
+            "markdown": "Typed web development, data tooling and academic programming.\n\nFull-stack development is my main focus, working across frontend, backend, databases, and deployment. I learn the technologies each project requires rather than limiting myself to a single stack."
           },
           {
             "heading": "Core toolkit",
@@ -3161,7 +3161,7 @@
         "section": "skills",
         "category": "APPLIED SKILLS / FRAMEWORKS",
         "summary": "Responsive interfaces, server-rendered websites and reusable UI.",
-        "focus": "Backend development",
+        "focus": "Full-stack development",
         "items": [
           "React",
           "Next.js",
@@ -3211,7 +3211,7 @@
         "catalogueSections": [
           {
             "heading": "Overview",
-            "markdown": "Responsive interfaces, server-rendered websites and reusable UI.\n\nBackend development is my main focus, but I learn the technologies each project requires rather than limiting myself to a single stack."
+            "markdown": "Responsive interfaces, server-rendered websites and reusable UI.\n\nFull-stack development is my main focus, working across frontend, backend, databases, and deployment. I learn the technologies each project requires rather than limiting myself to a single stack."
           },
           {
             "heading": "Core toolkit",
@@ -3279,8 +3279,8 @@
         "title": "Backend & APIs",
         "section": "skills",
         "category": "APPLIED SKILLS / BACKEND & APIS",
-        "summary": "Backend-focused application development and integration.",
-        "focus": "Backend development",
+        "summary": "Backend application development and integration.",
+        "focus": "Full-stack development",
         "items": [
           "REST APIs",
           "Express",
@@ -3326,7 +3326,7 @@
         "catalogueSections": [
           {
             "heading": "Overview",
-            "markdown": "Backend-focused application development and integration.\n\nBackend development is my main focus, but I learn the technologies each project requires rather than limiting myself to a single stack."
+            "markdown": "Backend application development and integration.\n\nFull-stack development is my main focus, working across frontend, backend, databases, and deployment. I learn the technologies each project requires rather than limiting myself to a single stack."
           },
           {
             "heading": "Core toolkit",
@@ -3350,7 +3350,7 @@
           },
           {
             "heading": "Learning and scope",
-            "markdown": "Backend development is the main focus stated in About. FastAPI is listed in the toolkit as a profile-backed skill."
+            "markdown": "Full-stack development is the main focus stated in About. FastAPI is listed in the toolkit as a profile-backed skill."
           },
           {
             "heading": "Links and sources",
@@ -3395,7 +3395,7 @@
         "section": "skills",
         "category": "APPLIED SKILLS / DATABASES",
         "summary": "Relational, document, stream and retrieval-oriented data.",
-        "focus": "Backend development",
+        "focus": "Full-stack development",
         "items": [
           "PostgreSQL",
           "MySQL",
@@ -3448,7 +3448,7 @@
         "catalogueSections": [
           {
             "heading": "Overview",
-            "markdown": "Relational, document, stream and retrieval-oriented data.\n\nBackend development is my main focus, but I learn the technologies each project requires rather than limiting myself to a single stack."
+            "markdown": "Relational, document, stream and retrieval-oriented data.\n\nFull-stack development is my main focus, working across frontend, backend, databases, and deployment. I learn the technologies each project requires rather than limiting myself to a single stack."
           },
           {
             "heading": "Core toolkit",
@@ -3517,7 +3517,7 @@
         "section": "skills",
         "category": "APPLIED SKILLS / DATA & AI",
         "summary": "Data preparation, AI-assisted workflows and ongoing ML learning.",
-        "focus": "Backend development",
+        "focus": "Full-stack development",
         "items": [
           "Python",
           "Pandas / NumPy",
@@ -3579,7 +3579,7 @@
         "catalogueSections": [
           {
             "heading": "Overview",
-            "markdown": "Data preparation, AI-assisted workflows and ongoing ML learning.\n\nBackend development is my main focus, but I learn the technologies each project requires rather than limiting myself to a single stack."
+            "markdown": "Data preparation, AI-assisted workflows and ongoing ML learning.\n\nFull-stack development is my main focus, working across frontend, backend, databases, and deployment. I learn the technologies each project requires rather than limiting myself to a single stack."
           },
           {
             "heading": "Core toolkit",
@@ -3648,7 +3648,7 @@
         "section": "skills",
         "category": "APPLIED SKILLS / SECURITY",
         "summary": "Validation, ownership and permission boundaries in applications.",
-        "focus": "Backend development",
+        "focus": "Full-stack development",
         "items": [
           "JWT",
           "OAuth",
@@ -3682,7 +3682,7 @@
         "catalogueSections": [
           {
             "heading": "Overview",
-            "markdown": "Validation, ownership and permission boundaries in applications.\n\nBackend development is my main focus, but I learn the technologies each project requires rather than limiting myself to a single stack."
+            "markdown": "Validation, ownership and permission boundaries in applications.\n\nFull-stack development is my main focus, working across frontend, backend, databases, and deployment. I learn the technologies each project requires rather than limiting myself to a single stack."
           },
           {
             "heading": "Core toolkit",
@@ -3752,7 +3752,7 @@
         "section": "skills",
         "category": "APPLIED SKILLS / DEVOPS & CI/CD",
         "summary": "Deployment, server operations and repeatable application delivery.",
-        "focus": "Backend development",
+        "focus": "Full-stack development",
         "items": [
           "Git",
           "GitHub",
@@ -3809,7 +3809,7 @@
         "catalogueSections": [
           {
             "heading": "Overview",
-            "markdown": "Deployment, server operations and repeatable application delivery.\n\nBackend development is my main focus, but I learn the technologies each project requires rather than limiting myself to a single stack."
+            "markdown": "Deployment, server operations and repeatable application delivery.\n\nFull-stack development is my main focus, working across frontend, backend, databases, and deployment. I learn the technologies each project requires rather than limiting myself to a single stack."
           },
           {
             "heading": "Core toolkit",
@@ -3878,7 +3878,7 @@
         "section": "skills",
         "category": "APPLIED SKILLS / MICROSERVICES",
         "summary": "Service boundaries, asynchronous processing and observability.",
-        "focus": "Backend development",
+        "focus": "Full-stack development",
         "items": [
           "Service design",
           "Message queues",
@@ -3913,7 +3913,7 @@
         "catalogueSections": [
           {
             "heading": "Overview",
-            "markdown": "Service boundaries, asynchronous processing and observability.\n\nBackend development is my main focus, but I learn the technologies each project requires rather than limiting myself to a single stack."
+            "markdown": "Service boundaries, asynchronous processing and observability.\n\nFull-stack development is my main focus, working across frontend, backend, databases, and deployment. I learn the technologies each project requires rather than limiting myself to a single stack."
           },
           {
             "heading": "Core toolkit",
@@ -3982,7 +3982,7 @@
         "section": "skills",
         "category": "APPLIED SKILLS / LINUX",
         "summary": "Linux workstations, custom desktop tools and application servers.",
-        "focus": "Backend development",
+        "focus": "Full-stack development",
         "items": [
           "Linux fundamentals",
           "Fedora",
@@ -4038,7 +4038,7 @@
         "catalogueSections": [
           {
             "heading": "Overview",
-            "markdown": "Linux workstations, custom desktop tools and application servers.\n\nBackend development is my main focus, but I learn the technologies each project requires rather than limiting myself to a single stack."
+            "markdown": "Linux workstations, custom desktop tools and application servers.\n\nFull-stack development is my main focus, working across frontend, backend, databases, and deployment. I learn the technologies each project requires rather than limiting myself to a single stack."
           },
           {
             "heading": "Core toolkit",

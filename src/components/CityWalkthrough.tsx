@@ -63,7 +63,7 @@ const phases: { end: keyof JourneyConfig['bookmarks']; label: string; title: str
 
 const initialRoomState = (): RoomState => ({ view: 'main', project: null, projectExploring:false, projectSection:'Overview', projectFocusReady:false, exhibit: null, paused: false, walkPaused: true, profileOpen: false, returnPrompt: false, openedCategories: ['client'] })
 
-export default function CityWalkthrough({ startupReady, onStartup, onStartupError }: { startupReady: boolean; onStartup: ReportStartup; onStartupError: (message: string) => void }) {
+export default function CityWalkthrough({ startupReady, onStartup, onStartupError, onEnter2D }: { startupReady: boolean; onStartup: ReportStartup; onStartupError: (message: string) => void; onEnter2D: () => void }) {
   const { environmentClick: playClick, click: playSystemClick, doorSound, cancelDoorSounds, preferencesOpen, openPreferences, closePreferences } = useSoundEffects()
   const sectionRef = useRef<HTMLElement>(null)
   const stageRef = useRef<HTMLDivElement>(null)
@@ -501,6 +501,7 @@ export default function CityWalkthrough({ startupReady, onStartup, onStartupErro
            {roomError && <button type="button" onClick={() => { if (!roomId) return;setRooms((current) => ({ ...current, [roomId]: { assets: null, error: null } }));setRoomRetry((value) => value + 1) }}>Retry room</button>}
         </div>}
          <div className="city-topline"><div className="city-topline-actions">
+           <ToplineControl className="portfolio-mode-switch" label="Open 2D portfolio" tooltip="Read the 2D portfolio" onClick={onEnter2D}><span>2D</span></ToplineControl>
            <ToplineControl className="portfolio-preferences" label="Open sound preferences" tooltip="Sound preferences" aria-haspopup="dialog" aria-controls="audio-consent-dialog" aria-expanded={preferencesOpen} onClick={openSoundPreferences}>
               <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1" aria-hidden="true">
                 <path d="M2 4h12M2 8h12M2 12h12" /><circle cx="5" cy="4" r="1.6" fill="#040404" /><circle cx="10.5" cy="8" r="1.6" fill="#040404" /><circle cx="7" cy="12" r="1.6" fill="#040404" />

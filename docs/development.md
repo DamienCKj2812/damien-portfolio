@@ -10,12 +10,13 @@ Use Node.js **22.13+ in Node 22 LTS**, matching the CI major version. Both npm a
 | Lint one changed component | `npx eslint src/components/CityWalkthrough.tsx` |
 | Check app and Node tool types | `npm run typecheck` |
 | Run 19 non-browser checks | `npm run verify` |
-| Run nine actual-browser checks after build | `npm run verify:browser` |
+| Run ten actual-browser checks after build | `npm run verify:browser` |
 | Serve the production build | `npm run preview` |
 | Validate room packages/alignment | `node --import tsx assets/journey/verify_rooms.mts` |
 | Validate sound-effect lifecycle/races | `node --import tsx scripts/verify_interaction_audio.mts` |
 | Check persistent startup/preload/reload behavior after build | `node --import tsx scripts/verify_startup_loading_browser.mts` |
 | Check startup in Vite development/StrictMode | `STARTUP_TEST_DEV=1 node --import tsx scripts/verify_startup_loading_browser.mts` |
+| Check entry choice, 2D content and mode switching after build | `node --import tsx scripts/verify_portfolio_modes.mts` |
 
 There is no configured unit-test runner or formatter. Blender/source validators are model-specific; see [integration workflow](../assets/journey/WORKFLOW.md) and the relevant model guide. Some Blender preview validators use synthetic events in background mode rather than a native GUI event loop.
 
@@ -38,7 +39,7 @@ Edit profile/Observer/contact/music copy in canonical `src/data/portfolio.json`.
 - For interaction changes, test actual 3D clicks/taps plus accessible controls, Escape/focus return, reduced motion, and a portrait viewport. Loading changes also need delayed/failing assets, Retry, cancel/reselect, and cached returns.
 - Animation changes need demand-render settling, pause/offscreen handling, held-key/pointer cleanup, and independent room look/movement.
 
-Playwright **1.61.1** is a declared, locked development dependency installed by `npm ci`; no separate `/tmp` installation is needed. `npm run verify:browser` runs nine browser checks sequentially after a current production build. Chrome defaults to `/usr/bin/google-chrome`; set `CHROME_EXECUTABLE` for another compatible executable. `PLAYWRIGHT_MODULE` remains an optional external-module override. Screenshots go to a fresh system temporary directory unless `VERIFY_OUTPUT_DIR` selects an output directory; the helper reports the path.
+Playwright **1.61.1** is a declared, locked development dependency installed by `npm ci`; no separate `/tmp` installation is needed. `npm run verify:browser` runs ten browser checks sequentially after a current production build. Existing 3D verifiers use `?mode=3d`; the mode verifier starts at the chooser and covers the opt-in preference, direct links, native 2D scrolling and mobile floor dialog. Chrome defaults to `/usr/bin/google-chrome`; set `CHROME_EXECUTABLE` for another compatible executable. `PLAYWRIGHT_MODULE` remains an optional external-module override. Screenshots go to a fresh system temporary directory unless `VERIFY_OUTPUT_DIR` selects an output directory; the helper reports the path.
 
 The video browser check needs `python3` with Pillow for rendered-pixel scoring and available project video/poster assets. Run `VIDEO_TEST_DEV=1 node --import tsx scripts/verify_project_video_browser.mts` to cover Vite development/StrictMode effect replay. Audio and Skills preview checks support `VITE_TEST_OUT_DIR` for an isolated build. Previous local smoke artifacts are not prerequisites for these checked-in verifiers.
 

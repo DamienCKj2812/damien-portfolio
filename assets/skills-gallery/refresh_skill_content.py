@@ -84,7 +84,7 @@ for entry in content['entries']:
     assert len(branches.data.splines) == len(entry['displayItems']) + 1, 'Card rows and branch markers must match'
     update_text(f'Gallery • Exhibit {index:02d} / footer',f'ABOUT + PROJECTS / {index:02d}',.056,width*.84)
 if 'Gallery • Rear gallery subtitle' in scene.objects:
-    scene.objects['Gallery • Rear gallery subtitle'].data.body='PROJECT-BACKED TOOLKIT\nBACKEND / DELIVERY / CONTINUOUS LEARNING'
+    scene.objects['Gallery • Rear gallery subtitle'].data.body='PROJECT-BACKED TOOLKIT\nFULL-STACK / DELIVERY / CONTINUOUS LEARNING'
 scene['Skills content source']=' + '.join(content['source'])
 scene.view_layers[0].update()
 after=structural_fingerprint()

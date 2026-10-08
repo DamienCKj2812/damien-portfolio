@@ -5,9 +5,9 @@
   "type": "module",
   "scripts": {
     "postinstall": "node --import tsx scripts/apply_dependency_patches.mts",
-    "predev": "node --import tsx scripts/sync_media_assets.mts",
+    "predev": "node --import tsx scripts/sync_media_assets.mts && node --import tsx scripts/build_portfolio_2d.mts",
     "dev": "vite",
-    "prebuild": "node --import tsx scripts/sync_media_assets.mts",
+    "prebuild": "node --import tsx scripts/sync_media_assets.mts && node --import tsx scripts/build_portfolio_2d.mts",
     "build": "vite build",
     "assets:sync": "node --import tsx scripts/sync_media_assets.mts",
     "assets:check": "node --import tsx scripts/verify_media_assets.mts",

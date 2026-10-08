@@ -245,6 +245,10 @@ def display(key, object_name):
     obj['city_texture'] = 'reference-'+key+'.jpg'
     obj['tower_reference_display'] = True
     obj['tower_display_key'] = key
+    if key in ('logo', 'portrait'):
+        artwork = json.loads((ROOT / 'reference-tower-artwork.json').read_text())
+        obj['banner_artwork_source'] = artwork['source']
+        obj['banner_artwork_sha256'] = artwork['outputs'][f'reference-{key}.jpg']['sha256']
     obj.hide_render = False
     obj.hide_set(False)
     stats['screens'] += 1
@@ -394,10 +398,10 @@ def tree(label, base, size):
 for angle in [69,91]:
     tree('Balcony sparkle tree '+str(angle), surface(l1_radius-.6,angle,l1_top), 1.6)
 
-# Flat luminous rectangles on the receding left face and glitch strips along
-# the portrait edge. The browser exports actual panel triangles, not a cage.
+# Retain the receding left facade's luminous rectangles. The long banner's
+# right-edge glitch strip is retired; its thin frame/LED rails remain intact.
 rng = random.Random(186)
-for angle_range, z_range, count in [((-72,-41),(10,100),220), ((2.5,8.5),(20,100),180)]:
+for angle_range, z_range, count in [((-72,-41),(10,100),220)]:
     for i in range(count):
         if rng.random() < .55:
             continue
@@ -597,6 +601,7 @@ for blocks in (bpy.data.meshes,bpy.data.curves,bpy.data.node_groups,bpy.data.mat
 scene.frame_set(1)
 scene.view_layers[0].update()
 report={'version':2,'siteScale':SCALE,'coreCenter':CENTER,'coreRadius':RADIUS,'coreHeight':height(104),
+        'longBannerGlitchBorderRemoved':True,
         'screens':SCREENS,'previewCamera':PREVIEW_CAMERA,'antennaTips':[height(z) for z in [140,135,145,150]],
         'balconies':{'L1':[height(78),height(80)],'L2':[height(92),height(94)]},'stats':stats,
         'cameraAndExistingPosesPreserved':True}
