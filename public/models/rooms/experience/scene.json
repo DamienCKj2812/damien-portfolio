@@ -659,15 +659,15 @@
       "catalogueSections": [
         {
           "heading": "Overview",
-          "markdown": "Full-Stack Developer\n\nCOS Great Trading\n\nBuilt an AI-powered CRM, owning both the frontend and backend implementation."
+          "markdown": "Full-Stack Developer\n\nCOS Great Trading\n\nLed the initial development of an AI-powered CRM, taking ownership of both frontend and backend implementation."
         },
         {
-          "heading": "Responsibilities",
-          "markdown": "- Enabled users to build their own AI knowledge bases and answer questions for each department.\n- Implemented retrieval-augmented generation (RAG) using Pinecone.\n- Worked across Next.js, TypeScript, Express, Python, MongoDB, and AI SDKs."
+          "heading": "Achievements",
+          "markdown": "- Established the foundational architecture, reusable components, and core integrations to support future development and scalability.\n- Developed the initial infrastructure for department-specific AI knowledge bases using retrieval-augmented generation (RAG) and Pinecone.\n- Created technical documentation and development guidelines to support team collaboration, developer onboarding, and long-term maintainability.\n- Tech stack: Next.js, TypeScript, Express, Python, MongoDB, Pinecone, and AI SDKs."
         },
         {
-          "heading": "AI knowledge-base workflow",
-          "markdown": "Users build knowledge bases for their departments. The CRM uses retrieval-augmented generation (RAG), with Pinecone supporting retrieval to answer department-specific questions."
+          "heading": "AI knowledge-base infrastructure",
+          "markdown": "Developed the initial infrastructure for department-specific AI knowledge bases using retrieval-augmented generation (RAG) and Pinecone."
         },
         {
           "heading": "Technologies",
@@ -1122,15 +1122,15 @@
         "catalogueSections": [
           {
             "heading": "Overview",
-            "markdown": "Full-Stack Developer\n\nCOS Great Trading\n\nBuilt an AI-powered CRM, owning both the frontend and backend implementation."
+            "markdown": "Full-Stack Developer\n\nCOS Great Trading\n\nLed the initial development of an AI-powered CRM, taking ownership of both frontend and backend implementation."
           },
           {
-            "heading": "Responsibilities",
-            "markdown": "- Enabled users to build their own AI knowledge bases and answer questions for each department.\n- Implemented retrieval-augmented generation (RAG) using Pinecone.\n- Worked across Next.js, TypeScript, Express, Python, MongoDB, and AI SDKs."
+            "heading": "Achievements",
+            "markdown": "- Established the foundational architecture, reusable components, and core integrations to support future development and scalability.\n- Developed the initial infrastructure for department-specific AI knowledge bases using retrieval-augmented generation (RAG) and Pinecone.\n- Created technical documentation and development guidelines to support team collaboration, developer onboarding, and long-term maintainability.\n- Tech stack: Next.js, TypeScript, Express, Python, MongoDB, Pinecone, and AI SDKs."
           },
           {
-            "heading": "AI knowledge-base workflow",
-            "markdown": "Users build knowledge bases for their departments. The CRM uses retrieval-augmented generation (RAG), with Pinecone supporting retrieval to answer department-specific questions."
+            "heading": "AI knowledge-base infrastructure",
+            "markdown": "Developed the initial infrastructure for department-specific AI knowledge bases using retrieval-augmented generation (RAG) and Pinecone."
           },
           {
             "heading": "Technologies",

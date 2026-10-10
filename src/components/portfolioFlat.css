@@ -25,9 +25,6 @@
 .entry-mode { position: relative; height: 100dvh; overflow-y: auto; overflow-x: hidden; display: flex; flex-direction: column; }
 .entry-brand { position: relative; display: flex; align-items: center; gap: 10px; padding: 20px clamp(20px,4vw,40px); }
 .entry-main { position: relative; flex: 1; width: 100%; max-width: 1040px; margin: auto; padding: clamp(24px,6vh,64px) clamp(20px,4vw,40px) 40px; display: flex; flex-direction: column; justify-content: center; gap: clamp(28px,5vh,48px); }
-.entry-intro { display: grid; gap: 14px; }
-.entry-intro h1 { font-size: clamp(34px,6vw,60px); line-height: 1.08; }
-.entry-intro p { max-width: 52ch; font-size: 17px; color: #cfcdc6; }
 .entry-options { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 12px; }
 .entry-option { display: grid; grid-row: span 4; grid-template-rows: subgrid; gap: 20px; padding: clamp(20px,3vw,28px); border: 1px solid var(--flat-line); background: #05050599; }
 .entry-option.entry-primary { border-color: #5a5953; background: #0a0a09; }
@@ -209,6 +206,31 @@
   .flat-experience > article { grid-template-columns: minmax(0,1fr); }
   .flat-education { grid-template-columns: minmax(0,1fr); }
   .flat-hero-facts { grid-template-columns: repeat(auto-fit,minmax(170px,1fr)); }
+}
+@media (max-width: 759px), (max-height: 600px) {
+  .entry-brand { padding: 12px 16px; }
+  .entry-main { padding: 16px 16px max(16px,env(safe-area-inset-bottom)); gap: 12px; }
+  .entry-option { padding: 14px; gap: 10px; }
+  .entry-option dl { display: none; }
+  .entry-code { gap: 10px; font-size: 32px; }
+  .entry-code svg { width: 28px; height: 28px; }
+  .entry-option h2 { font-size: 20px; }
+  .entry-option p { font-size: 14px; line-height: 1.45; }
+  .entry-option .flat-action { min-height: 44px; padding: 8px 12px; font-size: 12px; }
+  .entry-remember { font-size: 14px; gap: 8px; }
+  .entry-cv { margin-top: 0; }
+}
+@media (max-height: 600px) {
+  .entry-brand { padding-block: 8px; }
+  .entry-main { padding-block: 12px max(12px,env(safe-area-inset-bottom)); gap: 8px; }
+  .entry-option { padding: 10px; gap: 8px; }
+  .entry-option h2 { margin-bottom: 0; }
+  .entry-option p { display: none; }
+  .entry-code { font-size: 28px; }
+}
+@media (min-width: 480px) and (max-height: 600px) {
+  .entry-options { grid-template-columns: repeat(2,minmax(0,1fr)); }
+  .entry-option { grid-row: auto; grid-template-rows: auto; }
 }
 @media (max-width: 479px) {
   .flat-header-inner { padding-inline: 16px 12px; gap: 8px; }

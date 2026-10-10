@@ -4,7 +4,7 @@
     "src/data/portfolio.json",
     "docs/project-catalogue.md"
   ],
-  "profileSourceHash": "35c0df6a6da249a5a7ede8eab338fb88ac6a9b4857ba505ce3e9fd31d79c885e",
+  "profileSourceHash": "333dec071f7fed140df7bae3c90c323a3f2f86704e0d8f941340b7b9cc25e890",
   "projectSourceHash": "1493e043f7b09aee688c8b36323f1465fe425e65c7c9c349231af5c797f12ebc",
   "description": "My development toolkit spans web applications, backend APIs, databases, testing, deployment, and Linux servers.",
   "learning": [

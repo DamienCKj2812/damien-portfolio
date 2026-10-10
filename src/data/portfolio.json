@@ -83,8 +83,13 @@
       {
         "id": "cos-great-trading", "category": "EXPERIENCE", "title": "Full-Stack Developer",
         "organization": "COS Great Trading", "period": "July 2025 – November 2025",
-        "description": "Built an AI-powered CRM, owning both the frontend and backend implementation.",
-        "highlights": ["Enabled users to build their own AI knowledge bases and answer questions for each department.", "Implemented retrieval-augmented generation (RAG) using Pinecone.", "Worked across Next.js, TypeScript, Express, Python, MongoDB, and AI SDKs."]
+        "description": "Led the initial development of an AI-powered CRM, taking ownership of both frontend and backend implementation.",
+        "highlights": [
+          "Established the foundational architecture, reusable components, and core integrations to support future development and scalability.",
+          "Developed the initial infrastructure for department-specific AI knowledge bases using retrieval-augmented generation (RAG) and Pinecone.",
+          "Created technical documentation and development guidelines to support team collaboration, developer onboarding, and long-term maintainability.",
+          "Tech stack: Next.js, TypeScript, Express, Python, MongoDB, Pinecone, and AI SDKs."
+        ]
       },
       {
         "id": "lyj-events-marketing", "category": "EXPERIENCE", "title": "Front End Developer",

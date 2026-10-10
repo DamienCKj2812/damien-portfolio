@@ -63,9 +63,9 @@ const milestones=entries.map(([id,cardTitle,icon],index): MilestoneContent=>{
     sections.push(section('Links and source references',bullet([...websites.map(project=>`[${project.id==='agent-property'?'MyRumawip website':project.id==='Aria'?'DWMLight website':'Amplifii (Ampress) preview (unreleased)'}](${project.liveUrl})`),'[MyRumawip repository](https://github.com/DamienCKj2812/agent-limenghar-property)','[DWMLight website repository](https://github.com/maxscale-io/Aria)','[ANVA CMS repository](https://github.com/maxscale-io/anva-cms)'])))
   } else {
     if (item.category!=='EXPERIENCE') throw new Error(`Expected employment experience: ${id}`)
-    sections.push(section('Responsibilities',bullet(item.highlights)))
+    sections.push(section(id==='cos-great-trading'?'Achievements':'Responsibilities',bullet(item.highlights)))
     if(id==='cos-great-trading') {
-      sections.push(section('AI knowledge-base workflow','Users build knowledge bases for their departments. The CRM uses retrieval-augmented generation (RAG), with Pinecone supporting retrieval to answer department-specific questions.'))
+      sections.push(section('AI knowledge-base infrastructure',item.highlights.filter(text=>text.includes('knowledge bases')).join('\n\n')))
       sections.push(section('Technologies','Python · TypeScript · Express · MongoDB · Next.js · Pinecone · AI SDKs'))
     } else sections.push(section('Delivered interfaces',bullet(item.highlights.filter(text=>text.startsWith('Built user interfaces')))))
   }

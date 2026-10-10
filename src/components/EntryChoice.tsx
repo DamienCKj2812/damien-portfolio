@@ -28,8 +28,7 @@ export default function EntryChoice({ onChoose }: { onChoose: (mode: '2d' | '3d'
   return <div className="entry-mode flat-mode">
     <Starfield/>
     <header className="entry-brand flat-mono"><span className="flat-diamond"/>{portfolio.siteTitle}</header>
-    <main className="entry-main">
-      <div className="entry-intro"><h1>How would you like to explore?</h1><p>Same projects, experience and contact details in both. You can switch at any time.</p></div>
+    <main className="entry-main" aria-label="Choose your portfolio experience">
       <div className="entry-options">
         {(['3d', '2d'] as const).map(mode => {
           const is3d = mode === '3d', primary = lowPower ? !is3d : is3d
