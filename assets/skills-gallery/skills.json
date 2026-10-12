@@ -5,7 +5,7 @@
     "docs/project-catalogue.md"
   ],
   "profileSourceHash": "333dec071f7fed140df7bae3c90c323a3f2f86704e0d8f941340b7b9cc25e890",
-  "projectSourceHash": "1493e043f7b09aee688c8b36323f1465fe425e65c7c9c349231af5c797f12ebc",
+  "projectSourceHash": "58c99fb7eb947b06be5d782f0438455cc861c16e57ee3b0c84e79245078cb46d",
   "description": "My development toolkit spans web applications, backend APIs, databases, testing, deployment, and Linux servers.",
   "learning": [
     "3D modeling",
@@ -71,19 +71,9 @@
           "url": "https://github.com/DamienCKj2812/report-automation"
         },
         {
-          "id": "logging-loading",
-          "title": "Load and chaos tooling",
-          "url": "https://github.com/DamienCKj2812/logging-loading"
-        },
-        {
-          "id": "logging-microservice",
-          "title": "Backend and ML",
-          "url": "https://github.com/DamienCKj2812/logging-microservice"
-        },
-        {
-          "id": "logging-microservice-ui",
-          "title": "Observability dashboard",
-          "url": "https://github.com/DamienCKj2812/logging-microservice-ui"
+          "id": "system-anomaly-detection",
+          "title": "System Anomaly Detection monorepo",
+          "url": "https://github.com/DamienCKj2812/system-anomaly-detection"
         },
         {
           "id": "DTMAssignment",
@@ -143,7 +133,7 @@
         },
         {
           "heading": "Applied in projects",
-          "markdown": "TypeScript and JavaScript connect public websites, dashboards and APIs. Python supports automation and data/ML tooling, Go appears in the FYP telemetry/API backend, and R supports academic analysis. Java, C++ and Rust appear in simulations and data-structure/control work.\n\n- **Agent Property — Bilingual Property Website and CMS:** A bilingual property-discovery website that combines CMS-managed listings, housing-scheme information and educational content with direct WhatsApp enquiries.\n\nPublic website: [MyRumawip](https://myrumawip.com/).\n- **MyReport — WhatsApp Customer Follow-up and Reporting Workspace:** A customer-management workspace that organizes WhatsApp conversations, confirmed customer requirements, eligibility records and follow-up actions, with human-reviewed AI assistance.\n\n**Access:** Hosted privately via Tailscale; not publicly accessible.\n- **FYP — Hybrid Anomaly Detection for Microservice Observability:** A telemetry-based anomaly-detection system that combines OpenTelemetry ingestion, Redis streaming, machine-learning inference and a live observability dashboard, evaluated using telemetry from an instrumented CMS application.\n- **DTM — Coupon Data Preparation and Exploratory Analysis:** An R data-preparation study that introduces controlled data-quality problems into an in-vehicle coupon dataset, cleans it and compares exploratory views before and after preprocessing.\n- **PFDA — Credit-Risk Data Analysis:** An R-based group study of credit-risk data, combining cleaning, exploratory analysis, statistical tests and predictive experiments.\n- **Concurrent Programming — Airport Simulation:** A Java airport simulation modeling aircraft activity and access to shared runway, gate and refueling resources.\n- **Data Structures — E-commerce Analytics and Tournament Management:** A two-part C++ assignment applying custom data structures to transaction/review analysis and tournament, spectator and result-management simulations.\n- **RTS — Ground and Onboard Control Simulation:** A Rust real-time-systems assignment modeling communication between a Ground Control Station (GCS) and an Onboard Control System (OCS), with timed commands, telemetry and fault handling."
+          "markdown": "TypeScript and JavaScript connect public websites, dashboards and APIs. Python supports automation and data/ML tooling, Go appears in the FYP telemetry/API backend, and R supports academic analysis. Java, C++ and Rust appear in simulations and data-structure/control work.\n\n- **Agent Property — Bilingual Property Website and CMS:** A bilingual property-discovery website that combines CMS-managed listings, housing-scheme information and educational content with direct WhatsApp enquiries.\n\nPublic website: [MyRumawip](https://myrumawip.com/).\n- **MyReport — WhatsApp Customer Follow-up and Reporting Workspace:** A customer-management workspace that organizes WhatsApp conversations, confirmed customer requirements, eligibility records and follow-up actions, with human-reviewed AI assistance.\n\n**Access:** Hosted privately via Tailscale; not publicly accessible.\n- **System Anomaly Detection — FYP / Hybrid Microservice Observability:** System Anomaly Detection is an end-to-end FYP monorepo that combines OpenTelemetry ingestion, Redis streaming, hybrid machine-learning inference, a live observability dashboard, and traffic simulation with controlled fault injection. Its recorded offline evaluation uses telemetry from an instrumented CMS application.\n- **DTM — Coupon Data Preparation and Exploratory Analysis:** An R data-preparation study that introduces controlled data-quality problems into an in-vehicle coupon dataset, cleans it and compares exploratory views before and after preprocessing.\n- **PFDA — Credit-Risk Data Analysis:** An R-based group study of credit-risk data, combining cleaning, exploratory analysis, statistical tests and predictive experiments.\n- **Concurrent Programming — Airport Simulation:** A Java airport simulation modeling aircraft activity and access to shared runway, gate and refueling resources.\n- **Data Structures — E-commerce Analytics and Tournament Management:** A two-part C++ assignment applying custom data structures to transaction/review analysis and tournament, spectator and result-management simulations.\n- **RTS — Ground and Onboard Control Simulation:** A Rust real-time-systems assignment modeling communication between a Ground Control Station (GCS) and an Onboard Control System (OCS), with timed commands, telemetry and fault handling."
         },
         {
           "heading": "Engineering workflow",
@@ -163,7 +153,7 @@
         },
         {
           "heading": "Links and sources",
-          "markdown": "Project evidence comes from the completed project catalogue; broader toolkit claims come from the completed About profile.\n\n- [Repository / agent-property](https://github.com/DamienCKj2812/agent-limenghar-property)\n- [Repository / report-automation](https://github.com/DamienCKj2812/report-automation)\n- [Load and chaos tooling / logging-loading](https://github.com/DamienCKj2812/logging-loading)\n- [Backend and ML / logging-microservice](https://github.com/DamienCKj2812/logging-microservice)\n- [Observability dashboard / logging-microservice-ui](https://github.com/DamienCKj2812/logging-microservice-ui)\n- [Repository / DTMAssignment](https://github.com/DamienCKj2812/DTMAssignment)\n- [Repository / PFDAGroupAssignment](https://github.com/DamienCKj2812/PFDAGroupAssignment)\n- [Repository / ConcurrentProgrammingAssignment](https://github.com/DamienCKj2812/ConcurrentProgrammingAssignment)\n- [Part 1 / Analytics / DSTRAssignment](https://github.com/DamienCKj2812/DSTRAssignment)\n- [Part 2 / Tournaments / DSTRAssignmentPart2](https://github.com/DamienCKj2812/DSTRAssignmentPart2)\n- [Repository / rust-gcs-ocs-assignment](https://github.com/BaconCoding74/rust-gcs-ocs-assignment)\n- [GCS branch / gcs-branch](https://github.com/BaconCoding74/rust-gcs-ocs-assignment/tree/gcs-branch)\n- [OCS branch / context / ocs-branch](https://github.com/BaconCoding74/rust-gcs-ocs-assignment/tree/ocs-branch)\n\nWebsites and previews\n\n- [MyRumawip website](https://myrumawip.com/)\n\nMyReport: Hosted privately via Tailscale; not publicly accessible."
+          "markdown": "Project evidence comes from the completed project catalogue; broader toolkit claims come from the completed About profile.\n\n- [Repository / agent-property](https://github.com/DamienCKj2812/agent-limenghar-property)\n- [Repository / report-automation](https://github.com/DamienCKj2812/report-automation)\n- [System Anomaly Detection monorepo / system-anomaly-detection](https://github.com/DamienCKj2812/system-anomaly-detection)\n- [Repository / DTMAssignment](https://github.com/DamienCKj2812/DTMAssignment)\n- [Repository / PFDAGroupAssignment](https://github.com/DamienCKj2812/PFDAGroupAssignment)\n- [Repository / ConcurrentProgrammingAssignment](https://github.com/DamienCKj2812/ConcurrentProgrammingAssignment)\n- [Part 1 / Analytics / DSTRAssignment](https://github.com/DamienCKj2812/DSTRAssignment)\n- [Part 2 / Tournaments / DSTRAssignmentPart2](https://github.com/DamienCKj2812/DSTRAssignmentPart2)\n- [Repository / rust-gcs-ocs-assignment](https://github.com/BaconCoding74/rust-gcs-ocs-assignment)\n- [GCS branch / gcs-branch](https://github.com/BaconCoding74/rust-gcs-ocs-assignment/tree/gcs-branch)\n- [OCS branch / context / ocs-branch](https://github.com/BaconCoding74/rust-gcs-ocs-assignment/tree/ocs-branch)\n\nWebsites and previews\n\n- [MyRumawip website](https://myrumawip.com/)\n\nMyReport: Hosted privately via Tailscale; not publicly accessible."
         }
       ],
       "contentStatus": "Approved About toolkit and project-catalogue evidence; profile-only/learning scope stated explicitly"
@@ -321,19 +311,9 @@
           "url": "https://github.com/DamienCKj2812/report-automation"
         },
         {
-          "id": "logging-loading",
-          "title": "Load and chaos tooling",
-          "url": "https://github.com/DamienCKj2812/logging-loading"
-        },
-        {
-          "id": "logging-microservice",
-          "title": "Backend and ML",
-          "url": "https://github.com/DamienCKj2812/logging-microservice"
-        },
-        {
-          "id": "logging-microservice-ui",
-          "title": "Observability dashboard",
-          "url": "https://github.com/DamienCKj2812/logging-microservice-ui"
+          "id": "system-anomaly-detection",
+          "title": "System Anomaly Detection monorepo",
+          "url": "https://github.com/DamienCKj2812/system-anomaly-detection"
         }
       ],
       "siteLinks": [
@@ -353,7 +333,7 @@
         },
         {
           "heading": "Applied in projects",
-          "markdown": "DWMLight/ANVA CMS uses Express services and structured content APIs. MyReport coordinates ingestion, reviewed extraction and customer workflows. FYP serves REST/WebSocket telemetry and anomaly data.\n\n- **DWMLight / ANVA CMS — Multilingual Product Website and Custom CMS:** A multilingual product and company website backed by a custom content-management API, including localized content, product media and downloadable catalogues.\n\nPublic website: [DWMLight](https://dwmlight.com/en).\n- **MyReport — WhatsApp Customer Follow-up and Reporting Workspace:** A customer-management workspace that organizes WhatsApp conversations, confirmed customer requirements, eligibility records and follow-up actions, with human-reviewed AI assistance.\n\n**Access:** Hosted privately via Tailscale; not publicly accessible.\n- **FYP — Hybrid Anomaly Detection for Microservice Observability:** A telemetry-based anomaly-detection system that combines OpenTelemetry ingestion, Redis streaming, machine-learning inference and a live observability dashboard, evaluated using telemetry from an instrumented CMS application."
+          "markdown": "DWMLight/ANVA CMS uses Express services and structured content APIs. MyReport coordinates ingestion, reviewed extraction and customer workflows. FYP serves REST/WebSocket telemetry and anomaly data.\n\n- **DWMLight / ANVA CMS — Multilingual Product Website and Custom CMS:** A multilingual product and company website backed by a custom content-management API, including localized content, product media and downloadable catalogues.\n\nPublic website: [DWMLight](https://dwmlight.com/en).\n- **MyReport — WhatsApp Customer Follow-up and Reporting Workspace:** A customer-management workspace that organizes WhatsApp conversations, confirmed customer requirements, eligibility records and follow-up actions, with human-reviewed AI assistance.\n\n**Access:** Hosted privately via Tailscale; not publicly accessible.\n- **System Anomaly Detection — FYP / Hybrid Microservice Observability:** System Anomaly Detection is an end-to-end FYP monorepo that combines OpenTelemetry ingestion, Redis streaming, hybrid machine-learning inference, a live observability dashboard, and traffic simulation with controlled fault injection. Its recorded offline evaluation uses telemetry from an instrumented CMS application."
         },
         {
           "heading": "Engineering workflow",
@@ -373,7 +353,7 @@
         },
         {
           "heading": "Links and sources",
-          "markdown": "Project evidence comes from the completed project catalogue; broader toolkit claims come from the completed About profile.\n\n- [DWMLight website](https://github.com/maxscale-io/Aria)\n- [ANVA CMS backend / anva-cms](https://github.com/maxscale-io/anva-cms)\n- [Repository / report-automation](https://github.com/DamienCKj2812/report-automation)\n- [Load and chaos tooling / logging-loading](https://github.com/DamienCKj2812/logging-loading)\n- [Backend and ML / logging-microservice](https://github.com/DamienCKj2812/logging-microservice)\n- [Observability dashboard / logging-microservice-ui](https://github.com/DamienCKj2812/logging-microservice-ui)\n\nWebsites and previews\n\n- [DWMLight / ANVA CMS website](https://dwmlight.com/en)\n\nMyReport: Hosted privately via Tailscale; not publicly accessible."
+          "markdown": "Project evidence comes from the completed project catalogue; broader toolkit claims come from the completed About profile.\n\n- [DWMLight website](https://github.com/maxscale-io/Aria)\n- [ANVA CMS backend / anva-cms](https://github.com/maxscale-io/anva-cms)\n- [Repository / report-automation](https://github.com/DamienCKj2812/report-automation)\n- [System Anomaly Detection monorepo / system-anomaly-detection](https://github.com/DamienCKj2812/system-anomaly-detection)\n\nWebsites and previews\n\n- [DWMLight / ANVA CMS website](https://dwmlight.com/en)\n\nMyReport: Hosted privately via Tailscale; not publicly accessible."
         }
       ],
       "contentStatus": "Approved About toolkit and project-catalogue evidence; profile-only/learning scope stated explicitly"
@@ -437,19 +417,9 @@
           "url": "https://github.com/maxscale-io/anva-cms"
         },
         {
-          "id": "logging-loading",
-          "title": "Load and chaos tooling",
-          "url": "https://github.com/DamienCKj2812/logging-loading"
-        },
-        {
-          "id": "logging-microservice",
-          "title": "Backend and ML",
-          "url": "https://github.com/DamienCKj2812/logging-microservice"
-        },
-        {
-          "id": "logging-microservice-ui",
-          "title": "Observability dashboard",
-          "url": "https://github.com/DamienCKj2812/logging-microservice-ui"
+          "id": "system-anomaly-detection",
+          "title": "System Anomaly Detection monorepo",
+          "url": "https://github.com/DamienCKj2812/system-anomaly-detection"
         }
       ],
       "siteLinks": [
@@ -473,7 +443,7 @@
         },
         {
           "heading": "Applied in projects",
-          "markdown": "Client projects use PostgreSQL/Supabase and MongoDB. FYP uses Redis Streams with PostgreSQL persistence when configured. The completed About experience at COS Great Trading confirms Pinecone-based RAG for departmental AI knowledge bases.\n\n- **Agent Property — Bilingual Property Website and CMS:** A bilingual property-discovery website that combines CMS-managed listings, housing-scheme information and educational content with direct WhatsApp enquiries.\n\nPublic website: [MyRumawip](https://myrumawip.com/).\n- **MyReport — WhatsApp Customer Follow-up and Reporting Workspace:** A customer-management workspace that organizes WhatsApp conversations, confirmed customer requirements, eligibility records and follow-up actions, with human-reviewed AI assistance.\n\n**Access:** Hosted privately via Tailscale; not publicly accessible.\n- **DWMLight / ANVA CMS — Multilingual Product Website and Custom CMS:** A multilingual product and company website backed by a custom content-management API, including localized content, product media and downloadable catalogues.\n\nPublic website: [DWMLight](https://dwmlight.com/en).\n- **FYP — Hybrid Anomaly Detection for Microservice Observability:** A telemetry-based anomaly-detection system that combines OpenTelemetry ingestion, Redis streaming, machine-learning inference and a live observability dashboard, evaluated using telemetry from an instrumented CMS application."
+          "markdown": "Client projects use PostgreSQL/Supabase and MongoDB. FYP uses Redis Streams with PostgreSQL persistence when configured. The completed About experience at COS Great Trading confirms Pinecone-based RAG for departmental AI knowledge bases.\n\n- **Agent Property — Bilingual Property Website and CMS:** A bilingual property-discovery website that combines CMS-managed listings, housing-scheme information and educational content with direct WhatsApp enquiries.\n\nPublic website: [MyRumawip](https://myrumawip.com/).\n- **MyReport — WhatsApp Customer Follow-up and Reporting Workspace:** A customer-management workspace that organizes WhatsApp conversations, confirmed customer requirements, eligibility records and follow-up actions, with human-reviewed AI assistance.\n\n**Access:** Hosted privately via Tailscale; not publicly accessible.\n- **DWMLight / ANVA CMS — Multilingual Product Website and Custom CMS:** A multilingual product and company website backed by a custom content-management API, including localized content, product media and downloadable catalogues.\n\nPublic website: [DWMLight](https://dwmlight.com/en).\n- **System Anomaly Detection — FYP / Hybrid Microservice Observability:** System Anomaly Detection is an end-to-end FYP monorepo that combines OpenTelemetry ingestion, Redis streaming, hybrid machine-learning inference, a live observability dashboard, and traffic simulation with controlled fault injection. Its recorded offline evaluation uses telemetry from an instrumented CMS application."
         },
         {
           "heading": "Engineering workflow",
@@ -493,7 +463,7 @@
         },
         {
           "heading": "Links and sources",
-          "markdown": "Project evidence comes from the completed project catalogue; broader toolkit claims come from the completed About profile.\n\n- [Repository / agent-property](https://github.com/DamienCKj2812/agent-limenghar-property)\n- [Repository / report-automation](https://github.com/DamienCKj2812/report-automation)\n- [DWMLight website](https://github.com/maxscale-io/Aria)\n- [ANVA CMS backend / anva-cms](https://github.com/maxscale-io/anva-cms)\n- [Load and chaos tooling / logging-loading](https://github.com/DamienCKj2812/logging-loading)\n- [Backend and ML / logging-microservice](https://github.com/DamienCKj2812/logging-microservice)\n- [Observability dashboard / logging-microservice-ui](https://github.com/DamienCKj2812/logging-microservice-ui)\n\nWebsites and previews\n\n- [MyRumawip website](https://myrumawip.com/)\n- [DWMLight / ANVA CMS website](https://dwmlight.com/en)\n\nMyReport: Hosted privately via Tailscale; not publicly accessible."
+          "markdown": "Project evidence comes from the completed project catalogue; broader toolkit claims come from the completed About profile.\n\n- [Repository / agent-property](https://github.com/DamienCKj2812/agent-limenghar-property)\n- [Repository / report-automation](https://github.com/DamienCKj2812/report-automation)\n- [DWMLight website](https://github.com/maxscale-io/Aria)\n- [ANVA CMS backend / anva-cms](https://github.com/maxscale-io/anva-cms)\n- [System Anomaly Detection monorepo / system-anomaly-detection](https://github.com/DamienCKj2812/system-anomaly-detection)\n\nWebsites and previews\n\n- [MyRumawip website](https://myrumawip.com/)\n- [DWMLight / ANVA CMS website](https://dwmlight.com/en)\n\nMyReport: Hosted privately via Tailscale; not publicly accessible."
         }
       ],
       "contentStatus": "Approved About toolkit and project-catalogue evidence; profile-only/learning scope stated explicitly"
@@ -544,19 +514,9 @@
           "url": "https://github.com/DamienCKj2812/report-automation"
         },
         {
-          "id": "logging-loading",
-          "title": "Load and chaos tooling",
-          "url": "https://github.com/DamienCKj2812/logging-loading"
-        },
-        {
-          "id": "logging-microservice",
-          "title": "Backend and ML",
-          "url": "https://github.com/DamienCKj2812/logging-microservice"
-        },
-        {
-          "id": "logging-microservice-ui",
-          "title": "Observability dashboard",
-          "url": "https://github.com/DamienCKj2812/logging-microservice-ui"
+          "id": "system-anomaly-detection",
+          "title": "System Anomaly Detection monorepo",
+          "url": "https://github.com/DamienCKj2812/system-anomaly-detection"
         },
         {
           "id": "DTMAssignment",
@@ -586,7 +546,7 @@
         },
         {
           "heading": "Applied in projects",
-          "markdown": "MyReport separates proposed AI updates from confirmed customer facts. FYP compares hybrid anomaly detectors. DTM/PFDA/TXSA cover preprocessing, statistical/model experiments and tokenization. About confirms RAG and AI knowledge-base work at COS Great Trading.\n\n- **MyReport — WhatsApp Customer Follow-up and Reporting Workspace:** A customer-management workspace that organizes WhatsApp conversations, confirmed customer requirements, eligibility records and follow-up actions, with human-reviewed AI assistance.\n\n**Access:** Hosted privately via Tailscale; not publicly accessible.\n- **FYP — Hybrid Anomaly Detection for Microservice Observability:** A telemetry-based anomaly-detection system that combines OpenTelemetry ingestion, Redis streaming, machine-learning inference and a live observability dashboard, evaluated using telemetry from an instrumented CMS application.\n- **DTM — Coupon Data Preparation and Exploratory Analysis:** An R data-preparation study that introduces controlled data-quality problems into an in-vehicle coupon dataset, cleans it and compares exploratory views before and after preprocessing.\n- **PFDA — Credit-Risk Data Analysis:** An R-based group study of credit-risk data, combining cleaning, exploratory analysis, statistical tests and predictive experiments.\n- **TXSA — Comparative Text Preprocessing:** A notebook-based text-analytics assignment comparing tokenization approaches and demonstrating stop-word/punctuation filtering on a supplied text corpus."
+          "markdown": "MyReport separates proposed AI updates from confirmed customer facts. FYP compares hybrid anomaly detectors. DTM/PFDA/TXSA cover preprocessing, statistical/model experiments and tokenization. About confirms RAG and AI knowledge-base work at COS Great Trading.\n\n- **MyReport — WhatsApp Customer Follow-up and Reporting Workspace:** A customer-management workspace that organizes WhatsApp conversations, confirmed customer requirements, eligibility records and follow-up actions, with human-reviewed AI assistance.\n\n**Access:** Hosted privately via Tailscale; not publicly accessible.\n- **System Anomaly Detection — FYP / Hybrid Microservice Observability:** System Anomaly Detection is an end-to-end FYP monorepo that combines OpenTelemetry ingestion, Redis streaming, hybrid machine-learning inference, a live observability dashboard, and traffic simulation with controlled fault injection. Its recorded offline evaluation uses telemetry from an instrumented CMS application.\n- **DTM — Coupon Data Preparation and Exploratory Analysis:** An R data-preparation study that introduces controlled data-quality problems into an in-vehicle coupon dataset, cleans it and compares exploratory views before and after preprocessing.\n- **PFDA — Credit-Risk Data Analysis:** An R-based group study of credit-risk data, combining cleaning, exploratory analysis, statistical tests and predictive experiments.\n- **TXSA — Comparative Text Preprocessing:** A notebook-based text-analytics assignment comparing tokenization approaches and demonstrating stop-word/punctuation filtering on a supplied text corpus."
         },
         {
           "heading": "Engineering workflow",
@@ -606,7 +566,7 @@
         },
         {
           "heading": "Links and sources",
-          "markdown": "Project evidence comes from the completed project catalogue; broader toolkit claims come from the completed About profile.\n\n- [Repository / report-automation](https://github.com/DamienCKj2812/report-automation)\n- [Load and chaos tooling / logging-loading](https://github.com/DamienCKj2812/logging-loading)\n- [Backend and ML / logging-microservice](https://github.com/DamienCKj2812/logging-microservice)\n- [Observability dashboard / logging-microservice-ui](https://github.com/DamienCKj2812/logging-microservice-ui)\n- [Repository / DTMAssignment](https://github.com/DamienCKj2812/DTMAssignment)\n- [Repository / PFDAGroupAssignment](https://github.com/DamienCKj2812/PFDAGroupAssignment)\n- [Repository / txsa-group-assignment](https://github.com/DamienCKj2812/txsa-group-assignment)\n\nMyReport: Hosted privately via Tailscale; not publicly accessible."
+          "markdown": "Project evidence comes from the completed project catalogue; broader toolkit claims come from the completed About profile.\n\n- [Repository / report-automation](https://github.com/DamienCKj2812/report-automation)\n- [System Anomaly Detection monorepo / system-anomaly-detection](https://github.com/DamienCKj2812/system-anomaly-detection)\n- [Repository / DTMAssignment](https://github.com/DamienCKj2812/DTMAssignment)\n- [Repository / PFDAGroupAssignment](https://github.com/DamienCKj2812/PFDAGroupAssignment)\n- [Repository / txsa-group-assignment](https://github.com/DamienCKj2812/txsa-group-assignment)\n\nMyReport: Hosted privately via Tailscale; not publicly accessible."
         }
       ],
       "contentStatus": "Approved About toolkit and project-catalogue evidence; profile-only/learning scope stated explicitly"
@@ -767,19 +727,9 @@
           "url": "https://github.com/DamienCKj2812/report-automation"
         },
         {
-          "id": "logging-loading",
-          "title": "Load and chaos tooling",
-          "url": "https://github.com/DamienCKj2812/logging-loading"
-        },
-        {
-          "id": "logging-microservice",
-          "title": "Backend and ML",
-          "url": "https://github.com/DamienCKj2812/logging-microservice"
-        },
-        {
-          "id": "logging-microservice-ui",
-          "title": "Observability dashboard",
-          "url": "https://github.com/DamienCKj2812/logging-microservice-ui"
+          "id": "system-anomaly-detection",
+          "title": "System Anomaly Detection monorepo",
+          "url": "https://github.com/DamienCKj2812/system-anomaly-detection"
         },
         {
           "id": "damien-portfolio",
@@ -808,7 +758,7 @@
         },
         {
           "heading": "Applied in projects",
-          "markdown": "Agent Property includes deployment/sync tooling, Docker, PM2 and Ansible. DWMLight’s confirmed work includes deployment/server operations. MyReport documents validation, integration-oriented tests and browser workflow tests. This portfolio uses Playwright to check browser interactions, navigation, loading, responsive layouts and accessibility behaviour. FYP uses a multi-service Compose topology.\n\n- **Agent Property — Bilingual Property Website and CMS:** A bilingual property-discovery website that combines CMS-managed listings, housing-scheme information and educational content with direct WhatsApp enquiries.\n\nPublic website: [MyRumawip](https://myrumawip.com/).\n- **DWMLight / ANVA CMS — Multilingual Product Website and Custom CMS:** A multilingual product and company website backed by a custom content-management API, including localized content, product media and downloadable catalogues.\n\nPublic website: [DWMLight](https://dwmlight.com/en).\n- **MyReport — WhatsApp Customer Follow-up and Reporting Workspace:** A customer-management workspace that organizes WhatsApp conversations, confirmed customer requirements, eligibility records and follow-up actions, with human-reviewed AI assistance.\n\n**Access:** Hosted privately via Tailscale; not publicly accessible.\n- **FYP — Hybrid Anomaly Detection for Microservice Observability:** A telemetry-based anomaly-detection system that combines OpenTelemetry ingestion, Redis streaming, machine-learning inference and a live observability dashboard, evaluated using telemetry from an instrumented CMS application.\n- **Damien Portfolio — Immersive 3D Portfolio:** A monochrome interactive portfolio that takes visitors through a city, lobby and elevator into dedicated rooms for identity, skills, projects and experience/education."
+          "markdown": "Agent Property includes deployment/sync tooling, Docker, PM2 and Ansible. DWMLight’s confirmed work includes deployment/server operations. MyReport documents validation, integration-oriented tests and browser workflow tests. This portfolio uses Playwright to check browser interactions, navigation, loading, responsive layouts and accessibility behaviour. FYP uses a multi-service Compose topology.\n\n- **Agent Property — Bilingual Property Website and CMS:** A bilingual property-discovery website that combines CMS-managed listings, housing-scheme information and educational content with direct WhatsApp enquiries.\n\nPublic website: [MyRumawip](https://myrumawip.com/).\n- **DWMLight / ANVA CMS — Multilingual Product Website and Custom CMS:** A multilingual product and company website backed by a custom content-management API, including localized content, product media and downloadable catalogues.\n\nPublic website: [DWMLight](https://dwmlight.com/en).\n- **MyReport — WhatsApp Customer Follow-up and Reporting Workspace:** A customer-management workspace that organizes WhatsApp conversations, confirmed customer requirements, eligibility records and follow-up actions, with human-reviewed AI assistance.\n\n**Access:** Hosted privately via Tailscale; not publicly accessible.\n- **System Anomaly Detection — FYP / Hybrid Microservice Observability:** System Anomaly Detection is an end-to-end FYP monorepo that combines OpenTelemetry ingestion, Redis streaming, hybrid machine-learning inference, a live observability dashboard, and traffic simulation with controlled fault injection. Its recorded offline evaluation uses telemetry from an instrumented CMS application.\n- **Damien Portfolio — Immersive 3D Portfolio:** A monochrome interactive portfolio that takes visitors through a city, lobby and elevator into dedicated rooms for identity, skills, projects and experience/education."
         },
         {
           "heading": "Engineering workflow",
@@ -828,7 +778,7 @@
         },
         {
           "heading": "Links and sources",
-          "markdown": "Project evidence comes from the completed project catalogue; broader toolkit claims come from the completed About profile.\n\n- [Repository / agent-property](https://github.com/DamienCKj2812/agent-limenghar-property)\n- [DWMLight website](https://github.com/maxscale-io/Aria)\n- [ANVA CMS backend / anva-cms](https://github.com/maxscale-io/anva-cms)\n- [Repository / report-automation](https://github.com/DamienCKj2812/report-automation)\n- [Load and chaos tooling / logging-loading](https://github.com/DamienCKj2812/logging-loading)\n- [Backend and ML / logging-microservice](https://github.com/DamienCKj2812/logging-microservice)\n- [Observability dashboard / logging-microservice-ui](https://github.com/DamienCKj2812/logging-microservice-ui)\n- [GitHub / currently empty / damien-portfolio](https://github.com/DamienCKj2812/damien-portfolio)\n\nWebsites and previews\n\n- [MyRumawip website](https://myrumawip.com/)\n- [DWMLight / ANVA CMS website](https://dwmlight.com/en)\n\nMyReport: Hosted privately via Tailscale; not publicly accessible."
+          "markdown": "Project evidence comes from the completed project catalogue; broader toolkit claims come from the completed About profile.\n\n- [Repository / agent-property](https://github.com/DamienCKj2812/agent-limenghar-property)\n- [DWMLight website](https://github.com/maxscale-io/Aria)\n- [ANVA CMS backend / anva-cms](https://github.com/maxscale-io/anva-cms)\n- [Repository / report-automation](https://github.com/DamienCKj2812/report-automation)\n- [System Anomaly Detection monorepo / system-anomaly-detection](https://github.com/DamienCKj2812/system-anomaly-detection)\n- [GitHub / currently empty / damien-portfolio](https://github.com/DamienCKj2812/damien-portfolio)\n\nWebsites and previews\n\n- [MyRumawip website](https://myrumawip.com/)\n- [DWMLight / ANVA CMS website](https://dwmlight.com/en)\n\nMyReport: Hosted privately via Tailscale; not publicly accessible."
         }
       ],
       "contentStatus": "Approved About toolkit and project-catalogue evidence; profile-only/learning scope stated explicitly"
@@ -860,22 +810,12 @@
         "fyp",
         "report-automation"
       ],
-      "url": "https://github.com/DamienCKj2812/logging-loading",
+      "url": "https://github.com/DamienCKj2812/system-anomaly-detection",
       "repositories": [
         {
-          "id": "logging-loading",
-          "title": "Load and chaos tooling",
-          "url": "https://github.com/DamienCKj2812/logging-loading"
-        },
-        {
-          "id": "logging-microservice",
-          "title": "Backend and ML",
-          "url": "https://github.com/DamienCKj2812/logging-microservice"
-        },
-        {
-          "id": "logging-microservice-ui",
-          "title": "Observability dashboard",
-          "url": "https://github.com/DamienCKj2812/logging-microservice-ui"
+          "id": "system-anomaly-detection",
+          "title": "System Anomaly Detection monorepo",
+          "url": "https://github.com/DamienCKj2812/system-anomaly-detection"
         },
         {
           "id": "report-automation",
@@ -895,7 +835,7 @@
         },
         {
           "heading": "Applied in projects",
-          "markdown": "FYP separates the Go telemetry receiver, stream consumers, Python inference and REST/WebSocket API. MyReport normalizes provider messages into an owner-scoped workflow.\n\n- **FYP — Hybrid Anomaly Detection for Microservice Observability:** A telemetry-based anomaly-detection system that combines OpenTelemetry ingestion, Redis streaming, machine-learning inference and a live observability dashboard, evaluated using telemetry from an instrumented CMS application.\n- **MyReport — WhatsApp Customer Follow-up and Reporting Workspace:** A customer-management workspace that organizes WhatsApp conversations, confirmed customer requirements, eligibility records and follow-up actions, with human-reviewed AI assistance.\n\n**Access:** Hosted privately via Tailscale; not publicly accessible."
+          "markdown": "FYP separates the Go telemetry receiver, stream consumers, Python inference and REST/WebSocket API. MyReport normalizes provider messages into an owner-scoped workflow.\n\n- **System Anomaly Detection — FYP / Hybrid Microservice Observability:** System Anomaly Detection is an end-to-end FYP monorepo that combines OpenTelemetry ingestion, Redis streaming, hybrid machine-learning inference, a live observability dashboard, and traffic simulation with controlled fault injection. Its recorded offline evaluation uses telemetry from an instrumented CMS application.\n- **MyReport — WhatsApp Customer Follow-up and Reporting Workspace:** A customer-management workspace that organizes WhatsApp conversations, confirmed customer requirements, eligibility records and follow-up actions, with human-reviewed AI assistance.\n\n**Access:** Hosted privately via Tailscale; not publicly accessible."
         },
         {
           "heading": "Engineering workflow",
@@ -915,7 +855,7 @@
         },
         {
           "heading": "Links and sources",
-          "markdown": "Project evidence comes from the completed project catalogue; broader toolkit claims come from the completed About profile.\n\n- [Load and chaos tooling / logging-loading](https://github.com/DamienCKj2812/logging-loading)\n- [Backend and ML / logging-microservice](https://github.com/DamienCKj2812/logging-microservice)\n- [Observability dashboard / logging-microservice-ui](https://github.com/DamienCKj2812/logging-microservice-ui)\n- [Repository / report-automation](https://github.com/DamienCKj2812/report-automation)\n\nMyReport: Hosted privately via Tailscale; not publicly accessible."
+          "markdown": "Project evidence comes from the completed project catalogue; broader toolkit claims come from the completed About profile.\n\n- [System Anomaly Detection monorepo / system-anomaly-detection](https://github.com/DamienCKj2812/system-anomaly-detection)\n- [Repository / report-automation](https://github.com/DamienCKj2812/report-automation)\n\nMyReport: Hosted privately via Tailscale; not publicly accessible."
         }
       ],
       "contentStatus": "Approved About toolkit and project-catalogue evidence; profile-only/learning scope stated explicitly"
@@ -982,19 +922,9 @@
           "url": "https://github.com/maxscale-io/anva-cms"
         },
         {
-          "id": "logging-loading",
-          "title": "Load and chaos tooling",
-          "url": "https://github.com/DamienCKj2812/logging-loading"
-        },
-        {
-          "id": "logging-microservice",
-          "title": "Backend and ML",
-          "url": "https://github.com/DamienCKj2812/logging-microservice"
-        },
-        {
-          "id": "logging-microservice-ui",
-          "title": "Observability dashboard",
-          "url": "https://github.com/DamienCKj2812/logging-microservice-ui"
+          "id": "system-anomaly-detection",
+          "title": "System Anomaly Detection monorepo",
+          "url": "https://github.com/DamienCKj2812/system-anomaly-detection"
         }
       ],
       "siteLinks": [
@@ -1018,7 +948,7 @@
         },
         {
           "heading": "Applied in projects",
-          "markdown": "Fedora Dotfiles combines Stow, KDE/Hyprland, Quickshell/QML and a native PyQt6 sharing chooser. Client work includes server/deployment responsibilities, and FYP uses Linux-based multi-service deployment tooling.\n\n- **Fedora Dotfiles — Customized Wayland Desktop Environment:** A personalized Fedora desktop/development environment combining KDE Plasma and Hyprland sessions with a custom shell, login appearance, sharing picker and reusable configuration management.\n- **Agent Property — Bilingual Property Website and CMS:** A bilingual property-discovery website that combines CMS-managed listings, housing-scheme information and educational content with direct WhatsApp enquiries.\n\nPublic website: [MyRumawip](https://myrumawip.com/).\n- **DWMLight / ANVA CMS — Multilingual Product Website and Custom CMS:** A multilingual product and company website backed by a custom content-management API, including localized content, product media and downloadable catalogues.\n\nPublic website: [DWMLight](https://dwmlight.com/en).\n- **FYP — Hybrid Anomaly Detection for Microservice Observability:** A telemetry-based anomaly-detection system that combines OpenTelemetry ingestion, Redis streaming, machine-learning inference and a live observability dashboard, evaluated using telemetry from an instrumented CMS application."
+          "markdown": "Fedora Dotfiles combines Stow, KDE/Hyprland, Quickshell/QML and a native PyQt6 sharing chooser. Client work includes server/deployment responsibilities, and FYP uses Linux-based multi-service deployment tooling.\n\n- **Fedora Dotfiles — Customized Wayland Desktop Environment:** A personalized Fedora desktop/development environment combining KDE Plasma and Hyprland sessions with a custom shell, login appearance, sharing picker and reusable configuration management.\n- **Agent Property — Bilingual Property Website and CMS:** A bilingual property-discovery website that combines CMS-managed listings, housing-scheme information and educational content with direct WhatsApp enquiries.\n\nPublic website: [MyRumawip](https://myrumawip.com/).\n- **DWMLight / ANVA CMS — Multilingual Product Website and Custom CMS:** A multilingual product and company website backed by a custom content-management API, including localized content, product media and downloadable catalogues.\n\nPublic website: [DWMLight](https://dwmlight.com/en).\n- **System Anomaly Detection — FYP / Hybrid Microservice Observability:** System Anomaly Detection is an end-to-end FYP monorepo that combines OpenTelemetry ingestion, Redis streaming, hybrid machine-learning inference, a live observability dashboard, and traffic simulation with controlled fault injection. Its recorded offline evaluation uses telemetry from an instrumented CMS application."
         },
         {
           "heading": "Engineering workflow",
@@ -1038,7 +968,7 @@
         },
         {
           "heading": "Links and sources",
-          "markdown": "Project evidence comes from the completed project catalogue; broader toolkit claims come from the completed About profile.\n\n- [Repository / fedora-dotfiles](https://github.com/DamienCKj2812/fedora-dotfiles)\n- [Repository / agent-property](https://github.com/DamienCKj2812/agent-limenghar-property)\n- [DWMLight website](https://github.com/maxscale-io/Aria)\n- [ANVA CMS backend / anva-cms](https://github.com/maxscale-io/anva-cms)\n- [Load and chaos tooling / logging-loading](https://github.com/DamienCKj2812/logging-loading)\n- [Backend and ML / logging-microservice](https://github.com/DamienCKj2812/logging-microservice)\n- [Observability dashboard / logging-microservice-ui](https://github.com/DamienCKj2812/logging-microservice-ui)\n\nWebsites and previews\n\n- [MyRumawip website](https://myrumawip.com/)\n- [DWMLight / ANVA CMS website](https://dwmlight.com/en)"
+          "markdown": "Project evidence comes from the completed project catalogue; broader toolkit claims come from the completed About profile.\n\n- [Repository / fedora-dotfiles](https://github.com/DamienCKj2812/fedora-dotfiles)\n- [Repository / agent-property](https://github.com/DamienCKj2812/agent-limenghar-property)\n- [DWMLight website](https://github.com/maxscale-io/Aria)\n- [ANVA CMS backend / anva-cms](https://github.com/maxscale-io/anva-cms)\n- [System Anomaly Detection monorepo / system-anomaly-detection](https://github.com/DamienCKj2812/system-anomaly-detection)\n\nWebsites and previews\n\n- [MyRumawip website](https://myrumawip.com/)\n- [DWMLight / ANVA CMS website](https://dwmlight.com/en)"
         }
       ],
       "contentStatus": "Approved About toolkit and project-catalogue evidence; profile-only/learning scope stated explicitly"

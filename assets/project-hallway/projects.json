@@ -1,7 +1,7 @@
 {
   "source": "docs/project-catalogue.md",
   "reviewed": "2026-10-06",
-  "catalogueSourceHash": "ca69f5a062b7aa38e2ce74bb2b807103342a1467c25aba249fb9b5943bda601d",
+  "catalogueSourceHash": "b28059d5cf97644c9a6bb52677d31ed9392f301554ffb771c086b70a069110b0",
   "description": "Generated from the approved project catalogue; full role, evidence and recorded-result qualifiers are retained.",
   "categories": [
     {
@@ -300,7 +300,7 @@
     },
     {
       "id": "fyp",
-      "title": "FYP / Hybrid Anomaly\nDetection",
+      "title": "System Anomaly\nDetection / FYP",
       "featured": true,
       "summary": "Hybrid anomaly detection for\nmicroservice observability.",
       "tags": [
@@ -310,34 +310,24 @@
       ],
       "repositories": [
         {
-          "id": "logging-loading",
-          "title": "Load and chaos tooling",
-          "url": "https://github.com/DamienCKj2812/logging-loading"
-        },
-        {
-          "id": "logging-microservice",
-          "title": "Backend and ML",
-          "url": "https://github.com/DamienCKj2812/logging-microservice"
-        },
-        {
-          "id": "logging-microservice-ui",
-          "title": "Observability dashboard",
-          "url": "https://github.com/DamienCKj2812/logging-microservice-ui"
+          "id": "system-anomaly-detection",
+          "title": "System Anomaly Detection monorepo",
+          "url": "https://github.com/DamienCKj2812/system-anomaly-detection"
         }
       ],
       "section": "academic",
       "category": "FEATURED / FINAL YEAR PROJECT",
       "catalogueNumber": 5,
-      "catalogueTitle": "FYP — Hybrid Anomaly Detection for Microservice Observability",
-      "overview": "A telemetry-based anomaly-detection system that combines OpenTelemetry ingestion, Redis streaming, machine-learning inference and a live observability dashboard, evaluated using telemetry from an instrumented CMS application.",
+      "catalogueTitle": "System Anomaly Detection — FYP / Hybrid Microservice Observability",
+      "overview": "System Anomaly Detection is an end-to-end FYP monorepo that combines OpenTelemetry ingestion, Redis streaming, hybrid machine-learning inference, a live observability dashboard, and traffic simulation with controlled fault injection. Its recorded offline evaluation uses telemetry from an instrumented CMS application.",
       "catalogueSections": [
         {
           "heading": "Overview",
-          "markdown": "A telemetry-based anomaly-detection system that combines OpenTelemetry ingestion, Redis streaming, machine-learning inference and a live observability dashboard, evaluated using telemetry from an instrumented CMS application."
+          "markdown": "System Anomaly Detection is an end-to-end FYP monorepo that combines OpenTelemetry ingestion, Redis streaming, hybrid machine-learning inference, a live observability dashboard, and traffic simulation with controlled fault injection. Its recorded offline evaluation uses telemetry from an instrumented CMS application."
         },
         {
           "heading": "Problem and purpose",
-          "markdown": "Static monitoring thresholds can miss complex behavior or produce noisy alerts when system conditions vary. This FYP investigates whether supervised and unsupervised detectors can be combined to detect multivariate anomalies while retaining low false-positive rates and useful explanations of unusual metrics.\n\nThe project spans three repositories: `logging-microservice` is the backend/ML core, `logging-microservice-ui` is the dashboard, and `logging-loading` generates load and injected faults. ANVA CMS supplies the observed application; it is supporting context, not a fourth independent FYP project."
+          "markdown": "Static monitoring thresholds can miss complex behavior or produce noisy alerts when system conditions vary. This FYP investigates whether supervised and unsupervised detectors can be combined to detect multivariate anomalies while retaining low false-positive rates and useful explanations of unusual metrics.\n\nThe project is maintained in one `system-anomaly-detection` monorepo: `backend/` contains the Go telemetry receiver and REST/WebSocket API, `ml/` contains the Python detection and evaluation pipeline, `frontend/` contains the React dashboard, and `traffic-simulator/` contains load generation, chaos tooling and a standalone demo simulator. ANVA CMS supplies the observed application for real-telemetry collection; it is supporting context rather than a separate FYP project. The demo simulator can also run without ANVA CMS."
         },
         {
           "heading": "My role and contribution",
@@ -345,15 +335,15 @@
         },
         {
           "heading": "Key features",
-          "markdown": "- OTLP metrics and traces collection through a Go backend and OpenTelemetry Collector.\n- Redis Streams for decoupled telemetry/inference/event processing and PostgreSQL persistence when enabled.\n- Supervised, unsupervised, hybrid and static-threshold model comparisons.\n- Live metrics/history display, anomaly APIs and WebSocket integration.\n- Metric attribution using baseline deviation, plus controlled load and chaos scenarios.\n\nThe receiver supports **metrics and traces**, not an implemented OTLP logs ingestion service. “Logging” in the repository names should not become a claim of complete log/metric/trace support."
+          "markdown": "- OTLP metrics and traces collection through a Go backend and OpenTelemetry Collector.\n- Redis Streams for decoupled telemetry/inference/event processing and PostgreSQL persistence when enabled.\n- Supervised, unsupervised, hybrid and static-threshold model comparisons.\n- Live metrics/history display, anomaly APIs and WebSocket integration.\n- Metric attribution using baseline deviation, plus controlled load and chaos scenarios.\n\nThe receiver supports **metrics and traces**; OTLP logs ingestion is not implemented."
         },
         {
           "heading": "Architecture and workflow",
-          "markdown": "```text\nlogging-loading (Locust + fault/pressure scenarios)\n        │ drives workload and injected faults\n        ▼\nANVA CMS ── OTLP telemetry ──► OpenTelemetry Collector\n                                      │\n                                      ▼\n                            Go telemetry receiver\n                                      │\n                                 Redis Streams\n                              ┌───────┴────────┐\n                              ▼                ▼\n                     Persistence workers   Python ML inference\n                              │                │\n                              ▼                ▼\n                          PostgreSQL     anomalies_stream\n                              └───────┬────────┘\n                                      ▼\n                              REST/WebSocket API\n                                      ▼\n                          React observability dashboard\n```\n\n`cmd/backend` and `cmd/api` are separate Go entrypoints. Telemetry is prepared as aligned **10-second multivariate buckets**. The inspected dashboard hook seeds chart state from historical REST results, then applies incremental WebSocket updates. It bounds chart groups, series and point histories to avoid unbounded rendering.\n\nRuntime documentation separates live and training databases. **Metric/trace DB insertion defaults to disabled**, so collecting training data requires the appropriate database mode and insertion configuration; the existence of a database does not imply all live telemetry is being persisted. PostgreSQL is an external requirement in the documented Compose topology."
+          "markdown": "```text\ntraffic-simulator/ (Locust + fault/pressure scenarios)\n        │ drives workload and injected faults\n        ▼\nANVA CMS ── OTLP telemetry ──► OpenTelemetry Collector\n                                      │\n                                      ▼\n                            Go telemetry receiver\n                                      │\n                                 Redis Streams\n                              ┌───────┴────────┐\n                              ▼                ▼\n                     Persistence workers   Python ML inference\n                              │                │\n                              ▼                ▼\n                          PostgreSQL     anomalies_stream\n                              └───────┬────────┘\n                                      ▼\n                              REST/WebSocket API\n                                      ▼\n                          React observability dashboard\n```\n\n`backend/cmd/backend` and `backend/cmd/api` are separate Go entrypoints. The `ml/` pipeline prepares telemetry as aligned **10-second multivariate buckets**. The dashboard in `frontend/` seeds chart state from historical REST results, then applies incremental WebSocket updates. It bounds chart groups, series and point histories to avoid unbounded rendering. The standalone simulator in `traffic-simulator/` can send simulated OTLP telemetry directly to the receiver for demos.\n\nRuntime documentation separates live and training databases. **Metric/trace DB insertion defaults to disabled**, so collecting training data requires the appropriate database mode and insertion configuration; the existence of a database does not imply all live telemetry is being persisted. Docker Compose runs TimescaleDB/PostgreSQL, Redis, the receiver, API, ML service and OpenTelemetry Collector. The frontend and traffic simulator run locally alongside the containerized stack."
         },
         {
           "heading": "Technologies and technical decisions",
-          "markdown": "**Go, gRPC/OTLP, OpenTelemetry Collector, Redis Streams, PostgreSQL, Python, scikit-learn, PyOD, XGBoost, Jupyter, React 19, TypeScript, TanStack Start/Router/Query, Tailwind CSS v4, Orval, Locust, Toxiproxy and Docker Compose.**\n\n- Separate ingestion and background processing prevents database/model work from becoming the receiver's entire synchronous responsibility.\n- Unsupervised adapters expose consistent scoring/prediction interfaces; Isolation Forest/LOF scores are oriented so larger values mean more anomalous.\n- Novelty-mode LOF supports scoring previously unseen samples.\n- Live/history chart composition provides context beyond only the latest event.\n- Model selection considers recall, precision, F1, ROC-AUC, false positives and latency rather than accuracy alone.\n\nThese are supported design characteristics. The complete model-selection and fusion implementation is not all present in the remote tree; do not infer undocumented threshold formulas."
+          "markdown": "**Go, gRPC/OTLP, OpenTelemetry Collector, Redis Streams, PostgreSQL, Python, scikit-learn, PyOD, XGBoost, Jupyter, React 19, TypeScript, TanStack Start/Router/Query, Tailwind CSS v4, Orval, Locust, Toxiproxy and Docker Compose.**\n\n- Separate ingestion and background processing prevents database/model work from becoming the receiver's entire synchronous responsibility.\n- Unsupervised adapters expose consistent scoring/prediction interfaces; Isolation Forest/LOF scores are oriented so larger values mean more anomalous.\n- Novelty-mode LOF supports scoring previously unseen samples.\n- Live/history chart composition provides context beyond only the latest event.\n- Model selection considers recall, precision, F1, ROC-AUC, false positives and latency rather than accuracy alone.\n\nThe monorepo includes training, evaluation, hybrid fusion, live inference and attribution modules under `ml/`. These are supported design characteristics; the recorded notebook results below remain offline evidence rather than a new evaluation of the consolidated repository."
         },
         {
           "heading": "Technical challenges and solutions",
@@ -361,18 +351,18 @@
         },
         {
           "heading": "Results and evidence",
-          "markdown": "**Recorded offline notebook run — not rerun during this catalogue review:**\n\n| Item | Recorded value |\n|---|---:|\n| Prepared 10-second samples | 3,260 |\n| Features | 32 |\n| Training samples | 2,282 |\n| Test samples | 978 |\n| Injected anomalous rows across the full dataset | 394 |\n| Recommended model | XGBoost + LOF hybrid |\n| Precision | 0.9221 (92.21%) |\n| Recall | 0.7717 (77.17%) |\n| F1 | 0.8402 |\n| False-positive rate | 0.0068 (0.68%) |\n| ROC-AUC | 0.9012 |\n| Mean inference latency | 13.7249 ms |\n| Weighted deployment score | 0.8588 |\n\nThe notebook ranks candidates with **35% F1 + 25% recall + 20% ROC-AUC + 10% precision + 10% (1 − FPR)**. Recorded latency is reviewed separately against the 10-second interval. This weighting is a project-defined selection rule, not an external industry standard.\n\nSafe portfolio wording: “In a recorded offline evaluation on real telemetry with injected anomaly labels, the XGBoost–LOF hybrid achieved an F1 score of 0.8402 and a 0.68% false-positive rate.” Damien confirms that the same model combination is used live; the recorded offline scores should not be described as live production performance.\n\nThe notebook's introductory text still mentions a Random Forest/Isolation Forest hybrid, but its ranked outputs and current backend guidance identify XGBoost/LOF. Use the current evidence rather than copying the stale introduction. Several referenced training, evaluation and hybrid-runtime files are missing from the remote snapshot, so the complete experiment cannot be reproduced from that snapshot alone."
+          "markdown": "**Recorded offline notebook run — not rerun during this catalogue review:**\n\n| Item | Recorded value |\n|---|---:|\n| Prepared 10-second samples | 3,260 |\n| Features | 32 |\n| Training samples | 2,282 |\n| Test samples | 978 |\n| Injected anomalous rows across the full dataset | 394 |\n| Recommended model | XGBoost + LOF hybrid |\n| Precision | 0.9221 (92.21%) |\n| Recall | 0.7717 (77.17%) |\n| F1 | 0.8402 |\n| False-positive rate | 0.0068 (0.68%) |\n| ROC-AUC | 0.9012 |\n| Mean inference latency | 13.7249 ms |\n| Weighted deployment score | 0.8588 |\n\nThe notebook ranks candidates with **35% F1 + 25% recall + 20% ROC-AUC + 10% precision + 10% (1 − FPR)**. Recorded latency is reviewed separately against the 10-second interval. This weighting is a project-defined selection rule, not an external industry standard.\n\nSafe portfolio wording: “In a recorded offline evaluation on real telemetry with injected anomaly labels, the XGBoost–LOF hybrid achieved an F1 score of 0.8402 and a 0.68% false-positive rate.” Damien confirms that the same model combination is used live; the recorded offline scores should not be described as live production performance.\n\nThe current monorepo guidance identifies XGBoost/LOF as the trained live hybrid and includes the training, evaluation and hybrid-runtime modules. Consolidating those modules does not rerun or independently reproduce the recorded notebook experiment; its dataset, split and evaluation context still apply."
         },
         {
           "heading": "Lessons and next steps",
-          "markdown": "Potential takeaways: an observability ML system requires data engineering, controlled experiments, deployment configuration and useful interfaces as well as a detector. A high ROC-AUC does not automatically imply a good operating threshold.\n\nProposed next steps: commit the complete pipeline; reproduce the notebook with saved configuration and data provenance; validate chronological/episode-disjoint splits; evaluate separately labelled fault episodes; investigate constant/zero-valued features; report latency percentiles and hardware; document threshold/fusion settings and artifact versions. Confirm which of these are already in the final submission."
+          "markdown": "Potential takeaways: an observability ML system requires data engineering, controlled experiments, deployment configuration and useful interfaces as well as a detector. A high ROC-AUC does not automatically imply a good operating threshold.\n\nProposed next steps: reproduce the notebook from the consolidated monorepo with saved configuration and data provenance; validate chronological/episode-disjoint splits; evaluate separately labelled fault episodes; investigate constant/zero-valued features; report latency percentiles and hardware; document threshold/fusion settings and artifact versions. Confirm which of these are already in the final submission."
         },
         {
           "heading": "Links and source references",
-          "markdown": "- [Backend and ML](https://github.com/DamienCKj2812/logging-microservice), [dashboard](https://github.com/DamienCKj2812/logging-microservice-ui), [load/chaos tooling](https://github.com/DamienCKj2812/logging-loading).\n- [Observed ANVA CMS](https://github.com/maxscale-io/anva-cms).\n- [Offline evaluation notebook](https://github.com/DamienCKj2812/logging-microservice/blob/main/ml/notebooks/offline_model_evaluation.ipynb) — dataset, model rankings and stored metrics.\n- [Backend guidance](https://github.com/DamienCKj2812/logging-microservice/blob/main/AGENTS.md), [detector adapters](https://github.com/DamienCKj2812/logging-microservice/blob/main/ml/models/unsupervised.py), [anomaly handlers](https://github.com/DamienCKj2812/logging-microservice/blob/main/backend/internal/api/anomalies/handler.go).\n- [Dashboard metrics hook](https://github.com/DamienCKj2812/logging-microservice-ui/blob/main/src/hooks/use-metrics.ts) and [Locust load shape](https://github.com/DamienCKj2812/logging-loading/blob/main/locustfile.py)."
+          "markdown": "- [System Anomaly Detection monorepo](https://github.com/DamienCKj2812/system-anomaly-detection) — backend, ML pipeline, dashboard and traffic simulator (private repository).\n- [Observed ANVA CMS](https://github.com/maxscale-io/anva-cms).\n- [Offline evaluation notebook](https://github.com/DamienCKj2812/system-anomaly-detection/blob/main/ml/notebooks/offline_model_evaluation.ipynb) — dataset, model rankings and stored metrics.\n- [Monorepo guidance](https://github.com/DamienCKj2812/system-anomaly-detection/blob/main/AGENTS.md), [detector adapters](https://github.com/DamienCKj2812/system-anomaly-detection/blob/main/ml/models/unsupervised.py), [anomaly handlers](https://github.com/DamienCKj2812/system-anomaly-detection/blob/main/backend/internal/api/anomalies/handler.go).\n- [Dashboard metrics hook](https://github.com/DamienCKj2812/system-anomaly-detection/blob/main/frontend/src/hooks/use-metrics.ts) and [Locust load shape](https://github.com/DamienCKj2812/system-anomaly-detection/blob/main/traffic-simulator/locustfile.py)."
         }
       ],
-      "url": "https://github.com/DamienCKj2812/logging-loading"
+      "url": "https://github.com/DamienCKj2812/system-anomaly-detection"
     },
     {
       "id": "ConcurrentProgrammingAssignment",

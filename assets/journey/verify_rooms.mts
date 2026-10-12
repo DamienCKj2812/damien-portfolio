@@ -99,7 +99,7 @@ for (const level of ['about', 'skills', 'projects', 'experience']) {
     assert.equal(room.manifest.projects.length, 16)
     assert.deepEqual(room.manifest.navigation.categories.map(category => category.id), ['client','academic','personal'])
     assert.equal(room.manifest.navigation.categories.filter(category => category.door).length, 2)
-    assert.equal(room.manifest.projects.find(project => project.id === 'fyp')!.repositories.length, 2, 'Only the two verified public FYP repositories may be published')
+    assert.equal(room.manifest.projects.find(project => project.id === 'fyp')!.repositories.length, 0, 'The private System Anomaly Detection monorepo must not publish repository links')
     assert.equal(room.manifest.actors.length, 15)
     for (const actor of room.manifest.actors) {
       const a = new Vector4(), b = new Vector4()

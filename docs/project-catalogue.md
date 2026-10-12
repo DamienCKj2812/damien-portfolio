@@ -244,17 +244,17 @@ Currently in development and unreleased. This portfolio shares only the product'
 
 ## Academic projects
 
-### 5. FYP — Hybrid Anomaly Detection for Microservice Observability
+### 5. System Anomaly Detection — FYP / Hybrid Microservice Observability
 
 #### Overview
 
-A telemetry-based anomaly-detection system that combines OpenTelemetry ingestion, Redis streaming, machine-learning inference and a live observability dashboard, evaluated using telemetry from an instrumented CMS application.
+System Anomaly Detection is an end-to-end FYP monorepo that combines OpenTelemetry ingestion, Redis streaming, hybrid machine-learning inference, a live observability dashboard, and traffic simulation with controlled fault injection. Its recorded offline evaluation uses telemetry from an instrumented CMS application.
 
 #### Problem and purpose
 
 Static monitoring thresholds can miss complex behavior or produce noisy alerts when system conditions vary. This FYP investigates whether supervised and unsupervised detectors can be combined to detect multivariate anomalies while retaining low false-positive rates and useful explanations of unusual metrics.
 
-The project spans three repositories: `logging-microservice` is the backend/ML core, `logging-microservice-ui` is the dashboard, and `logging-loading` generates load and injected faults. ANVA CMS supplies the observed application; it is supporting context, not a fourth independent FYP project.
+The project is maintained in one `system-anomaly-detection` monorepo: `backend/` contains the Go telemetry receiver and REST/WebSocket API, `ml/` contains the Python detection and evaluation pipeline, `frontend/` contains the React dashboard, and `traffic-simulator/` contains load generation, chaos tooling and a standalone demo simulator. ANVA CMS supplies the observed application for real-telemetry collection; it is supporting context rather than a separate FYP project. The demo simulator can also run without ANVA CMS.
 
 #### My role and contribution
 
@@ -270,12 +270,12 @@ Suggested attribution to finalize: “For my FYP, I [designed/built/evaluated �
 - Live metrics/history display, anomaly APIs and WebSocket integration.
 - Metric attribution using baseline deviation, plus controlled load and chaos scenarios.
 
-The receiver supports **metrics and traces**, not an implemented OTLP logs ingestion service. “Logging” in the repository names should not become a claim of complete log/metric/trace support.
+The receiver supports **metrics and traces**; OTLP logs ingestion is not implemented.
 
 #### Architecture and workflow
 
 ```text
-logging-loading (Locust + fault/pressure scenarios)
+traffic-simulator/ (Locust + fault/pressure scenarios)
         │ drives workload and injected faults
         ▼
 ANVA CMS ── OTLP telemetry ──► OpenTelemetry Collector
@@ -297,9 +297,9 @@ ANVA CMS ── OTLP telemetry ──► OpenTelemetry Collector
                           React observability dashboard
 ```
 
-`cmd/backend` and `cmd/api` are separate Go entrypoints. Telemetry is prepared as aligned **10-second multivariate buckets**. The inspected dashboard hook seeds chart state from historical REST results, then applies incremental WebSocket updates. It bounds chart groups, series and point histories to avoid unbounded rendering.
+`backend/cmd/backend` and `backend/cmd/api` are separate Go entrypoints. The `ml/` pipeline prepares telemetry as aligned **10-second multivariate buckets**. The dashboard in `frontend/` seeds chart state from historical REST results, then applies incremental WebSocket updates. It bounds chart groups, series and point histories to avoid unbounded rendering. The standalone simulator in `traffic-simulator/` can send simulated OTLP telemetry directly to the receiver for demos.
 
-Runtime documentation separates live and training databases. **Metric/trace DB insertion defaults to disabled**, so collecting training data requires the appropriate database mode and insertion configuration; the existence of a database does not imply all live telemetry is being persisted. PostgreSQL is an external requirement in the documented Compose topology.
+Runtime documentation separates live and training databases. **Metric/trace DB insertion defaults to disabled**, so collecting training data requires the appropriate database mode and insertion configuration; the existence of a database does not imply all live telemetry is being persisted. Docker Compose runs TimescaleDB/PostgreSQL, Redis, the receiver, API, ML service and OpenTelemetry Collector. The frontend and traffic simulator run locally alongside the containerized stack.
 
 #### Technologies and technical decisions
 
@@ -311,7 +311,7 @@ Runtime documentation separates live and training databases. **Metric/trace DB i
 - Live/history chart composition provides context beyond only the latest event.
 - Model selection considers recall, precision, F1, ROC-AUC, false positives and latency rather than accuracy alone.
 
-These are supported design characteristics. The complete model-selection and fusion implementation is not all present in the remote tree; do not infer undocumented threshold formulas.
+The monorepo includes training, evaluation, hybrid fusion, live inference and attribution modules under `ml/`. These are supported design characteristics; the recorded notebook results below remain offline evidence rather than a new evaluation of the consolidated repository.
 
 #### Technical challenges and solutions
 
@@ -345,21 +345,21 @@ The notebook ranks candidates with **35% F1 + 25% recall + 20% ROC-AUC + 10% pre
 
 Safe portfolio wording: “In a recorded offline evaluation on real telemetry with injected anomaly labels, the XGBoost–LOF hybrid achieved an F1 score of 0.8402 and a 0.68% false-positive rate.” Damien confirms that the same model combination is used live; the recorded offline scores should not be described as live production performance.
 
-The notebook's introductory text still mentions a Random Forest/Isolation Forest hybrid, but its ranked outputs and current backend guidance identify XGBoost/LOF. Use the current evidence rather than copying the stale introduction. Several referenced training, evaluation and hybrid-runtime files are missing from the remote snapshot, so the complete experiment cannot be reproduced from that snapshot alone.
+The current monorepo guidance identifies XGBoost/LOF as the trained live hybrid and includes the training, evaluation and hybrid-runtime modules. Consolidating those modules does not rerun or independently reproduce the recorded notebook experiment; its dataset, split and evaluation context still apply.
 
 #### Lessons and next steps
 
 Potential takeaways: an observability ML system requires data engineering, controlled experiments, deployment configuration and useful interfaces as well as a detector. A high ROC-AUC does not automatically imply a good operating threshold.
 
-Proposed next steps: commit the complete pipeline; reproduce the notebook with saved configuration and data provenance; validate chronological/episode-disjoint splits; evaluate separately labelled fault episodes; investigate constant/zero-valued features; report latency percentiles and hardware; document threshold/fusion settings and artifact versions. Confirm which of these are already in the final submission.
+Proposed next steps: reproduce the notebook from the consolidated monorepo with saved configuration and data provenance; validate chronological/episode-disjoint splits; evaluate separately labelled fault episodes; investigate constant/zero-valued features; report latency percentiles and hardware; document threshold/fusion settings and artifact versions. Confirm which of these are already in the final submission.
 
 #### Links and source references
 
-- [Backend and ML](https://github.com/DamienCKj2812/logging-microservice), [dashboard](https://github.com/DamienCKj2812/logging-microservice-ui), [load/chaos tooling](https://github.com/DamienCKj2812/logging-loading).
+- [System Anomaly Detection monorepo](https://github.com/DamienCKj2812/system-anomaly-detection) — backend, ML pipeline, dashboard and traffic simulator (private repository).
 - [Observed ANVA CMS](https://github.com/maxscale-io/anva-cms).
-- [Offline evaluation notebook](https://github.com/DamienCKj2812/logging-microservice/blob/main/ml/notebooks/offline_model_evaluation.ipynb) — dataset, model rankings and stored metrics.
-- [Backend guidance](https://github.com/DamienCKj2812/logging-microservice/blob/main/AGENTS.md), [detector adapters](https://github.com/DamienCKj2812/logging-microservice/blob/main/ml/models/unsupervised.py), [anomaly handlers](https://github.com/DamienCKj2812/logging-microservice/blob/main/backend/internal/api/anomalies/handler.go).
-- [Dashboard metrics hook](https://github.com/DamienCKj2812/logging-microservice-ui/blob/main/src/hooks/use-metrics.ts) and [Locust load shape](https://github.com/DamienCKj2812/logging-loading/blob/main/locustfile.py).
+- [Offline evaluation notebook](https://github.com/DamienCKj2812/system-anomaly-detection/blob/main/ml/notebooks/offline_model_evaluation.ipynb) — dataset, model rankings and stored metrics.
+- [Monorepo guidance](https://github.com/DamienCKj2812/system-anomaly-detection/blob/main/AGENTS.md), [detector adapters](https://github.com/DamienCKj2812/system-anomaly-detection/blob/main/ml/models/unsupervised.py), [anomaly handlers](https://github.com/DamienCKj2812/system-anomaly-detection/blob/main/backend/internal/api/anomalies/handler.go).
+- [Dashboard metrics hook](https://github.com/DamienCKj2812/system-anomaly-detection/blob/main/frontend/src/hooks/use-metrics.ts) and [Locust load shape](https://github.com/DamienCKj2812/system-anomaly-detection/blob/main/traffic-simulator/locustfile.py).
 
 ### 6. Concurrent Programming — Airport Simulation
 
@@ -952,9 +952,7 @@ The following commit IDs were recorded during review. Main-text links use readab
 | DamienCKj2812/report-automation | HEAD/main | `5a48a7fda6f93e45f719f499aeef5a279c57ad68` |
 | maxscale-io/Aria | HEAD/main | `f35a8559f0d2e1cc0b1879af86179b59d5ae1894` |
 | maxscale-io/anva-cms | HEAD/main | `2a964af2fd822a26c4f750a844b6c325b866d25d` |
-| DamienCKj2812/logging-loading | HEAD/main | `cb194c5edd71a58158edcc32e26b016a7dfcb3a3` |
-| DamienCKj2812/logging-microservice | HEAD/main | `b3d55e3709c9b25841ba411abc92fd80b4d48057` |
-| DamienCKj2812/logging-microservice-ui | HEAD/main | `8922e3d51be98b02cbc379041ba2d5e1015b25d9` |
+| DamienCKj2812/system-anomaly-detection | Local HEAD/main (monorepo layout review, 2026-10-12) | `3a37eb0ebc685358ae58c45a19e85edd5e962540` |
 | DamienCKj2812/ConcurrentProgrammingAssignment | HEAD/main | `09d4175d777fc975a979ff67a89bf2ad0349e94f` |
 | DamienCKj2812/DSTRAssignment | HEAD/main | `118f0c69da3ff4e0d52e03fdf8314e550862a5ad` |
 | DamienCKj2812/DSTRAssignmentPart2 | HEAD/main | `09bfa22becd277f1fadf6fb8ea8b578fd4680e35` |
@@ -975,7 +973,7 @@ The following commit IDs were recorded during review. Main-text links use readab
 - Each included remote repository was inspected through GitHub API calls made with `gh`: metadata/tree inventory and selected documentation/source relevant to the ten explanation sections. This was not an exhaustive review of every source line.
 - RTS required branch-specific inspection; its `main` branch does not contain the implemented subsystems.
 - FYP notebook outputs were read directly, including the real-telemetry configuration, dataset/split counts, ranking and recommended model. No new training/evaluation was executed.
-- Referenced but uncommitted files limit reproducibility particularly in MyReport, FYP and RTS. Features backed only by guidance/tests are described accordingly.
+- Referenced but uncommitted files limit reproducibility particularly in MyReport and RTS. The FYP monorepo layout and runtime guidance were checked locally on 2026-10-12; its recorded numerical results were not rerun. Features backed only by guidance/tests are described accordingly.
 - `txsa-part2-tp067165` was confirmed empty and omitted at Damien's request. The combined TXSA project currently covers only source available in the group repository.
 - Private repository/source links require access. This catalogue contains technical descriptions, not credentials or internal deployment addresses.
 - Proposed lessons/improvements should be personalized before being presented as first-person statements. Tests present in a repository are evidence of test coverage intent, not proof that they passed in this review.

@@ -20,7 +20,9 @@ for (const [id, projects] of Object.entries(expected)) {
 const fyp = manifest.projects.find(project => project.id === 'fyp')
 assert.ok(fyp)
 assert.equal(fyp.featured, true)
-assert.deepEqual(fyp.repositories.map(repository => repository.id), ['logging-loading','logging-microservice-ui'])
+assert.deepEqual(content.projects.find(project => project.id === 'fyp')!.repositories?.map(repository => repository.url), ['https://github.com/DamienCKj2812/system-anomaly-detection'])
+assert.deepEqual(fyp.repositories, [], 'The private FYP monorepo must not publish repository links')
+assert.match(fyp.catalogueTitle, /System Anomaly Detection/)
 const catalogue = fs.readFileSync(new URL('../docs/project-catalogue.md', import.meta.url))
 assert.equal(content.catalogueSourceHash, createHash('sha256').update(catalogue).digest('hex'))
 for (const project of manifest.projects) {

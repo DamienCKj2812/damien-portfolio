@@ -4,7 +4,7 @@
   "label": "Projects hallway",
   "geometry": "geometry.bin",
   "animation": "animation.bin",
-  "assetHash": "f3147a9c8b73",
+  "assetHash": "d5359259f3cc",
   "frameStart": 1,
   "frameEnd": 1200,
   "fps": 30,
@@ -308,8 +308,8 @@
       "actor": 0,
       "kind": "solid",
       "byteOffset": 2504368,
-      "floatCount": 1923672,
-      "vertexCount": 480918,
+      "floatCount": 1926348,
+      "vertexCount": 481587,
       "stride": 4,
       "role": null,
       "id": null,
@@ -318,7 +318,7 @@
     {
       "actor": 0,
       "kind": "solid",
-      "byteOffset": 10199056,
+      "byteOffset": 10209760,
       "floatCount": 144,
       "vertexCount": 36,
       "stride": 4,
@@ -329,7 +329,7 @@
     {
       "actor": 0,
       "kind": "solid",
-      "byteOffset": 10199632,
+      "byteOffset": 10210336,
       "floatCount": 24,
       "vertexCount": 6,
       "stride": 4,
@@ -340,7 +340,7 @@
     {
       "actor": 0,
       "kind": "solid",
-      "byteOffset": 10199728,
+      "byteOffset": 10210432,
       "floatCount": 144,
       "vertexCount": 36,
       "stride": 4,
@@ -351,7 +351,7 @@
     {
       "actor": 0,
       "kind": "solid",
-      "byteOffset": 10200304,
+      "byteOffset": 10211008,
       "floatCount": 24,
       "vertexCount": 6,
       "stride": 4,
@@ -362,7 +362,7 @@
     {
       "actor": 0,
       "kind": "solid",
-      "byteOffset": 10200400,
+      "byteOffset": 10211104,
       "floatCount": 24456,
       "vertexCount": 6114,
       "stride": 4,
@@ -373,7 +373,7 @@
     {
       "actor": 0,
       "kind": "solid",
-      "byteOffset": 10298224,
+      "byteOffset": 10308928,
       "floatCount": 21648,
       "vertexCount": 5412,
       "stride": 4,
@@ -384,7 +384,7 @@
     {
       "actor": 0,
       "kind": "solid",
-      "byteOffset": 10384816,
+      "byteOffset": 10395520,
       "floatCount": 1008,
       "vertexCount": 252,
       "stride": 4,
@@ -395,7 +395,7 @@
     {
       "actor": 0,
       "kind": "solid",
-      "byteOffset": 10388848,
+      "byteOffset": 10399552,
       "floatCount": 1008,
       "vertexCount": 252,
       "stride": 4,
@@ -406,7 +406,7 @@
     {
       "actor": 0,
       "kind": "solid",
-      "byteOffset": 10392880,
+      "byteOffset": 10403584,
       "floatCount": 1698384,
       "vertexCount": 424596,
       "stride": 4,
@@ -417,7 +417,7 @@
     {
       "actor": 0,
       "kind": "solid",
-      "byteOffset": 17186416,
+      "byteOffset": 17197120,
       "floatCount": 144,
       "vertexCount": 36,
       "stride": 4,
@@ -428,7 +428,7 @@
     {
       "actor": 0,
       "kind": "solid",
-      "byteOffset": 17186992,
+      "byteOffset": 17197696,
       "floatCount": 144,
       "vertexCount": 36,
       "stride": 4,
@@ -439,7 +439,7 @@
     {
       "actor": 0,
       "kind": "solid",
-      "byteOffset": 17187568,
+      "byteOffset": 17198272,
       "floatCount": 144,
       "vertexCount": 36,
       "stride": 4,
@@ -450,7 +450,7 @@
     {
       "actor": 0,
       "kind": "solid",
-      "byteOffset": 17188144,
+      "byteOffset": 17198848,
       "floatCount": 144,
       "vertexCount": 36,
       "stride": 4,
@@ -461,7 +461,7 @@
     {
       "actor": 0,
       "kind": "solid",
-      "byteOffset": 17188720,
+      "byteOffset": 17199424,
       "floatCount": 144,
       "vertexCount": 36,
       "stride": 4,
@@ -472,7 +472,7 @@
     {
       "actor": 0,
       "kind": "solid",
-      "byteOffset": 17189296,
+      "byteOffset": 17200000,
       "floatCount": 144,
       "vertexCount": 36,
       "stride": 4,
@@ -483,7 +483,7 @@
     {
       "actor": 0,
       "kind": "solid",
-      "byteOffset": 17189872,
+      "byteOffset": 17200576,
       "floatCount": 144,
       "vertexCount": 36,
       "stride": 4,
@@ -494,7 +494,7 @@
     {
       "actor": 0,
       "kind": "solid",
-      "byteOffset": 17190448,
+      "byteOffset": 17201152,
       "floatCount": 144,
       "vertexCount": 36,
       "stride": 4,
@@ -505,7 +505,7 @@
     {
       "actor": 0,
       "kind": "solid",
-      "byteOffset": 17191024,
+      "byteOffset": 17201728,
       "floatCount": 144,
       "vertexCount": 36,
       "stride": 4,
@@ -516,7 +516,7 @@
     {
       "actor": 0,
       "kind": "solid",
-      "byteOffset": 17191600,
+      "byteOffset": 17202304,
       "floatCount": 144,
       "vertexCount": 36,
       "stride": 4,
@@ -527,7 +527,7 @@
     {
       "actor": 0,
       "kind": "solid",
-      "byteOffset": 17192176,
+      "byteOffset": 17202880,
       "floatCount": 144,
       "vertexCount": 36,
       "stride": 4,
@@ -538,7 +538,7 @@
     {
       "actor": 0,
       "kind": "solid",
-      "byteOffset": 17192752,
+      "byteOffset": 17203456,
       "floatCount": 144,
       "vertexCount": 36,
       "stride": 4,
@@ -549,7 +549,7 @@
     {
       "actor": 0,
       "kind": "solid",
-      "byteOffset": 17193328,
+      "byteOffset": 17204032,
       "floatCount": 144,
       "vertexCount": 36,
       "stride": 4,
@@ -560,7 +560,7 @@
     {
       "actor": 0,
       "kind": "solid",
-      "byteOffset": 17193904,
+      "byteOffset": 17204608,
       "floatCount": 144,
       "vertexCount": 36,
       "stride": 4,
@@ -571,7 +571,7 @@
     {
       "actor": 0,
       "kind": "solid",
-      "byteOffset": 17194480,
+      "byteOffset": 17205184,
       "floatCount": 144,
       "vertexCount": 36,
       "stride": 4,
@@ -582,7 +582,7 @@
     {
       "actor": 0,
       "kind": "solid",
-      "byteOffset": 17195056,
+      "byteOffset": 17205760,
       "floatCount": 144,
       "vertexCount": 36,
       "stride": 4,
@@ -593,7 +593,7 @@
     {
       "actor": 0,
       "kind": "solid",
-      "byteOffset": 17195632,
+      "byteOffset": 17206336,
       "floatCount": 144,
       "vertexCount": 36,
       "stride": 4,
@@ -604,7 +604,7 @@
     {
       "actor": 1,
       "kind": "points",
-      "byteOffset": 17196208,
+      "byteOffset": 17206912,
       "floatCount": 6000,
       "vertexCount": 1200,
       "stride": 5,
@@ -613,19 +613,19 @@
       "opacity": 1.0,
       "morphs": [
         {
-          "byteOffset": 17220208,
+          "byteOffset": 17230912,
           "floatCount": 3600
         },
         {
-          "byteOffset": 17234608,
+          "byteOffset": 17245312,
           "floatCount": 3600
         },
         {
-          "byteOffset": 17249008,
+          "byteOffset": 17259712,
           "floatCount": 3600
         },
         {
-          "byteOffset": 17263408,
+          "byteOffset": 17274112,
           "floatCount": 3600
         }
       ]
@@ -633,7 +633,7 @@
     {
       "actor": 2,
       "kind": "points",
-      "byteOffset": 17277808,
+      "byteOffset": 17288512,
       "floatCount": 5525,
       "vertexCount": 1105,
       "stride": 5,
@@ -642,19 +642,19 @@
       "opacity": 1.0,
       "morphs": [
         {
-          "byteOffset": 17299908,
+          "byteOffset": 17310612,
           "floatCount": 3315
         },
         {
-          "byteOffset": 17313168,
+          "byteOffset": 17323872,
           "floatCount": 3315
         },
         {
-          "byteOffset": 17326428,
+          "byteOffset": 17337132,
           "floatCount": 3315
         },
         {
-          "byteOffset": 17339688,
+          "byteOffset": 17350392,
           "floatCount": 3315
         }
       ]
@@ -662,7 +662,7 @@
     {
       "actor": 3,
       "kind": "points",
-      "byteOffset": 17352948,
+      "byteOffset": 17363652,
       "floatCount": 6000,
       "vertexCount": 1200,
       "stride": 5,
@@ -671,19 +671,19 @@
       "opacity": 1.0,
       "morphs": [
         {
-          "byteOffset": 17376948,
+          "byteOffset": 17387652,
           "floatCount": 3600
         },
         {
-          "byteOffset": 17391348,
+          "byteOffset": 17402052,
           "floatCount": 3600
         },
         {
-          "byteOffset": 17405748,
+          "byteOffset": 17416452,
           "floatCount": 3600
         },
         {
-          "byteOffset": 17420148,
+          "byteOffset": 17430852,
           "floatCount": 3600
         }
       ]
@@ -691,7 +691,7 @@
     {
       "actor": 4,
       "kind": "points",
-      "byteOffset": 17434548,
+      "byteOffset": 17445252,
       "floatCount": 5525,
       "vertexCount": 1105,
       "stride": 5,
@@ -700,19 +700,19 @@
       "opacity": 1.0,
       "morphs": [
         {
-          "byteOffset": 17456648,
+          "byteOffset": 17467352,
           "floatCount": 3315
         },
         {
-          "byteOffset": 17469908,
+          "byteOffset": 17480612,
           "floatCount": 3315
         },
         {
-          "byteOffset": 17483168,
+          "byteOffset": 17493872,
           "floatCount": 3315
         },
         {
-          "byteOffset": 17496428,
+          "byteOffset": 17507132,
           "floatCount": 3315
         }
       ]
@@ -720,7 +720,7 @@
     {
       "actor": 5,
       "kind": "points",
-      "byteOffset": 17509688,
+      "byteOffset": 17520392,
       "floatCount": 5760,
       "vertexCount": 1152,
       "stride": 5,
@@ -729,15 +729,15 @@
       "opacity": 1.0,
       "morphs": [
         {
-          "byteOffset": 17532728,
+          "byteOffset": 17543432,
           "floatCount": 3456
         },
         {
-          "byteOffset": 17546552,
+          "byteOffset": 17557256,
           "floatCount": 3456
         },
         {
-          "byteOffset": 17560376,
+          "byteOffset": 17571080,
           "floatCount": 3456
         }
       ]
@@ -745,7 +745,7 @@
     {
       "actor": 6,
       "kind": "points",
-      "byteOffset": 17574200,
+      "byteOffset": 17584904,
       "floatCount": 5525,
       "vertexCount": 1105,
       "stride": 5,
@@ -754,19 +754,19 @@
       "opacity": 1.0,
       "morphs": [
         {
-          "byteOffset": 17596300,
+          "byteOffset": 17607004,
           "floatCount": 3315
         },
         {
-          "byteOffset": 17609560,
+          "byteOffset": 17620264,
           "floatCount": 3315
         },
         {
-          "byteOffset": 17622820,
+          "byteOffset": 17633524,
           "floatCount": 3315
         },
         {
-          "byteOffset": 17636080,
+          "byteOffset": 17646784,
           "floatCount": 3315
         }
       ]
@@ -774,7 +774,7 @@
     {
       "actor": 7,
       "kind": "points",
-      "byteOffset": 17649340,
+      "byteOffset": 17660044,
       "floatCount": 5760,
       "vertexCount": 1152,
       "stride": 5,
@@ -783,15 +783,15 @@
       "opacity": 1.0,
       "morphs": [
         {
-          "byteOffset": 17672380,
+          "byteOffset": 17683084,
           "floatCount": 3456
         },
         {
-          "byteOffset": 17686204,
+          "byteOffset": 17696908,
           "floatCount": 3456
         },
         {
-          "byteOffset": 17700028,
+          "byteOffset": 17710732,
           "floatCount": 3456
         }
       ]
@@ -799,7 +799,7 @@
     {
       "actor": 8,
       "kind": "points",
-      "byteOffset": 17713852,
+      "byteOffset": 17724556,
       "floatCount": 5525,
       "vertexCount": 1105,
       "stride": 5,
@@ -808,19 +808,19 @@
       "opacity": 1.0,
       "morphs": [
         {
-          "byteOffset": 17735952,
+          "byteOffset": 17746656,
           "floatCount": 3315
         },
         {
-          "byteOffset": 17749212,
+          "byteOffset": 17759916,
           "floatCount": 3315
         },
         {
-          "byteOffset": 17762472,
+          "byteOffset": 17773176,
           "floatCount": 3315
         },
         {
-          "byteOffset": 17775732,
+          "byteOffset": 17786436,
           "floatCount": 3315
         }
       ]
@@ -828,7 +828,7 @@
     {
       "actor": 9,
       "kind": "points",
-      "byteOffset": 17788992,
+      "byteOffset": 17799696,
       "floatCount": 5760,
       "vertexCount": 1152,
       "stride": 5,
@@ -837,15 +837,15 @@
       "opacity": 1.0,
       "morphs": [
         {
-          "byteOffset": 17812032,
+          "byteOffset": 17822736,
           "floatCount": 3456
         },
         {
-          "byteOffset": 17825856,
+          "byteOffset": 17836560,
           "floatCount": 3456
         },
         {
-          "byteOffset": 17839680,
+          "byteOffset": 17850384,
           "floatCount": 3456
         }
       ]
@@ -853,7 +853,7 @@
     {
       "actor": 10,
       "kind": "points",
-      "byteOffset": 17853504,
+      "byteOffset": 17864208,
       "floatCount": 5525,
       "vertexCount": 1105,
       "stride": 5,
@@ -862,19 +862,19 @@
       "opacity": 1.0,
       "morphs": [
         {
-          "byteOffset": 17875604,
+          "byteOffset": 17886308,
           "floatCount": 3315
         },
         {
-          "byteOffset": 17888864,
+          "byteOffset": 17899568,
           "floatCount": 3315
         },
         {
-          "byteOffset": 17902124,
+          "byteOffset": 17912828,
           "floatCount": 3315
         },
         {
-          "byteOffset": 17915384,
+          "byteOffset": 17926088,
           "floatCount": 3315
         }
       ]
@@ -882,7 +882,7 @@
     {
       "actor": 11,
       "kind": "points",
-      "byteOffset": 17928644,
+      "byteOffset": 17939348,
       "floatCount": 5880,
       "vertexCount": 1176,
       "stride": 5,
@@ -891,15 +891,15 @@
       "opacity": 1.0,
       "morphs": [
         {
-          "byteOffset": 17952164,
+          "byteOffset": 17962868,
           "floatCount": 3528
         },
         {
-          "byteOffset": 17966276,
+          "byteOffset": 17976980,
           "floatCount": 3528
         },
         {
-          "byteOffset": 17980388,
+          "byteOffset": 17991092,
           "floatCount": 3528
         }
       ]
@@ -907,7 +907,7 @@
     {
       "actor": 11,
       "kind": "solid",
-      "byteOffset": 17994500,
+      "byteOffset": 18005204,
       "floatCount": 144,
       "vertexCount": 36,
       "stride": 4,
@@ -918,7 +918,7 @@
     {
       "actor": 12,
       "kind": "points",
-      "byteOffset": 17995076,
+      "byteOffset": 18005780,
       "floatCount": 5760,
       "vertexCount": 1152,
       "stride": 5,
@@ -927,19 +927,19 @@
       "opacity": 1.0,
       "morphs": [
         {
-          "byteOffset": 18018116,
+          "byteOffset": 18028820,
           "floatCount": 3456
         },
         {
-          "byteOffset": 18031940,
+          "byteOffset": 18042644,
           "floatCount": 3456
         },
         {
-          "byteOffset": 18045764,
+          "byteOffset": 18056468,
           "floatCount": 3456
         },
         {
-          "byteOffset": 18059588,
+          "byteOffset": 18070292,
           "floatCount": 3456
         }
       ]
@@ -947,7 +947,7 @@
     {
       "actor": 12,
       "kind": "solid",
-      "byteOffset": 18073412,
+      "byteOffset": 18084116,
       "floatCount": 144,
       "vertexCount": 36,
       "stride": 4,
@@ -958,7 +958,7 @@
     {
       "actor": 13,
       "kind": "points",
-      "byteOffset": 18073988,
+      "byteOffset": 18084692,
       "floatCount": 6365,
       "vertexCount": 1273,
       "stride": 5,
@@ -967,19 +967,19 @@
       "opacity": 1.0,
       "morphs": [
         {
-          "byteOffset": 18099448,
+          "byteOffset": 18110152,
           "floatCount": 3819
         },
         {
-          "byteOffset": 18114724,
+          "byteOffset": 18125428,
           "floatCount": 3819
         },
         {
-          "byteOffset": 18130000,
+          "byteOffset": 18140704,
           "floatCount": 3819
         },
         {
-          "byteOffset": 18145276,
+          "byteOffset": 18155980,
           "floatCount": 3819
         }
       ]
@@ -987,7 +987,7 @@
     {
       "actor": 14,
       "kind": "points",
-      "byteOffset": 18160552,
+      "byteOffset": 18171256,
       "floatCount": 5525,
       "vertexCount": 1105,
       "stride": 5,
@@ -996,19 +996,19 @@
       "opacity": 1.0,
       "morphs": [
         {
-          "byteOffset": 18182652,
+          "byteOffset": 18193356,
           "floatCount": 3315
         },
         {
-          "byteOffset": 18195912,
+          "byteOffset": 18206616,
           "floatCount": 3315
         },
         {
-          "byteOffset": 18209172,
+          "byteOffset": 18219876,
           "floatCount": 3315
         },
         {
-          "byteOffset": 18222432,
+          "byteOffset": 18233136,
           "floatCount": 3315
         }
       ]
@@ -1016,7 +1016,7 @@
     {
       "actor": 15,
       "kind": "points",
-      "byteOffset": 18235692,
+      "byteOffset": 18246396,
       "floatCount": 5880,
       "vertexCount": 1176,
       "stride": 5,
@@ -1025,19 +1025,19 @@
       "opacity": 1.0,
       "morphs": [
         {
-          "byteOffset": 18259212,
+          "byteOffset": 18269916,
           "floatCount": 3528
         },
         {
-          "byteOffset": 18273324,
+          "byteOffset": 18284028,
           "floatCount": 3528
         },
         {
-          "byteOffset": 18287436,
+          "byteOffset": 18298140,
           "floatCount": 3528
         },
         {
-          "byteOffset": 18301548,
+          "byteOffset": 18312252,
           "floatCount": 3528
         }
       ]
@@ -1047,7 +1047,7 @@
     "points": 134963,
     "lineSegments": 2854,
     "glowSegments": 1743,
-    "solidTriangles": 306172
+    "solidTriangles": 306395
   },
   "projects": [
     {
@@ -1413,7 +1413,7 @@
     },
     {
       "id": "fyp",
-      "title": "FYP / Hybrid Anomaly\nDetection",
+      "title": "System Anomaly\nDetection / FYP",
       "featured": true,
       "summary": "Hybrid anomaly detection for\nmicroservice observability.",
       "tags": [
@@ -1421,31 +1421,20 @@
         "XGBoost / LOF",
         "OpenTelemetry / Redis"
       ],
-      "repositories": [
-        {
-          "id": "logging-loading",
-          "title": "Load and chaos tooling",
-          "url": "https://github.com/DamienCKj2812/logging-loading"
-        },
-        {
-          "id": "logging-microservice-ui",
-          "title": "Observability dashboard",
-          "url": "https://github.com/DamienCKj2812/logging-microservice-ui"
-        }
-      ],
+      "repositories": [],
       "section": "academic",
       "category": "FEATURED / FINAL YEAR PROJECT",
       "catalogueNumber": 5,
-      "catalogueTitle": "FYP \u2014 Hybrid Anomaly Detection for Microservice Observability",
-      "overview": "A telemetry-based anomaly-detection system that combines OpenTelemetry ingestion, Redis streaming, machine-learning inference and a live observability dashboard, evaluated using telemetry from an instrumented CMS application.",
+      "catalogueTitle": "System Anomaly Detection \u2014 FYP / Hybrid Microservice Observability",
+      "overview": "System Anomaly Detection is an end-to-end FYP monorepo that combines OpenTelemetry ingestion, Redis streaming, hybrid machine-learning inference, a live observability dashboard, and traffic simulation with controlled fault injection. Its recorded offline evaluation uses telemetry from an instrumented CMS application.",
       "catalogueSections": [
         {
           "heading": "Overview",
-          "markdown": "A telemetry-based anomaly-detection system that combines OpenTelemetry ingestion, Redis streaming, machine-learning inference and a live observability dashboard, evaluated using telemetry from an instrumented CMS application."
+          "markdown": "System Anomaly Detection is an end-to-end FYP monorepo that combines OpenTelemetry ingestion, Redis streaming, hybrid machine-learning inference, a live observability dashboard, and traffic simulation with controlled fault injection. Its recorded offline evaluation uses telemetry from an instrumented CMS application."
         },
         {
           "heading": "Problem and purpose",
-          "markdown": "Static monitoring thresholds can miss complex behavior or produce noisy alerts when system conditions vary. This FYP investigates whether supervised and unsupervised detectors can be combined to detect multivariate anomalies while retaining low false-positive rates and useful explanations of unusual metrics.\n\nThe project spans three repositories: `logging-microservice` is the backend/ML core, `logging-microservice-ui` is the dashboard, and `logging-loading` generates load and injected faults. ANVA CMS supplies the observed application; it is supporting context, not a fourth independent FYP project."
+          "markdown": "Static monitoring thresholds can miss complex behavior or produce noisy alerts when system conditions vary. This FYP investigates whether supervised and unsupervised detectors can be combined to detect multivariate anomalies while retaining low false-positive rates and useful explanations of unusual metrics.\n\nThe project is maintained in one `system-anomaly-detection` monorepo: `backend/` contains the Go telemetry receiver and REST/WebSocket API, `ml/` contains the Python detection and evaluation pipeline, `frontend/` contains the React dashboard, and `traffic-simulator/` contains load generation, chaos tooling and a standalone demo simulator. ANVA CMS supplies the observed application for real-telemetry collection; it is supporting context rather than a separate FYP project. The demo simulator can also run without ANVA CMS."
         },
         {
           "heading": "My role and contribution",
@@ -1453,15 +1442,15 @@
         },
         {
           "heading": "Key features",
-          "markdown": "- OTLP metrics and traces collection through a Go backend and OpenTelemetry Collector.\n- Redis Streams for decoupled telemetry/inference/event processing and PostgreSQL persistence when enabled.\n- Supervised, unsupervised, hybrid and static-threshold model comparisons.\n- Live metrics/history display, anomaly APIs and WebSocket integration.\n- Metric attribution using baseline deviation, plus controlled load and chaos scenarios.\n\nThe receiver supports **metrics and traces**, not an implemented OTLP logs ingestion service. \u201cLogging\u201d in the repository names should not become a claim of complete log/metric/trace support."
+          "markdown": "- OTLP metrics and traces collection through a Go backend and OpenTelemetry Collector.\n- Redis Streams for decoupled telemetry/inference/event processing and PostgreSQL persistence when enabled.\n- Supervised, unsupervised, hybrid and static-threshold model comparisons.\n- Live metrics/history display, anomaly APIs and WebSocket integration.\n- Metric attribution using baseline deviation, plus controlled load and chaos scenarios.\n\nThe receiver supports **metrics and traces**; OTLP logs ingestion is not implemented."
         },
         {
           "heading": "Architecture and workflow",
-          "markdown": "```text\nlogging-loading (Locust + fault/pressure scenarios)\n        \u2502 drives workload and injected faults\n        \u25bc\nANVA CMS \u2500\u2500 OTLP telemetry \u2500\u2500\u25ba OpenTelemetry Collector\n                                      \u2502\n                                      \u25bc\n                            Go telemetry receiver\n                                      \u2502\n                                 Redis Streams\n                              \u250c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2534\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2510\n                              \u25bc                \u25bc\n                     Persistence workers   Python ML inference\n                              \u2502                \u2502\n                              \u25bc                \u25bc\n                          PostgreSQL     anomalies_stream\n                              \u2514\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u252c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2518\n                                      \u25bc\n                              REST/WebSocket API\n                                      \u25bc\n                          React observability dashboard\n```\n\n`cmd/backend` and `cmd/api` are separate Go entrypoints. Telemetry is prepared as aligned **10-second multivariate buckets**. The inspected dashboard hook seeds chart state from historical REST results, then applies incremental WebSocket updates. It bounds chart groups, series and point histories to avoid unbounded rendering.\n\nRuntime documentation separates live and training databases. **Metric/trace DB insertion defaults to disabled**, so collecting training data requires the appropriate database mode and insertion configuration; the existence of a database does not imply all live telemetry is being persisted. PostgreSQL is an external requirement in the documented Compose topology."
+          "markdown": "```text\ntraffic-simulator/ (Locust + fault/pressure scenarios)\n        \u2502 drives workload and injected faults\n        \u25bc\nANVA CMS \u2500\u2500 OTLP telemetry \u2500\u2500\u25ba OpenTelemetry Collector\n                                      \u2502\n                                      \u25bc\n                            Go telemetry receiver\n                                      \u2502\n                                 Redis Streams\n                              \u250c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2534\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2510\n                              \u25bc                \u25bc\n                     Persistence workers   Python ML inference\n                              \u2502                \u2502\n                              \u25bc                \u25bc\n                          PostgreSQL     anomalies_stream\n                              \u2514\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u252c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2518\n                                      \u25bc\n                              REST/WebSocket API\n                                      \u25bc\n                          React observability dashboard\n```\n\n`backend/cmd/backend` and `backend/cmd/api` are separate Go entrypoints. The `ml/` pipeline prepares telemetry as aligned **10-second multivariate buckets**. The dashboard in `frontend/` seeds chart state from historical REST results, then applies incremental WebSocket updates. It bounds chart groups, series and point histories to avoid unbounded rendering. The standalone simulator in `traffic-simulator/` can send simulated OTLP telemetry directly to the receiver for demos.\n\nRuntime documentation separates live and training databases. **Metric/trace DB insertion defaults to disabled**, so collecting training data requires the appropriate database mode and insertion configuration; the existence of a database does not imply all live telemetry is being persisted. Docker Compose runs TimescaleDB/PostgreSQL, Redis, the receiver, API, ML service and OpenTelemetry Collector. The frontend and traffic simulator run locally alongside the containerized stack."
         },
         {
           "heading": "Technologies and technical decisions",
-          "markdown": "**Go, gRPC/OTLP, OpenTelemetry Collector, Redis Streams, PostgreSQL, Python, scikit-learn, PyOD, XGBoost, Jupyter, React 19, TypeScript, TanStack Start/Router/Query, Tailwind CSS v4, Orval, Locust, Toxiproxy and Docker Compose.**\n\n- Separate ingestion and background processing prevents database/model work from becoming the receiver's entire synchronous responsibility.\n- Unsupervised adapters expose consistent scoring/prediction interfaces; Isolation Forest/LOF scores are oriented so larger values mean more anomalous.\n- Novelty-mode LOF supports scoring previously unseen samples.\n- Live/history chart composition provides context beyond only the latest event.\n- Model selection considers recall, precision, F1, ROC-AUC, false positives and latency rather than accuracy alone.\n\nThese are supported design characteristics. The complete model-selection and fusion implementation is not all present in the remote tree; do not infer undocumented threshold formulas."
+          "markdown": "**Go, gRPC/OTLP, OpenTelemetry Collector, Redis Streams, PostgreSQL, Python, scikit-learn, PyOD, XGBoost, Jupyter, React 19, TypeScript, TanStack Start/Router/Query, Tailwind CSS v4, Orval, Locust, Toxiproxy and Docker Compose.**\n\n- Separate ingestion and background processing prevents database/model work from becoming the receiver's entire synchronous responsibility.\n- Unsupervised adapters expose consistent scoring/prediction interfaces; Isolation Forest/LOF scores are oriented so larger values mean more anomalous.\n- Novelty-mode LOF supports scoring previously unseen samples.\n- Live/history chart composition provides context beyond only the latest event.\n- Model selection considers recall, precision, F1, ROC-AUC, false positives and latency rather than accuracy alone.\n\nThe monorepo includes training, evaluation, hybrid fusion, live inference and attribution modules under `ml/`. These are supported design characteristics; the recorded notebook results below remain offline evidence rather than a new evaluation of the consolidated repository."
         },
         {
           "heading": "Technical challenges and solutions",
@@ -1469,18 +1458,14 @@
         },
         {
           "heading": "Results and evidence",
-          "markdown": "**Recorded offline notebook run \u2014 not rerun during this catalogue review:**\n\n| Item | Recorded value |\n|---|---:|\n| Prepared 10-second samples | 3,260 |\n| Features | 32 |\n| Training samples | 2,282 |\n| Test samples | 978 |\n| Injected anomalous rows across the full dataset | 394 |\n| Recommended model | XGBoost + LOF hybrid |\n| Precision | 0.9221 (92.21%) |\n| Recall | 0.7717 (77.17%) |\n| F1 | 0.8402 |\n| False-positive rate | 0.0068 (0.68%) |\n| ROC-AUC | 0.9012 |\n| Mean inference latency | 13.7249 ms |\n| Weighted deployment score | 0.8588 |\n\nThe notebook ranks candidates with **35% F1 + 25% recall + 20% ROC-AUC + 10% precision + 10% (1 \u2212 FPR)**. Recorded latency is reviewed separately against the 10-second interval. This weighting is a project-defined selection rule, not an external industry standard.\n\nSafe portfolio wording: \u201cIn a recorded offline evaluation on real telemetry with injected anomaly labels, the XGBoost\u2013LOF hybrid achieved an F1 score of 0.8402 and a 0.68% false-positive rate.\u201d Damien confirms that the same model combination is used live; the recorded offline scores should not be described as live production performance.\n\nThe notebook's introductory text still mentions a Random Forest/Isolation Forest hybrid, but its ranked outputs and current backend guidance identify XGBoost/LOF. Use the current evidence rather than copying the stale introduction. Several referenced training, evaluation and hybrid-runtime files are missing from the remote snapshot, so the complete experiment cannot be reproduced from that snapshot alone."
+          "markdown": "**Recorded offline notebook run \u2014 not rerun during this catalogue review:**\n\n| Item | Recorded value |\n|---|---:|\n| Prepared 10-second samples | 3,260 |\n| Features | 32 |\n| Training samples | 2,282 |\n| Test samples | 978 |\n| Injected anomalous rows across the full dataset | 394 |\n| Recommended model | XGBoost + LOF hybrid |\n| Precision | 0.9221 (92.21%) |\n| Recall | 0.7717 (77.17%) |\n| F1 | 0.8402 |\n| False-positive rate | 0.0068 (0.68%) |\n| ROC-AUC | 0.9012 |\n| Mean inference latency | 13.7249 ms |\n| Weighted deployment score | 0.8588 |\n\nThe notebook ranks candidates with **35% F1 + 25% recall + 20% ROC-AUC + 10% precision + 10% (1 \u2212 FPR)**. Recorded latency is reviewed separately against the 10-second interval. This weighting is a project-defined selection rule, not an external industry standard.\n\nSafe portfolio wording: \u201cIn a recorded offline evaluation on real telemetry with injected anomaly labels, the XGBoost\u2013LOF hybrid achieved an F1 score of 0.8402 and a 0.68% false-positive rate.\u201d Damien confirms that the same model combination is used live; the recorded offline scores should not be described as live production performance.\n\nThe current monorepo guidance identifies XGBoost/LOF as the trained live hybrid and includes the training, evaluation and hybrid-runtime modules. Consolidating those modules does not rerun or independently reproduce the recorded notebook experiment; its dataset, split and evaluation context still apply."
         },
         {
           "heading": "Lessons and next steps",
-          "markdown": "Potential takeaways: an observability ML system requires data engineering, controlled experiments, deployment configuration and useful interfaces as well as a detector. A high ROC-AUC does not automatically imply a good operating threshold.\n\nProposed next steps: commit the complete pipeline; reproduce the notebook with saved configuration and data provenance; validate chronological/episode-disjoint splits; evaluate separately labelled fault episodes; investigate constant/zero-valued features; report latency percentiles and hardware; document threshold/fusion settings and artifact versions. Confirm which of these are already in the final submission."
-        },
-        {
-          "heading": "Links and source references",
-          "markdown": "- [Dashboard metrics hook](https://github.com/DamienCKj2812/logging-microservice-ui/blob/main/src/hooks/use-metrics.ts) and [Locust load shape](https://github.com/DamienCKj2812/logging-loading/blob/main/locustfile.py)."
+          "markdown": "Potential takeaways: an observability ML system requires data engineering, controlled experiments, deployment configuration and useful interfaces as well as a detector. A high ROC-AUC does not automatically imply a good operating threshold.\n\nProposed next steps: reproduce the notebook from the consolidated monorepo with saved configuration and data provenance; validate chronological/episode-disjoint splits; evaluate separately labelled fault episodes; investigate constant/zero-valued features; report latency percentiles and hardware; document threshold/fusion settings and artifact versions. Confirm which of these are already in the final submission."
         }
       ],
-      "url": "https://github.com/DamienCKj2812/logging-loading",
+      "url": null,
       "position": [
         -4.8,
         40.7,
@@ -1507,7 +1492,8 @@
         "width": 2.0499998301267652,
         "height": 3.1500000953674316,
         "frontDepth": 0.034999998062849036
-      }
+      },
+      "repositoryLinksRestricted": true
     },
     {
       "id": "ConcurrentProgrammingAssignment",

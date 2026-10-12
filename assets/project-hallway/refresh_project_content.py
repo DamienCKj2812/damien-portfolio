@@ -40,4 +40,10 @@ for obj, matrix, hidden, data, action, body in preserved:
         assert obj.data.body == body, f'Unrelated text changed: {obj.name}'
 bpy.context.preferences.filepaths.save_version = 1
 bpy.ops.wm.save_as_mainfile(filepath=str(OUT / 'project-hallway.blend'))
+layout_path = OUT / 'hallway-layout.json'
+layout = json.loads(layout_path.read_text())
+for entry in layout['projects']:
+    if entry['id'] == args.id:
+        entry['url'] = project['url']
+layout_path.write_text(json.dumps(layout, indent=2) + '\n')
 print(f'PASS {project["title"]}: fitted title and metadata; {len(preserved)} room objects/transforms/actions preserved')
